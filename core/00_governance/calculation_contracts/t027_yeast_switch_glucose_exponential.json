@@ -1,0 +1,242 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T027_YEAST_SWITCH_GLUCOSE_EXPONENTIAL_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t027",
+    "rationale": "Methodological contract for Test Card T027. The evidence decision lives in docs/standard. Growth rates and kinetics are taken as published.",
+    "coverage_evidence": [
+      "docs/data/external/biology/yeast_sucrose/yeast_sucrose_parameters.csv",
+      "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+    ]
+  },
+  "question": "Does wild-type yeast grown on glucose reach 0.968 of its maximum exponential growth rate at or below the shared-glucose level G* that the trace model assigns to the fitted switch density?",
+  "output": {
+    "quantity": "G_fast, the lowest glucose at which the exponential rate reaches 0.968 of the strain's maximum, against G* = 1.56 mM",
+    "unit": "mM",
+    "domain": "Youk and van Oudenaarden 2009 Figure 1, wild-type CEN.PK2-1C, about 0.005 to 1.4 percent glucose",
+    "accuracy": "digitisation half-widths about 2 px; interval by shifting points",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_TRACE_FEEDBACK",
+      "UET_L3_TRACE_YEAST"
+    ],
+    "assumptions": "Shared glucose released by invertase is the trace; well-mixed batch; uptake before the switch neglected.",
+    "approximation": "G* is an upper estimate; strains and media differ between the papers.",
+    "initial_boundary": "Not applicable.",
+    "drive_environment": "Batch culture as published.",
+    "parameters": "No fitting decides the outcome; G* from registered values only."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [
+      "YEAST_SUCROSE_PARAMETERS"
+    ],
+    "comparison_ids": [
+      "YOUK2009_WT_GROWTH_VS_GLUCOSE"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Comparison figure opened only after the approval commit cbc52d6ac (HOLDOUT, UNSEEN at approval)."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published culture measurements; values used as printed or digitised.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Yeast cultures",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.species"
+            ],
+            "owner_ids": [],
+            "rule": "One record per species as compiled."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Compiled literature records",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Longevity records and respirometry compiled from the literature"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Captivity effects handled upstream"
+        }
+      ],
+      "observables": [
+        {
+          "id": "life_history",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "growth rate; glucose concentration",
+          "readout_map": "digitised figure; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Yeast cultures as described in the cited studies.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Not applicable.",
+    "observer_state": "Published figures and tables.",
+    "readout": "Growth rate (per hour) against glucose (percent).",
+    "backaction": "Handled upstream.",
+    "frame": "Not applicable",
+    "time_convention": "Hours",
+    "product_level": "published figures (not raw data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Cultures and conditions as published.",
+      "evidence": [
+        "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Digitised points, first crossing of 0.457 per hour, outcome rule fixed in T027.",
+      "evidence": [
+        "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Linear interpolation in log10(glucose); no fitting.",
+      "evidence": [
+        "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "mM",
+    "numerical": "Interpolation only.",
+    "approximation": "G* neglects uptake; strains and media differ between the papers.",
+    "measurement": "Digitisation about 2 px.",
+    "systematic": "Strain, medium and growth-rate definition differ between Dai et al. and Gore et al.",
+    "omissions": "No raw data; figure values only.",
+    "dependence": "Independent experiments from the same lab.",
+    "acceptance": "Outcome categories fixed in Test Card T027.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/yeast_sucrose/yeast_sucrose_parameters.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "d924e6b556212af6c257b7d0d8d4bd2ed9f0bd9fd32127ed0c3bf88d0f6a01d8",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "77b40310105c7b1fba4800d0c3c1da682aa0713fb79c412f1e9e5698889172e8",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/uet_layer3_trace_yeast.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "93500ba54ba21a27355b6616d0cf0b7a4cc4283e1066b459fa1474871769a2a0",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "ff04bff2cf0fcf9eb54d5a5869e6c69cc0c777e96729eae8b291749ca5b8eabe",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py",
+    "core/03_lanes/persistence/uet_layer3_trace_yeast.py",
+    "docs/data/external/biology/yeast_sucrose/yeast_sucrose_parameters.csv",
+    "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T027 comparison only; the evidence level is set in docs/standard. Not UET-distinct.",
+  "next_action": "The well-mixed trace model fails for yeast; a model with glucose held near the cell surface (Gore et al. 2009 diffusion analysis) would be a new hypothesis with its own card."
+}

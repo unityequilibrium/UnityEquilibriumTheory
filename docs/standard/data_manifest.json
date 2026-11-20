@@ -300,6 +300,18 @@
       "license": "numerical values digitised from a published figure; no figure or text redistributed",
       "visibility": "PUBLIC",
       "note": "Digitised after Test Card T026 was approved and committed (22f6d95c3). Read from the figure as rendered in a browser; the figure reports a mean growth rate over 23 h, not the exponential per-capita rate. The same supplement states eps of about 0.01 (Supplementary Figure 3) and, in Supplementary Figure 2a, exponential growth rates in 0.005% and 2% glucose; those are reported in the result, not used to decide."
+    },
+    {
+      "data_id": "YOUK2009_WT_GROWTH_VS_GLUCOSE",
+      "description": "Exponential growth rate of wild-type S. cerevisiae CEN.PK2-1C against glucose (about 0.005 to 1.4 percent), digitised from Youk and van Oudenaarden (2009) Figure 1",
+      "source": "H. Youk, A. van Oudenaarden, Nature 462, 875-879 (2009), Figure 1 (author manuscript PMC2796206)",
+      "doi_or_url": "https://doi.org/10.1038/nature08653 ; https://pmc.ncbi.nlm.nih.gov/articles/PMC2796206/figure/F1/",
+      "retrieved": "2026-11-20",
+      "path": "docs/data/external/biology/yeast_sucrose/youk2009_wt_growth_vs_glucose.csv",
+      "sha256": "77b40310105c7b1fba4800d0c3c1da682aa0713fb79c412f1e9e5698889172e8",
+      "license": "numerical values digitised from a published figure; no figure or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Digitised after Test Card T027 was approved and committed (cbc52d6ac). Only the wild-type series is used; the engineered single-HXT strains in the same figure are not."
     }
   ]
 }

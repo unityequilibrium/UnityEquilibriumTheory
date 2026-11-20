@@ -1,0 +1,13 @@
+# Youk and van Oudenaarden (2009) Nature 462, 875; author manuscript PMC2796206, Figure 1 (image nihms158465f1.jpg):
+# wild-type CEN.PK2-1C exponential growth rate (from OD600 of batch cultures, synthetic medium, 30 C) against glucose.
+# Digitised on 2026-11-20 from pixel positions after Test Card T027 was approved (commit cbc52d6ac):
+# x axis log10, decades at 141.3 px (1e-3 % at 162 px); y axis 0.1 h^-1 per 64.8 px (0 at 486 px). Half-widths about 3 px.
+# The published error bars (s.e.m.) are about 0.01 to 0.03 h^-1 and are not part of the digitisation half-width.
+glucose_percent,growth_per_h,glucose_halfwidth_log10,growth_halfwidth
+0.00545,0.417,0.02,0.005
+0.0176,0.498,0.02,0.005
+0.0483,0.537,0.02,0.005
+0.167,0.563,0.02,0.005
+0.444,0.577,0.02,0.005
+0.72,0.590,0.02,0.005
+1.36,0.590,0.02,0.005
