@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 83,
-    "entries": 949,
+    "entries": 950,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 714,
+      "research": 715,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -430,8 +430,8 @@
     },
     {
       "path": "2026/2026-11-20.md",
-      "sha256": "49b3a99d85c67d9ac676d66afef0aa1c1e7648fb56ccd2de34cd258f6aea02c8",
-      "entries": 1
+      "sha256": "11bc57bfab4576e8e63bc55be390f78a8c53e0dbf55ce39e31381dc776aaaaf2",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19371,12 +19371,32 @@
       "source": "2026/2026-11-20.md",
       "anchor": "test-card-t027-yeast-switch-glucose-with-exponential-rates-failed",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Test Card T027: yeast switch glucose with exponential rates (FAILED)",
-      "entry_sha256": "4a74148881c4acedc11dbae1eeee3457104847e68ba864c0f03eae028a9bb238",
+      "entry_sha256": "d2af309143411ce4afbd3dcdeb7b3306154bc4a0377de6e62f9f63dc671d111f",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-20",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-20.md#stress-test-11-readable-fraction-of-energy-written-bits",
+      "source": "2026/2026-11-20.md",
+      "anchor": "stress-test-11-readable-fraction-of-energy-written-bits",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Stress test 11: readable fraction of energy-written bits",
+      "entry_sha256": "298534910a6639ef0c856aedd15c2e933b3989f50ea23cdf4e69c60ae6378540",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 714. Counts describe records, not accomplishments.
+Indexed entries: 715. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-20 | [Stress test 11: readable fraction of energy-written bits](2026/2026-11-20.md#stress-test-11-readable-fraction-of-energy-written-bits) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T027: yeast switch glucose with exponential rates (FAILED)](2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed) (L3) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Test Card T026: yeast switch glucose (INCONCLUSIVE)](2026/2026-11-19.md#test-card-t026-yeast-switch-glucose-inconclusive) (L143) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Trace feedback in yeast on sucrose: switch glucose level](2026/2026-11-19.md#trace-feedback-in-yeast-on-sucrose-switch-glucose-level) (L133) | research-core | explicit_stream_and_area |
