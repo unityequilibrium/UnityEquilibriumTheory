@@ -1,0 +1,18 @@
+# Sung, Ackerman, Miller, Doak and Lynch (2012) PNAS 109, 18488; Supplemental Table S8 (st08.doc): effective population size Ne of unicellular species.
+# Transcribed 2026-11-20 after Test Card T028 was approved (commit 9e9c36843). Rows without Ne omitted. "Schizo-saccharomyces" written without the hyphen.
+species,ne,genome_mb
+Chlamydomonas reinhardtii,31250000,121.0
+Neurospora crassa,1787696,38.64
+Paramecium tetraurelia,123711340,80.0
+Plasmodium falciparum,345489,22.85
+Saccharomyces cerevisiae,6212121,12.05
+Schizosaccharomyces pombe,2643361,13.8
+Trypanosoma brucei,5332244,35.5
+Bacillus subtilis,62691131,4.286
+Escherichia coli,179600000,4.652
+Helicobacter pylori,39665437,1.655
+Mesoplasma florum,1068507,0.79
+Pseudomonas aeruginosa,19886499,6.5
+Salmonella enterica,348991354,4.862
+Thermus thermophilus,228426396,2.13
+Sulfolobus acidocaldarius,19774974,2.243
