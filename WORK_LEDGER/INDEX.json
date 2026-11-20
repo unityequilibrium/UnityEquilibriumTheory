@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 82,
-    "entries": 948,
+    "sources": 83,
+    "entries": 949,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 713,
+      "research": 714,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -427,6 +427,11 @@
       "path": "2026/2026-11-19.md",
       "sha256": "87e0e23636025fff88b5de8506efdfc9f1db8f31c6a12ab6a163ad53be0f7c51",
       "entries": 15
+    },
+    {
+      "path": "2026/2026-11-20.md",
+      "sha256": "49b3a99d85c67d9ac676d66afef0aa1c1e7648fb56ccd2de34cd258f6aea02c8",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19359,6 +19364,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-19",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed",
+      "source": "2026/2026-11-20.md",
+      "anchor": "test-card-t027-yeast-switch-glucose-with-exponential-rates-failed",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Test Card T027: yeast switch glucose with exponential rates (FAILED)",
+      "entry_sha256": "4a74148881c4acedc11dbae1eeee3457104847e68ba864c0f03eae028a9bb238",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-20",
       "legacy_root_path": false
     },
     {

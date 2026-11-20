@@ -1,0 +1,52 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T027_YEAST_SWITCH_GLUCOSE_EXPONENTIAL",
+ "claim_id": "C_L3_TRACE_YEAST",
+ "test_card_id": "T027",
+ "level": "FAILED",
+ "outcome": "FAIL",
+ "numbers": [
+  {
+   "name": "G_star_predicted",
+   "value": 1.56,
+   "uncertainty": "upper estimate",
+   "unit": "mM"
+  },
+  {
+   "name": "G_fast_observed",
+   "value": 16.3,
+   "uncertainty": "digitisation interval 15.4 to 17.3",
+   "unit": "mM"
+  },
+  {
+   "name": "ratio_observed_to_predicted",
+   "value": 10.5,
+   "uncertainty": null,
+   "unit": "1"
+  },
+  {
+   "name": "max_exponential_rate_wild_type",
+   "value": 0.59,
+   "uncertainty": "+-0.005 (digitisation)",
+   "unit": "h^-1"
+  },
+  {
+   "name": "rate_at_2.7_mM",
+   "value": "0.537 (0.91 of maximum)",
+   "uncertainty": "published s.e.m. about 0.02",
+   "unit": "h^-1"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py",
+  "commit": "485273b13"
+ },
+ "artifacts": [],
+ "date": "2026-11-20",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-20",
+  "role": "AUTHOR"
+ },
+ "note": "FAILED under Test Card T027 (approved cbc52d6ac, comparison figure opened afterwards). Wild-type CEN.PK2-1C reaches 0.968 of its maximum exponential growth rate at about 16 mM glucose, ten times above the trace-model value G* = 1.56 mM and wholly above the 4.7 mM failure bound. The published error bars (about 0.02 per hour) do not change this: at 2.7 mM the rate is 0.91 of the maximum. The well-mixed reading of the trace (shared glucose accumulating in the whole culture) therefore does not explain the cooperative-growth switch of yeast on sucrose; T026's not-deciding exponential rates leaned the same way. Not tested here: glucose held near the cell surface (Gore et al. 2009 diffusion analysis), which would be a new hypothesis. Strain and medium differ from Dai et al. (stated before the run). C_L3_TRACE_FEEDBACK itself (a general L1 model) is not refuted; its application to yeast as written in C_L3_TRACE_YEAST is. FAILED approved by the author in chat on 2026-11-20."
+}
