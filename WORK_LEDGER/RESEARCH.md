@@ -6,10 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 711. Counts describe records, not accomplishments.
+Indexed entries: 713. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-19 | [Test Card T026: yeast switch glucose (INCONCLUSIVE)](2026/2026-11-19.md#test-card-t026-yeast-switch-glucose-inconclusive) (L143) | research-standards | explicit_stream_and_area |
+| 2026-11-19 | [Trace feedback in yeast on sucrose: switch glucose level](2026/2026-11-19.md#trace-feedback-in-yeast-on-sucrose-switch-glucose-level) (L133) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Layer 3 with trace feedback (author decision 2026-11-19)](2026/2026-11-19.md#layer-3-with-trace-feedback-author-decision-2026-11-19) (L123) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [Layer 3 supply in a real system: the chemostat](2026/2026-11-19.md#layer-3-supply-in-a-real-system-the-chemostat) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-19 | [T025 run: T023 with a phylogenetic correction is INCONCLUSIVE](2026/2026-11-19.md#t025-run-t023-with-a-phylogenetic-correction-is-inconclusive) (L103) | research-standards | explicit_stream_and_area |

@@ -64,6 +64,7 @@ core/00_governance/calculation_contracts/t021_lighting_succession.json	00_govern
 core/00_governance/calculation_contracts/t022_michelson_morley_kennedy_thorndike.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T022
 core/00_governance/calculation_contracts/t023_flight_lifetime_energy.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T023
 core/00_governance/calculation_contracts/t025_flight_lifetime_energy_pgls.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T025
+core/00_governance/calculation_contracts/t026_yeast_switch_glucose.json	00_governance/calculation_contracts	.json	NEW	-	-	-	-	-	-	-	-	A	W10	Calculation contract of Test Card T026
 core/00_governance/redirects/legacy/02_Proof/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
 core/00_governance/redirects/legacy/artifacts/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
 core/00_governance/redirects/legacy/data/README.md	00_governance/redirects	.md	D	0	0	0	6	0	0	0	0	D	W9	Compatibility redirect stub for an old docs/core path (core_paths.is_markdown_redirect)
@@ -471,6 +472,7 @@ core/03_lanes/persistence/t018_lifespan_rate_of_living.py	03_lanes/persistence	.
 core/03_lanes/persistence/t021_lighting_succession.py	03_lanes/persistence	.py	A	1	2	1	0	0	0	1	1	A	W2	Producer of a registered Test Card result
 core/03_lanes/persistence/t023_flight_lifetime_energy.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Producer of Result T023 (bats against birds)
 core/03_lanes/persistence/t025_flight_lifetime_energy_pgls.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Producer of Result T025 (bats against birds with a phylogenetic correction)
+core/03_lanes/persistence/t026_yeast_switch_glucose.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	W10	Producer of Result T026 (yeast switch glucose)
 core/03_lanes/persistence/uet_asymmetric_division.py	03_lanes/persistence	.py	A_DEP	2	0	1	2	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_growing_abundance.py	03_lanes/persistence	.py	A_DEP	1	0	1	1	0	0	1	1	A	W2	Model code of the new equations, used by producers or physics tests
 core/03_lanes/persistence/uet_layer2_to_3.py	03_lanes/persistence	.py	A_DEP	2	0	3	4	0	0	2	1	A	W2	Model code of the new equations, used by producers or physics tests
@@ -2168,10 +2170,13 @@ core/03_lanes/persistence/uet_layer3_from_action.py	03_lanes/persistence	.py	NEW
 core/03_lanes/persistence/uet_layer3_supply.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 pool loss and supply threshold (claim C_L3_SUPPLY)
 core/03_lanes/persistence/uet_layer3_supply_chemostat.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 supply in a chemostat (claim C_L3_SUPPLY_CHEMOSTAT)
 core/03_lanes/persistence/uet_layer3_trace_feedback.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Layer 3 with trace feedback (claim C_L3_TRACE_FEEDBACK)
+core/03_lanes/persistence/uet_layer3_trace_yeast.py	03_lanes/persistence	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Trace feedback in yeast on sucrose (claim C_L3_TRACE_YEAST)
 core/03_lanes/symmetry/__init__.py	03_lanes/symmetry	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Package marker for the symmetry lane
 core/03_lanes/symmetry/uet_noether.py	03_lanes/symmetry	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Noether charges of the parent action: O(2), diffeomorphism identity, lattice Poincare charges (claim C_NOETHER_COVERAGE)
 core/05_tests/physics/test_layer3_from_action.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_FROM_ACTION
 core/05_tests/physics/test_layer3_supply.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_SUPPLY
+core/05_tests/physics/test_layer3_trace_feedback.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_TRACE_FEEDBACK
+core/05_tests/physics/test_layer3_trace_yeast.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_TRACE_YEAST
 core/05_tests/physics/test_layer3_supply_chemostat.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_SUPPLY_CHEMOSTAT
 core/05_tests/physics/test_noether.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	N1	Physics tests for C_NOETHER_COVERAGE
 core/00_governance/calculation_contracts/l3_from_action_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_FROM_ACTION
@@ -2179,4 +2184,5 @@ core/00_governance/calculation_contracts/l3_supply_formal.json	00_governance	.js
 core/00_governance/calculation_contracts/l3_supply_chemostat_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_SUPPLY_CHEMOSTAT
 core/05_tests/physics/test_layer3_trace_feedback.py	05_tests	.py	NEW	-	-	-	-	-	-	-	-	A	S3	Physics tests for C_L3_TRACE_FEEDBACK
 core/00_governance/calculation_contracts/l3_trace_feedback_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_TRACE_FEEDBACK
+core/00_governance/calculation_contracts/l3_trace_yeast_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	S3	FORMAL contract for C_L3_TRACE_YEAST
 core/00_governance/calculation_contracts/noether_coverage_formal.json	00_governance	.json	NEW	-	-	-	-	-	-	-	-	A	N1	FORMAL contract for C_NOETHER_COVERAGE

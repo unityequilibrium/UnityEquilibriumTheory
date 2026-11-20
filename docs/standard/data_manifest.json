@@ -276,6 +276,30 @@
       "license": "TimeTree terms (timetree.org FAQ, read 2026-11-19): open for personal research and teaching; redistribution of TimeTree data and its transformations not permitted. Kept local, not committed.",
       "visibility": "PRIVATE_LOCAL",
       "note": "Downloaded with the owner's permission on 2026-11-19. Before any fit only the leaf names, the leaf count and the root age were read, to fix the placement rules of Test Card T025; no trait value was joined to the tree. The uploaded list (species_298.txt, sha256 30c8e2f2e6cb7ad5d328d2533fc55b51e0eacfd917342f660af79dc621bbac13) and the service's HTML answer (load_names_response.html, listing the unplaced names) are kept in the same local folder."
+    },
+    {
+      "data_id": "YEAST_SUCROSE_PARAMETERS",
+      "description": "Invertase kinetics per cell (Koschwanez et al. 2011, Figure S1C) and the batch protocol, measured growth parameters and fitted switch density of cooperative yeast growth in 2 percent sucrose (Dai et al. 2012, SOM Table S1)",
+      "source": "J. H. Koschwanez, K. R. Foster, A. W. Murray, PLoS Biol. 9, e1001122 (2011); L. Dai, D. Vorselen, K. S. Korolev, J. Gore, Science 336, 1175 (2012), Supporting Online Material",
+      "doi_or_url": "https://doi.org/10.1371/journal.pbio.1001122 ; http://www.gorelab.org/Dai_Science_2012.SOM.pdf",
+      "retrieved": "2026-11-19",
+      "path": "docs/data/external/biology/yeast_sucrose/yeast_sucrose_parameters.csv",
+      "sha256": "d924e6b556212af6c257b7d0d8d4bd2ed9f0bd9fd32127ed0c3bf88d0f6a01d8",
+      "license": "numerical facts transcribed from journal articles; no figures or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Read from the published pages on 2026-11-19. Dai et al.'s switch density N_c is a fitted value (their Table S1 marks it not measured); it is used here as an input to convert a density into a glucose level, not as a test outcome."
+    },
+    {
+      "data_id": "GORE2009_GROWTH_VS_GLUCOSE",
+      "description": "Mean growth rate (23 h) of S. cerevisiae (BY4741-derived cheater strain) in 5% sucrose plus 0.002 to 0.03% glucose, digitised from Gore et al. (2009) Supplementary Figure 10",
+      "source": "J. Gore, H. Youk, A. van Oudenaarden, Nature 459, 253-256 (2009), Supplementary Information, Figure 10 (author manuscript PMC2888597)",
+      "doi_or_url": "https://doi.org/10.1038/nature07921 ; https://pmc.ncbi.nlm.nih.gov/articles/instance/2888597/bin/NIHMS208792-supplement-supp_info.pdf",
+      "retrieved": "2026-11-19",
+      "path": "docs/data/external/biology/yeast_sucrose/gore2009_growth_vs_glucose.csv",
+      "sha256": "a4fac664ec2806edd319f4c8779332e22588ec5d52cfc5fbf5227d8e0e843aca",
+      "license": "numerical values digitised from a published figure; no figure or text redistributed",
+      "visibility": "PUBLIC",
+      "note": "Digitised after Test Card T026 was approved and committed (22f6d95c3). Read from the figure as rendered in a browser; the figure reports a mean growth rate over 23 h, not the exponential per-capita rate. The same supplement states eps of about 0.01 (Supplementary Figure 3) and, in Supplementary Figure 2a, exponential growth rates in 0.005% and 2% glucose; those are reported in the result, not used to decide."
     }
   ]
 }

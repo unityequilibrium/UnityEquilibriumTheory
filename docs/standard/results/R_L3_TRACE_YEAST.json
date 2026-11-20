@@ -1,0 +1,40 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_L3_TRACE_YEAST",
+ "claim_id": "C_L3_TRACE_YEAST",
+ "level": "L1_CONSISTENT",
+ "outcome": "PASS",
+ "numbers": [
+  {
+   "name": "trace_writing_rate",
+   "value": 303000000.0,
+   "uncertainty": null,
+   "unit": "glucose molecules s^-1 cell^-1 at 2 percent sucrose (58.4 mM)"
+  },
+  {
+   "name": "switch_glucose_G_star",
+   "value": 1.56,
+   "uncertainty": null,
+   "unit": "mM (0.028 percent w/v glucose)"
+  },
+  {
+   "name": "closed_form_check",
+   "value": "G = (1 - eps) h (N - N0)/gamma equals direct integration at 20 random sets (rel < 1e-8)",
+   "uncertainty": null,
+   "unit": "natural"
+  },
+  {
+   "name": "upper_estimate",
+   "value": "glucose uptake before the switch lowers free glucose below the closed form at 20 random sets",
+   "uncertainty": null,
+   "unit": "natural"
+  }
+ ],
+ "producer": {
+  "script": "core/05_tests/physics/test_layer3_trace_yeast.py",
+  "commit": "3b9989841"
+ },
+ "artifacts": [],
+ "date": "2026-11-19",
+ "note": "Derivation with registered literature values (YEAST_SUCROSE_PARAMETERS); not a comparison with an outcome. Under C_L3_TRACE_FEEDBACK the shared glucose released by invertase is the trace; Dai et al.'s fitted switch density N_c = 276 cells/ul at gamma_low = 0.318/h and Koschwanez et al.'s invertase kinetics give G* = (1 - eps) h N_c/gamma_low = 1.56 mM, an upper estimate (uptake neglected; eps = 0.01 quoted from memory of Gore et al. 2009, 1 percent effect). Testable prediction: an independent measurement of yeast growth rate against glucose must show the rise from about 0.32 to 0.47 per hour near 1.6 mM or below. Needs a preregistered Test Card with a growth-versus-glucose dataset not used here. Nearest known theory: public-goods models of yeast cooperation and Allee effects. Not UET-distinct (the trace is set by enzyme kinetics, not by energy use)."
+}

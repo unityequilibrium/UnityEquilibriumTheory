@@ -1,0 +1,52 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T026_YEAST_SWITCH_GLUCOSE",
+ "claim_id": "C_L3_TRACE_YEAST",
+ "test_card_id": "T026",
+ "level": "L2_CONFRONTED",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "G_star_predicted",
+   "value": 1.56,
+   "uncertainty": "upper estimate",
+   "unit": "mM"
+  },
+  {
+   "name": "max_growth_in_designated_figure",
+   "value": 0.259,
+   "uncertainty": "+-0.005 (digitisation)",
+   "unit": "h^-1 (mean over 23 h, at 0.03 percent glucose)"
+  },
+  {
+   "name": "G_high",
+   "value": "not reached (threshold 0.457 h^-1 never attained in 0.002 to 0.03 percent glucose)",
+   "uncertainty": null,
+   "unit": "mM"
+  },
+  {
+   "name": "capture_efficiency_eps",
+   "value": "about 0.01 (Gore et al. 2009 Supp. Fig. 3), as assumed",
+   "uncertainty": null,
+   "unit": "1"
+  },
+  {
+   "name": "exponential_rates_supp_fig_2a",
+   "value": "0.005 percent glucose (0.28 mM): about 0.33 low density, 0.37 high density; 2 percent glucose (111 mM): about 0.42 and 0.46 (not deciding)",
+   "uncertainty": null,
+   "unit": "h^-1"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t026_yeast_switch_glucose.py",
+  "commit": "05f4231ce"
+ },
+ "artifacts": [],
+ "date": "2026-11-19",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-19",
+  "role": "AUTHOR"
+ },
+ "note": "INCONCLUSIVE under Test Card T026 (approved 22f6d95c3, comparison figure opened afterwards). The designated figure (Gore et al. 2009 Supplementary Figure 10) reports a mean growth rate over 23 h, which tops out at 0.26 per hour, while the card's threshold is Dai et al.'s exponential rate 0.457 per hour; the observable is never reached, which the card rules INCONCLUSIVE. This is a card-design error by the drafter: the figure's growth-rate definition should have been checked against the threshold before drafting. Not deciding: Supplementary Figure 2a of the same supplement gives exponential rates of about 0.33 to 0.37 per hour at 0.28 mM glucose and 0.42 to 0.46 at 111 mM, which leans against reaching 0.457 per hour by 1.6 mM, but two concentrations cannot locate G_high. The capture efficiency eps of about 0.01 is confirmed. Nearest theory: public-goods models of yeast cooperation; not UET-distinct. L2 result approved by the author in chat on 2026-11-19."
+}
