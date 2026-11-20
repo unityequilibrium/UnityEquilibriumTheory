@@ -1,0 +1,50 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T027",
+  "status": "APPROVED",
+  "claim_id": "C_L3_TRACE_YEAST",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Same prediction as T026 (C_L3_TRACE_YEAST): the switch from slow to fast cooperative growth on sucrose happens when the shared glucose reaches G* = 1.56 mM (upper estimate), so yeast grown directly on glucose must be essentially at its fast rate by about 1.6 mM. T026 could not decide because its comparison figure reported a 23 h mean rate. This card uses exponential (log-phase) growth rates and a threshold relative to each strain's own maximum, so differences in absolute rate between strains do not decide the outcome.",
+  "observable": {
+    "quantity": "G_fast: the lowest glucose concentration at which the exponential growth rate of the wild-type strain reaches 0.968 of its own maximum over the measured range (0.968 = Dai et al.'s 0.457/0.472, the T026 threshold as a fraction of gamma_high), by linear interpolation in log10(glucose) between measured points",
+    "unit": "mM glucose",
+    "domain": "Youk and van Oudenaarden (2009) Nature 462, 875 (author manuscript PMC2796206), Figure 1: wild-type CEN.PK2-1C growth rate against glucose, synthetic medium, 30 C, digitised once after approval"
+  },
+  "test_kind": "BLIND_PREDICTION",
+  "data_sources": [
+    {
+      "data_id": "YEAST_SUCROSE_PARAMETERS",
+      "role": "CALIBRATION",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "YOUK2009_WT_GROWTH_VS_GLUCOSE",
+      "role": "HOLDOUT",
+      "exposure": "UNSEEN"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t027_yeast_switch_glucose_exponential.py",
+    "description": "G* from uet_layer3_trace_yeast.switch_glucose (registered values only, eps = 0.01 confirmed in Gore et al. 2009). G_fast from the digitised wild-type curve of Youk and van Oudenaarden (2009) Figure 1: maximum = largest measured rate; first crossing of 0.968 x maximum, linear in log10(glucose); interval from shifting every point by its digitisation half-widths (rate up and glucose left for the low end, rate down and glucose right for the high end; the maximum is shifted with its point). Glucose in percent w/v converted with 180.16 g/mol."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "G* = 1.56 mM, computed before the comparison data are opened",
+    "relative threshold 0.968 of the strain's own maximum (the T026 threshold expressed as a fraction)",
+    "lower plausibility bound G*/30 = 0.052 mM and upper failure bound 3 G* = 4.7 mM, as in T026",
+    "wild-type curve only; the engineered single-HXT strains in the same figure are not used",
+    "no strain, medium or temperature correction (CEN.PK2-1C here against the BY4741-derived strains of Dai et al. and Gore et al.); stated as a limitation"
+  ],
+  "pass_criterion": "PASS if the whole digitisation interval of G_fast lies within [G*/30, G*] = [0.052, 1.56] mM.",
+  "fail_criterion": "FAILED if the whole interval of G_fast lies above 3 G* = 4.7 mM or below G*/30 = 0.052 mM. INCONCLUSIVE otherwise, including when the measured concentrations do not bracket the crossing (for example the crossing is below the lowest measured concentration but the lowest is above 0.052 mM) or the interval straddles a boundary.",
+  "drafted_by": "claude",
+  "note": "Disclosure: Dai et al. (2012) and Gore et al. (2009) are SEEN. In T026 the drafter saw Gore et al.'s exponential rates at two glucose levels (0.28 mM and 111 mM), which lean against the prediction; that knowledge is stated here because it shaped the decision to run this card. The Youk and van Oudenaarden (2009) figure has not been opened; only its caption, strain, medium, temperature and measurement method were read, with all rate numbers masked. Strain and medium differ from Dai et al. The criteria are AI choices for the author to accept or change before approval. Nearest theory: public-goods models of yeast cooperation and Monod growth kinetics; a PASS would show the trace-feedback mapping is quantitatively consistent across experiments, not a UET-distinct result. Approved by the author in chat on 2026-11-20 as drafted (\"Approve and run\"); this approval is committed before the comparison figure is opened.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-20",
+    "role": "AUTHOR"
+  }
+}
