@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 83,
-    "entries": 950,
+    "entries": 951,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 715,
+      "research": 716,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -430,8 +430,8 @@
     },
     {
       "path": "2026/2026-11-20.md",
-      "sha256": "11bc57bfab4576e8e63bc55be390f78a8c53e0dbf55ce39e31381dc776aaaaf2",
-      "entries": 2
+      "sha256": "64a0e612186ab633e88686f201455f2d6474eaeb775c31218af2cdd8aa3ac8ce",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19391,12 +19391,32 @@
       "source": "2026/2026-11-20.md",
       "anchor": "stress-test-11-readable-fraction-of-energy-written-bits",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Stress test 11: readable fraction of energy-written bits",
-      "entry_sha256": "298534910a6639ef0c856aedd15c2e933b3989f50ea23cdf4e69c60ae6378540",
+      "entry_sha256": "31d680aba4f69c59acd7596287cbc1b9ea5a5818aaf6ac6d7421cfe1c9b73353",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-20",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-20.md#test-card-t028-selection-and-the-readable-fraction-inconclusive",
+      "source": "2026/2026-11-20.md",
+      "anchor": "test-card-t028-selection-and-the-readable-fraction-inconclusive",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Test Card T028: selection and the readable fraction (INCONCLUSIVE)",
+      "entry_sha256": "1f6c97bb444feb08aa3c2afb671a5ead88429e71ffa86769ad1437330818f0ed",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

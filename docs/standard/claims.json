@@ -485,9 +485,11 @@
     {
       "claim_id": "C_L3_SELECTION_RAISES_R",
       "statement": "AI hypothesis (stress test 11): selection for persistence raises the readable fraction r of the bits a system writes with its energy; for cells, r = genome bits copied per division / (division energy / (kT ln 2)) rises with effective population size at fixed cell volume.",
-      "level": "L0_SPECULATIVE",
-      "evidence": [],
-      "note": "Registered so Test Card T028 can be attached. Nearest theory: Lynch's drift-barrier hypothesis, which predicts the same sign; not UET-distinct unless the size of the effect is predicted."
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T028_SELECTION_READABLE_FRACTION"
+      ],
+      "note": "Confronted under Test Card T028: INCONCLUSIVE (only five species in both tables; slope +0.83, 95% CI -0.62 to 2.29). L2 approved by the author on 2026-11-20. Nearest theory: Lynch's drift-barrier hypothesis, which predicts the same sign; not UET-distinct unless the size of the effect is predicted."
     },
     {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
