@@ -1,0 +1,232 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T028_SELECTION_READABLE_FRACTION_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t028",
+    "rationale": "Methodological contract for Test Card T028. The evidence decision lives in docs/standard. Costs, volumes, Ne and genome sizes as published.",
+    "coverage_evidence": [
+      "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv",
+      "docs/data/external/biology/readable_fraction/sung2012_ne.csv"
+    ]
+  },
+  "question": "At fixed cell volume, does the readable fraction r of energy-written bits (genome bits copied per division over division energy in kT ln 2 units) rise with effective population size?",
+  "output": {
+    "quantity": "partial slope b_Ne of log10 r on log10 Ne with log10 V as covariate",
+    "unit": "1",
+    "domain": "species in both Lynch and Marinov 2015 and Sung et al. 2012 Table S8",
+    "accuracy": "OLS 95 percent t-interval",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_L3_SELECTION_RAISES_R"
+    ],
+    "assumptions": "Selection for persistence raises r (AI hypothesis, stress test 11).",
+    "approximation": "Growth cost per division stands for energy spent; 50 kJ/mol per ATP and 303 K for all species.",
+    "initial_boundary": "Not applicable.",
+    "drive_environment": "Laboratory growth conditions as compiled.",
+    "parameters": "No fitted parameter decides the outcome."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "LYNCH_MARINOV2015_CELL_COSTS",
+      "SUNG2012_NE_TABLE"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Ne table opened only after the approval commit 9e9c36843."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published culture measurements; values used as printed or digitised.",
+      "systems": [
+        {
+          "id": "population",
+          "state": "Yeast cultures",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "population.species"
+            ],
+            "owner_ids": [],
+            "rule": "One record per species as compiled."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Compiled literature records",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "population",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Longevity records and respirometry compiled from the literature"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "population",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "Captivity effects handled upstream"
+        }
+      ],
+      "observables": [
+        {
+          "id": "life_history",
+          "detector_id": "camera",
+          "target_systems": [
+            "population"
+          ],
+          "backaction_targets": [
+            "population"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "growth rate; glucose concentration",
+          "readout_map": "digitised figure; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Yeast cultures as described in the cited studies.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Not applicable.",
+    "observer_state": "Published figures and tables.",
+    "readout": "Growth cost per cell, cell volume, effective population size, genome size.",
+    "backaction": "Handled upstream.",
+    "frame": "Not applicable",
+    "time_convention": "Hours",
+    "product_level": "published figures (not raw data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Cultures and conditions as published.",
+      "evidence": [
+        "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No signal propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Applied upstream in the studies compiled by AnAge; not recomputed here.",
+      "evidence": [
+        "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "r per species, OLS fit, outcome rule fixed in T028.",
+      "evidence": [
+        "core/03_lanes/persistence/t028_selection_readable_fraction.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Linear least squares (numpy) and Student t quantile (scipy).",
+      "evidence": [
+        "core/03_lanes/persistence/t028_selection_readable_fraction.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "Direct linear algebra.",
+    "approximation": "Whole-cell growth cost, not replication cost alone.",
+    "measurement": "Published values carry no errors in the tables.",
+    "systematic": "Ne estimates from silent-site diversity depend on assumed mutation rates; no phylogenetic correction.",
+    "omissions": "Species in only one table dropped.",
+    "dependence": "Species share ancestry.",
+    "acceptance": "Outcome categories fixed in Test Card T028.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "9bb46fe6f1f273076a74f6efdd7d176e22bd45887a69cfa1f661e6c368d57cde",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/biology/readable_fraction/sung2012_ne.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "858d379d0c42b20abfa096e26c588f022bc980b5a034031d87c20e4a878c5062",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t028_selection_readable_fraction.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "baf810ea7b63f82d97df318babbfbc127c8f9f0ac21a4435af12c3316fbee319",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t028_selection_readable_fraction.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t028_selection_readable_fraction.py",
+    "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv",
+    "docs/data/external/biology/readable_fraction/sung2012_ne.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T028 comparison only. Not UET-distinct: Lynch's drift-barrier hypothesis predicts the same sign.",
+  "next_action": "A larger overlap of energy-cost and Ne data (8 or more species) is needed to decide."
+}
