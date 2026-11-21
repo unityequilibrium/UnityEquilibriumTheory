@@ -499,6 +499,15 @@
       "note": "Limits the scope of C_L3_ENTROPY_DIVIDER (positive heat capacity only). Thermodynamics of self-gravitating systems; not UET-distinct. Black holes as dividers and cosmic expansion are open."
     },
     {
+      "claim_id": "C_L3_BLACK_HOLE_DIVIDER",
+      "statement": "A black hole used as the divider gets colder as it receives energy (C = -8 pi G M^2 k/(hbar c) < 0, dS/dE = 1/T_H), so unlike ordinary dividers it improves as matter piles in; it is the largest entropy store (about 1.8e90 k for Sgr A*), every hole above 4.5e22 kg is colder than today's CMB and grows, and its evaporation is a layer-3 burn with P ~ F^-2 whose lifetime is F0/(3 P0), one third of the naive store-over-power estimate.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D5_BLACK_HOLE_DIVIDER"
+      ],
+      "note": "Schwarzschild black-hole thermodynamics and the generalised second law; not UET-distinct. Links the author's black-hole picture to the divider waves and to C_L3_BURN_LAW_SELECTION. Rotation, accretion and cosmic expansion are open."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",

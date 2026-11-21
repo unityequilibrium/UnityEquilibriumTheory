@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 954,
+    "entries": 955,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 719,
+      "research": 720,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "54a3598868bfcd3a100a45a0cc5c535e8876300702874b0718b4a8b9dea8f639",
-      "entries": 5
+      "sha256": "0ced6b18024a47e9163179de436299712557cc5e3eb159edf4967a74d825942f",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -19476,9 +19476,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-d4-dividers-for-systems-held-together-by-gravity",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "Wave D4: dividers for systems held together by gravity",
-      "entry_sha256": "a6dcc89c711b7cc8a1f2d39301e270b09d42e4840901f629ba8fba2230633895",
+      "entry_sha256": "4ae5fa8b7051f94aaec2168b32d0487e524ea898d5af57efd8814b1cd99a092b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d5-a-black-hole-as-the-divider",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "Wave D5: a black hole as the divider",
+      "entry_sha256": "3b93a2ae071fd9e8b468122ab1cb874fe8ce1a5363c02f1ffaf2a516ace1a1a6",
       "stream": "research",
       "areas": [
         "research-core"

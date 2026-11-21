@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — How does a black hole behave as the divider?
+ทำ: `uet_black_hole_divider.py` (อุณหพลศาสตร์หลุมดำ Schwarzschild) + physics test 37 ตัว (complex-step ของ dS/dE และ C, ODE การระเหยเทียบสูตรปิด, กฎข้อสองแบบขยาย, มวล crossover สองทาง)
+ผล: หลุมดำยิ่งรับยิ่งเย็น (C < 0) จึงเป็นผู้หารที่ดีขึ้นเมื่อมวลไหลเข้า; Sgr A* มี entropy 1.8e90 k; หลุมดำหนักกว่า 4.5e22 kg เย็นกว่า CMB และโตขึ้น; อายุการระเหย = F0/(3P0) หนึ่งในสามของ F0/P0
+ระดับ: C_L3_BLACK_HOLE_DIVIDER → L1_CONSISTENT (อุณหพลศาสตร์หลุมดำ ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: การขยายตัวของจักรวาลเป็นผู้หารคนสุดท้าย (ขอบฟ้า de Sitter) และหลุมดำหมุน
+commit: c979fa040 (code) + this commit (records)
+
 ## 2026-11-21 — What does dividing entropy mean for systems held together by gravity?
 ทำ: `uet_gravitating_divider.py` (heat capacity ติดลบจาก virial, contact เชิงเส้นและแผ่รังสี, สองวัตถุ C1 < 0 กับ C2 > 0) + physics test 46 ตัว (ODE vs closed form, เวลา runaway, พลังงาน/entropy, อัตราช่องว่างสองทาง)
 ผล: ระบบแรงโน้มถ่วงเสียพลังงานแล้วร้อนขึ้น วิ่งหนีผู้หาร (ไม่หมดลงอย่าง D1); สมดุลได้ก็ต่อเมื่อ C2 < |C1| (Lynden-Bell & Wood) ผู้หารไม่จำกัดอย่างอวกาศจึงไม่ให้หยุดเลย; t_KH ดวงอาทิตย์ 31.4 Myr

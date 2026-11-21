@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 719. Counts describe records, not accomplishments.
+Indexed entries: 720. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-21 | [Wave D5: a black hole as the divider](2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D4: dividers for systems held together by gravity](2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D3: radiative contacts break zero-sum sharing along a chain](2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D2: dividing entropy along a chain](2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain) (L23) | research-core | explicit_stream_and_area |
