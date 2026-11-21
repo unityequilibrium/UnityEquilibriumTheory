@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — Of what we see, how much still exists?
+ทำ: `uet_seen_but_gone.py` (เวลาแสงเดินทาง + อายุจำกัด τ = F/P + การสำรวจจำกัดความสว่าง) + physics test 30 ตัว (สูตรปิด, limit, การต่อของสองช่วง, Monte Carlo ในกาลอวกาศ)
+ผล: สัดส่วนที่ยังอยู่ = 1 − Dλ/(D+1) เมื่อ λ = d/(cτ) ≤ 1 และ λ^(−D)/(D+1) เมื่อเกิน; λ ~ P^(3/2): ชนิดที่เผาเร็ว 100 เท่า λ มากขึ้น 1000 เท่า (ตัวอย่าง: 99.25% ยังอยู่ เทียบ 0.025%)
+ระดับ: C_L3_SEEN_BUT_GONE → L1_CONSISTENT (look-back / duty cycle ไม่ใช่ผลเฉพาะของ UET); แสงยืนยันว่าตอนแสงออกมายังอยู่ ไม่ใช่ตอนนี้
+ถัดไป: ใส่การขยายตัวของเอกภพ (redshift, ระยะบนกรวยแสง) แทนอวกาศนิ่ง
+commit: d6004cb7c (code) + this commit (records)
+
 ## 2026-11-21 — Does what we see show the persistence ranking?
 ทำ: `uet_observed_selection.py` (การสำรวจที่จำกัดด้วยความสว่าง ใน 1–3 มิติ + 1/V_max) + physics test 30 ตัว (ปริมาตรเชิงตัวเลขเทียบสูตรปิด, limit, เลขชี้กำลัง D/2−1, Monte Carlo seeded)
 ผล: ใน 3 มิติ N ~ bF P^(1/2): ชนิดที่เผาเร็วกว่า 100 เท่า มีน้อยกว่า 100 เท่าในอวกาศ แต่เห็นมากกว่า 10 เท่า (MC 19874 vs 1962); ในจาน 2 มิติ ผลสองอย่างหักล้างกัน; 1/V_max คืนค่าจริงได้ (0.987, 0.0100)

@@ -526,6 +526,15 @@
       "note": "Malmquist bias and the 1/V_max estimator; not UET-distinct. Stress test of author item 5: what we see is what persisted and also spent enough energy as light to reach us, so the best resource managers are the hardest to see. T002 unaffected (one distance); T008 unaffected (Hu, Wu and Wu 2007 use 1/(V_max - V_min) weights, checked 2026-11-21)."
     },
     {
+      "claim_id": "C_L3_SEEN_BUT_GONE",
+      "statement": "In steady state with fixed lifetime tau = F/P and light delay r/c, the fraction of a flux-limited sample that still exists when it is observed is A_D = 1 - D lambda/(D + 1) for lambda = d/(c tau) <= 1 and lambda^(-D)/(D + 1) above, with lambda ~ eps^(1/2) P^(3/2)/F; the delay changes which sources are seen but not how many, so a type burning 100 times faster has 1000 times the lambda and in three dimensions a sample of it can be almost entirely sources that are already gone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S2_SEEN_BUT_GONE"
+      ],
+      "note": "Light-travel-time and duty-cycle arguments; not UET-distinct. Continues C_OBS_TWO_DELAYS and C_L3_OBSERVED_SELECTION: the light certifies that the source was alive when it left, not now. Euclidean and steady state only."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",

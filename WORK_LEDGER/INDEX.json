@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 958,
+    "entries": 959,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 723,
+      "research": 724,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "b9354c942c8eaa5048db3c59f1ddf0aa4b54f63cccd74b919877048263131f9a",
-      "entries": 9
+      "sha256": "88b76f4c5b0afa250ea1e37c6e8fc9c4c9cf80c97642d16650d47a0942ea8b40",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -19556,12 +19556,32 @@
       "source": "2026/2026-11-21.md",
       "anchor": "check-t008-against-the-flux-limit-selection-of-wave-s1",
       "start_line": 83,
-      "end_line": 91,
+      "end_line": 92,
       "title": "Check: T008 against the flux-limit selection of wave S1",
-      "entry_sha256": "e42b1107357a3316102c7bcf2523baf1c1dad4d6bda915a46614c742c9c9a898",
+      "entry_sha256": "2cdf8f9245d127fbdeb1084c51fe3f0ef9e1b29cd7e66ac31a2763c5e82b4aeb",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s2-of-the-sources-we-see-how-many-still-exist",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s2-of-the-sources-we-see-how-many-still-exist",
+      "start_line": 93,
+      "end_line": 101,
+      "title": "Wave S2: of the sources we see, how many still exist?",
+      "entry_sha256": "73de9d701b42610b72370f527e8f868b67666ce950c17f6eb2599f14c27406fa",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
