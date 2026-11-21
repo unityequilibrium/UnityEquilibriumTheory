@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — With radiative contacts, is sharing along a chain still zero-sum?
+ทำ: `uet_entropy_chain_radiative.py` (contact แบบ J = G(T_h^n − T_c^n)/n, n = 4 คือการแผ่รังสี) + physics test 54 ตัว (กฎ contact, n = 1 ตรงกับ D2, อนุพันธ์สองทาง, เครื่องหมายของ c − 1, Carnot limit)
+ผล: zero-sum เฉพาะ n = 1; n > 1 (รังสี) งานที่ทอดหน้าเอาไป 1 หน่วยทำให้ทอดหลังเสียมากกว่า 1 (c > 1), n < 1 กลับกัน; ผลเล็กเว้นแต่ contact ทำงานใกล้ขีดจำกัด (c = 1.015 ในตัวอย่างดวงอาทิตย์–ดาวเคราะห์–อวกาศ)
+ระดับ: C_L3_ENTROPY_CHAIN_RADIATIVE → L1_CONSISTENT (endoreversible + radiative contact ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: การเจือจางของแสงอาทิตย์ (เรขาคณิตท้องฟ้า) และผู้หารที่ร้อนขึ้นเอง
+commit: 93022e6d9 (code) + this commit (records)
+
 ## 2026-11-21 — Does dividing entropy along a chain create resource, and how is it shared?
 ทำ: `uet_entropy_chain.py` (engine N ทอดต่ออนุกรม เชื่อมด้วยการนำความร้อนเชิงเส้น) + physics test 44 ตัว (สูตรปิด N = 1–4, Carnot limit, สมดุล entropy ราย contact, ทางที่สองจากอุณหภูมิ, การแบ่งแบบ zero-sum)
 ผล: กำลังรวมสูงสุด = K_chain(√T0 − √T_N)² โดย K_chain คือทุก contact ต่ออนุกรม → ห่วงโซ่ไม่สร้างทรัพยากร ทอดที่เพิ่มทำให้ลด (contact เท่ากัน: 1/N); ที่ entropy flux เดียวกัน ส่วนแบ่งระหว่างทอดเป็น zero-sum

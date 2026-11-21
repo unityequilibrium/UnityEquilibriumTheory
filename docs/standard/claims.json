@@ -481,6 +481,15 @@
       "note": "Extends C_L3_ENTROPY_DIVIDER to chains. Endoreversible series engines with linear contacts; not UET-distinct. Radiative contacts and warming dividers are open."
     },
     {
+      "claim_id": "C_L3_ENTROPY_CHAIN_RADIATIVE",
+      "statement": "In a chain of entropy dividers whose contacts follow J = G (T_h^n - T_c^n)/n, sharing between stages is zero-sum only for linear contacts (n = 1): for radiation (n = 4) and any n > 1 a unit of work taken by an upstream stage costs the downstream stages more than one unit (marginal cost c > 1), so the way the upstream stage uses its share changes what the whole chain gets; for n < 1 the opposite holds (c < 1).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D3_ENTROPY_CHAIN_RADIATIVE"
+      ],
+      "note": "Extends C_L3_ENTROPY_CHAIN. The effect is small unless a contact works near its limit (c = 1.015 in the illustrative sun-planet-space case). Endoreversible engines with radiative contacts; not UET-distinct. Sunlight dilution and warming dividers are open."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",
