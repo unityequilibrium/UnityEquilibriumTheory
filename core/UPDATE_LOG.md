@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — How does the environment that takes a system's entropy set its resource and persistence?
+ทำ: `uet_entropy_divider.py` (exergy ของคลังความร้อน + engine แบบ endoreversible ที่ไหลคงที่) + physics test 43 ตัว (closed form, limit "อยู่คนเดียว", สมดุลพลังงาน/entropy, หา max ด้วยตัวเลขเทียบสูตร)
+ผล: ทรัพยากรที่ใช้ได้ = C[(T0−T_c) − T_c ln(T0/T_c)] เป็นศูนย์เมื่อผู้หารร้อนเท่าคลัง; ระบบที่ต้องใช้งาน W_m รอดได้เฉพาะ T_c ≤ T_c* = (√T_h − √(W_m/K))², K = K_hK_c/(K_h+K_c) (ทางตัวเลขจับสูตร Curzon–Ahlborn ที่ใช้ผิดได้)
+ระดับ: C_L3_ENTROPY_DIVIDER → L1_CONSISTENT (exergy + Novikov ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: ผู้หารที่ร้อนขึ้นเอง และผู้หารต่อกันเป็นทอด (ดวงอาทิตย์ → โลก → อวกาศ)
+commit: fbb12029e (code) + this commit (records)
+
 ## 2026-11-21 — Which part of "becoming present with what is seen" can resources buy?
 ทำ: `uet_two_delays.py` แยกสองเวลาหน่วง (บันทึก vs การแก่ของผู้เดินทาง) + physics test 41 ตัว (worldline ทั่วไป vs closed form, Newtonian limit, metric identity, rocket equation vs four-momentum)
 ผล: อายุบันทึกเมื่อไปถึง > 2d/c เสมอไม่ว่าจ่ายเท่าไร; การแก่ลดได้ด้วยการแปลงมวลนิ่ง m0/m1 ≥ e^{2η}; 1000 ปีแสงแก่ 10 ปี: γ = 100, มวล 4.0×10⁴ เท่า, บันทึกเก่า 2000 ปี

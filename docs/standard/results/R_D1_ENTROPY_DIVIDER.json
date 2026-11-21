@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D1_ENTROPY_DIVIDER",
+  "claim_id": "C_L3_ENTROPY_DIVIDER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "general_exergy_vs_closed_form",
+      "value": "< 1e-10 relative, 24/24 random (C, T0, T_c)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "numeric_max_power_vs_series_conductance_closed_form",
+      "value": "< 1e-10 relative, 10/10 random cases",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "usable_fraction_of_stored_heat_Tc_over_T0_0.01",
+      "value": 0.9439,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "usable_fraction_of_stored_heat_Tc_over_T0_0.5",
+      "value": 0.1534,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "usable_fraction_of_stored_heat_Tc_over_T0_0.99",
+      "value": 5.02e-05,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "efficiency_at_max_power_source_5778K_divider_2.725K",
+      "value": 0.9783,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "efficiency_at_max_power_source_5778K_divider_255K",
+      "value": 0.7899,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "divider_threshold_at_need_quarter_of_K_Th",
+      "value": "T_c* = T_h / 4",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_entropy_divider.py",
+    "commit": "fbb12029e"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Reversible extraction from a finite store (any C(T)) and steady endoreversible flow through two linear conductances (Novikov 1957). Linear heat transfer only; the divider does not warm up; no chains of dividers. The 5778 K and 2.725 K / 255 K numbers are illustrative temperatures, not a fit to Earth. Nearest theory: exergy (Gouy-Stodola) and endoreversible thermodynamics. Not UET-distinct. AI derivation of the author's statement (2026-11-21) that a system alone has nobody to divide its entropy."
+}

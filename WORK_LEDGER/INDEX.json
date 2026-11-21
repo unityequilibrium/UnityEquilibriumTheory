@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 950,
+    "entries": 951,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 715,
+      "research": 716,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "a85a23f81614ff658c074f19839249e4b7ba60d62e5fc87afad8bcb6e51e3032",
-      "entries": 1
+      "sha256": "d842f639fd149d7a3a5cc5bb0923aff9d5230755cc865b7f4724bedc3498ee6a",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19396,9 +19396,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Wave O5: two delays between seeing an event and being present with it",
-      "entry_sha256": "3c272739bfcc061b4e41d6777109d0ca9396e50609047c7e3afc4efccf7476f6",
+      "entry_sha256": "4c258c0e46ad07adf678cca9aae9d3a28a90b047231516f4f48b82a4a81cc35d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Wave D1: the divider temperature sets resource and persistence",
+      "entry_sha256": "f0ec14b11e804a7a4d140a4b6bf23834b235ab4e6d47fbfa080c3aca22f860df",
       "stream": "research",
       "areas": [
         "research-core"
