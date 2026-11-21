@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D6_COSMIC_DIVIDER",
+  "claim_id": "C_L3_COSMIC_DIVIDER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "friedmann_integral_vs_closed_form",
+      "value": "< 1e-10 relative, 24/24 random a from 1e-4 to 1e12",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "age_today_flat_LCDM_no_radiation",
+      "value": 13.8,
+      "uncertainty": null,
+      "unit": "Gyr"
+    },
+    {
+      "name": "de_sitter_temperature",
+      "value": 2.2e-30,
+      "uncertainty": null,
+      "unit": "K"
+    },
+    {
+      "name": "de_sitter_entropy",
+      "value": 3.31e+122,
+      "uncertainty": null,
+      "unit": "k_B"
+    },
+    {
+      "name": "time_CMB_colder_than_solar_mass_hole",
+      "value": 321000000000.0,
+      "uncertainty": null,
+      "unit": "yr since the Big Bang"
+    },
+    {
+      "name": "time_CMB_colder_than_sgr_a_star",
+      "value": 588000000000.0,
+      "uncertainty": null,
+      "unit": "yr since the Big Bang"
+    },
+    {
+      "name": "time_CMB_below_de_sitter_temperature",
+      "value": 1230000000000.0,
+      "uncertainty": null,
+      "unit": "yr since the Big Bang"
+    },
+    {
+      "name": "largest_mass_that_evaporates_c3_over_4GH",
+      "value": 5.58e+52,
+      "uncertainty": null,
+      "unit": "kg"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_cosmic_divider.py",
+    "commit": "6f4a452da"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Flat Lambda-CDM with matter and Lambda only (radiation neglected), Planck 2018 VI parameters H0 = 67.4 km/s/Mpc, Om = 0.315, OL = 0.685, CMB 2.7255 K (Fixsen 2009), w = -1. Gibbons-Hawking horizon temperature and entropy; whether the horizon can be treated as an ordinary heat bath is left open. Hand-over times assume T_CMB = T0/a and no other heating. Nearest theory: Lambda-CDM cosmology, de Sitter thermodynamics (Gibbons and Hawking 1977), far-future sequence (Adams and Laughlin 1997). Not UET-distinct. AI derivation of the author's items 3 and 9 (the vacuum always expands; the universe is not empty because traces accumulate)."
+}

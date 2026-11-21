@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 955,
+    "entries": 956,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 720,
+      "research": 721,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "0ced6b18024a47e9163179de436299712557cc5e3eb159edf4967a74d825942f",
-      "entries": 6
+      "sha256": "4a6582709fce8d7b0c48408fe2dcf8df065930569e9f16aa395ef927e65009f9",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -19496,9 +19496,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-d5-a-black-hole-as-the-divider",
       "start_line": 53,
-      "end_line": 61,
+      "end_line": 62,
       "title": "Wave D5: a black hole as the divider",
-      "entry_sha256": "3b93a2ae071fd9e8b468122ab1cb874fe8ce1a5363c02f1ffaf2a516ace1a1a6",
+      "entry_sha256": "22134c7882e0aa0826ea5ab3891730bdfdc051f57b951cb1dda1a7a6715aca49",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d6-the-expanding-universe-as-the-last-divider",
+      "start_line": 63,
+      "end_line": 71,
+      "title": "Wave D6: the expanding universe as the last divider",
+      "entry_sha256": "f77c2f20f5e6bb9d513576665069bfeb6f27698919bc2a004fb5600aa35286ca",
       "stream": "research",
       "areas": [
         "research-core"

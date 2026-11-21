@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — What is the last divider of an expanding universe?
+ทำ: `uet_cosmic_divider.py` (ΛCDM แบบแบน + อุณหพลศาสตร์ขอบฟ้า de Sitter) + physics test 31 ตัว (อินทิกรัล Friedmann เทียบสูตรปิด, limit ยุคสสาร/ยุค Λ, มวลสูงสุดที่ระเหยสองทาง, complex step ของ S_dS)
+ผล: ผู้หารคนสุดท้ายคือขอบฟ้า 2.2e-30 K (ไม่ใช่ศูนย์ ประสิทธิภาพ 100% เป็นไปไม่ได้) จุได้จำกัด 3.3e122 k; CMB เย็นกว่าหลุมดำมวลดวงอาทิตย์ที่ 3.2e11 ปี, Sgr A* ที่ 5.9e11 ปี, ต่ำกว่าขอบฟ้าที่ 1.2e12 ปี; หลุมดำเบากว่า 5.6e52 kg ระเหยหมดในที่สุด
+ระดับ: C_L3_COSMIC_DIVIDER → L1_CONSISTENT (ΛCDM + Gibbons–Hawking ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: รวมลำดับผู้หาร D1–D6 เป็นภาพเดียว และหาจุดที่ UET อาจทำนายต่างจากฟิสิกส์เดิม
+commit: 6f4a452da (code) + this commit (records)
+
 ## 2026-11-21 — How does a black hole behave as the divider?
 ทำ: `uet_black_hole_divider.py` (อุณหพลศาสตร์หลุมดำ Schwarzschild) + physics test 37 ตัว (complex-step ของ dS/dE และ C, ODE การระเหยเทียบสูตรปิด, กฎข้อสองแบบขยาย, มวล crossover สองทาง)
 ผล: หลุมดำยิ่งรับยิ่งเย็น (C < 0) จึงเป็นผู้หารที่ดีขึ้นเมื่อมวลไหลเข้า; Sgr A* มี entropy 1.8e90 k; หลุมดำหนักกว่า 4.5e22 kg เย็นกว่า CMB และโตขึ้น; อายุการระเหย = F0/(3P0) หนึ่งในสามของ F0/P0

@@ -508,6 +508,15 @@
       "note": "Schwarzschild black-hole thermodynamics and the generalised second law; not UET-distinct. Links the author's black-hole picture to the divider waves and to C_L3_BURN_LAW_SELECTION. Rotation, accretion and cosmic expansion are open."
     },
     {
+      "claim_id": "C_L3_COSMIC_DIVIDER",
+      "statement": "In flat Lambda-CDM (Planck 2018) the last divider is the cosmic event horizon: it is cold but not at zero (T_dS = hbar H_L/(2 pi k) = 2.2e-30 K, so no process reaches efficiency 1), its capacity is finite (S_dS = 3.3e122 k, a ceiling on all entropy, the traces of author item 9, the universe can hold), and it takes over in sequence: the background becomes colder than a solar-mass black hole at 3.2e11 yr and than Sgr A* at 5.9e11 yr, falls below T_dS at 1.2e12 yr, and every hole lighter than c^3/(4 G H_L) = 5.6e52 kg eventually evaporates into the horizon.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D6_COSMIC_DIVIDER"
+      ],
+      "note": "Lambda-CDM and de Sitter horizon thermodynamics; not UET-distinct. Closes the divider sequence of waves D1-D5 (store, chain, radiation, gravity, black hole, horizon). Radiation era, w != -1 and the bath interpretation of the horizon are open."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",
