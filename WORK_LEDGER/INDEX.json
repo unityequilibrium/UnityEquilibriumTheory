@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 83,
-    "entries": 949,
+    "sources": 84,
+    "entries": 956,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 714,
+      "research": 721,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -432,6 +432,11 @@
       "path": "2026/2026-11-20.md",
       "sha256": "49b3a99d85c67d9ac676d66afef0aa1c1e7648fb56ccd2de34cd258f6aea02c8",
       "entries": 1
+    },
+    {
+      "path": "2026/2026-11-21.md",
+      "sha256": "4a6582709fce8d7b0c48408fe2dcf8df065930569e9f16aa395ef927e65009f9",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -19384,6 +19389,146 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-20",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Wave O5: two delays between seeing an event and being present with it",
+      "entry_sha256": "4c258c0e46ad07adf678cca9aae9d3a28a90b047231516f4f48b82a4a81cc35d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Wave D1: the divider temperature sets resource and persistence",
+      "entry_sha256": "c55a4ce84bcdf8df02db738c0c9cbcb12892fa34d0323fe55f44a8709dc90f47",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d2-dividing-entropy-along-a-chain",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D2: dividing entropy along a chain",
+      "entry_sha256": "4707e79edb7da1ea2c4691d49b58ac8d4c359047d890e61753c83d7baea3b8ce",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "Wave D3: radiative contacts break zero-sum sharing along a chain",
+      "entry_sha256": "3ed716e060e23825fbcd9e588fcdc7cf93383e6ece02a9c7d2b699a2407b4c1b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d4-dividers-for-systems-held-together-by-gravity",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "Wave D4: dividers for systems held together by gravity",
+      "entry_sha256": "4ae5fa8b7051f94aaec2168b32d0487e524ea898d5af57efd8814b1cd99a092b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d5-a-black-hole-as-the-divider",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Wave D5: a black hole as the divider",
+      "entry_sha256": "22134c7882e0aa0826ea5ab3891730bdfdc051f57b951cb1dda1a7a6715aca49",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d6-the-expanding-universe-as-the-last-divider",
+      "start_line": 63,
+      "end_line": 71,
+      "title": "Wave D6: the expanding universe as the last divider",
+      "entry_sha256": "f77c2f20f5e6bb9d513576665069bfeb6f27698919bc2a004fb5600aa35286ca",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
       "legacy_root_path": false
     },
     {

@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D3_ENTROPY_CHAIN_RADIATIVE",
+  "claim_id": "C_L3_ENTROPY_CHAIN_RADIATIVE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "contact_laws_and_reversible_stages",
+      "value": "24/24 random chains (n = 4, 2, 0.5, -1), rel < 1e-10 plus float cancellation allowance",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "linear_limit_n1_vs_wave_D2",
+      "value": "total < 1e-10 relative; marginal cost 1 to 1e-8",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "marginal_cost_analytic_vs_finite_difference",
+      "value": "< 1e-7 relative, 10/10 (two stages)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "sign_of_c_minus_1",
+      "value": "positive for n = 4, 2; negative for n = 0.5, -1 (all sampled chains)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_c_radiative_Gmid_30",
+      "value": 1.0002,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_c_radiative_Gmid_10",
+      "value": 1.0009,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_c_radiative_Gmid_5",
+      "value": 1.0149,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_entropy_chain_radiative.py",
+    "commit": "93022e6d9"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Illustrative case: n = 4, T0 = 5778, T_N = 2.725, G0 = 1, G_N = (T0/T_N)^3, entropy flux s1 = 0.1 G0 T0^3, split J_1 = J_0/2; below G_mid ~ 3 the middle contact cannot carry the heat. The effect is small unless a contact works near its limit. Reversible stages, power-law contacts of one exponent n, no dilution of sunlight, dividers do not warm up. Nearest theory: endoreversible engines with radiative contacts (De Vos 1985) and the dependence of finite-time results on the heat-transfer law. Not UET-distinct. AI derivation following the author's chain question (2026-11-21)."
+}

@@ -6,10 +6,17 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 714. Counts describe records, not accomplishments.
+Indexed entries: 721. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-21 | [Wave D6: the expanding universe as the last divider](2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D5: a black hole as the divider](2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider) (L53) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D4: dividers for systems held together by gravity](2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D3: radiative contacts break zero-sum sharing along a chain](2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D2: dividing entropy along a chain](2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D1: the divider temperature sets resource and persistence](2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave O5: two delays between seeing an event and being present with it](2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T027: yeast switch glucose with exponential rates (FAILED)](2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed) (L3) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Test Card T026: yeast switch glucose (INCONCLUSIVE)](2026/2026-11-19.md#test-card-t026-yeast-switch-glucose-inconclusive) (L143) | research-standards | explicit_stream_and_area |
 | 2026-11-19 | [Trace feedback in yeast on sucrose: switch glucose level](2026/2026-11-19.md#trace-feedback-in-yeast-on-sucrose-switch-glucose-level) (L133) | research-core | explicit_stream_and_area |

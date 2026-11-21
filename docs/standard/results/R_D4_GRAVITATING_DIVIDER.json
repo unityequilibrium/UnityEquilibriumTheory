@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D4_GRAVITATING_DIVIDER",
+  "claim_id": "C_L3_GRAVITATING_DIVIDER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "general_ode_vs_linear_closed_form_both_signs_of_C",
+      "value": "< 1e-9 relative, 24/24",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "radiative_runaway_time_vs_closed_form",
+      "value": "< 1e-9 relative at T/T0 = 2, 10, 100",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "two_body_gap_rate_ode_vs_matrix_eigenvalue",
+      "value": "agree within eigen-solver round-off, 10/10; sign switches at C2 = |C1|",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "two_body_energy_drift",
+      "value": "< 1e-10 relative; entropy non-decreasing",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "virial_heat_capacity_ideal_gas",
+      "value": "-(3/2) N k",
+      "uncertainty": null,
+      "unit": "k per particle"
+    },
+    {
+      "name": "kelvin_helmholtz_time_sun_GM2_over_RL",
+      "value": 31.4,
+      "uncertainty": null,
+      "unit": "Myr"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_gravitating_divider.py",
+    "commit": "962284a6d"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Ideal-gas virial heat capacity, power-law contacts (n = 1, 4), two bodies with linear contact. Solar constants are IAU 2015 nominal values and CODATA G; t_KH = G M^2/(R L) is an order-of-magnitude scale. Black holes as dividers and cosmic expansion are not included. Nearest theory: thermodynamics of self-gravitating systems (Lynden-Bell and Wood 1968, Padmanabhan 1990), gravothermal catastrophe, Kelvin-Helmholtz time. Not UET-distinct. Corrects the scope of C_L3_ENTROPY_DIVIDER, which assumed positive heat capacity. AI derivation after the author pointed out (2026-11-21) that the divider waves used thermodynamics only."
+}
