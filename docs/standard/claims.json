@@ -523,7 +523,7 @@
       "evidence": [
         "R_S1_OBSERVED_SELECTION"
       ],
-      "note": "Malmquist bias and the 1/V_max estimator; not UET-distinct. Stress test of author item 5: what we see is what persisted and also spent enough energy as light to reach us, so the best resource managers are the hardest to see. T002 unaffected; T008 volume correction not verified."
+      "note": "Malmquist bias and the 1/V_max estimator; not UET-distinct. Stress test of author item 5: what we see is what persisted and also spent enough energy as light to reach us, so the best resource managers are the hardest to see. T002 unaffected (one distance); T008 unaffected (Hu, Wu and Wu 2007 use 1/(V_max - V_min) weights, checked 2026-11-21)."
     },
     {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",

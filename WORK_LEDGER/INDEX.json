@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 957,
+    "entries": 958,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 722,
+      "research": 723,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "bffc6f746a9aaa1c2e34273ef65b2eb15a1f432b898a95646b973ee64b24dc0b",
-      "entries": 8
+      "sha256": "b9354c942c8eaa5048db3c59f1ddf0aa4b54f63cccd74b919877048263131f9a",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -19536,12 +19536,32 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-s1-a-flux-limited-sample-selects-against-persistence",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Wave S1: a flux-limited sample selects against persistence",
-      "entry_sha256": "eaaeb82cedbf1eed40e92c500361f2e8129df3eb29ea9fa3c19c6579814a905c",
+      "entry_sha256": "4997533e1fb3a096fcea7a53fe315405569f173ce76dbbe320489c914719c59d",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#check-t008-against-the-flux-limit-selection-of-wave-s1",
+      "source": "2026/2026-11-21.md",
+      "anchor": "check-t008-against-the-flux-limit-selection-of-wave-s1",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Check: T008 against the flux-limit selection of wave S1",
+      "entry_sha256": "e42b1107357a3316102c7bcf2523baf1c1dad4d6bda915a46614c742c9c9a898",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

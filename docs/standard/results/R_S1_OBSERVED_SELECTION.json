@@ -42,5 +42,5 @@
   },
   "artifacts": [],
   "date": "2026-11-21",
-  "note": "Uniform sources in a D-ball, flux-limited detection L/(4 pi r^2) >= f, Euclidean, no extinction, no redshift; seeded Poisson Monte Carlo (seeds 2026 and 7). T002 is unaffected (one distance per cluster); T008 uses a luminosity function (a space density), normally volume-corrected, but the use of 1/V_max by Hu, Wu and Wu (2007) is AI memory and was not checked. Nearest theory: Malmquist bias (1922) and the 1/V_max estimator (Schmidt 1968). Not UET-distinct. Stress test of author item 5 and the 2026-11-17 statement that what we see is what was still alive."
+  "note": "Uniform sources in a D-ball, flux-limited detection L/(4 pi r^2) >= f, Euclidean, no extinction, no redshift; seeded Poisson Monte Carlo (seeds 2026 and 7). T002 is unaffected (one distance per cluster); T008 checked on 2026-11-21: Hu, Wu and Wu (2007) correct selection effects by binning in Mbol and weight each white dwarf by 1/(V_max - V_min), and give the luminosity function in pc^-3 mag^-1, so T008 compared with a volume-corrected space density and is not affected by S1. Nearest theory: Malmquist bias (1922) and the 1/V_max estimator (Schmidt 1968). Not UET-distinct. Stress test of author item 5 and the 2026-11-17 statement that what we see is what was still alive."
 }

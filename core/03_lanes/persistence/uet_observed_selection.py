@@ -23,10 +23,9 @@ S2  The true abundance is recovered by weighting each detected source by 1/V_max
     sum over detections of 1/V_i = n_i exactly in expectation.
 S3  Consequence for layer-3 tests. A count can test N = b tau only if the sample is volume-limited,
     weighted by 1/V_max, or drawn from sources at one distance. T002 (stars in one globular cluster,
-    one distance) is not affected by S1. T008 compares with a luminosity function, which is a space
-    density; such functions are normally volume-corrected, but whether Hu, Wu and Wu (2007) used
-    1/V_max is AI memory and was not checked here. Any future test that counts sources at many
-    distances must say how it removes S1.
+    one distance) is not affected by S1. T008 is not affected either: Hu, Wu and Wu (2007) bin-correct
+    for selection effects and weight each white dwarf by 1/(V_max - V_min) (checked 2026-11-21).
+    Any future test that counts sources at many distances must say how it removes S1.
 S4  Consequence for the author's statement. "What we see is what persisted" needs one more filter:
     what we see is what persisted AND what spent enough energy as light to reach us. The best
     resource managers (low P, low eps) are the hardest to see. [AI interpretation]

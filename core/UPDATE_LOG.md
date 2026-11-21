@@ -5,8 +5,8 @@ Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/up
 ## 2026-11-21 — Does what we see show the persistence ranking?
 ทำ: `uet_observed_selection.py` (การสำรวจที่จำกัดด้วยความสว่าง ใน 1–3 มิติ + 1/V_max) + physics test 30 ตัว (ปริมาตรเชิงตัวเลขเทียบสูตรปิด, limit, เลขชี้กำลัง D/2−1, Monte Carlo seeded)
 ผล: ใน 3 มิติ N ~ bF P^(1/2): ชนิดที่เผาเร็วกว่า 100 เท่า มีน้อยกว่า 100 เท่าในอวกาศ แต่เห็นมากกว่า 10 เท่า (MC 19874 vs 1962); ในจาน 2 มิติ ผลสองอย่างหักล้างกัน; 1/V_max คืนค่าจริงได้ (0.987, 0.0100)
-ระดับ: C_L3_OBSERVED_SELECTION → L1_CONSISTENT (Malmquist bias ไม่ใช่ผลเฉพาะของ UET); T002 ไม่กระทบ, T008 ยังไม่ได้ตรวจว่าใช้ 1/V_max
-ถัดไป: ตรวจวิธีแก้ปริมาตรของ Hu, Wu & Wu 2007 (T008) และใส่เงื่อนไขนี้ในทุก Test Card ชั้น 3 ที่นับวัตถุหลายระยะ
+ระดับ: C_L3_OBSERVED_SELECTION → L1_CONSISTENT (Malmquist bias ไม่ใช่ผลเฉพาะของ UET); T002 ไม่กระทบ (ระยะเดียว), T008 ไม่กระทบ (ตรวจแล้ว: Hu, Wu & Wu 2007 ถ่วงด้วย 1/(V_max − V_min))
+ถัดไป: ใส่เงื่อนไขการแก้ปริมาตรในทุก Test Card ชั้น 3 ที่นับวัตถุหลายระยะ
 commit: b561eba20 (code) + this commit (records)
 
 ## 2026-11-21 — What is the last divider of an expanding universe?
