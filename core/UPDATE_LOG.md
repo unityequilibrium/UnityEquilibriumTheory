@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — What does dividing entropy mean for systems held together by gravity?
+ทำ: `uet_gravitating_divider.py` (heat capacity ติดลบจาก virial, contact เชิงเส้นและแผ่รังสี, สองวัตถุ C1 < 0 กับ C2 > 0) + physics test 46 ตัว (ODE vs closed form, เวลา runaway, พลังงาน/entropy, อัตราช่องว่างสองทาง)
+ผล: ระบบแรงโน้มถ่วงเสียพลังงานแล้วร้อนขึ้น วิ่งหนีผู้หาร (ไม่หมดลงอย่าง D1); สมดุลได้ก็ต่อเมื่อ C2 < |C1| (Lynden-Bell & Wood) ผู้หารไม่จำกัดอย่างอวกาศจึงไม่ให้หยุดเลย; t_KH ดวงอาทิตย์ 31.4 Myr
+ระดับ: C_L3_GRAVITATING_DIVIDER → L1_CONSISTENT; จำกัดขอบเขต C_L3_ENTROPY_DIVIDER ให้ใช้กับ C > 0 เท่านั้น
+ถัดไป: หลุมดำเป็นผู้หาร (entropy ∝ พื้นที่, heat capacity ติดลบเช่นกัน) และการขยายตัวของจักรวาล
+commit: 962284a6d (code) + this commit (records)
+
 ## 2026-11-21 — With radiative contacts, is sharing along a chain still zero-sum?
 ทำ: `uet_entropy_chain_radiative.py` (contact แบบ J = G(T_h^n − T_c^n)/n, n = 4 คือการแผ่รังสี) + physics test 54 ตัว (กฎ contact, n = 1 ตรงกับ D2, อนุพันธ์สองทาง, เครื่องหมายของ c − 1, Carnot limit)
 ผล: zero-sum เฉพาะ n = 1; n > 1 (รังสี) งานที่ทอดหน้าเอาไป 1 หน่วยทำให้ทอดหลังเสียมากกว่า 1 (c > 1), n < 1 กลับกัน; ผลเล็กเว้นแต่ contact ทำงานใกล้ขีดจำกัด (c = 1.015 ในตัวอย่างดวงอาทิตย์–ดาวเคราะห์–อวกาศ)

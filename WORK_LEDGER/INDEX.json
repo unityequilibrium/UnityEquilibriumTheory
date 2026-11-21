@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 953,
+    "entries": 954,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 718,
+      "research": 719,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "3bfa42e4c64654a4085150994267270b7fd7022663d51a1102f385cda851dbd3",
-      "entries": 4
+      "sha256": "54a3598868bfcd3a100a45a0cc5c535e8876300702874b0718b4a8b9dea8f639",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -19456,9 +19456,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Wave D3: radiative contacts break zero-sum sharing along a chain",
-      "entry_sha256": "4d2b5b371c74c51ba1ca120039c60ee9f20b3babb773b248141d4395c7b42031",
+      "entry_sha256": "3ed716e060e23825fbcd9e588fcdc7cf93383e6ece02a9c7d2b699a2407b4c1b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d4-dividers-for-systems-held-together-by-gravity",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave D4: dividers for systems held together by gravity",
+      "entry_sha256": "a6dcc89c711b7cc8a1f2d39301e270b09d42e4840901f629ba8fba2230633895",
       "stream": "research",
       "areas": [
         "research-core"

@@ -469,7 +469,7 @@
       "evidence": [
         "R_D1_ENTROPY_DIVIDER"
       ],
-      "note": "Exergy and endoreversible (Novikov) thermodynamics; not UET-distinct. Adds the divider temperature to the layer-3 resource and persistence language. Linear heat transfer, fixed divider temperature, no chains."
+      "note": "Exergy and endoreversible (Novikov) thermodynamics; not UET-distinct. Adds the divider temperature to the layer-3 resource and persistence language. Linear heat transfer, fixed divider temperature, no chains. Holds for stores with positive heat capacity only; systems held together by gravity behave oppositely (C_L3_GRAVITATING_DIVIDER)."
     },
     {
       "claim_id": "C_L3_ENTROPY_CHAIN",
@@ -488,6 +488,15 @@
         "R_D3_ENTROPY_CHAIN_RADIATIVE"
       ],
       "note": "Extends C_L3_ENTROPY_CHAIN. The effect is small unless a contact works near its limit (c = 1.015 in the illustrative sun-planet-space case). Endoreversible engines with radiative contacts; not UET-distinct. Sunlight dilution and warming dividers are open."
+    },
+    {
+      "claim_id": "C_L3_GRAVITATING_DIVIDER",
+      "statement": "A system held together by gravity has negative heat capacity (C = -(3/2) N k in virial equilibrium), so against a colder divider it does not run down but heats and moves away from the divider, exponentially at rate G/|C| for a linear contact and diverging in finite time 4|C|/(3 G T0^3) for radiation into 0 K; two bodies with C1 < 0 and C2 > 0 settle only if C2 < |C1| (Lynden-Bell and Wood), so a divider of unlimited capacity such as space never lets a gravitating system settle, while the usable fraction 1 - T_c/T of the energy it loses rises with time.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D4_GRAVITATING_DIVIDER"
+      ],
+      "note": "Limits the scope of C_L3_ENTROPY_DIVIDER (positive heat capacity only). Thermodynamics of self-gravitating systems; not UET-distinct. Black holes as dividers and cosmic expansion are open."
     },
     {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
