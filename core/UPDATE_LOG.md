@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — Of what we see, how much still exists, in an expanding universe?
+ทำ: `uet_seen_but_gone_cosmic.py` (กรวยแสงอดีตของ ΛCDM + อายุ τ + การเกิดคงที่ตั้งแต่ t = 0) + physics test 27 ตัว (ระยะ comoving สองทาง, limit สู่ S2 ลำดับ 1.00, τ ≥ อายุเอกภพ, Monte Carlo)
+ผล: ทั้งกรวยแสง τ = 10 Gyr ยังอยู่ 10.7% (อวกาศนิ่งให้ 0.24%, ต่างกัน 44 เท่า); τ = 1 Gyr ยังอยู่ 7.9e-6; τ ≥ 13.8 Gyr ยังอยู่ครบ เพราะยังไม่มีใครตายเลยตั้งแต่ต้นเอกภพ
+ระดับ: C_L3_SEEN_BUT_GONE_COSMIC → L1_CONSISTENT (look-back time ไม่ใช่ผลเฉพาะของ UET); อัตราเกิดคงที่เป็นการเลือกของ AI
+ถัดไป: ใช้อัตราการเกิดดาวที่วัดจริง (peak ที่ z ~ 2) แทนอัตราคงที่ — ต้องใช้ข้อมูลภายนอก จึงเป็น Test Card
+commit: 0d9bf5860 (code) + this commit (records)
+
 ## 2026-11-21 — Of what we see, how much still exists?
 ทำ: `uet_seen_but_gone.py` (เวลาแสงเดินทาง + อายุจำกัด τ = F/P + การสำรวจจำกัดความสว่าง) + physics test 30 ตัว (สูตรปิด, limit, การต่อของสองช่วง, Monte Carlo ในกาลอวกาศ)
 ผล: สัดส่วนที่ยังอยู่ = 1 − Dλ/(D+1) เมื่อ λ = d/(cτ) ≤ 1 และ λ^(−D)/(D+1) เมื่อเกิน; λ ~ P^(3/2): ชนิดที่เผาเร็ว 100 เท่า λ มากขึ้น 1000 เท่า (ตัวอย่าง: 99.25% ยังอยู่ เทียบ 0.025%)

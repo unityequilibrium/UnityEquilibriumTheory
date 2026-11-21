@@ -535,6 +535,15 @@
       "note": "Light-travel-time and duty-cycle arguments; not UET-distinct. Continues C_OBS_TWO_DELAYS and C_L3_OBSERVED_SELECTION: the light certifies that the source was alive when it left, not now. Euclidean and steady state only."
     },
     {
+      "claim_id": "C_L3_SEEN_BUT_GONE_COSMIC",
+      "statement": "On the past light cone of flat Lambda-CDM, with a constant comoving birth rate since t = 0 and fixed lifetime tau, the fraction of seen sources that still exist is the ratio of shell integrals of chi^2 a^-1 max(0, min(t_e, tau - t_L)) and chi^2 a^-1 min(tau, t_e); it tends to the static result 1 - 3 lambda/4 for shallow surveys, equals 1 at every depth when tau >= t0, and over the whole cone is 0.107 for tau = 10 Gyr, 44 times the static-space value, because the finite age removes the oldest light.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S3_SEEN_BUT_GONE_COSMIC"
+      ],
+      "note": "Look-back time and comoving volume; not UET-distinct. Extends C_L3_SEEN_BUT_GONE to expanding space. The constant birth rate is an AI choice."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",

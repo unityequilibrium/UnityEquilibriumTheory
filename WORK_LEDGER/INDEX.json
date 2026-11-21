@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 959,
+    "entries": 960,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 724,
+      "research": 725,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "88b76f4c5b0afa250ea1e37c6e8fc9c4c9cf80c97642d16650d47a0942ea8b40",
-      "entries": 10
+      "sha256": "e21ead9bfc1bfcf6636238bd94f5957c84988e795d52da17b299b79ab419f03d",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -19576,9 +19576,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-s2-of-the-sources-we-see-how-many-still-exist",
       "start_line": 93,
-      "end_line": 101,
+      "end_line": 102,
       "title": "Wave S2: of the sources we see, how many still exist?",
-      "entry_sha256": "73de9d701b42610b72370f527e8f868b67666ce950c17f6eb2599f14c27406fa",
+      "entry_sha256": "b67d9f44ecbf6157ac6a6940bd5da4387b452c9fa959865bb0aab865470a6244",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s3-seen-but-gone-on-the-expanding-light-cone",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s3-seen-but-gone-on-the-expanding-light-cone",
+      "start_line": 103,
+      "end_line": 111,
+      "title": "Wave S3: seen-but-gone on the expanding light cone",
+      "entry_sha256": "eddf96e7f6deba3445f3bf4391d96e98296f3b2a5e7ce2bd30d05b2c8908c9a2",
       "stream": "research",
       "areas": [
         "research-core"
