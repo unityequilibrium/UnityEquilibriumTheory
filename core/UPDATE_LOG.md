@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — Does what we see show the persistence ranking?
+ทำ: `uet_observed_selection.py` (การสำรวจที่จำกัดด้วยความสว่าง ใน 1–3 มิติ + 1/V_max) + physics test 30 ตัว (ปริมาตรเชิงตัวเลขเทียบสูตรปิด, limit, เลขชี้กำลัง D/2−1, Monte Carlo seeded)
+ผล: ใน 3 มิติ N ~ bF P^(1/2): ชนิดที่เผาเร็วกว่า 100 เท่า มีน้อยกว่า 100 เท่าในอวกาศ แต่เห็นมากกว่า 10 เท่า (MC 19874 vs 1962); ในจาน 2 มิติ ผลสองอย่างหักล้างกัน; 1/V_max คืนค่าจริงได้ (0.987, 0.0100)
+ระดับ: C_L3_OBSERVED_SELECTION → L1_CONSISTENT (Malmquist bias ไม่ใช่ผลเฉพาะของ UET); T002 ไม่กระทบ, T008 ยังไม่ได้ตรวจว่าใช้ 1/V_max
+ถัดไป: ตรวจวิธีแก้ปริมาตรของ Hu, Wu & Wu 2007 (T008) และใส่เงื่อนไขนี้ในทุก Test Card ชั้น 3 ที่นับวัตถุหลายระยะ
+commit: b561eba20 (code) + this commit (records)
+
 ## 2026-11-21 — What is the last divider of an expanding universe?
 ทำ: `uet_cosmic_divider.py` (ΛCDM แบบแบน + อุณหพลศาสตร์ขอบฟ้า de Sitter) + physics test 31 ตัว (อินทิกรัล Friedmann เทียบสูตรปิด, limit ยุคสสาร/ยุค Λ, มวลสูงสุดที่ระเหยสองทาง, complex step ของ S_dS)
 ผล: ผู้หารคนสุดท้ายคือขอบฟ้า 2.2e-30 K (ไม่ใช่ศูนย์ ประสิทธิภาพ 100% เป็นไปไม่ได้) จุได้จำกัด 3.3e122 k; CMB เย็นกว่าหลุมดำมวลดวงอาทิตย์ที่ 3.2e11 ปี, Sgr A* ที่ 5.9e11 ปี, ต่ำกว่าขอบฟ้าที่ 1.2e12 ปี; หลุมดำเบากว่า 5.6e52 kg ระเหยหมดในที่สุด

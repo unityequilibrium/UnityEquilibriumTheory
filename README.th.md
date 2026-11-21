@@ -133,7 +133,7 @@ $$\tau = \int \frac{dF}{P(F)} \qquad N = b\,\tau \qquad \frac{dx_i}{dt} = x_i\,(
 ## 4. หลักฐานตอนนี้
 
 ระดับหลักฐานตาม [`docs/STANDARD.md`](docs/STANDARD.md): `L1` สอดคล้องภายใน, `L2` เทียบกับข้อมูลภายนอกแล้ว, `L3` มีผู้อื่นทำซ้ำได้
-ทะเบียนอยู่ที่ [`docs/standard/claims.json`](docs/standard/claims.json) (61 ข้ออ้าง: L1 39 ข้อ, L2 18 ข้อ, FAILED 4 ข้อ, ยังไม่มี L3)
+ทะเบียนอยู่ที่ [`docs/standard/claims.json`](docs/standard/claims.json) (62 ข้ออ้าง: L1 40 ข้อ, L2 18 ข้อ, FAILED 4 ข้อ, ยังไม่มี L3)
 เกณฑ์ผ่าน/ไม่ผ่านถูก commit และผู้เขียนอนุมัติก่อนเทียบข้อมูลทุกครั้ง ไม่มีการเทียบครั้งไหนเป็นแบบ blind
 
 **ไม่ผ่าน** (บันทึกเป็นผล ไม่ซ่อน):

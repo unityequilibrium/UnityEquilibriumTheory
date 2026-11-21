@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 956,
+    "entries": 957,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 721,
+      "research": 722,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "4a6582709fce8d7b0c48408fe2dcf8df065930569e9f16aa395ef927e65009f9",
-      "entries": 7
+      "sha256": "bffc6f746a9aaa1c2e34273ef65b2eb15a1f432b898a95646b973ee64b24dc0b",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -19516,9 +19516,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-d6-the-expanding-universe-as-the-last-divider",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Wave D6: the expanding universe as the last divider",
-      "entry_sha256": "f77c2f20f5e6bb9d513576665069bfeb6f27698919bc2a004fb5600aa35286ca",
+      "entry_sha256": "db2acf21a50cf5d8d8e538aff38b41787853d26a58e3fe841599513daadb4e60",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s1-a-flux-limited-sample-selects-against-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s1-a-flux-limited-sample-selects-against-persistence",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Wave S1: a flux-limited sample selects against persistence",
+      "entry_sha256": "eaaeb82cedbf1eed40e92c500361f2e8129df3eb29ea9fa3c19c6579814a905c",
       "stream": "research",
       "areas": [
         "research-core"

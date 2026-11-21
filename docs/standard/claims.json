@@ -517,6 +517,15 @@
       "note": "Lambda-CDM and de Sitter horizon thermodynamics; not UET-distinct. Closes the divider sequence of waves D1-D5 (store, chain, radiation, gravity, black hole, horizon). Radiation era, w != -1 and the bath interpretation of the horizon are open."
     },
     {
+      "claim_id": "C_L3_OBSERVED_SELECTION",
+      "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S1_OBSERVED_SELECTION"
+      ],
+      "note": "Malmquist bias and the 1/V_max estimator; not UET-distinct. Stress test of author item 5: what we see is what persisted and also spent enough energy as light to reach us, so the best resource managers are the hardest to see. T002 unaffected; T008 volume correction not verified."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",

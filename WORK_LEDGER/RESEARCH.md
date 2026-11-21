@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 721. Counts describe records, not accomplishments.
+Indexed entries: 722. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-21 | [Wave S1: a flux-limited sample selects against persistence](2026/2026-11-21.md#wave-s1-a-flux-limited-sample-selects-against-persistence) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D6: the expanding universe as the last divider](2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D5: a black hole as the divider](2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D4: dividers for systems held together by gravity](2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity) (L43) | research-core | explicit_stream_and_area |
