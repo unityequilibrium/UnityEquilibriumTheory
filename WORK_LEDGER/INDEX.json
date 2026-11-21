@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 83,
-    "entries": 949,
+    "sources": 84,
+    "entries": 953,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 714,
+      "research": 718,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -432,6 +432,11 @@
       "path": "2026/2026-11-20.md",
       "sha256": "49b3a99d85c67d9ac676d66afef0aa1c1e7648fb56ccd2de34cd258f6aea02c8",
       "entries": 1
+    },
+    {
+      "path": "2026/2026-11-21.md",
+      "sha256": "3bfa42e4c64654a4085150994267270b7fd7022663d51a1102f385cda851dbd3",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -19384,6 +19389,86 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-20",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Wave O5: two delays between seeing an event and being present with it",
+      "entry_sha256": "4c258c0e46ad07adf678cca9aae9d3a28a90b047231516f4f48b82a4a81cc35d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Wave D1: the divider temperature sets resource and persistence",
+      "entry_sha256": "c55a4ce84bcdf8df02db738c0c9cbcb12892fa34d0323fe55f44a8709dc90f47",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d2-dividing-entropy-along-a-chain",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D2: dividing entropy along a chain",
+      "entry_sha256": "4707e79edb7da1ea2c4691d49b58ac8d4c359047d890e61753c83d7baea3b8ce",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Wave D3: radiative contacts break zero-sum sharing along a chain",
+      "entry_sha256": "4d2b5b371c74c51ba1ca120039c60ee9f20b3babb773b248141d4395c7b42031",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
       "legacy_root_path": false
     },
     {

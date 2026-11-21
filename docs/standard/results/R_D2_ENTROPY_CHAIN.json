@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D2_ENTROPY_CHAIN",
+  "claim_id": "C_L3_ENTROPY_CHAIN",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "numeric_chain_maximum_vs_series_closed_form",
+      "value": "< 1e-10 relative, 24/24 random chains with 1 to 4 stages",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "two_stage_temperature_route_vs_flux_route",
+      "value": "< 1e-10 relative, 6/6",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "total_spread_over_50_random_splits_at_fixed_flux",
+      "value": "< 1e-12 relative (zero-sum)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "maximum_with_N_stages_over_maximum_with_one_equal_contacts",
+      "value": "1/N, checked at N = 2, 3, 5, 10 to 1e-10",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "approach_to_Carnot_1_minus_TN_over_T0_as_flux_to_zero",
+      "value": "linear in the flux for N = 1, 2, 3, 5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_entropy_chain.py",
+    "commit": "4be44658d"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Reversible stages joined by linear contacts (endoreversible engines in series, Novikov 1957); a middle reservoir counts as one series contact. Linear heat transfer only: radiative T^4 contacts would make stage temperatures matter beyond the flux and may break the zero-sum result. Dividers do not warm up. Nearest theory: endoreversible / finite-time thermodynamics of series engines. Not UET-distinct. AI derivation of the author's question (2026-11-21) about dividing entropy along a chain (sun -> earth -> space)."
+}

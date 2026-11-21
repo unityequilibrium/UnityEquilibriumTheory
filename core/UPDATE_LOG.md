@@ -2,6 +2,34 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — With radiative contacts, is sharing along a chain still zero-sum?
+ทำ: `uet_entropy_chain_radiative.py` (contact แบบ J = G(T_h^n − T_c^n)/n, n = 4 คือการแผ่รังสี) + physics test 54 ตัว (กฎ contact, n = 1 ตรงกับ D2, อนุพันธ์สองทาง, เครื่องหมายของ c − 1, Carnot limit)
+ผล: zero-sum เฉพาะ n = 1; n > 1 (รังสี) งานที่ทอดหน้าเอาไป 1 หน่วยทำให้ทอดหลังเสียมากกว่า 1 (c > 1), n < 1 กลับกัน; ผลเล็กเว้นแต่ contact ทำงานใกล้ขีดจำกัด (c = 1.015 ในตัวอย่างดวงอาทิตย์–ดาวเคราะห์–อวกาศ)
+ระดับ: C_L3_ENTROPY_CHAIN_RADIATIVE → L1_CONSISTENT (endoreversible + radiative contact ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: การเจือจางของแสงอาทิตย์ (เรขาคณิตท้องฟ้า) และผู้หารที่ร้อนขึ้นเอง
+commit: 93022e6d9 (code) + this commit (records)
+
+## 2026-11-21 — Does dividing entropy along a chain create resource, and how is it shared?
+ทำ: `uet_entropy_chain.py` (engine N ทอดต่ออนุกรม เชื่อมด้วยการนำความร้อนเชิงเส้น) + physics test 44 ตัว (สูตรปิด N = 1–4, Carnot limit, สมดุล entropy ราย contact, ทางที่สองจากอุณหภูมิ, การแบ่งแบบ zero-sum)
+ผล: กำลังรวมสูงสุด = K_chain(√T0 − √T_N)² โดย K_chain คือทุก contact ต่ออนุกรม → ห่วงโซ่ไม่สร้างทรัพยากร ทอดที่เพิ่มทำให้ลด (contact เท่ากัน: 1/N); ที่ entropy flux เดียวกัน ส่วนแบ่งระหว่างทอดเป็น zero-sum
+ระดับ: C_L3_ENTROPY_CHAIN → L1_CONSISTENT (engine อนุกรมแบบ endoreversible ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: contact แบบแผ่รังสี (T⁴) ซึ่งอาจทำลาย zero-sum และผู้หารที่ร้อนขึ้นเอง
+commit: 4be44658d (code) + this commit (records)
+
+## 2026-11-21 — How does the environment that takes a system's entropy set its resource and persistence?
+ทำ: `uet_entropy_divider.py` (exergy ของคลังความร้อน + engine แบบ endoreversible ที่ไหลคงที่) + physics test 43 ตัว (closed form, limit "อยู่คนเดียว", สมดุลพลังงาน/entropy, หา max ด้วยตัวเลขเทียบสูตร)
+ผล: ทรัพยากรที่ใช้ได้ = C[(T0−T_c) − T_c ln(T0/T_c)] เป็นศูนย์เมื่อผู้หารร้อนเท่าคลัง; ระบบที่ต้องใช้งาน W_m รอดได้เฉพาะ T_c ≤ T_c* = (√T_h − √(W_m/K))², K = K_hK_c/(K_h+K_c) (ทางตัวเลขจับสูตร Curzon–Ahlborn ที่ใช้ผิดได้)
+ระดับ: C_L3_ENTROPY_DIVIDER → L1_CONSISTENT (exergy + Novikov ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: ผู้หารที่ร้อนขึ้นเอง และผู้หารต่อกันเป็นทอด (ดวงอาทิตย์ → โลก → อวกาศ)
+commit: fbb12029e (code) + this commit (records)
+
+## 2026-11-21 — Which part of "becoming present with what is seen" can resources buy?
+ทำ: `uet_two_delays.py` แยกสองเวลาหน่วง (บันทึก vs การแก่ของผู้เดินทาง) + physics test 41 ตัว (worldline ทั่วไป vs closed form, Newtonian limit, metric identity, rocket equation vs four-momentum)
+ผล: อายุบันทึกเมื่อไปถึง > 2d/c เสมอไม่ว่าจ่ายเท่าไร; การแก่ลดได้ด้วยการแปลงมวลนิ่ง m0/m1 ≥ e^{2η}; 1000 ปีแสงแก่ 10 ปี: γ = 100, มวล 4.0×10⁴ เท่า, บันทึกเก่า 2000 ปี
+ระดับ: C_OBS_TWO_DELAYS → L1_CONSISTENT (สัมพัทธภาพพิเศษ ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: เพิ่มแรงโน้มถ่วง/การขยายตัวของจักรวาล (event horizon: ของที่เห็นแต่ไปไม่ถึงตลอดกาล)
+commit: eb302b96f (code) + this commit (records)
+
 ## 2026-11-16 — Do migrated checkouts preserve byte and payload-tree identity?
 ทำ: กติกา LF สำหรับโค้ด/records พร้อมเก็บ input/ref bytes; ซ่อม Calorine ให้ payload และ sibling scan ใช้ physical tree เดียวกัน
 ผล: 83/83 กรณีที่ล้มเพิ่มบน Desktop ผ่าน; 132 focused software tests ผ่าน; physics 193 ผ่าน / 1 skipped

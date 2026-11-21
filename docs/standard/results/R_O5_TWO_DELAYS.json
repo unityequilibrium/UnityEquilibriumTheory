@@ -1,0 +1,70 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O5_TWO_DELAYS",
+  "claim_id": "C_OBS_TWO_DELAYS",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "general_worldline_vs_closed_forms_flyby_and_flip",
+      "value": "< 1e-10 relative, 24/24 random (d, alpha), tau_trip, t_trip and mass ratio",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "rocket_equation_vs_four_momentum_mass_ratio",
+      "value": "< 1e-10 relative at beta = 0.1 to 0.999999",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_cruise_d1000ly_tau10yr_gamma",
+      "value": 100.005,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_cruise_d1000ly_tau10yr_photon_rocket_mass_ratio",
+      "value": 40002.0,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_cruise_d1000ly_tau10yr_record_age_at_arrival",
+      "value": 2000.05,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "example_1g_flip_d1000ly_traveller_proper_time",
+      "value": 13.449,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "example_1g_flip_d1000ly_photon_rocket_mass_ratio",
+      "value": 1069800.0,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_1g_flip_d1000ly_record_age_at_arrival",
+      "value": 2001.94,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "record_age_excess_over_2d_as_tau_to_0",
+      "value": "tau^2/(2d), checked to 1e-3 at tau = 0.01, d = 1000",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_two_delays.py",
+    "commit": "eb302b96f"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Flat spacetime, source at rest in the observer frame, traveller leaves when the record arrives; reaction drives with exhaust speed <= c (photon rocket is the minimum). Gravity, cosmic expansion and source motion are left out. Nearest theory: special relativity (twin effect, hyperbolic motion, Ackeret relativistic rocket). Not UET-distinct; the parent action fixes none of these numbers. AI derivation of the author's statement (conversation note, 2026-11-21) that becoming present with what is seen costs distance, time and resources."
+}

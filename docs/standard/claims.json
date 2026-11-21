@@ -219,6 +219,15 @@
       "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
     },
     {
+      "claim_id": "C_OBS_TWO_DELAYS",
+      "statement": "Seeing a distant event and being present with it are separated by two different delays: the record age at arrival exceeds 2d/c for every timelike journey started when the record arrives, whatever is spent, while the traveller's own ageing can be made arbitrarily short only by converting rest mass, at photon-rocket mass ratio m0/m1 >= exp(2 eta) = (gamma (1 + beta))^2 for start and stop.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O5_TWO_DELAYS"
+      ],
+      "note": "Extends principle P2: at arrival the gap is Xdot times an age above 2d/c. Both bounding events lie on the source worldline, so 2d/c does not depend on the one-way synchronisation convention. Textbook special relativity, flat spacetime; not UET-distinct."
+    },
+    {
       "claim_id": "C_T010_TWO_CARRIER_RECORDS",
       "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
       "level": "L2_CONFRONTED",
@@ -452,6 +461,33 @@
         "R_L3_SUPPLY"
       ],
       "note": "The pool loss follows from the action; the supply is a boundary flux set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_DIVIDER",
+      "statement": "The environment that receives a system's entropy (the divider, at T_c) sets both its resource and its ability to persist: the usable part of a heat store is the exergy C[(T0 - T_c) - T_c ln(T0/T_c)], which vanishes as C (T0 - T_c)^2/(2 T0) when the divider is as warm as the store (alone), and a structure that needs work W_m through linear contacts persists only if T_c <= T_c* = (sqrt(T_h) - sqrt(W_m/K))^2 with K = K_h K_c/(K_h + K_c), a sink threshold beside the supply threshold S* of C_L3_SUPPLY.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D1_ENTROPY_DIVIDER"
+      ],
+      "note": "Exergy and endoreversible (Novikov) thermodynamics; not UET-distinct. Adds the divider temperature to the layer-3 resource and persistence language. Linear heat transfer, fixed divider temperature, no chains."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_CHAIN",
+      "statement": "When the waste heat of one structure is the environment of the next, a chain of N structures between a source at T0 and a final divider at T_N creates no resource: its largest total work rate is K_chain (sqrt(T0) - sqrt(T_N))^2 with every contact in series, so each extra hand-off lowers it (to 1/N for equal contacts); at a given entropy flux the shares between stages are zero-sum, and the chain persists only if the sum of the stages' needs is below that maximum.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D2_ENTROPY_CHAIN"
+      ],
+      "note": "Extends C_L3_ENTROPY_DIVIDER to chains. Endoreversible series engines with linear contacts; not UET-distinct. Radiative contacts and warming dividers are open."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_CHAIN_RADIATIVE",
+      "statement": "In a chain of entropy dividers whose contacts follow J = G (T_h^n - T_c^n)/n, sharing between stages is zero-sum only for linear contacts (n = 1): for radiation (n = 4) and any n > 1 a unit of work taken by an upstream stage costs the downstream stages more than one unit (marginal cost c > 1), so the way the upstream stage uses its share changes what the whole chain gets; for n < 1 the opposite holds (c < 1).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D3_ENTROPY_CHAIN_RADIATIVE"
+      ],
+      "note": "Extends C_L3_ENTROPY_CHAIN. The effect is small unless a contact works near its limit (c = 1.015 in the illustrative sun-planet-space case). Endoreversible engines with radiative contacts; not UET-distinct. Sunlight dilution and warming dividers are open."
     },
     {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
