@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — Which part of "becoming present with what is seen" can resources buy?
+ทำ: `uet_two_delays.py` แยกสองเวลาหน่วง (บันทึก vs การแก่ของผู้เดินทาง) + physics test 41 ตัว (worldline ทั่วไป vs closed form, Newtonian limit, metric identity, rocket equation vs four-momentum)
+ผล: อายุบันทึกเมื่อไปถึง > 2d/c เสมอไม่ว่าจ่ายเท่าไร; การแก่ลดได้ด้วยการแปลงมวลนิ่ง m0/m1 ≥ e^{2η}; 1000 ปีแสงแก่ 10 ปี: γ = 100, มวล 4.0×10⁴ เท่า, บันทึกเก่า 2000 ปี
+ระดับ: C_OBS_TWO_DELAYS → L1_CONSISTENT (สัมพัทธภาพพิเศษ ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: เพิ่มแรงโน้มถ่วง/การขยายตัวของจักรวาล (event horizon: ของที่เห็นแต่ไปไม่ถึงตลอดกาล)
+commit: eb302b96f (code) + this commit (records)
+
 ## 2026-11-16 — Do migrated checkouts preserve byte and payload-tree identity?
 ทำ: กติกา LF สำหรับโค้ด/records พร้อมเก็บ input/ref bytes; ซ่อม Calorine ให้ payload และ sibling scan ใช้ physical tree เดียวกัน
 ผล: 83/83 กรณีที่ล้มเพิ่มบน Desktop ผ่าน; 132 focused software tests ผ่าน; physics 193 ผ่าน / 1 skipped

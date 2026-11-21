@@ -219,6 +219,15 @@
       "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
     },
     {
+      "claim_id": "C_OBS_TWO_DELAYS",
+      "statement": "Seeing a distant event and being present with it are separated by two different delays: the record age at arrival exceeds 2d/c for every timelike journey started when the record arrives, whatever is spent, while the traveller's own ageing can be made arbitrarily short only by converting rest mass, at photon-rocket mass ratio m0/m1 >= exp(2 eta) = (gamma (1 + beta))^2 for start and stop.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O5_TWO_DELAYS"
+      ],
+      "note": "Extends principle P2: at arrival the gap is Xdot times an age above 2d/c. Both bounding events lie on the source worldline, so 2d/c does not depend on the one-way synchronisation convention. Textbook special relativity, flat spacetime; not UET-distinct."
+    },
+    {
       "claim_id": "C_T010_TWO_CARRIER_RECORDS",
       "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
       "level": "L2_CONFRONTED",

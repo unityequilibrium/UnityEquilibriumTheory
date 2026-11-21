@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 83,
-    "entries": 949,
+    "sources": 84,
+    "entries": 950,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 714,
+      "research": 715,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -431,6 +431,11 @@
     {
       "path": "2026/2026-11-20.md",
       "sha256": "49b3a99d85c67d9ac676d66afef0aa1c1e7648fb56ccd2de34cd258f6aea02c8",
+      "entries": 1
+    },
+    {
+      "path": "2026/2026-11-21.md",
+      "sha256": "a85a23f81614ff658c074f19839249e4b7ba60d62e5fc87afad8bcb6e51e3032",
       "entries": 1
     },
     {
@@ -19384,6 +19389,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-20",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Wave O5: two delays between seeing an event and being present with it",
+      "entry_sha256": "3c272739bfcc061b4e41d6777109d0ca9396e50609047c7e3afc4efccf7476f6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
       "legacy_root_path": false
     },
     {
