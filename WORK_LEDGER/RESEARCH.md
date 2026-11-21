@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 716. Counts describe records, not accomplishments.
+Indexed entries: 717. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-21 | [Wave D2: dividing entropy along a chain](2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D1: the divider temperature sets resource and persistence](2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave O5: two delays between seeing an event and being present with it](2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T027: yeast switch glucose with exponential rates (FAILED)](2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed) (L3) | research-standards | explicit_stream_and_area |

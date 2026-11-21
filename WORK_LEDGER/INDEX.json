@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 951,
+    "entries": 952,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 716,
+      "research": 717,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-21.md",
-      "sha256": "d842f639fd149d7a3a5cc5bb0923aff9d5230755cc865b7f4724bedc3498ee6a",
-      "entries": 2
+      "sha256": "dd71658a0a4e50b1a2401f621e42e2298494ad5e81e69cf3a38ec886698ea2b6",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19416,9 +19416,29 @@
       "source": "2026/2026-11-21.md",
       "anchor": "wave-d1-the-divider-temperature-sets-resource-and-persistence",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Wave D1: the divider temperature sets resource and persistence",
-      "entry_sha256": "f0ec14b11e804a7a4d140a4b6bf23834b235ab4e6d47fbfa080c3aca22f860df",
+      "entry_sha256": "c55a4ce84bcdf8df02db738c0c9cbcb12892fa34d0323fe55f44a8709dc90f47",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d2-dividing-entropy-along-a-chain",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Wave D2: dividing entropy along a chain",
+      "entry_sha256": "ad70a879a215df5e3c605d3f0b0aade79d9fd9c8423532cf65bb2a4c5df73072",
       "stream": "research",
       "areas": [
         "research-core"

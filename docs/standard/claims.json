@@ -472,6 +472,15 @@
       "note": "Exergy and endoreversible (Novikov) thermodynamics; not UET-distinct. Adds the divider temperature to the layer-3 resource and persistence language. Linear heat transfer, fixed divider temperature, no chains."
     },
     {
+      "claim_id": "C_L3_ENTROPY_CHAIN",
+      "statement": "When the waste heat of one structure is the environment of the next, a chain of N structures between a source at T0 and a final divider at T_N creates no resource: its largest total work rate is K_chain (sqrt(T0) - sqrt(T_N))^2 with every contact in series, so each extra hand-off lowers it (to 1/N for equal contacts); at a given entropy flux the shares between stages are zero-sum, and the chain persists only if the sum of the stages' needs is below that maximum.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D2_ENTROPY_CHAIN"
+      ],
+      "note": "Extends C_L3_ENTROPY_DIVIDER to chains. Endoreversible series engines with linear contacts; not UET-distinct. Radiative contacts and warming dividers are open."
+    },
+    {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",
       "statement": "In a chemostat the layer 3 pool quantities are set by the experimenter: supply S = D S0 (dilution rate times reservoir concentration), loss delta = D and washout 1/tau = D; the persistence threshold S* = delta R*_min holds for any increasing uptake mu(R) with mu(0) = 0, the steady abundance is n* = Y (S0 - R*), and the linear (action-derived) uptake is the special case mu = a R.",
       "level": "L1_CONSISTENT",

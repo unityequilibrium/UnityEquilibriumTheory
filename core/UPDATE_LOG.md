@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-21 — Does dividing entropy along a chain create resource, and how is it shared?
+ทำ: `uet_entropy_chain.py` (engine N ทอดต่ออนุกรม เชื่อมด้วยการนำความร้อนเชิงเส้น) + physics test 44 ตัว (สูตรปิด N = 1–4, Carnot limit, สมดุล entropy ราย contact, ทางที่สองจากอุณหภูมิ, การแบ่งแบบ zero-sum)
+ผล: กำลังรวมสูงสุด = K_chain(√T0 − √T_N)² โดย K_chain คือทุก contact ต่ออนุกรม → ห่วงโซ่ไม่สร้างทรัพยากร ทอดที่เพิ่มทำให้ลด (contact เท่ากัน: 1/N); ที่ entropy flux เดียวกัน ส่วนแบ่งระหว่างทอดเป็น zero-sum
+ระดับ: C_L3_ENTROPY_CHAIN → L1_CONSISTENT (engine อนุกรมแบบ endoreversible ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: contact แบบแผ่รังสี (T⁴) ซึ่งอาจทำลาย zero-sum และผู้หารที่ร้อนขึ้นเอง
+commit: 4be44658d (code) + this commit (records)
+
 ## 2026-11-21 — How does the environment that takes a system's entropy set its resource and persistence?
 ทำ: `uet_entropy_divider.py` (exergy ของคลังความร้อน + engine แบบ endoreversible ที่ไหลคงที่) + physics test 43 ตัว (closed form, limit "อยู่คนเดียว", สมดุลพลังงาน/entropy, หา max ด้วยตัวเลขเทียบสูตร)
 ผล: ทรัพยากรที่ใช้ได้ = C[(T0−T_c) − T_c ln(T0/T_c)] เป็นศูนย์เมื่อผู้หารร้อนเท่าคลัง; ระบบที่ต้องใช้งาน W_m รอดได้เฉพาะ T_c ≤ T_c* = (√T_h − √(W_m/K))², K = K_hK_c/(K_h+K_c) (ทางตัวเลขจับสูตร Curzon–Ahlborn ที่ใช้ผิดได้)
