@@ -1,0 +1,39 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T028",
+  "status": "DRAFT",
+  "claim_id": "C_L3_FALLING_TOGETHER",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Mixing branch of wave D8 (C_L3_FALLING_TOGETHER): a nearly non-spinning black-hole merger radiates a fraction f of its total mass that lies between the inspiral loss to the innermost stable orbit, L = 0.0572 eta (eta = m1 m2/(m1+m2)^2), and the Hawking area-theorem cap U = 1 - sqrt(m1^2 + m2^2)/(m1 + m2).",
+  "observable": {
+    "quantity": "f = 1 - M_f/(m1 + m2) per event, from catalogue medians of source-frame m1, m2 and final mass M_f; share of the sample with L <= f <= U",
+    "unit": "dimensionless",
+    "domain": "GWOSC cumulative GWTC list retrieved 2026-11-22; events with m1, m2, M_f, chi_eff reported, m2 >= 3 M_sun and |chi_eff| < 0.2"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "GWOSC_GWTC_EVENTS_2026_11_22",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py",
+    "description": "L from uet_falling_together.inspiral_fraction_of_mu (ISCO found by minimising the Schwarzschild circular-orbit energy) times eta; U from uet_falling_together.area_theorem_cap; both at the catalogue medians of m1 and m2. f from the medians of m1, m2 and M_f. The script refuses to run unless this card is APPROVED and the data sha256 matches the manifest."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "sample cut m2 >= 3 M_sun (AI choice: excludes neutron-star candidates by mass)",
+    "spin cut |chi_eff| < 0.2 on the median (AI choice, to match the claim's non-spinning scope)",
+    "medians only; no posterior samples and no interval propagation (the catalogue list gives per-quantity medians, not joint samples)",
+    "thresholds 90 % for PASS, 25 % for FAILED, at least 20 events (AI choices)"
+  ],
+  "pass_criterion": "PASS if at least 90 % of the sample has L <= f <= U and the sample has at least 20 events.",
+  "fail_criterion": "FAILED if more than 25 % of the sample lies outside [L, U] (below L or above U). INCONCLUSIVE otherwise, including a sample of fewer than 20 events.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the drafter knows the typical published radiated fraction (about 3 M_sun of 65 M_sun for GW150914, roughly 4-5 % for near-equal masses), which lies inside [L, U]; a PASS is expected and the test is weak. Before drafting, only the field names and the count of events with complete fields (270 of 391) were read from the downloaded file, not the values. The catalogue final masses come from numerical-relativity fits that assume GR, so this checks that D8's composition (test-particle ISCO plus the area theorem) brackets the GR answer; it is not an independent measurement. Reported but not deciding: the median of f/L, expected to be about 3, i.e. the inspiral alone covers about a third of the loss and D8 leaves out merger and ringdown. Nearest theory: Schwarzschild circular orbits, the Hawking area theorem, numerical-relativity final-state fits. Not UET-distinct. Criteria are AI choices for the author to accept or change before approval."
+}

@@ -312,6 +312,18 @@
       "license": "numerical values digitised from a published figure; no figure or text redistributed",
       "visibility": "PUBLIC",
       "note": "Digitised after Test Card T027 was approved and committed (cbc52d6ac). Only the wild-type series is used; the engineered single-HXT strains in the same figure are not."
+    },
+    {
+      "data_id": "GWOSC_GWTC_EVENTS_2026_11_22",
+      "description": "Cumulative GWTC event list (391 events): medians and 90% bounds of source-frame component masses, final mass, chi_eff, distance, redshift, SNR, FAR and p_astro",
+      "source": "Gravitational Wave Open Science Center event API, cumulative GWTC list (GWTC-1 to GWTC-5.0); LIGO Scientific, Virgo and KAGRA Collaborations",
+      "doi_or_url": "https://gwosc.org/eventapi/json/GWTC/",
+      "retrieved": "2026-11-22",
+      "path": "docs/data/external/gravity/gwtc/gwosc_gwtc_events_2026-11-22.json",
+      "sha256": "9802865cc8b41508f4073769758f7dbaf5498b22a907849d567083635e7e862a",
+      "license": "GWOSC data are released under CC BY 4.0",
+      "visibility": "PUBLIC",
+      "note": "Raw JSON as served (738435 bytes). Final masses are derived by the collaborations from numerical-relativity fits to the component masses and spins, assuming GR; they are not an independent measurement of the radiated energy."
     }
   ]
 }
