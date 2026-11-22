@@ -535,6 +535,15 @@
       "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference)."
     },
     {
+      "claim_id": "C_L3_EVAPORATION_RECORD",
+      "statement": "When one black hole evaporates completely in Lambda-only space, space returns to what it was: isotropic emission leaves exactly zero gravitational-wave memory and behind the outgoing radiation the metric is pure de Sitter; the record of the mass is the radiation, which passes the hole's horizon after ln2/H = 12.1 Gyr and redshifts, and the permanent lag (G/(r c^2)) int M dt of clocks that were near it; the lifetime is M_eq^3 (atanh x0 - atan x0)/(2a), which reduces to F0/(3 P0) for small holes.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D9_EVAPORATION_RECORD"
+      ],
+      "note": "Hawking evaporation, Birkhoff with Lambda and gravitational-wave memory; not UET-distinct. Supports the author's 2026-11-22 split between space and record (AUTHOR_PROPOSITION §4): the record needs radiation or matter, not space. The two horizon temperatures belong to different observers; the flux balance mixes frames (stated)."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

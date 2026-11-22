@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D9_EVAPORATION_RECORD",
+  "claim_id": "C_L3_EVAPORATION_RECORD",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "lifetime_closed_form_vs_numeric",
+      "value": "< 1e-10 relative, 20/20 random masses up to 0.9 M_eq",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "int_M_dt_two_routes",
+      "value": "< 1e-9 relative at x0 = 1e-20, 1e-3, 0.3, 0.8",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "wave_memory_isotropic_emission",
+      "value": "< 1e-12 (zero)",
+      "uncertainty": null,
+      "unit": "per unit energy"
+    },
+    {
+      "name": "wave_memory_two_sided_jet_h_plus",
+      "value": 0.103,
+      "uncertainty": null,
+      "unit": "per unit energy (4G/(c^4 r) units)"
+    },
+    {
+      "name": "narrow_beam_convergence_order",
+      "value": "1.00",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "record_leaves_hole_horizon_after",
+      "value": 12.15,
+      "uncertainty": null,
+      "unit": "Gyr"
+    },
+    {
+      "name": "illustrative_1e12_kg_lifetime",
+      "value": 2670000000000.0,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "illustrative_1e12_kg_clock_lag_at_1m",
+      "value": "1.48e-3 yr (5.6e-16 of the lifetime)",
+      "uncertainty": null,
+      "unit": "yr"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_evaporation_record.py",
+    "commit": "a1bd29576"
+  },
+  "artifacts": [],
+  "date": "2026-11-22",
+  "note": "Author's model (2026-11-22): one mass that disappears completely in space of the first kind only (AI mapping: de Sitter, H = H_L). Photon-only Hawking power and geometric absorption of the horizon bath, added as fluxes although T_H (distant static observer) and T_dS (freely falling observer) belong to different observers: a frame-mixed step, stated. Memory from the Wiseman-Will / Thorne formula. M0 = 1e12 kg and r = 1 m are illustrative AI choices. Nearest theory: Hawking evaporation, Schwarzschild-de Sitter, Birkhoff, gravitational-wave memory. Not UET-distinct."
+}

@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-22 — One mass disappears completely: does space keep the record?
+ทำ: `uet_evaporation_record.py` (หลุมดำก้อนเดียวระเหยจนหมดใน space ที่มีแต่ Λ) + physics test 31 ตัว (อายุสูตรปิด, ∫M dt สองทาง, ระยะโฟตอนใน de Sitter, memory ของการแผ่แบบสมมาตรเป็นศูนย์, beam limit ลำดับ 1)
+ผล: space กลับเป็นเหมือนเดิมทุกประการ (แผ่ออกเท่ากันทุกทิศ memory = 0); บันทึกคือ (1) รังสี ซึ่งออกพ้นขอบฟ้าของหลุมดำหลัง ln2/H = 12.1 Gyr และไม่กลับมา (2) นาฬิกาที่เคยอยู่ใกล้ช้ากว่าถาวร (G/rc²)∫M dt ซึ่งต้องมีสสาร
+ระดับ: C_L3_EVAPORATION_RECORD → L1_CONSISTENT (ไม่ใช่ผลเฉพาะของ UET); สนับสนุนการแยก space กับบันทึกของผู้เขียน; T_H กับ T_dS เป็นของผู้สังเกตต่างกัน (ระบุไว้)
+ถัดไป: เทียบจักรวาลจริง: รังสีถูกสสารอื่นดูดไว้ และเหตุการณ์ที่ไม่สมมาตร (การรวมหลุมดำ) ทิ้ง memory ไว้ในเรขาคณิตได้
+commit: a1bd29576 (code) + this commit (records)
+
 ## 2026-11-22 — Falling together: frying and mixing (model B)
 ทำ: `uet_falling_together.py` (ผัด = dynamical friction, คลุก = หลุมดำรวมกัน) + physics test 41 ตัว (สูตรปิด Maxwellian, limit, ODE วงโคจร, งานเท่ากับพลังงานที่เสีย, ISCO, area theorem ผ่านฟังก์ชัน entropy)
 ผล: ผัด: หลุมดำ 1e6 M_sun จม 1 kpc → 10 pc ใน 5.9 Gyr และให้ entropy แก่ทะเลดาว 2(M/m) ln(r_i/r_f) = 9.2e6 k (ทะเลดาวคือตัวหาร); คลุก: เสียมวล 1.4–29% เป็นคลื่นความโน้มถ่วง และสร้าง entropy ราว 1.7e89 k มากกว่าผัด ~82 ระดับขนาด
