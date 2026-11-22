@@ -544,6 +544,15 @@
       "note": "Hawking evaporation, Birkhoff with Lambda and gravitational-wave memory; not UET-distinct. Supports the author's 2026-11-22 split between space and record (AUTHOR_PROPOSITION §4): the record needs radiation or matter, not space. The two horizon temperatures belong to different observers; the flux balance mixes frames (stated)."
     },
     {
+      "claim_id": "C_L3_RECORD_REAL_UNIVERSE",
+      "statement": "In the real universe the record of a vanished mass splits three ways: radiation emitted today escapes intergalactic matter (Thomson optical depth over the whole future 7.3e-4, so at least 99.9 % is never scattered); records from the dense early universe were absorbed by matter (optical depth 2.4 by z = 100 if ionised, opaque before recombination); and asymmetric events leave a permanent geometric memory, for a circular-binary merger Delta h = G E sin^2 i (17 + cos^2 i)/(24 c^4 r), while space described by Lambda alone keeps nothing in either model.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D10_RECORD_REAL_UNIVERSE"
+      ],
+      "note": "Thomson optical depth and nonlinear gravitational-wave memory; not UET-distinct. Real-universe counterpart of C_L3_EVAPORATION_RECORD. In the author's 2026-11-22 split (AI interpretation): the first kind of space keeps nothing; the geometry made by mass-energy keeps asymmetric events; matter keeps early records as heat."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

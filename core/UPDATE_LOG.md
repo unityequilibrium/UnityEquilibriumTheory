@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-22 — The record of a vanished mass in the real universe
+ทำ: `uet_record_real_universe.py` (optical depth ของก๊าซระหว่างกาแล็กซี + memory ของการรวมหลุมดำ) + physics test 29 ตัว (สัมประสิทธิ์ memory 17/96 จากปริพันธ์, limit ยุคสสารลำดับ 3, การบวกกันได้ของ τ)
+ผล: บันทึกแยกเป็นสามทาง: (1) รังสีที่ปล่อยตอนนี้หลุดรอดสสารเกือบหมด (τ ทั้งอนาคต = 7.3e-4); (2) บันทึกจากยุคแรกถูกสสารดูดไว้ (τ = 2.4 ถึง z = 100); (3) เหตุการณ์ไม่สมมาตรทิ้ง memory ในเรขาคณิต Δh = GE sin²i(17+cos²i)/(24c⁴r) (ตัวอย่าง 2.5e-22)
+ระดับ: C_L3_RECORD_REAL_UNIVERSE → L1_CONSISTENT (ไม่ใช่ผลเฉพาะของ UET); space แบบ Λ ไม่เก็บอะไรทั้งสองแบบจำลอง เรขาคณิตจากมวลเก็บเหตุการณ์ไม่สมมาตร
+ถัดไป: Test Card เรื่อง memory หรือมวลที่หายจริงจากข้อมูล LIGO (ข้อมูลภายนอก ต้องให้ผู้เขียนอนุมัติ)
+commit: fa48abbaf (code) + this commit (records)
+
 ## 2026-11-22 — One mass disappears completely: does space keep the record?
 ทำ: `uet_evaporation_record.py` (หลุมดำก้อนเดียวระเหยจนหมดใน space ที่มีแต่ Λ) + physics test 31 ตัว (อายุสูตรปิด, ∫M dt สองทาง, ระยะโฟตอนใน de Sitter, memory ของการแผ่แบบสมมาตรเป็นศูนย์, beam limit ลำดับ 1)
 ผล: space กลับเป็นเหมือนเดิมทุกประการ (แผ่ออกเท่ากันทุกทิศ memory = 0); บันทึกคือ (1) รังสี ซึ่งออกพ้นขอบฟ้าของหลุมดำหลัง ln2/H = 12.1 Gyr และไม่กลับมา (2) นาฬิกาที่เคยอยู่ใกล้ช้ากว่าถาวร (G/rc²)∫M dt ซึ่งต้องมีสสาร

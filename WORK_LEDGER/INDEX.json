@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 85,
-    "entries": 964,
+    "entries": 965,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 729,
+      "research": 730,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -440,8 +440,8 @@
     },
     {
       "path": "2026/2026-11-22.md",
-      "sha256": "f3779044e396476e99b70d9fcf4f37fdcf0856afa3cdf40dfc1613bbbc806f74",
-      "entries": 4
+      "sha256": "eecfb9c7dacc94ec30027a293706db54412024f383d4f7a134d79b8b455ce550",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -19681,9 +19681,29 @@
       "source": "2026/2026-11-22.md",
       "anchor": "wave-d9-one-mass-disappears-completely-in-lambda-only-space",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Wave D9: one mass disappears completely in Lambda-only space",
-      "entry_sha256": "6703f6f8ff3a583ec820ec8f869580ad1f7cfaf8851202371ee98ea17e99fd73",
+      "entry_sha256": "2bee5273caed25e62794233b04705466cd6b2405d2c845b118b4417a91611c76",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d10-the-record-of-a-vanished-mass-in-the-real-universe",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d10-the-record-of-a-vanished-mass-in-the-real-universe",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave D10: the record of a vanished mass in the real universe",
+      "entry_sha256": "cecdc7c9b34c103d0301a0482572f44d5e5e8c7d6537dea778a851b3ea1ed0bb",
       "stream": "research",
       "areas": [
         "research-core"
