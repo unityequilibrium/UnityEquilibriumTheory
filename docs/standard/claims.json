@@ -526,6 +526,15 @@
       "note": "Stefan cooling plus Gibbons-Hawking; not UET-distinct. Model A of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22): space of the first kind divides entropy in principle but infinitely slowly; in practice other matter and radiation divide it (model B). Sharpens SYNTHESIS_AUDIT C2."
     },
     {
+      "claim_id": "C_L3_FALLING_TOGETHER",
+      "statement": "When bodies fall together, frying (dynamical friction) sinks a mass M from r_i in t = 1.17 r_i^2 v_c/(G M lnL) and hands the light sea entropy 2 (M/m) ln(r_i/r_f), so the sea is the divider of the heavy body; mixing (a non-spinning black-hole merger) radiates at least 5.72 % of mu c^2 and at most 1 - sqrt(m1^2 + m2^2)/(m1 + m2) of the mass, and multiplies the entropy by 2 (1 - eps)^2 for equal masses, so mixing out-produces frying by about 82 orders of magnitude in the illustrative case.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D8_FALLING_TOGETHER"
+      ],
+      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference)."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

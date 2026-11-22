@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D8_FALLING_TOGETHER",
+  "claim_id": "C_L3_FALLING_TOGETHER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "slower_fraction_numeric_vs_closed_form",
+      "value": "< 1e-10 relative, 24/24 random X",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "sinking_time_ode_vs_closed_form",
+      "value": "< 1e-8 relative, 4/4 random",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "friction_work_vs_orbital_energy_lost",
+      "value": "< 1e-8 relative",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "sinking_time_coefficient",
+      "value": 1.1693,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "inspiral_fraction_of_mu_to_isco",
+      "value": 0.05719,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "area_theorem_cap_equal_masses",
+      "value": 0.29289,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_frying_1e6_Msun_1kpc_to_10pc",
+      "value": "5.85 Gyr; entropy to the sea 9.2e6 k",
+      "uncertainty": null,
+      "unit": "Gyr; k_B"
+    },
+    {
+      "name": "illustrative_mixing_two_1e6_Msun_eps_5pc",
+      "value": "entropy gain 1.7e89 k (S of one hole 1.05e89 k)",
+      "uncertainty": null,
+      "unit": "k_B"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_falling_together.py",
+    "commit": "6c86b6b07"
+  },
+  "artifacts": [],
+  "date": "2026-11-22",
+  "note": "Model B of the author's 2026-11-22 picture of falling together: frying = Chandrasekhar dynamical friction on a circular orbit in a singular isothermal sphere (Maxwellian sea, X = 1); mixing = non-spinning black-hole merger bounded below by the test-mass inspiral to the innermost stable orbit and above by the Hawking area theorem. The eps = 5 % merger loss, lnL = 10 and the masses and radii are illustrative AI choices, not data. Nearest theory: Binney and Tremaine section 8.1; Hawking 1971. Not UET-distinct."
+}

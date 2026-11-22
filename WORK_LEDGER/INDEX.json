@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 85,
-    "entries": 962,
+    "entries": 963,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 727,
+      "research": 728,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -440,8 +440,8 @@
     },
     {
       "path": "2026/2026-11-22.md",
-      "sha256": "138f7f91c7e21cfc499b831ef9805c4297b11341d4f999dce144375d06df07e7",
-      "entries": 2
+      "sha256": "0484abb5547d481658dec4c71a0b44de54783f135a1ff77569e3e7be22fb866e",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19641,9 +19641,29 @@
       "source": "2026/2026-11-22.md",
       "anchor": "wave-d7-model-a-a-lone-body-in-lambda-only-space",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Wave D7 (model A): a lone body in Lambda-only space",
-      "entry_sha256": "d48c3e01a7afdaad85320ffb488a257fa09a25f80ca5a7bfecad529c9b610a7d",
+      "entry_sha256": "64e9b27f29097ecfc52a21a13eb4da047eeff375128f91669a57c5932614cf30",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d8-model-b-falling-together---frying-and-mixing",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d8-model-b-falling-together---frying-and-mixing",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Wave D8 (model B): falling together - frying and mixing",
+      "entry_sha256": "2d1d717d093fa0c29b2dfe976b798a10d12440ea583dbc3f696d0edf509048f6",
       "stream": "research",
       "areas": [
         "research-core"

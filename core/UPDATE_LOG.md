@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-22 — Falling together: frying and mixing (model B)
+ทำ: `uet_falling_together.py` (ผัด = dynamical friction, คลุก = หลุมดำรวมกัน) + physics test 41 ตัว (สูตรปิด Maxwellian, limit, ODE วงโคจร, งานเท่ากับพลังงานที่เสีย, ISCO, area theorem ผ่านฟังก์ชัน entropy)
+ผล: ผัด: หลุมดำ 1e6 M_sun จม 1 kpc → 10 pc ใน 5.9 Gyr และให้ entropy แก่ทะเลดาว 2(M/m) ln(r_i/r_f) = 9.2e6 k (ทะเลดาวคือตัวหาร); คลุก: เสียมวล 1.4–29% เป็นคลื่นความโน้มถ่วง และสร้าง entropy ราว 1.7e89 k มากกว่าผัด ~82 ระดับขนาด
+ระดับ: C_L3_FALLING_TOGETHER → L1_CONSISTENT (Chandrasekhar + area theorem ไม่ใช่ผลเฉพาะของ UET); มวลลดจริงเมื่อคลุก วัดได้จากข้างนอกในกรอบ GR
+ถัดไป: เทียบมวลที่หายจริงของหลุมดำที่ LIGO วัดได้ (ข้อมูลภายนอก ต้องเป็น Test Card) หรือหาว่าแรงลาก portal เปลี่ยนการผัดได้แค่ไหน
+commit: 6c86b6b07 (code) + this commit (records)
+
 ## 2026-11-22 — Is a lone body in space-only really alone? (model A)
 ทำ: `uet_lone_body_horizon.py` (ของชิ้นเดียวใน space ที่มีแต่ Λ เย็นลงสู่อุณหภูมิขอบฟ้า) + physics test 46 ตัว (สูตรปิดเทียบปริพันธ์และ ODE, limit ลำดับ 4, กฎข้อ 2, อัตราผ่อนคลาย, identity ความยาวคลื่น)
 ผล: ไม่ได้อยู่คนเดียว ขอบฟ้า 2.2e-30 K รับ entropy ไปเกือบทั้งหมด (หิน 1 m: ตัวเองเสีย 3.4e30 k ขอบฟ้าได้ 9.8e61 k) ไม่ถึง 0 K เข้าสมดุลได้แค่เข้าใกล้; แต่ความยาวคลื่นของขอบฟ้า = 4π² เท่ารัศมีขอบฟ้าพอดี วัตถุจึงแลกความร้อนกับมันแทบไม่ได้ (≥ 1e94 ปี)
