@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 85,
-    "entries": 965,
+    "sources": 86,
+    "entries": 966,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 730,
+      "research": 731,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -442,6 +442,11 @@
       "path": "2026/2026-11-22.md",
       "sha256": "eecfb9c7dacc94ec30027a293706db54412024f383d4f7a134d79b8b455ce550",
       "entries": 5
+    },
+    {
+      "path": "2026/2026-11-23.md",
+      "sha256": "df8a6c58cf807084a345b5e4da4e4413792e7f48f8f58de97ee943ff27a0da02",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19714,6 +19719,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#t028-merger-mass-loss-against-gwtc",
+      "source": "2026/2026-11-23.md",
+      "anchor": "t028-merger-mass-loss-against-gwtc",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "T028: merger mass loss against GWTC",
+      "entry_sha256": "f31a82bbcebe6326ab186cfe49be916dcf2e4ea9d6ebe2f8cc2da7e4199287b7",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
       "legacy_root_path": false
     },
     {

@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-23 — T028: mass radiated in black-hole mergers against GWTC
+ทำ: ดาวน์โหลดรายการ GWTC จาก GWOSC (391 เหตุการณ์, ล็อก sha256) + Test Card T028 (ผู้เขียนอนุมัติก่อนรัน) + รันหนึ่งครั้ง
+ผล: 225 จาก 227 การรวมหลุมดำที่เกือบไม่หมุน เสียมวลระหว่าง 0.0572 η กับเพดานทฤษฎีบทพื้นที่ ไม่มีตัวไหนเกินเพดาน; มวลที่หายจริง 3.13 เท่าของส่วนหมุนเข้าหากัน (ช่วงชนและ ringdown ที่ D8 ไม่รวมคือส่วนที่เหลือ)
+ระดับ: C_L3_FALLING_TOGETHER → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-23); แบบทดสอบอ่อน มวลหลังชนมาจากการคำนวณ GR ไม่ใช่ผลเฉพาะของ UET; สาขาผัดยังไม่ได้ทดสอบ
+ถัดไป: แบบทดสอบที่คมกว่า (posterior samples แทนค่ามัธยฐาน) หรือหาจุดที่ UET ทำนายต่างจาก GR
+commit: f0f681c87 (draft) + 9725e1e1d (approval) + 7473e3007 (run) + this commit (records)
+
 ## 2026-11-22 — The record of a vanished mass in the real universe
 ทำ: `uet_record_real_universe.py` (optical depth ของก๊าซระหว่างกาแล็กซี + memory ของการรวมหลุมดำ) + physics test 29 ตัว (สัมประสิทธิ์ memory 17/96 จากปริพันธ์, limit ยุคสสารลำดับ 3, การบวกกันได้ของ τ)
 ผล: บันทึกแยกเป็นสามทาง: (1) รังสีที่ปล่อยตอนนี้หลุดรอดสสารเกือบหมด (τ ทั้งอนาคต = 7.3e-4); (2) บันทึกจากยุคแรกถูกสสารดูดไว้ (τ = 2.4 ถึง z = 100); (3) เหตุการณ์ไม่สมมาตรทิ้ง memory ในเรขาคณิต Δh = GE sin²i(17+cos²i)/(24c⁴r) (ตัวอย่าง 2.5e-22)

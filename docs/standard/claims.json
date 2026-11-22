@@ -528,11 +528,12 @@
     {
       "claim_id": "C_L3_FALLING_TOGETHER",
       "statement": "When bodies fall together, frying (dynamical friction) sinks a mass M from r_i in t = 1.17 r_i^2 v_c/(G M lnL) and hands the light sea entropy 2 (M/m) ln(r_i/r_f), so the sea is the divider of the heavy body; mixing (a non-spinning black-hole merger) radiates at least 5.72 % of mu c^2 and at most 1 - sqrt(m1^2 + m2^2)/(m1 + m2) of the mass, and multiplies the entropy by 2 (1 - eps)^2 for equal masses, so mixing out-produces frying by about 82 orders of magnitude in the illustrative case.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
-        "R_D8_FALLING_TOGETHER"
+        "R_D8_FALLING_TOGETHER",
+        "R_T028_MERGER_MASS_LOSS_GWTC"
       ],
-      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference)."
+      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference). T028 (2026-11-23): 225 of 227 nearly non-spinning GWTC mergers radiate between 0.0572 eta and the area cap; median 3.13 times the inspiral loss; weak test, GR-derived final masses; the frying branch is not tested. L2 approved by the author."
     },
     {
       "claim_id": "C_L3_EVAPORATION_RECORD",
