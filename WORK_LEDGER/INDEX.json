@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 84,
-    "entries": 960,
+    "sources": 85,
+    "entries": 961,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 725,
+      "research": 726,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -437,6 +437,11 @@
       "path": "2026/2026-11-21.md",
       "sha256": "e21ead9bfc1bfcf6636238bd94f5957c84988e795d52da17b299b79ab419f03d",
       "entries": 11
+    },
+    {
+      "path": "2026/2026-11-22.md",
+      "sha256": "304fd20846fbc8553926a78df02b99b762d6691cc4058448408f2b4cdbe6475a",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19609,6 +19614,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together",
+      "source": "2026/2026-11-22.md",
+      "anchor": "author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Author statements: thermodynamic cycle, two kinds of space, falling together",
+      "entry_sha256": "7bdefb1ce532b576500b72603b40bc471e1e83a0ee8dac4c9e17646cd24e8833",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
       "legacy_root_path": false
     },
     {

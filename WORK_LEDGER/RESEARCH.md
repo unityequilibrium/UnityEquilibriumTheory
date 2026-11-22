@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 725. Counts describe records, not accomplishments.
+Indexed entries: 726. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-22 | [Author statements: thermodynamic cycle, two kinds of space, falling together](2026/2026-11-22.md#author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together) (L3) | research-standards | explicit_stream_and_area |
 | 2026-11-21 | [Wave S3: seen-but-gone on the expanding light cone](2026/2026-11-21.md#wave-s3-seen-but-gone-on-the-expanding-light-cone) (L103) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave S2: of the sources we see, how many still exist?](2026/2026-11-21.md#wave-s2-of-the-sources-we-see-how-many-still-exist) (L93) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Check: T008 against the flux-limit selection of wave S1](2026/2026-11-21.md#check-t008-against-the-flux-limit-selection-of-wave-s1) (L83) | research-standards | explicit_stream_and_area |
