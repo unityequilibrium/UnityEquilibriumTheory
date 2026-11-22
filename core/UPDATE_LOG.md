@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-22 — Is a lone body in space-only really alone? (model A)
+ทำ: `uet_lone_body_horizon.py` (ของชิ้นเดียวใน space ที่มีแต่ Λ เย็นลงสู่อุณหภูมิขอบฟ้า) + physics test 46 ตัว (สูตรปิดเทียบปริพันธ์และ ODE, limit ลำดับ 4, กฎข้อ 2, อัตราผ่อนคลาย, identity ความยาวคลื่น)
+ผล: ไม่ได้อยู่คนเดียว ขอบฟ้า 2.2e-30 K รับ entropy ไปเกือบทั้งหมด (หิน 1 m: ตัวเองเสีย 3.4e30 k ขอบฟ้าได้ 9.8e61 k) ไม่ถึง 0 K เข้าสมดุลได้แค่เข้าใกล้; แต่ความยาวคลื่นของขอบฟ้า = 4π² เท่ารัศมีขอบฟ้าพอดี วัตถุจึงแลกความร้อนกับมันแทบไม่ได้ (≥ 1e94 ปี)
+ระดับ: C_L3_LONE_BODY_HORIZON → L1_CONSISTENT (Stefan + Gibbons–Hawking ไม่ใช่ผลเฉพาะของ UET); space แบบที่ 1 หาร entropy ได้ในหลักการ แต่ช้าไม่สิ้นสุด
+ถัดไป: แบบจำลอง B — หลายก้อนตกร่วมกัน (dynamical friction = ผัด, มวลที่หายตอนรวมตัว = คลุก)
+commit: a0b1cdfd0 (code) + this commit (records)
+
 ## 2026-11-21 — Of what we see, how much still exists, in an expanding universe?
 ทำ: `uet_seen_but_gone_cosmic.py` (กรวยแสงอดีตของ ΛCDM + อายุ τ + การเกิดคงที่ตั้งแต่ t = 0) + physics test 27 ตัว (ระยะ comoving สองทาง, limit สู่ S2 ลำดับ 1.00, τ ≥ อายุเอกภพ, Monte Carlo)
 ผล: ทั้งกรวยแสง τ = 10 Gyr ยังอยู่ 10.7% (อวกาศนิ่งให้ 0.24%, ต่างกัน 44 เท่า); τ = 1 Gyr ยังอยู่ 7.9e-6; τ ≥ 13.8 Gyr ยังอยู่ครบ เพราะยังไม่มีใครตายเลยตั้งแต่ต้นเอกภพ

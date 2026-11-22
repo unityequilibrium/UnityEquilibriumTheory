@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 85,
-    "entries": 961,
+    "entries": 962,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 726,
+      "research": 727,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -440,8 +440,8 @@
     },
     {
       "path": "2026/2026-11-22.md",
-      "sha256": "304fd20846fbc8553926a78df02b99b762d6691cc4058448408f2b4cdbe6475a",
-      "entries": 1
+      "sha256": "138f7f91c7e21cfc499b831ef9805c4297b11341d4f999dce144375d06df07e7",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19621,12 +19621,32 @@
       "source": "2026/2026-11-22.md",
       "anchor": "author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Author statements: thermodynamic cycle, two kinds of space, falling together",
-      "entry_sha256": "7bdefb1ce532b576500b72603b40bc471e1e83a0ee8dac4c9e17646cd24e8833",
+      "entry_sha256": "5cb604bbc589bd0b5813d67ea21ff1942509755a66a6ebce3388593c9b652256",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d7-model-a-a-lone-body-in-lambda-only-space",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d7-model-a-a-lone-body-in-lambda-only-space",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Wave D7 (model A): a lone body in Lambda-only space",
+      "entry_sha256": "d48c3e01a7afdaad85320ffb488a257fa09a25f80ca5a7bfecad529c9b610a7d",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
