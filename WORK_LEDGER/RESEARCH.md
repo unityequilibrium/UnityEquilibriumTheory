@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 716. Counts describe records, not accomplishments.
+Indexed entries: 717. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T028: selection and the readable fraction (INCONCLUSIVE)](2026/2026-11-20.md#test-card-t028-selection-and-the-readable-fraction-inconclusive) (L23) | research-standards | explicit_stream_and_area |
 | 2026-11-20 | [Stress test 11: readable fraction of energy-written bits](2026/2026-11-20.md#stress-test-11-readable-fraction-of-energy-written-bits) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T027: yeast switch glucose with exponential rates (FAILED)](2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed) (L3) | research-standards | explicit_stream_and_area |
