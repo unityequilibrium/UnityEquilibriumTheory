@@ -348,6 +348,18 @@
       "license": "numerical facts transcribed from journal supplements; no text or figures redistributed",
       "visibility": "PUBLIC",
       "note": "Transcribed after Test Card T028 was approved and committed (9e9c36843)."
+    },
+    {
+      "data_id": "BENEDICT1915_L_DAILY_BODY_WEIGHT",
+      "description": "Daily naked morning body weight (kg) of subject L. during a 31-day water-only fast, initial weight and days 1-31",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 2 (continued), p. 73",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-23",
+      "path": "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv",
+      "sha256": "250260edc5c3c03c5a04ac71544167d0cf4c1c798d23b85348fd61b1784b242d",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scan; the archive.org OCR misreads day 1 (69.60) and day 12 (63.56), corrected to the scan (59.60, 53.56). Every weight equals the previous weight minus the loss printed beside it (checked to 0.005 kg)."
     }
   ]
 }

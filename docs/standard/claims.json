@@ -583,11 +583,12 @@
     {
       "claim_id": "C_L3_OPENNESS_LAYER3",
       "statement": "The openness ceiling of D13 composes with the layer-3 pool equation of L3-2: with the drawn work filling the pool, S = eta K (sqrt T_h - sqrt T_c)^2 / e, the steady pool is linear in openness, the two persistence thresholds are one condition (T_c sigma_d = e delta R*_min / eta), a structure survives ln(R_ss/R*_i)/delta after the system closes and appears -ln(1 - R*_i/R_ss)/delta after it opens.",
-      "level": "L1_CONSISTENT",
+      "level": "FAILED",
       "evidence": [
-        "R_D14_OPENNESS_LAYER3"
+        "R_D14_OPENNESS_LAYER3",
+        "R_T030_FASTING_MASS_DECAY"
       ],
-      "note": "Synthesis check, not UET-distinct (chemostat and pump-threshold models, endoreversible thermodynamics). Openness is the enclosing system that L3-2 left open; the author's 'a closed system dies' (AUTHOR_PROPOSITION §4, 2026-11-23) is the survival time after closing, set by the pool leak delta. eta and e are free parameters."
+      "note": "Synthesis check, not UET-distinct (chemostat and pump-threshold models, endoreversible thermodynamics). Openness is the enclosing system that L3-2 left open; the author's 'a closed system dies' (AUTHOR_PROPOSITION §4, 2026-11-23) is the survival time after closing, set by the pool leak delta. eta and e are free parameters. FAILED in T030 (2026-11-23): a fasting man's specific mass-loss rate fell (r = 0.922, fail line 0.934), so a closed pool leaking with constant delta does not describe a living reserve after supply stops. The algebra relating thresholds and lifetimes to delta stands as mathematics; a new branch with a varying delta would be a new L0 hypothesis with its own card."
     },
     {
       "claim_id": "C_L3_OBSERVED_SELECTION",

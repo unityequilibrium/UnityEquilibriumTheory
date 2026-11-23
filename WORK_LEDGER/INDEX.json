@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 975,
+    "entries": 976,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 740,
+      "research": 741,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "b23fe509a90ca0aff7c2f31d0cd5ed03fa903e3edf9bc5337c5c0bc0e92cfe6b",
-      "entries": 8
+      "sha256": "af374ea2a4778ddcd5ffbdb42e084c50fff9b38db06277be895a2629c455d777",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -19906,9 +19906,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-lean-lane-f6-energy-and-momentum-identities",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Topic 0.18 Lean lane: F6 energy and momentum identities",
-      "entry_sha256": "ca3e3050a25ca0f6028344242bb5a5c96ed00fda1ff2bc8975d8cef977056368",
+      "entry_sha256": "5c1124e794405e6e1bc0f72b72c17db698ff28e35481156562041aa252b349d4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#test-card-t030-fasting-body-mass-exponential-leak-or-not",
+      "source": "2026/2026-11-23.md",
+      "anchor": "test-card-t030-fasting-body-mass-exponential-leak-or-not",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Test Card T030: fasting body mass, exponential leak or not",
+      "entry_sha256": "6b8b76abfb76c7a26e5b1172acd7651cb6ea3d7e608a267546b7b4abe3f8779a",
       "stream": "research",
       "areas": [
         "research-core"
