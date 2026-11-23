@@ -519,6 +519,15 @@
       "note": "FAILED under T027 (author-approved 2026-11-20): wild-type yeast reaches 0.968 of its maximum exponential rate near 16 mM glucose, ten times above G* = 1.56 mM, so the well-mixed trace reading does not explain the switch. Confronted with Gore et al. (2009) under Test Card T026: INCONCLUSIVE (the designated figure reports a 23 h mean growth rate that never reaches the threshold; exponential rates at two glucose levels lean against 1.6 mM but do not decide). L2 approved by the author on 2026-11-19. Nearest known theory: public-goods models of yeast cooperation (Gore et al. 2009) and Allee effects. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_SELECTION_RAISES_R",
+      "statement": "AI hypothesis (stress test 11): selection for persistence raises the readable fraction r of the bits a system writes with its energy; for cells, r = genome bits copied per division / (division energy / (kT ln 2)) rises with effective population size at fixed cell volume.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_T028_SELECTION_READABLE_FRACTION"
+      ],
+      "note": "Confronted under Test Card T028: INCONCLUSIVE (only five species in both tables; slope +0.83, 95% CI -0.62 to 2.29). L2 approved by the author on 2026-11-20. Nearest theory: Lynch's drift-barrier hypothesis, which predicts the same sign; not UET-distinct unless the size of the effect is predicted."
+    },
+    {
       "claim_id": "C_T024_INNOVATION_INTERVAL",
       "statement": "Intervals between successive lighting introductions (Nordhaus 1997, Table 1.1) shrink with world population as Delta t ~ N^-(beta-1) with beta = 1.27 (Bettencourt et al. 2007), not as N^-1 (Kremer 1993).",
       "level": "FAILED",

@@ -1,0 +1,52 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T028_SELECTION_READABLE_FRACTION",
+ "claim_id": "C_L3_SELECTION_RAISES_R",
+ "test_card_id": "T028",
+ "level": "L2_CONFRONTED",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "species_in_both_tables",
+   "value": 5,
+   "uncertainty": null,
+   "unit": "count (rule needs 8)"
+  },
+  {
+   "name": "b_Ne",
+   "value": 0.83,
+   "uncertainty": "95% CI -0.62 to 2.29",
+   "unit": "log-log slope"
+  },
+  {
+   "name": "b_V",
+   "value": -0.09,
+   "uncertainty": null,
+   "unit": "log-log slope"
+  },
+  {
+   "name": "simple_slope_not_deciding",
+   "value": 0.94,
+   "uncertainty": null,
+   "unit": "log-log slope"
+  },
+  {
+   "name": "r_values",
+   "value": "E. coli 2.1e-5; B. subtilis 3.2e-6; C. reinhardtii 1.9e-6; S. pombe 4.1e-7; S. cerevisiae 3.4e-7",
+   "uncertainty": null,
+   "unit": "1"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t028_selection_readable_fraction.py",
+  "commit": "6d5ec275a"
+ },
+ "artifacts": [],
+ "date": "2026-11-20",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-20",
+  "role": "AUTHOR"
+ },
+ "note": "INCONCLUSIVE under Test Card T028 (approved 9e9c36843, Ne table opened afterwards). Only five species carry both a growth cost (Lynch and Marinov 2015) and an Ne estimate (Sung et al. 2012), below the card's minimum of eight; the slope interval also spans zero. The central estimate is positive, as the hypothesis and Lynch's drift-barrier hypothesis both expect. Genome sizes are from Sung et al.'s table, as the card allowed. Not UET-distinct. L2 result approved by the author in chat on 2026-11-20."
+}
