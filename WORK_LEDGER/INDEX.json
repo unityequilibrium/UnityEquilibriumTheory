@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 972,
+    "entries": 973,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 737,
+      "research": 738,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "694d56656ddfdf562a34a3502b8d5691ce645636c15f8074a8d3b98ce7960ba6",
-      "entries": 5
+      "sha256": "4e56713a5fec00bdd1cc83247cc84c0987e49e725b8bfc337c7563329634cc06",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -19849,6 +19849,26 @@
       "end_line": 51,
       "title": "Wave D13: openness and the order a system can keep",
       "entry_sha256": "930577bed66c05a09e61d795b8d1336f0cf5b7ee28f9f335cd4d6385dd5ff2be",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-audit-and-a-lean-4-formal-proof-lane",
+      "start_line": 54,
+      "end_line": 62,
+      "title": "Topic 0.18: audit and a Lean 4 formal-proof lane",
+      "entry_sha256": "eb9038717bc18c2d4645e64435b8c5bad947b5d32b6893763f6aca0a25cfe2b9",
       "stream": "research",
       "areas": [
         "research-core"
