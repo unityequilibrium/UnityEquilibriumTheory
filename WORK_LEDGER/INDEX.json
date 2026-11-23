@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 974,
+    "entries": 975,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 739,
+      "research": 740,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "a8ec9da68d58d66f9943c895453044a65b4733b06fdff01b49243b7b8de34786",
-      "entries": 7
+      "sha256": "b23fe509a90ca0aff7c2f31d0cd5ed03fa903e3edf9bc5337c5c0bc0e92cfe6b",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -19889,6 +19889,26 @@
       "end_line": 72,
       "title": "Wave D14: does openness compose with the layer-3 pool?",
       "entry_sha256": "f9f510ca3850b99e8b835e430c41ad0c95b75f51f0159b502e7a428df901a969",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-lean-lane-f6-energy-and-momentum-identities",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Topic 0.18 Lean lane: F6 energy and momentum identities",
+      "entry_sha256": "ca3e3050a25ca0f6028344242bb5a5c96ed00fda1ff2bc8975d8cef977056368",
       "stream": "research",
       "areas": [
         "research-core"

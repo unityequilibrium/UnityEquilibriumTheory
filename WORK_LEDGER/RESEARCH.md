@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 739. Counts describe records, not accomplishments.
+Indexed entries: 740. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Topic 0.18 Lean lane: F6 energy and momentum identities](2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Wave D14: does openness compose with the layer-3 pool?](2026/2026-11-23.md#wave-d14-does-openness-compose-with-the-layer-3-pool) (L64) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L54) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Wave D13: openness and the order a system can keep](2026/2026-11-23.md#wave-d13-openness-and-the-order-a-system-can-keep) (L43) | research-core | explicit_stream_and_area |
