@@ -100,3 +100,9 @@
 - Finding: no. Every element maps to GR + Lambda + thermodynamics; with psi = 0 all passed cards stand and only the EMG Hubble-tension mechanism is lost.
 - New numbers: accretion turns 6-42% of rest mass into light versus about 0.7% for fusion; black holes hold most cosmic entropy (~1e104 k, recalled, unverified).
 - Next: author chooses psi in the core (drop) or as an optional extension; a black-hole persistence test needs a declared meaning of survival first.
+
+## 2026-11-20 — Stress test 11: is the readable fraction r of energy-written bits constant?
+- Question: the reversed-Landauer rule (bits = Q/(kT ln 2)) is the second law; UET would be distinct only if the readable fraction r of those bits followed a law. Note: `Doc/STRESS_11_READABLE_FRACTION.md`.
+- Finding: r spans more than 75 orders of magnitude: E. coli genome copy 7e-6 to 6e-5 (5.7e9 to 5e10 ATP per division), memory 7e-10 to 1e-8 (0.3 to 3.97 pJ/bit), CMB ~3e-82; r also depends on the reader.
+- Consequence: trace feedback cannot take w = r E/(kT ln 2) with a universal r; w must come from each system's mechanism.
+- Open (L0): selected recorders (genomes, memory) have far higher r than incidental records; "selection for persistence raises r" is a testable hypothesis.

@@ -312,6 +312,30 @@
       "license": "numerical values digitised from a published figure; no figure or text redistributed",
       "visibility": "PUBLIC",
       "note": "Digitised after Test Card T027 was approved and committed (cbc52d6ac). Only the wild-type series is used; the engineered single-HXT strains in the same figure are not."
+    },
+    {
+      "data_id": "LYNCH_MARINOV2015_CELL_COSTS",
+      "description": "Per-species cell volume, growth cost per division and maintenance cost (10^9 ATP) from Lynch and Marinov (2015) SI table; genome sizes for overlapping species taken from Sung et al. (2012) Table S8",
+      "source": "M. Lynch, G. K. Marinov, PNAS 112, 15690-15695 (2015), Supporting Information",
+      "doi_or_url": "https://doi.org/10.1073/pnas.1514974112 ; https://www.pnas.org/doi/suppl/10.1073/pnas.1514974112/suppl_file/pnas.1514974112.sapp.pdf",
+      "retrieved": "2026-11-20",
+      "path": "docs/data/external/biology/readable_fraction/lynch_marinov2015_costs.csv",
+      "sha256": "9bb46fe6f1f273076a74f6efdd7d176e22bd45887a69cfa1f661e6c368d57cde",
+      "license": "numerical facts transcribed from journal supplements; no text or figures redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after Test Card T028 was approved and committed (9e9c36843)."
+    },
+    {
+      "data_id": "SUNG2012_NE_TABLE",
+      "description": "Effective population sizes and genome sizes of unicellular species from Sung et al. (2012) Table S8",
+      "source": "W. Sung, M. S. Ackerman, S. F. Miller, T. G. Doak, M. Lynch, PNAS 109, 18488-18492 (2012), Supplemental Table S8",
+      "doi_or_url": "https://doi.org/10.1073/pnas.1216223109 ; http://www.pnas.org/lookup/suppl/doi:10.1073/pnas.1216223109/-/DCSupplemental/st08.doc",
+      "retrieved": "2026-11-20",
+      "path": "docs/data/external/biology/readable_fraction/sung2012_ne.csv",
+      "sha256": "858d379d0c42b20abfa096e26c588f022bc980b5a034031d87c20e4a878c5062",
+      "license": "numerical facts transcribed from journal supplements; no text or figures redistributed",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after Test Card T028 was approved and committed (9e9c36843)."
     }
   ]
 }
