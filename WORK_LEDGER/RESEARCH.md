@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 731. Counts describe records, not accomplishments.
+Indexed entries: 732. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Stir-fry correction and wave D11: one free-falling mass alone](2026/2026-11-23.md#stir-fry-correction-and-wave-d11-one-free-falling-mass-alone) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [T028: merger mass loss against GWTC](2026/2026-11-23.md#t028-merger-mass-loss-against-gwtc) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-22 | [Wave D10: the record of a vanished mass in the real universe](2026/2026-11-22.md#wave-d10-the-record-of-a-vanished-mass-in-the-real-universe) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-22 | [Wave D9: one mass disappears completely in Lambda-only space](2026/2026-11-22.md#wave-d9-one-mass-disappears-completely-in-lambda-only-space) (L33) | research-core | explicit_stream_and_area |

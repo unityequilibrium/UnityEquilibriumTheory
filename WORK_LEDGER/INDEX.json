@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 966,
+    "entries": 967,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 731,
+      "research": 732,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "df8a6c58cf807084a345b5e4da4e4413792e7f48f8f58de97ee943ff27a0da02",
-      "entries": 1
+      "sha256": "f4184241921aea497878bb1df0ec7a63646df9d2b55d3c8ad7fefca4977a9f90",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19726,9 +19726,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "t028-merger-mass-loss-against-gwtc",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "T028: merger mass loss against GWTC",
-      "entry_sha256": "f31a82bbcebe6326ab186cfe49be916dcf2e4ea9d6ebe2f8cc2da7e4199287b7",
+      "entry_sha256": "9418d77c4e241885a57ad8388b58d8e7a4629837d5eb645b87796557388f5d70",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#stir-fry-correction-and-wave-d11-one-free-falling-mass-alone",
+      "source": "2026/2026-11-23.md",
+      "anchor": "stir-fry-correction-and-wave-d11-one-free-falling-mass-alone",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Stir-fry correction and wave D11: one free-falling mass alone",
+      "entry_sha256": "886d3470d231a72e344d8aeb33a7e6d92fef6f64e4f16732e9ec8784be2b317a",
       "stream": "research",
       "areas": [
         "research-core"

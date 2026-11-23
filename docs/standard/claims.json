@@ -554,6 +554,15 @@
       "note": "Thomson optical depth and nonlinear gravitational-wave memory; not UET-distinct. Real-universe counterpart of C_L3_EVAPORATION_RECORD. In the author's 2026-11-22 split (AI interpretation): the first kind of space keeps nothing; the geometry made by mass-energy keeps asymmetric events; matter keeps early records as heat."
     },
     {
+      "claim_id": "C_L3_LONE_BODY_GR",
+      "statement": "In GR without Lambda, one body alone in free fall radiates and dissipates exactly nothing (conserved mass and momentum, quadrupole quadratic in time; a spherical pulsation also emits nothing), so a lone free fall uses no energy; any loss needs something else: the body's own non-spherical internal motion (32 G (I1 - I2)^2 omega^6 / (5 c^5) for a spinning body), a second body (P = (32/5) G^4 M^2 m^2 (M + m)/(c^5 d^5), falling as m^2; Sun with Earth 196 W) or Lambda's horizon.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D11_LONE_BODY_GR"
+      ],
+      "note": "Birkhoff's theorem, equivalence principle and the quadrupole formula; not UET-distinct. Addresses a lone body in a static, already-existing empty space, without the measured Lambda or horizon bath of D7 and D9. AI interpretation: the author's step from space to behaviour to burning has no GR equation for a single body; a UET law for it would differ from GR here. Limit (author, 2026-11-23): Schwarzschild is static; it puts the body in an empty space that already exists forever, so D11 answers a frozen picture, not the author's universe that begins and is dynamic; that needs a dynamic GR solution (AI candidates: a closed dust Friedmann universe, the Oppenheimer-Snyder interior, Lemaitre-Tolman-Bondi)."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",
