@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 720. Counts describe records, not accomplishments.
+Indexed entries: 721. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D3: radiative contacts break zero-sum sharing along a chain](2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D2: dividing entropy along a chain](2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D1: the divider temperature sets resource and persistence](2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence) (L13) | research-core | explicit_stream_and_area |
