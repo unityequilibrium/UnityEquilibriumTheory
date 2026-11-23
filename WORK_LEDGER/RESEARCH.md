@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 732. Counts describe records, not accomplishments.
+Indexed entries: 733. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-22 | [Wave D10: the record of a vanished mass in the real universe](2026/2026-11-22.md#wave-d10-the-record-of-a-vanished-mass-in-the-real-universe) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-22 | [Wave D9: one mass disappears completely in Lambda-only space](2026/2026-11-22.md#wave-d9-one-mass-disappears-completely-in-lambda-only-space) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-22 | [Wave D8 (model B): falling together - frying and mixing](2026/2026-11-22.md#wave-d8-model-b-falling-together---frying-and-mixing) (L23) | research-core | explicit_stream_and_area |

@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 85,
-    "entries": 967,
+    "sources": 86,
+    "entries": 968,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 732,
+      "research": 733,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -442,6 +442,11 @@
       "path": "2026/2026-11-22.md",
       "sha256": "eecfb9c7dacc94ec30027a293706db54412024f383d4f7a134d79b8b455ce550",
       "entries": 5
+    },
+    {
+      "path": "2026/2026-11-23.md",
+      "sha256": "57f5d83cd6410087aad83f603445107742e54994a79d2155bebadb6fdfcbe6c8",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19754,6 +19759,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-audit-and-a-lean-4-formal-proof-lane",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Topic 0.18: audit and a Lean 4 formal-proof lane",
+      "entry_sha256": "eb9038717bc18c2d4645e64435b8c5bad947b5d32b6893763f6aca0a25cfe2b9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
       "legacy_root_path": false
     },
     {
