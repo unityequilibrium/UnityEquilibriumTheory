@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D13_OPENNESS_ORDER",
+  "claim_id": "C_L3_OPENNESS_ORDER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "numeric_maximum_vs_closed_form",
+      "value": "< 1e-10 relative, 20/20 random systems; efficiency 1 - sqrt(T_c/T_h) at the optimum",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "perfect_coupling_limit_order",
+      "value": "1.0 in 1/g_c (K -> g_h)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "small_dT_limit_order",
+      "value": "1.0 in dT (P_max -> K dT^2/(4 T))",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "second_law",
+      "value": "entropy made >= 0 at every core temperature; largest for pure conduction (10/10)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "conduction_only_work",
+      "value": 0.0,
+      "uncertainty": null,
+      "unit": "W"
+    },
+    {
+      "name": "openness_threshold",
+      "value": "K* = T_c sigma_d/(sqrt T_h - sqrt T_c)^2; persists above, not below (10/10)",
+      "uncertainty": null,
+      "unit": "W/K"
+    },
+    {
+      "name": "efficiency_at_max_power_sun_earth",
+      "value": "0.79 (5772 K to 255 K, illustrative)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_openness_order.py",
+    "commit": "8c0c3628f"
+  },
+  "artifacts": [],
+  "date": "2026-11-23",
+  "note": "The author's 2026-11-23 statement (AUTHOR_PROPOSITION §4): the more open, the more order, but order comes from the systems' own behaviour, not from space, and space is a limit. Simplest standard model chosen by the AI: Newtonian heat contacts g_h, g_c and a reversible core (steady-flow endoreversible engine). Nearest theory: Novikov 1957, Curzon and Ahlborn 1975, dissipative structures (Prigogine), maximum power principle (Lotka 1922). Not UET-distinct."
+}

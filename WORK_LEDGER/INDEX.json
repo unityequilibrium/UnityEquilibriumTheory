@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 971,
+    "entries": 972,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 736,
+      "research": 737,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "7f648b24ea73c4be58df163aa3db3ff20dabdf7bc5e4b84685e8844c1a858657",
-      "entries": 4
+      "sha256": "694d56656ddfdf562a34a3502b8d5691ce645636c15f8074a8d3b98ce7960ba6",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -19826,12 +19826,32 @@
       "source": "2026/2026-11-23.md",
       "anchor": "merger-card-renumbered-t028-to-t029",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Merger card renumbered T028 to T029",
-      "entry_sha256": "e83273a5aaef1b4ae44197f48eca8c24fe9284796bd6298d8b1576636cc47871",
+      "entry_sha256": "f11b80399ec6ca18cefb255159b700c3ef4ca0e2e343e7c858058a60f32276d0",
       "stream": "research",
       "areas": [
         "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d13-openness-and-the-order-a-system-can-keep",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d13-openness-and-the-order-a-system-can-keep",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave D13: openness and the order a system can keep",
+      "entry_sha256": "930577bed66c05a09e61d795b8d1336f0cf5b7ee28f9f335cd4d6385dd5ff2be",
+      "stream": "research",
+      "areas": [
+        "research-core"
       ],
       "related_streams": [
         "research"
