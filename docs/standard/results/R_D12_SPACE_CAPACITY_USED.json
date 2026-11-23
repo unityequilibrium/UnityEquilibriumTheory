@@ -1,0 +1,64 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D12_SPACE_CAPACITY_USED",
+  "claim_id": "C_L3_SPACE_CAPACITY_USED",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "entropy_density_integrals_vs_closed_form",
+      "value": "< 1e-10 relative, 20/20 temperatures (bosons and fermions)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "event_horizon_two_routes",
+      "value": "< 1e-10 relative at a = 0.5, 1, 2, 5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "event_horizon_limit_order",
+      "value": "3.0 in a (R_eh H_L/c -> 1)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "event_horizon_radius_today",
+      "value": "16.7 Gly (0.95 of c/H_L = 17.5 Gly)",
+      "uncertainty": null,
+      "unit": "Gly"
+    },
+    {
+      "name": "capacity_S_dS",
+      "value": "3.3e122",
+      "uncertainty": null,
+      "unit": "k"
+    },
+    {
+      "name": "radiation_fraction",
+      "value": "1.4e-34 (4.8e88 k)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "smbh_fraction_illustrative",
+      "value": "8e-21 (2.6e102 k; AI inputs 4.4e5 M_sun/Mpc^3 in 1e8 M_sun holes)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "matter_ceiling_one_hole",
+      "value": "0.157 = (Om/OL)^2 (R_eh H_L/c)^6",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_space_capacity_used.py",
+    "commit": "05f338cca"
+  },
+  "artifacts": [],
+  "date": "2026-11-23",
+  "note": "The author's 2026-11-23 statement that space is open in the static view but not 100 % open in the dynamic view (AUTHOR_PROPOSITION §4). Capacity = Gibbons-Hawking entropy of the final de Sitter horizon; region = inside today's cosmic event horizon. The black-hole mass density and typical mass are illustrative AI inputs from memory, not a data comparison (the fraction scales with the typical mass). Nearest theory: Gibbons-Hawking entropy, generalised second law, cosmic entropy budget (Frampton et al. 2008; Egan and Lineweaver 2010). Not UET-distinct."
+}

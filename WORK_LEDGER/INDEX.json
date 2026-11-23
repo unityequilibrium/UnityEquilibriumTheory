@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 967,
+    "entries": 968,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 732,
+      "research": 733,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "f4184241921aea497878bb1df0ec7a63646df9d2b55d3c8ad7fefca4977a9f90",
-      "entries": 2
+      "sha256": "2c5a14e3791226a2b9ac8609ae3e0656d8136683f3e952a4bf8804ca6c516b78",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19746,9 +19746,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "stir-fry-correction-and-wave-d11-one-free-falling-mass-alone",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Stir-fry correction and wave D11: one free-falling mass alone",
-      "entry_sha256": "886d3470d231a72e344d8aeb33a7e6d92fef6f64e4f16732e9ec8784be2b317a",
+      "entry_sha256": "0c0200a64fbc224953e59e62e83642f6ecbffdf29fdcd49965fc6212b6aa503a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d12-how-full-is-space",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d12-how-full-is-space",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Wave D12: how full is space?",
+      "entry_sha256": "4045b4e4ac674c8a464f82f07b1c1997d1cd3b9d4951881f61e6624da26da047",
       "stream": "research",
       "areas": [
         "research-core"
