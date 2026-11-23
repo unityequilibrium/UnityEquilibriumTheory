@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 84,
-    "entries": 953,
+    "entries": 954,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 718,
+      "research": 719,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -435,8 +435,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "4a64b7bcab535d656b53d48c756ae4b16bbce050d599df31570cc6ec4567e71d",
-      "entries": 2
+      "sha256": "ac987882a5dd1a56966c4842c31c24e4dd08fa311432dc8b96b9e4f2f1bb704c",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19456,9 +19456,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-lean-lane-f6-energy-and-momentum-identities",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Topic 0.18 Lean lane: F6 energy and momentum identities",
-      "entry_sha256": "ca3e3050a25ca0f6028344242bb5a5c96ed00fda1ff2bc8975d8cef977056368",
+      "entry_sha256": "5c1124e794405e6e1bc0f72b72c17db698ff28e35481156562041aa252b349d4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-lean-lane-f7-boost-charge",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Topic 0.18 Lean lane: F7 boost charge",
+      "entry_sha256": "e31748b59aeb53e04bcfa4bf3f1a698ca8d7d0b17e9a077fc12b7a6fccc2a76a",
       "stream": "research",
       "areas": [
         "research-core"
