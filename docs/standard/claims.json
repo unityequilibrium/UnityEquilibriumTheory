@@ -531,9 +531,9 @@
       "level": "L2_CONFRONTED",
       "evidence": [
         "R_D8_FALLING_TOGETHER",
-        "R_T028_MERGER_MASS_LOSS_GWTC"
+        "R_T029_MERGER_MASS_LOSS_GWTC"
       ],
-      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference). T028 (2026-11-23): 225 of 227 nearly non-spinning GWTC mergers radiate between 0.0572 eta and the area cap; median 3.13 times the inspiral loss; weak test, GR-derived final masses; the frying branch is not tested. L2 approved by the author. Correction 2026-11-23: the author's stir-fry analogy was an illustration (in SR being pushed and collapsing together look alike), not a model; D8 and T028 are AI readings of it, not the author's hypothesis (AUTHOR_PROPOSITION §4)."
+      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference). T029 (2026-11-23, numbered T028 when run): 225 of 227 nearly non-spinning GWTC mergers radiate between 0.0572 eta and the area cap; median 3.13 times the inspiral loss; weak test, GR-derived final masses; the frying branch is not tested. L2 approved by the author. Correction 2026-11-23: the author's stir-fry analogy was an illustration (in SR being pushed and collapsing together look alike), not a model; D8 and T029 are AI readings of it, not the author's hypothesis (AUTHOR_PROPOSITION §4)."
     },
     {
       "claim_id": "C_L3_EVAPORATION_RECORD",
