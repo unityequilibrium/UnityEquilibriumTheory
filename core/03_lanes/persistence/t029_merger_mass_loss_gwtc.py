@@ -1,4 +1,4 @@
-"""Test Card T028 method: mass radiated in black-hole mergers against the GWTC catalogue.
+"""Test Card T029 method: mass radiated in black-hole mergers against the GWTC catalogue.
 
 Claim (C_L3_FALLING_TOGETHER, wave D8): a non-spinning black-hole merger radiates at least the inspiral loss to the
 innermost stable orbit, L = eta (1 - sqrt(8/9)) = 0.0572 eta of the total mass (eta = m1 m2/(m1 + m2)^2), and at most
@@ -16,7 +16,8 @@ Radiated fraction from medians: f = 1 - M_f/(m1 + m2).
 Reported but not deciding: median of f/L (how much of the loss the inspiral alone accounts for), the same count for
 all spins, and which side each outside event falls on.
 
-Do not run against the comparison data before Test Card T028 is APPROVED.
+Do not run against the comparison data before Test Card T029 is APPROVED.
+(Numbered T028 when approved and run; renumbered on 2026-11-23 because T028 was taken on main.)
 """
 
 from __future__ import annotations
@@ -30,8 +31,8 @@ from statistics import median
 ROOT = Path(__file__).resolve().parents[3]
 DATA = ROOT / "docs/data/external/gravity/gwtc/gwosc_gwtc_events_2026-11-22.json"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
-CARD = ROOT / "docs/standard/tests/T028.json"
-OUT = ROOT / "core/07_artifacts/t028/t028_merger_mass_loss_gwtc.json"
+CARD = ROOT / "docs/standard/tests/T029.json"
+OUT = ROOT / "core/07_artifacts/t029/t029_merger_mass_loss_gwtc.json"
 DATA_ID = "GWOSC_GWTC_EVENTS_2026_11_22"
 M2_MIN = 3.0
 CHI_MAX = 0.2
@@ -71,7 +72,7 @@ def outcome(c: dict) -> str:
 
 def compute() -> dict:
     if json.loads(CARD.read_text(encoding="utf-8")).get("status") != "APPROVED":
-        raise RuntimeError("Test Card T028 is not APPROVED")
+        raise RuntimeError("Test Card T029 is not APPROVED")
     entry = next(e for e in json.loads(MANIFEST.read_text(encoding="utf-8"))["entries"] if e["data_id"] == DATA_ID)
     if hashlib.sha256(DATA.read_bytes()).hexdigest() != entry["sha256"]:
         raise RuntimeError(f"{DATA_ID}: sha256 mismatch")
@@ -82,7 +83,7 @@ def compute() -> dict:
     bbh = [e for e in complete if e["mass_2_source"] >= M2_MIN]
     sample = [e for e in bbh if abs(e["chi_eff"]) < CHI_MAX]
     main, all_spins = classify(sample, ft), classify(bbh, ft)
-    return {"test_id": "T028", "outcome": outcome(main), "data_sha256": entry["sha256"],
+    return {"test_id": "T029", "outcome": outcome(main), "data_sha256": entry["sha256"],
             "n_complete": len(complete), "n_bbh": len(bbh), "sample": main, "all_spins_descriptive": all_spins}
 
 
@@ -91,7 +92,7 @@ def main() -> None:
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(res, indent=2) + "\n", encoding="utf-8", newline="\n")
     s = res["sample"]
-    print(f"T028 {res['outcome']}: {s['inside']}/{s['n']} inside [L, U] ({s['share_inside']:.3f}); "
+    print(f"T029 {res['outcome']}: {s['inside']}/{s['n']} inside [L, U] ({s['share_inside']:.3f}); "
           f"below {len(s['below'])}, above {len(s['above'])}; median f/L = {s['median_f_over_L']:.2f}")
 
 

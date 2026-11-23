@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-23 — Merger card renumbered T028 → T029
+ทำ: เปลี่ยนเลขการ์ดมวลที่หายของหลุมดำชนกันจาก T028 เป็น T029 เพราะ PR #78 ใช้เลข T028 บน main ไปก่อน (การ์ด สคริปต์ contract และผล)
+ผล: เนื้อหา เกณฑ์ การอนุมัติ ข้อมูล และตัวเลขไม่เปลี่ยน; ประวัติเดิม draft f0f681c87, อนุมัติ 9725e1e1d, รัน 7473e3007; บันทึกเดิมที่เขียนว่า T028 สำหรับการ์ดนี้หมายถึง T029
+ระดับ: ไม่เปลี่ยน (C_L3_FALLING_TOGETHER ยังเป็น L2)
+ถัดไป: merge กับ main
+commit: this commit
+
 ## 2026-11-23 — How full is space? (D12)
 ทำ: `uet_space_capacity_used.py` (entropy ที่อยู่ในขอบฟ้าเหตุการณ์วันนี้ เทียบกับเพดาน Gibbons-Hawking) + physics test 37 ตัว (entropy ของรังสีจากปริพันธ์ Bose/Fermi เทียบสูตรปิด, รัศมีขอบฟ้าสองทาง, limit ลำดับ 3, identity หลุมดำ/ขอบฟ้า)
 ผล: เพดาน 3.3e122 k; ขอบฟ้าเหตุการณ์วันนี้ 16.7 Gly; รังสีใช้ไป 1.4e-34, หลุมดำยักษ์ราว 8e-21 (ค่าตัวอย่างที่ AI เลือก); ถ้าสสารทั้งหมดในขอบฟ้ายุบเป็นหลุมเดียวก็ใช้ได้แค่ 0.157 = (Om/OL)^2 (R_eh H_L/c)^6

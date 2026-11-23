@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 968,
+    "entries": 969,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 733,
+      "research": 734,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "2c5a14e3791226a2b9ac8609ae3e0656d8136683f3e952a4bf8804ca6c516b78",
-      "entries": 3
+      "sha256": "7f648b24ea73c4be58df163aa3db3ff20dabdf7bc5e4b84685e8844c1a858657",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -19766,12 +19766,32 @@
       "source": "2026/2026-11-23.md",
       "anchor": "wave-d12-how-full-is-space",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Wave D12: how full is space?",
-      "entry_sha256": "4045b4e4ac674c8a464f82f07b1c1997d1cd3b9d4951881f61e6624da26da047",
+      "entry_sha256": "95046e94dbd2ccaeb1ac8be50e085874af045dbf1d0f6ba1746b30edda522818",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#merger-card-renumbered-t028-to-t029",
+      "source": "2026/2026-11-23.md",
+      "anchor": "merger-card-renumbered-t028-to-t029",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Merger card renumbered T028 to T029",
+      "entry_sha256": "e83273a5aaef1b4ae44197f48eca8c24fe9284796bd6298d8b1576636cc47871",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"

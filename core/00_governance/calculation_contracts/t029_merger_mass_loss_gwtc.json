@@ -1,11 +1,11 @@
 {
   "schema_version": "uet-calculation-contract-v1",
-  "contract_id": "CORE_T028_MERGER_MASS_LOSS_GWTC_V1",
+  "contract_id": "CORE_T029_MERGER_MASS_LOSS_GWTC_V1",
   "profile": "PHYSICAL_COMPARISON",
   "review": {
     "status": "INCOMPLETE",
-    "reviewer": "agent:claude-t028",
-    "rationale": "Methodological contract for Test Card T028. The evidence decision lives in docs/standard. Catalogue medians are taken as published.",
+    "reviewer": "agent:claude-t029",
+    "rationale": "Methodological contract for Test Card T029. The evidence decision lives in docs/standard. Catalogue medians are taken as published.",
     "coverage_evidence": [
       "docs/data/external/gravity/gwtc/gwosc_gwtc_events_2026-11-22.json"
     ]
@@ -170,9 +170,9 @@
       "id": "processing",
       "group": "processing",
       "disposition": "MODELED",
-      "reason": "Sample cuts and outcome rule fixed in T028.",
+      "reason": "Sample cuts and outcome rule fixed in T029.",
       "evidence": [
-        "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py"
+        "core/03_lanes/persistence/t029_merger_mass_loss_gwtc.py"
       ]
     },
     {
@@ -181,7 +181,7 @@
       "disposition": "MODELED",
       "reason": "Closed-form bounds; ISCO from a one-dimensional minimisation.",
       "evidence": [
-        "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py",
+        "core/03_lanes/persistence/t029_merger_mass_loss_gwtc.py",
         "core/03_lanes/persistence/uet_falling_together.py"
       ]
     }
@@ -194,7 +194,7 @@
     "systematic": "Final masses from GR numerical-relativity fits, not independent of GR.",
     "omissions": "No posterior samples.",
     "dependence": "Events independent; shared analysis pipeline.",
-    "acceptance": "Outcome categories fixed in Test Card T028.",
+    "acceptance": "Outcome categories fixed in Test Card T029.",
     "omission_limit": null
   },
   "identities": [
@@ -213,21 +213,21 @@
       "availability": "REQUIRED"
     },
     {
-      "path": "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py",
+      "path": "core/03_lanes/persistence/t029_merger_mass_loss_gwtc.py",
       "kind": "working_file",
       "role": "code",
-      "sha256": "b0233f22fdb9b65601d61b8f0cab0d44c887a955a4a6d4bfe13f0fe0afcccb15",
+      "sha256": "4eb9b5da68e1bda8312bc3ceda9de109ca5833b7537e2187f6eda57b5108e11c",
       "availability": "REQUIRED"
     }
   ],
   "entrypoints": [
-    "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py"
+    "core/03_lanes/persistence/t029_merger_mass_loss_gwtc.py"
   ],
   "evidence": [
-    "core/03_lanes/persistence/t028_merger_mass_loss_gwtc.py",
+    "core/03_lanes/persistence/t029_merger_mass_loss_gwtc.py",
     "core/03_lanes/persistence/uet_falling_together.py",
     "docs/data/external/gravity/gwtc/gwosc_gwtc_events_2026-11-22.json"
   ],
-  "claim_boundary": "Methodological coverage of the T028 comparison only; the evidence level is set in docs/standard. Not UET-distinct.",
-  "next_action": "Await author approval of T028, then run once."
+  "claim_boundary": "Methodological coverage of the T029 comparison only; the evidence level is set in docs/standard. Not UET-distinct.",
+  "next_action": "Run once under this card (numbered T028 at the time); renumbered T029 on 2026-11-23."
 }
