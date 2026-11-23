@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-47_L1_·_19_L2_·_4_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-47_L1_·_20_L2_·_4_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -146,7 +146,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (70 claims: 47 at L1, 19 at L2, 4 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (71 claims: 47 at L1, 20 at L2, 4 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -176,6 +176,7 @@ Test criteria were committed and approved before each comparison. None of these 
 | T025 | T023 repeated with a phylogenetic correction (PGLS on a TimeTree tree; biology) | L2 INCONCLUSIVE: central values unchanged (d_bat = 0.24) but intervals about 10 times wider (d_bat −0.31 to 0.78); with phylogeny counted the data cannot decide |
 | T026 | Yeast on sucrose: shared glucose at the cooperative-growth switch (trace feedback; biology) | L2 INCONCLUSIVE: predicted switch at or below 1.6 mM glucose; the comparison figure reports a 23 h mean growth rate that never reaches the threshold (card-design error); two exponential rates lean against the prediction |
 | T027 | Yeast switch glucose with exponential growth rates (retest of T026; biology) | FAILED: wild-type yeast reaches its fast rate near 16 mM glucose, ten times above the trace-model prediction of 1.6 mM; the well-mixed trace reading does not explain yeast cooperative growth |
+| T028 | Does selection raise the readable fraction of energy-written bits? (genome bits per division energy against Ne; biology) | L2 INCONCLUSIVE: only five species carry both energy cost and Ne (eight needed); slope +0.83 with 95% CI -0.62 to 2.29 |
 | T022 | Michelson–Morley and Kennedy–Thorndike tests (relativity) | L2 PASS: two-way light speed independent of orientation (z = 0.50) and of lab velocity (z = 1.30); with T013 the whole Lorentz transformation is tested |
 | T016 | MICROSCOPE equivalence-principle test (gravity) | L2 PASS: bounds the portal to g_c < 1.16×10⁻¹⁵ eV, 11.6 times tighter than T005 |
 | T017 | Yeast cell cycles (biology) | L2 PASS: doubling time from single-cell cycle times matches the counted one in all five conditions |
