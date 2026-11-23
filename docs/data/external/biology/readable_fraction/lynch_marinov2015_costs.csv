@@ -1,0 +1,37 @@
+# Lynch and Marinov (2015) PNAS 112, 15690; Supporting Information table of cell energetics (pnas.1514974112.sapp.pdf):
+# V = cell volume (um^3), G = growth cost per cell (10^9 ATP), M = maintenance (10^9 ATP per cell per hour), T = temperature (C).
+# Transcribed 2026-11-20 after Test Card T028 was approved (commit 9e9c36843). Rows without G omitted. Footnote letters dropped.
+# genome_bp: filled from Sung et al. (2012) Table S8 where the same species is listed there; blank otherwise (not used).
+species,volume_um3,cg_1e9_atp,maintenance_1e9_atp_per_h,temperature_c,genome_bp
+Aerobacter aerogenes,3.30,52.37,1.767,35,
+Bacillus subtilis,1.54,92.51,1.159,37,4286000
+Clostridium cellulolyticum,0.16,5.04,0.090,34,
+Clostridium butyricum,2.80,51.17,0.192,35,
+Clostridium thermocellum,0.47,41.54,0.132,60,
+Clostridium thermosaccharolyticum,1.10,22.88,0.132,60,
+Enterococcus faecalis,0.76,15.42,0.127,37,
+Escherichia coli,1.00,15.65,0.213,34,4652000
+Lactobacillus casei,1.40,15.05,0.163,37,
+Lactococcus lactis,0.90,38.53,0.482,37,
+Leuconostoc mesenteroides,0.79,54.18,1.075,27,
+Mycoplasma genitalium,0.004,0.07,0.004,37,
+Mycoplasma pneumoniae,0.050,0.92,0.046,37,
+Paracoccus denitrificans,0.79,14.04,0.248,35,
+Pseudomonas putida,0.78,17.90,0.421,30,
+Streptomyces coelicolor,1.31,15.21,0.414,28,
+Streptococcus pyogenes,0.75,20.47,0.130,37,
+Zymomonas mobilis,4.90,136.65,,30,
+Candida utilis,88.00,2745.12,15.052,30,
+Chlamydomonas reinhardtii,122.00,4551.12,84.205,25,121000000
+Chlorella vulgaris,216.00,7163.80,145.135,37,
+Leishmania donovani,41.00,246.82,,28,
+Saccharomyces cerevisiae,69.00,2468.20,18.785,30,12050000
+Schizosaccharomyces pombe,106.00,2347.80,8.700,30,13800000
+Tetrahymena thermophila,5712.00,60200.00,,,
+Zygosaccharomyces bailii,66.10,842.80,8.036,28,
+Mouse LS cell,550.00,9632.0,5374.674,37,
+Mouse Ehrlich ascite tumor cell,2485.00,11438.00,,37,
+Erythroid J2E cell,2500.00,3612.00,,37,
+MCF-7 human breast cancer cell,4000.00,2694.55,,37,
+Mouse hybridoma cell CRL-1606,900.00,6700.26,,37,
+Marchantia polymorpha,2250.00,236500.0,,25,
