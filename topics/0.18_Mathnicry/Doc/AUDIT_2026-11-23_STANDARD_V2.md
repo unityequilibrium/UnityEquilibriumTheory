@@ -68,3 +68,9 @@ All five candidates F1 to F5 are proved in Lean 4 (v4.36.0) with Mathlib, in `Co
 not needed (d2 > 0 in F2; three positivity conditions in F5's invasion criterion), so those theorems hold more
 generally than the numerical tests assumed. F4 is proved in flat 1+1 dimensions; the curved-metric
 (diffeomorphism) identity remains a numerical check.
+
+F6 (added the same day, `UetFormal/EnergyMomentum.lean`): the flat-space energy and momentum identities
+d_t H + d_x S = sum_A d_t chi_A E_A and d_t P + d_x Pi = sum_A d_x chi_A E_A, off shell, for any number of fields
+with their own kinetic coefficients and speeds and any differentiable potential, the portal included. It assumes
+equal mixed partials (C^2 fields). The boost charge (which needs equal speeds), angular momentum in 2+1 and the
+curved-metric Bianchi identity remain numerical checks.
