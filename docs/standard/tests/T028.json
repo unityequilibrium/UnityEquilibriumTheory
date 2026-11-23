@@ -1,0 +1,49 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T028",
+  "status": "APPROVED",
+  "claim_id": "C_L3_SELECTION_RAISES_R",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "AI hypothesis from stress test 11 (topics/0.23/Doc/STRESS_11_READABLE_FRACTION.md), built on the author's layer 3 (what persists is what manages resources well) and reversed Landauer rule: selection for persistence raises the readable fraction r of the bits a system writes with its energy. For cells, r = (genome bits copied per division) / (energy spent per division / (kT ln 2)). Selection acts more efficiently in species with larger effective population size Ne, so r must rise with Ne once cell size is held fixed.",
+  "observable": {
+    "quantity": "partial slope b_Ne in log10 r = a + b_V log10 V + b_Ne log10 Ne across species present in both sources",
+    "unit": "dimensionless (log-log slope)",
+    "domain": "species with both a growth cost C_G and cell volume V in Lynch and Marinov (2015, PNAS 112, 15690) and an effective population size Ne in Sung et al. (2012, PNAS 109, 18488, PMC3494944); genome size from the same tables where given"
+  },
+  "test_kind": "BLIND_PREDICTION",
+  "data_sources": [
+    {
+      "data_id": "LYNCH_MARINOV2015_CELL_COSTS",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "SUNG2012_NE_TABLE",
+      "role": "HOLDOUT",
+      "exposure": "UNSEEN"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t028_selection_readable_fraction.py",
+    "description": "r per species = 2 x genome size (bp) / (C_G x 50 kJ/mol / N_A / (k T ln 2)) at T = 303 K for every species (growth temperatures not used, AI choice). Ordinary least squares of log10 r on log10 V and log10 Ne; 95 percent t-interval of b_Ne. Species are matched by binomial name; a species missing from either table is dropped and listed. Reported, not deciding: the simple slope of log10 r on log10 Ne without V, and the same fit with Lynch and Marinov's total cost (growth plus maintenance) if both are tabulated."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "energy per ATP 50 kJ/mol and T = 303 K for all species (both cancel in the slope b_Ne)",
+    "cell volume V as tabulated by Lynch and Marinov; no other covariate",
+    "if fewer than 8 species are in both tables the outcome is INCONCLUSIVE",
+    "no phylogenetic correction (AI choice; stated as a limitation, as in T023)"
+  ],
+  "pass_criterion": "PASS if the 95 percent interval of b_Ne lies wholly above 0.",
+  "fail_criterion": "FAILED if the 95 percent interval of b_Ne lies wholly at or below 0. INCONCLUSIVE otherwise, or under the 8-species rule.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the drafter has read Lynch and Marinov's scaling summaries (growth cost about 27 V^0.97 and maintenance about 0.39 V^0.88, in 10^9 ATP) but not their species table; Sung et al.'s Ne values have not been opened. Confounds stated before the run: Ne falls with cell size across life, and cost rises almost in proportion to V, so the simple slope of r on Ne is expected to be positive whatever selection does; the deciding quantity is therefore the partial slope with V held fixed. Small samples are likely (the overlap of the two tables may be under 15 species). Nearest theory: Lynch's drift-barrier hypothesis, which already predicts that larger Ne lets selection trim costs; a PASS would show UET's layer 3 is consistent with it, not a UET-distinct result. A UET-distinct version would need a predicted size for b_Ne, which no current equation gives. All criteria are AI choices for the author to accept or change before approval. Approved by the author in chat on 2026-11-20 as drafted (\"Approve and run\"); this approval is committed before the Ne table is opened.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-20",
+    "role": "AUTHOR"
+  }
+}
