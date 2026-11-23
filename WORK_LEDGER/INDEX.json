@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 968,
+    "entries": 969,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 733,
+      "research": 734,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "57f5d83cd6410087aad83f603445107742e54994a79d2155bebadb6fdfcbe6c8",
-      "entries": 1
+      "sha256": "4a64b7bcab535d656b53d48c756ae4b16bbce050d599df31570cc6ec4567e71d",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19766,9 +19766,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-audit-and-a-lean-4-formal-proof-lane",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Topic 0.18: audit and a Lean 4 formal-proof lane",
-      "entry_sha256": "eb9038717bc18c2d4645e64435b8c5bad947b5d32b6893763f6aca0a25cfe2b9",
+      "entry_sha256": "47e64303d901ad79f4fe8eae936df51450c3f78dab66419ddba9e621a200a8be",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-lean-lane-f6-energy-and-momentum-identities",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Topic 0.18 Lean lane: F6 energy and momentum identities",
+      "entry_sha256": "ca3e3050a25ca0f6028344242bb5a5c96ed00fda1ff2bc8975d8cef977056368",
       "stream": "research",
       "areas": [
         "research-core"
