@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 973,
+    "entries": 974,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 738,
+      "research": 739,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "4e56713a5fec00bdd1cc83247cc84c0987e49e725b8bfc337c7563329634cc06",
-      "entries": 6
+      "sha256": "a8ec9da68d58d66f9943c895453044a65b4733b06fdff01b49243b7b8de34786",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -19866,9 +19866,29 @@
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-audit-and-a-lean-4-formal-proof-lane",
       "start_line": 54,
-      "end_line": 62,
+      "end_line": 63,
       "title": "Topic 0.18: audit and a Lean 4 formal-proof lane",
-      "entry_sha256": "eb9038717bc18c2d4645e64435b8c5bad947b5d32b6893763f6aca0a25cfe2b9",
+      "entry_sha256": "47e64303d901ad79f4fe8eae936df51450c3f78dab66419ddba9e621a200a8be",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d14-does-openness-compose-with-the-layer-3-pool",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d14-does-openness-compose-with-the-layer-3-pool",
+      "start_line": 64,
+      "end_line": 72,
+      "title": "Wave D14: does openness compose with the layer-3 pool?",
+      "entry_sha256": "f9f510ca3850b99e8b835e430c41ad0c95b75f51f0159b502e7a428df901a969",
       "stream": "research",
       "areas": [
         "research-core"
