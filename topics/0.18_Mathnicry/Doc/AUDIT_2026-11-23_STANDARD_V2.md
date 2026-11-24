@@ -79,3 +79,10 @@ F7 (`UetFormal/Boost.lean`): the boost identity d_t K^t + d_x K^x = x sum d_t ch
 + sum_A Z_A (c - c_A) d_t chi_A d_x chi_A, off shell. On shell the boost charge is conserved when every field has
 speed c, and for one field with c_A /= c it is not conserved wherever Z, d_t chi and d_x chi are nonzero. This
 proves the numerical finding that the boost charge needs one light cone.
+
+F8 (2026-11-24, `UetFormal/Rotation.lean`): the rotation (angular momentum) identity in flat 2+1,
+d_t J^t + d_x J^x + d_y J^y = x sum d_y chi E - y sum d_x chi E + sum_A Z_A (b_A - a_A) d_x chi_A d_y chi_A, off shell,
+where a_A and b_A are the squared speeds of field A along x and y. On shell the rotation charge is conserved when
+every field is isotropic in space (a_A = b_A); unlike the boost (F7), different fields may have different speeds.
+One anisotropic field breaks it wherever Z d_x chi d_y chi is nonzero. The curved-metric Bianchi identity remains
+a numerical check.
