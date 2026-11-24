@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D15_LAYER3_AFTER_CLOSING",
+  "claim_id": "C_L3_AFTER_CLOSING",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "stock_identity",
+      "value": "< 1e-12 relative, 20/20 random states; < 1e-4 by finite differences along trajectories",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "supplied_steady_state",
+      "value": "R -> 1/(a tau) and n -> n* to < 1e-8 relative, 20/20; compound growth a S/delta - 1/tau to < 1e-6, 10/10",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "late_specific_rate",
+      "value": "k -> min(delta, 1/tau) to < 1e-6 and below k(0), 20/20; monotone fall for delta > 1/tau, rise-then-fall for delta < 1/tau",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "one_part_limit_order",
+      "value": "1.0 in (S - S*)/S* over a fixed window; not uniform in time",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustration_delta_tau_4",
+      "value": "k(0) tau = 1.6 -> 1.0; late/early mean ratio 0.976 (AI-chosen numbers, not fitted)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_layer3_after_closing.py",
+    "commit": "96e57b042"
+  },
+  "artifacts": [],
+  "date": "2026-11-24",
+  "note": "Derivation from the existing layer-3 model with one structure type; no new parameter. Derived after T030 (fasting man) was seen, so T030 cannot test it; a test needs other data and its own Test Card. Nearest theory: consumer-resource (chemostat) models, two-compartment depletion. Not UET-distinct."
+}

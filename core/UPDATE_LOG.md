@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-24 — What does the full layer 3 do after the supply stops? (D15)
+ทำ: `uet_layer3_after_closing.py` (สมการชั้น 3 เต็ม: บ่อ R กับโครงสร้าง n ที่กินบ่อ) + physics tests 73 ข้อ + FORMAL contract
+ผล: ของสำรองรวมลดด้วย δR + Fn/τ อัตราต่อหน่วยเริ่มระหว่าง δ กับ 1/τ แล้วไปจบที่ตัวที่ช้ากว่า จึงช้าลงในที่สุดเสมอ; ตอนมีอาหาร โครงสร้างโตแบบทบต้นแล้วกดบ่อลงถึง R* = 1/(aτ) ไม่ใช่ศูนย์
+ระดับ: C_L3_AFTER_CLOSING → L1_CONSISTENT (consumer-resource ไม่ใช่ผลเฉพาะของ UET); สร้างหลังเห็น T030 จึงใช้ T030 ทดสอบไม่ได้
+ถัดไป: Test Card กับข้อมูลชุดอื่นที่แยกบ่อกับโครงสร้างได้ (เช่นการอดอาหารที่วัดไขมันและโปรตีนแยกกัน)
+commit: 96e57b042 (code) + this commit (records)
+
 ## 2026-11-23 — Does a fasting body leak like a closed pool? (T030)
 ทำ: Test Card T030 (ผู้เขียนอนุมัติ 9527c2180 ก่อนอ่านตาราง) กับน้ำหนักตัวรายวันของ L. ที่อดอาหาร 31 วัน (Benedict 1915, public domain) วันที่ 6–31
 ผล: อัตราลดต่อน้ำหนักตัวลดลงจาก 0.682 เป็น 0.629 %/วัน, r = 0.922 ต่ำกว่าเส้นตก 0.934 (exponential ต้องอยู่ใน 1 ± 0.022, เผาผลาญคงที่ต้องได้ 1.089)

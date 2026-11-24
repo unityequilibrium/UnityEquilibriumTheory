@@ -591,6 +591,15 @@
       "note": "Synthesis check, not UET-distinct (chemostat and pump-threshold models, endoreversible thermodynamics). Openness is the enclosing system that L3-2 left open; the author's 'a closed system dies' (AUTHOR_PROPOSITION §4, 2026-11-23) is the survival time after closing, set by the pool leak delta. eta and e are free parameters. FAILED in T030 (2026-11-23): a fasting man's specific mass-loss rate fell (r = 0.922, fail line 0.934), so a closed pool leaking with constant delta does not describe a living reserve after supply stops. The algebra relating thresholds and lifetimes to delta stands as mathematics; a new branch with a varying delta would be a new L0 hypothesis with its own card."
     },
     {
+      "claim_id": "C_L3_AFTER_CLOSING",
+      "statement": "In the full layer-3 model with one structure type (dn/dt = (a R - 1/tau) n, dR/dt = S - delta R - a F R n), the stock M = R + F n loses dM/dt = -(delta R + F n/tau). While supplied, few structures grow by compounding at a S/delta - 1/tau and pull the pool down to R* = 1/(a tau), not to zero. After the supply stops, the specific loss rate starts between delta and 1/tau and ends at min(delta, 1/tau), so the loss slows in the end; it falls monotonically when delta > 1/tau and first rises when delta < 1/tau. A constant rate (D14) needs a one-part store.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D15_LAYER3_AFTER_CLOSING"
+      ],
+      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",
