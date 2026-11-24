@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 976,
+    "entries": 977,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 741,
+      "research": 742,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-23.md",
-      "sha256": "af374ea2a4778ddcd5ffbdb42e084c50fff9b38db06277be895a2629c455d777",
-      "entries": 9
+      "sha256": "595bad4fd6b71d799e287b341f551e005314c422be750aa426e7d948776a12a2",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -19929,6 +19929,26 @@
       "end_line": 91,
       "title": "Test Card T030: fasting body mass, exponential leak or not",
       "entry_sha256": "6b8b76abfb76c7a26e5b1172acd7651cb6ea3d7e608a267546b7b4abe3f8779a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge",
+      "source": "2026/2026-11-23.md",
+      "anchor": "topic-018-lean-lane-f7-boost-charge",
+      "start_line": 92,
+      "end_line": 100,
+      "title": "Topic 0.18 Lean lane: F7 boost charge",
+      "entry_sha256": "e31748b59aeb53e04bcfa4bf3f1a698ca8d7d0b17e9a077fc12b7a6fccc2a76a",
       "stream": "research",
       "areas": [
         "research-core"
