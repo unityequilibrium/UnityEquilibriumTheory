@@ -28,10 +28,10 @@ def _header_theorems(path: Path) -> list[str]:
     return re.findall(r"\*\s+`([A-Za-z_][A-Za-z0-9_']*)`", match.group(1))
 
 
-def test_lane_has_the_eight_modules():
+def test_lane_has_the_nine_modules():
     assert [p.stem for p in MODULES] == [
-        "Boost", "EnergyMomentum", "Isotropic", "NoetherO2", "Rotation", "Selection", "Threshold",
-        "TraceFeedback"]
+        "Boost", "EnergyMomentum", "Isotropic", "NoetherO2", "Reparam", "Rotation", "Selection",
+        "Threshold", "TraceFeedback"]
 
 
 def test_root_imports_every_module():

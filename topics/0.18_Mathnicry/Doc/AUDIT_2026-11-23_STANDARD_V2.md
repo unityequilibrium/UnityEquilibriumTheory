@@ -86,3 +86,11 @@ where a_A and b_A are the squared speeds of field A along x and y. On shell the 
 every field is isotropic in space (a_A = b_A); unlike the boost (F7), different fields may have different speeds.
 One anisotropic field breaks it wherever Z d_x chi d_y chi is nonzero. The curved-metric Bianchi identity remains
 a numerical check.
+
+F9 (2026-11-24, `UetFormal/Reparam.lean`): the homogeneous case of Noether's second theorem. For any minisuperspace
+Lagrangian L = Q(q, qdot)/N - N U(q) + beta W(q), with Q quadratic in the velocities through a symmetric G(q),
+N d/dt E_N = sum_k E_k qdot_k - beta dW/dt holds off shell. With beta = 0 (reparametrization invariant) the energy
+constraint E_N = 0 is preserved once the other equations hold; with beta /= 0 it is not (the negative control of
+the numerical test). Writing the Bianchi I parent action in this form needs an integration by parts of the curvature
+term; that step is an AI derivation checked by the sympy test, not by Lean. The full curved-metric identity
+nabla^mu E_mu_nu = -kappa (E_phi d_nu phi + sum_A E_A d_nu chi_A) remains a numerical check.
