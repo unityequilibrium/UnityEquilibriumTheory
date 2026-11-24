@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 981,
+    "entries": 982,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 746,
+      "research": 747,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "fcc37f4af7d4e3019a2da7143976026eae86e4c5362fb62ec9372719c301de44",
-      "entries": 4
+      "sha256": "e3f74c0aa742d002e9aef4fe9cabc3ed05a8688b11116bc8b2e8542c4b7d8f2a",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -20034,6 +20034,26 @@
       "end_line": 41,
       "title": "Author intent: free fall as the path that does not resist",
       "entry_sha256": "f637f827fa210b99bed34f21f799ab449e1604af230169be522c97f39be73984",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21",
+      "source": "2026/2026-11-24.md",
+      "anchor": "topic-018-lean-lane-f8-rotation-charge-in-21",
+      "start_line": 44,
+      "end_line": 52,
+      "title": "Topic 0.18 Lean lane: F8 rotation charge in 2+1",
+      "entry_sha256": "1f3e86c165c14bb8e717d85d5c1f7263a3fc1993757a91f9bd0462bb521ebf4f",
       "stream": "research",
       "areas": [
         "research-core"
