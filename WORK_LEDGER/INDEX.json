@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 984,
+    "entries": 985,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 749,
+      "research": 750,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "27a8ef30c80c21a7109311fea3b16cb964f9b0dd7b0be63a48a9b2b27aacd15e",
-      "entries": 7
+      "sha256": "ab4a2d9d4821560c2499d15ba0435d211d8751e3e604c5e4953799f4a2695e0f",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -20091,9 +20091,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "author-intent-resisting-means-trying-to-stand-still-in-a-moving-universe",
       "start_line": 64,
-      "end_line": 72,
+      "end_line": 73,
       "title": "Author intent: \"resisting\" means trying to stand still in a moving universe",
-      "entry_sha256": "3a4037586f7811e2d44717c3ac32eab52587fce06a996ce690682fb1dda484da",
+      "entry_sha256": "21094fbfa8f4ec8d4507b8b6d20bb1422b5eba71fb77b7ce42872e743906db0d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d19-the-price-of-resisting-free-fall",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d19-the-price-of-resisting-free-fall",
+      "start_line": 74,
+      "end_line": 82,
+      "title": "Wave D19: the price of resisting free fall",
+      "entry_sha256": "e7485821d54dcd4b9f9b14d3f6dd0ab885b7b3f63e8092e8c48e7a77eba96b34",
       "stream": "research",
       "areas": [
         "research-core"

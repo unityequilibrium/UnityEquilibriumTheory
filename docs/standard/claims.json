@@ -627,6 +627,15 @@
       "note": "AI reading of the author's 'orbit = motion that does not resist; forced motion is temporary' (AUTHOR_PROPOSITION 4, 2026-11-24): resistance = flexing rate F, settled = F = 0 at the energy minimum. Example chosen by the AI. Testable on measured binaries (circularization cutoff period against age) with a Test Card. Nearest theory: Darwin-Hut-Zahn tidal evolution. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_PRICE_OF_RESISTING",
+      "statement": "Being pushed off free fall (proper acceleration != 0) has a price. In speed: a vertically climbing rocket loses v_e (1 - 1/Rm)/lam0 to gravity, and holding still above the ground costs g per second with jet power m g v_e/2, while standing on a floor costs no power. In proper time: between the same two events the free-falling clock ages most; a clock thrown up and caught after T gains g^2 T^3/(24 c^2) over the clock held still.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D19_PRICE_OF_RESISTING"
+      ],
+      "note": "AI reading of the author's 'resisting = trying to stand still in a moving universe' (AUTHOR_PROPOSITION 4, 2026-11-24). Standing still relative to a nearby mass is resisting; at rest relative to the cosmic matter (CMB frame) is free fall. Nearest theory: Tsiolkovsky, maximal aging, gravitational time dilation. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

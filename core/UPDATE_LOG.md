@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-24 — What does resisting free fall cost? (D19)
+ทำ: `uet_price_of_resisting.py` (ความเร็วที่จรวดเสียให้แรงโน้มถ่วง, ค่าลอยค้าง, เวลาของตัวเองที่เสียเมื่อไม่ตกอิสระ) + physics tests 46 ข้อ + FORMAL contract
+ผล: จรวดตัวอย่างขึ้นตรงเสียความเร็ว 32% ให้แรงโน้มถ่วง; ลอยค้าง 1 นาทีเสีย 588 m/s, ลอยค้าง 1 ตันใช้ 14.7 MW; ยืนบนพื้นฝืนได้โดยไม่ใช้พลังงาน; นาฬิกาที่ตกอิสระเดินนานที่สุดเสมอ (โยนขึ้น 2 วินาทีได้เพิ่ม 3.6e-16 s = g^2 T^3/24c^2)
+ระดับ: C_L3_PRICE_OF_RESISTING → L1_CONSISTENT (Tsiolkovsky, maximal aging ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: ผู้เขียนตัดสินว่าการตีความ "ฝืน = ความเร่งที่วัดเองได้ไม่เป็นศูนย์" ตรงกับที่ตั้งใจหรือไม่
+commit: 4c9b127bc (code) + this commit (records)
+
 ## 2026-11-24 — Does an orbit settle by itself where motion stops resisting? (D18)
 ทำ: `uet_tidal_settling.py` (อัตราที่วัตถุถูกบีบ F = <|dT/dt|^2> ในกรอบของตัวเอง + พลังงานต่ำสุดที่โมเมนตัมเชิงมุมคงที่) + physics tests 32 ข้อ + FORMAL contract
 ผล: วงกลม F = 18 (GM/a^3)^2 (n - omega)^2; ล็อกแล้วแต่วงรี F = 63 (GM/a^3)^2 n^2 e^2; F = 0 เฉพาะวงกลมและหมุนตรงจังหวะ ซึ่งเป็นพลังงานต่ำสุดเมื่อ mu a^2 > 3 I (Darwin-Hut); โลกยังถูกดวงจันทร์บีบ 1.25e4 ดวงจันทร์ถูกโลกบีบ 0.2 (หน่วยธรรมชาติ)
