@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 979,
+    "entries": 980,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 744,
+      "research": 745,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "25765e056a5bd7891de0a6ce9538d13b2dca7fe46bd4d7522835ddf568dc7149",
-      "entries": 2
+      "sha256": "a7a325d166c9b11d8d140e93efeca3f51c1e8318c5020b1853614da75d2c46a0",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19991,9 +19991,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "wave-d16-how-free-is-a-freely-falling-frame",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Wave D16: how free is a freely falling frame?",
-      "entry_sha256": "eecd2416e0bd03c8b3d28dd64de272b3db3c3d18b84b10c6549bca4266cde363",
+      "entry_sha256": "500dc6338f7c716a6be9164157a82a8e382706b41f2a91bba8db76663883afe0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d17-frame-dragging-inside-a-rotating-shell-mach",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d17-frame-dragging-inside-a-rotating-shell-mach",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Wave D17: frame dragging inside a rotating shell (Mach)",
+      "entry_sha256": "7a9cc16f5d9bc024ce5073e857a95451d703ebcf62898df977ed3c8c6cb2841f",
       "stream": "research",
       "areas": [
         "research-core"

@@ -609,6 +609,15 @@
       "note": "Bounds the one-body universe (D11, C_L3_LONE_BODY_GR): it is a fair model of a piece of ours only where epsilon << 1, and it is a different solution of GR, not a limit of our universe. Whether inertia itself comes from the other matter (Mach's principle) is open and not addressed. Round literature inputs chosen by the AI. Nearest theory: Hill sphere, tidal radius, Lambda zero-gravity radius. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_MACH_FRAME_DRAGGING",
+      "statement": "Inside a slowly rotating spherical shell of mass M and radius R, local inertial frames (what 'not rotating' means for a gyroscope) turn with omega_in/Omega = 4 alpha (2 - alpha)/((1 + alpha)(3 - alpha)), M/R = 2 alpha/(1 + alpha)^2 (G = c = 1): (4/3) G M/(R c^2) in the weak field, rising to full co-rotation as the shell nears its own horizon. Matter inside the Hubble radius has G M/(R c^2) = Omega_m/2 = 0.16 (0.5 for the full critical density), the order-one value at which matter can set the inertial frame.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D17_MACH_FRAME_DRAGGING"
+      ],
+      "note": "Derived numerically through a shell with tangential stress and checked against Brill and Cohen (1966). The cosmological reading is an AI illustration: a flat-space shell is not an expanding universe, and GR is not Machian in general (Minkowski space has inertia without matter). With D16: a falling frame is free of other bodies neither in its tides nor in its rotation, only nearly so for compact bodies. Nearest theory: Lense-Thirring, Brill-Cohen. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

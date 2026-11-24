@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D17_MACH_FRAME_DRAGGING",
+  "claim_id": "C_L3_MACH_FRAME_DRAGGING",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "numeric_shell_vs_brill_cohen",
+      "value": "< 1e-7 relative after zero-thickness extrapolation, 10/10 random compactness 0.005-0.42",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thickness_convergence_order",
+      "value": "1.0",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "weak_field_limit",
+      "value": "omega_in/Omega -> (4/3) G M/(R c^2), deviation order 1",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "horizon_limit",
+      "value": "omega_in/Omega -> 1 as R -> 2 G M/c^2, deviation order 1 in 1 - 2GM/(Rc^2)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "hubble_sphere_illustration",
+      "value": "G M/(R c^2) = 0.1575 (matter, Omega_m = 0.315), shell drag 0.226; 0.5 for the full critical density (horizon value)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_mach_frame_dragging.py",
+    "commit": "1e490a211"
+  },
+  "artifacts": [],
+  "date": "2026-11-24",
+  "note": "Answers the rotation part of the author's question (2026-11-24) whether a falling frame is free of the other bodies. The Hubble-sphere numbers treat cosmic matter as a flat-space shell, an AI illustration, not a cosmological model. Nearest theory: Lense-Thirring, Brill-Cohen, Hartle slow rotation. Not UET-distinct."
+}

@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-24 — Does surrounding matter decide what "not rotating" means? (D17, Mach)
+ทำ: `uet_mach_frame_dragging.py` (สมการหมุนช้าของ GR ผ่านเปลือกมวลที่หมุน คำนวณเชิงตัวเลขแล้วเทียบกับ Brill-Cohen 1966) + physics tests 15 ข้อ + FORMAL contract
+ผล: กรอบเฉื่อยข้างในหมุนตาม (4/3) GM/(Rc^2) ของการหมุนเปลือก และหมุนตามเต็มที่เมื่อเปลือกใกล้ขอบฟ้าของตัวเอง; สสารในรัศมีฮับเบิลมี GM/(Rc^2) = 0.16 (ทั้งความหนาแน่นวิกฤต 0.5) ซึ่งอยู่ในระดับที่สสารกำหนดกรอบได้ (ภาพประกอบ ไม่ใช่แบบจำลองจักรวาล)
+ระดับ: C_L3_MACH_FRAME_DRAGGING → L1_CONSISTENT (Lense-Thirring/Brill-Cohen ไม่ใช่ผลเฉพาะของ UET); กับ D16: การตกอิสระไม่อิสระจากวัตถุอื่นทั้งแรงไทดัลและการหมุน
+ถัดไป: แบบจำลองจักรวาลที่ขยายตัวจริง (การรบกวนของ FLRW) ถ้าผู้เขียนต้องการตอบหลักของมัคให้ครบ
+commit: 1e490a211 (code) + this commit (records)
+
 ## 2026-11-24 — Is free fall really free of the other bodies? (D16)
 ทำ: `uet_free_fall_freedom.py` (แรงไทดัลที่การตกอิสระลบไม่ได้ เทียบกับแรงยึดตัวเองของระบบ G m/r^3) + physics tests 34 ข้อ + FORMAL contract
 ผล: โลก 1e-7 (ดวงจันทร์); ระบบสุริยะถึงเนปจูน 5e-12; ทางช้างเผือก 0.1 (แอนโดรเมดา); กลุ่มกาแล็กซีท้องถิ่น 0.24 (Λ, รัศมีแรงโน้มถ่วงศูนย์ 1.6 Mpc); กระจุกเวอร์โก 6e-3 (Λ)
