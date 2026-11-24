@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 982,
+    "entries": 983,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 747,
+      "research": 748,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "e3f74c0aa742d002e9aef4fe9cabc3ed05a8688b11116bc8b2e8542c4b7d8f2a",
-      "entries": 5
+      "sha256": "6b91d257b1f52cf976e2539b0cb8da641c0701c2531aa8ffbea6268a78296948",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -20051,9 +20051,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "topic-018-lean-lane-f8-rotation-charge-in-21",
       "start_line": 44,
-      "end_line": 52,
+      "end_line": 53,
       "title": "Topic 0.18 Lean lane: F8 rotation charge in 2+1",
-      "entry_sha256": "1f3e86c165c14bb8e717d85d5c1f7263a3fc1993757a91f9bd0462bb521ebf4f",
+      "entry_sha256": "3d3afc4c7c7573027380cbfa423dd035c1a701c6fd7cddb62bac1ee7611ed419",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d18-tidal-settling-as-motion-that-stops-resisting",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d18-tidal-settling-as-motion-that-stops-resisting",
+      "start_line": 54,
+      "end_line": 62,
+      "title": "Wave D18: tidal settling as motion that stops resisting",
+      "entry_sha256": "d7c7521485ecdf39cb38b072ffb140b12c6364011e874daca54953004a002db7",
       "stream": "research",
       "areas": [
         "research-core"

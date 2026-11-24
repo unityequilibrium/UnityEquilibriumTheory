@@ -618,6 +618,15 @@
       "note": "Derived numerically through a shell with tangential stress and checked against Brill and Cohen (1966). The cosmological reading is an AI illustration: a flat-space shell is not an expanding universe, and GR is not Machian in general (Minkowski space has inertia without matter). With D16: a falling frame is free of other bodies neither in its tides nor in its rotation, only nearly so for compact bodies. Nearest theory: Lense-Thirring, Brill-Cohen. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_TIDAL_SETTLING",
+      "statement": "A spinning body on an orbit is flexed by the tidal field at the rate F = <|dT/dt|^2> seen in its own frame: 18 (GM/a^3)^2 (n - omega)^2 on a circular orbit and 63 (GM/a^3)^2 n^2 e^2 for a locked body on a slightly eccentric orbit. F vanishes only for a circular, synchronous orbit, and at fixed angular momentum that state is the lowest energy the system can reach exactly when mu a^2 > 3 I (Darwin-Hut); otherwise no settled state exists. Dissipating through F, the system reaches the motion that no longer flexes it without being steered.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D18_TIDAL_SETTLING"
+      ],
+      "note": "AI reading of the author's 'orbit = motion that does not resist; forced motion is temporary' (AUTHOR_PROPOSITION 4, 2026-11-24): resistance = flexing rate F, settled = F = 0 at the energy minimum. Example chosen by the AI. Testable on measured binaries (circularization cutoff period against age) with a Test Card. Nearest theory: Darwin-Hut-Zahn tidal evolution. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

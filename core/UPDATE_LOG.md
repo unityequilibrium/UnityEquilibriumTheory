@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-24 — Does an orbit settle by itself where motion stops resisting? (D18)
+ทำ: `uet_tidal_settling.py` (อัตราที่วัตถุถูกบีบ F = <|dT/dt|^2> ในกรอบของตัวเอง + พลังงานต่ำสุดที่โมเมนตัมเชิงมุมคงที่) + physics tests 32 ข้อ + FORMAL contract
+ผล: วงกลม F = 18 (GM/a^3)^2 (n - omega)^2; ล็อกแล้วแต่วงรี F = 63 (GM/a^3)^2 n^2 e^2; F = 0 เฉพาะวงกลมและหมุนตรงจังหวะ ซึ่งเป็นพลังงานต่ำสุดเมื่อ mu a^2 > 3 I (Darwin-Hut); โลกยังถูกดวงจันทร์บีบ 1.25e4 ดวงจันทร์ถูกโลกบีบ 0.2 (หน่วยธรรมชาติ)
+ระดับ: C_L3_TIDAL_SETTLING → L1_CONSISTENT (ทฤษฎีไทดัลของ Darwin-Hut-Zahn ไม่ใช่ผลเฉพาะของ UET); ตีความ "ความฝืน" = F โดย AI
+ถัดไป: Test Card กับดาวคู่จริง (คาบที่วงโคจรกลายเป็นวงกลมเทียบกับอายุกระจุกดาว) ต้องให้ผู้เขียนอนุมัติก่อนเปิดข้อมูล
+commit: d37baad7f (code) + this commit (records)
+
 ## 2026-11-24 — Does surrounding matter decide what "not rotating" means? (D17, Mach)
 ทำ: `uet_mach_frame_dragging.py` (สมการหมุนช้าของ GR ผ่านเปลือกมวลที่หมุน คำนวณเชิงตัวเลขแล้วเทียบกับ Brill-Cohen 1966) + physics tests 15 ข้อ + FORMAL contract
 ผล: กรอบเฉื่อยข้างในหมุนตาม (4/3) GM/(Rc^2) ของการหมุนเปลือก และหมุนตามเต็มที่เมื่อเปลือกใกล้ขอบฟ้าของตัวเอง; สสารในรัศมีฮับเบิลมี GM/(Rc^2) = 0.16 (ทั้งความหนาแน่นวิกฤต 0.5) ซึ่งอยู่ในระดับที่สสารกำหนดกรอบได้ (ภาพประกอบ ไม่ใช่แบบจำลองจักรวาล)
