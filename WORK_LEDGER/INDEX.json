@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 985,
+    "entries": 986,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 750,
+      "research": 751,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "ab4a2d9d4821560c2499d15ba0435d211d8751e3e604c5e4953799f4a2695e0f",
-      "entries": 8
+      "sha256": "93f33346a7ccddb6f22b5face7d5aafd5fb5c79f1218b4654b8979ce5586ce8f",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -20114,6 +20114,26 @@
       "end_line": 82,
       "title": "Wave D19: the price of resisting free fall",
       "entry_sha256": "e7485821d54dcd4b9f9b14d3f6dd0ab885b7b3f63e8092e8c48e7a77eba96b34",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
+      "source": "2026/2026-11-24.md",
+      "anchor": "topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)",
+      "entry_sha256": "6cce06c53e461e958fa6fada7845fb44ed146c108627d4e3e2f4d44f60a95502",
       "stream": "research",
       "areas": [
         "research-core"
