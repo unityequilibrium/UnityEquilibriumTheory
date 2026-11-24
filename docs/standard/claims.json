@@ -600,6 +600,15 @@
       "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct."
     },
     {
+      "claim_id": "C_L3_FREE_FALL_FREEDOM",
+      "statement": "A freely falling frame removes the uniform part of every outside pull but keeps the tidal part (point mass: eigenvalues (2,-1,-1) G M/d^3; Lambda: +H_L^2 delta_ij). Measured against a bound system's own binding rate G m/r^3, the leftover is about 1e-7 for the Earth (Moon), 5e-12 for the solar system out to Neptune, 0.1 for the Milky Way halo (Andromeda), 0.24 for the Local Group (Lambda; zero-gravity radius 1.6 Mpc) and 6e-3 for the Virgo cluster (Lambda). No frame is free of Lambda; compact bodies are nearly free, groups of galaxies are not.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D16_FREE_FALL_FREEDOM"
+      ],
+      "note": "Bounds the one-body universe (D11, C_L3_LONE_BODY_GR): it is a fair model of a piece of ours only where epsilon << 1, and it is a different solution of GR, not a limit of our universe. Whether inertia itself comes from the other matter (Mach's principle) is open and not addressed. Round literature inputs chosen by the AI. Nearest theory: Hill sphere, tidal radius, Lambda zero-gravity radius. Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",

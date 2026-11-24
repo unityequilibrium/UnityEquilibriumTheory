@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 743. Counts describe records, not accomplishments.
+Indexed entries: 744. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-24 | [Wave D16: how free is a freely falling frame?](2026/2026-11-24.md#wave-d16-how-free-is-a-freely-falling-frame) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Wave D15: the full layer-3 equation after the supply stops](2026/2026-11-24.md#wave-d15-the-full-layer-3-equation-after-the-supply-stops) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Topic 0.18 Lean lane: F7 boost charge](2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge) (L92) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Test Card T030: fasting body mass, exponential leak or not](2026/2026-11-23.md#test-card-t030-fasting-body-mass-exponential-leak-or-not) (L83) | research-core | explicit_stream_and_area |

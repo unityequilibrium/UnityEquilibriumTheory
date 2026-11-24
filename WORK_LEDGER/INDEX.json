@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 978,
+    "entries": 979,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 743,
+      "research": 744,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "ed2d76e2fbdada9b5cf45157063a724e675a89f84d4f0fd2ab1f84efef4799c4",
-      "entries": 1
+      "sha256": "25765e056a5bd7891de0a6ce9538d13b2dca7fe46bd4d7522835ddf568dc7149",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19971,9 +19971,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "wave-d15-the-full-layer-3-equation-after-the-supply-stops",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Wave D15: the full layer-3 equation after the supply stops",
-      "entry_sha256": "db1d0aef8cd5a5120374c1119c5db66e5e908edc9be2cdbdc09724bfa0842494",
+      "entry_sha256": "14dab2c9fbae6d755d1a648d6e1d96077a1903cbc7944b79abd4bfd843c262b8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d16-how-free-is-a-freely-falling-frame",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d16-how-free-is-a-freely-falling-frame",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Wave D16: how free is a freely falling frame?",
+      "entry_sha256": "eecd2416e0bd03c8b3d28dd64de272b3db3c3d18b84b10c6549bca4266cde363",
       "stream": "research",
       "areas": [
         "research-core"

@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-24 — Is free fall really free of the other bodies? (D16)
+ทำ: `uet_free_fall_freedom.py` (แรงไทดัลที่การตกอิสระลบไม่ได้ เทียบกับแรงยึดตัวเองของระบบ G m/r^3) + physics tests 34 ข้อ + FORMAL contract
+ผล: โลก 1e-7 (ดวงจันทร์); ระบบสุริยะถึงเนปจูน 5e-12; ทางช้างเผือก 0.1 (แอนโดรเมดา); กลุ่มกาแล็กซีท้องถิ่น 0.24 (Λ, รัศมีแรงโน้มถ่วงศูนย์ 1.6 Mpc); กระจุกเวอร์โก 6e-3 (Λ)
+ระดับ: C_L3_FREE_FALL_FREEDOM → L1_CONSISTENT (Hill sphere/zero-gravity radius ไม่ใช่ผลเฉพาะของ UET); จักรวาลวัตถุเดียวใช้แทนส่วนหนึ่งของจักรวาลเราได้เฉพาะที่ epsilon << 1
+ถัดไป: หลักของมัค (ความเฉื่อยมาจากสสารอื่นหรือไม่) ยังเปิด; ถ้าผู้เขียนต้องการ ทดสอบกับการวัดมวลกลุ่มกาแล็กซีท้องถิ่นจริง (ต้องมี Test Card)
+commit: b373a10d2 (code) + this commit (records)
+
 ## 2026-11-24 — What does the full layer 3 do after the supply stops? (D15)
 ทำ: `uet_layer3_after_closing.py` (สมการชั้น 3 เต็ม: บ่อ R กับโครงสร้าง n ที่กินบ่อ) + physics tests 73 ข้อ + FORMAL contract
 ผล: ของสำรองรวมลดด้วย δR + Fn/τ อัตราต่อหน่วยเริ่มระหว่าง δ กับ 1/τ แล้วไปจบที่ตัวที่ช้ากว่า จึงช้าลงในที่สุดเสมอ; ตอนมีอาหาร โครงสร้างโตแบบทบต้นแล้วกดบ่อลงถึง R* = 1/(aτ) ไม่ใช่ศูนย์
