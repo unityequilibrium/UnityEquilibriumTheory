@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 959,
+    "entries": 960,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 724,
+      "research": 725,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "cbb3c82abd2722d712222f8396b9afced83d273501d16522ea82b5585a7789dd",
-      "entries": 1
+      "sha256": "f526a685703e8981c2ee49f0b06afb66562b57d4c714f82697f4ab4dc26aeeb3",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -19586,9 +19586,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "topic-018-lean-lane-f8-rotation-charge-in-21",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Topic 0.18 Lean lane: F8 rotation charge in 2+1",
-      "entry_sha256": "1f3e86c165c14bb8e717d85d5c1f7263a3fc1993757a91f9bd0462bb521ebf4f",
+      "entry_sha256": "3d3afc4c7c7573027380cbfa423dd035c1a701c6fd7cddb62bac1ee7611ed419",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
+      "source": "2026/2026-11-24.md",
+      "anchor": "topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)",
+      "entry_sha256": "6cce06c53e461e958fa6fada7845fb44ed146c108627d4e3e2f4d44f60a95502",
       "stream": "research",
       "areas": [
         "research-core"
