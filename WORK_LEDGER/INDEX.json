@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 86,
-    "entries": 970,
+    "sources": 87,
+    "entries": 971,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 735,
+      "research": 736,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -447,6 +447,11 @@
       "path": "2026/2026-11-23.md",
       "sha256": "ac987882a5dd1a56966c4842c31c24e4dd08fa311432dc8b96b9e4f2f1bb704c",
       "entries": 3
+    },
+    {
+      "path": "2026/2026-11-24.md",
+      "sha256": "cbb3c82abd2722d712222f8396b9afced83d273501d16522ea82b5585a7789dd",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19819,6 +19824,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21",
+      "source": "2026/2026-11-24.md",
+      "anchor": "topic-018-lean-lane-f8-rotation-charge-in-21",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Topic 0.18 Lean lane: F8 rotation charge in 2+1",
+      "entry_sha256": "1f3e86c165c14bb8e717d85d5c1f7263a3fc1993757a91f9bd0462bb521ebf4f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
       "legacy_root_path": false
     },
     {
