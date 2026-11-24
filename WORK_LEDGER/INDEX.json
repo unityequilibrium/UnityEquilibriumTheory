@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 87,
-    "entries": 980,
+    "entries": 981,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 745,
+      "research": 746,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -450,8 +450,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "a7a325d166c9b11d8d140e93efeca3f51c1e8318c5020b1853614da75d2c46a0",
-      "entries": 3
+      "sha256": "fcc37f4af7d4e3019a2da7143976026eae86e4c5362fb62ec9372719c301de44",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20011,9 +20011,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "wave-d17-frame-dragging-inside-a-rotating-shell-mach",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Wave D17: frame dragging inside a rotating shell (Mach)",
-      "entry_sha256": "7a9cc16f5d9bc024ce5073e857a95451d703ebcf62898df977ed3c8c6cb2841f",
+      "entry_sha256": "5a6044b21953ee442dc4203f6b788f043d62552089f1b1511e2055ed134cb5ce",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#author-intent-free-fall-as-the-path-that-does-not-resist",
+      "source": "2026/2026-11-24.md",
+      "anchor": "author-intent-free-fall-as-the-path-that-does-not-resist",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Author intent: free fall as the path that does not resist",
+      "entry_sha256": "f637f827fa210b99bed34f21f799ab449e1604af230169be522c97f39be73984",
       "stream": "research",
       "areas": [
         "research-core"

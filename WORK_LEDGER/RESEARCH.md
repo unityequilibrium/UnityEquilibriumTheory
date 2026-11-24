@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 745. Counts describe records, not accomplishments.
+Indexed entries: 746. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-24 | [Author intent: free fall as the path that does not resist](2026/2026-11-24.md#author-intent-free-fall-as-the-path-that-does-not-resist) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Wave D17: frame dragging inside a rotating shell (Mach)](2026/2026-11-24.md#wave-d17-frame-dragging-inside-a-rotating-shell-mach) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Wave D16: how free is a freely falling frame?](2026/2026-11-24.md#wave-d16-how-free-is-a-freely-falling-frame) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Wave D15: the full layer-3 equation after the supply stops](2026/2026-11-24.md#wave-d15-the-full-layer-3-equation-after-the-supply-stops) (L3) | research-core | explicit_stream_and_area |
