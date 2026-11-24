@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 722. Counts describe records, not accomplishments.
+Indexed entries: 723. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-23 | [Topic 0.18 Lean lane: F7 boost charge](2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Topic 0.18 Lean lane: F6 energy and momentum identities](2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-21 | [Wave D3: radiative contacts break zero-sum sharing along a chain](2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain) (L33) | research-core | explicit_stream_and_area |
