@@ -72,5 +72,10 @@ generally than the numerical tests assumed. F4 is proved in flat 1+1 dimensions;
 F6 (added the same day, `UetFormal/EnergyMomentum.lean`): the flat-space energy and momentum identities
 d_t H + d_x S = sum_A d_t chi_A E_A and d_t P + d_x Pi = sum_A d_x chi_A E_A, off shell, for any number of fields
 with their own kinetic coefficients and speeds and any differentiable potential, the portal included. It assumes
-equal mixed partials (C^2 fields). The boost charge (which needs equal speeds), angular momentum in 2+1 and the
-curved-metric Bianchi identity remain numerical checks.
+equal mixed partials (C^2 fields). Angular momentum in 2+1 and the curved-metric Bianchi identity remain numerical
+checks.
+
+F7 (`UetFormal/Boost.lean`): the boost identity d_t K^t + d_x K^x = x sum d_t chi E + c t sum d_x chi E
++ sum_A Z_A (c - c_A) d_t chi_A d_x chi_A, off shell. On shell the boost charge is conserved when every field has
+speed c, and for one field with c_A /= c it is not conserved wherever Z, d_t chi and d_x chi are nonzero. This
+proves the numerical finding that the boost charge needs one light cone.
