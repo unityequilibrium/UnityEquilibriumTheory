@@ -1,0 +1,46 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T034",
+  "status": "APPROVED",
+  "claim_id": "C_L3_AFTER_CLOSING",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D15 (C_L3_AFTER_CLOSING): after the supply stops, the pool falls from R* = 1/(a tau) and the structures' specific loss rate 1/tau - a R(t) starts at zero and rises monotonically. With the AI mapping fat = pool and lean tissue = structures, daily protein loss during a fast must not fall; it rises as fat is used up.",
+  "observable": {
+    "quantity": "q = mean daily urinary nitrogen of the last 3 fasting-day points / mean of the first 3",
+    "unit": "dimensionless",
+    "domain": "healthy men during a 10-day water-only fast, Laurens et al. (2021) J Cachexia Sarcopenia Muscle 12, 1690 (PMC8718030), group means plotted in the protein-oxidation panel"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "LAURENS2021_FASTING_NITROGEN",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t034_fasting_protein_loss.py",
+    "description": "Daily nitrogen excretion (g N/day) on each fasting day read off the published figure after approval (group means as plotted, no correction); q from the first and last three fasting-day points. The script refuses to run unless this card is APPROVED and the data sha256 matches."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "fat = pool, lean tissue = structures, fast = supply stopped (AI mapping)",
+    "nitrogen excretion stands for protein loss",
+    "first and last three fasting-day points (AI choice)",
+    "PASS q >= 0.95, FAILED q <= 0.80 (AI choices)",
+    "fewer than 6 fasting-day points gives INCONCLUSIVE",
+    "values read from a figure: reading error about 5 percent of the axis range, disclosed"
+  ],
+  "pass_criterion": "PASS if q >= 0.95: protein loss does not fall during the fast, as D15 requires.",
+  "fail_criterion": "FAILED if q <= 0.80: protein loss falls by a fifth or more. INCONCLUSIVE otherwise or with fewer than 6 points.",
+  "drafted_by": "claude",
+  "note": "Disclosure, drafted at the author's request knowing the likely outcome: while checking whether the paper has a table, the drafter read (digits masked) the sentences 'during the 10 days of fasting, protein oxidation (total N excretion) was not constant' and 'nitrogen excretion dropped and remained stable during fasting', and knows from fasting physiology that protein loss falls early in a fast (protein sparing) and rises only when fat runs low (phase III). A FAILED is therefore expected; the card records it formally. D15 was derived after T030, so this is its first confrontation. A FAILED removes the mapping 'fat = pool, lean = structures with constant capture a and burn tau' for a fasting body, not D15's mathematics; the body's early protein sparing is an adaptation D15 does not have. The late rise in phase III, which D15 does describe, is outside this 10-day fast. Values come from a figure (no table in the paper), group means; paper licensed CC BY-NC-ND, only numbers read off are stored. Nearest theory: fasting physiology (Cahill, Le Maho). Not UET-distinct. Approved by the author in chat on 2026-11-25 as drafted (\"Approve and run\"); this approval is committed before any value is read off the figure.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-25",
+    "role": "AUTHOR"
+  }
+}
