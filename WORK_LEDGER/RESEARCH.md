@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 759. Counts describe records, not accomplishments.
+Indexed entries: 760. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [Test Card T036: survival-burn exponent on Benedict's other fasts](2026/2026-11-25.md#test-card-t036-survival-burn-exponent-on-benedicts-other-fasts) (L84) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T035: survival-burn exponent on a 382-day fast](2026/2026-11-25.md#test-card-t035-survival-burn-exponent-on-a-382-day-fast) (L74) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Wave D20: a survival process as a burn that follows the store](2026/2026-11-25.md#wave-d20-a-survival-process-as-a-burn-that-follows-the-store) (L64) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Topic 0.18: legacy overclaims labelled](2026/2026-11-25.md#topic-018-legacy-overclaims-labelled) (L54) | research-core | explicit_stream_and_area |

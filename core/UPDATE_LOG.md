@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — Does L.'s survival-burn exponent hold for other fasts? (T036, D20)
+ทำ: Test Card T036 (beta ของ D20 กับการอดอาหารอีก 10 ครั้งในตาราง 2 ของ Benedict: Succi 7 ครั้ง, Jacques, Beauté, Schenk) ผู้เขียนอนุมัติ 5763313c7 ก่อนคัดลอก; รันครั้งเดียว
+ผล: beta ร่วม = 4.3 (ช่วง 95% 3.5-5.2) สูงกว่าช่วงที่ปรับเทียบจาก L. (1.5-2.6) และเกินเส้นตก 3.3 → FAILED; ร่างกายอื่นชะลอการเผาผลาญแรงกว่า L. อีก
+ระดับ: C_L3_SURVIVAL_BURN → FAILED (beta ค่าเดียวใช้ข้ามร่างกายไม่ได้); ทิศทาง beta > 1 ยังเห็นในข้อมูล แต่ไม่ได้ทดสอบ ต้องเป็นสมมติฐานใหม่ถ้าจะอ้าง
+ถัดไป: ผู้เขียนตัดสินว่าจะตั้งสมมติฐานใหม่ "beta > 1 โดยไม่กำหนดค่า" หรือหยุดเส้นนี้
+commit: 5763313c7 (approval) + data commit + this commit (result)
+
 ## 2026-11-25 — Does the survival-burn exponent carry to a 382-day fast? (T035, D20)
 ทำ: Test Card T035 (beta ของ D20 กับการอดอาหาร 382 วัน, Stewart & Fleming 1973) ผู้เขียนอนุมัติ 6471b5280 ก่อนอ่าน; รันครั้งเดียว
 ผล: INCONCLUSIVE: บทความมีแค่น้ำหนักวันแรก 206.8 กก. กับวันสุดท้าย 81.6 กก. ไม่มีเส้นน้ำหนักตามเวลา (รูปที่ 1 เป็นภาพถ่าย ไม่ใช่กราฟ)

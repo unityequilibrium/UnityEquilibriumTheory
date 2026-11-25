@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 995,
+    "entries": 996,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 759,
+      "research": 760,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "30c45fe2635ebe55bd60f1785f6f15a09de8201435fd3a21a936a48ce2ea3c74",
-      "entries": 8
+      "sha256": "f8b0b5d5f547fdee456e5853578ca82321c63177ce8e0c5077fdff4e41553679",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -20316,9 +20316,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t035-survival-burn-exponent-on-a-382-day-fast",
       "start_line": 74,
-      "end_line": 82,
+      "end_line": 83,
       "title": "Test Card T035: survival-burn exponent on a 382-day fast",
-      "entry_sha256": "b62150c2bce1c1ae5b81329ddb428a6b4dbaae82691c3eb69eab43cc1fd6b11a",
+      "entry_sha256": "7160c4b31bf05fcb4343a6c3aa6edf6fa638e77ec52f268c112b2ee34c025c79",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t036-survival-burn-exponent-on-benedicts-other-fasts",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t036-survival-burn-exponent-on-benedicts-other-fasts",
+      "start_line": 84,
+      "end_line": 92,
+      "title": "Test Card T036: survival-burn exponent on Benedict's other fasts",
+      "entry_sha256": "5b7aaec28e488e415d53cf7a9b529a2b4071a1d4d256fef32021ec8c9e15ef7e",
       "stream": "research",
       "areas": [
         "research-core"
