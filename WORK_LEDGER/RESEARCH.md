@@ -6,11 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 752. Counts describe records, not accomplishments.
+Indexed entries: 753. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
 | 2026-11-25 | [Test Cards T031 and T032: first batch of L1 claims against data](2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L93) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L83) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Wave D19: the price of resisting free fall](2026/2026-11-24.md#wave-d19-the-price-of-resisting-free-fall) (L74) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Author intent: "resisting" means trying to stand still in a moving universe](2026/2026-11-24.md#author-intent-resisting-means-trying-to-stand-still-in-a-moving-universe) (L64) | research-core | explicit_stream_and_area |

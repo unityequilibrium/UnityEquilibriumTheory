@@ -57,7 +57,7 @@ def decide(periods, eccs) -> dict:
 
 
 def load(path: Path):
-    """VizieR TSV with columns Seq, Orb, Per, e; '#' comments, a header, a unit line and a dash line."""
+    """VizieR TSV with columns Seq, o (orbit number), Per, e; '#' comments, a header, a unit line and a dash line."""
 
     lines = [ln for ln in path.read_text(encoding="utf-8").splitlines() if ln.strip() and not ln.startswith("#")]
     head = [h.strip() for h in lines[0].split("\t")]
@@ -68,7 +68,7 @@ def load(path: Path):
             continue
         row = dict(zip(head, parts))
         try:
-            seq, orb, per, ecc = row["Seq"], int(row["Orb"]), float(row["Per"]), float(row["e"] or 0.0)
+            seq, orb, per, ecc = row["Seq"], int(row["o"]), float(row["Per"]), float(row["e"] or 0.0)
         except ValueError:
             continue
         if seq not in best or orb < best[seq][0]:
