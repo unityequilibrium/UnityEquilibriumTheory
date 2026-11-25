@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 996,
+    "entries": 997,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 760,
+      "research": 761,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "f8b0b5d5f547fdee456e5853578ca82321c63177ce8e0c5077fdff4e41553679",
-      "entries": 9
+      "sha256": "505c4501a22674c849b58a71e66a9cf2e447940b802ac873f17809dd42367cd9",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -20336,9 +20336,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t036-survival-burn-exponent-on-benedicts-other-fasts",
       "start_line": 84,
-      "end_line": 92,
+      "end_line": 93,
       "title": "Test Card T036: survival-burn exponent on Benedict's other fasts",
-      "entry_sha256": "5b7aaec28e488e415d53cf7a9b529a2b4071a1d4d256fef32021ec8c9e15ef7e",
+      "entry_sha256": "a045492b7232aa8b4b43dd0de163a50a0f28982f02307e41f15be29793ca3a4f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#literature-map-fasting-physiology-against-d14-d15-and-d20",
+      "source": "2026/2026-11-25.md",
+      "anchor": "literature-map-fasting-physiology-against-d14-d15-and-d20",
+      "start_line": 94,
+      "end_line": 102,
+      "title": "Literature map: fasting physiology against D14, D15 and D20",
+      "entry_sha256": "4bddf2b7e1ae27324bfd2dde636f556706c5874f783187b8f02e2e004c839833",
       "stream": "research",
       "areas": [
         "research-core"

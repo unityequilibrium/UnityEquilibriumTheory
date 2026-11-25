@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 760. Counts describe records, not accomplishments.
+Indexed entries: 761. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [Literature map: fasting physiology against D14, D15 and D20](2026/2026-11-25.md#literature-map-fasting-physiology-against-d14-d15-and-d20) (L94) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T036: survival-burn exponent on Benedict's other fasts](2026/2026-11-25.md#test-card-t036-survival-burn-exponent-on-benedicts-other-fasts) (L84) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T035: survival-burn exponent on a 382-day fast](2026/2026-11-25.md#test-card-t035-survival-burn-exponent-on-a-382-day-fast) (L74) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Wave D20: a survival process as a burn that follows the store](2026/2026-11-25.md#wave-d20-a-survival-process-as-a-burn-that-follows-the-store) (L64) | research-core | explicit_stream_and_area |
