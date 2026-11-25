@@ -795,3 +795,10 @@ commit: this commit
 - r ต่อสปีชีส์: E. coli 2.1e-5, B. subtilis 3.2e-6, C. reinhardtii 1.9e-6, S. pombe 4.1e-7, S. cerevisiae 3.4e-7
 - ผล: มีสปีชีส์ที่อยู่ในทั้งสองตารางแค่ 5 ชนิด (เกณฑ์ต้อง ≥ 8) และช่วง 95% ของความชัน b_Ne คือ −0.62 ถึง 2.29 (ค่ากลาง +0.83) → ยังสรุปไม่ได้
 - ทิศทางค่ากลางเป็นบวกตามที่สมมติฐานคาด แต่ข้อมูลไม่พอ และ drift-barrier ก็ทำนายทิศเดียวกัน
+
+## 2026-11-24 — What w(a) does the parent action allow on an FRW background? (wave C1)
+ทำ: derive สมการ Friedmann + สนาม ψ จาก action (ตรวจด้วย sympy minisuperspace), RK4, สแกน ξ_c, ψ_i, m/H0 พร้อมเงื่อนไข Cassini, LLR, T001
+ผล: ψ=0 คือ ΛCDM; ξ_c=0 ได้ w ≥ −1 เสมอ, wa/(1+w0) ≈ −1.45 ที่ m=H0; ξ_c>0 ยอมให้ช่วง phantom ในอดีต 1+w ถึง −0.086 (บน grid) จบที่ z≈1.5–2.2 และ w0 ≥ −1 ทุกกรณีที่ผ่านเงื่อนไข
+ระดับ: C_C1_FRW_DARK_ENERGY → L1_CONSISTENT; ไม่ UET-distinct (thawing/extended quintessence); ยังไม่เทียบ BAO/SN
+ถัดไป: ร่าง Test Card เทียบ w(a) กับข้อมูล BAO + supernova (ต้องให้ผู้เขียนอนุมัติก่อนเปิดข้อมูล)
+commit: d07d30813 (code) + this commit (records)
