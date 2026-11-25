@@ -420,6 +420,18 @@
       "license": "Numbers from the published text (facts, citation given)",
       "visibility": "PUBLIC",
       "note": "Read after approval of T035. Figure 1 is a photograph, not a weight chart; the text gives only the start and end weights in pounds, converted to kg."
+    },
+    {
+      "data_id": "BENEDICT1915_OTHER_FASTS",
+      "description": "Daily body weight (kg) of ten fasts tabulated by Benedict: Succi (Paris 1886, Milan 1886, Florence 1888, London 1890, Naples 1892, Rome 1893, Zurich 1896), Jacques 1888, Beaute 1907, Schenk 1906",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 2, pp. 72-73",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/benedict1915_other_fasts.csv",
+      "sha256": "1144ac065318bbb944ba8661aa51a814e926bb1d272744477855a356591745df",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scans after approval of T036; p. 73 columns match the printed daily losses to 0.005 kg; Succi columns read from p. 72 with losses checked by eye."
     }
   ]
 }
