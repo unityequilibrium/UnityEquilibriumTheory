@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 86,
-    "entries": 963,
+    "entries": 964,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 728,
+      "research": 729,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -445,8 +445,8 @@
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "f526a685703e8981c2ee49f0b06afb66562b57d4c714f82697f4ab4dc26aeeb3",
-      "entries": 2
+      "sha256": "e7b09d1a7ff8c7d016e13521ee57141dd3f8c0009ed26ddbfd5767823cdb38e1",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -19666,9 +19666,29 @@
       "source": "2026/2026-11-24.md",
       "anchor": "topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)",
-      "entry_sha256": "6cce06c53e461e958fa6fada7845fb44ed146c108627d4e3e2f4d44f60a95502",
+      "entry_sha256": "4f69e40270eaf7929640fde4fd114af6a547a056c421a608793b20524e0687f2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa",
+      "source": "2026/2026-11-24.md",
+      "anchor": "core-wave-c1-frw-background-and-dark-energy-wa",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Core wave C1: FRW background and dark-energy w(a)",
+      "entry_sha256": "d0de9dec3937f1eb79c531efc44d2a746f919c54a53dc49c14ded6bc784edc72",
       "stream": "research",
       "areas": [
         "research-core"

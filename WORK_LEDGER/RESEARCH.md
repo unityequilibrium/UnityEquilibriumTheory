@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 728. Counts describe records, not accomplishments.
+Indexed entries: 729. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Topic 0.18 Lean lane: F8 rotation charge in 2+1](2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-23 | [Topic 0.18 Lean lane: F7 boost charge](2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge) (L23) | research-core | explicit_stream_and_area |
