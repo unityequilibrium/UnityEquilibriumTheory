@@ -360,6 +360,30 @@
       "license": "Public domain (published 1915)",
       "visibility": "PUBLIC",
       "note": "Transcribed by hand from the page scan; the archive.org OCR misreads day 1 (69.60) and day 12 (63.56), corrected to the scan (59.60, 53.56). Every weight equals the previous weight minus the loss printed beside it (checked to 0.005 kg)."
+    },
+    {
+      "data_id": "EVERITT2011_GPB_FRAME_DRAGGING",
+      "description": "Gravity Probe B measured frame-dragging drift rate and 1-sigma uncertainty (mas/yr), with the paper's GR prediction for reference",
+      "source": "C. W. F. Everitt et al., Phys. Rev. Lett. 106, 221101 (2011), abstract",
+      "doi_or_url": "https://arxiv.org/abs/1105.3456",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/gravity/gpb/everitt2011_frame_dragging.csv",
+      "sha256": "445842e5e695a8e4d6ee510e1cba5636bd84e87ab25d8e1ce1be17a16f4a5754",
+      "license": "Numbers transcribed from the arXiv abstract (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after approval of T031. The paper quotes -37.2 +/- 7.2 mas/yr; stored as magnitude 37.2 with the sign convention noted in the file header."
+    },
+    {
+      "data_id": "SB9_ORBITS_VIZIER",
+      "description": "SB9 spectroscopic binary orbits: system number Seq, orbit number o, period Per (d), eccentricity e; 5099 orbits",
+      "source": "D. Pourbaix et al., A&A 424, 727 (2004) and updates to 2014; CDS VizieR B/sb9/orbits",
+      "doi_or_url": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=B/sb9/orbits&-out=Seq,o,Per,e&-out.max=unlimited",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/astro/sb9/sb9_orbits.tsv",
+      "sha256": "529a22812ee32300b870a262e8ad41b092f446d48e26d7142e2d9a6531abbf3b",
+      "license": "CDS VizieR terms (https://cds.unistra.fr/vizier-org/licences_vizier.html)",
+      "visibility": "PUBLIC",
+      "note": "Raw TSV as served by the CfA VizieR mirror (the Strasbourg endpoint returned HTTP 404). Downloaded after approval of T032."
     }
   ]
 }
