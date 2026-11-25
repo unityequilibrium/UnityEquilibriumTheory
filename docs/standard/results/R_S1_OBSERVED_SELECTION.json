@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_S1_OBSERVED_SELECTION",
+  "claim_id": "C_L3_OBSERVED_SELECTION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "numeric_surveyed_volume_vs_closed_form",
+      "value": "< 1e-10 relative, 24/24 random (L, f, D = 1, 2, 3)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "dlnN_dlnP_equals_D_over_2_minus_1",
+      "value": "< 1e-10 for D = 1, 2, 3",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mc_3d_detections_slow_vs_fast_burner_P_ratio_100",
+      "value": "1962 vs 19874 (ratio 10.13; expected 10)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "mc_3d_one_over_vmax_densities",
+      "value": "0.987 and 0.01000 (true 1 and 0.01)",
+      "uncertainty": null,
+      "unit": "per unit volume"
+    },
+    {
+      "name": "mc_2d_detections_slow_vs_fast_burner",
+      "value": "2790 vs 2814 (ratio 1.009; expected 1)",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_observed_selection.py",
+    "commit": "b561eba20"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Uniform sources in a D-ball, flux-limited detection L/(4 pi r^2) >= f, Euclidean, no extinction, no redshift; seeded Poisson Monte Carlo (seeds 2026 and 7). T002 is unaffected (one distance per cluster); T008 checked on 2026-11-21: Hu, Wu and Wu (2007) correct selection effects by binning in Mbol and weight each white dwarf by 1/(V_max - V_min), and give the luminosity function in pc^-3 mag^-1, so T008 compared with a volume-corrected space density and is not affected by S1. Nearest theory: Malmquist bias (1922) and the 1/V_max estimator (Schmidt 1968). Not UET-distinct. Stress test of author item 5 and the 2026-11-17 statement that what we see is what was still alive."
+}

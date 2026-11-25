@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_S2_SEEN_BUT_GONE",
+  "claim_id": "C_L3_SEEN_BUT_GONE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "numeric_alive_fraction_vs_closed_form",
+      "value": "< 1e-10 relative, 24/24 random (lambda 0.03 to 30, D = 1, 2, 3)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "alive_fraction_at_lambda_1",
+      "value": "1/(D+1), slopes -D/(D+1) on both sides",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mc_3d_lambda_0p5_alive_fraction",
+      "value": "1298/2028 = 0.640 (closed form 0.625)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mc_3d_lambda_3_alive_fraction",
+      "value": "4210/450861 = 0.00934 (closed form 0.00926)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_s1_pair_alive_fraction",
+      "value": "slow (lambda 0.01) 0.9925; 100x faster burner (lambda 10) 2.5e-4",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_seen_but_gone.py",
+    "commit": "d6004cb7c"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Steady births, fixed lifetime tau = F/P, uniform sources in D dimensions, Euclidean static space, light delay r/c, flux limit with L = eps P, no extinction. Seeded space-time Monte Carlo (seeds 11 and 12). The lambda values of the illustrative pair are an AI choice. Nearest theory: light-travel-time / duty-cycle arguments for short-lived sources. Not UET-distinct. Left out: expansion and redshift, evolving birth rate, random lifetimes, source motion."
+}

@@ -1,0 +1,46 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T031_GPB_FRAME_DRAGGING",
+ "claim_id": "C_L3_MACH_FRAME_DRAGGING",
+ "test_card_id": "T031",
+ "level": "L2_CONFRONTED",
+ "outcome": "PASS",
+ "numbers": [
+  {
+   "name": "predicted_drift",
+   "value": "39.17",
+   "uncertainty": null,
+   "unit": "mas/yr"
+  },
+  {
+   "name": "measured_drift",
+   "value": "37.2 +/- 7.2 (Everitt et al. 2011)",
+   "uncertainty": "7.2",
+   "unit": "mas/yr"
+  },
+  {
+   "name": "z",
+   "value": "0.27 (PASS needs <= 2)",
+   "uncertainty": null,
+   "unit": "sigma"
+  },
+  {
+   "name": "paper_gr_prediction",
+   "value": "39.2 (not deciding)",
+   "uncertainty": null,
+   "unit": "mas/yr"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t031_gpb_frame_dragging.py",
+  "commit": "d64214d69"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "note": "PASS under Test Card T031 (approved 27484cf81 before the data were read). The gravitomagnetic precession averaged on GP-B's polar orbit, projected on the guide star, gives 39.17 mas/yr against the measured 37.2 +/- 7.2 mas/yr. Weak test: the measured value was known in outline (SEEN_SUMMARY), and it tests the weak-field GR term behind D17, not the shell formula and not anything UET-distinct. L2 approved by the author on 2026-11-25.",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-25",
+  "role": "AUTHOR"
+ }
+}

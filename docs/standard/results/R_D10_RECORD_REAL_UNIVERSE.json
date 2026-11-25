@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D10_RECORD_REAL_UNIVERSE",
+  "claim_id": "C_L3_RECORD_REAL_UNIVERSE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "memory_coefficient_numeric_vs_closed_form",
+      "value": "< 1e-9 relative, 20/20 random inclinations; face-on zero",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "early_time_limit_convergence_order",
+      "value": "3.0 (three grids)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thomson_optical_depth_future_from_today",
+      "value": 0.000734,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thomson_optical_depth_to_z",
+      "value": "z = 1: 0.0034; 7.7: 0.057; 20: 0.23; 100: 2.4 (fully ionised)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "electron_density_today",
+      "value": 0.22,
+      "uncertainty": null,
+      "unit": "m^-3"
+    },
+    {
+      "name": "memory_coefficient_edge_on",
+      "value": "17/96 per 4 G E/(c^4 r)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustrative_merger_memory",
+      "value": "Delta h = 2.5e-22; 5.1e-19 m in a 4 km arm",
+      "uncertainty": null,
+      "unit": "strain; m"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_record_real_universe.py",
+    "commit": "fa48abbaf"
+  },
+  "artifacts": [],
+  "date": "2026-11-22",
+  "note": "Real-universe counterpart of wave D9. Flat Lambda-CDM of wave D6 with Omega_b h^2 = 0.02237 and Y = 0.245 (Planck 2018 parameters, constants not data comparison), fully ionised gas, Thomson cross-section as an upper bound on Compton scattering. Memory from the D9 integral with the circular-binary quadrupole distribution. The merger (2 x 30 M_sun, 5 % radiated, edge-on, 400 Mpc) is an illustrative AI choice. Nearest theory: Thomson optical depth; Christodoulou 1991, Wiseman and Will 1991, Favata 2009. Not UET-distinct."
+}

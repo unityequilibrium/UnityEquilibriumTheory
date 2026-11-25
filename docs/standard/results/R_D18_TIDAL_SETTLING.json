@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D18_TIDAL_SETTLING",
+  "claim_id": "C_L3_TIDAL_SETTLING",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "circular_flex_general_path",
+      "value": "18 (GM/a^3)^2 (n - omega)^2 to < 1e-10 relative, 20/20 random systems",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "locked_ellipse_limit",
+      "value": "63 (GM/a^3)^2 n^2 e^2 (27 from the strength swing, 36 from libration), deviation order 2 in e",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "darwin_hut_minimum",
+      "value": "synchronous circular state is an energy minimum at fixed L iff mu a^2 > 3 I; 10/10 systems, two roots each, one stable",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "earth_moon_flex",
+      "value": "Earth flexed by the Moon 1.25e4, Moon flexed by Earth 0.20, in units of (G M/a^3)^2 n^2",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_tidal_settling.py",
+    "commit": "d37baad7f"
+  },
+  "artifacts": [],
+  "date": "2026-11-24",
+  "note": "Follows the author's aim (2026-11-24): orbits as motion that does not resist, forced motion as temporary. Tidal locking and circularization are the AI's choice of measured example. The flexing rate F stands for the resistance of a motion (constant-time-lag tides); this reading is an AI interpretation. Nearest theory: tidal evolution (Darwin 1879, Hut 1980/1981, Zahn 1977). Not UET-distinct."
+}

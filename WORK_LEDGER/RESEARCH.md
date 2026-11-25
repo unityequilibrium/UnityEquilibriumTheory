@@ -6,16 +6,49 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 722. Counts describe records, not accomplishments.
+Indexed entries: 755. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
-| 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L23) | research-core | explicit_stream_and_area |
-| 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L13) | research-core | explicit_stream_and_area |
-| 2026-11-24 | [Topic 0.18 Lean lane: F8 rotation charge in 2+1](2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21) (L3) | research-core | explicit_stream_and_area |
-| 2026-11-23 | [Topic 0.18 Lean lane: F7 boost charge](2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge) (L23) | research-core | explicit_stream_and_area |
-| 2026-11-23 | [Topic 0.18 Lean lane: F6 energy and momentum identities](2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities) (L13) | research-core | explicit_stream_and_area |
-| 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [Test Card T033: real power plants against the max-power efficiency](2026/2026-11-25.md#test-card-t033-real-power-plants-against-the-max-power-efficiency) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING](2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [Test Cards T031 and T032: first batch of L1 claims against data](2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Wave D19: the price of resisting free fall](2026/2026-11-24.md#wave-d19-the-price-of-resisting-free-fall) (L74) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Author intent: "resisting" means trying to stand still in a moving universe](2026/2026-11-24.md#author-intent-resisting-means-trying-to-stand-still-in-a-moving-universe) (L64) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Wave D18: tidal settling as motion that stops resisting](2026/2026-11-24.md#wave-d18-tidal-settling-as-motion-that-stops-resisting) (L54) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Topic 0.18 Lean lane: F8 rotation charge in 2+1](2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21) (L44) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Author intent: free fall as the path that does not resist](2026/2026-11-24.md#author-intent-free-fall-as-the-path-that-does-not-resist) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Wave D17: frame dragging inside a rotating shell (Mach)](2026/2026-11-24.md#wave-d17-frame-dragging-inside-a-rotating-shell-mach) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Wave D16: how free is a freely falling frame?](2026/2026-11-24.md#wave-d16-how-free-is-a-freely-falling-frame) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-24 | [Wave D15: the full layer-3 equation after the supply stops](2026/2026-11-24.md#wave-d15-the-full-layer-3-equation-after-the-supply-stops) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Topic 0.18 Lean lane: F7 boost charge](2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge) (L92) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Test Card T030: fasting body mass, exponential leak or not](2026/2026-11-23.md#test-card-t030-fasting-body-mass-exponential-leak-or-not) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Topic 0.18 Lean lane: F6 energy and momentum identities](2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Wave D14: does openness compose with the layer-3 pool?](2026/2026-11-23.md#wave-d14-does-openness-compose-with-the-layer-3-pool) (L64) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Topic 0.18: audit and a Lean 4 formal-proof lane](2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane) (L54) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Wave D13: openness and the order a system can keep](2026/2026-11-23.md#wave-d13-openness-and-the-order-a-system-can-keep) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Merger card renumbered T028 to T029](2026/2026-11-23.md#merger-card-renumbered-t028-to-t029) (L33) | research-standards | explicit_stream_and_area |
+| 2026-11-23 | [Wave D12: how full is space?](2026/2026-11-23.md#wave-d12-how-full-is-space) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [Stir-fry correction and wave D11: one free-falling mass alone](2026/2026-11-23.md#stir-fry-correction-and-wave-d11-one-free-falling-mass-alone) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-23 | [T028: merger mass loss against GWTC](2026/2026-11-23.md#t028-merger-mass-loss-against-gwtc) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-22 | [Wave D10: the record of a vanished mass in the real universe](2026/2026-11-22.md#wave-d10-the-record-of-a-vanished-mass-in-the-real-universe) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-22 | [Wave D9: one mass disappears completely in Lambda-only space](2026/2026-11-22.md#wave-d9-one-mass-disappears-completely-in-lambda-only-space) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-22 | [Wave D8 (model B): falling together - frying and mixing](2026/2026-11-22.md#wave-d8-model-b-falling-together---frying-and-mixing) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-22 | [Wave D7 (model A): a lone body in Lambda-only space](2026/2026-11-22.md#wave-d7-model-a-a-lone-body-in-lambda-only-space) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-22 | [Author statements: thermodynamic cycle, two kinds of space, falling together](2026/2026-11-22.md#author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together) (L3) | research-standards | explicit_stream_and_area |
+| 2026-11-21 | [Wave S3: seen-but-gone on the expanding light cone](2026/2026-11-21.md#wave-s3-seen-but-gone-on-the-expanding-light-cone) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave S2: of the sources we see, how many still exist?](2026/2026-11-21.md#wave-s2-of-the-sources-we-see-how-many-still-exist) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Check: T008 against the flux-limit selection of wave S1](2026/2026-11-21.md#check-t008-against-the-flux-limit-selection-of-wave-s1) (L83) | research-standards | explicit_stream_and_area |
+| 2026-11-21 | [Wave S1: a flux-limited sample selects against persistence](2026/2026-11-21.md#wave-s1-a-flux-limited-sample-selects-against-persistence) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D6: the expanding universe as the last divider](2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D5: a black hole as the divider](2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider) (L53) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D4: dividers for systems held together by gravity](2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D3: radiative contacts break zero-sum sharing along a chain](2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D2: dividing entropy along a chain](2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave D1: the divider temperature sets resource and persistence](2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-21 | [Wave O5: two delays between seeing an event and being present with it](2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T028: selection and the readable fraction (INCONCLUSIVE)](2026/2026-11-20.md#test-card-t028-selection-and-the-readable-fraction-inconclusive) (L23) | research-standards | explicit_stream_and_area |
 | 2026-11-20 | [Stress test 11: readable fraction of energy-written bits](2026/2026-11-20.md#stress-test-11-readable-fraction-of-energy-written-bits) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-20 | [Test Card T027: yeast switch glucose with exponential rates (FAILED)](2026/2026-11-20.md#test-card-t027-yeast-switch-glucose-with-exponential-rates-failed) (L3) | research-standards | explicit_stream_and_area |

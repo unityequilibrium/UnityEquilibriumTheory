@@ -2,6 +2,202 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — Do real power plants run at the max-power ceiling? (T033)
+ทำ: Test Card T033 (D13 กับโรงไฟฟ้าจริง 13 แห่ง จากตารางของ Esposito et al. 2010) ผู้เขียนอนุมัติ ad04e5965 ก่อนอ่านตาราง; รันครั้งเดียว
+ผล: ค่ามัธยฐานความห่างจาก 1 - sqrt(Tc/Th) = 19% (ผ่าน <= 10%, ตก >= 25%) → INCONCLUSIVE; นิวเคลียร์สมัยใหม่เกินเพดาน 12-22% กังหันก๊าซต่ำกว่า 23-28%
+ระดับ: C_L3_OPENNESS_ORDER → L2_CONFRONTED (ผลสรุปไม่ได้, ผู้เขียนอนุมัติ 2026-11-25); การตีความ "ระบบจริงทำงานที่เพดาน" ยังไม่ยืนยันและยังไม่ถูกลบ
+ถัดไป: เพดานที่ไม่สมมาตร (การสูญเสียสองข้างไม่เท่ากัน) ต้องเป็น wave ใหม่ ถ้าผู้เขียนต้องการ
+commit: ad04e5965 (approval) + data commit + this commit (result)
+
+## 2026-11-25 — First batch of L1 claims confronted with data (T031, T032)
+ทำ: Test Card T031 (D17 กับ Gravity Probe B) และ T032 (D18 กับดาวคู่ SB9) ผู้เขียนอนุมัติ 27484cf81 ก่อนอ่านข้อมูล; รันครั้งเดียว
+ผล: T031 ทาย 39.17 mas/yr วัดได้ 37.2 ± 7.2 (z = 0.27) PASS; T032 วงโคจรวงกลม 78% ที่คาบ 1-3 วัน ลดลงตามลำดับถึง 18% ที่ 100-300 วัน (rho = -1) PASS
+ระดับ: C_L3_MACH_FRAME_DRAGGING และ C_L3_TIDAL_SETTLING → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-25); การทดสอบอ่อน ผลรู้คร่าว ๆ อยู่ก่อน ไม่ใช่ผลเฉพาะของ UET
+ถัดไป: ชุดที่สองเลือกข้อที่ AI ตีความฟิสิกส์ไปใช้กับระบบอื่น ซึ่งมีโอกาสตกจริง
+commit: 27484cf81 (approval) + d64214d69, b3fcc9320 (data) + 903bc0043 (results) + 7c1a12641 (L2)
+
+## 2026-11-24 — What does resisting free fall cost? (D19)
+ทำ: `uet_price_of_resisting.py` (ความเร็วที่จรวดเสียให้แรงโน้มถ่วง, ค่าลอยค้าง, เวลาของตัวเองที่เสียเมื่อไม่ตกอิสระ) + physics tests 46 ข้อ + FORMAL contract
+ผล: จรวดตัวอย่างขึ้นตรงเสียความเร็ว 32% ให้แรงโน้มถ่วง; ลอยค้าง 1 นาทีเสีย 588 m/s, ลอยค้าง 1 ตันใช้ 14.7 MW; ยืนบนพื้นฝืนได้โดยไม่ใช้พลังงาน; นาฬิกาที่ตกอิสระเดินนานที่สุดเสมอ (โยนขึ้น 2 วินาทีได้เพิ่ม 3.6e-16 s = g^2 T^3/24c^2)
+ระดับ: C_L3_PRICE_OF_RESISTING → L1_CONSISTENT (Tsiolkovsky, maximal aging ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: ผู้เขียนตัดสินว่าการตีความ "ฝืน = ความเร่งที่วัดเองได้ไม่เป็นศูนย์" ตรงกับที่ตั้งใจหรือไม่
+commit: 4c9b127bc (code) + this commit (records)
+
+## 2026-11-24 — Does an orbit settle by itself where motion stops resisting? (D18)
+ทำ: `uet_tidal_settling.py` (อัตราที่วัตถุถูกบีบ F = <|dT/dt|^2> ในกรอบของตัวเอง + พลังงานต่ำสุดที่โมเมนตัมเชิงมุมคงที่) + physics tests 32 ข้อ + FORMAL contract
+ผล: วงกลม F = 18 (GM/a^3)^2 (n - omega)^2; ล็อกแล้วแต่วงรี F = 63 (GM/a^3)^2 n^2 e^2; F = 0 เฉพาะวงกลมและหมุนตรงจังหวะ ซึ่งเป็นพลังงานต่ำสุดเมื่อ mu a^2 > 3 I (Darwin-Hut); โลกยังถูกดวงจันทร์บีบ 1.25e4 ดวงจันทร์ถูกโลกบีบ 0.2 (หน่วยธรรมชาติ)
+ระดับ: C_L3_TIDAL_SETTLING → L1_CONSISTENT (ทฤษฎีไทดัลของ Darwin-Hut-Zahn ไม่ใช่ผลเฉพาะของ UET); ตีความ "ความฝืน" = F โดย AI
+ถัดไป: Test Card กับดาวคู่จริง (คาบที่วงโคจรกลายเป็นวงกลมเทียบกับอายุกระจุกดาว) ต้องให้ผู้เขียนอนุมัติก่อนเปิดข้อมูล
+commit: d37baad7f (code) + this commit (records)
+
+## 2026-11-24 — Does surrounding matter decide what "not rotating" means? (D17, Mach)
+ทำ: `uet_mach_frame_dragging.py` (สมการหมุนช้าของ GR ผ่านเปลือกมวลที่หมุน คำนวณเชิงตัวเลขแล้วเทียบกับ Brill-Cohen 1966) + physics tests 15 ข้อ + FORMAL contract
+ผล: กรอบเฉื่อยข้างในหมุนตาม (4/3) GM/(Rc^2) ของการหมุนเปลือก และหมุนตามเต็มที่เมื่อเปลือกใกล้ขอบฟ้าของตัวเอง; สสารในรัศมีฮับเบิลมี GM/(Rc^2) = 0.16 (ทั้งความหนาแน่นวิกฤต 0.5) ซึ่งอยู่ในระดับที่สสารกำหนดกรอบได้ (ภาพประกอบ ไม่ใช่แบบจำลองจักรวาล)
+ระดับ: C_L3_MACH_FRAME_DRAGGING → L1_CONSISTENT (Lense-Thirring/Brill-Cohen ไม่ใช่ผลเฉพาะของ UET); กับ D16: การตกอิสระไม่อิสระจากวัตถุอื่นทั้งแรงไทดัลและการหมุน
+ถัดไป: แบบจำลองจักรวาลที่ขยายตัวจริง (การรบกวนของ FLRW) ถ้าผู้เขียนต้องการตอบหลักของมัคให้ครบ
+commit: 1e490a211 (code) + this commit (records)
+
+## 2026-11-24 — Is free fall really free of the other bodies? (D16)
+ทำ: `uet_free_fall_freedom.py` (แรงไทดัลที่การตกอิสระลบไม่ได้ เทียบกับแรงยึดตัวเองของระบบ G m/r^3) + physics tests 34 ข้อ + FORMAL contract
+ผล: โลก 1e-7 (ดวงจันทร์); ระบบสุริยะถึงเนปจูน 5e-12; ทางช้างเผือก 0.1 (แอนโดรเมดา); กลุ่มกาแล็กซีท้องถิ่น 0.24 (Λ, รัศมีแรงโน้มถ่วงศูนย์ 1.6 Mpc); กระจุกเวอร์โก 6e-3 (Λ)
+ระดับ: C_L3_FREE_FALL_FREEDOM → L1_CONSISTENT (Hill sphere/zero-gravity radius ไม่ใช่ผลเฉพาะของ UET); จักรวาลวัตถุเดียวใช้แทนส่วนหนึ่งของจักรวาลเราได้เฉพาะที่ epsilon << 1
+ถัดไป: หลักของมัค (ความเฉื่อยมาจากสสารอื่นหรือไม่) ยังเปิด; ถ้าผู้เขียนต้องการ ทดสอบกับการวัดมวลกลุ่มกาแล็กซีท้องถิ่นจริง (ต้องมี Test Card)
+commit: b373a10d2 (code) + this commit (records)
+
+## 2026-11-24 — What does the full layer 3 do after the supply stops? (D15)
+ทำ: `uet_layer3_after_closing.py` (สมการชั้น 3 เต็ม: บ่อ R กับโครงสร้าง n ที่กินบ่อ) + physics tests 73 ข้อ + FORMAL contract
+ผล: ของสำรองรวมลดด้วย δR + Fn/τ อัตราต่อหน่วยเริ่มระหว่าง δ กับ 1/τ แล้วไปจบที่ตัวที่ช้ากว่า จึงช้าลงในที่สุดเสมอ; ตอนมีอาหาร โครงสร้างโตแบบทบต้นแล้วกดบ่อลงถึง R* = 1/(aτ) ไม่ใช่ศูนย์
+ระดับ: C_L3_AFTER_CLOSING → L1_CONSISTENT (consumer-resource ไม่ใช่ผลเฉพาะของ UET); สร้างหลังเห็น T030 จึงใช้ T030 ทดสอบไม่ได้
+ถัดไป: Test Card กับข้อมูลชุดอื่นที่แยกบ่อกับโครงสร้างได้ (เช่นการอดอาหารที่วัดไขมันและโปรตีนแยกกัน)
+commit: 96e57b042 (code) + this commit (records)
+
+## 2026-11-23 — Does a fasting body leak like a closed pool? (T030)
+ทำ: Test Card T030 (ผู้เขียนอนุมัติ 9527c2180 ก่อนอ่านตาราง) กับน้ำหนักตัวรายวันของ L. ที่อดอาหาร 31 วัน (Benedict 1915, public domain) วันที่ 6–31
+ผล: อัตราลดต่อน้ำหนักตัวลดลงจาก 0.682 เป็น 0.629 %/วัน, r = 0.922 ต่ำกว่าเส้นตก 0.934 (exponential ต้องอยู่ใน 1 ± 0.022, เผาผลาญคงที่ต้องได้ 1.089)
+ระดับ: C_L3_OPENNESS_LAYER3 → FAILED (บ่อปิดที่รั่วด้วย delta คงที่ไม่ใช่ภาพของร่างกายที่หยุดได้รับอาหาร; พีชคณิตของ D14 ยังถูกในฐานะคณิตศาสตร์)
+ถัดไป: delta ที่เปลี่ยนตามสภาพ (เช่นการปรับลดเมแทบอลิซึม) ต้องเป็นสมมติฐานใหม่ L0 พร้อมการ์ดใหม่ ถ้าผู้เขียนต้องการ
+commit: 9527c2180 (approval) + this commit (data, run, records)
+
+## 2026-11-23 — Does openness compose with layer 3? (D14)
+ทำ: `uet_openness_layer3.py` (เอางานที่ระบบดึงได้จากความเปิดใน D13 ไปเติมบ่อของชั้น 3 ใน L3-2: dR/dt = S − δR) + physics test 32 ตัว (ODE ของบ่อเทียบเวลาอยู่รอด/เวลาเกิดแบบสูตรปิด rel < 1e-9, identity ของเกณฑ์สองตัว, การลู่ออกแบบ log ที่เกณฑ์ ลำดับ 1)
+ผล: ประกอบกันได้โดยไม่ต้องเพิ่มพารามิเตอร์: เกณฑ์ของ D13 กับเกณฑ์ของ L3-2 เป็นเงื่อนไขเดียวกัน; ปิดระบบแล้วโครงสร้างอยู่ต่อได้ ln(R_ss/R*_i)/δ; เปิดระบบแล้วโครงสร้างเกิดหลัง −ln(1 − R*_i/R_ss)/δ ซึ่งยาวไม่สิ้นสุดเมื่อความเปิดเข้าใกล้เกณฑ์
+ระดับ: C_L3_OPENNESS_LAYER3 → L1_CONSISTENT (การตรวจการสังเคราะห์ ไม่ใช่ผลเฉพาะของ UET); "ระบบปิดตาย" คือเวลาอยู่รอดหลังปิด ซึ่งกำหนดโดยการรั่วของบ่อ δ
+ถัดไป: หาระบบจริงที่วัดได้ทั้งความเปิด การรั่ว และเวลาอยู่รอดหลังถูกตัดขาด (เช่นเซลล์อดอาหาร หรือระบบนิเวศที่ถูกตัดแหล่งพลังงาน) เป็น Test Card
+commit: 2044312a3 (code) + this commit (records)
+
+## 2026-11-23 — More open, more order? Who makes the order? (D13)
+ทำ: `uet_openness_order.py` (ระบบอยู่ระหว่างด้านร้อน T_h กับด้านเย็น T_c ต่อกันด้วยการนำความร้อน g_h, g_c; ข้างในอาจมีเครื่องยนต์ของตัวเอง) + physics test 43 ตัว (หาค่าสูงสุดเชิงตัวเลขเทียบสูตรปิด rel < 1e-10, limit สองแบบลำดับ 1, กฎข้อ 2 ทุกจุด, identity ของเกณฑ์อยู่รอด)
+ผล: ความเปิด K = g_h g_c/(g_h + g_c) เป็นเพดาน: งานสูงสุด K (√T_h − √T_c)² จึงยิ่งเปิดยิ่งเก็บระเบียบได้มาก; ความเปิดเท่ากันแต่ไม่มีเครื่องยนต์ของระบบเองได้งาน 0 และสร้าง entropy มากที่สุด; โครงสร้างอยู่รอดเมื่อ K ≥ T_c σ_d/(√T_h − √T_c)² ระบบปิดเก็บระเบียบไม่ได้
+ระดับ: C_L3_OPENNESS_ORDER → L1_CONSISTENT (Novikov/Curzon–Ahlborn ไม่ใช่ผลเฉพาะของ UET); ตรงกับคำผู้เขียน: ความเปิดเป็นเพดาน ระเบียบมาจากระบบ สภาพแวดล้อมเป็นข้อจำกัดไม่ใช่ตัวเลือก
+ถัดไป: ทดสอบกับระบบจริงที่วัดได้ทั้งความเปิดและระเบียบ (ต้องมี Test Card) หรือแบบที่ถ่ายเทด้วยการแผ่รังสี (T⁴) แทนการนำ
+commit: 8c0c3628f (code) + this commit (records)
+
+## 2026-11-23 — Merger card renumbered T028 → T029
+ทำ: เปลี่ยนเลขการ์ดมวลที่หายของหลุมดำชนกันจาก T028 เป็น T029 เพราะ PR #78 ใช้เลข T028 บน main ไปก่อน (การ์ด สคริปต์ contract และผล)
+ผล: เนื้อหา เกณฑ์ การอนุมัติ ข้อมูล และตัวเลขไม่เปลี่ยน; ประวัติเดิม draft f0f681c87, อนุมัติ 9725e1e1d, รัน 7473e3007; บันทึกเดิมที่เขียนว่า T028 สำหรับการ์ดนี้หมายถึง T029
+ระดับ: ไม่เปลี่ยน (C_L3_FALLING_TOGETHER ยังเป็น L2)
+ถัดไป: merge กับ main
+commit: this commit
+
+## 2026-11-23 — How full is space? (D12)
+ทำ: `uet_space_capacity_used.py` (entropy ที่อยู่ในขอบฟ้าเหตุการณ์วันนี้ เทียบกับเพดาน Gibbons-Hawking) + physics test 37 ตัว (entropy ของรังสีจากปริพันธ์ Bose/Fermi เทียบสูตรปิด, รัศมีขอบฟ้าสองทาง, limit ลำดับ 3, identity หลุมดำ/ขอบฟ้า)
+ผล: เพดาน 3.3e122 k; ขอบฟ้าเหตุการณ์วันนี้ 16.7 Gly; รังสีใช้ไป 1.4e-34, หลุมดำยักษ์ราว 8e-21 (ค่าตัวอย่างที่ AI เลือก); ถ้าสสารทั้งหมดในขอบฟ้ายุบเป็นหลุมเดียวก็ใช้ได้แค่ 0.157 = (Om/OL)^2 (R_eh H_L/c)^6
+ระดับ: C_L3_SPACE_CAPACITY_USED → L1_CONSISTENT (Gibbons-Hawking ไม่ใช่ผลเฉพาะของ UET); space "ไม่เปิด 100%" จริง แต่วันนี้ใช้ไปราวหนึ่งในแสนล้านล้าน และสสารเติมจนเต็มไม่ได้
+ถัดไป: เทียบกับฟังก์ชันมวลหลุมดำที่วัดได้ (ข้อมูลภายนอก ต้องมี Test Card) หรือถามว่าการจัดระเบียบของระบบเอง (ไม่ใช่ space) ใช้ความจุนี้อย่างไร
+commit: 05f338cca (code) + this commit (records)
+
+## 2026-11-23 — One free-falling mass alone: does its fall burn anything? (D11)
+ทำ: แก้บันทึกเรื่องผัด/คลุก (เป็นคำอธิบาย ไม่ใช่แบบจำลอง) + `uet_lone_body_gr.py` (จักรวาลที่มีมวลเดียวตกอิสระ ไม่ใส่ Λ ไม่มีขอบฟ้า) + physics test 43 ตัว (กำลังคลื่นจากตำแหน่งด้วยอนุพันธ์สเปกตรัมเทียบสูตรปิดสองระบบ rel < 1e-10, การเคลื่อนที่สม่ำเสมอ dddQ = 0, การพองยุบทรงกลม Q_TF = 0, limit m² ลำดับ 1)
+ผล: มวลเดียวที่ตกอิสระไม่แผ่และไม่สูญเสียอะไรเลย (P = 0 พอดี) ตกอิสระเฉยๆ แยกจากอยู่นิ่งไม่ได้; จะเสียพลังงานต้องมีอย่างอื่น: ส่วนของตัวเองที่หมุนไม่สมมาตร, วัตถุที่สอง (ลดลงตาม m², ดวงอาทิตย์กับโลก 196 W) หรือ Λ
+ระดับ: C_L3_LONE_BODY_GR → L1_CONSISTENT (Birkhoff + หลักสมมูล + สูตร quadrupole ไม่ใช่ผลเฉพาะของ UET); ข้อจำกัด (ผู้เขียน): Schwarzschild นิ่ง จึงเป็นภาพหยุดนิ่ง ไม่ใช่จักรวาลที่เริ่มขึ้นและเป็นพลวัต; ขั้น "space → พฤติกรรม → เผาผลาญ" ของผู้เขียนไม่มีสมการใน GR สำหรับวัตถุเดียว ถ้า UET จะมีขั้นนี้ต้องมีกฎของตัวเอง และกฎนั้นจะต่างจาก GR ตรงนี้
+ถัดไป: ผู้เขียนตัดสินว่าขั้นนี้คือสิ่งที่ UET เสนอเพิ่มหรือไม่ ถ้าใช่ เขียนเป็นสมการแล้วหาข้อมูลที่แยกจาก GR ได้
+commit: a9a5f88b2 (records fix) + 6a2fb65b9 (code) + this commit (records)
+
+## 2026-11-23 — T028: mass radiated in black-hole mergers against GWTC
+ทำ: ดาวน์โหลดรายการ GWTC จาก GWOSC (391 เหตุการณ์, ล็อก sha256) + Test Card T028 (ผู้เขียนอนุมัติก่อนรัน) + รันหนึ่งครั้ง
+ผล: 225 จาก 227 การรวมหลุมดำที่เกือบไม่หมุน เสียมวลระหว่าง 0.0572 η กับเพดานทฤษฎีบทพื้นที่ ไม่มีตัวไหนเกินเพดาน; มวลที่หายจริง 3.13 เท่าของส่วนหมุนเข้าหากัน (ช่วงชนและ ringdown ที่ D8 ไม่รวมคือส่วนที่เหลือ)
+ระดับ: C_L3_FALLING_TOGETHER → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-23); แบบทดสอบอ่อน มวลหลังชนมาจากการคำนวณ GR ไม่ใช่ผลเฉพาะของ UET; สาขาผัดยังไม่ได้ทดสอบ
+ถัดไป: แบบทดสอบที่คมกว่า (posterior samples แทนค่ามัธยฐาน) หรือหาจุดที่ UET ทำนายต่างจาก GR
+commit: f0f681c87 (draft) + 9725e1e1d (approval) + 7473e3007 (run) + this commit (records)
+
+## 2026-11-22 — The record of a vanished mass in the real universe
+ทำ: `uet_record_real_universe.py` (optical depth ของก๊าซระหว่างกาแล็กซี + memory ของการรวมหลุมดำ) + physics test 29 ตัว (สัมประสิทธิ์ memory 17/96 จากปริพันธ์, limit ยุคสสารลำดับ 3, การบวกกันได้ของ τ)
+ผล: บันทึกแยกเป็นสามทาง: (1) รังสีที่ปล่อยตอนนี้หลุดรอดสสารเกือบหมด (τ ทั้งอนาคต = 7.3e-4); (2) บันทึกจากยุคแรกถูกสสารดูดไว้ (τ = 2.4 ถึง z = 100); (3) เหตุการณ์ไม่สมมาตรทิ้ง memory ในเรขาคณิต Δh = GE sin²i(17+cos²i)/(24c⁴r) (ตัวอย่าง 2.5e-22)
+ระดับ: C_L3_RECORD_REAL_UNIVERSE → L1_CONSISTENT (ไม่ใช่ผลเฉพาะของ UET); space แบบ Λ ไม่เก็บอะไรทั้งสองแบบจำลอง เรขาคณิตจากมวลเก็บเหตุการณ์ไม่สมมาตร
+ถัดไป: Test Card เรื่อง memory หรือมวลที่หายจริงจากข้อมูล LIGO (ข้อมูลภายนอก ต้องให้ผู้เขียนอนุมัติ)
+commit: fa48abbaf (code) + this commit (records)
+
+## 2026-11-22 — One mass disappears completely: does space keep the record?
+ทำ: `uet_evaporation_record.py` (หลุมดำก้อนเดียวระเหยจนหมดใน space ที่มีแต่ Λ) + physics test 31 ตัว (อายุสูตรปิด, ∫M dt สองทาง, ระยะโฟตอนใน de Sitter, memory ของการแผ่แบบสมมาตรเป็นศูนย์, beam limit ลำดับ 1)
+ผล: space กลับเป็นเหมือนเดิมทุกประการ (แผ่ออกเท่ากันทุกทิศ memory = 0); บันทึกคือ (1) รังสี ซึ่งออกพ้นขอบฟ้าของหลุมดำหลัง ln2/H = 12.1 Gyr และไม่กลับมา (2) นาฬิกาที่เคยอยู่ใกล้ช้ากว่าถาวร (G/rc²)∫M dt ซึ่งต้องมีสสาร
+ระดับ: C_L3_EVAPORATION_RECORD → L1_CONSISTENT (ไม่ใช่ผลเฉพาะของ UET); สนับสนุนการแยก space กับบันทึกของผู้เขียน; T_H กับ T_dS เป็นของผู้สังเกตต่างกัน (ระบุไว้)
+ถัดไป: เทียบจักรวาลจริง: รังสีถูกสสารอื่นดูดไว้ และเหตุการณ์ที่ไม่สมมาตร (การรวมหลุมดำ) ทิ้ง memory ไว้ในเรขาคณิตได้
+commit: a1bd29576 (code) + this commit (records)
+
+## 2026-11-22 — Falling together: frying and mixing (model B)
+ทำ: `uet_falling_together.py` (ผัด = dynamical friction, คลุก = หลุมดำรวมกัน) + physics test 41 ตัว (สูตรปิด Maxwellian, limit, ODE วงโคจร, งานเท่ากับพลังงานที่เสีย, ISCO, area theorem ผ่านฟังก์ชัน entropy)
+ผล: ผัด: หลุมดำ 1e6 M_sun จม 1 kpc → 10 pc ใน 5.9 Gyr และให้ entropy แก่ทะเลดาว 2(M/m) ln(r_i/r_f) = 9.2e6 k (ทะเลดาวคือตัวหาร); คลุก: เสียมวล 1.4–29% เป็นคลื่นความโน้มถ่วง และสร้าง entropy ราว 1.7e89 k มากกว่าผัด ~82 ระดับขนาด
+ระดับ: C_L3_FALLING_TOGETHER → L1_CONSISTENT (Chandrasekhar + area theorem ไม่ใช่ผลเฉพาะของ UET); มวลลดจริงเมื่อคลุก วัดได้จากข้างนอกในกรอบ GR
+ถัดไป: เทียบมวลที่หายจริงของหลุมดำที่ LIGO วัดได้ (ข้อมูลภายนอก ต้องเป็น Test Card) หรือหาว่าแรงลาก portal เปลี่ยนการผัดได้แค่ไหน
+commit: 6c86b6b07 (code) + this commit (records)
+
+## 2026-11-22 — Is a lone body in space-only really alone? (model A)
+ทำ: `uet_lone_body_horizon.py` (ของชิ้นเดียวใน space ที่มีแต่ Λ เย็นลงสู่อุณหภูมิขอบฟ้า) + physics test 46 ตัว (สูตรปิดเทียบปริพันธ์และ ODE, limit ลำดับ 4, กฎข้อ 2, อัตราผ่อนคลาย, identity ความยาวคลื่น)
+ผล: ไม่ได้อยู่คนเดียว ขอบฟ้า 2.2e-30 K รับ entropy ไปเกือบทั้งหมด (หิน 1 m: ตัวเองเสีย 3.4e30 k ขอบฟ้าได้ 9.8e61 k) ไม่ถึง 0 K เข้าสมดุลได้แค่เข้าใกล้; แต่ความยาวคลื่นของขอบฟ้า = 4π² เท่ารัศมีขอบฟ้าพอดี วัตถุจึงแลกความร้อนกับมันแทบไม่ได้ (≥ 1e94 ปี)
+ระดับ: C_L3_LONE_BODY_HORIZON → L1_CONSISTENT (Stefan + Gibbons–Hawking ไม่ใช่ผลเฉพาะของ UET); space แบบที่ 1 หาร entropy ได้ในหลักการ แต่ช้าไม่สิ้นสุด
+ถัดไป: แบบจำลอง B — หลายก้อนตกร่วมกัน (dynamical friction = ผัด, มวลที่หายตอนรวมตัว = คลุก)
+commit: a0b1cdfd0 (code) + this commit (records)
+
+## 2026-11-21 — Of what we see, how much still exists, in an expanding universe?
+ทำ: `uet_seen_but_gone_cosmic.py` (กรวยแสงอดีตของ ΛCDM + อายุ τ + การเกิดคงที่ตั้งแต่ t = 0) + physics test 27 ตัว (ระยะ comoving สองทาง, limit สู่ S2 ลำดับ 1.00, τ ≥ อายุเอกภพ, Monte Carlo)
+ผล: ทั้งกรวยแสง τ = 10 Gyr ยังอยู่ 10.7% (อวกาศนิ่งให้ 0.24%, ต่างกัน 44 เท่า); τ = 1 Gyr ยังอยู่ 7.9e-6; τ ≥ 13.8 Gyr ยังอยู่ครบ เพราะยังไม่มีใครตายเลยตั้งแต่ต้นเอกภพ
+ระดับ: C_L3_SEEN_BUT_GONE_COSMIC → L1_CONSISTENT (look-back time ไม่ใช่ผลเฉพาะของ UET); อัตราเกิดคงที่เป็นการเลือกของ AI
+ถัดไป: ใช้อัตราการเกิดดาวที่วัดจริง (peak ที่ z ~ 2) แทนอัตราคงที่ — ต้องใช้ข้อมูลภายนอก จึงเป็น Test Card
+commit: 0d9bf5860 (code) + this commit (records)
+
+## 2026-11-21 — Of what we see, how much still exists?
+ทำ: `uet_seen_but_gone.py` (เวลาแสงเดินทาง + อายุจำกัด τ = F/P + การสำรวจจำกัดความสว่าง) + physics test 30 ตัว (สูตรปิด, limit, การต่อของสองช่วง, Monte Carlo ในกาลอวกาศ)
+ผล: สัดส่วนที่ยังอยู่ = 1 − Dλ/(D+1) เมื่อ λ = d/(cτ) ≤ 1 และ λ^(−D)/(D+1) เมื่อเกิน; λ ~ P^(3/2): ชนิดที่เผาเร็ว 100 เท่า λ มากขึ้น 1000 เท่า (ตัวอย่าง: 99.25% ยังอยู่ เทียบ 0.025%)
+ระดับ: C_L3_SEEN_BUT_GONE → L1_CONSISTENT (look-back / duty cycle ไม่ใช่ผลเฉพาะของ UET); แสงยืนยันว่าตอนแสงออกมายังอยู่ ไม่ใช่ตอนนี้
+ถัดไป: ใส่การขยายตัวของเอกภพ (redshift, ระยะบนกรวยแสง) แทนอวกาศนิ่ง
+commit: d6004cb7c (code) + this commit (records)
+
+## 2026-11-21 — Does what we see show the persistence ranking?
+ทำ: `uet_observed_selection.py` (การสำรวจที่จำกัดด้วยความสว่าง ใน 1–3 มิติ + 1/V_max) + physics test 30 ตัว (ปริมาตรเชิงตัวเลขเทียบสูตรปิด, limit, เลขชี้กำลัง D/2−1, Monte Carlo seeded)
+ผล: ใน 3 มิติ N ~ bF P^(1/2): ชนิดที่เผาเร็วกว่า 100 เท่า มีน้อยกว่า 100 เท่าในอวกาศ แต่เห็นมากกว่า 10 เท่า (MC 19874 vs 1962); ในจาน 2 มิติ ผลสองอย่างหักล้างกัน; 1/V_max คืนค่าจริงได้ (0.987, 0.0100)
+ระดับ: C_L3_OBSERVED_SELECTION → L1_CONSISTENT (Malmquist bias ไม่ใช่ผลเฉพาะของ UET); T002 ไม่กระทบ (ระยะเดียว), T008 ไม่กระทบ (ตรวจแล้ว: Hu, Wu & Wu 2007 ถ่วงด้วย 1/(V_max − V_min))
+ถัดไป: ใส่เงื่อนไขการแก้ปริมาตรในทุก Test Card ชั้น 3 ที่นับวัตถุหลายระยะ
+commit: b561eba20 (code) + this commit (records)
+
+## 2026-11-21 — What is the last divider of an expanding universe?
+ทำ: `uet_cosmic_divider.py` (ΛCDM แบบแบน + อุณหพลศาสตร์ขอบฟ้า de Sitter) + physics test 31 ตัว (อินทิกรัล Friedmann เทียบสูตรปิด, limit ยุคสสาร/ยุค Λ, มวลสูงสุดที่ระเหยสองทาง, complex step ของ S_dS)
+ผล: ผู้หารคนสุดท้ายคือขอบฟ้า 2.2e-30 K (ไม่ใช่ศูนย์ ประสิทธิภาพ 100% เป็นไปไม่ได้) จุได้จำกัด 3.3e122 k; CMB เย็นกว่าหลุมดำมวลดวงอาทิตย์ที่ 3.2e11 ปี, Sgr A* ที่ 5.9e11 ปี, ต่ำกว่าขอบฟ้าที่ 1.2e12 ปี; หลุมดำเบากว่า 5.6e52 kg ระเหยหมดในที่สุด
+ระดับ: C_L3_COSMIC_DIVIDER → L1_CONSISTENT (ΛCDM + Gibbons–Hawking ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: รวมลำดับผู้หาร D1–D6 เป็นภาพเดียว และหาจุดที่ UET อาจทำนายต่างจากฟิสิกส์เดิม
+commit: 6f4a452da (code) + this commit (records)
+
+## 2026-11-21 — How does a black hole behave as the divider?
+ทำ: `uet_black_hole_divider.py` (อุณหพลศาสตร์หลุมดำ Schwarzschild) + physics test 37 ตัว (complex-step ของ dS/dE และ C, ODE การระเหยเทียบสูตรปิด, กฎข้อสองแบบขยาย, มวล crossover สองทาง)
+ผล: หลุมดำยิ่งรับยิ่งเย็น (C < 0) จึงเป็นผู้หารที่ดีขึ้นเมื่อมวลไหลเข้า; Sgr A* มี entropy 1.8e90 k; หลุมดำหนักกว่า 4.5e22 kg เย็นกว่า CMB และโตขึ้น; อายุการระเหย = F0/(3P0) หนึ่งในสามของ F0/P0
+ระดับ: C_L3_BLACK_HOLE_DIVIDER → L1_CONSISTENT (อุณหพลศาสตร์หลุมดำ ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: การขยายตัวของจักรวาลเป็นผู้หารคนสุดท้าย (ขอบฟ้า de Sitter) และหลุมดำหมุน
+commit: c979fa040 (code) + this commit (records)
+
+## 2026-11-21 — What does dividing entropy mean for systems held together by gravity?
+ทำ: `uet_gravitating_divider.py` (heat capacity ติดลบจาก virial, contact เชิงเส้นและแผ่รังสี, สองวัตถุ C1 < 0 กับ C2 > 0) + physics test 46 ตัว (ODE vs closed form, เวลา runaway, พลังงาน/entropy, อัตราช่องว่างสองทาง)
+ผล: ระบบแรงโน้มถ่วงเสียพลังงานแล้วร้อนขึ้น วิ่งหนีผู้หาร (ไม่หมดลงอย่าง D1); สมดุลได้ก็ต่อเมื่อ C2 < |C1| (Lynden-Bell & Wood) ผู้หารไม่จำกัดอย่างอวกาศจึงไม่ให้หยุดเลย; t_KH ดวงอาทิตย์ 31.4 Myr
+ระดับ: C_L3_GRAVITATING_DIVIDER → L1_CONSISTENT; จำกัดขอบเขต C_L3_ENTROPY_DIVIDER ให้ใช้กับ C > 0 เท่านั้น
+ถัดไป: หลุมดำเป็นผู้หาร (entropy ∝ พื้นที่, heat capacity ติดลบเช่นกัน) และการขยายตัวของจักรวาล
+commit: 962284a6d (code) + this commit (records)
+
+## 2026-11-21 — With radiative contacts, is sharing along a chain still zero-sum?
+ทำ: `uet_entropy_chain_radiative.py` (contact แบบ J = G(T_h^n − T_c^n)/n, n = 4 คือการแผ่รังสี) + physics test 54 ตัว (กฎ contact, n = 1 ตรงกับ D2, อนุพันธ์สองทาง, เครื่องหมายของ c − 1, Carnot limit)
+ผล: zero-sum เฉพาะ n = 1; n > 1 (รังสี) งานที่ทอดหน้าเอาไป 1 หน่วยทำให้ทอดหลังเสียมากกว่า 1 (c > 1), n < 1 กลับกัน; ผลเล็กเว้นแต่ contact ทำงานใกล้ขีดจำกัด (c = 1.015 ในตัวอย่างดวงอาทิตย์–ดาวเคราะห์–อวกาศ)
+ระดับ: C_L3_ENTROPY_CHAIN_RADIATIVE → L1_CONSISTENT (endoreversible + radiative contact ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: การเจือจางของแสงอาทิตย์ (เรขาคณิตท้องฟ้า) และผู้หารที่ร้อนขึ้นเอง
+commit: 93022e6d9 (code) + this commit (records)
+
+## 2026-11-21 — Does dividing entropy along a chain create resource, and how is it shared?
+ทำ: `uet_entropy_chain.py` (engine N ทอดต่ออนุกรม เชื่อมด้วยการนำความร้อนเชิงเส้น) + physics test 44 ตัว (สูตรปิด N = 1–4, Carnot limit, สมดุล entropy ราย contact, ทางที่สองจากอุณหภูมิ, การแบ่งแบบ zero-sum)
+ผล: กำลังรวมสูงสุด = K_chain(√T0 − √T_N)² โดย K_chain คือทุก contact ต่ออนุกรม → ห่วงโซ่ไม่สร้างทรัพยากร ทอดที่เพิ่มทำให้ลด (contact เท่ากัน: 1/N); ที่ entropy flux เดียวกัน ส่วนแบ่งระหว่างทอดเป็น zero-sum
+ระดับ: C_L3_ENTROPY_CHAIN → L1_CONSISTENT (engine อนุกรมแบบ endoreversible ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: contact แบบแผ่รังสี (T⁴) ซึ่งอาจทำลาย zero-sum และผู้หารที่ร้อนขึ้นเอง
+commit: 4be44658d (code) + this commit (records)
+
+## 2026-11-21 — How does the environment that takes a system's entropy set its resource and persistence?
+ทำ: `uet_entropy_divider.py` (exergy ของคลังความร้อน + engine แบบ endoreversible ที่ไหลคงที่) + physics test 43 ตัว (closed form, limit "อยู่คนเดียว", สมดุลพลังงาน/entropy, หา max ด้วยตัวเลขเทียบสูตร)
+ผล: ทรัพยากรที่ใช้ได้ = C[(T0−T_c) − T_c ln(T0/T_c)] เป็นศูนย์เมื่อผู้หารร้อนเท่าคลัง; ระบบที่ต้องใช้งาน W_m รอดได้เฉพาะ T_c ≤ T_c* = (√T_h − √(W_m/K))², K = K_hK_c/(K_h+K_c) (ทางตัวเลขจับสูตร Curzon–Ahlborn ที่ใช้ผิดได้)
+ระดับ: C_L3_ENTROPY_DIVIDER → L1_CONSISTENT (exergy + Novikov ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: ผู้หารที่ร้อนขึ้นเอง และผู้หารต่อกันเป็นทอด (ดวงอาทิตย์ → โลก → อวกาศ)
+commit: fbb12029e (code) + this commit (records)
+
+## 2026-11-21 — Which part of "becoming present with what is seen" can resources buy?
+ทำ: `uet_two_delays.py` แยกสองเวลาหน่วง (บันทึก vs การแก่ของผู้เดินทาง) + physics test 41 ตัว (worldline ทั่วไป vs closed form, Newtonian limit, metric identity, rocket equation vs four-momentum)
+ผล: อายุบันทึกเมื่อไปถึง > 2d/c เสมอไม่ว่าจ่ายเท่าไร; การแก่ลดได้ด้วยการแปลงมวลนิ่ง m0/m1 ≥ e^{2η}; 1000 ปีแสงแก่ 10 ปี: γ = 100, มวล 4.0×10⁴ เท่า, บันทึกเก่า 2000 ปี
+ระดับ: C_OBS_TWO_DELAYS → L1_CONSISTENT (สัมพัทธภาพพิเศษ ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: เพิ่มแรงโน้มถ่วง/การขยายตัวของจักรวาล (event horizon: ของที่เห็นแต่ไปไม่ถึงตลอดกาล)
+commit: eb302b96f (code) + this commit (records)
+
 ## 2026-11-16 — Do migrated checkouts preserve byte and payload-tree identity?
 ทำ: กติกา LF สำหรับโค้ด/records พร้อมเก็บ input/ref bytes; ซ่อม Calorine ให้ payload และ sibling scan ใช้ physical tree เดียวกัน
 ผล: 83/83 กรณีที่ล้มเพิ่มบน Desktop ผ่าน; 132 focused software tests ผ่าน; physics 193 ผ่าน / 1 skipped
