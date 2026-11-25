@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 87,
-    "entries": 986,
+    "sources": 88,
+    "entries": 988,
     "by_stream": {
       "book-history": 94,
-      "operations": 140,
-      "research": 751,
+      "operations": 141,
+      "research": 752,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -452,6 +452,11 @@
       "path": "2026/2026-11-24.md",
       "sha256": "93f33346a7ccddb6f22b5face7d5aafd5fb5c79f1218b4654b8979ce5586ce8f",
       "entries": 9
+    },
+    {
+      "path": "2026/2026-11-25.md",
+      "sha256": "b3757829a007821c01d4044b2904b3b439834a22570954eb1cad5a3b3cfff734",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -20144,6 +20149,46 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#repair-another-sessions-git-config-in-this-folder",
+      "source": "2026/2026-11-25.md",
+      "anchor": "repair-another-sessions-git-config-in-this-folder",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Repair: another session's git config in this folder",
+      "entry_sha256": "19acbe3d8d27c04809ed5af5737af2cae950722cb434e82d68eb9490d0767f33",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-cards-t031-and-t032-first-batch-of-l1-claims-against-data",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Test Cards T031 and T032: first batch of L1 claims against data",
+      "entry_sha256": "cf338f6c27f305749639361f2b2fca70a566a01587a5c824976fccabf18be64c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
       "legacy_root_path": false
     },
     {

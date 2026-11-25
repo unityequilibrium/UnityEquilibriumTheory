@@ -1,0 +1,35 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T032_SB9_CIRCULARIZATION",
+ "claim_id": "C_L3_TIDAL_SETTLING",
+ "test_card_id": "T032",
+ "level": "L2_CONFRONTED",
+ "outcome": "PASS",
+ "numbers": [
+  {
+   "name": "circular_fraction_by_period_bin",
+   "value": "[1,3) 0.775 (n 378); [3,10) 0.626 (626); [10,30) 0.286 (447); [30,100) 0.229 (362); [100,300) 0.183 (360)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "spearman_rho",
+   "value": "-1.0 (PASS needs <= -0.9)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "systems",
+   "value": "4078 SB9 systems, one orbit each (5099 orbits in the file)",
+   "uncertainty": null,
+   "unit": "count"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t032_binary_circularization.py",
+  "commit": "d64214d69"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "note": "PASS under Test Card T032 (approved 27484cf81 before the data were downloaded). 78 percent of SB9 orbits with periods of 1-3 days are circular (e < 0.05), falling monotonically to 18 percent at 100-300 days. Weak test: the period-eccentricity relation was known (SEEN_SUMMARY); circular formation is not separated from tidal settling; authors often fix e = 0 at short periods. Implementation fix made after approval, before the run: the catalogue's orbit-number column is named 'o', not 'Orb' as the draft assumed; the method (lowest orbit number per system) is unchanged. Of the systems counted, n_systems in the output (4078) includes systems outside 1-300 d. L2 needs the author's approval."
+}
