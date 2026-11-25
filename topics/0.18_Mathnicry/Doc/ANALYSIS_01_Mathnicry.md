@@ -1,5 +1,7 @@
 # 🔬 ANALYSIS: Mathnicry (Mathematical Physics)
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 > **File/Script:** `docs/topics/0.18_Mathnicry/Code/03_Research/Research_Millennium_Grand_Slam.py`
 > **Role:** Master Verification (Mathematical Rigor)
 > **Status:** 🟢 FINAL

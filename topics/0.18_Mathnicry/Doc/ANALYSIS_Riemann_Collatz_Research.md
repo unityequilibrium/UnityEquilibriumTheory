@@ -1,5 +1,7 @@
 # 🔬 ANALYSIS: Riemann & Collatz Research (งานวิจัยเจาะลึกซีต้าและคอลลาตซ์)
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 > **Files:** `Research_Riemann_Zeta_UET.py`, `Research_Riemann_Global_Stability.py`, `Research_Collatz_Unity.py`, `Research_Lyapunov_Collatz.py`, `Research_BSD_Elliptic_Unity.py`
 > **Role:** Research (Deep Mathematics)
 > **Status:** 🟢 REVIEWED
