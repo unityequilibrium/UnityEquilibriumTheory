@@ -1,0 +1,68 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T040",
+  "status": "APPROVED",
+  "claim_id": "C_C1_FRW_DARK_ENERGY",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "The expansion history measured by DESI DR2 BAO and Pantheon+ supernovae can be produced by the parent action: a thawing psi with xi_c restricted to what Cassini, lunar laser ranging and T001 allow today fits the data about as well as a free linear w(a) (CPL).",
+  "observable": {
+    "quantity": "dchi2_CPL = chi2_min(UET family) - chi2_min(CPL) for BAO + SN distances",
+    "unit": "1",
+    "domain": "0.01 < z < 2.5; flat FRW; pressureless matter; radiation neglected"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "DESI_DR2_BAO_MEAN",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "DESI_DR2_BAO_COV",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "PANTHEON_PLUS_HD",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "PANTHEON_PLUS_COV",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/scalar_tensor/t040_w_of_a_bao_sn.py",
+    "description": "Distances from H(z) of each model: LCDM (Omega_m), CPL (Omega_m, w0, wa; Nelder-Mead from four starts) and the UET family (uet_frw_background.py; grid xi_c in {0, -0.01, -0.003, 0.003, 0.01, 0.02, 0.03, 0.05}, psi_i in {0.1..1.2}, m/H0 in {0.5, 1, 2, 3, 4}; only points passing Cassini, LLR and T001 today). Omega_m profiled on 0.20..0.42 in steps of 0.01 for LCDM and UET. BAO amplitude c/(H0 r_d) and the SN offset profiled analytically. Pantheon+ rows with zHD > 0.01 and the matching STAT+SYS covariance block."
+  },
+  "free_parameters": [
+    "Omega_m",
+    "psi_i",
+    "m_psi/H0",
+    "xi_c",
+    "c/(H0 r_d) (nuisance)",
+    "SN offset M (nuisance)"
+  ],
+  "fixed_parameters": [
+    "flat FRW; radiation neglected at z < 2.5 (AI choice)",
+    "UET scan grid and Omega_m grid as in prediction_method (AI choice)",
+    "Pantheon+ cut zHD > 0.01 (AI choice, the usual cosmology cut)",
+    "bounds applied today: Cassini |gamma - 1| < 2.3e-5, LLR |dG/dt / G| < 2.2e-3 H0, xi_c outside [2.0, 2.4] (T001)",
+    "no CMB information (option B of the proposal not taken)",
+    "SN compilation Pantheon+ (author's choice, 2026-11-25)"
+  ],
+  "pass_criterion": "PASS if dchi2_CPL <= 4.",
+  "fail_criterion": "FAIL if dchi2_CPL > 9. INCONCLUSIVE if 4 < dchi2_CPL <= 9.",
+  "drafted_by": "claude",
+  "note": "Proposal: topics/0.3_Cosmology_Hubble_Tension/Doc/PROPOSAL_T040_W_OF_A_2026-11-25.md. Disclosure: not blind. The drafter knows the published DESI DR2 result that BAO with CMB and SN prefers w0 > -1, wa < 0 in CPL at about 2.8 to 4.2 sigma depending on the SN set, with a crossing of w = -1 near z = 0.4 to 0.5, and that the preference is weaker without the CMB. C1 found the UET family has w0 >= -1 and phantom phases only at z > 1.5. The drafter expects the outcome to be PASS or INCONCLUSIVE without the CMB. Reported, not deciding: dchi2_LCDM = chi2_min(LCDM) - chi2_min(UET) and the UET best-fit (w0, wa). Data downloaded with the author's permission on 2026-11-25; only file structure read before approval. Approved by the author on 2026-11-25 as drafted (\"Approve T033\"). Renumbered from T033 to T040 on 2026-11-25 before the run finished and before any result was recorded: main already had a different T033 (power plants, C_L3_OPENNESS_ORDER) and T034 was taken on another branch. Only the number and file names changed; hypothesis, data, method and criteria are as approved.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-25",
+    "role": "AUTHOR"
+  }
+}

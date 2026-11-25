@@ -29,6 +29,12 @@ commit: 0afa07125 (code) + this commit (records)
 ระดับ: C_L3_AFTER_CLOSING คง L1 (ยังไม่มีการทดสอบที่ตัดสินได้)
 ถัดไป: ข้อมูลอดอาหารที่วัดโปรตีนรายวันครบ หรือข้ามไปทดสอบข้ออื่น
 commit: b3f07785a (approval) + data commit + this commit (result)
+## 2026-11-25 — Does the parent action's dark energy fit BAO + supernovae? (T040)
+ทำ: Test Card T040 (ร่างเป็น T033, อนุมัติ 3942abe2b ก่อนเปิดข้อมูล; เปลี่ยนเลขเพราะชน) w(a) ของ C1 กับ DESI DR2 BAO + Pantheon+ ไม่ใช้ CMB; รันครั้งเดียว
+ผล: dchi2 เทียบ CPL = 0.03 (ผ่าน <= 4) → PASS; ดีกว่า LCDM 5.1; จุดดีสุด xi_c = -0.003, w0 = -0.90, wa = -0.12
+ระดับ: C_C1_FRW_DARK_ENERGY → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-25); ไม่ใช่คำทำนายเฉพาะของ UET (quintessence แบบ thawing ให้ผลเดียวกัน)
+ถัดไป: ใส่ CMB prior (option B) จะทดสอบได้คมกว่า ต้องเป็นการ์ดใหม่
+commit: 3942abe2b (approval) + 430b664d7 (run) + this commit (result)
 
 ## 2026-11-25 — Do real power plants run at the max-power ceiling? (T033)
 ทำ: Test Card T033 (D13 กับโรงไฟฟ้าจริง 13 แห่ง จากตารางของ Esposito et al. 2010) ผู้เขียนอนุมัติ ad04e5965 ก่อนอ่านตาราง; รันครั้งเดียว

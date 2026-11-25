@@ -432,6 +432,54 @@
       "license": "Public domain (published 1915)",
       "visibility": "PUBLIC",
       "note": "Transcribed by hand from the page scans after approval of T036; p. 73 columns match the printed daily losses to 0.005 kg; Succi columns read from p. 72 with losses checked by eye."
+    },
+    {
+      "data_id": "DESI_DR2_BAO_MEAN",
+      "description": "DESI DR2 Gaussian BAO means: D_M/r_d, D_H/r_d and D_V/r_d at 7 effective redshifts (13 values), all tracers combined",
+      "source": "DESI Collaboration, DR2 BAO results (arXiv:2503.14738), likelihood files as distributed in the Cobaya bao_data repository",
+      "doi_or_url": "https://github.com/CobayaSampler/bao_data/blob/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "license": "public scientific data release; the repository declares no license file",
+      "visibility": "PUBLIC",
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+    },
+    {
+      "data_id": "DESI_DR2_BAO_COV",
+      "description": "Covariance (13 x 13) of the DESI DR2 Gaussian BAO means",
+      "source": "DESI Collaboration, DR2 BAO results (arXiv:2503.14738), likelihood files as distributed in the Cobaya bao_data repository",
+      "doi_or_url": "https://github.com/CobayaSampler/bao_data/blob/bb0c1c9009dc76d1391300e169e8df38fd1096db/desi_bao_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "license": "public scientific data release; the repository declares no license file",
+      "visibility": "PUBLIC",
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+    },
+    {
+      "data_id": "PANTHEON_PLUS_HD",
+      "description": "Pantheon+ Hubble diagram, 1701 light curves of 1550 SNe Ia (zHD, zHEL, m_b_corr and fit columns)",
+      "source": "D. Scolnic et al., ApJ 938, 113 (2022); D. Brout et al., ApJ 938, 110 (2022); Pantheon+ data release",
+      "doi_or_url": "https://github.com/PantheonPlusSH0ES/DataRelease/blob/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES.dat",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "license": "public scientific data release; the repository declares no license file",
+      "visibility": "PUBLIC",
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+    },
+    {
+      "data_id": "PANTHEON_PLUS_COV",
+      "description": "Pantheon+ statistical plus systematic covariance (1701 x 1701) of m_b_corr",
+      "source": "D. Scolnic et al., ApJ 938, 113 (2022); D. Brout et al., ApJ 938, 110 (2022); Pantheon+ data release",
+      "doi_or_url": "https://github.com/PantheonPlusSH0ES/DataRelease/blob/c447f0fea703fcd0fff57de5000947b5ca81286b/Pantheon+_Data/4_DISTANCES_AND_COVAR/Pantheon+SH0ES_STAT+SYS.cov",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES_STAT+SYS.cov",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "license": "public scientific data release; the repository declares no license file",
+      "visibility": "PUBLIC",
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
     }
   ]
 }

@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 997,
+    "entries": 1002,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 761,
+      "research": 766,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "505c4501a22674c849b58a71e66a9cf2e447940b802ac873f17809dd42367cd9",
-      "entries": 10
+      "sha256": "624d9ec7c9075d099c4bc29438edbce1df16aa930cb8ae20c7deb4bfa9a0a7cf",
+      "entries": 15
     },
     {
       "path": "2026-08-14.md",
@@ -20359,6 +20359,106 @@
       "end_line": 102,
       "title": "Literature map: fasting physiology against D14, D15 and D20",
       "entry_sha256": "4bddf2b7e1ae27324bfd2dde636f556706c5874f783187b8f02e2e004c839833",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "start_line": 103,
+      "end_line": 112,
+      "title": "Test Card T033 proposal: parent-action w(a) against BAO and supernovae",
+      "entry_sha256": "258586958e2206cfe0aa5daaa8490438935d8521aa679ca6bb294869e0200f45",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-data-intake-and-draft-card",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "Test Card T033: data intake and draft card",
+      "entry_sha256": "66023a1d81750ceb49013930aeb332646509b8e00ed814da3bbe92f25cfe0a09",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-wa-renumbered-t040",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-wa-renumbered-t040",
+      "start_line": 123,
+      "end_line": 132,
+      "title": "Test Card T033 (w(a)) renumbered T040",
+      "entry_sha256": "30c53a986ea61c55f8d1bf5d149a48c2c05d8de62ff3065cacde1260046de5fa",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "source": "2026/2026-11-25.md",
+      "anchor": "t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "start_line": 133,
+      "end_line": 142,
+      "title": "T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)",
+      "entry_sha256": "06a24f26252940f52e8f0bbbddda221516a035b0e92efdbe12da7099c9fa1beb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "source": "2026/2026-11-25.md",
+      "anchor": "c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "start_line": 143,
+      "end_line": 151,
+      "title": "C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)",
+      "entry_sha256": "c689dec7765f3318aafd63d5f545f0f36be8a93331dbd781d6d982b9fa5f3e63",
       "stream": "research",
       "areas": [
         "research-core"
