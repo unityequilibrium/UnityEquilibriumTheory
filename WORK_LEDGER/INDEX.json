@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 995,
+    "entries": 996,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 759,
+      "research": 760,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "4afd14889e3e7bdddb661cafb9173bba59f60d4962349653315574440272c671",
-      "entries": 8
+      "sha256": "16456ec519b4f16ad849e69f667a75c94886dce618704f962afb84fd020a1d49",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -20316,9 +20316,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t033-wa-renumbered-t040",
       "start_line": 75,
-      "end_line": 83,
+      "end_line": 84,
       "title": "Test Card T033 (w(a)) renumbered T040",
-      "entry_sha256": "4c82da1c45909297bee2ed4181b0d19d67a2558594892b4c547b8bb0397b04a4",
+      "entry_sha256": "30c53a986ea61c55f8d1bf5d149a48c2c05d8de62ff3065cacde1260046de5fa",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "source": "2026/2026-11-25.md",
+      "anchor": "t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "start_line": 85,
+      "end_line": 93,
+      "title": "T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)",
+      "entry_sha256": "0d4a7be27f6150fe08d75d85116fad841a9dded6753841cc5a25c2738d36c162",
       "stream": "research",
       "areas": [
         "research-core"

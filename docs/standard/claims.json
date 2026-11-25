@@ -33,9 +33,10 @@
       "statement": "On a flat FRW background the parent action contains LambdaCDM (psi = 0) and, with psi displaced, thawing dark energy: with xi_c = 0 the apparent w never goes below -1, while with xi_c > 0 Cassini and lunar laser ranging still allow a past phantom phase (1 + w down to at least -0.086 on the scan grid) that ends at z = 1.5 to 2.2, with w0 >= -1 in every allowed run.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_C1_FRW_DARK_ENERGY"
+        "R_C1_FRW_DARK_ENERGY",
+        "R_T040_W_OF_A_BAO_SN"
       ],
-      "note": "Derived background equations and an AI parameter scan; nearest theory thawing and extended quintessence; not UET-distinct; not yet confronted with BAO or supernova data (needs a Test Card)."
+      "note": "Derived background equations and an AI parameter scan; nearest theory thawing and extended quintessence; not UET-distinct. Confronted with DESI DR2 BAO and Pantheon+ under T040: PASS (dchi2 vs CPL 0.03; better than LCDM by 5.1). Stays L1 until the author approves L2."
     },
     {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",

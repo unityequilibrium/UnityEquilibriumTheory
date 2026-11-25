@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 759. Counts describe records, not accomplishments.
+Indexed entries: 760. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)](2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon) (L85) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033 (w(a)) renumbered T040](2026/2026-11-25.md#test-card-t033-wa-renumbered-t040) (L75) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033: data intake and draft card](2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card) (L65) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033 proposal: parent-action w(a) against BAO and supernovae](2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae) (L55) | research-core | explicit_stream_and_area |
