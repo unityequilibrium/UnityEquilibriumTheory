@@ -583,11 +583,12 @@
     {
       "claim_id": "C_L3_OPENNESS_ORDER",
       "statement": "For a system between a hot side T_h and a cold side T_c with heat contacts g_h, g_c, openness K = g_h g_c/(g_h + g_c) sets the ceiling on the work it can draw, P_max = K (sqrt T_h - sqrt T_c)^2 at efficiency 1 - sqrt(T_c/T_h), so more openness allows more kept order; the same openness without the system's own engine gives zero work and the most entropy; a structure that decays at entropy rate sigma_d persists only if K >= T_c sigma_d/(sqrt T_h - sqrt T_c)^2, so a closed system (K -> 0) keeps no order.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
-        "R_D13_OPENNESS_ORDER"
+        "R_D13_OPENNESS_ORDER",
+        "R_T033_POWER_PLANTS_MAX_POWER"
       ],
-      "note": "Endoreversible thermodynamics (Novikov 1957; Curzon and Ahlborn 1975) and the maximum power principle; not UET-distinct. Puts the author's 2026-11-23 statement in one equation (AUTHOR_PROPOSITION §4): openness is a ceiling, the order needs the system's engine, the environment (T_h, T_c) is a limit, not a choice. The model (Newtonian contacts, reversible core) is an AI choice."
+      "note": "Endoreversible thermodynamics (Novikov 1957; Curzon and Ahlborn 1975) and the maximum power principle; not UET-distinct. Puts the author's 2026-11-23 statement in one equation (AUTHOR_PROPOSITION §4): openness is a ceiling, the order needs the system's engine, the environment (T_h, T_c) is a limit, not a choice. The model (Newtonian contacts, reversible core) is an AI choice. Confronted in T033 (2026-11-25): 13 real power plants scatter around eta_CA with a median gap of 19 percent (INCONCLUSIVE); L2 approved by the author."
     },
     {
       "claim_id": "C_L3_OPENNESS_LAYER3",

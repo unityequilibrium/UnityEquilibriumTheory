@@ -1,0 +1,46 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T033_POWER_PLANTS_MAX_POWER",
+ "claim_id": "C_L3_OPENNESS_ORDER",
+ "test_card_id": "T033",
+ "level": "L2_CONFRONTED",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "median_abs_rel_dev_from_CA",
+   "value": "0.192 (PASS <= 0.10, FAILED >= 0.25)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "eta_obs_over_eta_CA",
+   "value": "modern nuclear 1.12-1.22; Heysham 1.08, CANDU 1.08; coal, steam, geothermal 0.81-0.90; gas turbines 0.72, 0.77; Calder Hall 0.67",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "median_eta_obs_over_carnot",
+   "value": "0.56 (not deciding)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "plants",
+   "value": "13",
+   "uncertainty": null,
+   "unit": "count"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t033_power_plants_max_power.py",
+  "commit": "96ebc9180"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-25",
+  "role": "AUTHOR"
+ },
+ "note": "INCONCLUSIVE under Test Card T033 (approved ad04e5965 before the table was read). Real plants scatter on both sides of the Curzon-Ahlborn efficiency: modern nuclear plants exceed it by 12-22 percent, gas turbines and an early reactor fall 23-33 percent below; the median gap of 19 percent is neither close (<= 10) nor far (>= 25). The AI reading 'systems run at D13's ceiling' is neither confirmed nor removed; the D13 ceiling itself assumes symmetric linear contacts, which real plants need not have (Esposito et al. bound eta* between eta_C/2 and eta_C/(2 - eta_C)). The first run attempt stopped on a CSV parse error (commas in plant names) before any result; the names were quoted, numbers unchanged. L2 (confronted, outcome inconclusive) approved by the author."
+}

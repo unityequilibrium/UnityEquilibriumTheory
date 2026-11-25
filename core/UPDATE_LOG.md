@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — Do real power plants run at the max-power ceiling? (T033)
+ทำ: Test Card T033 (D13 กับโรงไฟฟ้าจริง 13 แห่ง จากตารางของ Esposito et al. 2010) ผู้เขียนอนุมัติ ad04e5965 ก่อนอ่านตาราง; รันครั้งเดียว
+ผล: ค่ามัธยฐานความห่างจาก 1 - sqrt(Tc/Th) = 19% (ผ่าน <= 10%, ตก >= 25%) → INCONCLUSIVE; นิวเคลียร์สมัยใหม่เกินเพดาน 12-22% กังหันก๊าซต่ำกว่า 23-28%
+ระดับ: C_L3_OPENNESS_ORDER → L2_CONFRONTED (ผลสรุปไม่ได้, ผู้เขียนอนุมัติ 2026-11-25); การตีความ "ระบบจริงทำงานที่เพดาน" ยังไม่ยืนยันและยังไม่ถูกลบ
+ถัดไป: เพดานที่ไม่สมมาตร (การสูญเสียสองข้างไม่เท่ากัน) ต้องเป็น wave ใหม่ ถ้าผู้เขียนต้องการ
+commit: ad04e5965 (approval) + data commit + this commit (result)
+
 ## 2026-11-25 — First batch of L1 claims confronted with data (T031, T032)
 ทำ: Test Card T031 (D17 กับ Gravity Probe B) และ T032 (D18 กับดาวคู่ SB9) ผู้เขียนอนุมัติ 27484cf81 ก่อนอ่านข้อมูล; รันครั้งเดียว
 ผล: T031 ทาย 39.17 mas/yr วัดได้ 37.2 ± 7.2 (z = 0.27) PASS; T032 วงโคจรวงกลม 78% ที่คาบ 1-3 วัน ลดลงตามลำดับถึง 18% ที่ 100-300 วัน (rho = -1) PASS

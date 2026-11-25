@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 990,
+    "entries": 991,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 754,
+      "research": 755,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "d46223de3643326ad7fddb98d6ffc93ab382537f8240e97b8a859ee1dc81897e",
-      "entries": 3
+      "sha256": "c5dd5347d2cab943184803967bf1877b3a7a0367f1978f48453872d4ea9aacd0",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20216,9 +20216,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING",
-      "entry_sha256": "d5a4653e7faca1d5564615c2b4de40b61ab920d73609cbe72be184a9bd883ff8",
+      "entry_sha256": "c8e683712818da15b14f4b14b1d7c78e7aa7a7963d9982315878dae6a228ec39",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-real-power-plants-against-the-max-power-efficiency",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-real-power-plants-against-the-max-power-efficiency",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Test Card T033: real power plants against the max-power efficiency",
+      "entry_sha256": "68a3ec76de5e74f1aa31b57a469b1f812e14b370883a7c66e2956f2f5bcd217f",
       "stream": "research",
       "areas": [
         "research-core"
