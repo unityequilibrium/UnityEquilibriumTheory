@@ -384,6 +384,18 @@
       "license": "CDS VizieR terms (https://cds.unistra.fr/vizier-org/licences_vizier.html)",
       "visibility": "PUBLIC",
       "note": "Raw TSV as served by the CfA VizieR mirror (the Strasbourg endpoint returned HTTP 404). Downloaded after approval of T032."
+    },
+    {
+      "data_id": "ESPOSITO2010_POWER_PLANTS",
+      "description": "13 thermal power plants: hot and cold temperatures (K) and observed efficiency",
+      "source": "M. Esposito, R. Kawai, K. Lindenberg, C. Van den Broeck, Phys. Rev. Lett. 105, 150603 (2010), table of thermal plants (compiled from earlier sources)",
+      "doi_or_url": "https://arxiv.org/abs/1008.2464",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/thermo/power_plants/esposito2010_plants.csv",
+      "sha256": "aaf6c9b9bb38bf401f256e2691f777a4f87c34f6d800a8b74a59a9e0ca0756db",
+      "license": "Numbers transcribed from the arXiv source (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after approval of T033 from the LaTeX source CA.tex, all 13 rows, as published."
     }
   ]
 }
