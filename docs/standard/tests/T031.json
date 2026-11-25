@@ -1,0 +1,44 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T031",
+  "status": "APPROVED",
+  "claim_id": "C_L3_MACH_FRAME_DRAGGING",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D17 (C_L3_MACH_FRAME_DRAGGING): rotating matter drags local inertial frames. Its weak-field part, the gravitomagnetic precession G/(c^2 r^3) [3 (J.r) r - J] averaged on a polar orbit, predicts that the Gravity Probe B gyroscopes drift east-west at G J cos(delta)/(2 c^2 a^3) = 39.17 mas/yr (computed before the comparison is read).",
+  "observable": {
+    "quantity": "frame-dragging drift rate of the GP-B gyroscopes (east-west, relative to the guide star IM Pegasi)",
+    "unit": "mas/yr",
+    "domain": "Gravity Probe B, polar orbit at 642 km, 2004-2005 science data, final result of Everitt et al. (2011) PRL 106, 221101 (arXiv:1105.3456)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "EVERITT2011_GPB_FRAME_DRAGGING",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t031_gpb_frame_dragging.py",
+    "description": "Orbit average of the gravitomagnetic precession sampled on a circular polar orbit (general path, equals the closed form to 1e-15), projected on the gyroscope pointing at the guide star. Measured value and 1-sigma transcribed after approval from the paper's abstract/table as published. The script refuses to run unless this card is APPROVED and the data sha256 matches."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "Earth polar moment C = 8.034e37 kg m^2, rotation 7.292115e-5 rad/s (literature, AI choice)",
+    "orbit circular, polar, altitude 642 km above R_E = 6378.137 km",
+    "guide star declination +16.84 deg",
+    "thresholds 2 and 3 sigma of the published measurement (AI choice)"
+  ],
+  "pass_criterion": "PASS if |prediction - measurement| <= 2 sigma (published 1-sigma).",
+  "fail_criterion": "FAILED if |prediction - measurement| > 3 sigma. INCONCLUSIVE in between.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the drafter has not opened the paper for this card, but recalls from general knowledge that GP-B confirmed frame dragging at about the 20 percent level close to the GR value of about 39 mas/yr; a PASS is therefore expected and the test is weak. It tests the weak-field gravitomagnetic term behind D17, not the shell's strong-field Brill-Cohen formula, and it is a test of GR, not of anything UET-distinct. The reading of frame dragging as 'matter decides what not rotating means' is an AI interpretation (C_L3_MACH_FRAME_DRAGGING note). Orbit altitude and Earth's moment are AI-chosen literature values; a 0.3 percent change in a moves the prediction by 1 percent, far below the measurement error. Approved by the author in chat on 2026-11-24 as drafted (\"Approve and run\"); this approval is committed before the comparison data are downloaded or read.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-24",
+    "role": "AUTHOR"
+  }
+}
