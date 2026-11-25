@@ -1,0 +1,70 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_C1_FRW_DARK_ENERGY",
+  "claim_id": "C_C1_FRW_DARK_ENERGY",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "derivation_points_within_1e-10",
+      "value": "20/20 (three minisuperspace Euler-Lagrange equations each)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "lcdm_limit_max_abs_1_plus_w",
+      "value": "< 1e-12 (psi = 0)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "constraint_preservation_points_within_1e-10",
+      "value": "20/20; fails without the F' R term",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "rk4_convergence_order",
+      "value": "4 (3 grid pairs)",
+      "uncertainty": 0.3,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thawing_wa_over_1_plus_w0_m_over_H0_1",
+      "value": -1.45,
+      "uncertainty": 0.01,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thawing_wa_over_1_plus_w0_m_over_H0_2",
+      "value": "-1.23 to -1.30",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "deepest_allowed_phantom_1_plus_w_on_grid",
+      "value": -0.086,
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "allowed_runs_with_w0_below_minus_1",
+      "value": "0 of 61",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "phantom_phase_ends_at_redshift",
+      "value": "1.5 to 2.2",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_frw_background.py",
+    "commit": "d07d30813"
+  },
+  "artifacts": [],
+  "date": "2026-11-24",
+  "note": "Flat FRW, kappa = 1, dust plus psi, radiation neglected; portal force on cosmological psi dropped (for g_c within the T016 bound it is below 1e-24 of the potential force, AI estimate). Apparent dark energy defined with today's G = 1/(8 pi F0). Scan numbers come from uet_frw_background.report() on an AI grid (xi = +-0.003..0.05, psi_i = 0.1..1, m/H0 = 1..3, 135 runs; allowed = Cassini |gamma - 1| < 2.3e-5, LLR |dG/dt/G| < 2.2e-3 H0, xi outside the T001 interval); the deepest dip is a lower bound on the allowed depth, measured within 0.25 <= a <= 1, with CPL fits over 0.4 <= a <= 1 (AI windows). xi = 0 cannot go below w = -1 (identity rho_DE + p_DE = pi^2). Nearest theory: thawing and extended quintessence. Not UET-distinct and not compared with BAO or supernova data; that needs a Test Card approved by the author."
+}
