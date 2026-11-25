@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 85,
-    "entries": 957,
+    "sources": 86,
+    "entries": 958,
     "by_stream": {
       "book-history": 94,
       "operations": 140,
-      "research": 722,
+      "research": 723,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -442,6 +442,11 @@
       "path": "2026/2026-11-24.md",
       "sha256": "e7b09d1a7ff8c7d016e13521ee57141dd3f8c0009ed26ddbfd5767823cdb38e1",
       "entries": 3
+    },
+    {
+      "path": "2026/2026-11-25.md",
+      "sha256": "a248aa0276a88d50894769a45c90ebe82a887861f1f46c9be9bc9ebe64857980",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -19554,6 +19559,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Test Card T033 proposal: parent-action w(a) against BAO and supernovae",
+      "entry_sha256": "a6dfba13d05ed3d5561ce334bb1f6825d155925b601bb856989cef8dad7a27b1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
       "legacy_root_path": false
     },
     {
