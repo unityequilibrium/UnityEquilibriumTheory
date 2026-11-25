@@ -2,64 +2,40 @@
   "schema": "uet-test-card-v2",
   "test_id": "T033",
   "status": "APPROVED",
-  "claim_id": "C_C1_FRW_DARK_ENERGY",
+  "claim_id": "C_L3_OPENNESS_ORDER",
   "theory_card": {
     "card_id": "UET_PARENT",
     "version": 1
   },
-  "hypothesis": "The expansion history measured by DESI DR2 BAO and Pantheon+ supernovae can be produced by the parent action: a thawing psi with xi_c restricted to what Cassini, lunar laser ranging and T001 allow today fits the data about as well as a free linear w(a) (CPL).",
+  "hypothesis": "Wave D13 (C_L3_OPENNESS_ORDER): openness K sets a ceiling on the work a system draws between T_h and T_c, reached at eta_CA = 1 - sqrt(T_c/T_h). AI reading tested here: systems that keep order from their openness run near that ceiling, so real thermal power plants show eta_obs close to eta_CA.",
   "observable": {
-    "quantity": "dchi2_CPL = chi2_min(UET family) - chi2_min(CPL) for BAO + SN distances",
-    "unit": "1",
-    "domain": "0.01 < z < 2.5; flat FRW; pressureless matter; radiation neglected"
+    "quantity": "m = median over plants of |eta_obs / eta_CA - 1|",
+    "unit": "dimensionless",
+    "domain": "thermal power plants (nuclear, coal, steam, gas turbine) listed with T_h, T_c and eta_obs in Esposito et al. (2010) PRL 105, 150603 (arXiv:1008.2464)"
   },
   "test_kind": "CONSTRAINT",
   "data_sources": [
     {
-      "data_id": "DESI_DR2_BAO_MEAN",
-      "role": "COMPARISON",
-      "exposure": "SEEN_SUMMARY"
-    },
-    {
-      "data_id": "DESI_DR2_BAO_COV",
-      "role": "COMPARISON",
-      "exposure": "SEEN_SUMMARY"
-    },
-    {
-      "data_id": "PANTHEON_PLUS_HD",
-      "role": "COMPARISON",
-      "exposure": "SEEN_SUMMARY"
-    },
-    {
-      "data_id": "PANTHEON_PLUS_COV",
+      "data_id": "ESPOSITO2010_POWER_PLANTS",
       "role": "COMPARISON",
       "exposure": "SEEN_SUMMARY"
     }
   ],
   "prediction_method": {
-    "script": "core/03_lanes/scalar_tensor/t033_w_of_a_bao_sn.py",
-    "description": "Distances from H(z) of each model: LCDM (Omega_m), CPL (Omega_m, w0, wa; Nelder-Mead from four starts) and the UET family (uet_frw_background.py; grid xi_c in {0, -0.01, -0.003, 0.003, 0.01, 0.02, 0.03, 0.05}, psi_i in {0.1..1.2}, m/H0 in {0.5, 1, 2, 3, 4}; only points passing Cassini, LLR and T001 today). Omega_m profiled on 0.20..0.42 in steps of 0.01 for LCDM and UET. BAO amplitude c/(H0 r_d) and the SN offset profiled analytically. Pantheon+ rows with zHD > 0.01 and the matching STAT+SYS covariance block."
+    "script": "core/03_lanes/persistence/t033_power_plants_max_power.py",
+    "description": "T_h, T_c and eta_obs of every plant in the table transcribed after approval from the arXiv source as published; eta_CA computed from T_h and T_c; the table's own derived columns (eta_C, eta_-, eta_+) not used. The script refuses to run unless this card is APPROVED and the data sha256 matches."
   },
-  "free_parameters": [
-    "Omega_m",
-    "psi_i",
-    "m_psi/H0",
-    "xi_c",
-    "c/(H0 r_d) (nuisance)",
-    "SN offset M (nuisance)"
-  ],
+  "free_parameters": [],
   "fixed_parameters": [
-    "flat FRW; radiation neglected at z < 2.5 (AI choice)",
-    "UET scan grid and Omega_m grid as in prediction_method (AI choice)",
-    "Pantheon+ cut zHD > 0.01 (AI choice, the usual cosmology cut)",
-    "bounds applied today: Cassini |gamma - 1| < 2.3e-5, LLR |dG/dt / G| < 2.2e-3 H0, xi_c outside [2.0, 2.4] (T001)",
-    "no CMB information (option B of the proposal not taken)",
-    "SN compilation Pantheon+ (author's choice, 2026-11-25)"
+    "all plants in the table, none removed",
+    "median of |eta_obs/eta_CA - 1| (robust to one odd plant; AI choice)",
+    "thresholds 0.10 (PASS) and 0.25 (FAILED) (AI choices)",
+    "fewer than 8 plants gives INCONCLUSIVE"
   ],
-  "pass_criterion": "PASS if dchi2_CPL <= 4.",
-  "fail_criterion": "FAIL if dchi2_CPL > 9. INCONCLUSIVE if 4 < dchi2_CPL <= 9.",
+  "pass_criterion": "PASS if the median |eta_obs/eta_CA - 1| <= 0.10.",
+  "fail_criterion": "FAILED if the median |eta_obs/eta_CA - 1| >= 0.25. INCONCLUSIVE otherwise or with fewer than 8 plants.",
   "drafted_by": "claude",
-  "note": "Proposal: topics/0.3_Cosmology_Hubble_Tension/Doc/PROPOSAL_T033_W_OF_A_2026-11-25.md. Disclosure: not blind. The drafter knows the published DESI DR2 result that BAO with CMB and SN prefers w0 > -1, wa < 0 in CPL at about 2.8 to 4.2 sigma depending on the SN set, with a crossing of w = -1 near z = 0.4 to 0.5, and that the preference is weaker without the CMB. C1 found the UET family has w0 >= -1 and phantom phases only at z > 1.5. The drafter expects the outcome to be PASS or INCONCLUSIVE without the CMB. Reported, not deciding: dchi2_LCDM = chi2_min(LCDM) - chi2_min(UET) and the UET best-fit (w0, wa). Data downloaded with the author's permission on 2026-11-25; only file structure read before approval. Approved by the author on 2026-11-25 as drafted (\"Approve T033\").",
+  "note": "Disclosure: to find the table the drafter read the paper's abstract and, with every digit masked, the table's caption, column heads and plant names; no temperature or efficiency was seen. The paper's text says the Curzon-Ahlborn efficiency describes actual plants very well (seen while locating the table), and the drafter recalls that from the literature; a PASS is plausible, but the median could land anywhere and gas turbines are known to differ. T_h, T_c are as reported (steam or combustion temperatures, cooling water), not the true reservoirs; plants are designed for cost, not only power. The step from D13's ceiling to 'real systems run near it' is an AI interpretation; a FAILED would remove that reading, not the D13 ceiling. Nearest theory: Curzon-Ahlborn, Novikov, low-dissipation engines. Not UET-distinct. Approved by the author in chat on 2026-11-25 as drafted (\"Approve and run\"); this approval is committed before the table's numbers are read.",
   "approval": {
     "approved_by": "santxkoz",
     "date": "2026-11-25",

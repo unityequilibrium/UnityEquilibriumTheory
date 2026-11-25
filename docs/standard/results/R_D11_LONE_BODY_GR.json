@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D11_LONE_BODY_GR",
+  "claim_id": "C_L3_LONE_BODY_GR",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "binary_general_path_vs_closed_form",
+      "value": "< 1e-10 relative, 20/20 random systems",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "spinning_body_second_route",
+      "value": "< 1e-10 relative, 10/10 random bodies",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lone_body_uniform_motion_dddQ",
+      "value": "0 (below 1e-10 of the spinning scale, 10/10)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "spherical_pulsation_power",
+      "value": "0 (Q_TF below 1e-12 of the second moment while the size changes by a factor 1.7)",
+      "uncertainty": null,
+      "unit": "W"
+    },
+    {
+      "name": "second_body_limit_order",
+      "value": "1.00 in m/M (P proportional to m^2)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "sun_alone_power",
+      "value": 0.0,
+      "uncertainty": null,
+      "unit": "W"
+    },
+    {
+      "name": "sun_with_earth_power",
+      "value": "196 (5.1e-25 of the solar luminosity)",
+      "uncertainty": null,
+      "unit": "W"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_lone_body_gr.py",
+    "commit": "6a2fb65b9"
+  },
+  "artifacts": [],
+  "date": "2026-11-23",
+  "note": "A lone body in GR without Lambda, in a static empty space: a lone free-falling body moves uniformly in any inertial frame, its mass and momentum are conserved and its quadrupole is quadratic in time, so it radiates exactly nothing; a spherical pulsation also radiates nothing (Birkhoff). Loss needs something else: non-spherical motion of its own parts, a second body (power falls as m^2), or Lambda's horizon (wave D7). Sun and Earth are an illustrative AI choice. Nearest theory: Birkhoff's theorem, equivalence principle, quadrupole formula (Einstein 1918; Peters and Mathews 1963). Not UET-distinct. Limit (author, 2026-11-23): Schwarzschild is static; it puts the body in an empty space that already exists forever, so D11 answers a frozen picture, not the author's universe that begins and is dynamic; that needs a dynamic GR solution (AI candidates: a closed dust Friedmann universe, the Oppenheimer-Snyder interior, Lemaitre-Tolman-Bondi)."
+}

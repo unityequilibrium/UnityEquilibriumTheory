@@ -1,5 +1,7 @@
 # Topic 0.18: Mathnicry - Code
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](../Doc/AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](06_Lean/uet_formal/README.md).
+
 Implements the physical resolution of the Millennium Prize Problems using the UET Field Equation.
 
 ---

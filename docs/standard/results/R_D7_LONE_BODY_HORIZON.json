@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D7_LONE_BODY_HORIZON",
+  "claim_id": "C_L3_LONE_BODY_HORIZON",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "closed_form_vs_numeric_cooling_time",
+      "value": "< 1e-10 relative, 24/24 random",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "zero_bath_limit_convergence_order",
+      "value": "4.0 (three grids)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "bath_thermal_wavelength_over_horizon_radius",
+      "value": "4 pi^2 = 39.48 exactly, any H",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "de_sitter_bath_temperature",
+      "value": 2.198e-30,
+      "uncertainty": null,
+      "unit": "K"
+    },
+    {
+      "name": "illustrative_rock_1m_cooling_300K_to_3K",
+      "value": 5520.0,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "illustrative_rock_1m_last_relaxation_time_lower_bound",
+      "value": 1.05e+94,
+      "uncertainty": null,
+      "unit": "yr"
+    },
+    {
+      "name": "illustrative_rock_entropy_300K_to_3K",
+      "value": "body -3.4e30 k, horizon bath +9.8e61 k",
+      "uncertainty": null,
+      "unit": "k_B"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_lone_body_horizon.py",
+    "commit": "a0b1cdfd0"
+  },
+  "artifacts": [],
+  "date": "2026-11-22",
+  "note": "Model A of the author's 2026-11-22 two-space picture: one body, no other matter, Lambda only (de Sitter, H = H_L from wave D6). Geodesic observer sees Gibbons-Hawking radiation at T_dS. Constant heat capacity, black surface, Stefan-Boltzmann contact; the contact fails below about hc/(kR), so relaxation times are lower bounds. The rock (radius 1 m, 3000 kg/m^3, 800 J/(kg K)) is an illustrative AI choice. Nearest theory: Stefan cooling and Gibbons-Hawking (1977). Not UET-distinct."
+}

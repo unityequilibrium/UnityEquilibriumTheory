@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T030",
+  "status": "APPROVED",
+  "claim_id": "C_L3_OPENNESS_LAYER3",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D14 (C_L3_OPENNESS_LAYER3): a system cut off from its supply loses its layer-3 pool as R = R_ss exp(-delta t), with a constant specific loss rate. Applied to a fasting body living on its reserves (after the first days of a long fast), body mass should fall with a specific loss rate that stays near constant as the body shrinks; constant burn predicts it rises by the ratio of the masses, and a strongly adapting metabolism predicts it falls well below constant.",
+  "observable": {
+    "quantity": "r = k_late / k_early, the specific body-mass loss rate in the late half of phase II over that in the early half; compared with r_lin = mean mass early / mean mass late",
+    "unit": "dimensionless",
+    "domain": "one human subject (L.) during a 31-day water-only fast, Benedict (1915) A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203, daily naked morning body weight from the chapter 'Body-weight'; days 1-5 of the fast excluded"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "BENEDICT1915_L_DAILY_BODY_WEIGHT",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t030_fasting_mass_decay.py",
+    "description": "Daily (day of fast, naked body weight in kg) points for L. transcribed after approval from Benedict 1915 as published (archive.org OCR text checked against the page scan; no correction); points from day 6 to the last morning weighing of the fast; split into early and late halves at the mid-time; k = (m_start - m_end)/((t_end - t_start) m_mean) in each half; r = k_late/k_early, r_lin = m_mean_early/m_mean_late. The script refuses to run unless this card is APPROVED and the data sha256 matches the manifest."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "days 1-5 of the fast excluded as the human phase I (glycogen and early water loss); AI choice made before reading the table",
+    "Benedict's day numbering and weights as published; no smoothing, no correction",
+    "halves split at the mid-time of the window",
+    "thresholds 0.25 and 0.75 of the way from r = 1 to r_lin, on both sides of r = 1 (AI choices)",
+    "at least 4 points in the window, else INCONCLUSIVE"
+  ],
+  "pass_criterion": "PASS if |r - 1| <= 0.25 (r_lin - 1), i.e. the specific loss rate stays close to constant as D14's exponential leak requires.",
+  "fail_criterion": "FAILED if r >= 1 + 0.75 (r_lin - 1) (specific rate rises nearly as much as constant burn requires) or r <= 1 - 0.75 (r_lin - 1) (specific rate falls by as much, i.e. the loss slows far faster than an exponential leak). INCONCLUSIVE otherwise, or with fewer than 4 points.",
+  "drafted_by": "claude",
+  "note": "Amendment (2026-11-23), drafted before any table of this source was read. The first version of this card, approved by the author in commit 890eb3e36, named Robin et al. 1988 (emperor penguins); its full text is paywalled, only the abstract could be read, so that version was never run and no data were registered. This version changes the source to Benedict 1915 (public domain, archive.org), the window to days 6 onward, and makes the criteria two-sided: the one-sided version would have passed a fast whose loss slows for reasons unrelated to D14 (early water loss, metabolic adaptation). Disclosure: the drafter downloaded the archive.org OCR text (sha256 f6d423cee9cef9f80a23269188028986e2f932109b45251f3b752a9eccc0411c) to locate the weighing method and the table, reading it only with every digit masked; no weight value was seen. From general memory the drafter knows L. lost roughly a fifth of his body weight over the 31 days, and that fasting literature reports larger daily losses early in a fast; daily values were not recalled. Body weight includes water, protein and fat, not the fat reserve alone; one subject, so no spread across individuals. The mapping of a body's reserves to the layer-3 pool and of a fast to 'closing the system' is an AI interpretation. Nearest theory: fasting physiology, first-order depletion. Not UET-distinct. Criteria are AI choices for the author to accept or change. Approved by the author in chat on 2026-11-23 as drafted (\"Approve and run\"), together with dropping the unpushed, never-run approval commit 890eb3e36 of the first version; this approval is committed before the weight table is read.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-23",
+    "role": "AUTHOR"
+  }
+}

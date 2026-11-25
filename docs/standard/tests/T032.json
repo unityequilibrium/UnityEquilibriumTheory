@@ -1,0 +1,45 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T032",
+  "status": "APPROVED",
+  "claim_id": "C_L3_TIDAL_SETTLING",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D18 (C_L3_TIDAL_SETTLING): an orbit settles where it stops flexing (circular, synchronous), by dissipating its flexing F ~ (G M/a^3)^2 n^2 e^2, which grows as P^-6 at fixed masses. The settled state must therefore be reached first at the shortest periods: among binary stars, the fraction of circular orbits falls as the period grows.",
+  "observable": {
+    "quantity": "fraction f_k of orbits with e < 0.05 in period bins [1,3), [3,10), [10,30), [30,100), [100,300) d, and the Spearman rank correlation rho of (k, f_k)",
+    "unit": "dimensionless",
+    "domain": "spectroscopic binaries of the SB9 catalogue (VizieR B/sb9/orbits), one orbit per system, P between 1 and 300 d"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "SB9_ORBITS_VIZIER",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t032_binary_circularization.py",
+    "description": "SB9 orbits (Seq, Orb, Per, e) downloaded from VizieR after approval; per system the lowest orbit number; e missing or fixed at 0 counts as circular; f_k and rho as in the observable. The script refuses to run unless this card is APPROVED and the data sha256 matches."
+  },
+  "free_parameters": [],
+  "fixed_parameters": [
+    "circular means e < 0.05 (AI choice)",
+    "period bins and the exclusion of P < 1 d (contact systems) are AI choices",
+    "one orbit per system: lowest orbit number",
+    "PASS needs f_1 >= 0.7 and rho <= -0.9; FAILED if f_1 <= 0.5 or rho >= 0 (AI choices)",
+    "any bin with fewer than 30 systems gives INCONCLUSIVE"
+  ],
+  "pass_criterion": "PASS if f_1 >= 0.7 and rho <= -0.9: the shortest periods are mostly circular and the circular fraction falls with period.",
+  "fail_criterion": "FAILED if f_1 <= 0.5 or rho >= 0. INCONCLUSIVE otherwise, or if any bin has fewer than 30 systems.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the drafter has not downloaded SB9 for this card, but knows the period-eccentricity relation of binaries in general (short-period orbits are mostly circular, the SB9 paper's abstract mentions it); a PASS is expected and the test is weak. It does not separate tidal settling from circular formation, and authors often fix e = 0 for short periods, which biases f_1 upward (disclosed, not corrected). D18 gives the direction (shorter settles first), not a cutoff period, since it has no timescale. Reading flexing as 'resistance' is an AI interpretation. Nearest theory: Zahn/Hut tidal circularization. Not UET-distinct. Approved by the author in chat on 2026-11-24 as drafted (\"Approve and run\"); this approval is committed before the comparison data are downloaded or read.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-24",
+    "role": "AUTHOR"
+  }
+}

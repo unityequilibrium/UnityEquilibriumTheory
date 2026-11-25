@@ -29,6 +29,7 @@ uet_history/** linguist-documentation
 /docs/data/external/nuclear/u234_half_life/u234_half_life.csv -text
 # AnAge Build 15 raw download keeps its CRLF bytes (hash-locked in the data manifest).
 /docs/data/external/biology/anage/anage_build15_data.txt -text -whitespace
+/docs/data/external/astro/sb9/sb9_orbits.tsv -text -whitespace
 
 # Immutable attributed author archives: retain upstream whitespace and bytes.
 # Integrity is enforced by Topic13 source SHA-256 and parser regression tests.

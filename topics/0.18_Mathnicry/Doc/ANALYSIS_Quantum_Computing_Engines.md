@@ -1,5 +1,7 @@
 # 🔬 ANALYSIS: Quantum Computing Engines (เอนจินการประมวลผลควอนตัม)
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 > **Files:** `Engine_Quantum_Logic.py`, `Engine_Quantum_LC_Unity.py`, `Research_Qubit_Mechanics.py`, `Verify_Quantum_Logic.py`
 > **Role:** Engine (Quantum Operations)
 > **Status:** 🟢 STABLE

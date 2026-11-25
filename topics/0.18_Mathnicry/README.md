@@ -10,6 +10,28 @@ Topic status: core research, draft.
 
 This topic groups UET-inspired mathematical and mathematical-physics experiments related to Riemann-style stability, BSD-style elliptic-curve surrogates, quantum-search scaling, Collatz dynamics, SHA-256/search demos, and proof-boundary dashboards.
 
+## Legacy status (labelled 2026-11-25 with the owner's approval)
+
+The legacy branches of this topic are `LEGACY_UNREVIEWED`. None of them proves a theorem. The review is in
+[`Doc/AUDIT_2026-11-23_STANDARD_V2.md`](Doc/AUDIT_2026-11-23_STANDARD_V2.md). Files are kept as they were; nothing was
+deleted or renamed. Overclaims to read with that in mind:
+
+- `Result/03_Research/grand_slam_report.txt` (and its copies under `Result/03_show_Result/`), written by
+  `Code/02_Proof/Proof_Millennium_Grand_Slam.py`: the PASS lines for seven Millennium problems are printed strings, not
+  tied to any theorem statement.
+- Riemann branch (`Doc/ANALYSIS_01_Riemann_Hypothesis.md` "FINAL", `Engine_Riemann_Field`, `Research_Riemann_*`,
+  `Proof_Riemann_Siege`): the zeros come from `mpmath.zetazero`, which already returns zeros on the critical line, so the
+  checks are circular and cannot exclude off-line zeros.
+- BSD branch (`Research_BSD_Elliptic_Unity`, `Engine_Elliptic_Resonance`): surrogate rank rule and a made-up L-function.
+- P vs NP (`Proof_P_vs_NP_*`, Grover scripts): Grover's square-root speed-up, which does not make NP-complete problems
+  polynomial.
+- Collatz, Poincare and Hodge scripts: bounded checks and 2D grid smoothing, not proofs.
+
+Each legacy analysis document now opens with a one-line "not a proof" banner. The current formal work of this topic is
+the Lean lane [`Code/06_Lean/uet_formal/`](Code/06_Lean/uet_formal/README.md): machine-checked proofs (F1 to F9) of
+derived relations of the UET core, which make those statements exact under their assumptions but do not show that the
+model describes nature.
+
 ## Current Claim Class
 
 - Claim class: internal run-contract support for a surrogate BSD demonstration.

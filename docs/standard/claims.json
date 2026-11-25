@@ -228,6 +228,15 @@
       "note": "Links the observation layer to the core equation at linear order, flat background, 1+1D only; the full nonlinear curved-space statement is open."
     },
     {
+      "claim_id": "C_OBS_TWO_DELAYS",
+      "statement": "Seeing a distant event and being present with it are separated by two different delays: the record age at arrival exceeds 2d/c for every timelike journey started when the record arrives, whatever is spent, while the traveller's own ageing can be made arbitrarily short only by converting rest mass, at photon-rocket mass ratio m0/m1 >= exp(2 eta) = (gamma (1 + beta))^2 for start and stop.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O5_TWO_DELAYS"
+      ],
+      "note": "Extends principle P2: at arrival the gap is Xdot times an age above 2d/c. Both bounding events lie on the source worldline, so 2d/c does not depend on the one-way synchronisation convention. Textbook special relativity, flat spacetime; not UET-distinct."
+    },
+    {
       "claim_id": "C_T010_TWO_CARRIER_RECORDS",
       "statement": "Records of one event carried by gravitational waves and by light travel at the same speed: c_T = 1 of the parent action lies inside the GW170817 bound (v_GW - v_EM)/v_EM in [-3e-15, +7e-16].",
       "level": "L2_CONFRONTED",
@@ -461,6 +470,209 @@
         "R_L3_SUPPLY"
       ],
       "note": "The pool loss follows from the action; the supply is a boundary flux set by an enclosing system. Nearest known theory: beam attenuation, chemostat dilution, laser pump threshold. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_DIVIDER",
+      "statement": "The environment that receives a system's entropy (the divider, at T_c) sets both its resource and its ability to persist: the usable part of a heat store is the exergy C[(T0 - T_c) - T_c ln(T0/T_c)], which vanishes as C (T0 - T_c)^2/(2 T0) when the divider is as warm as the store (alone), and a structure that needs work W_m through linear contacts persists only if T_c <= T_c* = (sqrt(T_h) - sqrt(W_m/K))^2 with K = K_h K_c/(K_h + K_c), a sink threshold beside the supply threshold S* of C_L3_SUPPLY.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D1_ENTROPY_DIVIDER"
+      ],
+      "note": "Exergy and endoreversible (Novikov) thermodynamics; not UET-distinct. Adds the divider temperature to the layer-3 resource and persistence language. Linear heat transfer, fixed divider temperature, no chains. Holds for stores with positive heat capacity only; systems held together by gravity behave oppositely (C_L3_GRAVITATING_DIVIDER)."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_CHAIN",
+      "statement": "When the waste heat of one structure is the environment of the next, a chain of N structures between a source at T0 and a final divider at T_N creates no resource: its largest total work rate is K_chain (sqrt(T0) - sqrt(T_N))^2 with every contact in series, so each extra hand-off lowers it (to 1/N for equal contacts); at a given entropy flux the shares between stages are zero-sum, and the chain persists only if the sum of the stages' needs is below that maximum.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D2_ENTROPY_CHAIN"
+      ],
+      "note": "Extends C_L3_ENTROPY_DIVIDER to chains. Endoreversible series engines with linear contacts; not UET-distinct. Radiative contacts and warming dividers are open."
+    },
+    {
+      "claim_id": "C_L3_ENTROPY_CHAIN_RADIATIVE",
+      "statement": "In a chain of entropy dividers whose contacts follow J = G (T_h^n - T_c^n)/n, sharing between stages is zero-sum only for linear contacts (n = 1): for radiation (n = 4) and any n > 1 a unit of work taken by an upstream stage costs the downstream stages more than one unit (marginal cost c > 1), so the way the upstream stage uses its share changes what the whole chain gets; for n < 1 the opposite holds (c < 1).",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D3_ENTROPY_CHAIN_RADIATIVE"
+      ],
+      "note": "Extends C_L3_ENTROPY_CHAIN. The effect is small unless a contact works near its limit (c = 1.015 in the illustrative sun-planet-space case). Endoreversible engines with radiative contacts; not UET-distinct. Sunlight dilution and warming dividers are open."
+    },
+    {
+      "claim_id": "C_L3_GRAVITATING_DIVIDER",
+      "statement": "A system held together by gravity has negative heat capacity (C = -(3/2) N k in virial equilibrium), so against a colder divider it does not run down but heats and moves away from the divider, exponentially at rate G/|C| for a linear contact and diverging in finite time 4|C|/(3 G T0^3) for radiation into 0 K; two bodies with C1 < 0 and C2 > 0 settle only if C2 < |C1| (Lynden-Bell and Wood), so a divider of unlimited capacity such as space never lets a gravitating system settle, while the usable fraction 1 - T_c/T of the energy it loses rises with time.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D4_GRAVITATING_DIVIDER"
+      ],
+      "note": "Limits the scope of C_L3_ENTROPY_DIVIDER (positive heat capacity only). Thermodynamics of self-gravitating systems; not UET-distinct. Black holes as dividers and cosmic expansion are open."
+    },
+    {
+      "claim_id": "C_L3_BLACK_HOLE_DIVIDER",
+      "statement": "A black hole used as the divider gets colder as it receives energy (C = -8 pi G M^2 k/(hbar c) < 0, dS/dE = 1/T_H), so unlike ordinary dividers it improves as matter piles in; it is the largest entropy store (about 1.8e90 k for Sgr A*), every hole above 4.5e22 kg is colder than today's CMB and grows, and its evaporation is a layer-3 burn with P ~ F^-2 whose lifetime is F0/(3 P0), one third of the naive store-over-power estimate.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D5_BLACK_HOLE_DIVIDER"
+      ],
+      "note": "Schwarzschild black-hole thermodynamics and the generalised second law; not UET-distinct. Links the author's black-hole picture to the divider waves and to C_L3_BURN_LAW_SELECTION. Rotation, accretion and cosmic expansion are open."
+    },
+    {
+      "claim_id": "C_L3_COSMIC_DIVIDER",
+      "statement": "In flat Lambda-CDM (Planck 2018) the last divider is the cosmic event horizon: it is cold but not at zero (T_dS = hbar H_L/(2 pi k) = 2.2e-30 K, so no process reaches efficiency 1), its capacity is finite (S_dS = 3.3e122 k, a ceiling on all entropy, the traces of author item 9, the universe can hold), and it takes over in sequence: the background becomes colder than a solar-mass black hole at 3.2e11 yr and than Sgr A* at 5.9e11 yr, falls below T_dS at 1.2e12 yr, and every hole lighter than c^3/(4 G H_L) = 5.6e52 kg eventually evaporates into the horizon.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D6_COSMIC_DIVIDER"
+      ],
+      "note": "Lambda-CDM and de Sitter horizon thermodynamics; not UET-distinct. Closes the divider sequence of waves D1-D5 (store, chain, radiation, gravity, black hole, horizon). Radiation era, w != -1 and the bath interpretation of the horizon are open."
+    },
+    {
+      "claim_id": "C_L3_LONE_BODY_HORIZON",
+      "statement": "A lone freely falling body in Lambda-only (de Sitter) space is not alone: the horizon is a bath at T_dS = hbar H/(2 pi k) that receives C (T0 - T)/T_dS of entropy while the body loses only C ln(T0/T), and the body approaches T_dS only as a limit (rate 4 sigma A T_dS^3/C), never 0 K; but the bath's thermal wavelength is exactly 4 pi^2 c/H, larger than the horizon, so no body inside couples to it as a blackbody and the relaxation time (at least 1e94 yr for a 1 m rock) is a lower bound.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D7_LONE_BODY_HORIZON"
+      ],
+      "note": "Stefan cooling plus Gibbons-Hawking; not UET-distinct. Model A of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22): space of the first kind divides entropy in principle but infinitely slowly; in practice other matter and radiation divide it (model B). Sharpens SYNTHESIS_AUDIT C2. Correction 2026-11-23: uses the measured Lambda and its horizon bath, which acts as a divider, so it is not the author's one-object universe (see D11)."
+    },
+    {
+      "claim_id": "C_L3_FALLING_TOGETHER",
+      "statement": "When bodies fall together, frying (dynamical friction) sinks a mass M from r_i in t = 1.17 r_i^2 v_c/(G M lnL) and hands the light sea entropy 2 (M/m) ln(r_i/r_f), so the sea is the divider of the heavy body; mixing (a non-spinning black-hole merger) radiates at least 5.72 % of mu c^2 and at most 1 - sqrt(m1^2 + m2^2)/(m1 + m2) of the mass, and multiplies the entropy by 2 (1 - eps)^2 for equal masses, so mixing out-produces frying by about 82 orders of magnitude in the illustrative case.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_D8_FALLING_TOGETHER",
+        "R_T029_MERGER_MASS_LOSS_GWTC"
+      ],
+      "note": "Chandrasekhar dynamical friction, Schwarzschild circular orbits and the Hawking area theorem; not UET-distinct. Model B of the author's two-space picture (AUTHOR_PROPOSITION §4, 2026-11-22). Mass is lost on mixing, measurable from outside in GR. The radiated wave is coherent and carries little entropy (AI inference). T029 (2026-11-23, numbered T028 when run): 225 of 227 nearly non-spinning GWTC mergers radiate between 0.0572 eta and the area cap; median 3.13 times the inspiral loss; weak test, GR-derived final masses; the frying branch is not tested. L2 approved by the author. Correction 2026-11-23: the author's stir-fry analogy was an illustration (in SR being pushed and collapsing together look alike), not a model; D8 and T029 are AI readings of it, not the author's hypothesis (AUTHOR_PROPOSITION §4)."
+    },
+    {
+      "claim_id": "C_L3_EVAPORATION_RECORD",
+      "statement": "When one black hole evaporates completely in Lambda-only space, space returns to what it was: isotropic emission leaves exactly zero gravitational-wave memory and behind the outgoing radiation the metric is pure de Sitter; the record of the mass is the radiation, which passes the hole's horizon after ln2/H = 12.1 Gyr and redshifts, and the permanent lag (G/(r c^2)) int M dt of clocks that were near it; the lifetime is M_eq^3 (atanh x0 - atan x0)/(2a), which reduces to F0/(3 P0) for small holes.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D9_EVAPORATION_RECORD"
+      ],
+      "note": "Hawking evaporation, Birkhoff with Lambda and gravitational-wave memory; not UET-distinct. Supports the author's 2026-11-22 split between space and record (AUTHOR_PROPOSITION §4): the record needs radiation or matter, not space. The two horizon temperatures belong to different observers; the flux balance mixes frames (stated). Correction 2026-11-23: uses the measured Lambda, and the Hawking radiation is itself a second thing, so it is not the author's one-object universe (see D11)."
+    },
+    {
+      "claim_id": "C_L3_RECORD_REAL_UNIVERSE",
+      "statement": "In the real universe the record of a vanished mass splits three ways: radiation emitted today escapes intergalactic matter (Thomson optical depth over the whole future 7.3e-4, so at least 99.9 % is never scattered); records from the dense early universe were absorbed by matter (optical depth 2.4 by z = 100 if ionised, opaque before recombination); and asymmetric events leave a permanent geometric memory, for a circular-binary merger Delta h = G E sin^2 i (17 + cos^2 i)/(24 c^4 r), while space described by Lambda alone keeps nothing in either model.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D10_RECORD_REAL_UNIVERSE"
+      ],
+      "note": "Thomson optical depth and nonlinear gravitational-wave memory; not UET-distinct. Real-universe counterpart of C_L3_EVAPORATION_RECORD. In the author's 2026-11-22 split (AI interpretation): the first kind of space keeps nothing; the geometry made by mass-energy keeps asymmetric events; matter keeps early records as heat."
+    },
+    {
+      "claim_id": "C_L3_LONE_BODY_GR",
+      "statement": "In GR without Lambda, one body alone in free fall radiates and dissipates exactly nothing (conserved mass and momentum, quadrupole quadratic in time; a spherical pulsation also emits nothing), so a lone free fall uses no energy; any loss needs something else: the body's own non-spherical internal motion (32 G (I1 - I2)^2 omega^6 / (5 c^5) for a spinning body), a second body (P = (32/5) G^4 M^2 m^2 (M + m)/(c^5 d^5), falling as m^2; Sun with Earth 196 W) or Lambda's horizon.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D11_LONE_BODY_GR"
+      ],
+      "note": "Birkhoff's theorem, equivalence principle and the quadrupole formula; not UET-distinct. Addresses a lone body in a static, already-existing empty space, without the measured Lambda or horizon bath of D7 and D9. AI interpretation: the author's step from space to behaviour to burning has no GR equation for a single body; a UET law for it would differ from GR here. Limit (author, 2026-11-23): Schwarzschild is static; it puts the body in an empty space that already exists forever, so D11 answers a frozen picture, not the author's universe that begins and is dynamic; that needs a dynamic GR solution (AI candidates: a closed dust Friedmann universe, the Oppenheimer-Snyder interior, Lemaitre-Tolman-Bondi)."
+    },
+    {
+      "claim_id": "C_L3_SPACE_CAPACITY_USED",
+      "statement": "Space's capacity to take disorder (the Gibbons-Hawking entropy of the final de Sitter horizon, 3.3e122 k) is almost unused today: inside today's event horizon (16.7 Gly) radiation holds 1.4e-34 of it and supermassive black holes about 8e-21 (illustrative inputs); even all matter inside the horizon collapsed into one hole would hold only (Om/OL)^2 (R_eh H_L/c)^6 = 0.157, so matter alone can never fill space.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D12_SPACE_CAPACITY_USED"
+      ],
+      "note": "Gibbons-Hawking entropy and the generalised second law; not UET-distinct. Answers the author's 'space is not 100 % open in the dynamic view' (AUTHOR_PROPOSITION §4, 2026-11-23) with a number. Black-hole inputs are illustrative AI values from memory; a data comparison would need the measured black-hole mass function. AI interpretation: space is open to all but about one part in 10^20 today."
+    },
+    {
+      "claim_id": "C_L3_OPENNESS_ORDER",
+      "statement": "For a system between a hot side T_h and a cold side T_c with heat contacts g_h, g_c, openness K = g_h g_c/(g_h + g_c) sets the ceiling on the work it can draw, P_max = K (sqrt T_h - sqrt T_c)^2 at efficiency 1 - sqrt(T_c/T_h), so more openness allows more kept order; the same openness without the system's own engine gives zero work and the most entropy; a structure that decays at entropy rate sigma_d persists only if K >= T_c sigma_d/(sqrt T_h - sqrt T_c)^2, so a closed system (K -> 0) keeps no order.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_D13_OPENNESS_ORDER",
+        "R_T033_POWER_PLANTS_MAX_POWER"
+      ],
+      "note": "Endoreversible thermodynamics (Novikov 1957; Curzon and Ahlborn 1975) and the maximum power principle; not UET-distinct. Puts the author's 2026-11-23 statement in one equation (AUTHOR_PROPOSITION §4): openness is a ceiling, the order needs the system's engine, the environment (T_h, T_c) is a limit, not a choice. The model (Newtonian contacts, reversible core) is an AI choice. Confronted in T033 (2026-11-25): 13 real power plants scatter around eta_CA with a median gap of 19 percent (INCONCLUSIVE); L2 approved by the author."
+    },
+    {
+      "claim_id": "C_L3_OPENNESS_LAYER3",
+      "statement": "The openness ceiling of D13 composes with the layer-3 pool equation of L3-2: with the drawn work filling the pool, S = eta K (sqrt T_h - sqrt T_c)^2 / e, the steady pool is linear in openness, the two persistence thresholds are one condition (T_c sigma_d = e delta R*_min / eta), a structure survives ln(R_ss/R*_i)/delta after the system closes and appears -ln(1 - R*_i/R_ss)/delta after it opens.",
+      "level": "FAILED",
+      "evidence": [
+        "R_D14_OPENNESS_LAYER3",
+        "R_T030_FASTING_MASS_DECAY"
+      ],
+      "note": "Synthesis check, not UET-distinct (chemostat and pump-threshold models, endoreversible thermodynamics). Openness is the enclosing system that L3-2 left open; the author's 'a closed system dies' (AUTHOR_PROPOSITION §4, 2026-11-23) is the survival time after closing, set by the pool leak delta. eta and e are free parameters. FAILED in T030 (2026-11-23): a fasting man's specific mass-loss rate fell (r = 0.922, fail line 0.934), so a closed pool leaking with constant delta does not describe a living reserve after supply stops. The algebra relating thresholds and lifetimes to delta stands as mathematics; a new branch with a varying delta would be a new L0 hypothesis with its own card."
+    },
+    {
+      "claim_id": "C_L3_AFTER_CLOSING",
+      "statement": "In the full layer-3 model with one structure type (dn/dt = (a R - 1/tau) n, dR/dt = S - delta R - a F R n), the stock M = R + F n loses dM/dt = -(delta R + F n/tau). While supplied, few structures grow by compounding at a S/delta - 1/tau and pull the pool down to R* = 1/(a tau), not to zero. After the supply stops, the specific loss rate starts between delta and 1/tau and ends at min(delta, 1/tau), so the loss slows in the end; it falls monotonically when delta > 1/tau and first rises when delta < 1/tau. A constant rate (D14) needs a one-part store.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D15_LAYER3_AFTER_CLOSING"
+      ],
+      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_FREE_FALL_FREEDOM",
+      "statement": "A freely falling frame removes the uniform part of every outside pull but keeps the tidal part (point mass: eigenvalues (2,-1,-1) G M/d^3; Lambda: +H_L^2 delta_ij). Measured against a bound system's own binding rate G m/r^3, the leftover is about 1e-7 for the Earth (Moon), 5e-12 for the solar system out to Neptune, 0.1 for the Milky Way halo (Andromeda), 0.24 for the Local Group (Lambda; zero-gravity radius 1.6 Mpc) and 6e-3 for the Virgo cluster (Lambda). No frame is free of Lambda; compact bodies are nearly free, groups of galaxies are not.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D16_FREE_FALL_FREEDOM"
+      ],
+      "note": "Bounds the one-body universe (D11, C_L3_LONE_BODY_GR): it is a fair model of a piece of ours only where epsilon << 1, and it is a different solution of GR, not a limit of our universe. Whether inertia itself comes from the other matter (Mach's principle) is open and not addressed. Round literature inputs chosen by the AI. Nearest theory: Hill sphere, tidal radius, Lambda zero-gravity radius. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_MACH_FRAME_DRAGGING",
+      "statement": "Inside a slowly rotating spherical shell of mass M and radius R, local inertial frames (what 'not rotating' means for a gyroscope) turn with omega_in/Omega = 4 alpha (2 - alpha)/((1 + alpha)(3 - alpha)), M/R = 2 alpha/(1 + alpha)^2 (G = c = 1): (4/3) G M/(R c^2) in the weak field, rising to full co-rotation as the shell nears its own horizon. Matter inside the Hubble radius has G M/(R c^2) = Omega_m/2 = 0.16 (0.5 for the full critical density), the order-one value at which matter can set the inertial frame.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_D17_MACH_FRAME_DRAGGING",
+        "R_T031_GPB_FRAME_DRAGGING"
+      ],
+      "note": "Derived numerically through a shell with tangential stress and checked against Brill and Cohen (1966). The cosmological reading is an AI illustration: a flat-space shell is not an expanding universe, and GR is not Machian in general (Minkowski space has inertia without matter). With D16: a falling frame is free of other bodies neither in its tides nor in its rotation, only nearly so for compact bodies. Nearest theory: Lense-Thirring, Brill-Cohen. Not UET-distinct. Confronted in T031 (2026-11-25): Gravity Probe B frame dragging 37.2 +/- 7.2 mas/yr vs 39.17 predicted (z = 0.27), weak-field part only; L2 approved by the author."
+    },
+    {
+      "claim_id": "C_L3_TIDAL_SETTLING",
+      "statement": "A spinning body on an orbit is flexed by the tidal field at the rate F = <|dT/dt|^2> seen in its own frame: 18 (GM/a^3)^2 (n - omega)^2 on a circular orbit and 63 (GM/a^3)^2 n^2 e^2 for a locked body on a slightly eccentric orbit. F vanishes only for a circular, synchronous orbit, and at fixed angular momentum that state is the lowest energy the system can reach exactly when mu a^2 > 3 I (Darwin-Hut); otherwise no settled state exists. Dissipating through F, the system reaches the motion that no longer flexes it without being steered.",
+      "level": "L2_CONFRONTED",
+      "evidence": [
+        "R_D18_TIDAL_SETTLING",
+        "R_T032_SB9_CIRCULARIZATION"
+      ],
+      "note": "AI reading of the author's 'orbit = motion that does not resist; forced motion is temporary' (AUTHOR_PROPOSITION 4, 2026-11-24): resistance = flexing rate F, settled = F = 0 at the energy minimum. Example chosen by the AI. Testable on measured binaries (circularization cutoff period against age) with a Test Card. Nearest theory: Darwin-Hut-Zahn tidal evolution. Not UET-distinct. Confronted in T032 (2026-11-25): SB9 circular fraction 0.78 at 1-3 d falling to 0.18 at 100-300 d (rho = -1); direction only, formation not separated; L2 approved by the author."
+    },
+    {
+      "claim_id": "C_L3_PRICE_OF_RESISTING",
+      "statement": "Being pushed off free fall (proper acceleration != 0) has a price. In speed: a vertically climbing rocket loses v_e (1 - 1/Rm)/lam0 to gravity, and holding still above the ground costs g per second with jet power m g v_e/2, while standing on a floor costs no power. In proper time: between the same two events the free-falling clock ages most; a clock thrown up and caught after T gains g^2 T^3/(24 c^2) over the clock held still.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D19_PRICE_OF_RESISTING"
+      ],
+      "note": "AI reading of the author's 'resisting = trying to stand still in a moving universe' (AUTHOR_PROPOSITION 4, 2026-11-24). Standing still relative to a nearby mass is resisting; at rest relative to the cosmic matter (CMB frame) is free fall. Nearest theory: Tsiolkovsky, maximal aging, gravitational time dilation. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_OBSERVED_SELECTION",
+      "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S1_OBSERVED_SELECTION"
+      ],
+      "note": "Malmquist bias and the 1/V_max estimator; not UET-distinct. Stress test of author item 5: what we see is what persisted and also spent enough energy as light to reach us, so the best resource managers are the hardest to see. T002 unaffected (one distance); T008 unaffected (Hu, Wu and Wu 2007 use 1/(V_max - V_min) weights, checked 2026-11-21)."
+    },
+    {
+      "claim_id": "C_L3_SEEN_BUT_GONE",
+      "statement": "In steady state with fixed lifetime tau = F/P and light delay r/c, the fraction of a flux-limited sample that still exists when it is observed is A_D = 1 - D lambda/(D + 1) for lambda = d/(c tau) <= 1 and lambda^(-D)/(D + 1) above, with lambda ~ eps^(1/2) P^(3/2)/F; the delay changes which sources are seen but not how many, so a type burning 100 times faster has 1000 times the lambda and in three dimensions a sample of it can be almost entirely sources that are already gone.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S2_SEEN_BUT_GONE"
+      ],
+      "note": "Light-travel-time and duty-cycle arguments; not UET-distinct. Continues C_OBS_TWO_DELAYS and C_L3_OBSERVED_SELECTION: the light certifies that the source was alive when it left, not now. Euclidean and steady state only."
+    },
+    {
+      "claim_id": "C_L3_SEEN_BUT_GONE_COSMIC",
+      "statement": "On the past light cone of flat Lambda-CDM, with a constant comoving birth rate since t = 0 and fixed lifetime tau, the fraction of seen sources that still exist is the ratio of shell integrals of chi^2 a^-1 max(0, min(t_e, tau - t_L)) and chi^2 a^-1 min(tau, t_e); it tends to the static result 1 - 3 lambda/4 for shallow surveys, equals 1 at every depth when tau >= t0, and over the whole cone is 0.107 for tau = 10 Gyr, 44 times the static-space value, because the finite age removes the oldest light.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S3_SEEN_BUT_GONE_COSMIC"
+      ],
+      "note": "Look-back time and comoving volume; not UET-distinct. Extends C_L3_SEEN_BUT_GONE to expanding space. The constant birth rate is an AI choice."
     },
     {
       "claim_id": "C_L3_SUPPLY_CHEMOSTAT",

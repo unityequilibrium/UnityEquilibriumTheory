@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_S3_SEEN_BUT_GONE_COSMIC",
+  "claim_id": "C_L3_SEEN_BUT_GONE_COSMIC",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "comoving_distance_two_integrals",
+      "value": "< 1e-9 relative, 20/20 random emission times",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "shallow_limit_to_static_S2_convergence_order",
+      "value": "1.00 (errors 4.1e-3, 2.1e-3, 1.0e-3 at depths 0.4, 0.2, 0.1 Gyr)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "whole_cone_alive_fraction",
+      "value": "tau 0.1 Gyr: 3.9e-9; 1 Gyr: 7.9e-6; 3 Gyr: 4.7e-4; 10 Gyr: 0.107; 13 Gyr: 0.558; tau >= t0: 1",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "static_space_same_depth_tau_10_Gyr",
+      "value": "2.4e-3 (S2, lambda = 47.0/10)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mc_whole_cone_tau_10_Gyr",
+      "value": "2000/18737 = 0.1067 (integral 0.1066)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "mc_z1_cut_tau_5_Gyr",
+      "value": "5230/144720 = 0.0361 (integral 0.0360)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "age_and_comoving_horizon",
+      "value": "13.80 Gyr; 47.0 Gly (radiation neglected)",
+      "uncertainty": null,
+      "unit": "Gyr; Gly"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_seen_but_gone_cosmic.py",
+    "commit": "0d9bf5860"
+  },
+  "artifacts": [],
+  "date": "2026-11-21",
+  "note": "Flat Lambda-CDM with Planck 2018 parameters from wave D6, radiation neglected; constant birth rate per comoving volume and cosmic time since t = 0 (an AI choice; real star formation peaked near z ~ 2); fixed lifetime; depth cut by emission time, no flux limit or K-correction. Lifetimes in the table are illustrative AI choices. Seeded light-cone Monte Carlo (seeds 21, 22). Nearest theory: look-back time and comoving volume (Hogg 1999). Not UET-distinct."
+}

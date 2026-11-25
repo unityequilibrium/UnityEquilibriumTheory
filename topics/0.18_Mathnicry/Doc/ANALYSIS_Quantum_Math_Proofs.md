@@ -1,5 +1,7 @@
 # 🔬 ANALYSIS: Quantum & Math Proofs (การพิสูจน์ตรรกศาสตร์และคณิตศาสตร์)
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 > **Files:** `Proof_Bell_State_Fidelity.py`, `Proof_Collatz_Convergence.py`, `Audit_Quantum_Engine_Integrity.py`
 > **Role:** Proof (Mathematical Validator)
 > **Status:** 🟢 REVIEWED

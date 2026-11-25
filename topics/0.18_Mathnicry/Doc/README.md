@@ -1,5 +1,7 @@
 # Topic 0.18: Quantum Computing & Circuits - Code
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 This directory contains the computational heart of Phase 10. It implements the transition from standard matrix-based quantum logic to UET's high-performance tensor-based manifold resonance.
 
 - **Manifold Resonance** -> Unitary Gate Matrix $\hat{U}$

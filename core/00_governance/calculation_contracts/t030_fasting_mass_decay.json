@@ -1,0 +1,224 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T030_FASTING_MASS_DECAY_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t030",
+    "rationale": "Methodological contract for Test Card T030. The evidence decision lives in docs/standard. Weights are taken as published.",
+    "coverage_evidence": [
+      "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+    ]
+  },
+  "question": "Does a fasting man's body mass, days 6-31 of a 31-day fast, fall with a constant specific loss rate (closed-pool exponential leak of D14)?",
+  "output": {
+    "quantity": "r = k_late/k_early, specific loss rate late half over early half, against r_lin = m_mean_early/m_mean_late",
+    "unit": "dimensionless",
+    "domain": "subject L., Benedict 1915, days 6-31",
+    "accuracy": "single subject; daily weights include water",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "d14_openness_layer3"
+    ],
+    "assumptions": "Body mass stands in for the layer-3 reserve; supply S = 0 during the fast; constant leak delta.",
+    "approximation": "Two-point rate per half from end points and mean mass.",
+    "initial_boundary": "Window starts on day 6 of the fast.",
+    "drive_environment": "Calorimeter laboratory, near-constant water intake and activity.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "BENEDICT1915_L_DAILY_BODY_WEIGHT"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Not a holdout: larger early losses were known in general (SEEN_SUMMARY). The table was read only after approval commit 9527c2180."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published daily weights; values used as printed.",
+      "systems": [
+        {
+          "id": "body",
+          "state": "Fasting human subject L.",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "body.mass"
+            ],
+            "owner_ids": [],
+            "rule": "One weight per day."
+          }
+        },
+        {
+          "id": "scale",
+          "state": "Calibrated platform balance records",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "scale.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "weighing",
+          "source": "body",
+          "target": "scale",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Morning weight in clothing minus known clothing weight"
+        },
+        {
+          "id": "no_backaction",
+          "source": "scale",
+          "target": "body",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "None"
+        }
+      ],
+      "observables": [
+        {
+          "id": "mass",
+          "detector_id": "scale",
+          "target_systems": [
+            "body"
+          ],
+          "backaction_targets": [
+            "body"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "naked body weight, kg",
+          "readout_map": "Table 2 of Benedict 1915; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Human body during a water-only fast.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Weighing.",
+    "observer_state": "Published table.",
+    "readout": "Daily naked body weight.",
+    "backaction": "None.",
+    "frame": "Laboratory",
+    "time_convention": "Day of fast as numbered by Benedict",
+    "product_level": "published table",
+    "corrections": [
+      {
+        "id": "clothing_subtracted_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Body as weighed.",
+      "evidence": [
+        "core/03_lanes/persistence/t030_fasting_mass_decay.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Constant water and room conditions kept by the investigators.",
+      "evidence": [
+        "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Not applicable; direct weighing.",
+      "evidence": [
+        "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Daily morning weighing.",
+      "evidence": [
+        "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Calibrated balance, clothing subtracted upstream.",
+      "evidence": [
+        "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Window and outcome rule fixed in T030.",
+      "evidence": [
+        "core/03_lanes/persistence/t030_fasting_mass_decay.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Arithmetic only.",
+      "evidence": [
+        "core/03_lanes/persistence/t030_fasting_mass_decay.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Negligible.",
+    "approximation": "End-point rates per half; scatter of daily weights not modelled.",
+    "measurement": "Balance sensitivity small against daily changes; water state varies.",
+    "systematic": "Weight includes water and protein, not fat alone.",
+    "omissions": "One subject.",
+    "dependence": "Successive days correlated.",
+    "acceptance": "Outcome categories fixed in Test Card T030.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "250260edc5c3c03c5a04ac71544167d0cf4c1c798d23b85348fd61b1784b242d",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t030_fasting_mass_decay.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "14247bfd80a02025a2c59f2958119d6d823c4d6981c25c099362937ecaa90d90",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t030_fasting_mass_decay.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t030_fasting_mass_decay.py",
+    "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the T030 comparison only; the evidence level is set in docs/standard. Not UET-distinct.",
+  "next_action": "Run once under this card; done 2026-11-23 (FAILED)."
+}

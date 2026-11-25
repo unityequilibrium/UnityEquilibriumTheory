@@ -1,5 +1,7 @@
 # 🔬 ANALYSIS: Algorithms & Geometry (งานวิจัยอัลกอริทึมและเรขาคณิตชั้นสูง)
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 > **Files:** `Research_Grover_Search_UET.py`, `Research_P_vs_NP_Scaling.py`, `Hodge_Lattice_Topography.py`, `Research_BSD_Elliptic_Unity.py`, `Verify_Quantum_Logic.py`
 > **Role:** Research (Optimization & Topology)
 > **Status:** 🟢 REVIEWED

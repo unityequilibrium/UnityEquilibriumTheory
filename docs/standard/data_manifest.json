@@ -314,6 +314,18 @@
       "note": "Digitised after Test Card T027 was approved and committed (cbc52d6ac). Only the wild-type series is used; the engineered single-HXT strains in the same figure are not."
     },
     {
+      "data_id": "GWOSC_GWTC_EVENTS_2026_11_22",
+      "description": "Cumulative GWTC event list (391 events): medians and 90% bounds of source-frame component masses, final mass, chi_eff, distance, redshift, SNR, FAR and p_astro",
+      "source": "Gravitational Wave Open Science Center event API, cumulative GWTC list (GWTC-1 to GWTC-5.0); LIGO Scientific, Virgo and KAGRA Collaborations",
+      "doi_or_url": "https://gwosc.org/eventapi/json/GWTC/",
+      "retrieved": "2026-11-22",
+      "path": "docs/data/external/gravity/gwtc/gwosc_gwtc_events_2026-11-22.json",
+      "sha256": "9802865cc8b41508f4073769758f7dbaf5498b22a907849d567083635e7e862a",
+      "license": "GWOSC data are released under CC BY 4.0",
+      "visibility": "PUBLIC",
+      "note": "Raw JSON as served (738435 bytes). Final masses are derived by the collaborations from numerical-relativity fits to the component masses and spins, assuming GR; they are not an independent measurement of the radiated energy."
+    },
+    {
       "data_id": "LYNCH_MARINOV2015_CELL_COSTS",
       "description": "Per-species cell volume, growth cost per division and maintenance cost (10^9 ATP) from Lynch and Marinov (2015) SI table; genome sizes for overlapping species taken from Sung et al. (2012) Table S8",
       "source": "M. Lynch, G. K. Marinov, PNAS 112, 15690-15695 (2015), Supporting Information",
@@ -338,6 +350,54 @@
       "note": "Transcribed after Test Card T028 was approved and committed (9e9c36843)."
     },
     {
+      "data_id": "BENEDICT1915_L_DAILY_BODY_WEIGHT",
+      "description": "Daily naked morning body weight (kg) of subject L. during a 31-day water-only fast, initial weight and days 1-31",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 2 (continued), p. 73",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-23",
+      "path": "docs/data/external/biology/fasting/benedict1915_L_body_weight.csv",
+      "sha256": "250260edc5c3c03c5a04ac71544167d0cf4c1c798d23b85348fd61b1784b242d",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scan; the archive.org OCR misreads day 1 (69.60) and day 12 (63.56), corrected to the scan (59.60, 53.56). Every weight equals the previous weight minus the loss printed beside it (checked to 0.005 kg)."
+    },
+    {
+      "data_id": "EVERITT2011_GPB_FRAME_DRAGGING",
+      "description": "Gravity Probe B measured frame-dragging drift rate and 1-sigma uncertainty (mas/yr), with the paper's GR prediction for reference",
+      "source": "C. W. F. Everitt et al., Phys. Rev. Lett. 106, 221101 (2011), abstract",
+      "doi_or_url": "https://arxiv.org/abs/1105.3456",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/gravity/gpb/everitt2011_frame_dragging.csv",
+      "sha256": "445842e5e695a8e4d6ee510e1cba5636bd84e87ab25d8e1ce1be17a16f4a5754",
+      "license": "Numbers transcribed from the arXiv abstract (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after approval of T031. The paper quotes -37.2 +/- 7.2 mas/yr; stored as magnitude 37.2 with the sign convention noted in the file header."
+    },
+    {
+      "data_id": "SB9_ORBITS_VIZIER",
+      "description": "SB9 spectroscopic binary orbits: system number Seq, orbit number o, period Per (d), eccentricity e; 5099 orbits",
+      "source": "D. Pourbaix et al., A&A 424, 727 (2004) and updates to 2014; CDS VizieR B/sb9/orbits",
+      "doi_or_url": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=B/sb9/orbits&-out=Seq,o,Per,e&-out.max=unlimited",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/astro/sb9/sb9_orbits.tsv",
+      "sha256": "529a22812ee32300b870a262e8ad41b092f446d48e26d7142e2d9a6531abbf3b",
+      "license": "CDS VizieR terms (https://cds.unistra.fr/vizier-org/licences_vizier.html)",
+      "visibility": "PUBLIC",
+      "note": "Raw TSV as served by the CfA VizieR mirror (the Strasbourg endpoint returned HTTP 404). Downloaded after approval of T032."
+    },
+    {
+      "data_id": "ESPOSITO2010_POWER_PLANTS",
+      "description": "13 thermal power plants: hot and cold temperatures (K) and observed efficiency",
+      "source": "M. Esposito, R. Kawai, K. Lindenberg, C. Van den Broeck, Phys. Rev. Lett. 105, 150603 (2010), table of thermal plants (compiled from earlier sources)",
+      "doi_or_url": "https://arxiv.org/abs/1008.2464",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/thermo/power_plants/esposito2010_plants.csv",
+      "sha256": "aaf6c9b9bb38bf401f256e2691f777a4f87c34f6d800a8b74a59a9e0ca0756db",
+      "license": "Numbers transcribed from the arXiv source (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed after approval of T033 from the LaTeX source CA.tex, all 13 rows, as published."
+    },
+    {
       "data_id": "DESI_DR2_BAO_MEAN",
       "description": "DESI DR2 Gaussian BAO means: D_M/r_d, D_H/r_d and D_V/r_d at 7 effective redshifts (13 values), all tracers combined",
       "source": "DESI Collaboration, DR2 BAO results (arXiv:2503.14738), likelihood files as distributed in the Cobaya bao_data repository",
@@ -347,7 +407,7 @@
       "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
-      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T033 while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
     },
     {
       "data_id": "DESI_DR2_BAO_COV",
@@ -359,7 +419,7 @@
       "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
-      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T033 while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
     },
     {
       "data_id": "PANTHEON_PLUS_HD",
@@ -371,7 +431,7 @@
       "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
-      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T033 while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
     },
     {
       "data_id": "PANTHEON_PLUS_COV",
@@ -383,7 +443,7 @@
       "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
-      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T033 while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+      "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
     }
   ]
 }

@@ -1,6 +1,6 @@
-# Proposal T033: the parent action's dark-energy w(a) against BAO and supernova distances
+# Proposal T040: the parent action's dark-energy w(a) against BAO and supernova distances
 
-Drafted by Claude on 2026-11-25. Not approved. No comparison data have been downloaded or opened.
+Drafted by Claude on 2026-11-25 as T033; renumbered T040 the same day (ID collision). Not approved. No comparison data have been downloaded or opened.
 Claim under test: `C_C1_FRW_DARK_ENERGY` (L1, wave C1, `core/03_lanes/scalar_tensor/uet_frw_background.py`).
 
 ## Question

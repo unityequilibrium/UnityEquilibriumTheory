@@ -1,4 +1,4 @@
-"""Test Card T033 prediction method: the parent action's dark-energy w(a) against DESI DR2 BAO and Pantheon+ (topic 0.3).
+"""Test Card T040 prediction method: the parent action's dark-energy w(a) against DESI DR2 BAO and Pantheon+ (topic 0.3).
 
 Models (flat, pressureless matter, radiation neglected at z < 2.5; see uet_frw_background.py):
     LCDM   w = -1                                     free: Omega_m
@@ -11,7 +11,7 @@ SN offset (absolute magnitude plus H0) in mu = m_b_corr - M.
     r = m_b_corr - 5 log10[(1 + z_hel) int_0^z_HD dz / E(z)].
 Pantheon+ rows with zHD > 0.01 are used, with the matching block of the STAT+SYS covariance (AI choice, the usual
 Pantheon+ cosmology cut).
-Decision (fixed in docs/standard/tests/T033.json): dchi2_CPL = chi2_min(UET) - chi2_min(CPL);
+Decision (fixed in docs/standard/tests/T040.json): dchi2_CPL = chi2_min(UET) - chi2_min(CPL);
     PASS if dchi2_CPL <= 4, FAIL if dchi2_CPL > 9, INCONCLUSIVE otherwise.
 Reported, not deciding: dchi2_LCDM = chi2_min(LCDM) - chi2_min(UET) and the UET best-fit CPL (w0, wa).
 
@@ -30,7 +30,7 @@ from pathlib import Path
 import numpy as np
 
 ROOT = Path(__file__).resolve().parents[3]
-CARD = ROOT / "docs/standard/tests/T033.json"
+CARD = ROOT / "docs/standard/tests/T040.json"
 MANIFEST = ROOT / "docs/standard/data_manifest.json"
 DATA = {
     "DESI_DR2_BAO_MEAN": "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
@@ -144,7 +144,7 @@ def _best_over_om(f) -> tuple[float, float]:
 
 def run() -> dict:
     if not _approved():
-        raise RuntimeError("Test Card T033 is not APPROVED by the author: refusing to read the comparison data")
+        raise RuntimeError("Test Card T040 is not APPROVED by the author: refusing to read the comparison data")
     _check_hashes()
     data = load()
     from scipy.optimize import minimize
