@@ -3,7 +3,7 @@
   "result_id": "R_T040_W_OF_A_BAO_SN",
   "claim_id": "C_C1_FRW_DARK_ENERGY",
   "test_card_id": "T040",
-  "level": "L1_CONSISTENT",
+  "level": "L2_CONFRONTED",
   "outcome": "PASS",
   "numbers": [
     {
@@ -55,5 +55,10 @@
   },
   "artifacts": [],
   "date": "2026-11-25",
-  "note": "PASS under Test Card T040 (approved 3942abe2b as T033; renumbered T040 in b159ef3a3, criteria unchanged). The run was executed once as t033_w_of_a_bao_sn.py, identical apart from ID strings. The allowed UET thawing family fits DESI DR2 BAO plus Pantheon+ as well as a free CPL w(a) (dchi2 = 0.03) and better than LCDM by 5.1 in chi2 (about 2 sigma for the 3 extra grid parameters; reported, not deciding). Best point is near-minimal coupling (xi_c = -0.003) thawing with w0 = -0.90, wa = -0.12. No CMB used. Not UET-distinct: any thawing quintessence gives the same family; this confirms consistency, not a UET prediction. Recorded at L1 with outcome PASS; it becomes L2_CONFRONTED, and the claim with it, only when the author approves (approval block added then)."
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-25",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T040 (approved 3942abe2b as T033; renumbered T040 in b159ef3a3, criteria unchanged). The run was executed once as t033_w_of_a_bao_sn.py, identical apart from ID strings. The allowed UET thawing family fits DESI DR2 BAO plus Pantheon+ as well as a free CPL w(a) (dchi2 = 0.03) and better than LCDM by 5.1 in chi2 (about 2 sigma for the 3 extra grid parameters; reported, not deciding). Best point is near-minimal coupling (xi_c = -0.003) thawing with w0 = -0.90, wa = -0.12. No CMB used. Not UET-distinct: any thawing quintessence gives the same family; this confirms consistency, not a UET prediction. L2 approved by the author on 2026-11-25 (chat)."
 }

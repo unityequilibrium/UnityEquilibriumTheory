@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 996,
+    "entries": 997,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 760,
+      "research": 761,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "16456ec519b4f16ad849e69f667a75c94886dce618704f962afb84fd020a1d49",
-      "entries": 9
+      "sha256": "b80f41cf7d63ab238e6742bdd868f739c72553ed311589c88fab13b39d127a15",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -20336,9 +20336,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
       "start_line": 85,
-      "end_line": 93,
+      "end_line": 94,
       "title": "T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)",
-      "entry_sha256": "0d4a7be27f6150fe08d75d85116fad841a9dded6753841cc5a25c2738d36c162",
+      "entry_sha256": "06a24f26252940f52e8f0bbbddda221516a035b0e92efdbe12da7099c9fa1beb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "source": "2026/2026-11-25.md",
+      "anchor": "c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "start_line": 95,
+      "end_line": 103,
+      "title": "C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)",
+      "entry_sha256": "c689dec7765f3318aafd63d5f545f0f36be8a93331dbd781d6d982b9fa5f3e63",
       "stream": "research",
       "areas": [
         "research-core"
