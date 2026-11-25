@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — A survival process as a burn that follows the store (D20)
+ทำ: `uet_survival_burn.py` (dR/dt = -P0 (R/R0)^beta: สูตรปิด อัตราต่อหน่วย เวลาถึงเกณฑ์ ตัวประมาณ beta จากสองช่วง) + physics tests 38 ข้อ + FORMAL contract
+ผล: beta = 1 คือ D14 (ตกใน T030), beta > 1 คือระบบลดการเผาผลาญเมื่อของสำรองลด อัตราต่อหน่วยจึงลดลง; ปรับเทียบจาก Benedict 1915 ได้ beta = 1.95 (1.5-2.6 ตามช่วง) ซึ่งเป็นการปรับเทียบ ไม่ใช่การทดสอบ
+ระดับ: C_L3_SURVIVAL_BURN → L0_SPECULATIVE (สมมติฐานใหม่หลัง FAILED; คณิตศาสตร์ผ่านระดับ L1)
+ถัดไป: Test Card กับการอดอาหารอีกรายที่ไม่เคยใช้ (Stewart & Fleming 1973, 382 วัน) ว่า beta อยู่ในช่วงเดียวกันไหม
+commit: 0afa07125 (code) + this commit (records)
+
 ## 2026-11-25 — Does protein loss rise as fat runs out in a fast? (T034, D15)
 ทำ: Test Card T034 (D15 กับการสลายโปรตีนระหว่างอดอาหาร 10 วัน, Laurens et al. 2021) ผู้เขียนอนุมัติ b3f07785a ก่อนอ่านกราฟ; รันครั้งเดียว
 ผล: INCONCLUSIVE ตามกฎ: กราฟมีวันอดอาหารแค่ 3 วัน (การ์ดต้องการ 6); ข้อสังเกตที่ไม่ใช้ตัดสิน: โปรตีนสลาย 41.7 → 31.3 g/วัน (วัน 1 → 9) ลดลง ตรงข้ามกับที่ D15 (ไขมัน = บ่อ) ทาย

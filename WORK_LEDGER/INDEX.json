@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 993,
+    "entries": 994,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 757,
+      "research": 758,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "8c321b1b2502863ddcb224999dcfcc6e061ed5cf0061655c905c1de0532be20f",
-      "entries": 6
+      "sha256": "c4349c3263ccd38cc12055566252eae4bf5aafb8bdd8683f375991c206ba2689",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -20276,9 +20276,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "topic-018-legacy-overclaims-labelled",
       "start_line": 54,
-      "end_line": 62,
+      "end_line": 63,
       "title": "Topic 0.18: legacy overclaims labelled",
-      "entry_sha256": "07d4f60d2b29e854a14a5975e330297038c7b3691dcd129c727852f22cb55d63",
+      "entry_sha256": "f611ecd824cae599948617b4382c7a55ae52db5c2b2903a8b326ec1a9dbf9dad",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#wave-d20-a-survival-process-as-a-burn-that-follows-the-store",
+      "source": "2026/2026-11-25.md",
+      "anchor": "wave-d20-a-survival-process-as-a-burn-that-follows-the-store",
+      "start_line": 64,
+      "end_line": 72,
+      "title": "Wave D20: a survival process as a burn that follows the store",
+      "entry_sha256": "cd8f59af9f9be422355e4ed806c4d50626b16ec07835413361f2b2f39c44a86c",
       "stream": "research",
       "areas": [
         "research-core"
