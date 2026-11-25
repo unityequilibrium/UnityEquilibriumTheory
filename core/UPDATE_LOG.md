@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — Does protein loss rise as fat runs out in a fast? (T034, D15)
+ทำ: Test Card T034 (D15 กับการสลายโปรตีนระหว่างอดอาหาร 10 วัน, Laurens et al. 2021) ผู้เขียนอนุมัติ b3f07785a ก่อนอ่านกราฟ; รันครั้งเดียว
+ผล: INCONCLUSIVE ตามกฎ: กราฟมีวันอดอาหารแค่ 3 วัน (การ์ดต้องการ 6); ข้อสังเกตที่ไม่ใช้ตัดสิน: โปรตีนสลาย 41.7 → 31.3 g/วัน (วัน 1 → 9) ลดลง ตรงข้ามกับที่ D15 (ไขมัน = บ่อ) ทาย
+ระดับ: C_L3_AFTER_CLOSING คง L1 (ยังไม่มีการทดสอบที่ตัดสินได้)
+ถัดไป: ข้อมูลอดอาหารที่วัดโปรตีนรายวันครบ หรือข้ามไปทดสอบข้ออื่น
+commit: b3f07785a (approval) + data commit + this commit (result)
+
 ## 2026-11-25 — Do real power plants run at the max-power ceiling? (T033)
 ทำ: Test Card T033 (D13 กับโรงไฟฟ้าจริง 13 แห่ง จากตารางของ Esposito et al. 2010) ผู้เขียนอนุมัติ ad04e5965 ก่อนอ่านตาราง; รันครั้งเดียว
 ผล: ค่ามัธยฐานความห่างจาก 1 - sqrt(Tc/Th) = 19% (ผ่าน <= 10%, ตก >= 25%) → INCONCLUSIVE; นิวเคลียร์สมัยใหม่เกินเพดาน 12-22% กังหันก๊าซต่ำกว่า 23-28%

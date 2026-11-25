@@ -605,9 +605,10 @@
       "statement": "In the full layer-3 model with one structure type (dn/dt = (a R - 1/tau) n, dR/dt = S - delta R - a F R n), the stock M = R + F n loses dM/dt = -(delta R + F n/tau). While supplied, few structures grow by compounding at a S/delta - 1/tau and pull the pool down to R* = 1/(a tau), not to zero. After the supply stops, the specific loss rate starts between delta and 1/tau and ends at min(delta, 1/tau), so the loss slows in the end; it falls monotonically when delta > 1/tau and first rises when delta < 1/tau. A constant rate (D14) needs a one-part store.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_D15_LAYER3_AFTER_CLOSING"
+        "R_D15_LAYER3_AFTER_CLOSING",
+        "R_T034_FASTING_PROTEIN_LOSS"
       ],
-      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct."
+      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct. T034 (2026-11-25) INCONCLUSIVE: the only open fasting data plot protein loss on three days (card needs six); the trend (41.7 -> 31.3 g/24h, falling) runs against the fat = pool, lean = structures mapping."
     },
     {
       "claim_id": "C_L3_FREE_FALL_FREEDOM",
