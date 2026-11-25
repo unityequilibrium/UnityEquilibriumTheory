@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 755. Counts describe records, not accomplishments.
+Indexed entries: 756. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [Topic 0.18: legacy overclaims labelled](2026/2026-11-25.md#topic-018-legacy-overclaims-labelled) (L45) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033: real power plants against the max-power efficiency](2026/2026-11-25.md#test-card-t033-real-power-plants-against-the-max-power-efficiency) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING](2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Cards T031 and T032: first batch of L1 claims against data](2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data) (L13) | research-core | explicit_stream_and_area |

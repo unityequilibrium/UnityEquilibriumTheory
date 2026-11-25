@@ -1,5 +1,7 @@
 # Topic 0.18: Quantum Computing & Circuits - Results
 
+> **Legacy status: `LEGACY_UNREVIEWED` (labelled 2026-11-25 with the owner's approval). This document is not a proof of any theorem.** Words such as FINAL, PASS, Verified, Solved and Proof below are legacy wording, not evidence. Review: [AUDIT_2026-11-23_STANDARD_V2.md](../Doc/AUDIT_2026-11-23_STANDARD_V2.md). The current formal work of this topic is the Lean lane: [uet_formal](../Code/06_Lean/uet_formal/README.md).
+
 This directory contains the verified outputs of the Phase 10 simulation scripts. All data here mirrors the `Code/` structure and provides the physical evidence for UET Quantum Accuracy.
 
 ---

@@ -60,6 +60,10 @@ UET should not target these problems; it should prove its own statements and pub
 - Mark `grand_slam_report.txt` and the Riemann analysis as LEGACY_UNREVIEWED overclaims in the topic README (do not delete; do not rewrite history).
 - Rename nothing; add a boundary line to each public doc that says "not a proof".
 
+Done on 2026-11-25 with the owner's approval: the topic README has a "Legacy status" section, and 18 legacy analysis
+and README documents open with a one-line "not a proof" banner. Nothing was deleted or renamed; legacy result files
+(including `grand_slam_report.txt`) are unchanged.
+
 ## 8. Progress on the formal-proof lane (2026-11-23)
 
 All five candidates F1 to F5 are proved in Lean 4 (v4.36.0) with Mathlib, in `Code/06_Lean/uet_formal/`.
