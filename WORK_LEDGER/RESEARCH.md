@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 723. Counts describe records, not accomplishments.
+Indexed entries: 724. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [Test Card T033: data intake and draft card](2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033 proposal: parent-action w(a) against BAO and supernovae](2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L13) | research-core | explicit_stream_and_area |
