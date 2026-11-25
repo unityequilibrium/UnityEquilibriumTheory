@@ -1,0 +1,46 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T036",
+  "status": "APPROVED",
+  "claim_id": "C_L3_SURVIVAL_BURN",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D20 (C_L3_SURVIVAL_BURN, L0): a closed living store lowers its burn as it shrinks, dR/dt = -P0 (R/R0)^beta, with beta calibrated on subject L. (Benedict 1915) at 1.95 (1.5-2.6 with the window). Expectation tested: the other fasts that Benedict tabulated follow the same law with a shared beta in that range; constant leak (beta = 1, D14) and constant burn (beta = 0) are excluded.",
+  "observable": {
+    "quantity": "beta from one joint least-squares fit of the D20 closed form to all usable fasts (shared beta, own R0 and P0 per fast), with its 95 percent interval",
+    "unit": "dimensionless",
+    "domain": "the fasts of Succi (Paris, Milan, Florence, London, Naples, Rome, Zurich), Jacques, Beaute and Schenk in Benedict (1915) Table 2, pp. 72-73; subject L. excluded"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "BENEDICT1915_OTHER_FASTS",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t036_benedict_other_fasts_beta.py",
+    "description": "Daily weights transcribed after approval from the page scans of Table 2 as printed (days whose weight is missing are skipped; no correction); points from day 6 on; fasts with at least 9 such points; joint fit with a shared beta. The method recovers beta 0, 1, 2 from synthetic fasts with 0.25 kg noise. The script refuses to run unless this card is APPROVED and the data sha256 matches."
+  },
+  "free_parameters": [
+    "R0 and P0 of each fast"
+  ],
+  "fixed_parameters": [
+    "beta range 1.5-2.6 from the L. calibration (R_D20_SURVIVAL_BURN), fixed before this table is transcribed",
+    "FAILED bounds beta < 1.2 or beta > 3.3 (AI choices; 1.2 keeps beta = 1 inside FAILED)",
+    "points from day 6 on; a fast needs at least 9 points",
+    "an outcome needs the 95 percent interval of beta narrower than 2 and at least 3 usable fasts"
+  ],
+  "pass_criterion": "PASS if 1.5 <= beta <= 2.6 with a 95 percent interval narrower than 2.",
+  "fail_criterion": "FAILED if beta < 1.2 or beta > 3.3 with a 95 percent interval narrower than 2. INCONCLUSIVE otherwise, if the interval is 2 or wider, or with fewer than 3 usable fasts.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the data are SEEN_FULL in part. On 2026-11-23, while transcribing L.'s column, the drafter printed the OCR text of Table 2, which showed about the first fourteen weights of Succi's Paris fast and all weights of Jacques, Beaute and Schenk; no beta was computed from them. Benedict notes that these weighings were less controlled than L.'s (clothing, water, gains on some days), so the noise is larger; the joint fit and the interval rule guard against a noise-driven outcome. Succi fasted repeatedly as a professional faster, so his fasts are not independent of each other. The power-law burn is an AI choice for the author's survival process. Nearest theory: metabolic adaptation in starvation. Not UET-distinct. Chosen by the author on 2026-11-25 over searching further, knowing the exposure. Approved by the author in chat on 2026-11-25 as drafted (\"Approve and run\"); this approval is committed before Table 2 is transcribed.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-25",
+    "role": "AUTHOR"
+  }
+}
