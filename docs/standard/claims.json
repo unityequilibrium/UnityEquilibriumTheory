@@ -653,9 +653,10 @@
       "statement": "AI hypothesis (L0, after T030 FAILED): a closed living store lowers its burn as it shrinks, P = P0 (R/R0)^beta with beta > 1, so its specific loss rate falls as (R/R0)^(beta-1) and it reaches any threshold R* later than at constant leak but still in finite time. One fast (Benedict 1915, subject L.) calibrates beta = 1.95 (1.5-2.6 with the window); the hypothesis is that the same beta range describes another long fast.",
       "level": "L0_SPECULATIVE",
       "evidence": [
-        "R_D20_SURVIVAL_BURN"
+        "R_D20_SURVIVAL_BURN",
+        "R_T035_LONG_FAST_BETA"
       ],
-      "note": "The author's 'what we see must have a survival process, not guaranteed' (AUTHOR_PROPOSITION 4, 2026-11-23) put in one number; the power-law form is an AI choice. Not yet confronted: the Benedict value is calibration. Nearest theory: metabolic adaptation in starvation (Keys 1950; Hall 2008). Not UET-distinct."
+      "note": "The author's 'what we see must have a survival process, not guaranteed' (AUTHOR_PROPOSITION 4, 2026-11-23) put in one number; the power-law form is an AI choice. Not yet confronted: the Benedict value is calibration. Nearest theory: metabolic adaptation in starvation (Keys 1950; Hall 2008). Not UET-distinct. T035 (2026-11-25) INCONCLUSIVE: the 382-day fast report gives only start and end weights."
     },
     {
       "claim_id": "C_L3_OBSERVED_SELECTION",

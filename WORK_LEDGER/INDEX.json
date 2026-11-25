@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 994,
+    "entries": 995,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 758,
+      "research": 759,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "c4349c3263ccd38cc12055566252eae4bf5aafb8bdd8683f375991c206ba2689",
-      "entries": 7
+      "sha256": "30c45fe2635ebe55bd60f1785f6f15a09de8201435fd3a21a936a48ce2ea3c74",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -20296,9 +20296,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "wave-d20-a-survival-process-as-a-burn-that-follows-the-store",
       "start_line": 64,
-      "end_line": 72,
+      "end_line": 73,
       "title": "Wave D20: a survival process as a burn that follows the store",
-      "entry_sha256": "cd8f59af9f9be422355e4ed806c4d50626b16ec07835413361f2b2f39c44a86c",
+      "entry_sha256": "3cc66af1c9bf9f1edbe814a26333292784985b41b76375b633afaf70b7474820",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t035-survival-burn-exponent-on-a-382-day-fast",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t035-survival-burn-exponent-on-a-382-day-fast",
+      "start_line": 74,
+      "end_line": 82,
+      "title": "Test Card T035: survival-burn exponent on a 382-day fast",
+      "entry_sha256": "b62150c2bce1c1ae5b81329ddb428a6b4dbaae82691c3eb69eab43cc1fd6b11a",
       "stream": "research",
       "areas": [
         "research-core"

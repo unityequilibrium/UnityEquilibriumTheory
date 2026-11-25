@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-25 — Does the survival-burn exponent carry to a 382-day fast? (T035, D20)
+ทำ: Test Card T035 (beta ของ D20 กับการอดอาหาร 382 วัน, Stewart & Fleming 1973) ผู้เขียนอนุมัติ 6471b5280 ก่อนอ่าน; รันครั้งเดียว
+ผล: INCONCLUSIVE: บทความมีแค่น้ำหนักวันแรก 206.8 กก. กับวันสุดท้าย 81.6 กก. ไม่มีเส้นน้ำหนักตามเวลา (รูปที่ 1 เป็นภาพถ่าย ไม่ใช่กราฟ)
+ระดับ: C_L3_SURVIVAL_BURN คง L0 (ยังไม่มีการทดสอบอิสระ)
+ถัดไป: หาการอดอาหารยาวที่มีน้ำหนักรายวันหรือรายสัปดาห์ (เช่น Thomson 1966, Runcie 1970 ถ้าเปิดได้)
+commit: 6471b5280 (approval) + data commit + this commit (result)
+
 ## 2026-11-25 — A survival process as a burn that follows the store (D20)
 ทำ: `uet_survival_burn.py` (dR/dt = -P0 (R/R0)^beta: สูตรปิด อัตราต่อหน่วย เวลาถึงเกณฑ์ ตัวประมาณ beta จากสองช่วง) + physics tests 38 ข้อ + FORMAL contract
 ผล: beta = 1 คือ D14 (ตกใน T030), beta > 1 คือระบบลดการเผาผลาญเมื่อของสำรองลด อัตราต่อหน่วยจึงลดลง; ปรับเทียบจาก Benedict 1915 ได้ beta = 1.95 (1.5-2.6 ตามช่วง) ซึ่งเป็นการปรับเทียบ ไม่ใช่การทดสอบ
