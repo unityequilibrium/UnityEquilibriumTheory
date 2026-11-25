@@ -408,6 +408,18 @@
       "license": "Numbers read off a CC BY-NC-ND 4.0 figure (facts, citation given; the figure itself is not stored)",
       "visibility": "PUBLIC",
       "note": "Read off the figure after approval of T034; reading error about 1.3 g/24h (one pixel). Only three fasting-day bars exist."
+    },
+    {
+      "data_id": "STEWART1973_FAST_WEIGHT",
+      "description": "Body weight at the start and end of a 382-day supervised fast (the paper gives no series)",
+      "source": "W. K. Stewart and L. W. Fleming, Postgrad. Med. J. 49, 203 (1973), Methods and Results text",
+      "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2495396/",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/stewart1973_weight.csv",
+      "sha256": "f252f0e9d5e11ed16783ac9122385f7367720212e86cee74ee1622bebb645869",
+      "license": "Numbers from the published text (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Read after approval of T035. Figure 1 is a photograph, not a weight chart; the text gives only the start and end weights in pounds, converted to kg."
     }
   ]
 }

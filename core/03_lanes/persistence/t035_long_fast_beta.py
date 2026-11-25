@@ -36,7 +36,11 @@ CARD = ROOT / "docs/standard/tests/T035.json"
 DATA_ID = "STEWART1973_FAST_WEIGHT"
 FIRST_DAY = 6
 
-sb = importlib.import_module("docs.core.03_lanes.persistence.uet_survival_burn")
+import sys
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+sb = importlib.import_module("core.03_lanes.persistence.uet_survival_burn")
 
 
 def fit_beta(points) -> dict:
