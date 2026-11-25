@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 992,
+    "entries": 997,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 756,
+      "research": 761,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "b7249e0a7a70dbda38a0b68240500f482dec0ded9a2ed9d5e94d0bbd5662cdd9",
-      "entries": 5
+      "sha256": "b80f41cf7d63ab238e6742bdd868f739c72553ed311589c88fab13b39d127a15",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -20256,9 +20256,109 @@
       "source": "2026/2026-11-25.md",
       "anchor": "topic-018-legacy-overclaims-labelled",
       "start_line": 45,
-      "end_line": 53,
+      "end_line": 54,
       "title": "Topic 0.18: legacy overclaims labelled",
-      "entry_sha256": "07d4f60d2b29e854a14a5975e330297038c7b3691dcd129c727852f22cb55d63",
+      "entry_sha256": "f611ecd824cae599948617b4382c7a55ae52db5c2b2903a8b326ec1a9dbf9dad",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
+      "start_line": 55,
+      "end_line": 64,
+      "title": "Test Card T033 proposal: parent-action w(a) against BAO and supernovae",
+      "entry_sha256": "258586958e2206cfe0aa5daaa8490438935d8521aa679ca6bb294869e0200f45",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-data-intake-and-draft-card",
+      "start_line": 65,
+      "end_line": 74,
+      "title": "Test Card T033: data intake and draft card",
+      "entry_sha256": "66023a1d81750ceb49013930aeb332646509b8e00ed814da3bbe92f25cfe0a09",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-wa-renumbered-t040",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-wa-renumbered-t040",
+      "start_line": 75,
+      "end_line": 84,
+      "title": "Test Card T033 (w(a)) renumbered T040",
+      "entry_sha256": "30c53a986ea61c55f8d1bf5d149a48c2c05d8de62ff3065cacde1260046de5fa",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "source": "2026/2026-11-25.md",
+      "anchor": "t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
+      "start_line": 85,
+      "end_line": 94,
+      "title": "T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)",
+      "entry_sha256": "06a24f26252940f52e8f0bbbddda221516a035b0e92efdbe12da7099c9fa1beb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "source": "2026/2026-11-25.md",
+      "anchor": "c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
+      "start_line": 95,
+      "end_line": 103,
+      "title": "C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)",
+      "entry_sha256": "c689dec7765f3318aafd63d5f545f0f36be8a93331dbd781d6d982b9fa5f3e63",
       "stream": "research",
       "areas": [
         "research-core"

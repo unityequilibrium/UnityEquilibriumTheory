@@ -6,10 +6,15 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 756. Counts describe records, not accomplishments.
+Indexed entries: 761. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)](2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040) (L95) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)](2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon) (L85) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [Test Card T033 (w(a)) renumbered T040](2026/2026-11-25.md#test-card-t033-wa-renumbered-t040) (L75) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [Test Card T033: data intake and draft card](2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card) (L65) | research-core | explicit_stream_and_area |
+| 2026-11-25 | [Test Card T033 proposal: parent-action w(a) against BAO and supernovae](2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae) (L55) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Topic 0.18: legacy overclaims labelled](2026/2026-11-25.md#topic-018-legacy-overclaims-labelled) (L45) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033: real power plants against the max-power efficiency](2026/2026-11-25.md#test-card-t033-real-power-plants-against-the-max-power-efficiency) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING](2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling) (L23) | research-core | explicit_stream_and_area |
