@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 86,
-    "entries": 958,
+    "sources": 88,
+    "entries": 992,
     "by_stream": {
       "book-history": 94,
-      "operations": 140,
-      "research": 723,
+      "operations": 141,
+      "research": 756,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -434,19 +434,29 @@
       "entries": 3
     },
     {
+      "path": "2026/2026-11-21.md",
+      "sha256": "e21ead9bfc1bfcf6636238bd94f5957c84988e795d52da17b299b79ab419f03d",
+      "entries": 11
+    },
+    {
+      "path": "2026/2026-11-22.md",
+      "sha256": "eecfb9c7dacc94ec30027a293706db54412024f383d4f7a134d79b8b455ce550",
+      "entries": 5
+    },
+    {
       "path": "2026/2026-11-23.md",
-      "sha256": "ac987882a5dd1a56966c4842c31c24e4dd08fa311432dc8b96b9e4f2f1bb704c",
-      "entries": 3
+      "sha256": "595bad4fd6b71d799e287b341f551e005314c422be750aa426e7d948776a12a2",
+      "entries": 10
     },
     {
       "path": "2026/2026-11-24.md",
-      "sha256": "e7b09d1a7ff8c7d016e13521ee57141dd3f8c0009ed26ddbfd5767823cdb38e1",
-      "entries": 3
+      "sha256": "27fe3feaff88148583d32746d7a86f6f661f5aa82c5e4e67aec7b437bef3aa72",
+      "entries": 10
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "eb2d38c7538135ad7d02a8f73023c3277dc526fd236e255c08b908f475390636",
-      "entries": 1
+      "sha256": "b7249e0a7a70dbda38a0b68240500f482dec0ded9a2ed9d5e94d0bbd5662cdd9",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -19442,13 +19452,453 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-21.md#wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-o5-two-delays-between-seeing-an-event-and-being-present-with-it",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Wave O5: two delays between seeing an event and being present with it",
+      "entry_sha256": "4c258c0e46ad07adf678cca9aae9d3a28a90b047231516f4f48b82a4a81cc35d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d1-the-divider-temperature-sets-resource-and-persistence",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Wave D1: the divider temperature sets resource and persistence",
+      "entry_sha256": "c55a4ce84bcdf8df02db738c0c9cbcb12892fa34d0323fe55f44a8709dc90f47",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d2-dividing-entropy-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d2-dividing-entropy-along-a-chain",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D2: dividing entropy along a chain",
+      "entry_sha256": "4707e79edb7da1ea2c4691d49b58ac8d4c359047d890e61753c83d7baea3b8ce",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d3-radiative-contacts-break-zero-sum-sharing-along-a-chain",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "Wave D3: radiative contacts break zero-sum sharing along a chain",
+      "entry_sha256": "3ed716e060e23825fbcd9e588fcdc7cf93383e6ece02a9c7d2b699a2407b4c1b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d4-dividers-for-systems-held-together-by-gravity",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d4-dividers-for-systems-held-together-by-gravity",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "Wave D4: dividers for systems held together by gravity",
+      "entry_sha256": "4ae5fa8b7051f94aaec2168b32d0487e524ea898d5af57efd8814b1cd99a092b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d5-a-black-hole-as-the-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d5-a-black-hole-as-the-divider",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Wave D5: a black hole as the divider",
+      "entry_sha256": "22134c7882e0aa0826ea5ab3891730bdfdc051f57b951cb1dda1a7a6715aca49",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-d6-the-expanding-universe-as-the-last-divider",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-d6-the-expanding-universe-as-the-last-divider",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Wave D6: the expanding universe as the last divider",
+      "entry_sha256": "db2acf21a50cf5d8d8e538aff38b41787853d26a58e3fe841599513daadb4e60",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s1-a-flux-limited-sample-selects-against-persistence",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s1-a-flux-limited-sample-selects-against-persistence",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Wave S1: a flux-limited sample selects against persistence",
+      "entry_sha256": "4997533e1fb3a096fcea7a53fe315405569f173ce76dbbe320489c914719c59d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#check-t008-against-the-flux-limit-selection-of-wave-s1",
+      "source": "2026/2026-11-21.md",
+      "anchor": "check-t008-against-the-flux-limit-selection-of-wave-s1",
+      "start_line": 83,
+      "end_line": 92,
+      "title": "Check: T008 against the flux-limit selection of wave S1",
+      "entry_sha256": "2cdf8f9245d127fbdeb1084c51fe3f0ef9e1b29cd7e66ac31a2763c5e82b4aeb",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s2-of-the-sources-we-see-how-many-still-exist",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s2-of-the-sources-we-see-how-many-still-exist",
+      "start_line": 93,
+      "end_line": 102,
+      "title": "Wave S2: of the sources we see, how many still exist?",
+      "entry_sha256": "b67d9f44ecbf6157ac6a6940bd5da4387b452c9fa959865bb0aab865470a6244",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-21.md#wave-s3-seen-but-gone-on-the-expanding-light-cone",
+      "source": "2026/2026-11-21.md",
+      "anchor": "wave-s3-seen-but-gone-on-the-expanding-light-cone",
+      "start_line": 103,
+      "end_line": 111,
+      "title": "Wave S3: seen-but-gone on the expanding light cone",
+      "entry_sha256": "eddf96e7f6deba3445f3bf4391d96e98296f3b2a5e7ce2bd30d05b2c8908c9a2",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-21",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together",
+      "source": "2026/2026-11-22.md",
+      "anchor": "author-statements-thermodynamic-cycle-two-kinds-of-space-falling-together",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Author statements: thermodynamic cycle, two kinds of space, falling together",
+      "entry_sha256": "5cb604bbc589bd0b5813d67ea21ff1942509755a66a6ebce3388593c9b652256",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d7-model-a-a-lone-body-in-lambda-only-space",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d7-model-a-a-lone-body-in-lambda-only-space",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Wave D7 (model A): a lone body in Lambda-only space",
+      "entry_sha256": "64e9b27f29097ecfc52a21a13eb4da047eeff375128f91669a57c5932614cf30",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d8-model-b-falling-together---frying-and-mixing",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d8-model-b-falling-together---frying-and-mixing",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D8 (model B): falling together - frying and mixing",
+      "entry_sha256": "2b5b2b411b2253b51843261e15c5a77dbaa2d5aff906188f0a74230863d66dae",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d9-one-mass-disappears-completely-in-lambda-only-space",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d9-one-mass-disappears-completely-in-lambda-only-space",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "Wave D9: one mass disappears completely in Lambda-only space",
+      "entry_sha256": "2bee5273caed25e62794233b04705466cd6b2405d2c845b118b4417a91611c76",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-22.md#wave-d10-the-record-of-a-vanished-mass-in-the-real-universe",
+      "source": "2026/2026-11-22.md",
+      "anchor": "wave-d10-the-record-of-a-vanished-mass-in-the-real-universe",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave D10: the record of a vanished mass in the real universe",
+      "entry_sha256": "cecdc7c9b34c103d0301a0482572f44d5e5e8c7d6537dea778a851b3ea1ed0bb",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-22",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#t028-merger-mass-loss-against-gwtc",
+      "source": "2026/2026-11-23.md",
+      "anchor": "t028-merger-mass-loss-against-gwtc",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "T028: merger mass loss against GWTC",
+      "entry_sha256": "9418d77c4e241885a57ad8388b58d8e7a4629837d5eb645b87796557388f5d70",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#stir-fry-correction-and-wave-d11-one-free-falling-mass-alone",
+      "source": "2026/2026-11-23.md",
+      "anchor": "stir-fry-correction-and-wave-d11-one-free-falling-mass-alone",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Stir-fry correction and wave D11: one free-falling mass alone",
+      "entry_sha256": "0c0200a64fbc224953e59e62e83642f6ecbffdf29fdcd49965fc6212b6aa503a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d12-how-full-is-space",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d12-how-full-is-space",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D12: how full is space?",
+      "entry_sha256": "95046e94dbd2ccaeb1ac8be50e085874af045dbf1d0f6ba1746b30edda522818",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#merger-card-renumbered-t028-to-t029",
+      "source": "2026/2026-11-23.md",
+      "anchor": "merger-card-renumbered-t028-to-t029",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "Merger card renumbered T028 to T029",
+      "entry_sha256": "f11b80399ec6ca18cefb255159b700c3ef4ca0e2e343e7c858058a60f32276d0",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d13-openness-and-the-order-a-system-can-keep",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d13-openness-and-the-order-a-system-can-keep",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave D13: openness and the order a system can keep",
+      "entry_sha256": "930577bed66c05a09e61d795b8d1336f0cf5b7ee28f9f335cd4d6385dd5ff2be",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-23.md#topic-018-audit-and-a-lean-4-formal-proof-lane",
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-audit-and-a-lean-4-formal-proof-lane",
-      "start_line": 3,
-      "end_line": 12,
+      "start_line": 54,
+      "end_line": 63,
       "title": "Topic 0.18: audit and a Lean 4 formal-proof lane",
       "entry_sha256": "47e64303d901ad79f4fe8eae936df51450c3f78dab66419ddba9e621a200a8be",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#wave-d14-does-openness-compose-with-the-layer-3-pool",
+      "source": "2026/2026-11-23.md",
+      "anchor": "wave-d14-does-openness-compose-with-the-layer-3-pool",
+      "start_line": 64,
+      "end_line": 72,
+      "title": "Wave D14: does openness compose with the layer-3 pool?",
+      "entry_sha256": "f9f510ca3850b99e8b835e430c41ad0c95b75f51f0159b502e7a428df901a969",
       "stream": "research",
       "areas": [
         "research-core"
@@ -19465,10 +19915,30 @@
       "id": "2026/2026-11-23.md#topic-018-lean-lane-f6-energy-and-momentum-identities",
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-lean-lane-f6-energy-and-momentum-identities",
-      "start_line": 13,
-      "end_line": 22,
+      "start_line": 73,
+      "end_line": 82,
       "title": "Topic 0.18 Lean lane: F6 energy and momentum identities",
       "entry_sha256": "5c1124e794405e6e1bc0f72b72c17db698ff28e35481156562041aa252b349d4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-23",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-23.md#test-card-t030-fasting-body-mass-exponential-leak-or-not",
+      "source": "2026/2026-11-23.md",
+      "anchor": "test-card-t030-fasting-body-mass-exponential-leak-or-not",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Test Card T030: fasting body mass, exponential leak or not",
+      "entry_sha256": "6b8b76abfb76c7a26e5b1172acd7651cb6ea3d7e608a267546b7b4abe3f8779a",
       "stream": "research",
       "areas": [
         "research-core"
@@ -19485,8 +19955,8 @@
       "id": "2026/2026-11-23.md#topic-018-lean-lane-f7-boost-charge",
       "source": "2026/2026-11-23.md",
       "anchor": "topic-018-lean-lane-f7-boost-charge",
-      "start_line": 23,
-      "end_line": 31,
+      "start_line": 92,
+      "end_line": 100,
       "title": "Topic 0.18 Lean lane: F7 boost charge",
       "entry_sha256": "e31748b59aeb53e04bcfa4bf3f1a698ca8d7d0b17e9a077fc12b7a6fccc2a76a",
       "stream": "research",
@@ -19502,13 +19972,153 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-24.md#wave-d15-the-full-layer-3-equation-after-the-supply-stops",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d15-the-full-layer-3-equation-after-the-supply-stops",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Wave D15: the full layer-3 equation after the supply stops",
+      "entry_sha256": "14dab2c9fbae6d755d1a648d6e1d96077a1903cbc7944b79abd4bfd843c262b8",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d16-how-free-is-a-freely-falling-frame",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d16-how-free-is-a-freely-falling-frame",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Wave D16: how free is a freely falling frame?",
+      "entry_sha256": "500dc6338f7c716a6be9164157a82a8e382706b41f2a91bba8db76663883afe0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d17-frame-dragging-inside-a-rotating-shell-mach",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d17-frame-dragging-inside-a-rotating-shell-mach",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Wave D17: frame dragging inside a rotating shell (Mach)",
+      "entry_sha256": "5a6044b21953ee442dc4203f6b788f043d62552089f1b1511e2055ed134cb5ce",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#author-intent-free-fall-as-the-path-that-does-not-resist",
+      "source": "2026/2026-11-24.md",
+      "anchor": "author-intent-free-fall-as-the-path-that-does-not-resist",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Author intent: free fall as the path that does not resist",
+      "entry_sha256": "f637f827fa210b99bed34f21f799ab449e1604af230169be522c97f39be73984",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-24.md#topic-018-lean-lane-f8-rotation-charge-in-21",
       "source": "2026/2026-11-24.md",
       "anchor": "topic-018-lean-lane-f8-rotation-charge-in-21",
-      "start_line": 3,
-      "end_line": 12,
+      "start_line": 44,
+      "end_line": 53,
       "title": "Topic 0.18 Lean lane: F8 rotation charge in 2+1",
       "entry_sha256": "3d3afc4c7c7573027380cbfa423dd035c1a701c6fd7cddb62bac1ee7611ed419",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d18-tidal-settling-as-motion-that-stops-resisting",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d18-tidal-settling-as-motion-that-stops-resisting",
+      "start_line": 54,
+      "end_line": 63,
+      "title": "Wave D18: tidal settling as motion that stops resisting",
+      "entry_sha256": "4802e27c25072da128e8fdb9e18ab8db051ef62443a57cc98a8c8b5bf4667c02",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#author-intent-resisting-means-trying-to-stand-still-in-a-moving-universe",
+      "source": "2026/2026-11-24.md",
+      "anchor": "author-intent-resisting-means-trying-to-stand-still-in-a-moving-universe",
+      "start_line": 64,
+      "end_line": 73,
+      "title": "Author intent: \"resisting\" means trying to stand still in a moving universe",
+      "entry_sha256": "21094fbfa8f4ec8d4507b8b6d20bb1422b5eba71fb77b7ce42872e743906db0d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-24",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-24.md#wave-d19-the-price-of-resisting-free-fall",
+      "source": "2026/2026-11-24.md",
+      "anchor": "wave-d19-the-price-of-resisting-free-fall",
+      "start_line": 74,
+      "end_line": 82,
+      "title": "Wave D19: the price of resisting free fall",
+      "entry_sha256": "e7485821d54dcd4b9f9b14d3f6dd0ab885b7b3f63e8092e8c48e7a77eba96b34",
       "stream": "research",
       "areas": [
         "research-core"
@@ -19525,8 +20135,8 @@
       "id": "2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
       "source": "2026/2026-11-24.md",
       "anchor": "topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case",
-      "start_line": 13,
-      "end_line": 22,
+      "start_line": 83,
+      "end_line": 92,
       "title": "Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)",
       "entry_sha256": "4f69e40270eaf7929640fde4fd114af6a547a056c421a608793b20524e0687f2",
       "stream": "research",
@@ -19545,8 +20155,8 @@
       "id": "2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa",
       "source": "2026/2026-11-24.md",
       "anchor": "core-wave-c1-frw-background-and-dark-energy-wa",
-      "start_line": 23,
-      "end_line": 31,
+      "start_line": 93,
+      "end_line": 101,
       "title": "Core wave C1: FRW background and dark-energy w(a)",
       "entry_sha256": "d0de9dec3937f1eb79c531efc44d2a746f919c54a53dc49c14ded6bc784edc72",
       "stream": "research",
@@ -19562,11 +20172,91 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-25.md#repair-another-sessions-git-config-in-this-folder",
+      "source": "2026/2026-11-25.md",
+      "anchor": "repair-another-sessions-git-config-in-this-folder",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Repair: another session's git config in this folder",
+      "entry_sha256": "19acbe3d8d27c04809ed5af5737af2cae950722cb434e82d68eb9490d0767f33",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-cards-t031-and-t032-first-batch-of-l1-claims-against-data",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Test Cards T031 and T032: first batch of L1 claims against data",
+      "entry_sha256": "4942ac69745102b4ac476babe6ffd4787ba50223fd3b84f7cf9e3dbfef5acf1a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling",
+      "source": "2026/2026-11-25.md",
+      "anchor": "l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING",
+      "entry_sha256": "c8e683712818da15b14f4b14b1d7c78e7aa7a7963d9982315878dae6a228ec39",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t033-real-power-plants-against-the-max-power-efficiency",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t033-real-power-plants-against-the-max-power-efficiency",
+      "start_line": 33,
+      "end_line": 42,
+      "title": "Test Card T033: real power plants against the max-power efficiency",
+      "entry_sha256": "b7fafc136d97e2d24b313e3c602b6973bcdb889705d0534e564846e7f991524b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-25.md#topic-018-legacy-overclaims-labelled",
       "source": "2026/2026-11-25.md",
       "anchor": "topic-018-legacy-overclaims-labelled",
-      "start_line": 3,
-      "end_line": 11,
+      "start_line": 45,
+      "end_line": 53,
       "title": "Topic 0.18: legacy overclaims labelled",
       "entry_sha256": "07d4f60d2b29e854a14a5975e330297038c7b3691dcd129c727852f22cb55d63",
       "stream": "research",

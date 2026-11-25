@@ -1,0 +1,34 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D14_OPENNESS_LAYER3",
+  "claim_id": "C_L3_OPENNESS_LAYER3",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "pool_ode_vs_closed_form_lifetimes",
+      "value": "< 1e-9 relative, 20/20 random systems (survival after closing and appearance after opening)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "threshold_identity_d13_vs_l3_2",
+      "value": "< 1e-12 relative, 10/10 (T_c sigma_d = e delta R*_min / eta)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "appearance_divergence_order",
+      "value": "1.0 in (K - K*)/K* (t ~ ln(1/(K - K*))/delta)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_openness_layer3.py",
+    "commit": "2044312a3"
+  },
+  "artifacts": [],
+  "date": "2026-11-23",
+  "note": "Synthesis check: D13's openness ceiling (endoreversible engine) fills L3-2's layer-3 pool dR/dt = S - delta R with S = eta P_max(K)/e. The two persistence thresholds are one condition and the lifetimes follow from the pool equation; no new parameter. eta and e are free; delta is fixed by the parent action in L3-2. Nearest theory: chemostat and pump-threshold models, endoreversible thermodynamics. Not UET-distinct."
+}

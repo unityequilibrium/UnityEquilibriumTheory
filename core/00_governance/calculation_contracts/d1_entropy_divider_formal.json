@@ -1,0 +1,140 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_D1_ENTROPY_DIVIDER_FORMAL_V1",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "tool:new_formal_contract",
+    "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
+  },
+  "question": "How do the lifetime of a structure and its ability to persist depend on the temperature of the environment that receives its entropy?",
+  "output": {
+    "quantity": "exergy Ex(T_c) and lifetime tau = Ex/W_m of a store; steady maximum power K (sqrt(T_h) - sqrt(T_c))^2 and divider threshold T_c*",
+    "unit": "natural",
+    "domain": "declared formal domain of the code",
+    "accuracy": "exact or as asserted by the listed physics tests",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "UET_D1_ENTROPY_DIVIDER"
+    ],
+    "assumptions": "as declared in the code and Theory Card",
+    "approximation": "none beyond the code",
+    "initial_boundary": "algebraic",
+    "drive_environment": "not relevant to a formal derivation",
+    "parameters": "symbolic or test-sampled"
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "none"
+  },
+  "observation": {
+    "source_state": "not applicable to this formal derivation",
+    "generated_trace": "not applicable to this formal derivation",
+    "carrier": "not applicable to this formal derivation",
+    "observer_state": "not applicable to this formal derivation",
+    "readout": "not applicable to this formal derivation",
+    "backaction": "not applicable to this formal derivation",
+    "frame": "not applicable to this formal derivation",
+    "time_convention": "not applicable to this formal derivation",
+    "product_level": "not applicable to this formal derivation",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/persistence/uet_entropy_divider.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/persistence/uet_entropy_divider.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
+      "evidence": [
+        "core/05_tests/physics/test_entropy_divider.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "natural",
+    "numerical": "test tolerances",
+    "approximation": "none declared",
+    "measurement": "not applicable",
+    "systematic": "not applicable",
+    "omissions": "none declared",
+    "dependence": "not applicable",
+    "acceptance": "formal coverage only",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "core/03_lanes/persistence/uet_entropy_divider.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "99908e138f923bb581d9bc043ff726d5dd0ed5524cab840b6cfcc2897644beb9",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/05_tests/physics/test_entropy_divider.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "6d7a75db38bc7b48fc29f14ebd9d1fb5daa3455866a5983fc46c4230fcee0305",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/uet_entropy_divider.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/uet_entropy_divider.py",
+    "core/05_tests/physics/test_entropy_divider.py"
+  ],
+  "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
+  "next_action": "Refresh identities with this tool when the code or tests change."
+}

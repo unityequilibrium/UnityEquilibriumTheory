@@ -1,0 +1,4 @@
+# Everitt et al. (2011) PRL 106, 221101, arXiv:1105.3456 abstract: frame-dragging drift rate -37.2 +/- 7.2 mas/yr (GR -39.2 mas/yr)
+# magnitudes in mas/yr; the paper quotes both with a minus sign (direction of drift)
+quantity,value_mas_per_yr,sigma
+frame_dragging,37.2,7.2

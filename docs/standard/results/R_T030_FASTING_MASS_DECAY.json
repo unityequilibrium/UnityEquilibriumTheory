@@ -1,0 +1,53 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T030_FASTING_MASS_DECAY",
+ "claim_id": "C_L3_OPENNESS_LAYER3",
+ "test_card_id": "T030",
+ "level": "FAILED",
+ "outcome": "FAIL",
+ "numbers": [
+  {
+   "name": "r_k_late_over_k_early",
+   "value": "0.9224",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "r_lin_constant_burn",
+   "value": "1.0885",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "pass_band_and_fail_lines",
+   "value": "PASS |r - 1| <= 0.0221; FAILED r <= 0.9336 or r >= 1.0664",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "specific_loss_rate_early_days_6_18",
+   "value": "0.00682",
+   "uncertainty": null,
+   "unit": "1/day"
+  },
+  {
+   "name": "specific_loss_rate_late_days_19_31",
+   "value": "0.00629",
+   "uncertainty": null,
+   "unit": "1/day"
+  },
+  {
+   "name": "n_points_in_window",
+   "value": "26",
+   "uncertainty": null,
+   "unit": "count"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t030_fasting_mass_decay.py",
+  "commit": "9527c2180"
+ },
+ "artifacts": [],
+ "date": "2026-11-23",
+ "note": "FAILED by the preregistered rule on the lower side: from day 6 to day 31 of L.'s fast (Benedict 1915) the specific body-mass loss rate fell from 0.682 to 0.629 percent per day, r = 0.922, below the fail line 0.934; an exponential leak needs r within 1 +/- 0.022, constant burn needs r = 1.089. The loss slowed faster than a constant-rate leak of a closed pool: a pool with fixed delta does not describe this body after it was cut off. Neither simple model fits; the absolute daily loss also fell. Scope: tests D14's closed-pool leak R = R_ss exp(-delta t) with constant delta, applied (AI interpretation) to a fasting body's mass; the composition algebra of D14 (thresholds, survival and appearance times as functions of delta) is not touched as mathematics, but its use with a fixed delta for a living reserve fails here. One subject, weights include water; day-to-day scatter is large (Benedict notes it). Known before drafting: early fasting losses are larger (SEEN_SUMMARY); the two-sided criterion was added before reading so that this would count. Run once on 2026-11-23 after approval commit 9527c2180. Physiology (metabolic adaptation, falling resting metabolism in a fast) is the nearest known explanation; not UET-distinct."
+}

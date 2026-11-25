@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-33_L1_·_19_L2_·_4_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-51_L1_·_23_L2_·_5_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -146,7 +146,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (56 claims: 33 at L1, 19 at L2, 4 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (79 claims: 51 at L1, 23 at L2, 5 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -183,6 +183,7 @@ Test criteria were committed and approved before each comparison. None of these 
 | T019 | Eöt-Wash equivalence-principle data (gravity) | L2 PASS: bounds the portal to g_c ≤ 1.30×10⁻¹² eV for ranges 2 m to 10⁵ m |
 | Route B | Lunar laser ranging (gravity, AI proposal) | L2 PASS: bounds a coupling to free-energy destruction, time constant ≤ 1.46×10⁸ yr |
 | T021 | Succession of lighting technologies (economics) | L2 PASS: no successor used more energy and more work hours per lumen-hour than what it replaced |
+| T029 | Black-hole mergers in GWTC: mass radiated (gravity) | L2 PASS: 225 of 227 nearly non-spinning mergers radiate between the inspiral loss 0.0572 eta and the area-theorem cap; none above the cap; the inspiral alone is about a third of the loss (GR-derived final masses, weak test) |
 
 Several of these only bound UET's free parameters or pass because standard physics passes; none is a prediction of UET alone.
 Failures are recorded the same way as passes; see [`docs/standard/results/`](docs/standard/results/).
