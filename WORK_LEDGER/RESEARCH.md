@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 753. Counts describe records, not accomplishments.
+Indexed entries: 754. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING](2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Cards T031 and T032: first batch of L1 claims against data](2026/2026-11-25.md#test-cards-t031-and-t032-first-batch-of-l1-claims-against-data) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Core wave C1: FRW background and dark-energy w(a)](2026/2026-11-24.md#core-wave-c1-frw-background-and-dark-energy-wa) (L93) | research-core | explicit_stream_and_area |
 | 2026-11-24 | [Topic 0.18 Lean lane: F9 reparametrization identity (homogeneous case)](2026/2026-11-24.md#topic-018-lean-lane-f9-reparametrization-identity-homogeneous-case) (L83) | research-core | explicit_stream_and_area |

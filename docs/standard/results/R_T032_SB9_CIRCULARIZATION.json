@@ -31,5 +31,10 @@
  },
  "artifacts": [],
  "date": "2026-11-25",
- "note": "PASS under Test Card T032 (approved 27484cf81 before the data were downloaded). 78 percent of SB9 orbits with periods of 1-3 days are circular (e < 0.05), falling monotonically to 18 percent at 100-300 days. Weak test: the period-eccentricity relation was known (SEEN_SUMMARY); circular formation is not separated from tidal settling; authors often fix e = 0 at short periods. Implementation fix made after approval, before the run: the catalogue's orbit-number column is named 'o', not 'Orb' as the draft assumed; the method (lowest orbit number per system) is unchanged. Of the systems counted, n_systems in the output (4078) includes systems outside 1-300 d. L2 needs the author's approval."
+ "note": "PASS under Test Card T032 (approved 27484cf81 before the data were downloaded). 78 percent of SB9 orbits with periods of 1-3 days are circular (e < 0.05), falling monotonically to 18 percent at 100-300 days. Weak test: the period-eccentricity relation was known (SEEN_SUMMARY); circular formation is not separated from tidal settling; authors often fix e = 0 at short periods. Implementation fix made after approval, before the run: the catalogue's orbit-number column is named 'o', not 'Orb' as the draft assumed; the method (lowest orbit number per system) is unchanged. Of the systems counted, n_systems in the output (4078) includes systems outside 1-300 d. L2 approved by the author on 2026-11-25.",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-25",
+  "role": "AUTHOR"
+ }
 }

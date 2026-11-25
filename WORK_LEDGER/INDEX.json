@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 989,
+    "entries": 990,
     "by_stream": {
       "book-history": 94,
       "operations": 141,
-      "research": 753,
+      "research": 754,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "b3757829a007821c01d4044b2904b3b439834a22570954eb1cad5a3b3cfff734",
-      "entries": 2
+      "sha256": "d46223de3643326ad7fddb98d6ffc93ab382537f8240e97b8a859ee1dc81897e",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20196,9 +20196,29 @@
       "source": "2026/2026-11-25.md",
       "anchor": "test-cards-t031-and-t032-first-batch-of-l1-claims-against-data",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Test Cards T031 and T032: first batch of L1 claims against data",
-      "entry_sha256": "cf338f6c27f305749639361f2b2fca70a566a01587a5c824976fccabf18be64c",
+      "entry_sha256": "4942ac69745102b4ac476babe6ffd4787ba50223fd3b84f7cf9e3dbfef5acf1a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling",
+      "source": "2026/2026-11-25.md",
+      "anchor": "l2-for-c_l3_mach_frame_dragging-and-c_l3_tidal_settling",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "L2 for C_L3_MACH_FRAME_DRAGGING and C_L3_TIDAL_SETTLING",
+      "entry_sha256": "d5a4653e7faca1d5564615c2b4de40b61ab920d73609cbe72be184a9bd883ff8",
       "stream": "research",
       "areas": [
         "research-core"

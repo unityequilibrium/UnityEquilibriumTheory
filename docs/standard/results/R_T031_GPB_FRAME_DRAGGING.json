@@ -37,5 +37,10 @@
  },
  "artifacts": [],
  "date": "2026-11-25",
- "note": "PASS under Test Card T031 (approved 27484cf81 before the data were read). The gravitomagnetic precession averaged on GP-B's polar orbit, projected on the guide star, gives 39.17 mas/yr against the measured 37.2 +/- 7.2 mas/yr. Weak test: the measured value was known in outline (SEEN_SUMMARY), and it tests the weak-field GR term behind D17, not the shell formula and not anything UET-distinct. L2 needs the author's approval."
+ "note": "PASS under Test Card T031 (approved 27484cf81 before the data were read). The gravitomagnetic precession averaged on GP-B's polar orbit, projected on the guide star, gives 39.17 mas/yr against the measured 37.2 +/- 7.2 mas/yr. Weak test: the measured value was known in outline (SEEN_SUMMARY), and it tests the weak-field GR term behind D17, not the shell formula and not anything UET-distinct. L2 approved by the author on 2026-11-25.",
+ "approval": {
+  "approved_by": "santxkoz",
+  "date": "2026-11-25",
+  "role": "AUTHOR"
+ }
 }

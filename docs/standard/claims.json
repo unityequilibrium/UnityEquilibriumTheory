@@ -620,20 +620,22 @@
     {
       "claim_id": "C_L3_MACH_FRAME_DRAGGING",
       "statement": "Inside a slowly rotating spherical shell of mass M and radius R, local inertial frames (what 'not rotating' means for a gyroscope) turn with omega_in/Omega = 4 alpha (2 - alpha)/((1 + alpha)(3 - alpha)), M/R = 2 alpha/(1 + alpha)^2 (G = c = 1): (4/3) G M/(R c^2) in the weak field, rising to full co-rotation as the shell nears its own horizon. Matter inside the Hubble radius has G M/(R c^2) = Omega_m/2 = 0.16 (0.5 for the full critical density), the order-one value at which matter can set the inertial frame.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
-        "R_D17_MACH_FRAME_DRAGGING"
+        "R_D17_MACH_FRAME_DRAGGING",
+        "R_T031_GPB_FRAME_DRAGGING"
       ],
-      "note": "Derived numerically through a shell with tangential stress and checked against Brill and Cohen (1966). The cosmological reading is an AI illustration: a flat-space shell is not an expanding universe, and GR is not Machian in general (Minkowski space has inertia without matter). With D16: a falling frame is free of other bodies neither in its tides nor in its rotation, only nearly so for compact bodies. Nearest theory: Lense-Thirring, Brill-Cohen. Not UET-distinct."
+      "note": "Derived numerically through a shell with tangential stress and checked against Brill and Cohen (1966). The cosmological reading is an AI illustration: a flat-space shell is not an expanding universe, and GR is not Machian in general (Minkowski space has inertia without matter). With D16: a falling frame is free of other bodies neither in its tides nor in its rotation, only nearly so for compact bodies. Nearest theory: Lense-Thirring, Brill-Cohen. Not UET-distinct. Confronted in T031 (2026-11-25): Gravity Probe B frame dragging 37.2 +/- 7.2 mas/yr vs 39.17 predicted (z = 0.27), weak-field part only; L2 approved by the author."
     },
     {
       "claim_id": "C_L3_TIDAL_SETTLING",
       "statement": "A spinning body on an orbit is flexed by the tidal field at the rate F = <|dT/dt|^2> seen in its own frame: 18 (GM/a^3)^2 (n - omega)^2 on a circular orbit and 63 (GM/a^3)^2 n^2 e^2 for a locked body on a slightly eccentric orbit. F vanishes only for a circular, synchronous orbit, and at fixed angular momentum that state is the lowest energy the system can reach exactly when mu a^2 > 3 I (Darwin-Hut); otherwise no settled state exists. Dissipating through F, the system reaches the motion that no longer flexes it without being steered.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
-        "R_D18_TIDAL_SETTLING"
+        "R_D18_TIDAL_SETTLING",
+        "R_T032_SB9_CIRCULARIZATION"
       ],
-      "note": "AI reading of the author's 'orbit = motion that does not resist; forced motion is temporary' (AUTHOR_PROPOSITION 4, 2026-11-24): resistance = flexing rate F, settled = F = 0 at the energy minimum. Example chosen by the AI. Testable on measured binaries (circularization cutoff period against age) with a Test Card. Nearest theory: Darwin-Hut-Zahn tidal evolution. Not UET-distinct."
+      "note": "AI reading of the author's 'orbit = motion that does not resist; forced motion is temporary' (AUTHOR_PROPOSITION 4, 2026-11-24): resistance = flexing rate F, settled = F = 0 at the energy minimum. Example chosen by the AI. Testable on measured binaries (circularization cutoff period against age) with a Test Card. Nearest theory: Darwin-Hut-Zahn tidal evolution. Not UET-distinct. Confronted in T032 (2026-11-25): SB9 circular fraction 0.78 at 1-3 d falling to 0.18 at 100-300 d (rho = -1); direction only, formation not separated; L2 approved by the author."
     },
     {
       "claim_id": "C_L3_PRICE_OF_RESISTING",
