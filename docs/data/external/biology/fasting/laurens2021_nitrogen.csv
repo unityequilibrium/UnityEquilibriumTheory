@@ -1,0 +1,8 @@
+# Laurens et al. (2021) J Cachexia Sarcopenia Muscle 12, 1690, PMC8718030, body-composition figure panel B "Protein oxidation (g/24h)", group means (bar tops)
+# read off the figure image after approval of T034 (pixel rows: axis 0 at row 101, 50 at row 62.6 of the 709x566 image; 1 px = 1.3 g/24h)
+# fasting days F01, F04, F9 are the only fasting-day bars; baseline 56.0, RF1 33.3, RF3 32.3 (not fasting days, not used)
+# n_g_per_day = protein / 6.25 (standard nitrogen-to-protein factor; the ratio q does not depend on it)
+day,protein_g_per_24h,n_g_per_day
+1,41.7,6.67
+4,32.6,5.22
+9,31.3,5.01

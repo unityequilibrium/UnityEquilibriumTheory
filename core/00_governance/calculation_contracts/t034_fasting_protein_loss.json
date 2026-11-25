@@ -1,0 +1,224 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T034_FASTING_PROTEIN_LOSS_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t034",
+    "rationale": "Methodological contract for the Test Card; the evidence decision lives in docs/standard. Published values taken as published.",
+    "coverage_evidence": [
+      "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+    ]
+  },
+  "question": "Does daily protein loss rise, rather than fall, as fat is used up during a fast (D15 with fat = pool, lean = structures)?",
+  "output": {
+    "quantity": "q = late / early mean daily nitrogen loss",
+    "unit": "dimensionless",
+    "domain": "10-day water fast in healthy men (Laurens et al. 2021)",
+    "accuracy": "as published; no re-analysis",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "d15_layer3_after_closing"
+    ],
+    "assumptions": "Fat = pool, lean tissue = structures with constant capture a and burn tau (AI mapping); nitrogen stands for protein loss.",
+    "approximation": "See the Test Card.",
+    "initial_boundary": "Not applicable.",
+    "drive_environment": "As in the source.",
+    "parameters": "No fitting."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "LAURENS2021_FASTING_NITROGEN"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Not a holdout: the result was known in outline (SEEN_SUMMARY); data read only after approval."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published values used as served.",
+      "systems": [
+        {
+          "id": "plant",
+          "state": "Fasting human body",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "plant.state"
+            ],
+            "owner_ids": [],
+            "rule": "One record per system."
+          }
+        },
+        {
+          "id": "operator_record",
+          "state": "Published figure (group means)",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "operator_record.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "measure",
+          "source": "plant",
+          "target": "operator_record",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Reported temperatures and efficiency"
+        },
+        {
+          "id": "no_backaction",
+          "source": "operator_record",
+          "target": "plant",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "None"
+        }
+      ],
+      "observables": [
+        {
+          "id": "obs",
+          "detector_id": "operator_record",
+          "target_systems": [
+            "plant"
+          ],
+          "backaction_targets": [
+            "plant"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "daily protein oxidation",
+          "readout_map": "published values; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Rotating Earth",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "As in the source.",
+    "observer_state": "Published record.",
+    "readout": "Gyroscope drift relative to the guide star",
+    "backaction": "None.",
+    "frame": "As in the source",
+    "time_convention": "As in the source",
+    "product_level": "published summary",
+    "corrections": [
+      {
+        "id": "upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Fixed in the Test Card and script.",
+      "evidence": [
+        "core/03_lanes/persistence/t034_fasting_protein_loss.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Handled upstream by the source.",
+      "evidence": [
+        "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Handled upstream by the source.",
+      "evidence": [
+        "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Handled upstream by the source.",
+      "evidence": [
+        "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Handled upstream by the source.",
+      "evidence": [
+        "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Fixed in the Test Card and script.",
+      "evidence": [
+        "core/03_lanes/persistence/t034_fasting_protein_loss.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Fixed in the Test Card and script.",
+      "evidence": [
+        "core/03_lanes/persistence/t034_fasting_protein_loss.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "dimensionless",
+    "numerical": "Negligible.",
+    "approximation": "See the Test Card.",
+    "measurement": "As published.",
+    "systematic": "See the Test Card note.",
+    "omissions": "See the Test Card note.",
+    "dependence": "As in the source.",
+    "acceptance": "Outcome categories fixed in the Test Card.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/biology/fasting/laurens2021_nitrogen.csv",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "28ea46a8f2d11701449358e4f635246da08103d4af0e20707b2cb63ba7a91f1d",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/persistence/t034_fasting_protein_loss.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "3df361bb3d6ae20324a4aa497386e99e3129fef37232148958bedcf399fc3cb5",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/persistence/t034_fasting_protein_loss.py"
+  ],
+  "evidence": [
+    "core/03_lanes/persistence/t034_fasting_protein_loss.py",
+    "docs/data/external/biology/fasting/laurens2021_nitrogen.csv"
+  ],
+  "claim_boundary": "Methodological coverage of the comparison only; the evidence level is set in docs/standard. Not UET-distinct.",
+  "next_action": "Run once under the card; done 2026-11-25 (INCONCLUSIVE: three fasting-day points)."
+}

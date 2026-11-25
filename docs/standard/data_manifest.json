@@ -396,6 +396,18 @@
       "license": "Numbers transcribed from the arXiv source (facts, citation given)",
       "visibility": "PUBLIC",
       "note": "Transcribed after approval of T033 from the LaTeX source CA.tex, all 13 rows, as published."
+    },
+    {
+      "data_id": "LAURENS2021_FASTING_NITROGEN",
+      "description": "Protein oxidation (g/24h, group means) on fasting days 1, 4 and 9 of a 10-day water fast in healthy men, with nitrogen = protein/6.25",
+      "source": "C. Laurens et al., J. Cachexia Sarcopenia Muscle 12, 1690 (2021), body-composition figure panel B",
+      "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8718030/",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/laurens2021_nitrogen.csv",
+      "sha256": "28ea46a8f2d11701449358e4f635246da08103d4af0e20707b2cb63ba7a91f1d",
+      "license": "Numbers read off a CC BY-NC-ND 4.0 figure (facts, citation given; the figure itself is not stored)",
+      "visibility": "PUBLIC",
+      "note": "Read off the figure after approval of T034; reading error about 1.3 g/24h (one pixel). Only three fasting-day bars exist."
     }
   ]
 }
