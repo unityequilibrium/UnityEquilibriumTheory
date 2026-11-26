@@ -33,6 +33,7 @@
 | ตัวพยายามทำให้พัง | `05_tests/physics/test_stability_attacks.py`, `test_portal_fifth_force.py`, `test_fidelity_static_vacuum.py` |
 | โมดูลเสริม (vacuum, fifth force) | `03_lanes/scalar_tensor/uet_vacuum_structure.py`, `uet_portal_fifth_force.py` |
 | ฉากหลังจักรวาล FRW (2026-11-24) | `03_lanes/scalar_tensor/uet_frw_background.py`: ψ = 0 คือ ΛCDM; ψ ที่ถูกปล่อยให้ไหล (thawing) ให้ w(a) แบบ quintessence; ξ_c = 0 ไม่มีทาง w < −1; ξ_c > 0 ยังมีช่วง phantom ในอดีต (1+w ถึงอย่างน้อย −0.086) ที่ Cassini และ LLR ยอมให้ และจบที่ z ≈ 1.5–2.2 (`C_C1_FRW_DARK_ENERGY`, L1; ตัวตรวจ `05_tests/physics/test_frw_background.py`) |
+| ฉากหลังถึงยุค CMB (2026-11-26) | `03_lanes/scalar_tensor/uet_frw_cmb.py`: ใส่รังสีและปล่อย ψ ในยุครังสี; ξ_c = 0 ได้ w(a) เท่าเดิม, ξ_c ≠ 0 ขยับ w0 ได้ถึง 0.05; มุม θ* ของ CMB ขยับจาก ΛCDM +0.57% ที่จุดดีสุดของ T040 (ความหนาแน่นคงที่) | C_C2_FRW_CMB_ANGLE (L1) |
 | เทียบข้อมูลจริง | ทุกไฟล์อยู่ใน `03_lanes/scalar_tensor/`: T001 pulsar คู่ (`t001_binary_pulsar_constraint.py`), T005 fifth force (`t005_fifth_force_constraint.py`), T016 ดาวเทียม MICROSCOPE (`t016_microscope_portal.py`), T019 ช่วงระยะ 1 ซม.–100 กม. (`t019_portal_gap_rotwash.py`), T020 เส้นทาง ข กับ LLR (`t020_route_b_llr.py`) |
 | ภาค χ (สสาร) เทียบข้อมูลจริง | T015 ฮีเลียมเหลว (`03_lanes/open_system/t015_he_ii_tree_level.py`) **FAILED** |
 
@@ -99,6 +100,7 @@
 | T024 | 3 (หลายระบบ) | ช่วงห่างระหว่างนวัตกรรมแสงสว่างกับประชากรโลก: ความชัน −1.43 (95%: −2.14 ถึง −0.72) ไม่ตรงกับ −0.27 ของ Bettencourt แต่ตรงกับ −1 ของ Kremer | **FAILED** (UET ยืมหลักการของ Kremer แทน) |
 | T029 | 3 (ตกร่วมกัน) | มวลที่หายตอนหลุมดำชนกัน (GWTC): 225/227 อยู่ระหว่าง 0.0572 η กับเพดานทฤษฎีบทพื้นที่ ไม่มีตัวไหนเกินเพดาน; มวลที่หายจริง 3.13 เท่าของส่วนหมุนเข้าหากัน | L2 PASS (GR ก็ผ่าน; แบบทดสอบอ่อน) |
 | T040 | 1 (FRW) | w(a) ของ ψ แบบ thawing เทียบ DESI DR2 BAO + Pantheon+: Δχ² เทียบ CPL = 0.03, ดีกว่า ΛCDM 5.1; ไม่ใช่ผลเฉพาะ UET | L2 PASS |
+| T041 | 1 (FRW + รังสี, C2) | w(a) ชุดเดียวกันเมื่อเพิ่ม CMB distance priors: Δχ² เทียบ CPL = 3.94 (เกณฑ์ 4), ดีกว่า ΛCDM แค่ 1.5; ไม่ใช่ผลเฉพาะ UET | L2 PASS (เฉียดเส้น) |
 
 การ์ดอยู่ที่ `docs/standard/tests/` ผลอยู่ที่ `docs/standard/results/` ระดับของทุกข้ออ้างอยู่ที่ `docs/standard/claims.json` · การ์ด T001–T013 บันทึกพาธสคริปต์เดิมเป็น `docs/core/...` ซึ่งตอนนี้คือ `core/...` (ย้ายโฟลเดอร์ 2026-11-14)
 

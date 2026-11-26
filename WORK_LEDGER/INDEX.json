@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 88,
-    "entries": 998,
+    "sources": 89,
+    "entries": 1002,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 761,
+      "research": 765,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -457,6 +457,11 @@
       "path": "2026/2026-11-25.md",
       "sha256": "44bf9b2a4a553a7f612971816bdd36adcc557e54491865aaf3ecf677e898a0df",
       "entries": 11
+    },
+    {
+      "path": "2026/2026-11-26.md",
+      "sha256": "b4ad1b0ff3e1afbe1361044e895a5292cfd209608ae6363c5c3d383e982997cf",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20389,6 +20394,86 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#wave-c2-frw-background-with-radiation-and-the-cmb-angle",
+      "source": "2026/2026-11-26.md",
+      "anchor": "wave-c2-frw-background-with-radiation-and-the-cmb-angle",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Wave C2: FRW background with radiation and the CMB angle",
+      "entry_sha256": "90c956c170916a9fb0c88a18835970a2884a06590d6d39f86147fab5d7f2ba5e",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#test-card-t041-drafted-cmb-distance-priors--bao--sn",
+      "source": "2026/2026-11-26.md",
+      "anchor": "test-card-t041-drafted-cmb-distance-priors--bao--sn",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Test Card T041 drafted (CMB distance priors + BAO + SN)",
+      "entry_sha256": "250bc4a4ba07efd4728d652aa6d6300bed0853accde1b342ac0d2632f2ea6275",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
+      "source": "2026/2026-11-26.md",
+      "anchor": "t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)",
+      "entry_sha256": "980ff575a0182963d9bd7322437dc394064a833e78da7b165db012df3a0577a0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
+      "source": "2026/2026-11-26.md",
+      "anchor": "c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)",
+      "entry_sha256": "786034fd4b04ecfa3133977c878a97e5b8adea0303d437044a9a30a24675f5dd",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
       "legacy_root_path": false
     },
     {
