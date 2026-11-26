@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 89,
-    "entries": 1005,
+    "entries": 1006,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 768,
+      "research": 769,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,8 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "b0a3dc56131ff525d89dfd7a14df63ebc10d438baa2306836b785b7b2e54640a",
-      "entries": 2
+      "sha256": "fb3e1e699ab4cc5dfe7d8767537ecb6f300b0f050e6a6605cb141117c683753b",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20521,9 +20521,29 @@
       "source": "2026/2026-11-26.md",
       "anchor": "benchmark-benedicts-energy-accounting-for-subject-l",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Benchmark: Benedict's energy accounting for subject L.",
-      "entry_sha256": "823ef5278bfd92e92934c26ee04e6bf979b4d03797897ae00f60b4cd9efa45e4",
+      "entry_sha256": "d97c43beaaa6e1085bf4a3fd372cbf05772c5855ef9b7f7893de7f10e75066b4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#literature-check-fuel-order-and-phase-iii-in-fasting",
+      "source": "2026/2026-11-26.md",
+      "anchor": "literature-check-fuel-order-and-phase-iii-in-fasting",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Literature check: fuel order and phase III in fasting",
+      "entry_sha256": "4abd6f8050979167ef9ceb5b48c97d1a96cc98f0d4bc8078261725d6ee6787e5",
       "stream": "research",
       "areas": [
         "research-core"

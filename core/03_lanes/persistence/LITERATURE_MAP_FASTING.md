@@ -60,6 +60,22 @@ quotations are short and attributed, equations are restated in our notation.
   steady specific mass loss with protein spared), phase III (fat near a threshold, protein loss and mass loss rise,
   refeeding drive). Source read: abstract of Robin et al., Am. J. Physiol. 254, R61 (1988); full text not open.
 
+### 1.4 Why fat first and when protein loss returns: already explained (checked 2026-11-26)
+
+- Phase III starts at a fat threshold: in emperor penguins, below a critical body mass the share of energy from
+  protein rose progressively, "14 times higher at 18 kg than during phase II" (Robin et al. 1988, abstract); in king
+  penguins phase III came after fat stores fell about fourfold (Bernard et al. 2002, abstract); phase III also
+  triggers a refeeding drive (Robin et al. 1998, "refeeding signal").
+- Protein sparing depends on lipid supply: lipid fuels directly modulate muscle protein breakdown in prolonged
+  starvation (Lowell and Goodman 1987, abstract).
+- The order of fuel use is already treated as an optimisation of survival: Noren and Mangel (2004, Funct. Ecol.)
+  used a dynamic state-variable model (Clark and Mangel 2000) "to determine the optimal allocation of body reserves
+  (lipid and protein)" in fasting elephant seal pups; Henry et al. (1988) modelled the protein compartment as a partly
+  usable energy reserve.
+- For UET: layer 3's persistence selection (keep structures alive as long as the store allows) is the same question
+  as this state-dependent optimisation. Deriving the fuel order from layer 3 would be a synthesis check against Noren
+  and Mangel, not a new result; a UET-distinct prediction is not in sight here.
+
 ## 2. What these models imply for the quantities we tested
 
 - Slowing of mass loss in a total fast (I = 0): E falls as L and F fall, and adaptive thermogenesis lowers it further,
