@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 89,
-    "entries": 1000,
+    "entries": 1001,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 763,
+      "research": 764,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,8 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "fd41935ee6effcf04ebd7976bb3e6ac624111a84d835c50a68e85cf70b267640",
-      "entries": 2
+      "sha256": "0d5b780fd9244a0b31f53f5baf17206e94ed30b184967de552d7e3a743aef7c5",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20421,9 +20421,29 @@
       "source": "2026/2026-11-26.md",
       "anchor": "test-card-t041-drafted-cmb-distance-priors--bao--sn",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Test Card T041 drafted (CMB distance priors + BAO + SN)",
-      "entry_sha256": "971541339b6be73086e658e88cb8cc3fadffd2f98a372b1c002fb3c698c7f055",
+      "entry_sha256": "250bc4a4ba07efd4728d652aa6d6300bed0853accde1b342ac0d2632f2ea6275",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
+      "source": "2026/2026-11-26.md",
+      "anchor": "t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)",
+      "entry_sha256": "b9936906239a189f4cccdc7d60ca494925787039f0476499a43c97a0a898822d",
       "stream": "research",
       "areas": [
         "research-core"

@@ -1,0 +1,71 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T041_W_OF_A_CMB_BAO_SN",
+  "claim_id": "C_C2_FRW_CMB_ANGLE",
+  "test_card_id": "T041",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "dchi2_CPL = chi2_min(UET) - chi2_min(CPL)",
+      "value": "3.94 (PASS <= 4, FAIL > 9)",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "dchi2_LCDM = chi2_min(LCDM) - chi2_min(UET)",
+      "value": "1.49",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "chi2_min LCDM / CPL / UET",
+      "value": "1417.30 / 1411.88 / 1415.82",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "CMB part of chi2 LCDM / CPL / UET",
+      "value": "0.57 / 0.05 / 1.15",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "CPL best (Omega_m, w0, wa, omega_b, omega_m)",
+      "value": "0.3148, -0.8691, -0.4915, 0.0224, 0.1447",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "UET best (xi_c, psi_i, m/H0)",
+      "value": "0.05, 0.1, 3.06 (grid label 3.0)",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "UET best (Omega_m, omega_b, omega_m)",
+      "value": "0.3118, 0.02247, 0.1434",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "UET best as CPL (w0, wa)",
+      "value": "-0.966, -0.048",
+      "uncertainty": null,
+      "unit": "1"
+    },
+    {
+      "name": "data points (BAO, SN, CMB)",
+      "value": "13, 1590, 3",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py",
+    "commit": "f846978f1"
+  },
+  "artifacts": [],
+  "date": "2026-11-26",
+  "note": "PASS under Test Card T041 (approved 75ded3d26 before the data were opened), at the edge: dchi2_CPL = 3.94 against the PASS limit 4. Single run, 76 min. Adding the CMB moved the UET family from dchi2_CPL = 0.03 (T040) to 3.94: CPL now gains 5.4 in chi2 over LCDM, the UET family only 1.5. The UET best point sits on two edges of the AI grid (xi_c = 0.05, the largest value; psi_i = 0.1, the smallest), so a wider grid may lower chi2_UET; that would only move the outcome further from FAIL. Each UET point was fitted with at most 400 Nelder-Mead evaluations. Background only: distance priors (R, l_A, omega_b) of Chen et al. 2019 stand in for the full CMB likelihood. Not UET-distinct: thawing and extended quintessence give the same family. Recorded at L1 with outcome PASS; it becomes L2_CONFRONTED, and the claim with it, only when the author approves (approval block added then)."
+}
