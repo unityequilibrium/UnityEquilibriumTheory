@@ -1,0 +1,73 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T041",
+  "status": "DRAFT",
+  "claim_id": "C_C2_FRW_CMB_ANGLE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "With the CMB added, the expansion history of the parent action still fits the data: the thawing psi of waves C1 and C2, with xi_c inside the Cassini, lunar laser ranging and T001 bounds today, fits Planck 2018 distance priors plus DESI DR2 BAO and Pantheon+ about as well as a free linear w(a) (CPL).",
+  "observable": {
+    "quantity": "dchi2_CPL = chi2_min(UET family) - chi2_min(CPL) for CMB distance priors (R, l_A, omega_b) + BAO + SN",
+    "unit": "1",
+    "domain": "flat FRW with matter and radiation; BAO and SN at 0.01 < z < 2.5; CMB at z* (background only)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "CHEN2019_DISTANCE_PRIORS_TEX",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "DESI_DR2_BAO_MEAN",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "DESI_DR2_BAO_COV",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "PANTHEON_PLUS_HD",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    },
+    {
+      "data_id": "PANTHEON_PLUS_COV",
+      "role": "COMPARISON",
+      "exposure": "SEEN_FULL"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py",
+    "description": "Background of each model with radiation (uet_frw_cmb.py, wave C2). LCDM (Omega_m, omega_b, omega_m) and CPL (Omega_m, w0, wa, omega_b, omega_m) by Nelder-Mead from 2 and 4 starts. UET: for each point of the T040 grid (xi_c in {0, -0.01, -0.003, 0.003, 0.01, 0.02, 0.03, 0.05}, psi_i in {0.1..1.2}, m/H0 in {0.5, 1, 2, 3, 4} with m/H0 measured with the H0 of Omega_m = 0.30) Nelder-Mead over (Lambda_eff, omega_b, omega_m); points failing Cassini, LLR or T001 today are excluded. CMB chi2 on (R, l_A, omega_b) of the base LambdaCDM block of Chen et al. (2019) with n_s marginalised, z* from the Hu-Sugiyama fit as the paper prescribes. BAO and SN as in T040 (BAO amplitude and SN offset profiled analytically; zHD > 0.01)."
+  },
+  "free_parameters": [
+    "Omega_m (Lambda_eff for UET)",
+    "omega_b",
+    "omega_m",
+    "psi_i",
+    "m_psi/H0",
+    "xi_c",
+    "w0, wa (CPL only)",
+    "c/(H0 r_d) (nuisance)",
+    "SN offset M (nuisance)"
+  ],
+  "fixed_parameters": [
+    "flat FRW; massless neutrinos, N_eff = 3.046, T_CMB = 2.7255 K (AI choice)",
+    "psi released at rest at z = 1e6 (AI choice; C2 shows the minimal-coupling w(a) does not depend on it)",
+    "CMB as background distance priors only, base LambdaCDM block, n_s marginalised (AI choice)",
+    "asymmetric 68% errors symmetrised as the mean of the two sides (AI choice)",
+    "BAO amplitude c/(H0 r_d) kept free rather than tied to omega_b, omega_m (AI choice, as in T040)",
+    "UET grid and RK4 with 1500 steps (AI choice)",
+    "bounds applied today: Cassini |gamma - 1| < 2.3e-5, LLR |dG/dt / G| < 2.2e-3 H0, xi_c outside [2.0, 2.4] (T001)",
+    "CMB compression Chen, Huang & Wang 2019 (author's choice, 2026-11-26)"
+  ],
+  "pass_criterion": "PASS if dchi2_CPL <= 4.",
+  "fail_criterion": "FAIL if dchi2_CPL > 9. INCONCLUSIVE if 4 < dchi2_CPL <= 9.",
+  "drafted_by": "claude",
+  "note": "Proposal: topics/0.3_Cosmology_Hubble_Tension/Doc/PROPOSAL_T041_CMB_PRIORS_2026-11-26.md. Disclosure: not blind. The drafter knows the approximate published values of these distance priors (l_A near 301.5, R near 1.75), the T040 result on the same BAO and SN data (PASS, dchi2_CPL = 0.03), and that DESI DR2 reports a preference for CPL with w0 > -1, wa < 0 over LambdaCDM of about 2.8 to 4.2 sigma once the CMB is added, with the CPL best fit crossing into w < -1 at z of about 0.5 and above. The minimal-coupling UET family cannot cross w = -1, and C1 found xi_c > 0 gives phantom phases only at z > 1.5, so the drafter expects INCONCLUSIVE or FAIL. The BAO and SN data were used in T040; they did not fit any parameter of the C2 claim. Reported, not deciding: dchi2_LCDM, the UET best point and its CPL (w0, wa), and the CMB part of each chi2."
+}
