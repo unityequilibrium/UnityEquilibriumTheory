@@ -90,7 +90,24 @@ less precisely, what Hall, Chow and Forbes already showed.
   seen data, not a test of UET, and it must not be used to tune a UET form afterwards.
 - Only after that: a Test Card on unseen data where the UET composition and the mainstream model could differ.
 
-## 5. Sources read for this map
+## 5. Benchmark run (2026-11-25): the reduced mainstream model on our fasts
+
+Script: `core/03_lanes/persistence/benchmark_chow_hall_fasting.py` (published Chow-Hall parameters, nothing fitted,
+each fast started at its observed day-6 weight with an assumed fat fraction of 10, 15 or 20 percent).
+
+| quantity (median of 11 fasts) | observed | model, 15 percent fat |
+|---|---|---|
+| mass loss, kg/day | 0.34 | 0.68 (observed / model = 0.52) |
+| specific loss rate, late / early half (r) | 0.89 (slowing) | 1.07 (speeding up) |
+
+The reduced model, built for long-term intake changes, loses about twice the observed mass and bends the wrong way
+for every assumed fat fraction. AI reading (not yet checked against the sources): with Forbes' partition a lean
+faster takes about half of each kilogram from lean tissue of low energy density, while a real fast spares protein
+through ketosis (Cahill), and its E(F, L) is a fed, sedentary expenditure, higher than a resting faster's. So the
+fair mainstream benchmark for total fasting is the full model (Hall 2006/2010, with ketogenesis, protein sparing and
+adaptive thermogenesis), not the reduced one; Benedict's measured heat output of L. can check the expenditure side.
+
+## 6. Sources read for this map
 
 - Chow and Hall 2008, PLoS Comput. Biol. 4, e1000045 (PMC2266991): equations, Forbes p, E(F, L), adaptive thermogenesis.
 - Hall 2010, Am. J. Physiol. Endocrinol. Metab. 298, E449 (PMC2838532): macronutrient balance, parameter tables, Minnesota fit.

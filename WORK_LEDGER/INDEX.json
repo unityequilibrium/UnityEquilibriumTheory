@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 88,
-    "entries": 1003,
+    "sources": 89,
+    "entries": 1004,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 766,
+      "research": 767,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -457,6 +457,11 @@
       "path": "2026/2026-11-25.md",
       "sha256": "8b87e9d3b51fa90a6f9f3a9480707fdd5aefc78eb342719d5491c5e3ddebed1a",
       "entries": 16
+    },
+    {
+      "path": "2026/2026-11-26.md",
+      "sha256": "c176adb72e76ae60b9d52cf6f13975fa91f5413a022d1f39d6eadc68588b0283",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -20489,6 +20494,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#benchmark-chow-hall-reduced-model-on-the-benedict-fasts",
+      "source": "2026/2026-11-26.md",
+      "anchor": "benchmark-chow-hall-reduced-model-on-the-benedict-fasts",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Benchmark: Chow-Hall reduced model on the Benedict fasts",
+      "entry_sha256": "90bda3447108e5b49f386ddcc87366de9ef216ca68f72c813a778245052c0ea4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
       "legacy_root_path": false
     },
     {
