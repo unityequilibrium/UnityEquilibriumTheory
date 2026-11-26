@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 141. Counts describe records, not accomplishments.
+Indexed entries: 142. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-25 | [Research CI job timeout raised to 40 minutes](2026/2026-11-25.md#research-ci-job-timeout-raised-to-40-minutes) (L105) | repo-ops | explicit_stream_and_area |
 | 2026-11-25 | [Repair: another session's git config in this folder](2026/2026-11-25.md#repair-another-sessions-git-config-in-this-folder) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-19 | [Main Validation red because its audit job checked out one commit](2026/2026-11-19.md#main-validation-red-because-its-audit-job-checked-out-one-commit) (L83) | repo-ops | explicit_stream_and_area |
 | 2026-11-19 | [Claude research skills under Standard v2](2026/2026-11-19.md#claude-research-skills-under-standard-v2) (L53) | repo-ops | explicit_stream_and_area |
