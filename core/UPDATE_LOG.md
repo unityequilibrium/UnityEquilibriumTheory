@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-26 — Layer 3 as survival optimisation: the fuel order of a fast (D21)
+ทำ: `uet_fuel_order.py` (การคัดเลือกจากการอยู่รอดของชั้น 3 = การหาทางรอดนานที่สุดแบบ Clark-Mangel; ใช้เพดานการปล่อยไขมัน k F^(2/3) จาก Hall 2010 และส่วนโปรตีนขั้นต่ำ q0) + physics tests 34 ข้อ + FORMAL contract
+ผล: เผาไขมันให้มากที่สุดเท่าที่ทำได้ไม่มีกฎไหนชนะ; ระยะที่ 3 เริ่มเมื่อไขมันต่ำกว่า F* = [(1-q0) e/(rho_F k)]^(3/2); การคำนวณย้อนกลับ (DP) บรรจบสู่ผลเดียวกัน; ข้อค้นพบ: ลำดับการเผาสำคัญแค่เรื่องไขมันที่เหลือตอนตาย (พลังงานอนุรักษ์) การถนอมโปรตีนช่วงแรกจะคุ้มก็ต่อเมื่อการเสียโปรตีนมีต้นทุนต่อการทำงานก่อนตาย
+ระดับ: C_L3_FUEL_ORDER → L1_CONSISTENT (ตรวจการสังเคราะห์กับ Clark-Mangel/Noren-Mangel ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: Test Card กับสัตว์ที่วัดไขมันตอนเริ่มระยะที่ 3 (ต้องหาข้อมูลเปิดและตรวจรูปข้อมูลก่อน)
+commit: b0e255d37 (code) + this commit (records)
+
 ## 2026-11-25 — Does L.'s survival-burn exponent hold for other fasts? (T036, D20)
 ทำ: Test Card T036 (beta ของ D20 กับการอดอาหารอีก 10 ครั้งในตาราง 2 ของ Benedict: Succi 7 ครั้ง, Jacques, Beauté, Schenk) ผู้เขียนอนุมัติ 5763313c7 ก่อนคัดลอก; รันครั้งเดียว
 ผล: beta ร่วม = 4.3 (ช่วง 95% 3.5-5.2) สูงกว่าช่วงที่ปรับเทียบจาก L. (1.5-2.6) และเกินเส้นตก 3.3 → FAILED; ร่างกายอื่นชะลอการเผาผลาญแรงกว่า L. อีก

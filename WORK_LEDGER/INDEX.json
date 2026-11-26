@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 89,
-    "entries": 1006,
+    "entries": 1007,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 769,
+      "research": 770,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,8 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "fb3e1e699ab4cc5dfe7d8767537ecb6f300b0f050e6a6605cb141117c683753b",
-      "entries": 3
+      "sha256": "599f998915c782a273695a326a24197b8f913b9b840b28edc0377f60ce5e239f",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20541,9 +20541,29 @@
       "source": "2026/2026-11-26.md",
       "anchor": "literature-check-fuel-order-and-phase-iii-in-fasting",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Literature check: fuel order and phase III in fasting",
-      "entry_sha256": "4abd6f8050979167ef9ceb5b48c97d1a96cc98f0d4bc8078261725d6ee6787e5",
+      "entry_sha256": "1d680f724c79e470bc1b3cf551e6e7183a344280c897284ae2ac221d7272d372",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#wave-d21-layer-3-as-survival-optimisation-fuel-order-in-a-fast",
+      "source": "2026/2026-11-26.md",
+      "anchor": "wave-d21-layer-3-as-survival-optimisation-fuel-order-in-a-fast",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Wave D21: layer 3 as survival optimisation (fuel order in a fast)",
+      "entry_sha256": "1da25cc5ee1ab9cbcc51ced5ee2b6f409b8170f183e65161dba9cbeee44b51f5",
       "stream": "research",
       "areas": [
         "research-core"

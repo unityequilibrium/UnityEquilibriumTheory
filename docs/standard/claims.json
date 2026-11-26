@@ -661,6 +661,15 @@
       "note": "The author's 'what we see must have a survival process, not guaranteed' (AUTHOR_PROPOSITION 4, 2026-11-23) put in one number; the power-law form is an AI choice. Not yet confronted: the Benedict value is calibration. Nearest theory: metabolic adaptation in starvation (Keys 1950; Hall 2008). Not UET-distinct. T035 (2026-11-25) INCONCLUSIVE: the 382-day fast report gives only start and end weights. FAILED in T036 (2026-11-25): ten other fasts of Benedict's Table 2 share beta = 4.3 (3.5-5.2), above the calibrated 1.5-2.6; one beta does not carry from body to body."
     },
     {
+      "claim_id": "C_L3_FUEL_ORDER",
+      "statement": "Layer-3 persistence selection, read as maximising the time a body keeps protein above a lethal threshold P_c, gives the mainstream fuel order of a fast: with an obligate protein share q0 and Hall's fat-release ceiling k F^(2/3), burning the most fat allowed is never beaten, phase III starts below F* = [(1 - q0) e/(rho_F k)]^(3/2), and survival has a closed form. By energy conservation all rules that use up their fat before death tie; only rules that die holding fat lose.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D21_FUEL_ORDER"
+      ],
+      "note": "Synthesis check, not a new result: matches Clark-Mangel dynamic state-variable optimisation (Noren and Mangel 2004) and uses Hall's (2010) lipolysis scaling. The model has no cost of protein loss before death, so it cannot by itself explain early protein sparing; that needs a function cost as in Noren and Mangel. Testable on fasting animals with measured fat at phase-III onset (Test Card needed). Not UET-distinct."
+    },
+    {
       "claim_id": "C_L3_OBSERVED_SELECTION",
       "statement": "A flux-limited sample selects by brightness against layer-3 persistence: with luminosity L = eps P, the observed count of a type is N ~ b F eps^(D/2) P^(D/2 - 1), so in three dimensions a type burning 100 times faster is 100 times rarer in space but 10 times more common in the sample, in a thin disk (D = 2) the two selections cancel, and the abundance law n = b F/P can be tested only on volume-limited, 1/V_max-weighted or single-distance samples.",
       "level": "L1_CONSISTENT",
