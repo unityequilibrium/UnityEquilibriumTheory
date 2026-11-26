@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T041",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_C2_FRW_CMB_ANGLE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -69,5 +69,10 @@
   "pass_criterion": "PASS if dchi2_CPL <= 4.",
   "fail_criterion": "FAIL if dchi2_CPL > 9. INCONCLUSIVE if 4 < dchi2_CPL <= 9.",
   "drafted_by": "claude",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-26",
+    "role": "AUTHOR"
+  },
   "note": "Proposal: topics/0.3_Cosmology_Hubble_Tension/Doc/PROPOSAL_T041_CMB_PRIORS_2026-11-26.md. Disclosure: not blind. The drafter knows the approximate published values of these distance priors (l_A near 301.5, R near 1.75), the T040 result on the same BAO and SN data (PASS, dchi2_CPL = 0.03), and that DESI DR2 reports a preference for CPL with w0 > -1, wa < 0 over LambdaCDM of about 2.8 to 4.2 sigma once the CMB is added, with the CPL best fit crossing into w < -1 at z of about 0.5 and above. The minimal-coupling UET family cannot cross w = -1, and C1 found xi_c > 0 gives phantom phases only at z > 1.5, so the drafter expects INCONCLUSIVE or FAIL. The BAO and SN data were used in T040; they did not fit any parameter of the C2 claim. Reported, not deciding: dchi2_LCDM, the UET best point and its CPL (w0, wa), and the CMB part of each chi2."
 }
