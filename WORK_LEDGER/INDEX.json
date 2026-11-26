@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 88,
-    "entries": 997,
+    "entries": 998,
     "by_stream": {
       "book-history": 94,
-      "operations": 141,
+      "operations": 142,
       "research": 761,
       "review": 1
     },
@@ -455,8 +455,8 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "b80f41cf7d63ab238e6742bdd868f739c72553ed311589c88fab13b39d127a15",
-      "entries": 10
+      "sha256": "44bf9b2a4a553a7f612971816bdd36adcc557e54491865aaf3ecf677e898a0df",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -20356,15 +20356,35 @@
       "source": "2026/2026-11-25.md",
       "anchor": "c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
       "start_line": 95,
-      "end_line": 103,
+      "end_line": 104,
       "title": "C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)",
-      "entry_sha256": "c689dec7765f3318aafd63d5f545f0f36be8a93331dbd781d6d982b9fa5f3e63",
+      "entry_sha256": "cdc8258b290d663c8ba6d56c0ebfdafc391ea6071e5e3deeda9fccdbd784efa0",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#research-ci-job-timeout-raised-to-40-minutes",
+      "source": "2026/2026-11-25.md",
+      "anchor": "research-ci-job-timeout-raised-to-40-minutes",
+      "start_line": 105,
+      "end_line": 113,
+      "title": "Research CI job timeout raised to 40 minutes",
+      "entry_sha256": "3ffd662ff419d222b6264fcce71a8d75799aa37924201f1063151776bb041f2d",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
