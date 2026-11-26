@@ -4,11 +4,11 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 89,
-    "entries": 1002,
+    "sources": 90,
+    "entries": 1003,
     "by_stream": {
       "book-history": 94,
-      "operations": 142,
+      "operations": 143,
       "research": 765,
       "review": 1
     },
@@ -462,6 +462,11 @@
       "path": "2026/2026-11-26.md",
       "sha256": "b4ad1b0ff3e1afbe1361044e895a5292cfd209608ae6363c5c3d383e982997cf",
       "entries": 4
+    },
+    {
+      "path": "2026/2026-11-27.md",
+      "sha256": "3989ebd1e25966c86422d2e983c48d002057d0bad196ef0a6649b28f9e9cc932",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -20474,6 +20479,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#fix-standard-tests-could-write-into-the-repository-named-by-git_dir",
+      "source": "2026/2026-11-27.md",
+      "anchor": "fix-standard-tests-could-write-into-the-repository-named-by-git_dir",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Fix: standard tests could write into the repository named by GIT_DIR",
+      "entry_sha256": "8137c712fc2742e977333f3076674c71b2493a42d5ad2a518db22408bc1ee24c",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
       "legacy_root_path": false
     },
     {
