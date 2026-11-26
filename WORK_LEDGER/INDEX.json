@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 89,
-    "entries": 1004,
+    "entries": 1005,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 767,
+      "research": 768,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,8 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "c176adb72e76ae60b9d52cf6f13975fa91f5413a022d1f39d6eadc68588b0283",
-      "entries": 1
+      "sha256": "b0a3dc56131ff525d89dfd7a14df63ebc10d438baa2306836b785b7b2e54640a",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -20501,9 +20501,29 @@
       "source": "2026/2026-11-26.md",
       "anchor": "benchmark-chow-hall-reduced-model-on-the-benedict-fasts",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Benchmark: Chow-Hall reduced model on the Benedict fasts",
-      "entry_sha256": "90bda3447108e5b49f386ddcc87366de9ef216ca68f72c813a778245052c0ea4",
+      "entry_sha256": "717a02201fd602ca05412dc01e9a3b47402a0dac8f8bfd0c60576388ceea0c1c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#benchmark-benedicts-energy-accounting-for-subject-l",
+      "source": "2026/2026-11-26.md",
+      "anchor": "benchmark-benedicts-energy-accounting-for-subject-l",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Benchmark: Benedict's energy accounting for subject L.",
+      "entry_sha256": "823ef5278bfd92e92934c26ee04e6bf979b4d03797897ae00f60b4cd9efa45e4",
       "stream": "research",
       "areas": [
         "research-core"

@@ -107,6 +107,24 @@ through ketosis (Cahill), and its E(F, L) is a fed, sedentary expenditure, highe
 fair mainstream benchmark for total fasting is the full model (Hall 2006/2010, with ketogenesis, protein sparing and
 adaptive thermogenesis), not the reduced one; Benedict's measured heat output of L. can check the expenditure side.
 
+### 5b. Benedict's own energy accounting (2026-11-26)
+
+Script: `core/03_lanes/persistence/benchmark_benedict_energy_accounting.py`. Benedict split L.'s daily heat into
+carbohydrate, fat and protein (Table 64, from gas exchange and urinary nitrogen). Turned into tissue with Hall's
+densities (fat 9.44 kcal/g; protein 4.7 kcal/g with 1.6 g water per g; glycogen 4.18 kcal/g with 2.7 g water per g):
+
+| days 6-31 | heat-based | measured |
+|---|---|---|
+| tissue / weight loss, kg/day | 0.25 | 0.35 |
+| late / early specific-rate ratio | 0.90 | 0.92 |
+
+- Heat per kilogram hardly moves (27.5 -> 27.0 kcal kg^-1 day^-1); total heat falls with the body (1402 -> 1255 kcal/day).
+- Protein's share of the heat falls (18.5 -> 16.4 percent): the protein sparing of section 1.1.
+- So the slowing is accounted for by the fuel shift plus the smaller body, with no lower burn per kilogram needed;
+  the missing 28 percent of the level is water and salt, which a heat balance does not see.
+- For the theory: the "survival process" in this fast is measured as protein sparing (a change of fuel), not as a
+  power-law burn (D20, FAILED) and not as a constant leak (D14, FAILED).
+
 ## 6. Sources read for this map
 
 - Chow and Hall 2008, PLoS Comput. Biol. 4, e1000045 (PMC2266991): equations, Forbes p, E(F, L), adaptive thermogenesis.

@@ -480,6 +480,18 @@
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
       "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+    },
+    {
+      "data_id": "BENEDICT1915_L_HEAT_TABLE64",
+      "description": "Daily heat production of subject L. (31-day fast) split into carbohydrate, fat and protein, urine energy and total energy loss (kcal)",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 64, p. 414",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-26",
+      "path": "docs/data/external/biology/fasting/benedict1915_L_heat_table64.csv",
+      "sha256": "8407cb8d7dcabea1d3f33c16d31cd3de2e333c33e26fc44536b72b24ca71b267",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scan; all 31 rows satisfy A+B+C = D and D+E = F."
     }
   ]
 }
