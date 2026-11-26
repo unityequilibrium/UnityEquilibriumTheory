@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 89,
-    "entries": 1001,
+    "entries": 1002,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 764,
+      "research": 765,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,8 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "0d5b780fd9244a0b31f53f5baf17206e94ed30b184967de552d7e3a743aef7c5",
-      "entries": 3
+      "sha256": "b4ad1b0ff3e1afbe1361044e895a5292cfd209608ae6363c5c3d383e982997cf",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20441,9 +20441,29 @@
       "source": "2026/2026-11-26.md",
       "anchor": "t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)",
-      "entry_sha256": "b9936906239a189f4cccdc7d60ca494925787039f0476499a43c97a0a898822d",
+      "entry_sha256": "980ff575a0182963d9bd7322437dc394064a833e78da7b165db012df3a0577a0",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
+      "source": "2026/2026-11-26.md",
+      "anchor": "c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)",
+      "entry_sha256": "786034fd4b04ecfa3133977c878a97e5b8adea0303d437044a9a30a24675f5dd",
       "stream": "research",
       "areas": [
         "research-core"

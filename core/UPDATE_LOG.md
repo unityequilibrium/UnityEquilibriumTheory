@@ -5,7 +5,7 @@ Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/up
 ## 2026-11-26 — Does the parent action's dark energy survive the CMB? (T041)
 ทำ: Test Card T041 (CMB distance priors ของ Chen et al. 2019 + DESI DR2 BAO + Pantheon+) ผู้เขียนอนุมัติ 75ded3d26 ก่อนเปิดข้อมูล; รันครั้งเดียว 76 นาที
 ผล: dchi2 เทียบ CPL = 3.94 (ผ่าน <= 4) → PASS แบบเฉียดเส้น; ตอนไม่มี CMB (T040) ได้ 0.03; CPL ดีกว่า LCDM 5.4 แต่ UET ดีกว่าแค่ 1.5
-ระดับ: C_C2_FRW_CMB_ANGLE ยัง L1 รอผู้เขียนอนุมัติ L2; จุดดีสุดอยู่ขอบกริด (xi_c = 0.05, psi_i = 0.1); ไม่ใช่ผลเฉพาะ UET
+ระดับ: C_C2_FRW_CMB_ANGLE → L2_CONFRONTED (ผู้เขียนอนุมัติ 2026-11-26); จุดดีสุดอยู่ขอบกริด (xi_c = 0.05, psi_i = 0.1); ไม่ใช่ผลเฉพาะ UET
 ถัดไป: CMB likelihood เต็มรูปแบบ (มี perturbation) หรือกริดที่กว้างขึ้น ต้องเป็นการ์ดใหม่
 commit: 75ded3d26 (approval) + f846978f1 (run) + this commit (result)
 

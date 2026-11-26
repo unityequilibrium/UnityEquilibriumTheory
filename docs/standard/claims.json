@@ -41,12 +41,12 @@
     {
       "claim_id": "C_C2_FRW_CMB_ANGLE",
       "statement": "With radiation added and psi released in the radiation era, the parent action's minimal-coupling w(a) is unchanged from C1, while xi_c != 0 shifts w0 by up to 0.05 through the matter-era F' R drive; at fixed physical densities the thawing family moves the CMB acoustic angle theta* from LambdaCDM by +0.57% at the T040 best point and up to +1.6% on the points computed.",
-      "level": "L1_CONSISTENT",
+      "level": "L2_CONFRONTED",
       "evidence": [
         "R_C2_FRW_CMB_ANGLE",
         "R_T041_W_OF_A_CMB_BAO_SN"
       ],
-      "note": "Background only (no perturbations), GR fit for z*; nearest theory extended quintessence; not UET-distinct. Prepares a CMB Test Card (option B of T040). Confronted with Planck 2018 distance priors + DESI DR2 BAO + Pantheon+ under T041: PASS at the edge (dchi2 vs CPL 3.94, limit 4). Stays L1 until the author approves L2."
+      "note": "Background only (no perturbations), GR fit for z*; nearest theory extended quintessence; not UET-distinct. Prepares a CMB Test Card (option B of T040). Confronted with Planck 2018 distance priors + DESI DR2 BAO + Pantheon+ under T041: PASS at the edge (dchi2 vs CPL 3.94, limit 4). L2 approved by the author on 2026-11-26."
     },
     {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",

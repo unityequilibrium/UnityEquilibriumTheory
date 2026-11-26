@@ -3,7 +3,7 @@
   "result_id": "R_T041_W_OF_A_CMB_BAO_SN",
   "claim_id": "C_C2_FRW_CMB_ANGLE",
   "test_card_id": "T041",
-  "level": "L1_CONSISTENT",
+  "level": "L2_CONFRONTED",
   "outcome": "PASS",
   "numbers": [
     {
@@ -67,5 +67,10 @@
   },
   "artifacts": [],
   "date": "2026-11-26",
-  "note": "PASS under Test Card T041 (approved 75ded3d26 before the data were opened), at the edge: dchi2_CPL = 3.94 against the PASS limit 4. Single run, 76 min. Adding the CMB moved the UET family from dchi2_CPL = 0.03 (T040) to 3.94: CPL now gains 5.4 in chi2 over LCDM, the UET family only 1.5. The UET best point sits on two edges of the AI grid (xi_c = 0.05, the largest value; psi_i = 0.1, the smallest), so a wider grid may lower chi2_UET; that would only move the outcome further from FAIL. Each UET point was fitted with at most 400 Nelder-Mead evaluations. Background only: distance priors (R, l_A, omega_b) of Chen et al. 2019 stand in for the full CMB likelihood. Not UET-distinct: thawing and extended quintessence give the same family. Recorded at L1 with outcome PASS; it becomes L2_CONFRONTED, and the claim with it, only when the author approves (approval block added then)."
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-26",
+    "role": "AUTHOR"
+  },
+  "note": "PASS under Test Card T041 (approved 75ded3d26 before the data were opened), at the edge: dchi2_CPL = 3.94 against the PASS limit 4. Single run, 76 min. Adding the CMB moved the UET family from dchi2_CPL = 0.03 (T040) to 3.94: CPL now gains 5.4 in chi2 over LCDM, the UET family only 1.5. The UET best point sits on two edges of the AI grid (xi_c = 0.05, the largest value; psi_i = 0.1, the smallest), so a wider grid may lower chi2_UET; that would only move the outcome further from FAIL. Each UET point was fitted with at most 400 Nelder-Mead evaluations. Background only: distance priors (R, l_A, omega_b) of Chen et al. 2019 stand in for the full CMB likelihood. Not UET-distinct: thawing and extended quintessence give the same family. L2 approved by the author on 2026-11-26 (chat), with the edge PASS stated to the author first."
 }

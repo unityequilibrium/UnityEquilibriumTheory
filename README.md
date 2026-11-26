@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-51_L1_·_24_L2_·_5_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-50_L1_·_25_L2_·_5_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -146,7 +146,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (80 claims: 51 at L1, 24 at L2, 5 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (80 claims: 50 at L1, 25 at L2, 5 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):
@@ -185,6 +185,7 @@ Test criteria were committed and approved before each comparison. None of these 
 | T021 | Succession of lighting technologies (economics) | L2 PASS: no successor used more energy and more work hours per lumen-hour than what it replaced |
 | T029 | Black-hole mergers in GWTC: mass radiated (gravity) | L2 PASS: 225 of 227 nearly non-spinning mergers radiate between the inspiral loss 0.0572 eta and the area-theorem cap; none above the cap; the inspiral alone is about a third of the loss (GR-derived final masses, weak test) |
 | T040 | Dark-energy w(a) of the parent action against DESI DR2 BAO and Pantheon+ supernovae (cosmology) | L2 PASS: fits as well as a free linear w(a) (Δχ² = 0.03) and better than ΛCDM by Δχ² = 5.1; best thawing point w0 = −0.90, wa = −0.12; no CMB used |
+| T041 | Same w(a) family with the CMB added: Planck 2018 distance priors (Chen et al. 2019) + DESI DR2 BAO + Pantheon+ (cosmology) | L2 PASS at the edge: Δχ² against a free linear w(a) = 3.94 (limit 4); better than ΛCDM by only 1.5; best point near ΛCDM (w0 = −0.97, wa = −0.05) on the grid edge; background only |
 
 Several of these only bound UET's free parameters or pass because standard physics passes; none is a prediction of UET alone.
 Failures are recorded the same way as passes; see [`docs/standard/results/`](docs/standard/results/).
