@@ -1,0 +1,76 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_C2_FRW_CMB_ANGLE",
+  "claim_id": "C_C2_FRW_CMB_ANGLE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "constraint_preservation_points_within_1e-10",
+      "value": "20/20 with radiation; fails if radiation is given the pressure of dust",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "lcdm_limit_theta_star_rel_error",
+      "value": "< 1e-9 against an independent quadrature (3 values of Omega_m)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "rk4_convergence_order",
+      "value": "4 (2 grid pairs)",
+      "uncertainty": 0.3,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "xi0_release_time_change_in_w0_wa",
+      "value": "< 1e-3 (z = 1e6 with radiation against z = 99 without; observed 1e-4)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T040_best_dtheta_over_theta",
+      "value": "+0.0057 (xi = -0.003, psi_i = 0.6, m/H0 = 2, fixed omega_b, omega_m, Omega_m)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "dtheta_over_theta_allowed_points",
+      "value": "+0.0057, +0.0062, +0.0164, +0.0131 (4 points allowed today)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T040_best_G_star_over_G0",
+      "value": "1.00079",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T040_best_w0_wa_c2_vs_c1",
+      "value": "(-0.906, -0.113) vs (-0.902, -0.118)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "xi0.02_w0_c2_vs_c1",
+      "value": "-0.805 vs -0.854 (psi_i = 0.4, m/H0 = 3)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "z_star_reference",
+      "value": "1091.85 (Hu-Sugiyama fit, omega_b = 0.02237, omega_m = 0.14237)",
+      "uncertainty": null,
+      "unit": "1"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_frw_cmb.py",
+    "commit": "76de8050b"
+  },
+  "artifacts": [],
+  "date": "2026-11-26",
+  "note": "Wave C2. C1 equations with radiation as a second fluid, psi released at rest at z = 1e6, and the background CMB angle theta* = r_s(z*)/D_M(z*) with z* from the Hu-Sugiyama fit. Numbers from report() of uet_frw_cmb.py on six AI-chosen points around the T040 best fit. Approximations: massless neutrinos, GR fit for z* and the sound speed with densities inferred with today's G, no perturbations. In LambdaCDM the code gives D_M(z*) within 0.03% and r_s within 0.3% of the Planck 2018 derived values; the r_s offset comes from the z* fit, so a CMB Test Card must use one convention for model and data. Nearest theory: extended quintessence. Not UET-distinct."
+}

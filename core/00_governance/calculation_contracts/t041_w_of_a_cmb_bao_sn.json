@@ -1,0 +1,278 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T041_W_OF_A_CMB_BAO_SN_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t041",
+    "rationale": "Methodological contract for Test Card T041. The evidence decision lives in docs/standard. Distances as published by DESI DR2 and Pantheon+.",
+    "coverage_evidence": [
+      "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat",
+      "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES_STAT+SYS.cov"
+    ]
+  },
+  "question": "With the CMB distance priors added, can the dark-energy w(a) family of the parent action reproduce Planck 2018 R, l_A, omega_b plus DESI DR2 BAO and Pantheon+ about as well as a free linear w(a)?",
+  "output": {
+    "quantity": "dchi2_CPL = chi2_min(UET family) - chi2_min(CPL)",
+    "unit": "1",
+    "domain": "flat FRW with radiation; BAO and SN at 0.01 < z < 2.5; CMB background distance priors at z*",
+    "accuracy": "profile minimum on the T041 grid (Nelder-Mead, at most 400 evaluations per point); RK4 with 1500 steps",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET-FRW-CMB-C2"
+    ],
+    "assumptions": "Flat FRW, pressureless matter and massless radiation coupled minimally to the Jordan metric, thawing psi released at rest at z = 1e6.",
+    "approximation": "Background only (no perturbations); Hu-Sugiyama z*; massless neutrinos; portal force on cosmological psi dropped.",
+    "initial_boundary": "psi' = 0 at z = 1e6; Lambda_eff, omega_b, omega_m fitted.",
+    "drive_environment": "None.",
+    "parameters": "Lambda_eff, omega_b, omega_m fitted; psi_i, m/H0, xi_c on the T041 grid; nuisance c/(H0 r_d) and SN offset profiled analytically."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "CHEN2019_DISTANCE_PRIORS_TEX",
+      "DESI_DR2_BAO_MEAN",
+      "DESI_DR2_BAO_COV",
+      "PANTHEON_PLUS_HD",
+      "PANTHEON_PLUS_COV"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Data values read only after the approval commit 75ded3d26."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published distance measurements; values used as released.",
+      "systems": [
+        {
+          "id": "universe",
+          "state": "Homogeneous expansion history",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "universe.expansion"
+            ],
+            "owner_ids": [],
+            "rule": "One background history per parameter point."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Survey catalogues",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "universe",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "BAO scale and SN light curves as reduced by the collaborations"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "universe",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "None"
+        }
+      ],
+      "observables": [
+        {
+          "id": "distances",
+          "detector_id": "camera",
+          "target_systems": [
+            "universe"
+          ],
+          "backaction_targets": [
+            "universe"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "D_M/r_d, D_H/r_d, D_V/r_d; corrected SN magnitudes",
+          "readout_map": "released tables; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Large-scale structure and SNe Ia as in the cited releases.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Light.",
+    "observer_state": "Released likelihood files.",
+    "readout": "BAO distance ratios and SN distance moduli up to an offset.",
+    "backaction": "None.",
+    "frame": "CMB frame redshifts (zHD) as released",
+    "time_convention": "Scale factor a = 1 today",
+    "product_level": "released reduced data (not raw images)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Background expansion from uet_frw_background.py.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/uet_frw_cmb.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No drive.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "MODELED",
+      "reason": "Comoving distance integral over 1/E(z).",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py"
+      ]
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Peculiar-velocity and frame corrections applied in the releases.",
+      "evidence": [
+        "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat"
+      ]
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Light-curve standardisation and BAO reconstruction applied in the releases.",
+      "evidence": [
+        "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+        "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Profiles of chi2, outcome rule fixed in T041.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "RK4, trapezoid distances, Nelder-Mead for CPL.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py",
+        "core/03_lanes/scalar_tensor/uet_frw_cmb.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "UET l_A and R agree with the analytic LCDM to 2e-8 at psi = 0; E(z) to 3e-5 (interpolation).",
+    "approximation": "Background distance priors stand in for the full CMB likelihood; validated by Chen et al. for wCDM and CPL.",
+    "measurement": "Released covariances (DESI 13 x 13; Pantheon+ STAT+SYS; Chen et al. 3 x 3 from correlation and symmetrised errors).",
+    "systematic": "As in the released covariances.",
+    "omissions": "Pantheon+ rows with zHD <= 0.01 dropped.",
+    "dependence": "BAO, SN and CMB treated as independent.",
+    "acceptance": "Outcome categories fixed in Test Card T041.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/cosmology/cmb_priors/chen2019/private/distance-priors-2018.tex",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "b63854bd0fd48bd80d6bff224be64b3ab0bb0b8a730486da04bf2fc2883e2888",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "9ac154ab583ce759c0f7eef3c978c7c70a6ead2d18774caceadf1a350a640585",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "252a143274c8a07c78694c119617d36594f6d7965d00319ca611c6ffb886e509",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "1cb0fc379ef066afdc2ffd1857681cc478024570d8a3eba284fb645775198cf8",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES_STAT+SYS.cov",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "abf806d966485e64afdb359c87bffc0ecc00d05eff0a31ced66f247385df0fdc",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "87e2383d1f52a313e81fe51454e06c6f63b1017807e322339e4c0b26e3d8d68d",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/uet_frw_cmb.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "32e91b1eb43ab4bee8b4ea12a7ad333a69b0e3506289ddc6cc88f32d9bb1e14e",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/scalar_tensor/t040_w_of_a_bao_sn.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "db1e1bd9ffc660e1df9a90c1ac19e9a27868a603ec774680d09939d8041abd58",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py"
+  ],
+  "evidence": [
+    "core/03_lanes/scalar_tensor/t041_w_of_a_cmb_bao_sn.py",
+    "core/03_lanes/scalar_tensor/uet_frw_cmb.py",
+    "core/03_lanes/scalar_tensor/t040_w_of_a_bao_sn.py",
+    "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_mean.txt",
+    "docs/data/external/cosmology/bao_sn/desi_dr2/desi_gaussian_bao_ALL_GCcomb_cov.txt",
+    "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES.dat",
+    "docs/data/external/cosmology/bao_sn/pantheon_plus/Pantheon+SH0ES_STAT+SYS.cov"
+  ],
+  "claim_boundary": "Methodological coverage of the T041 comparison only. Not UET-distinct: thawing and extended quintessence give the same family.",
+  "next_action": "A full CMB likelihood with perturbations would replace the distance priors."
+}

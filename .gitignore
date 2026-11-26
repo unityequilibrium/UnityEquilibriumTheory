@@ -420,3 +420,6 @@ docs/topics/**/Result/_Logs/
 # TimeTree data may be used for personal research but not redistributed (timetree.org FAQ).
 # The tree stays local; only its sha256 is registered (data_manifest.json, visibility PRIVATE).
 /docs/data/external/biology/timetree/private/
+
+# arXiv:1808.05724 source (non-exclusive arXiv licence, no redistribution): kept local, sha256 registered.
+/docs/data/external/cosmology/cmb_priors/chen2019/private/

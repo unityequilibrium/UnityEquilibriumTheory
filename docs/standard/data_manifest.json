@@ -492,6 +492,18 @@
       "license": "Public domain (published 1915)",
       "visibility": "PUBLIC",
       "note": "Transcribed by hand from the page scan; all 31 rows satisfy A+B+C = D and D+E = F."
+    },
+    {
+      "data_id": "CHEN2019_DISTANCE_PRIORS_TEX",
+      "description": "LaTeX source of Chen, Huang & Wang, 'Distance Priors from Planck Final Release': the table of R, l_A, Omega_b h^2 and n_s with their correlation matrix from Planck 2018 TT,TE,EE+lowE, for base LambdaCDM, wCDM, LambdaCDM+Omega_k and LambdaCDM+A_L",
+      "source": "L. Chen, Q.-G. Huang, K. Wang, JCAP 02 (2019) 028, arXiv:1808.05724v1 (TeX source)",
+      "doi_or_url": "https://doi.org/10.1088/1475-7516/2019/02/028 ; https://arxiv.org/src/1808.05724v1",
+      "retrieved": "2026-11-26",
+      "path": "docs/data/external/cosmology/cmb_priors/chen2019/private/distance-priors-2018.tex",
+      "sha256": "b63854bd0fd48bd80d6bff224be64b3ab0bb0b8a730486da04bf2fc2883e2888",
+      "license": "arXiv non-exclusive distribution licence 1.0: no redistribution, so the file is kept local and not committed",
+      "visibility": "PRIVATE_LOCAL",
+      "note": "Downloaded with the author's permission (2026-11-26, chat: 'Chen 2019 priors') for Test Card T041 while it is a DRAFT. The .tex was extracted from arXiv-1808.05724v1.tar.gz (5,832,773 bytes, sha256 9a01121d3a36ff2fd00b39023906e030a4044b9581a5596b7c0e7b535ec4a110); figures were not kept. Before approval only the table layout and the z* convention were read with every digit masked; no value was read."
     }
   ]
 }

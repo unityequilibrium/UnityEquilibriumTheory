@@ -6,10 +6,14 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 770. Counts describe records, not accomplishments.
+Indexed entries: 774. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-26 | [C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)](2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041) (L72) | research-core | explicit_stream_and_area |
+| 2026-11-26 | [T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)](2026/2026-11-26.md#t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon) (L62) | research-core | explicit_stream_and_area |
+| 2026-11-26 | [Test Card T041 drafted (CMB distance priors + BAO + SN)](2026/2026-11-26.md#test-card-t041-drafted-cmb-distance-priors--bao--sn) (L52) | research-core | explicit_stream_and_area |
+| 2026-11-26 | [Wave C2: FRW background with radiation and the CMB angle](2026/2026-11-26.md#wave-c2-frw-background-with-radiation-and-the-cmb-angle) (L42) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Wave D21: layer 3 as survival optimisation (fuel order in a fast)](2026/2026-11-26.md#wave-d21-layer-3-as-survival-optimisation-fuel-order-in-a-fast) (L33) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Literature check: fuel order and phase III in fasting](2026/2026-11-26.md#literature-check-fuel-order-and-phase-iii-in-fasting) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Benchmark: Benedict's energy accounting for subject L.](2026/2026-11-26.md#benchmark-benedicts-energy-accounting-for-subject-l) (L13) | research-core | explicit_stream_and_area |
