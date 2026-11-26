@@ -39,6 +39,15 @@
       "note": "Derived background equations and an AI parameter scan; nearest theory thawing and extended quintessence; not UET-distinct. Confronted with DESI DR2 BAO and Pantheon+ under T040: PASS (dchi2 vs CPL 0.03; better than LCDM by 5.1). L2 approved by the author on 2026-11-25."
     },
     {
+      "claim_id": "C_C2_FRW_CMB_ANGLE",
+      "statement": "With radiation added and psi released in the radiation era, the parent action's minimal-coupling w(a) is unchanged from C1, while xi_c != 0 shifts w0 by up to 0.05 through the matter-era F' R drive; at fixed physical densities the thawing family moves the CMB acoustic angle theta* from LambdaCDM by +0.57% at the T040 best point and up to +1.6% on the points computed.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_C2_FRW_CMB_ANGLE"
+      ],
+      "note": "Background only (no perturbations), GR fit for z*; nearest theory extended quintessence; not UET-distinct. Prepares a CMB Test Card (option B of T040)."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

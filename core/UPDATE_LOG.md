@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-26 — Background back to recombination and the CMB angle (C2)
+ทำ: ใส่รังสีในสมการ FRW ของ C1, ปล่อย ψ ที่ z = 1e6 และคำนวณมุม θ* = r_s/D_M ของ CMB (uet_frw_cmb.py, ทดสอบ physics 8 ข้อ)
+ผล: ξ_c = 0 w(a) เท่ากับ C1 ภายใน 1e-4; ξ_c ≠ 0 ขยับ w0 ได้ถึง 0.05; θ* ขยับจาก ΛCDM +0.57% ที่จุดดีสุดของ T040 (Planck วัดได้ราว 0.03%)
+ระดับ: C_C2_FRW_CMB_ANGLE L1; ไม่ใช่ผลเฉพาะ UET (extended quintessence)
+ถัดไป: Test Card ใส่ CMB prior (ต้องขออนุญาตข้อมูลและใช้นิยาม z* เดียวกันทั้งโมเดลและข้อมูล)
+commit: 76de8050b (code) + this commit (records)
+
 ## 2026-11-25 — Does the parent action's dark energy fit BAO + supernovae? (T040)
 ทำ: Test Card T040 (ร่างเป็น T033, อนุมัติ 3942abe2b ก่อนเปิดข้อมูล; เปลี่ยนเลขเพราะชน) w(a) ของ C1 กับ DESI DR2 BAO + Pantheon+ ไม่ใช้ CMB; รันครั้งเดียว
 ผล: dchi2 เทียบ CPL = 0.03 (ผ่าน <= 4) → PASS; ดีกว่า LCDM 5.1; จุดดีสุด xi_c = -0.003, w0 = -0.90, wa = -0.12

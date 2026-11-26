@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 761. Counts describe records, not accomplishments.
+Indexed entries: 762. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-26 | [Wave C2: FRW background with radiation and the CMB angle](2026/2026-11-26.md#wave-c2-frw-background-with-radiation-and-the-cmb-angle) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)](2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040) (L95) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)](2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon) (L85) | research-core | explicit_stream_and_area |
 | 2026-11-25 | [Test Card T033 (w(a)) renumbered T040](2026/2026-11-25.md#test-card-t033-wa-renumbered-t040) (L75) | research-core | explicit_stream_and_area |

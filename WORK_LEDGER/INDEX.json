@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 88,
-    "entries": 998,
+    "sources": 89,
+    "entries": 999,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 761,
+      "research": 762,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -457,6 +457,11 @@
       "path": "2026/2026-11-25.md",
       "sha256": "44bf9b2a4a553a7f612971816bdd36adcc557e54491865aaf3ecf677e898a0df",
       "entries": 11
+    },
+    {
+      "path": "2026/2026-11-26.md",
+      "sha256": "672bc003b7dcb0ba681841df76621a1c78b994a69abc94d2c98b98b3ebd700cf",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -20389,6 +20394,26 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#wave-c2-frw-background-with-radiation-and-the-cmb-angle",
+      "source": "2026/2026-11-26.md",
+      "anchor": "wave-c2-frw-background-with-radiation-and-the-cmb-angle",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Wave C2: FRW background with radiation and the CMB angle",
+      "entry_sha256": "5ec49b0e09d5708406d0de18ecd25f744722524e336d10646b19ea8096751151",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
       "legacy_root_path": false
     },
     {
