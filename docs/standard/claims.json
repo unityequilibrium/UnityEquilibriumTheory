@@ -49,6 +49,15 @@
       "note": "Background only (no perturbations), GR fit for z*; nearest theory extended quintessence; not UET-distinct. Prepares a CMB Test Card (option B of T040). Confronted with Planck 2018 distance priors + DESI DR2 BAO + Pantheon+ under T041: PASS at the edge (dchi2 vs CPL 3.94, limit 4). L2 approved by the author on 2026-11-26."
     },
     {
+      "claim_id": "C_C3_FRW_GROWTH",
+      "statement": "In the quasi-static sub-horizon limit the parent action's matter perturbations feel G_eff = (2F + 4F'^2) / (8 pi F (2F + 3F'^2)); along the C2 background with the same Omega_m and early amplitude as LambdaCDM, linear growth today is -0.44% at the T041 best point and 1.5% to 4.3% lower on the other points allowed today, so every allowed point computed grows structure more slowly than LambdaCDM.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_C3_FRW_GROWTH"
+      ],
+      "note": "Linear, quasi-static, massless inside the Compton length; no transfer function or sigma8 normalisation; nearest theory extended quintessence; not UET-distinct."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",
