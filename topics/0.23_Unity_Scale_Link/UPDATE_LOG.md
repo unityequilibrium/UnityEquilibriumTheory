@@ -138,3 +138,7 @@
 - Question: where does putting the sectors and layers of UET together force a relation the pieces do not have? Note: `Doc/STRESS_13_WHERE_COMBINING_FORCES_RELATIONS.md`.
 - Finding: 11 junctions; every forced relation is either a relation between free parameters, too small to measure under lab bounds, or equal to standard physics. The layer 1 -> 2 -> 3 derivation is the real synthesis content and could be tested only in a lab system where the couplings are measured.
 - New number (wave J1): one psi in both lanes changes 1 + w0 by 5.1e-5 of itself at the MICROSCOPE bound.
+
+## 2026-11-27 — Wave O8: a lab lane for STRESS_13 junctions 7-8
+- Core wave O8 (`core/03_lanes/optomechanics/uet_optomechanics_lane.py`, claim C_O8_OPTOMECHANICS_LANE at L1).
+- Finding: cavity optomechanics has the portal form x |a|^2 with a measurable g0; backaction is layer-2 friction (red) and layer-3 capture (blue); the red-side cooling rate fixes the blue-side threshold with no free parameter. Not UET-distinct, but it tests the chain where the coupling is known.

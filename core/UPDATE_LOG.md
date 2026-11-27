@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — A lab lane for the layer 1 -> 2 -> 3 chain: optomechanics (O8)
+ทำ: หาระบบในแล็บที่มี coupling แบบ ψ|χ|² และวัด coupling ได้ (STRESS_13 ข้อ 2.3); เลือก cavity optomechanics และ map ชั้น 2–3 ลงไป (uet_optomechanics_lane.py, ทดสอบ physics 8 ข้อ)
+ผล: backaction คือแรงเสียดทานของชั้น 2 (ฝั่งแดง) และ capture ของชั้น 3 (ฝั่งน้ำเงิน) จาก coupling ตัวเดียว; threshold ของ parametric oscillation = R* ของชั้น 3; อัตราเย็นลงที่ −Δ ทำนาย threshold ที่ +Δ ได้โดยไม่มีพารามิเตอร์อิสระ
+ระดับ: C_O8_OPTOMECHANICS_LANE L1; ไม่ใช่ผลเฉพาะ UET (optomechanics มาตรฐาน)
+ถัดไป: ตรวจรูปข้อมูล (ปิดตัวเลข) ของงานที่วัดทั้งอัตราเย็นลงและ threshold บนอุปกรณ์เดียวกัน ก่อนร่าง Test Card
+commit: dcf8cb419 (code) + this commit (records)
+
 ## 2026-11-27 — Where does combining sectors force new relations? (STRESS_13, J1)
 ทำ: ทำแผนที่จุดต่อ 11 จุดระหว่างภาคและชั้นของ UET (topic 0.23 STRESS_13) และคำนวณจุดที่ยังไม่มีคนทำ: ψ ตัวเดียวทั้งเป็นพลังงานมืดและตัวกลาง portal (uet_portal_cosmology.py, ทดสอบ physics 4 ข้อ)
 ผล: baryon ดัน ψ แบบ coupled quintessence; ที่ขอบ MICROSCOPE 1 + w0 เปลี่ยน 5.1e-5 ของตัวมันเอง วัดไม่ได้; ทุกจุดต่อเป็นความสัมพันธ์ระหว่างพารามิเตอร์อิสระ เล็กเกินวัด หรือเท่ากับฟิสิกส์เดิม

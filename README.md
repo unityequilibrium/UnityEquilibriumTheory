@@ -4,7 +4,7 @@
 >
 > The Thai and English files have the same content. Edit both together.
 
-![Evidence](https://img.shields.io/badge/claims-57_L1_·_25_L2_·_5_FAILED-blue)
+![Evidence](https://img.shields.io/badge/claims-58_L1_·_25_L2_·_5_FAILED-blue)
 ![Topics](https://img.shields.io/badge/research_topics-40-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
@@ -146,7 +146,7 @@ What UET can add is a tested map of where one set of rules holds across fields, 
 ## 4. Evidence so far
 
 Levels follow [`docs/STANDARD.md`](docs/STANDARD.md): `L1` internally consistent, `L2` confronted with external data, `L3` externally replicated.
-The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (87 claims: 57 at L1, 25 at L2, 5 FAILED; none at L3).
+The registry is [`docs/standard/claims.json`](docs/standard/claims.json) (88 claims: 58 at L1, 25 at L2, 5 FAILED; none at L3).
 Test criteria were committed and approved before each comparison. None of these comparisons was blind.
 
 **Failed** (kept as results, not hidden):

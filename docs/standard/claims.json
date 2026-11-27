@@ -112,6 +112,15 @@
       "note": "Junction 5 of topic 0.23 STRESS_13. Dark matter uncoupled (AI choice). Not UET-distinct."
     },
     {
+      "claim_id": "C_O8_OPTOMECHANICS_LANE",
+      "statement": "Cavity optomechanics realises the parent action's layer 1 -> 2 -> 3 chain with one measurable coupling: the interaction x |a|^2 has the portal form, dynamical backaction is the layer-2 friction on the red side and the layer-3 capture on the blue side, the parametric-instability threshold is R* = 1/(a tau), and the single coupling forces Gamma_opt(-Delta) = -Gamma_opt(+Delta), so a measured cooling rate fixes the threshold photon number at the mirrored detuning.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O8_OPTOMECHANICS_LANE"
+      ],
+      "note": "Lane is an AI choice. Not UET-distinct (standard optomechanics). Candidate for a Test Card after a data-shape check."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

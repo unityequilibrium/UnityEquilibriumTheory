@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1012,
+    "entries": 1013,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 775,
+      "research": 776,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "cb97ac33ae7929e7458e625924253c26702b83a78921d51ff0b8a047e70b2fed",
-      "entries": 9
+      "sha256": "b17f481f43d545216b891d839fdb39334a91e5ce3dc3b071641da950d6801938",
+      "entries": 10
     },
     {
       "path": "2026-08-14.md",
@@ -20666,9 +20666,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
       "start_line": 83,
-      "end_line": 91,
+      "end_line": 92,
       "title": "Stress test 13 and wave J1: where combining sectors forces new relations",
-      "entry_sha256": "7e9b2fd891cdd52af9d89934b876fd46bfcafc9870a73bf1e1cf9281455a3d13",
+      "entry_sha256": "1fa471c5daeb805b33f2bc1e6e9d8a08ff28093088b0d8bdd47abd54b80af0a6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
+      "start_line": 93,
+      "end_line": 101,
+      "title": "Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain",
+      "entry_sha256": "2d7ddaa9c52a2b1fdadada2a11d7e3c65af66cf99ef6316fe3b39d064103a4b5",
       "stream": "research",
       "areas": [
         "research-core"
