@@ -6,10 +6,26 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 767. Counts describe records, not accomplishments.
+Indexed entries: 783. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Q1 He-Ne check: both rules pick the 3.39 um line (no claim)](2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim) (L163) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Q1 data search: no dataset separates R* from MaxEP (no claim)](2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim) (L153) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Q1 screen: when do R* and MaxEP pick different winners (no claim)](2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim) (L143) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Field map for layers 2-3 (STANDARD section 16 step 0), no claim](2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim) (L133) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [T042 run and result (backaction antisymmetry from two figures)](2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures) (L123) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [T042 data intake and draft (red-blue antisymmetry of backaction)](2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction) (L113) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Data-shape check for the optomechanics lane (masked)](2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain](2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Stress test 13 and wave J1: where combining sectors forces new relations](2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Theory Card v2 drafted (Higgs-dilaton form, not approved)](2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)](2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)](2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b) (L53) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave C1: persistence selection inside one universe (STRESS_12 option C)](2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c) (L43) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave D1: attractors and the initial field value (STRESS_12 option D)](2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d) (L33) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave S1: scale-invariant restriction of the parent action](2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Stress test 12: parameter scaling returns in the parent action (topic 0.23)](2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Growth Test Card not drafted (forecast: undecidable at the T041 best point)](2026/2026-11-27.md#growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Wave C3: linear growth of structure in the parent action](2026/2026-11-26.md#wave-c3-linear-growth-of-structure-in-the-parent-action) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)](2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041) (L33) | research-core | explicit_stream_and_area |
