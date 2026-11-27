@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1017,
+    "entries": 1018,
     "by_stream": {
       "book-history": 94,
-      "operations": 142,
+      "operations": 143,
       "research": 780,
       "review": 1
     },
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "5f7ec15473f34a69d37f1e80f03b67d5a7f741083d4ab493d0daf64d736d4f6c",
-      "entries": 5
+      "sha256": "37f66ecccb3b2d84b2b4e470a9431cc4717320ef112361d8f15c20ac9eb7d22d",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -20766,15 +20766,35 @@
       "source": "2026/2026-11-27.md",
       "anchor": "content-value-audit-how-much-of-the-repository-is-ai-slop",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "Content-value audit (how much of the repository is AI slop)",
-      "entry_sha256": "afa9d2dc634008d2d994a4a7b7e7ccdf5677b23266b1f3b51608f275ac350142",
+      "entry_sha256": "14435de89c82f84957c5327c3fc65d48e6b93f3c5539a4b81148bbb1224faf49",
       "stream": "research",
       "areas": [
         "research-standards"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-plan-draft-after-the-content-value-audit",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-plan-draft-after-the-content-value-audit",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "Cleanup plan (draft) after the content-value audit",
+      "entry_sha256": "716cc292cd6cd3dff063ad42a8387d0ee0a7e9b529dd14692ef4e382b16df651",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
