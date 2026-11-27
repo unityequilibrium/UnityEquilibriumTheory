@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1014,
+    "entries": 1015,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 777,
+      "research": 778,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "5fc5beaf4c26dc2a5b15737127594d4e46af365a6360630d0fa3888d8023c456",
-      "entries": 11
+      "sha256": "64e7a3e6d26d112d1cd84252e354548dcc3dde15369b32d7fbc0b2b7f46625f5",
+      "entries": 12
     },
     {
       "path": "2026-08-14.md",
@@ -20706,9 +20706,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "data-shape-check-for-the-optomechanics-lane-masked",
       "start_line": 103,
-      "end_line": 111,
+      "end_line": 112,
       "title": "Data-shape check for the optomechanics lane (masked)",
-      "entry_sha256": "2462130ece049ca21a098c4fb825b5d55d39c51757245309c0d7cba826810223",
+      "entry_sha256": "fbe559764b4b6b94f2162761893a812851faaeb40b389c9df3ee3198a4b51698",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
+      "source": "2026/2026-11-27.md",
+      "anchor": "t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
+      "start_line": 113,
+      "end_line": 121,
+      "title": "T042 data intake and draft (red-blue antisymmetry of backaction)",
+      "entry_sha256": "16bc37a5205d35bba0676fc06364da071c0ebe8ecdf6b4ef37d712ba9351427c",
       "stream": "research",
       "areas": [
         "research-core"

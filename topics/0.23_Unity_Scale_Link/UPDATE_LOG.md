@@ -142,3 +142,7 @@
 ## 2026-11-27 — Wave O8: a lab lane for STRESS_13 junctions 7-8
 - Core wave O8 (`core/03_lanes/optomechanics/uet_optomechanics_lane.py`, claim C_O8_OPTOMECHANICS_LANE at L1).
 - Finding: cavity optomechanics has the portal form x |a|^2 with a measurable g0; backaction is layer-2 friction (red) and layer-3 capture (blue); the red-side cooling rate fixes the blue-side threshold with no free parameter. Not UET-distinct, but it tests the chain where the coupling is known.
+
+## 2026-11-27 — T042 drafted (optomechanics lane, red-blue antisymmetry)
+- Two figures downloaded with permission and registered (not opened): Arcizet 2006 Fig. 4, Benevides 2017 Fig. 3.
+- Draft card T042 on C_O8_OPTOMECHANICS_LANE: PASS if |R| <= 0.15 in both figures, FAIL if |R| > 0.35 in either. Proposal: `Doc/PROPOSAL_T042_BACKACTION_ANTISYMMETRY_2026-11-27.md`.

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 777. Counts describe records, not accomplishments.
+Indexed entries: 778. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [T042 data intake and draft (red-blue antisymmetry of backaction)](2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Data-shape check for the optomechanics lane (masked)](2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked) (L103) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain](2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain) (L93) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Stress test 13 and wave J1: where combining sectors forces new relations](2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations) (L83) | research-core | explicit_stream_and_area |
