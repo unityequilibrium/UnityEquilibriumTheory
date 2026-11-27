@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 89,
-    "entries": 1002,
+    "sources": 90,
+    "entries": 1004,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 765,
+      "research": 767,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -460,8 +460,13 @@
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "b4ad1b0ff3e1afbe1361044e895a5292cfd209608ae6363c5c3d383e982997cf",
-      "entries": 4
+      "sha256": "b036b5daf702323c5e08dbea8a92d1318e2aaa19d16c0c9f8f47720d46a32317",
+      "entries": 5
+    },
+    {
+      "path": "2026/2026-11-27.md",
+      "sha256": "84425a26705588c69cc614747b79e4a0567310973bb0f5c23622729bc3fea6e1",
+      "entries": 1
     },
     {
       "path": "2026-08-14.md",
@@ -20461,9 +20466,9 @@
       "source": "2026/2026-11-26.md",
       "anchor": "c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)",
-      "entry_sha256": "786034fd4b04ecfa3133977c878a97e5b8adea0303d437044a9a30a24675f5dd",
+      "entry_sha256": "dd471e35f20794bb8a983d7130654eb3b1926fe006411dad4bc083572b3a6468",
       "stream": "research",
       "areas": [
         "research-core"
@@ -20474,6 +20479,46 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#wave-c3-linear-growth-of-structure-in-the-parent-action",
+      "source": "2026/2026-11-26.md",
+      "anchor": "wave-c3-linear-growth-of-structure-in-the-parent-action",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave C3: linear growth of structure in the parent action",
+      "entry_sha256": "dc4308a4a4c3cd1e7352a7b7d09c4b819601910999e208eb7c37ec6db23be97d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point",
+      "source": "2026/2026-11-27.md",
+      "anchor": "growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point",
+      "start_line": 3,
+      "end_line": 11,
+      "title": "Growth Test Card not drafted (forecast: undecidable at the T041 best point)",
+      "entry_sha256": "762c736dfb972478464ce44e21b4510ede0d412e4868e9f8f7a89e53f7dfdbb9",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
       "legacy_root_path": false
     },
     {
