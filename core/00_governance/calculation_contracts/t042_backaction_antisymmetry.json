@@ -1,0 +1,236 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "CORE_T042_BACKACTION_ANTISYMMETRY_V1",
+  "profile": "PHYSICAL_COMPARISON",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "agent:claude-t042",
+    "rationale": "Methodological contract for Test Card T042. The evidence decision lives in docs/standard. Points read from published figures.",
+    "coverage_evidence": [
+      "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg"
+    ]
+  },
+  "question": "Is the backaction change of the mechanical damping antisymmetric in the laser detuning, as one portal coupling across layers 2 and 3 requires?",
+  "output": {
+    "quantity": "R = sum(y+ + y-) / sum(|y+| + |y-|)",
+    "unit": "1",
+    "domain": "two published optomechanical devices",
+    "accuracy": "pixel reading, +/-1 pixel jitter",
+    "claim_intent": "DIAGNOSTIC"
+  },
+  "model": {
+    "formula_ids": [
+      "UET-OM-LANE-O8"
+    ],
+    "assumptions": "Linear radiation-pressure backaction; one coupling for both detuning signs.",
+    "approximation": "Weak coupling; photothermal forces not modelled.",
+    "initial_boundary": "Not applicable (steady-state rates).",
+    "drive_environment": "Laser drive at fixed power per curve.",
+    "parameters": "None fitted: the antisymmetry has no free parameter."
+  },
+  "data_policy": {
+    "uses_observations": true,
+    "calibration_ids": [],
+    "comparison_ids": [
+      "ARCIZET2006_FIG4_PNG",
+      "BENEVIDES2017_FIG3_JPG"
+    ],
+    "independent_validation": false,
+    "holdout_policy": "Figures opened only after the approval commit of T042."
+  },
+  "observation": {
+    "system_partition": {
+      "role_mode": "RELATIONAL",
+      "accounting_component_id": "system_state",
+      "boundary": "Published figures of measured damping; values as plotted.",
+      "systems": [
+        {
+          "id": "resonator",
+          "state": "Mechanical mode coupled to an optical cavity",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "resonator.damping"
+            ],
+            "owner_ids": [],
+            "rule": "One damping per detuning and power."
+          }
+        },
+        {
+          "id": "camera",
+          "state": "Published figure",
+          "state_accounting": {
+            "kind": "INDEPENDENT",
+            "state_ids": [
+              "camera.record"
+            ],
+            "owner_ids": [],
+            "rule": "Observer record only."
+          }
+        }
+      ],
+      "couplings": [
+        {
+          "id": "imaging",
+          "source": "resonator",
+          "target": "camera",
+          "kind": "DETECTION",
+          "component_id": "detector",
+          "map": "Mechanical spectra fitted by the authors, plotted as points"
+        },
+        {
+          "id": "illumination_backaction",
+          "source": "camera",
+          "target": "resonator",
+          "kind": "BACKACTION",
+          "component_id": "detector",
+          "map": "None"
+        }
+      ],
+      "observables": [
+        {
+          "id": "damping",
+          "detector_id": "camera",
+          "target_systems": [
+            "resonator"
+          ],
+          "backaction_targets": [
+            "resonator"
+          ],
+          "backaction_scope_reason": "Single assessed owner.",
+          "quantity": "damping change versus detuning",
+          "readout_map": "pixel centroids of plotted points; read only",
+          "component_id": "detector"
+        }
+      ]
+    },
+    "source_state": "Devices as described in the cited papers.",
+    "generated_trace": "Not a UET trace variable.",
+    "carrier": "Light.",
+    "observer_state": "Published figures.",
+    "readout": "Damping change versus detuning.",
+    "backaction": "None.",
+    "frame": "Laboratory frame",
+    "time_convention": "Steady state",
+    "product_level": "published figure points (reduced data)",
+    "corrections": [
+      {
+        "id": "published_analysis_upstream",
+        "state": "APPLIED_UPSTREAM",
+        "evidence": "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg"
+      }
+    ]
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Backaction rates from uet_optomechanics_lane.py.",
+      "evidence": [
+        "core/03_lanes/optomechanics/uet_optomechanics_lane.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "MODELED",
+      "reason": "Fixed power per plotted curve.",
+      "evidence": [
+        "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py"
+      ]
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "No propagation.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Steady state.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "UPSTREAM_CORRECTED",
+      "reason": "Spectra fitted by the authors.",
+      "evidence": [
+        "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg"
+      ]
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Pixel reading, pairing and R, outcome rule fixed in T042.",
+      "evidence": [
+        "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Linear interpolation and jitter draws.",
+      "evidence": [
+        "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "1",
+    "numerical": "Interpolation only.",
+    "approximation": "Linear radiation-pressure model; photothermal forces ignored.",
+    "measurement": "Reading uncertainty from +/-1 pixel jitter; authors' fit errors not shown in the figures.",
+    "systematic": "Detuning offset, static shift, photothermal force.",
+    "omissions": "Fit lines not read.",
+    "dependence": "The two figures are independent devices.",
+    "acceptance": "Outcome categories fixed in Test Card T042.",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "docs/data/external/optomechanics/arcizet2006/private/Cohadon_fig4.png",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "8f8d93dfac0a11b2ef34223d5f2499fa797f4ec876a9c30bf1c1f6aa5c6f67aa",
+      "availability": "LOCAL_ONLY"
+    },
+    {
+      "path": "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg",
+      "kind": "working_file",
+      "role": "input",
+      "sha256": "8d4c415fa41e44faead7e80cbe10fa29b70b79dc6b12d4cb0c7f3f4e2970426b",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "91851d22667c5c5f40008071c5be3ff867a02c50fd2ed1c0e2df744b473cd083",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/03_lanes/optomechanics/uet_optomechanics_lane.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "b13c3f9e0374d985596e66ceccd99d2240cf53f872e2eaeb07a3a0b9446d0072",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py"
+  ],
+  "evidence": [
+    "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py",
+    "core/03_lanes/optomechanics/uet_optomechanics_lane.py",
+    "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg"
+  ],
+  "claim_boundary": "Methodological coverage of the T042 comparison only. Not UET-distinct: standard optomechanics predicts the same antisymmetry.",
+  "next_action": "Regenerate after the calibration values are entered (post-approval), then run once."
+}
