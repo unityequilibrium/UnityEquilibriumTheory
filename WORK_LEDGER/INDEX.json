@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1014,
+    "entries": 1015,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 777,
+      "research": 778,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "792ec60e7586be87d7e21d38fe8238e61ba0117387c77e3d575df29f8e659aa7",
-      "entries": 2
+      "sha256": "b8f291f0304dc189bb7822122dad2972c1c694b8f3398ca30303b7f444e516f5",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20706,12 +20706,32 @@
       "source": "2026/2026-11-27.md",
       "anchor": "post-mortem-of-the-fasting-and-power-plant-cards-question-design",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Post-mortem of the fasting and power-plant cards (question design)",
-      "entry_sha256": "4d99d0cf180ef2db09361f00d204a4f6521db896a2d09fc0ee9b3cb3380b08ce",
+      "entry_sha256": "0210e8f78bab0cc9ebd71238cc6cf762ff5648fd75d8665af06c9aa4f9952152",
       "stream": "research",
       "areas": [
         "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#proposal-research-design-standard-question-quality-before-a-test-card",
+      "source": "2026/2026-11-27.md",
+      "anchor": "proposal-research-design-standard-question-quality-before-a-test-card",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Proposal: research-design standard (question quality before a Test Card)",
+      "entry_sha256": "a6881b70b244b1e2dbbbca412baeee61e0236e2b19cd529780260027f49263ae",
+      "stream": "research",
+      "areas": [
+        "research-standards"
       ],
       "related_streams": [
         "research"
