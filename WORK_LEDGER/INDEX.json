@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1008,
+    "entries": 1009,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 771,
+      "research": 772,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "64bbafd542666a6aa9ff081e2517cbc1a9c2eb9a893f946a1f7fa7bcd200d577",
-      "entries": 5
+      "sha256": "12e5bf91ca618aa1e959d03fd6fb8a5b880e63e5ee5c2476e52e5865b440d96e",
+      "entries": 6
     },
     {
       "path": "2026-08-14.md",
@@ -20586,9 +20586,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
       "start_line": 43,
-      "end_line": 51,
+      "end_line": 52,
       "title": "Wave C1: persistence selection inside one universe (STRESS_12 option C)",
-      "entry_sha256": "81b4d270ed648162d9696d838d1431f93857045e011db2fed949153b0606858b",
+      "entry_sha256": "606648b0832c119778b8b2d10a202a55a235be934b744b055b5d93e90309f410",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
+      "start_line": 53,
+      "end_line": 61,
+      "title": "Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)",
+      "entry_sha256": "280d6a1a5d956c74a1d9c95d42c77f0c50a462ad95c3c6e881a1174238652596",
       "stream": "research",
       "areas": [
         "research-core"

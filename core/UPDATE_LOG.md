@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — What can an RG fixed point fix? (B1)
+ทำ: แยกพารามิเตอร์ของการ์ดเป็น relevant/ไร้มิติ และดู one-loop flow ของภาค matter (ทาง B ของ STRESS_12) (uet_rg_closure.py, ทดสอบ physics 5 ข้อ)
+ผล: fixed point ผูกได้แค่ λ_ψ, λ_χ, ξ_c; ค่าที่มีมิติ (Λ_eff, m_ψ, m_χ, g_c) ยังอิสระ; การ์ดไม่ปิดภายใต้ renormalization เพราะเกิดพจน์ ξ_χ|χ|²R (β = −λ_χ/(12π²) ที่ ξ_χ = 0)
+ระดับ: C_B1_RG_FIXES_ONLY_DIMENSIONLESS L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ทาง A2 (พจน์ Higgs-dilaton) ซึ่ง B1 บอกว่าอย่างน้อย ξ_χ|χ|²R ต้องมีอยู่แล้ว
+commit: 362caffe5 (code) + this commit (records)
+
 ## 2026-11-27 — Can persistence selection fix the parameters? (C1)
 ทำ: ดูว่าการคัดสรรด้วยการคงอยู่ (N = b τ) ในจักรวาลเดียวผูกค่าอะไรได้ (ทาง C ของ STRESS_12) (uet_selection_of_scale.py, ทดสอบ physics 5 ข้อ)
 ผล: เลือกได้แค่สถานะ ไม่ใช่ค่าคงที่ของ action; สเกลของ S1 เป็นทิศราบ ทุกค่าอยู่ได้นานเท่ากัน จึงไม่ถูกเลือก; ถ้ามีพจน์มวล มวล Planck ลอย ≤ 2.3e-5 H (ต่ำกว่าขอบ LLR 96 เท่า)

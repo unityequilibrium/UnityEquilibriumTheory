@@ -125,3 +125,7 @@
 ## 2026-11-27 — Wave C1: option C of STRESS_12 (persistence selection)
 - Core wave C1 (`core/03_lanes/scalar_tensor/uet_selection_of_scale.py`, claim C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS at L1).
 - Finding: inside one universe selection picks states, not couplings; the S1 scale is a flat direction (neutral); with the mass breaking G drifts at <= 2.3e-5 H. Fixing couplings this way needs them as fields (action change) or many universes.
+
+## 2026-11-27 — Wave B1: option B of STRESS_12 (RG fixed point)
+- Core wave B1 (`core/03_lanes/scalar_tensor/uet_rg_closure.py`, claim C_B1_RG_FIXES_ONLY_DIMENSIONLESS at L1).
+- Finding: a fixed point can fix only dimensionless couplings, so it cannot touch the 1.8e-60 hierarchy; S1 and a fixed point are complementary. The card is not closed under one-loop renormalization: a xi_chi |chi|^2 R term is generated.
