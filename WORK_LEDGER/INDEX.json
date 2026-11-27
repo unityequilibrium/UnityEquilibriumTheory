@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1005,
+    "entries": 1006,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 768,
+      "research": 769,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "409acd201f79c683b9e6e9b18e7ab22c338bcee672051d53deedba99ce5003af",
-      "entries": 2
+      "sha256": "05b0e6ca2d75e001ba80695dd7eb48502c0efad3dfbf2577caca608ee13c22b1",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20526,9 +20526,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Stress test 12: parameter scaling returns in the parent action (topic 0.23)",
-      "entry_sha256": "f910624f029bc600fbfa5dacd9637ab01a83fbc1de6b4886eff8ee00056a5e73",
+      "entry_sha256": "8542bec615cb89af13d81b2f5e3e179a1ea81840bacd72cf37761477782100ac",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-s1-scale-invariant-restriction-of-the-parent-action",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Wave S1: scale-invariant restriction of the parent action",
+      "entry_sha256": "bb91794e0a6b615dc29d8dd43f7add151b4f5cad5effcaa3ba1ad90e74918261",
       "stream": "research",
       "areas": [
         "research-core"

@@ -58,6 +58,15 @@
       "note": "Linear, quasi-static, massless inside the Compton length; no transfer function or sigma8 normalisation; nearest theory extended quintessence; not UET-distinct."
     },
     {
+      "claim_id": "C_S1_SCALE_INVARIANT_RESTRICTION",
+      "statement": "Imposing global scale symmetry on the parent action without adding terms keeps only xi phi^2 R, the kinetic terms and the two quartics, so 7 free parameters become 3 dimensionless ones and one scale; the result is induced gravity (Brans-Dicke, omega = 1/(4 xi_c), Cassini xi_c <= 5.75e-6) with a decoupled massless chi, no portal, no thawing dark energy, and a vacuum energy lambda/(4 xi_c^2) that needs lambda/xi_c^2 = 2.9e-120.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S1_SCALE_SYMMETRY"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option A: scale symmetry alone fixes the dimensionful parameters but removes the author's matter-space exchange and does not remove the vacuum-energy tuning. Restoring them needs new terms (Higgs-dilaton class), an author decision. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

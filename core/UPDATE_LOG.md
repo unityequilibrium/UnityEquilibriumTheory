@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — What is left of the parent action under scale symmetry? (S1)
+ทำ: บังคับสมมาตรของสเกลกับ action แม่โดยไม่เพิ่มพจน์ (ทาง A ของ STRESS_12 ที่ผู้เขียนเลือก) ตรวจด้วย geometry ของ sympy (uet_scale_symmetry.py, ทดสอบ physics 17 ข้อ)
+ผล: พารามิเตอร์ 7 ตัวเหลือไร้มิติ 3 ตัวกับสเกลเดียว แต่ portal, มวลทุกตัว และพลังงานมืดแบบ thawing ถูกห้าม; ได้ Brans-Dicke ที่ Cassini บังคับ ξ_c ≤ 5.75e-6 และพลังงานมืดต้องใช้ λ/ξ² = 2.9e-120
+ระดับ: C_S1_SCALE_INVARIANT_RESTRICTION L1; ไม่ใช่ผลเฉพาะ UET (induced gravity, Higgs-dilaton)
+ถัดไป: ถ้าจะคืน portal และมวลต้องเพิ่มพจน์แบบ Higgs-dilaton เป็น Theory Card v2 ซึ่งผู้เขียนต้องตัดสิน
+commit: 8e089c344 (code) + this commit (records)
+
 ## 2026-11-26 — How fast does structure grow in the parent action? (C3)
 ทำ: G ที่สสารรู้สึกในขีด quasi-static (Boisseau et al. 2000) + สมการการเติบโตเชิงเส้นบนฉากหลัง C2 (uet_frw_growth.py, ทดสอบ physics 7 ข้อ)
 ผล: จุดดีสุด T041 โตช้ากว่า ΛCDM -0.44% (fD ที่ z = 0.5 -1.07%); จุดอื่นที่ผ่านขอบเขต -1.5% ถึง -4.3%; ส่วนใหญ่มาจากฉากหลัง ไม่ใช่การคัปปลิง

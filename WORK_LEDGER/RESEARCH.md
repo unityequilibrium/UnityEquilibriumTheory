@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 768. Counts describe records, not accomplishments.
+Indexed entries: 769. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Wave S1: scale-invariant restriction of the parent action](2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Stress test 12: parameter scaling returns in the parent action (topic 0.23)](2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Growth Test Card not drafted (forecast: undecidable at the T041 best point)](2026/2026-11-27.md#growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Wave C3: linear growth of structure in the parent action](2026/2026-11-26.md#wave-c3-linear-growth-of-structure-in-the-parent-action) (L43) | research-core | explicit_stream_and_area |

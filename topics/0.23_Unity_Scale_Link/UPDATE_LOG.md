@@ -112,3 +112,8 @@
 - Finding: no running is needed, but the action fixes no value: 5 dimensionful parameters leave 4 unpredicted ratios to the Planck mass, lane choice plays the role of the per-domain kappa table, and data push the couplings toward zero.
 - New numbers: the dark-energy lane needs m_psi = 4.3e-33 eV = 1.8e-60 reduced Planck masses; at the T041 best point Lambda_eff is 97.8% of dark energy and xi_c psi0^2 = 7.2e-5.
 - Literature: scale symmetry broken spontaneously (Higgs-dilaton, arXiv:1107.2163, ties n_s to w0) is the closest mechanism; also asymptotic safety, cosmological natural selection, trackers. The author decides which to pursue.
+
+## 2026-11-27 — Wave S1: option A of STRESS_12 (scale symmetry)
+- The author chose option A. Core wave S1 (`core/03_lanes/scalar_tensor/uet_scale_symmetry.py`, claim C_S1_SCALE_INVARIANT_RESTRICTION at L1).
+- Finding: scale symmetry alone fixes the dimensionful parameters (7 become 3 plus one scale) but forbids the portal, all masses and the thawing dark energy, and moves the vacuum-energy hierarchy into lambda/xi^2 = 2.9e-120.
+- Next: restoring exchange and masses needs Higgs-dilaton terms (quartic portal, xi_chi |chi|^2 R); that is a Theory Card v2 decision for the author.
