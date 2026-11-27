@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 782. Counts describe records, not accomplishments.
+Indexed entries: 783. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Q1 He-Ne check: both rules pick the 3.39 um line (no claim)](2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim) (L163) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Q1 data search: no dataset separates R* from MaxEP (no claim)](2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim) (L153) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Q1 screen: when do R* and MaxEP pick different winners (no claim)](2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim) (L143) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Field map for layers 2-3 (STANDARD section 16 step 0), no claim](2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim) (L133) | research-core | explicit_stream_and_area |

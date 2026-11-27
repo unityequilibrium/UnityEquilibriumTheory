@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1019,
+    "entries": 1020,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 782,
+      "research": 783,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "2f6bce926111d3617631fb223715b9c212a57410881c977ee2d37e0288407a8a",
-      "entries": 16
+      "sha256": "6ab04c3e63cec2d4c76efabd73495838ccac3b5f1f1fcf1895c62185071fe386",
+      "entries": 17
     },
     {
       "path": "2026-08-14.md",
@@ -20806,9 +20806,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
       "start_line": 153,
-      "end_line": 161,
+      "end_line": 162,
       "title": "Q1 data search: no dataset separates R* from MaxEP (no claim)",
-      "entry_sha256": "b837e8a7a28b016dbca7cc3a5dce75f67809b128a8c4371a163f7dfa5ca00f2c",
+      "entry_sha256": "90738ef185e6d771ddb6e99aead64310b1cbfaa862e997ff8120a7125109bfef",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
+      "start_line": 163,
+      "end_line": 171,
+      "title": "Q1 He-Ne check: both rules pick the 3.39 um line (no claim)",
+      "entry_sha256": "2e10ebc883d506d92fe06b6a644894e467331243c19a762d3cfc7768ccc51c9b",
       "stream": "research",
       "areas": [
         "research-core"
