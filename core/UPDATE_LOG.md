@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Is optomechanical backaction antisymmetric in the detuning? (T042)
+ทำ: Test Card T042 (ผู้เขียนอนุมัติก่อนเปิดรูป) อ่านจุดจากรูป Arcizet 2006 Fig. 4 และ Benevides 2017 Fig. 3a ด้วยโปรแกรม รันครั้งเดียว
+ผล: INCONCLUSIVE; Arcizet R = +0.040 (ได้คู่จากหางเท่านั้น เพราะฝั่งน้ำเงินใกล้ศูนย์วัด damping ต่ำกว่า 0 ไม่ได้); Benevides R = +0.217 ± 0.106 (รูปเล็ก)
+ระดับ: C_O8_OPTOMECHANICS_LANE ยัง L1; ไม่ใช่ผลเฉพาะ UET; มี deviation 2 ข้อที่ใส่ก่อนคำนวณ R และเปิดเผยไว้
+ถัดไป: ต้องการข้อมูลตารางหรือรูปความละเอียดสูง และวัดเทียบที่ |Δ| เดียวกันทั้งสองฝั่งใต้ threshold
+commit: acb826510 (draft) + approval + a79c55c0f (calibration, run) + this commit (result)
+
 ## 2026-11-27 — A lab lane for the layer 1 -> 2 -> 3 chain: optomechanics (O8)
 ทำ: หาระบบในแล็บที่มี coupling แบบ ψ|χ|² และวัด coupling ได้ (STRESS_13 ข้อ 2.3); เลือก cavity optomechanics และ map ชั้น 2–3 ลงไป (uet_optomechanics_lane.py, ทดสอบ physics 8 ข้อ)
 ผล: backaction คือแรงเสียดทานของชั้น 2 (ฝั่งแดง) และ capture ของชั้น 3 (ฝั่งน้ำเงิน) จาก coupling ตัวเดียว; threshold ของ parametric oscillation = R* ของชั้น 3; อัตราเย็นลงที่ −Δ ทำนาย threshold ที่ +Δ ได้โดยไม่มีพารามิเตอร์อิสระ

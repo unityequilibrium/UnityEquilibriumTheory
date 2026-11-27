@@ -116,9 +116,10 @@
       "statement": "Cavity optomechanics realises the parent action's layer 1 -> 2 -> 3 chain with one measurable coupling: the interaction x |a|^2 has the portal form, dynamical backaction is the layer-2 friction on the red side and the layer-3 capture on the blue side, the parametric-instability threshold is R* = 1/(a tau), and the single coupling forces Gamma_opt(-Delta) = -Gamma_opt(+Delta), so a measured cooling rate fixes the threshold photon number at the mirrored detuning.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_O8_OPTOMECHANICS_LANE"
+        "R_O8_OPTOMECHANICS_LANE",
+        "R_T042_BACKACTION_ANTISYMMETRY"
       ],
-      "note": "Lane is an AI choice. Not UET-distinct (standard optomechanics). Candidate for a Test Card after a data-shape check."
+      "note": "Lane is an AI choice. Not UET-distinct (standard optomechanics). Candidate for a Test Card after a data-shape check. Confronted with two published figures under T042: INCONCLUSIVE (Arcizet R = +0.040 from the tails only; Benevides R = +0.217 +/- 0.106)."
     },
     {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",

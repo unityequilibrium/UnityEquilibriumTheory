@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1015,
+    "entries": 1016,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 778,
+      "research": 779,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "64e7a3e6d26d112d1cd84252e354548dcc3dde15369b32d7fbc0b2b7f46625f5",
-      "entries": 12
+      "sha256": "04dca5bf6e78be456cfa4027bb29aaa32b7e1a5217c087dd1b6f9b09b974e171",
+      "entries": 13
     },
     {
       "path": "2026-08-14.md",
@@ -20726,9 +20726,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
       "start_line": 113,
-      "end_line": 121,
+      "end_line": 122,
       "title": "T042 data intake and draft (red-blue antisymmetry of backaction)",
-      "entry_sha256": "16bc37a5205d35bba0676fc06364da071c0ebe8ecdf6b4ef37d712ba9351427c",
+      "entry_sha256": "1bed1fe311b39b7e512837c4d65f47ce99be34a53e8a7b9a1e4c704f8014c929",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures",
+      "source": "2026/2026-11-27.md",
+      "anchor": "t042-run-and-result-backaction-antisymmetry-from-two-figures",
+      "start_line": 123,
+      "end_line": 131,
+      "title": "T042 run and result (backaction antisymmetry from two figures)",
+      "entry_sha256": "fa722cb32e4b1831eb2fe63eca5ac71ac9a1b0d0a29f869a765fe176ba5fdabd",
       "stream": "research",
       "areas": [
         "research-core"
