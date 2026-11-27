@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_J1_PORTAL_IN_COSMOLOGY",
+  "claim_id": "C_J1_PORTAL_IN_COSMOLOGY",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "constraint_preserved_with_portal",
+      "value": "rel < 1e-10 at 20 random points; dropping the portal force breaks it",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "zero_portal_limit",
+      "value": "psi today equals the C2 integrator, rel < 1e-12",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "linear_response_in_c",
+      "value": "doubling c doubles the change of 1 + w0 within 1e-3",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "c_portal_planck_units",
+      "value": "3.21e-06 (g_c = 1.16e-15 eV, T016 bound; m_chi = nucleon)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "force_ratio_today",
+      "value": "2.51e-07",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "one_plus_w0_uncoupled_vs_coupled",
+      "value": "0.020912 vs 0.020913 (T041 best point, instantaneous w at a = 1)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "relative_change_of_one_plus_w0",
+      "value": "5.06e-05",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_portal_cosmology.py",
+    "commit": "62ad7917b"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave J1 (topic 0.23 STRESS_13, the author asked to research where combining sectors forces new relations). If the dark-energy psi of C1-C3/T041 is also the portal mediator, baryons push it through a field-dependent mass (coupled quintessence). At the MICROSCOPE bound the push is 2.5e-7 of the field's own force today and changes 1 + w0 by 5.1e-5 of itself (accumulated while rho_b ~ a^-3 was large): far below what cosmology resolves. Dark matter left uncoupled (AI choice). Nearest theory: coupled quintessence (Amendola 2000). Not UET-distinct."
+}

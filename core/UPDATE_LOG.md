@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Where does combining sectors force new relations? (STRESS_13, J1)
+ทำ: ทำแผนที่จุดต่อ 11 จุดระหว่างภาคและชั้นของ UET (topic 0.23 STRESS_13) และคำนวณจุดที่ยังไม่มีคนทำ: ψ ตัวเดียวทั้งเป็นพลังงานมืดและตัวกลาง portal (uet_portal_cosmology.py, ทดสอบ physics 4 ข้อ)
+ผล: baryon ดัน ψ แบบ coupled quintessence; ที่ขอบ MICROSCOPE 1 + w0 เปลี่ยน 5.1e-5 ของตัวมันเอง วัดไม่ได้; ทุกจุดต่อเป็นความสัมพันธ์ระหว่างพารามิเตอร์อิสระ เล็กเกินวัด หรือเท่ากับฟิสิกส์เดิม
+ระดับ: C_J1_PORTAL_IN_COSMOLOGY L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: หาระบบในแล็บที่ map กับภาค ψ–χ ที่ tree level ได้ เพื่อทดสอบความสัมพันธ์ชั้น 1 → 2 → 3 (จุดต่อ 7–8)
+commit: 62ad7917b (code) + this commit (records)
+
 ## 2026-11-27 — Theory Card v2 drafted (Higgs-dilaton form)
 ทำ: ร่าง Theory Card v2 ตามคำสั่งผู้เขียน (core/THEORY_CARD_V2_DRAFT.md + theory_card_v2_draft.json) จากผล S1, D1, C1, B1, A2
 ผล: action ไม่มีพารามิเตอร์ที่มีมิติ; ไร้มิติ 5 ตัว (ξ_φ, ξ_χ, λ_χ, α, β) กับสเกลเดียว; สมการทุกบรรทัดยัง L0 (ยังไม่มี derivation check)

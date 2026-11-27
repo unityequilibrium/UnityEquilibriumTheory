@@ -133,3 +133,8 @@
 ## 2026-11-27 — Wave A2: Higgs-dilaton sandbox, and summary of the four options
 - Core wave A2 (`core/03_lanes/scalar_tensor/uet_higgs_dilaton_sandbox.py`, claim C_A2_HIGGS_DILATON_EXTENSION at L1, sandbox).
 - Summary of STRESS_12 options: S1/A2 scale symmetry turns every mass ratio into a coupling ratio but moves the hierarchy into small couplings; D1 attractors remove psi_i only; C1 selection inside one universe picks states, not couplings; B1 a fixed point fixes only dimensionless couplings and the card is not RG-closed. No option explains the 1.8e-60 ratio.
+
+## 2026-11-27 — Stress test 13: where combining forces relations
+- Question: where does putting the sectors and layers of UET together force a relation the pieces do not have? Note: `Doc/STRESS_13_WHERE_COMBINING_FORCES_RELATIONS.md`.
+- Finding: 11 junctions; every forced relation is either a relation between free parameters, too small to measure under lab bounds, or equal to standard physics. The layer 1 -> 2 -> 3 derivation is the real synthesis content and could be tested only in a lab system where the couplings are measured.
+- New number (wave J1): one psi in both lanes changes 1 + w0 by 5.1e-5 of itself at the MICROSCOPE bound.

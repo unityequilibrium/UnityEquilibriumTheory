@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1011,
+    "entries": 1012,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 774,
+      "research": 775,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "3e63772a1a9481bf3e90881ba63e295f45d0831bd05d488ef00aa81776dce06a",
-      "entries": 8
+      "sha256": "cb97ac33ae7929e7458e625924253c26702b83a78921d51ff0b8a047e70b2fed",
+      "entries": 9
     },
     {
       "path": "2026-08-14.md",
@@ -20646,9 +20646,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "theory-card-v2-drafted-higgs-dilaton-form-not-approved",
       "start_line": 73,
-      "end_line": 81,
+      "end_line": 82,
       "title": "Theory Card v2 drafted (Higgs-dilaton form, not approved)",
-      "entry_sha256": "908a56deb9f4247af0e5a34243eee5966b8600995c5e55af7f9fc60844cea2aa",
+      "entry_sha256": "c665b0cd22b2f3d1707e5bee4db4bb9fc650b9601cf669eff5b934381aace572",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
+      "source": "2026/2026-11-27.md",
+      "anchor": "stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
+      "start_line": 83,
+      "end_line": 91,
+      "title": "Stress test 13 and wave J1: where combining sectors forces new relations",
+      "entry_sha256": "7e9b2fd891cdd52af9d89934b876fd46bfcafc9870a73bf1e1cf9281455a3d13",
       "stream": "research",
       "areas": [
         "research-core"

@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 774. Counts describe records, not accomplishments.
+Indexed entries: 775. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Stress test 13 and wave J1: where combining sectors forces new relations](2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations) (L83) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Theory Card v2 drafted (Higgs-dilaton form, not approved)](2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)](2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)](2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b) (L53) | research-core | explicit_stream_and_area |

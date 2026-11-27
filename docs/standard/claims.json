@@ -103,6 +103,15 @@
       "note": "Sandbox: not UET_PARENT v1. Adopting it needs the author's decision and a Theory Card v2. Not UET-distinct."
     },
     {
+      "claim_id": "C_J1_PORTAL_IN_COSMOLOGY",
+      "statement": "If one psi is both the dark energy of the parent action and the portal mediator between nucleons, baryons push it as in coupled quintessence; with g_c at the MICROSCOPE bound (1.16e-15 eV) the push is 2.5e-7 of the field's own force today and changes 1 + w0 at the T041 best point by 5.1e-5 of itself, so the matter-space exchange cannot be seen in cosmology.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_J1_PORTAL_IN_COSMOLOGY"
+      ],
+      "note": "Junction 5 of topic 0.23 STRESS_13. Dark matter uncoupled (AI choice). Not UET-distinct."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",
