@@ -21,6 +21,9 @@ approval, from the figure itself, before any data value is computed):
    standard deviation of R (not used in the criteria).
 Criteria (card): PASS if |R| <= 0.15 in both figures; FAIL if |R| > 0.35 in either figure; otherwise INCONCLUSIVE;
 also INCONCLUSIVE if a figure gives fewer than 3 pairs.
+Deviations entered with the calibration, after approval and before computing R (disclosed in the result):
+(1) an exclusion box removes the inset of Arcizet Fig. 4, whose markers share the series colours;
+(2) a 3 x 3 binary opening separates Arcizet's markers from the fit lines of the same colour that touch them.
 Requires Pillow (not pinned in .github/requirements-research.txt; local run only).
 """
 
@@ -45,7 +48,23 @@ FIGS = {
 # {"crop": [x0, y0, x1, y1], "x_ticks": [[px, value], [px, value]], "y_ticks": [[py, value], [py, value]],
 #  "y_kind": "ratio_minus_1" | "direct" | "minus_far_level", "far_level": float | None,
 #  "series": [{"rgb": [r, g, b], "tol": int, "area_min": int, "area_max": int}, ...]}
-CALIBRATION: dict = {}
+CALIBRATION: dict = {
+    # Entered 2026-11-27 after the approval commit, from pixel analysis of the figure (axis frame, tick rows/cols,
+    # dominant marker colours), before computing R.
+    "ARCIZET2006_FIG4_PNG": {
+        "crop": [103, 380, 512, 658], "exclude": [[335, 245, 555, 442]], "open": 3,
+        "x_ticks": [[101.5, -4.0], [513.0, 4.0]], "y_ticks": [[659.5, 0.0], [430.5, 6.0]],
+        "y_kind": "ratio_minus_1", "far_level": None,
+        "series": [{"rgb": c, "tol": 45, "area_min": 12, "area_max": 250} for c in
+                   ([230, 20, 40], [245, 165, 20], [70, 180, 70], [40, 55, 150], [180, 85, 115])],
+    },
+    "BENEVIDES2017_FIG3_JPG": {
+        "crop": [45, 1, 224, 82], "exclude": [], "open": 0,
+        "x_ticks": [[134.0, 0.0], [224.0, 5.0]], "y_ticks": [[41.5, 0.0], [14.0, 40.0]],
+        "y_kind": "direct", "far_level": None,
+        "series": [{"rgb": [160, 192, 160], "tol": 40, "area_min": 2, "area_max": 80}],
+    },
+}
 
 
 def _check_preconditions() -> None:
@@ -76,6 +95,10 @@ def markers(img: np.ndarray, cal: dict) -> list[list[tuple[float, float]]]:
     out = []
     for s in cal["series"]:
         mask = np.all(np.abs(sub - np.array(s["rgb"])) <= s["tol"], axis=2)
+        for ex0, ey0, ex1, ey1 in cal.get("exclude", []):      # deviation 1 (disclosed): inset box removed
+            mask[max(ey0 - y0, 0):max(ey1 - y0, 0), max(ex0 - x0, 0):max(ex1 - x0, 0)] = False
+        if cal.get("open", 0):                                  # deviation 2 (disclosed): binary opening
+            mask = ndimage.binary_opening(mask, structure=np.ones((cal["open"], cal["open"])))
         lab, nlab = ndimage.label(mask)
         pts = []
         for k in range(1, nlab + 1):
