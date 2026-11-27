@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1018,
+    "entries": 1019,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 781,
+      "research": 782,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "e929eb2803ceb27b0043f9d48e8baae4c1dedd1f1de778401331131d51a1880e",
-      "entries": 15
+      "sha256": "2f6bce926111d3617631fb223715b9c212a57410881c977ee2d37e0288407a8a",
+      "entries": 16
     },
     {
       "path": "2026-08-14.md",
@@ -20786,9 +20786,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
       "start_line": 143,
-      "end_line": 151,
+      "end_line": 152,
       "title": "Q1 screen: when do R* and MaxEP pick different winners (no claim)",
-      "entry_sha256": "549bf481724d7efa3aff75d0b107b4925bbe6bc8055ae5a3c2bc52bca697bc95",
+      "entry_sha256": "392c4eb016f29de0285b5ebebd82b717144e1e67b24b04ab9a844ea5d9781332",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
+      "start_line": 153,
+      "end_line": 161,
+      "title": "Q1 data search: no dataset separates R* from MaxEP (no claim)",
+      "entry_sha256": "b837e8a7a28b016dbca7cc3a5dce75f67809b128a8c4371a163f7dfa5ca00f2c",
       "stream": "research",
       "areas": [
         "research-core"
