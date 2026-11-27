@@ -1,7 +1,7 @@
 {
   "schema": "uet-test-card-v2",
   "test_id": "T042",
-  "status": "DRAFT",
+  "status": "APPROVED",
   "claim_id": "C_O8_OPTOMECHANICS_LANE",
   "theory_card": {
     "card_id": "UET_PARENT",
@@ -43,5 +43,10 @@
   "pass_criterion": "PASS if |R| <= 0.15 in both figures.",
   "fail_criterion": "FAIL if |R| > 0.35 in either figure. INCONCLUSIVE otherwise, or if a figure gives fewer than 3 pairs.",
   "drafted_by": "claude",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-27",
+    "role": "AUTHOR"
+  },
   "note": "Proposal: topics/0.23_Unity_Scale_Link/Doc/PROPOSAL_T042_BACKACTION_ANTISYMMETRY_2026-11-27.md. Disclosure: not blind and not UET-distinct. The linear radiation-pressure model (and so the null) predicts R = 0 exactly; photothermal forces, a detuning offset or the static radiation-pressure shift can make R != 0, and the Arcizet caption mentions a drift of the resonance frequency. Ma et al. 2007 (another device) state that the mechanical Q on the red and blue sides coincided closely. The drafter expects PASS. Values seen while searching (not from these figures): g0 = 2 pi x 91 kHz in the Benevides abstract. Only masked captions of the two figures were read."
 }
