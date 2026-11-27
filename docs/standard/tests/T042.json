@@ -1,0 +1,52 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T042",
+  "status": "APPROVED",
+  "claim_id": "C_O8_OPTOMECHANICS_LANE",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "In cavity optomechanics, the lab lane of the parent action's portal (x |a|^2), one coupling sets both the layer-2 friction (red detuning) and the layer-3 capture (blue detuning), so the backaction change of the mechanical damping is antisymmetric in the detuning at fixed power.",
+  "observable": {
+    "quantity": "R = sum(y+ + y-) / sum(|y+| + |y-|) over detuning pairs read from each figure, y = damping change (Gamma_eff/Gamma_m - 1, or the linewidth change)",
+    "unit": "1",
+    "domain": "two published optomechanical devices (micromirror, Arcizet 2006; silicon optomechanical crystal, Benevides 2017)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "ARCIZET2006_FIG4_PNG",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    },
+    {
+      "data_id": "BENEVIDES2017_FIG3_JPG",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py",
+    "description": "Pixel-based reading of the data points (not the fit lines): axis calibration from two ticks per axis, marker centroids by colour mask and connected components with an area window; points split by the sign of the detuning and paired on the overlap of |detuning| by linear interpolation of the denser side; R pooled per figure; reading uncertainty from 200 draws of +/-1 pixel jitter. The calibration values (crop box, tick pixels, colours, area window, y kind) are entered after approval from the figure itself, before any R is computed; the algorithm and the criteria do not change."
+  },
+  "free_parameters": [
+    "none (the antisymmetry has no free parameter)"
+  ],
+  "fixed_parameters": [
+    "y = Gamma_eff/Gamma_m - 1 for Arcizet; the plotted linewidth change for Benevides (AI choice)",
+    "pairing by linear interpolation on the overlap of |detuning| (AI choice)",
+    "R pooled over all series of a figure (AI choice)",
+    "detuning origin as plotted (cavity resonance at zero detuning) (AI choice)",
+    "figure choice (AI choice, approved as a plan by the author 2026-11-27)"
+  ],
+  "pass_criterion": "PASS if |R| <= 0.15 in both figures.",
+  "fail_criterion": "FAIL if |R| > 0.35 in either figure. INCONCLUSIVE otherwise, or if a figure gives fewer than 3 pairs.",
+  "drafted_by": "claude",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-27",
+    "role": "AUTHOR"
+  },
+  "note": "Proposal: topics/0.23_Unity_Scale_Link/Doc/PROPOSAL_T042_BACKACTION_ANTISYMMETRY_2026-11-27.md. Disclosure: not blind and not UET-distinct. The linear radiation-pressure model (and so the null) predicts R = 0 exactly; photothermal forces, a detuning offset or the static radiation-pressure shift can make R != 0, and the Arcizet caption mentions a drift of the resonance frequency. Ma et al. 2007 (another device) state that the mechanical Q on the red and blue sides coincided closely. The drafter expects PASS. Values seen while searching (not from these figures): g0 = 2 pi x 91 kHz in the Benevides abstract. Only masked captions of the two figures were read."
+}

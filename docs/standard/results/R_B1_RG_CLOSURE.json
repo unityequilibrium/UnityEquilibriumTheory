@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_B1_RG_CLOSURE",
+  "claim_id": "C_B1_RG_FIXES_ONLY_DIMENSIONLESS",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "relevant_couplings_left_free_at_a_fixed_point",
+      "value": "Lambda_eff, m_psi^2, m_chi^2, g_c",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "dimensionless_couplings_a_fixed_point_could_predict",
+      "value": "lambda_psi, lambda_chi, xi_c, xi_chi (generated)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "beta_xi_chi_at_xi_chi_0_over_lambda_chi",
+      "value": "-0.008443 (= -1/(12 pi^2); card not closed)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "weyl_covariance_of_conformal_coupling",
+      "value": "rel < 1e-10 at 20 points (sympy geometry); xi = 0.2 breaks it",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "one_loop_flow_vs_closed_form",
+      "value": "rel < 1e-10 (N = 1, 2)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_rg_closure.py",
+    "commit": "362caffe5"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave B1 (topic 0.23 STRESS_12, option B; the author asked to research every option). A fixed point (asymptotic safety) can predict only irrelevant, dimensionless couplings; Lambda_eff, m_psi^2, m_chi^2 and g_c are relevant and stay free, so option B cannot touch the 1.8e-60 hierarchy. Scale symmetry (S1) and a fixed point are complementary (dilaton quantum gravity, Wetterich 2013, proposed, not established). The one-loop flow (standard formulas from the literature, not rederived here) shows lambda_psi = 0 is stable but the card's chi has no |chi|^2 R term while beta_xi_chi(0) = -lambda_chi/(12 pi^2): the card is not closed under renormalization and generates one of the Higgs-dilaton terms. Not UET-distinct."
+}

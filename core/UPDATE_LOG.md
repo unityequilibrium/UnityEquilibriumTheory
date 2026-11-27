@@ -2,6 +2,69 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Is optomechanical backaction antisymmetric in the detuning? (T042)
+ทำ: Test Card T042 (ผู้เขียนอนุมัติก่อนเปิดรูป) อ่านจุดจากรูป Arcizet 2006 Fig. 4 และ Benevides 2017 Fig. 3a ด้วยโปรแกรม รันครั้งเดียว
+ผล: INCONCLUSIVE; Arcizet R = +0.040 (ได้คู่จากหางเท่านั้น เพราะฝั่งน้ำเงินใกล้ศูนย์วัด damping ต่ำกว่า 0 ไม่ได้); Benevides R = +0.217 ± 0.106 (รูปเล็ก)
+ระดับ: C_O8_OPTOMECHANICS_LANE ยัง L1; ไม่ใช่ผลเฉพาะ UET; มี deviation 2 ข้อที่ใส่ก่อนคำนวณ R และเปิดเผยไว้
+ถัดไป: ต้องการข้อมูลตารางหรือรูปความละเอียดสูง และวัดเทียบที่ |Δ| เดียวกันทั้งสองฝั่งใต้ threshold
+commit: acb826510 (draft) + approval + a79c55c0f (calibration, run) + this commit (result)
+
+## 2026-11-27 — A lab lane for the layer 1 -> 2 -> 3 chain: optomechanics (O8)
+ทำ: หาระบบในแล็บที่มี coupling แบบ ψ|χ|² และวัด coupling ได้ (STRESS_13 ข้อ 2.3); เลือก cavity optomechanics และ map ชั้น 2–3 ลงไป (uet_optomechanics_lane.py, ทดสอบ physics 8 ข้อ)
+ผล: backaction คือแรงเสียดทานของชั้น 2 (ฝั่งแดง) และ capture ของชั้น 3 (ฝั่งน้ำเงิน) จาก coupling ตัวเดียว; threshold ของ parametric oscillation = R* ของชั้น 3; อัตราเย็นลงที่ −Δ ทำนาย threshold ที่ +Δ ได้โดยไม่มีพารามิเตอร์อิสระ
+ระดับ: C_O8_OPTOMECHANICS_LANE L1; ไม่ใช่ผลเฉพาะ UET (optomechanics มาตรฐาน)
+ถัดไป: ตรวจรูปข้อมูล (ปิดตัวเลข) ของงานที่วัดทั้งอัตราเย็นลงและ threshold บนอุปกรณ์เดียวกัน ก่อนร่าง Test Card
+commit: dcf8cb419 (code) + this commit (records)
+
+## 2026-11-27 — Where does combining sectors force new relations? (STRESS_13, J1)
+ทำ: ทำแผนที่จุดต่อ 11 จุดระหว่างภาคและชั้นของ UET (topic 0.23 STRESS_13) และคำนวณจุดที่ยังไม่มีคนทำ: ψ ตัวเดียวทั้งเป็นพลังงานมืดและตัวกลาง portal (uet_portal_cosmology.py, ทดสอบ physics 4 ข้อ)
+ผล: baryon ดัน ψ แบบ coupled quintessence; ที่ขอบ MICROSCOPE 1 + w0 เปลี่ยน 5.1e-5 ของตัวมันเอง วัดไม่ได้; ทุกจุดต่อเป็นความสัมพันธ์ระหว่างพารามิเตอร์อิสระ เล็กเกินวัด หรือเท่ากับฟิสิกส์เดิม
+ระดับ: C_J1_PORTAL_IN_COSMOLOGY L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: หาระบบในแล็บที่ map กับภาค ψ–χ ที่ tree level ได้ เพื่อทดสอบความสัมพันธ์ชั้น 1 → 2 → 3 (จุดต่อ 7–8)
+commit: 62ad7917b (code) + this commit (records)
+
+## 2026-11-27 — Theory Card v2 drafted (Higgs-dilaton form)
+ทำ: ร่าง Theory Card v2 ตามคำสั่งผู้เขียน (core/THEORY_CARD_V2_DRAFT.md + theory_card_v2_draft.json) จากผล S1, D1, C1, B1, A2
+ผล: action ไม่มีพารามิเตอร์ที่มีมิติ; ไร้มิติ 5 ตัว (ξ_φ, ξ_χ, λ_χ, α, β) กับสเกลเดียว; สมการทุกบรรทัดยัง L0 (ยังไม่มี derivation check)
+ระดับ: DRAFT ยังไม่อนุมัติ การ์ดที่ใช้อยู่ยังเป็น v1; ไม่มี claim ใหม่
+ถัดไป: ผู้เขียนตัดสิน 3 ข้อ (แทน v1 หรือคู่ขนาน, gravity ปกติหรือ unimodular, lane ของ χ) แล้วจึงทำ W4-v2
+commit: this commit
+
+## 2026-11-27 — The Higgs-dilaton extension as a sandbox (A2)
+ทำ: ลองเพิ่มพจน์ ξ_χ|χ|²R และ portal แบบ quartic แทน g_c (ทาง A ของ STRESS_12 แบบ sandbox ไม่แก้การ์ด) (uet_higgs_dilaton_sandbox.py, ทดสอบ physics 4 ข้อ)
+ผล: พารามิเตอร์ 7 → ไร้มิติ 5 + สเกลเดียว; อัตราส่วนมวลทุกตัวเป็นอัตราส่วนของ coupling; การแลกเปลี่ยนสสารกับ space กลับมา; แต่ lane นิวคลีออนต้องใช้ α = 7.4e-38 ξ_ψ จึงย้ายลำดับขั้นไปไว้ใน coupling ไม่ได้อธิบาย
+ระดับ: C_A2_HIGGS_DILATON_EXTENSION L1 (sandbox); ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ผู้เขียนตัดสินว่าจะรับเป็น Theory Card v2 ไหม
+commit: 43a2c9f22 (code) + this commit (records)
+
+## 2026-11-27 — What can an RG fixed point fix? (B1)
+ทำ: แยกพารามิเตอร์ของการ์ดเป็น relevant/ไร้มิติ และดู one-loop flow ของภาค matter (ทาง B ของ STRESS_12) (uet_rg_closure.py, ทดสอบ physics 5 ข้อ)
+ผล: fixed point ผูกได้แค่ λ_ψ, λ_χ, ξ_c; ค่าที่มีมิติ (Λ_eff, m_ψ, m_χ, g_c) ยังอิสระ; การ์ดไม่ปิดภายใต้ renormalization เพราะเกิดพจน์ ξ_χ|χ|²R (β = −λ_χ/(12π²) ที่ ξ_χ = 0)
+ระดับ: C_B1_RG_FIXES_ONLY_DIMENSIONLESS L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ทาง A2 (พจน์ Higgs-dilaton) ซึ่ง B1 บอกว่าอย่างน้อย ξ_χ|χ|²R ต้องมีอยู่แล้ว
+commit: 362caffe5 (code) + this commit (records)
+
+## 2026-11-27 — Can persistence selection fix the parameters? (C1)
+ทำ: ดูว่าการคัดสรรด้วยการคงอยู่ (N = b τ) ในจักรวาลเดียวผูกค่าอะไรได้ (ทาง C ของ STRESS_12) (uet_selection_of_scale.py, ทดสอบ physics 5 ข้อ)
+ผล: เลือกได้แค่สถานะ ไม่ใช่ค่าคงที่ของ action; สเกลของ S1 เป็นทิศราบ ทุกค่าอยู่ได้นานเท่ากัน จึงไม่ถูกเลือก; ถ้ามีพจน์มวล มวล Planck ลอย ≤ 2.3e-5 H (ต่ำกว่าขอบ LLR 96 เท่า)
+ระดับ: C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ทาง B (asymptotic safety), ทาง A2 (พจน์ Higgs-dilaton)
+commit: d082c1f1c (code) + this commit (records)
+
+## 2026-11-27 — Can an attractor remove psi_i? (D1)
+ทำ: ดูว่าศักย์ของ action แม่มี tracker/attractor ไหม (ทาง D ของ STRESS_12) และลอง S1 + พจน์มวล (uet_attractor.py, ทดสอบ physics 6 ข้อ)
+ผล: ไม่มี tracker; 1 + w0 = 0.256 ψ_i² (exponent 2.0000) จึงยังต้อง fit ψ_i; S1 + มวลให้ exponential ที่ลบ ψ_i ได้ แต่ Cassini บังคับ 1 + w ≤ 7.7e-6 และยังต้องจูนพลังงานสุญญากาศ
+ระดับ: C_D1_ATTRACTOR_INITIAL_CONDITIONS L1; ไม่ใช่ผลเฉพาะ UET (thawing, cosmon)
+ถัดไป: ทาง C (การคัดสรรด้วยการคงอยู่), ทาง B (asymptotic safety), ทาง A2 (พจน์ Higgs-dilaton)
+commit: fdf434a72 (code) + this commit (records)
+
+## 2026-11-27 — What is left of the parent action under scale symmetry? (S1)
+ทำ: บังคับสมมาตรของสเกลกับ action แม่โดยไม่เพิ่มพจน์ (ทาง A ของ STRESS_12 ที่ผู้เขียนเลือก) ตรวจด้วย geometry ของ sympy (uet_scale_symmetry.py, ทดสอบ physics 17 ข้อ)
+ผล: พารามิเตอร์ 7 ตัวเหลือไร้มิติ 3 ตัวกับสเกลเดียว แต่ portal, มวลทุกตัว และพลังงานมืดแบบ thawing ถูกห้าม; ได้ Brans-Dicke ที่ Cassini บังคับ ξ_c ≤ 5.75e-6 และพลังงานมืดต้องใช้ λ/ξ² = 2.9e-120
+ระดับ: C_S1_SCALE_INVARIANT_RESTRICTION L1; ไม่ใช่ผลเฉพาะ UET (induced gravity, Higgs-dilaton)
+ถัดไป: ถ้าจะคืน portal และมวลต้องเพิ่มพจน์แบบ Higgs-dilaton เป็น Theory Card v2 ซึ่งผู้เขียนต้องตัดสิน
+commit: 8e089c344 (code) + this commit (records)
+
 ## 2026-11-26 — Layer 3 as survival optimisation: the fuel order of a fast (D21)
 ทำ: `uet_fuel_order.py` (การคัดเลือกจากการอยู่รอดของชั้น 3 = การหาทางรอดนานที่สุดแบบ Clark-Mangel; ใช้เพดานการปล่อยไขมัน k F^(2/3) จาก Hall 2010 และส่วนโปรตีนขั้นต่ำ q0) + physics tests 34 ข้อ + FORMAL contract
 ผล: เผาไขมันให้มากที่สุดเท่าที่ทำได้ไม่มีกฎไหนชนะ; ระยะที่ 3 เริ่มเมื่อไขมันต่ำกว่า F* = [(1-q0) e/(rho_F k)]^(3/2); การคำนวณย้อนกลับ (DP) บรรจบสู่ผลเดียวกัน; ข้อค้นพบ: ลำดับการเผาสำคัญแค่เรื่องไขมันที่เหลือตอนตาย (พลังงานอนุรักษ์) การถนอมโปรตีนช่วงแรกจะคุ้มก็ต่อเมื่อการเสียโปรตีนมีต้นทุนต่อการทำงานก่อนตาย
