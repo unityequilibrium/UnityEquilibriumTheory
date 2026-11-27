@@ -36,6 +36,13 @@ commit: 0afa07125 (code) + this commit (records)
 ระดับ: C_L3_AFTER_CLOSING คง L1 (ยังไม่มีการทดสอบที่ตัดสินได้)
 ถัดไป: ข้อมูลอดอาหารที่วัดโปรตีนรายวันครบ หรือข้ามไปทดสอบข้ออื่น
 commit: b3f07785a (approval) + data commit + this commit (result)
+## 2026-11-26 — How fast does structure grow in the parent action? (C3)
+ทำ: G ที่สสารรู้สึกในขีด quasi-static (Boisseau et al. 2000) + สมการการเติบโตเชิงเส้นบนฉากหลัง C2 (uet_frw_growth.py, ทดสอบ physics 7 ข้อ)
+ผล: จุดดีสุด T041 โตช้ากว่า ΛCDM -0.44% (fD ที่ z = 0.5 -1.07%); จุดอื่นที่ผ่านขอบเขต -1.5% ถึง -4.3%; ส่วนใหญ่มาจากฉากหลัง ไม่ใช่การคัปปลิง
+ระดับ: C_C3_FRW_GROWTH L1; ไม่ใช่ผลเฉพาะ UET (extended quintessence)
+ถัดไป: Test Card เทียบ f sigma8 หรือ S8 (ต้องขออนุญาตข้อมูลและให้ผู้เขียนอนุมัติก่อน)
+commit: 020c0b435 (code) + this commit (records)
+
 ## 2026-11-26 — Does the parent action's dark energy survive the CMB? (T041)
 ทำ: Test Card T041 (CMB distance priors ของ Chen et al. 2019 + DESI DR2 BAO + Pantheon+) ผู้เขียนอนุมัติ 75ded3d26 ก่อนเปิดข้อมูล; รันครั้งเดียว 76 นาที
 ผล: dchi2 เทียบ CPL = 3.94 (ผ่าน <= 4) → PASS แบบเฉียดเส้น; ตอนไม่มี CMB (T040) ได้ 0.03; CPL ดีกว่า LCDM 5.4 แต่ UET ดีกว่าแค่ 1.5

@@ -6,10 +6,12 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 774. Counts describe records, not accomplishments.
+Indexed entries: 776. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Growth Test Card not drafted (forecast: undecidable at the T041 best point)](2026/2026-11-27.md#growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point) (L3) | research-core | explicit_stream_and_area |
+| 2026-11-26 | [Wave C3: linear growth of structure in the parent action](2026/2026-11-26.md#wave-c3-linear-growth-of-structure-in-the-parent-action) (L82) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)](2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041) (L72) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)](2026/2026-11-26.md#t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon) (L62) | research-core | explicit_stream_and_area |
 | 2026-11-26 | [Test Card T041 drafted (CMB distance priors + BAO + SN)](2026/2026-11-26.md#test-card-t041-drafted-cmb-distance-priors--bao--sn) (L52) | research-core | explicit_stream_and_area |
