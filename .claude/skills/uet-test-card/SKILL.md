@@ -3,11 +3,21 @@ name: uet-test-card
 description: Take a UET claim to external data under Research Standard v2 - data intake and manifest, a preregistered Test Card, author approval before the run, the run, and the PASS / FAIL / INCONCLUSIVE record. Use for any comparison with published or measured data, including "test this on real data" and "draft a card".
 ---
 
-# Test Card workflow (STANDARD §4, §5, §7)
+# Test Card workflow (STANDARD §4, §5, §7, §16)
 
 The order is enforced by `check_preregistration.py`. Each numbered step is its own commit.
 
-1. **Proposal** (optional but usual): `topics/<topic>/Doc/PROPOSAL_<TEST>_<date>.md` with the question, the competing models with their numbers, the data needed, the method and the proposed criteria. Disclose what you already know about the data (it is rarely blind).
+0. **Field map** (STANDARD §16.1, once per field): if no `LITERATURE_MAP_<field>.md` exists, write it first: the field's main models with published parameters, the data they were tested on, what is still open, usable data sets and their shape. Name sources, not theory labels.
+1. **Question brief** (required, at most one page, STANDARD §16.2): `topics/<topic>/Doc/PROPOSAL_<TEST>_<date>.md` (or next to the lane code). It must answer:
+   - A1 the question in one sentence and the claim id; A2 the field map it uses;
+   - A3 the UET-to-system mapping and who chose it: `AUTHOR`, `AI_FROM_FIELD` (shown to reduce to the field's model) or `AI_GUESS`. **Stop at `AI_GUESS`**: make it a wave or sandbox work, not a card;
+   - B1 has the field already answered this? If yes, record "UET reproduces X" at L1 and draft no card;
+   - B2 the rival: what the field's model, with published parameters and no refit, gives for this data;
+   - B3 a discrimination forecast before opening the data: expected UET-minus-rival difference over the source's quoted errors. Below 2 sigma (or dchi2 < 4) draft no "difference" card; at most a CONSTRAINT card labelled as a consistency check;
+   - B4 data shape with digits masked (number of points, table vs figure vs text);
+   - B5 independence: no parameter calibrated on one case and extended to cases the field knows differ;
+   - C what PASS, FAIL and INCONCLUSIVE would each mean, and whether a FAIL would hit the core equation, the mapping or an added assumption.
+   Disclose what you already know about the data (it is rarely blind). The author approves the brief together with the card, in one step.
 2. **Data intake** (ask before any download; state file, source and size):
    - Save raw files under `docs/data/external/<field>/<set>/`. CSVs there are git-ignored: use `git add -f`.
    - Register each file in `docs/standard/data_manifest.json`: `data_id, description, source, doi_or_url, retrieved, path, sha256, license, visibility, note`. Hash only raw external data.
@@ -25,6 +35,8 @@ The order is enforced by `check_preregistration.py`. Each numbered step is its o
 7. **Result** `R_<ID>.json` with `test_card_id`, `outcome` (`PASS`, `FAIL`, `INCONCLUSIVE`) and `numbers`.
    - The claim stays at L1 or L0 until the author approves L2. Ask; record the approval block on the result.
    - A failed confrontation is `outcome: "FAIL"` with `level: "FAILED"` (the schema pairs them). Record it plainly. Do not rename it, split the scope, or add a branch to escape the comparator.
+   - In the Result `note`, state the cause against the brief's item C (STANDARD §16.3): theory, mapping, added assumption, question design or data. Text only; it never changes the verdict.
+   - One rescue per line (STANDARD §16.4): a new term after a FAIL is a new L0 claim that must predict something other than the failing data before it gets a card; a second failure stops the line and sends you back to the field map. Two mapping failures in one field stop cards there until the mapping is `AUTHOR` or `AI_FROM_FIELD`.
 8. Update README counts and the results table, CORE_MAP and UPDATE_LOG, then `uet-ship`.
 
 ## Schema traps seen before

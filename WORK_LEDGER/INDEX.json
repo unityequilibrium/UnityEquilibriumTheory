@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1015,
+    "entries": 1016,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 778,
+      "research": 779,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "b8f291f0304dc189bb7822122dad2972c1c694b8f3398ca30303b7f444e516f5",
-      "entries": 3
+      "sha256": "b7e9bddcaea97a166535a276f26e87207d437f79a6e666523150a7987f45295f",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20726,9 +20726,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "proposal-research-design-standard-question-quality-before-a-test-card",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Proposal: research-design standard (question quality before a Test Card)",
-      "entry_sha256": "a6881b70b244b1e2dbbbca412baeee61e0236e2b19cd529780260027f49263ae",
+      "entry_sha256": "07f6a056b2fd8cfd04b839bdfc2fdbe2aae5015db360741ff0da78d74da49dec",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#standardmd-section-16-research-design-in-force-after-author-approval",
+      "source": "2026/2026-11-27.md",
+      "anchor": "standardmd-section-16-research-design-in-force-after-author-approval",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "STANDARD.md section 16 (research design) in force after author approval",
+      "entry_sha256": "7dcaa20308cb210eb7547dd291ce7c4668dccefae930a06c382ae19eddb345eb",
       "stream": "research",
       "areas": [
         "research-standards"
