@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1018,
+    "entries": 1019,
     "by_stream": {
       "book-history": 94,
-      "operations": 143,
+      "operations": 144,
       "research": 780,
       "review": 1
     },
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "37f66ecccb3b2d84b2b4e470a9431cc4717320ef112361d8f15c20ac9eb7d22d",
-      "entries": 6
+      "sha256": "af11092a66e53a828184d06576aed91ff7b3e290cbff039ef049ce5ae603fa40",
+      "entries": 7
     },
     {
       "path": "2026-08-14.md",
@@ -20786,9 +20786,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "cleanup-plan-draft-after-the-content-value-audit",
       "start_line": 53,
-      "end_line": 61,
+      "end_line": 62,
       "title": "Cleanup plan (draft) after the content-value audit",
-      "entry_sha256": "716cc292cd6cd3dff063ad42a8387d0ee0a7e9b529dd14692ef4e382b16df651",
+      "entry_sha256": "33a20fb33e8e8e356829547aecde4e5030590fa99e2878b649aeab2c7f1e029a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed",
+      "start_line": 63,
+      "end_line": 71,
+      "title": "Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed",
+      "entry_sha256": "5691a442b7c91b3ded84a7eb490b493bdc2507bb5a655c4b49599561a11bf409",
       "stream": "operations",
       "areas": [
         "repo-ops"

@@ -5,7 +5,7 @@ It is a working area, not a claim source: the level of every claim is in [`docs/
 and the research rules are in [`docs/STANDARD.md`](../docs/STANDARD.md).
 
 The previous README (the Omega = C·I engine and the foundation-gate era) is kept unchanged at
-[`08_history/README_LEGACY_2026-11-14.md`](08_history/README_LEGACY_2026-11-14.md). Its wording is `LEGACY_UNREVIEWED`.
+`08_history/README_LEGACY_2026-11-14.md` at git tag `archive/legacy-2026-11`. Its wording is `LEGACY_UNREVIEWED`.
 
 ## Read in this order
 
@@ -42,8 +42,8 @@ Every layer so far reduces to an existing theory. No Test Card yet separates UET
 | `04_proofs/` | One legacy proof script (labelled C); derivation checks now live in `05_tests/physics/` |
 | `05_tests/` | `physics/` holds the evidence-grade tests (`@pytest.mark.physics`); the other folders hold bookkeeping and legacy regression tests |
 | `06_data/` | Legacy source packages; current external data is in `docs/data/external/` with `docs/standard/data_manifest.json` |
-| `07_artifacts/` | Generated output of legacy lanes and gates; no current research record cites it |
-| `08_history/` | Update logs, research notes, archived import shims and archived failing tests |
+| `07_artifacts/` | Only files that a calculation contract locks or the CI contract checker reads (13 files); the rest of the legacy output was removed on 2026-11-27 (kept at tag `archive/legacy-2026-11`) |
+| `08_history/` | Only `research_notes/UET_FOUNDATION_COMPATIBILITY_AUDIT.md`, which a contract locks; the rest was removed on 2026-11-27 (kept at git tag `archive/legacy-2026-11`) |
 | `99_review/` | Quarantine |
 | `engine/` | The shared calculation procedure and lane cards |
 

@@ -87,3 +87,5 @@
 `core/05_tests/regression/test_engine_lane_cards.py`, `core/05_tests/regression/root/test_matter_space_core.py`,
 `core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json`, `core/engine/*` และ
 `core/07_artifacts/correspondence/uet_equation_correspondence_registry.json` (checker ใน CI อ่านไฟล์นี้)
+รวมถึงทุก path ที่ contract ใน `topics/*/calculation_contracts/` lock ไว้: เฟส 3 พลาดตรงนี้ครั้งแรก (ลบไป 13 ไฟล์ที่ contract ของ topic 0.13 lock ไว้) checker ใน CI จับได้ และคืนไฟล์ก่อน commit
+ก่อนลบแต่ละเฟสต้องดึง path จาก contract **ทุกฉบับในทั้ง repo** (130 ฉบับ) ไม่ใช่แค่ใน `core/00_governance`
