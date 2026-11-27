@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1010,
+    "entries": 1011,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 773,
+      "research": 774,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "dbbf53e6109531667ec1dc038ebef5b888d1b3594ff59c92e9a2633195c0aaf1",
-      "entries": 7
+      "sha256": "3e63772a1a9481bf3e90881ba63e295f45d0831bd05d488ef00aa81776dce06a",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -20626,9 +20626,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)",
-      "entry_sha256": "60fd1934ac1ab90540fe80cc11c7c3036035a699bcbe9b9d5c26ea5cd1c24fef",
+      "entry_sha256": "03f28919d4639f4b8781a14766340cb42c2567e2ec1cdbb7ce8b3704721b6cda",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved",
+      "source": "2026/2026-11-27.md",
+      "anchor": "theory-card-v2-drafted-higgs-dilaton-form-not-approved",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Theory Card v2 drafted (Higgs-dilaton form, not approved)",
+      "entry_sha256": "908a56deb9f4247af0e5a34243eee5966b8600995c5e55af7f9fc60844cea2aa",
       "stream": "research",
       "areas": [
         "research-core"

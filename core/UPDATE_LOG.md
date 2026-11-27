@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Theory Card v2 drafted (Higgs-dilaton form)
+ทำ: ร่าง Theory Card v2 ตามคำสั่งผู้เขียน (core/THEORY_CARD_V2_DRAFT.md + theory_card_v2_draft.json) จากผล S1, D1, C1, B1, A2
+ผล: action ไม่มีพารามิเตอร์ที่มีมิติ; ไร้มิติ 5 ตัว (ξ_φ, ξ_χ, λ_χ, α, β) กับสเกลเดียว; สมการทุกบรรทัดยัง L0 (ยังไม่มี derivation check)
+ระดับ: DRAFT ยังไม่อนุมัติ การ์ดที่ใช้อยู่ยังเป็น v1; ไม่มี claim ใหม่
+ถัดไป: ผู้เขียนตัดสิน 3 ข้อ (แทน v1 หรือคู่ขนาน, gravity ปกติหรือ unimodular, lane ของ χ) แล้วจึงทำ W4-v2
+commit: this commit
+
 ## 2026-11-27 — The Higgs-dilaton extension as a sandbox (A2)
 ทำ: ลองเพิ่มพจน์ ξ_χ|χ|²R และ portal แบบ quartic แทน g_c (ทาง A ของ STRESS_12 แบบ sandbox ไม่แก้การ์ด) (uet_higgs_dilaton_sandbox.py, ทดสอบ physics 4 ข้อ)
 ผล: พารามิเตอร์ 7 → ไร้มิติ 5 + สเกลเดียว; อัตราส่วนมวลทุกตัวเป็นอัตราส่วนของ coupling; การแลกเปลี่ยนสสารกับ space กลับมา; แต่ lane นิวคลีออนต้องใช้ α = 7.4e-38 ξ_ψ จึงย้ายลำดับขั้นไปไว้ใน coupling ไม่ได้อธิบาย
