@@ -58,6 +58,70 @@
       "note": "Linear, quasi-static, massless inside the Compton length; no transfer function or sigma8 normalisation; nearest theory extended quintessence; not UET-distinct."
     },
     {
+      "claim_id": "C_S1_SCALE_INVARIANT_RESTRICTION",
+      "statement": "Imposing global scale symmetry on the parent action without adding terms keeps only xi phi^2 R, the kinetic terms and the two quartics, so 7 free parameters become 3 dimensionless ones and one scale; the result is induced gravity (Brans-Dicke, omega = 1/(4 xi_c), Cassini xi_c <= 5.75e-6) with a decoupled massless chi, no portal, no thawing dark energy, and a vacuum energy lambda/(4 xi_c^2) that needs lambda/xi_c^2 = 2.9e-120.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_S1_SCALE_SYMMETRY"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option A: scale symmetry alone fixes the dimensionful parameters but removes the author's matter-space exchange and does not remove the vacuum-energy tuning. Restoring them needs new terms (Higgs-dilaton class), an author decision. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_D1_ATTRACTOR_INITIAL_CONDITIONS",
+      "statement": "The parent action's polynomial potential has no tracker, so its thawing dark energy keeps the initial value: 1 + w0 = 0.256 psi_i^2 (m/H0 = 2, Omega_m = 0.30); the scale-invariant restriction broken only by the card's mass term gives an exponential (cosmon) attractor with lambda_E = 2 sqrt(xi/(1 + 6 xi)), which removes psi_i but under Cassini has 1 + w <= 7.7e-6 and still needs the vacuum-energy tuning.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D1_ATTRACTOR"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option D. The S1-plus-mass hybrid is an AI choice, not the Theory Card. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS",
+      "statement": "Inside one universe, selection by persistence (N = b tau) can choose among states of the parent action but not its couplings; the only selectable scale of the scale-invariant restriction is a flat direction, so selection there is neutral, and with the mass breaking the Planck mass drifts as dG/dt / G = -4 xi H / (1 + 4 xi), at most 2.3e-5 H under Cassini.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_C1_SELECTION_OF_SCALE"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option C for one universe. Promoting couplings to fields would change the action (author decision). Not UET-distinct."
+    },
+    {
+      "claim_id": "C_B1_RG_FIXES_ONLY_DIMENSIONLESS",
+      "statement": "An RG fixed point can predict at most the dimensionless couplings of the parent action (lambda_psi, lambda_chi, xi_c and a generated xi_chi), not Lambda_eff, m_psi, m_chi or g_c; and the card is not closed under one-loop renormalization, because beta_xi_chi at xi_chi = 0 is -lambda_chi/(12 pi^2), so a xi_chi |chi|^2 R term is generated.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_B1_RG_CLOSURE"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option B at the level of classification and one-loop closure; no functional-RG fixed point was computed. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_A2_HIGGS_DILATON_EXTENSION",
+      "statement": "In an AI-proposed Higgs-dilaton extension of the parent action (adding xi_chi |chi|^2 R and a quartic portal alpha psi^2 |chi|^2 instead of g_c), the 7 card parameters become 5 dimensionless couplings and one scale, with m_chi^2 / M_Pl^2 = 2 alpha / (xi_psi + xi_chi alpha / lambda_chi) and a scale-free Einstein-frame potential; the nucleon lane then needs alpha = 7.4e-38 xi_psi, so the hierarchy is moved into couplings, not explained.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A2_HIGGS_DILATON_SANDBOX"
+      ],
+      "note": "Sandbox: not UET_PARENT v1. Adopting it needs the author's decision and a Theory Card v2. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_J1_PORTAL_IN_COSMOLOGY",
+      "statement": "If one psi is both the dark energy of the parent action and the portal mediator between nucleons, baryons push it as in coupled quintessence; with g_c at the MICROSCOPE bound (1.16e-15 eV) the push is 2.5e-7 of the field's own force today and changes 1 + w0 at the T041 best point by 5.1e-5 of itself, so the matter-space exchange cannot be seen in cosmology.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_J1_PORTAL_IN_COSMOLOGY"
+      ],
+      "note": "Junction 5 of topic 0.23 STRESS_13. Dark matter uncoupled (AI choice). Not UET-distinct."
+    },
+    {
+      "claim_id": "C_O8_OPTOMECHANICS_LANE",
+      "statement": "Cavity optomechanics realises the parent action's layer 1 -> 2 -> 3 chain with one measurable coupling: the interaction x |a|^2 has the portal form, dynamical backaction is the layer-2 friction on the red side and the layer-3 capture on the blue side, the parametric-instability threshold is R* = 1/(a tau), and the single coupling forces Gamma_opt(-Delta) = -Gamma_opt(+Delta), so a measured cooling rate fixes the threshold photon number at the mirrored detuning.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_O8_OPTOMECHANICS_LANE",
+        "R_T042_BACKACTION_ANTISYMMETRY"
+      ],
+      "note": "Lane is an AI choice. Not UET-distinct (standard optomechanics). Candidate for a Test Card after a data-shape check. Confronted with two published figures under T042: INCONCLUSIVE (Arcizet R = +0.040 from the tails only; Benevides R = +0.217 +/- 0.106)."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

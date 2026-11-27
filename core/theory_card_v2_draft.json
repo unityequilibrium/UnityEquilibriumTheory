@@ -1,0 +1,158 @@
+{
+  "schema": "uet-theory-card-v2",
+  "card_id": "UET_PARENT",
+  "version": 2,
+  "status": "DRAFT",
+  "drafted_by": "claude",
+  "draft_date": "2026-11-27",
+  "core_equations": [
+    {
+      "formula_id": "UET-V2-ACTION",
+      "expression": "S = int d^4x sqrt(-g) [ F R/2 - (grad phi)^2/2 - (grad chi_A)^2/2 - V ], F = xi_phi phi^2 + xi_chi X, V = (lambda_chi/4)(X - (alpha/lambda_chi) phi^2)^2 + (beta/4) phi^4, X = |chi|^2",
+      "code_path": "none yet",
+      "level": "L0_SPECULATIVE"
+    },
+    {
+      "formula_id": "UET-V2-METRIC-EOM",
+      "expression": "F G_mn = T^phi_mn + T^chi_mn + (nabla_m nabla_n - g_mn box) F",
+      "code_path": "none yet",
+      "level": "L0_SPECULATIVE"
+    },
+    {
+      "formula_id": "UET-V2-DILATON-EOM",
+      "expression": "box phi + xi_phi phi R - dV/dphi = 0",
+      "code_path": "none yet",
+      "level": "L0_SPECULATIVE"
+    },
+    {
+      "formula_id": "UET-V2-MATTER-EOM",
+      "expression": "box chi_A + xi_chi R chi_A - 2 (dV/dX) chi_A = 0",
+      "code_path": "none yet",
+      "level": "L0_SPECULATIVE"
+    }
+  ],
+  "unit_system": "natural units hbar = c = 1; no dimensionful parameter; <phi> sets the unit (M_Pl^2 = xi_phi <phi>^2 + xi_chi <X>)",
+  "sign_convention": "metric signature (-,+,+,+); L contains +F R/2",
+  "fields_parameters": [
+    {
+      "symbol": "g_mn",
+      "meaning": "spacetime metric",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "phi",
+      "meaning": "dilaton = UET response scalar Phi (psi of v1)",
+      "mass_dimension": 1,
+      "independent": true
+    },
+    {
+      "symbol": "chi_A",
+      "meaning": "O(2) matter doublet (UET C in phase/charge lanes)",
+      "mass_dimension": 1,
+      "independent": true
+    },
+    {
+      "symbol": "xi_phi",
+      "meaning": "curvature coupling of phi; replaces 1/kappa and xi_c of v1",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "xi_chi",
+      "meaning": "curvature coupling of chi (new; generated at one loop in v1, wave B1)",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "lambda_chi",
+      "meaning": "chi quartic",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "alpha",
+      "meaning": "quartic portal phi^2 |chi|^2; replaces g_c of v1",
+      "mass_dimension": 0,
+      "independent": true
+    },
+    {
+      "symbol": "beta",
+      "meaning": "phi quartic (lambda_psi of v1)",
+      "mass_dimension": 0,
+      "independent": true
+    }
+  ],
+  "nearest_known_class": {
+    "name": "Higgs-dilaton model / induced gravity with a scale-invariant two-scalar potential",
+    "references": [
+      "M. Shaposhnikov and D. Zenhausern, Phys. Lett. B 671, 162 (2009)",
+      "J. Garcia-Bellido, J. Rubio, M. Shaposhnikov and D. Zenhausern, Phys. Rev. D 84, 123504 (2011), arXiv:1107.2163",
+      "A. Zee, Phys. Rev. Lett. 42, 417 (1979)"
+    ],
+    "variable_map": "phi = dilaton; chi_A = Higgs-like field but O(2) with 2 components instead of an SU(2) doublet"
+  },
+  "differences_from_known_class": [],
+  "redundant_parameters": [
+    {
+      "parameter": "<phi>",
+      "absorbed_by": "choice of units (one scale)"
+    },
+    {
+      "parameter": "k, Z, epsilon, phi_star",
+      "absorbed_by": "canonical normalization and shift, as in v1"
+    }
+  ],
+  "predictions": [
+    {
+      "observable": "no fifth force from the dilaton (derivative coupling in the Einstein frame, literature)",
+      "system": "solar system",
+      "claim_id": "none yet"
+    },
+    {
+      "observable": "m_chi^2 / M_Pl^2 = 2 alpha / (xi_phi + xi_chi alpha / lambda_chi)",
+      "system": "all",
+      "claim_id": "C_A2_HIGGS_DILATON_EXTENSION"
+    },
+    {
+      "observable": "w(a): exactly -1 with ordinary gravity; w0 > -1 possible with unimodular gravity",
+      "system": "cosmology",
+      "claim_id": "none yet"
+    }
+  ],
+  "lane_mappings": [
+    {
+      "lane": "phase",
+      "symbol": "C",
+      "standard_quantity": "O(2) order-parameter amplitude |chi| (conditional)"
+    },
+    {
+      "lane": "charge",
+      "symbol": "C",
+      "standard_quantity": "global O(2) Noether charge density N^0 (conditional)"
+    },
+    {
+      "lane": "response",
+      "symbol": "Phi",
+      "standard_quantity": "scalar phi (canonical psi), candidate"
+    },
+    {
+      "lane": "response",
+      "symbol": "Pi",
+      "standard_quantity": "time derivative of phi"
+    },
+    {
+      "lane": "He-4 (Topic 13)",
+      "symbol": "O(2) sector",
+      "standard_quantity": "not from the action: chi = He-4 atom at tree level FAILED in T015 (2026-11-16); author decision 2026-11-16: Topic 13 Phi (He II superfluid fraction, e0 and Z_Phi by calibration) is a phenomenological closure outside the action"
+    }
+  ],
+  "open_author_decisions": [
+    "replace v1 or keep v2 as a parallel card",
+    "ordinary gravity or unimodular gravity",
+    "chi as ordinary matter (nucleon lane) or another field (e.g. Higgs)",
+    "after approval: W4-v2 sympy derivation check before any Test Card uses v2"
+  ],
+  "evidence_impact": "claims tied to v1 (T001, T005, T016, T019, C1, C2, C3, T040, T041) would need recomputation or a v1 label",
+  "source": "core/THEORY_CARD_V2_DRAFT.md"
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_A2_HIGGS_DILATON_SANDBOX",
+  "claim_id": "C_A2_HIGGS_DILATON_EXTENSION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "parameters",
+      "value": "7 in the card -> 5 dimensionless + 1 scale",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "vacuum_stationary",
+      "value": "|chi0|^2 = (alpha/lambda_chi) psi0^2, gradients < 1e-8 at 20 points",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "chi_mass_closed_form",
+      "value": "m_chi^2 = 2 alpha psi0^2 within 1e-5 of the numerical Hessian at 20 points",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "einstein_frame_potential_scale_free",
+      "value": "V/F^2 invariant under joint scaling, rel < 1e-12 at 20 points; trilinear portal breaks it",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "alpha_over_xi_psi_for_nucleon_mass",
+      "value": "7.42e-38",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "beta_over_xi_psi2_for_dark_energy",
+      "value": "2.87e-120 (as S1)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_higgs_dilaton_sandbox.py",
+    "commit": "43a2c9f22"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave A2, sandbox (AI proposal, not the Theory Card; the author asked to research every option). Adds the two Higgs-dilaton terms (xi_chi |chi|^2 R, which B1 shows the card generates anyway, and a quartic portal alpha psi^2 |chi|^2 replacing the trilinear g_c). All mass ratios become coupling ratios and the matter-space exchange returns through a dimensionless portal, but the hierarchy is moved into small couplings (alpha = 7.4e-38 xi_psi for the nucleon lane, beta/xi^2 = 2.9e-120), not explained. The decoupling of the dilaton from matter and the n_s - w0 relation are literature results, not derived here. Adopting the extension is the author's decision (Theory Card v2). Not UET-distinct."
+}
