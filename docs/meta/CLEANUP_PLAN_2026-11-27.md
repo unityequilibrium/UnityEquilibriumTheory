@@ -1,6 +1,6 @@
 # แผนเก็บกวาด repo (ร่าง รอผู้เขียนอนุมัติ)
 
-> **สถานะ: DRAFT ข้อเสนอของ AI (Claude) 2026-11-27** ยังไม่ได้ลบหรือย้ายอะไร
+> **สถานะ: APPROVED โดยผู้เขียน 2026-11-27** (ร่างโดย Claude) ดูคำตอบของผู้เขียนใน §5
 > ที่มา: `docs/meta/CONTENT_VALUE_AUDIT_2026-11-27.md` ซึ่งพบว่าราว 85% ของเนื้อหาที่เขียนขึ้นไม่ได้เพิ่มหลักฐาน
 > ต้องได้รับอนุมัติเป็นข้อยกเว้นของ STANDARD §8 ("legacy ห้ามแก้ไขหรือลบ") ก่อนเริ่มเฟสที่ 2
 
@@ -71,3 +71,19 @@
 2. `docs/UET_Documentation_Details`, `services_and_experiments/uet_core`, `docs/knowledge_base` และ `docs/media` จะเก็บหรือลบ
 3. Superapp อ่าน path ไหนของ Harness บ้าง (AI เข้าไปดูเองไม่ได้)
 4. ตอนนี้มี session ไหนทำงานใน topic ไหนอยู่บ้าง นอกจาก 0.18
+
+## 5. คำตอบของผู้เขียน (2026-11-27)
+
+ผู้เขียนตอบในแชตว่า: ของเก่าที่มาตรฐานใหม่แทนแล้วให้ลบได้เลย ส่วนระบบบริการหรือสิ่งที่จะพัฒนาภายหลัง ถ้ายังใช้ได้ให้เก็บไว้ก่อน ถ้าใช้ไม่ได้และไม่จำเป็นก็ลบ
+
+| ข้อ | ผลที่ใช้ |
+|---|---|
+| 1 หลักการลบและแก้ §8 | อนุมัติ แก้ STANDARD §8 และ AGENTS §5 แล้ว |
+| 2 พื้นที่ที่ยังไม่ได้ตัดสิน | ตรวจ 2026-11-27: `services_and_experiments/uet_core` ผ่าน `cargo check`, `docs/knowledge_base` test ผ่าน 49/49 จึง**เก็บทั้งสองส่วน** ส่วน `docs/UET_Documentation_Details` และ `docs/media` เป็นเอกสารยุคเก่าที่มาตรฐานแทนแล้ว ให้**ลบ** ในเฟส 6 หลังตรวจว่าไม่มีไฟล์ที่เก็บไว้อ้างถึง |
+| 3 Superapp | ผู้เขียนไม่ได้ระบุ path ถือตามที่ผู้เขียนบอกว่าส่วนนี้ไม่เกี่ยว แต่ก่อนเฟส 4 และ 6 จะแจ้งผู้เขียนอีกครั้ง |
+| 4 session อื่น | PR #96 (stress12) และงาน topic 0.18 ยังเปิดอยู่ จึงเก็บ topic 0.18 และ 0.23 ไว้จนกว่างานเหล่านั้นจะ merge |
+
+**ไฟล์ที่ contract lock ไว้นอก `core/03_lanes` และ `core/05_tests/physics`** (ห้ามลบ):
+`core/05_tests/regression/test_engine_lane_cards.py`, `core/05_tests/regression/root/test_matter_space_core.py`,
+`core/00_governance/calculation_contract_baselines/matter_space_observer_legacy.json`, `core/engine/*` และ
+`core/07_artifacts/correspondence/uet_equation_correspondence_registry.json` (checker ใน CI อ่านไฟล์นี้)
