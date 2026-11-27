@@ -129,3 +129,7 @@
 ## 2026-11-27 — Wave B1: option B of STRESS_12 (RG fixed point)
 - Core wave B1 (`core/03_lanes/scalar_tensor/uet_rg_closure.py`, claim C_B1_RG_FIXES_ONLY_DIMENSIONLESS at L1).
 - Finding: a fixed point can fix only dimensionless couplings, so it cannot touch the 1.8e-60 hierarchy; S1 and a fixed point are complementary. The card is not closed under one-loop renormalization: a xi_chi |chi|^2 R term is generated.
+
+## 2026-11-27 — Wave A2: Higgs-dilaton sandbox, and summary of the four options
+- Core wave A2 (`core/03_lanes/scalar_tensor/uet_higgs_dilaton_sandbox.py`, claim C_A2_HIGGS_DILATON_EXTENSION at L1, sandbox).
+- Summary of STRESS_12 options: S1/A2 scale symmetry turns every mass ratio into a coupling ratio but moves the hierarchy into small couplings; D1 attractors remove psi_i only; C1 selection inside one universe picks states, not couplings; B1 a fixed point fixes only dimensionless couplings and the card is not RG-closed. No option explains the 1.8e-60 ratio.

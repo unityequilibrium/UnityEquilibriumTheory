@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 772. Counts describe records, not accomplishments.
+Indexed entries: 773. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)](2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)](2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave C1: persistence selection inside one universe (STRESS_12 option C)](2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Wave D1: attractors and the initial field value (STRESS_12 option D)](2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d) (L33) | research-core | explicit_stream_and_area |

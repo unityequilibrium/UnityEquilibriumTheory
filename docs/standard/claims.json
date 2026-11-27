@@ -94,6 +94,15 @@
       "note": "Answers topic 0.23 STRESS_12 option B at the level of classification and one-loop closure; no functional-RG fixed point was computed. Not UET-distinct."
     },
     {
+      "claim_id": "C_A2_HIGGS_DILATON_EXTENSION",
+      "statement": "In an AI-proposed Higgs-dilaton extension of the parent action (adding xi_chi |chi|^2 R and a quartic portal alpha psi^2 |chi|^2 instead of g_c), the 7 card parameters become 5 dimensionless couplings and one scale, with m_chi^2 / M_Pl^2 = 2 alpha / (xi_psi + xi_chi alpha / lambda_chi) and a scale-free Einstein-frame potential; the nucleon lane then needs alpha = 7.4e-38 xi_psi, so the hierarchy is moved into couplings, not explained.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_A2_HIGGS_DILATON_SANDBOX"
+      ],
+      "note": "Sandbox: not UET_PARENT v1. Adopting it needs the author's decision and a Theory Card v2. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

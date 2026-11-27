@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — The Higgs-dilaton extension as a sandbox (A2)
+ทำ: ลองเพิ่มพจน์ ξ_χ|χ|²R และ portal แบบ quartic แทน g_c (ทาง A ของ STRESS_12 แบบ sandbox ไม่แก้การ์ด) (uet_higgs_dilaton_sandbox.py, ทดสอบ physics 4 ข้อ)
+ผล: พารามิเตอร์ 7 → ไร้มิติ 5 + สเกลเดียว; อัตราส่วนมวลทุกตัวเป็นอัตราส่วนของ coupling; การแลกเปลี่ยนสสารกับ space กลับมา; แต่ lane นิวคลีออนต้องใช้ α = 7.4e-38 ξ_ψ จึงย้ายลำดับขั้นไปไว้ใน coupling ไม่ได้อธิบาย
+ระดับ: C_A2_HIGGS_DILATON_EXTENSION L1 (sandbox); ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ผู้เขียนตัดสินว่าจะรับเป็น Theory Card v2 ไหม
+commit: 43a2c9f22 (code) + this commit (records)
+
 ## 2026-11-27 — What can an RG fixed point fix? (B1)
 ทำ: แยกพารามิเตอร์ของการ์ดเป็น relevant/ไร้มิติ และดู one-loop flow ของภาค matter (ทาง B ของ STRESS_12) (uet_rg_closure.py, ทดสอบ physics 5 ข้อ)
 ผล: fixed point ผูกได้แค่ λ_ψ, λ_χ, ξ_c; ค่าที่มีมิติ (Λ_eff, m_ψ, m_χ, g_c) ยังอิสระ; การ์ดไม่ปิดภายใต้ renormalization เพราะเกิดพจน์ ξ_χ|χ|²R (β = −λ_χ/(12π²) ที่ ξ_χ = 0)
