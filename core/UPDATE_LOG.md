@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Can an attractor remove psi_i? (D1)
+ทำ: ดูว่าศักย์ของ action แม่มี tracker/attractor ไหม (ทาง D ของ STRESS_12) และลอง S1 + พจน์มวล (uet_attractor.py, ทดสอบ physics 6 ข้อ)
+ผล: ไม่มี tracker; 1 + w0 = 0.256 ψ_i² (exponent 2.0000) จึงยังต้อง fit ψ_i; S1 + มวลให้ exponential ที่ลบ ψ_i ได้ แต่ Cassini บังคับ 1 + w ≤ 7.7e-6 และยังต้องจูนพลังงานสุญญากาศ
+ระดับ: C_D1_ATTRACTOR_INITIAL_CONDITIONS L1; ไม่ใช่ผลเฉพาะ UET (thawing, cosmon)
+ถัดไป: ทาง C (การคัดสรรด้วยการคงอยู่), ทาง B (asymptotic safety), ทาง A2 (พจน์ Higgs-dilaton)
+commit: fdf434a72 (code) + this commit (records)
+
 ## 2026-11-27 — What is left of the parent action under scale symmetry? (S1)
 ทำ: บังคับสมมาตรของสเกลกับ action แม่โดยไม่เพิ่มพจน์ (ทาง A ของ STRESS_12 ที่ผู้เขียนเลือก) ตรวจด้วย geometry ของ sympy (uet_scale_symmetry.py, ทดสอบ physics 17 ข้อ)
 ผล: พารามิเตอร์ 7 ตัวเหลือไร้มิติ 3 ตัวกับสเกลเดียว แต่ portal, มวลทุกตัว และพลังงานมืดแบบ thawing ถูกห้าม; ได้ Brans-Dicke ที่ Cassini บังคับ ξ_c ≤ 5.75e-6 และพลังงานมืดต้องใช้ λ/ξ² = 2.9e-120

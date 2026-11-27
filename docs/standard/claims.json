@@ -67,6 +67,15 @@
       "note": "Answers topic 0.23 STRESS_12 option A: scale symmetry alone fixes the dimensionful parameters but removes the author's matter-space exchange and does not remove the vacuum-energy tuning. Restoring them needs new terms (Higgs-dilaton class), an author decision. Not UET-distinct."
     },
     {
+      "claim_id": "C_D1_ATTRACTOR_INITIAL_CONDITIONS",
+      "statement": "The parent action's polynomial potential has no tracker, so its thawing dark energy keeps the initial value: 1 + w0 = 0.256 psi_i^2 (m/H0 = 2, Omega_m = 0.30); the scale-invariant restriction broken only by the card's mass term gives an exponential (cosmon) attractor with lambda_E = 2 sqrt(xi/(1 + 6 xi)), which removes psi_i but under Cassini has 1 + w <= 7.7e-6 and still needs the vacuum-energy tuning.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D1_ATTRACTOR"
+      ],
+      "note": "Answers topic 0.23 STRESS_12 option D. The S1-plus-mass hybrid is an AI choice, not the Theory Card. Not UET-distinct."
+    },
+    {
       "claim_id": "C_T001_BINARY_PULSAR_XI_C",
       "statement": "Binary-pulsar timing (ZFKSW22) excludes the UET non-minimal coupling interval that maps to the analysed DEF scalarization range, for a scalar light compared with the binary orbits; the parent action stays compatible for other xi_c.",
       "level": "L2_CONFRONTED",

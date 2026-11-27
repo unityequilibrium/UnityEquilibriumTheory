@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1006,
+    "entries": 1007,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 769,
+      "research": 770,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "05b0e6ca2d75e001ba80695dd7eb48502c0efad3dfbf2577caca608ee13c22b1",
-      "entries": 3
+      "sha256": "7e0a4c7f6a91daab2c36d5fe86d38c98fc45dfca07ad6406693e98dcb10e2cfc",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20546,9 +20546,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "wave-s1-scale-invariant-restriction-of-the-parent-action",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Wave S1: scale-invariant restriction of the parent action",
-      "entry_sha256": "bb91794e0a6b615dc29d8dd43f7add151b4f5cad5effcaa3ba1ad90e74918261",
+      "entry_sha256": "78cf7a46e6af51d5b2e494c394a6a3c8205689a2ed5f04e0a62d1b75f71dc200",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Wave D1: attractors and the initial field value (STRESS_12 option D)",
+      "entry_sha256": "811098ebf9e6457182c9611add386da82739301f98ae99082d625810a5034ba4",
       "stream": "research",
       "areas": [
         "research-core"

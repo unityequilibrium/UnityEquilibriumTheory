@@ -117,3 +117,7 @@
 - The author chose option A. Core wave S1 (`core/03_lanes/scalar_tensor/uet_scale_symmetry.py`, claim C_S1_SCALE_INVARIANT_RESTRICTION at L1).
 - Finding: scale symmetry alone fixes the dimensionful parameters (7 become 3 plus one scale) but forbids the portal, all masses and the thawing dark energy, and moves the vacuum-energy hierarchy into lambda/xi^2 = 2.9e-120.
 - Next: restoring exchange and masses needs Higgs-dilaton terms (quartic portal, xi_chi |chi|^2 R); that is a Theory Card v2 decision for the author.
+
+## 2026-11-27 — Wave D1: option D of STRESS_12 (attractors)
+- Core wave D1 (`core/03_lanes/scalar_tensor/uet_attractor.py`, claim C_D1_ATTRACTOR_INITIAL_CONDITIONS at L1).
+- Finding: the card's potential has no tracker (1 + w0 = 0.256 psi_i^2); the S1 restriction broken by the mass term gives the cosmon exponential, which removes psi_i but not the vacuum-energy tuning, and Cassini makes it look like Lambda.
