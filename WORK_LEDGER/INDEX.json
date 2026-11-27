@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1016,
+    "entries": 1017,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 779,
+      "research": 780,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "04dca5bf6e78be456cfa4027bb29aaa32b7e1a5217c087dd1b6f9b09b974e171",
-      "entries": 13
+      "sha256": "6cbb63597ea21de87f1440fb7390a3438f897c02006dd8d0283451669a557759",
+      "entries": 14
     },
     {
       "path": "2026-08-14.md",
@@ -20746,9 +20746,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "t042-run-and-result-backaction-antisymmetry-from-two-figures",
       "start_line": 123,
-      "end_line": 131,
+      "end_line": 132,
       "title": "T042 run and result (backaction antisymmetry from two figures)",
-      "entry_sha256": "fa722cb32e4b1831eb2fe63eca5ac71ac9a1b0d0a29f869a765fe176ba5fdabd",
+      "entry_sha256": "da520be987b2cd88923398096609dd51e7a729debb79c43a839ddc61ba5579fc",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
+      "start_line": 133,
+      "end_line": 141,
+      "title": "Field map for layers 2-3 (STANDARD section 16 step 0), no claim",
+      "entry_sha256": "6653e9b771e5d71de5d36f43035cf296acc80082b63679ddc590bbe6b49b924d",
       "stream": "research",
       "areas": [
         "research-core"

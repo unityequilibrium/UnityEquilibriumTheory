@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 779. Counts describe records, not accomplishments.
+Indexed entries: 780. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Field map for layers 2-3 (STANDARD section 16 step 0), no claim](2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim) (L133) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [T042 run and result (backaction antisymmetry from two figures)](2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures) (L123) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [T042 data intake and draft (red-blue antisymmetry of backaction)](2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction) (L113) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Data-shape check for the optomechanics lane (masked)](2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked) (L103) | research-core | explicit_stream_and_area |
