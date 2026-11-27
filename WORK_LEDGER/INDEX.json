@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1013,
+    "entries": 1014,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 776,
+      "research": 777,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "84425a26705588c69cc614747b79e4a0567310973bb0f5c23622729bc3fea6e1",
-      "entries": 1
+      "sha256": "792ec60e7586be87d7e21d38fe8238e61ba0117387c77e3d575df29f8e659aa7",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -20686,9 +20686,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "growth-test-card-not-drafted-forecast-undecidable-at-the-t041-best-point",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Growth Test Card not drafted (forecast: undecidable at the T041 best point)",
-      "entry_sha256": "762c736dfb972478464ce44e21b4510ede0d412e4868e9f8f7a89e53f7dfdbb9",
+      "entry_sha256": "b343669a6dad04ca0a697d6f5b427bd40f3817da64701ebfaa3797252827e0f1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#post-mortem-of-the-fasting-and-power-plant-cards-question-design",
+      "source": "2026/2026-11-27.md",
+      "anchor": "post-mortem-of-the-fasting-and-power-plant-cards-question-design",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Post-mortem of the fasting and power-plant cards (question design)",
+      "entry_sha256": "4d99d0cf180ef2db09361f00d204a4f6521db896a2d09fc0ee9b3cb3380b08ce",
       "stream": "research",
       "areas": [
         "research-core"
