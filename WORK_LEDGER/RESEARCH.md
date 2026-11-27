@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 779. Counts describe records, not accomplishments.
+Indexed entries: 780. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Content-value audit (how much of the repository is AI slop)](2026/2026-11-27.md#content-value-audit-how-much-of-the-repository-is-ai-slop) (L43) | research-standards | explicit_stream_and_area |
 | 2026-11-27 | [STANDARD.md section 16 (research design) in force after author approval](2026/2026-11-27.md#standardmd-section-16-research-design-in-force-after-author-approval) (L33) | research-standards | explicit_stream_and_area |
 | 2026-11-27 | [Proposal: research-design standard (question quality before a Test Card)](2026/2026-11-27.md#proposal-research-design-standard-question-quality-before-a-test-card) (L23) | research-standards | explicit_stream_and_area |
 | 2026-11-27 | [Post-mortem of the fasting and power-plant cards (question design)](2026/2026-11-27.md#post-mortem-of-the-fasting-and-power-plant-cards-question-design) (L13) | research-core | explicit_stream_and_area |

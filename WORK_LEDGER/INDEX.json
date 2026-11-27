@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1016,
+    "entries": 1017,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 779,
+      "research": 780,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "b7e9bddcaea97a166535a276f26e87207d437f79a6e666523150a7987f45295f",
-      "entries": 4
+      "sha256": "5f7ec15473f34a69d37f1e80f03b67d5a7f741083d4ab493d0daf64d736d4f6c",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -20746,9 +20746,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "standardmd-section-16-research-design-in-force-after-author-approval",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "STANDARD.md section 16 (research design) in force after author approval",
-      "entry_sha256": "7dcaa20308cb210eb7547dd291ce7c4668dccefae930a06c382ae19eddb345eb",
+      "entry_sha256": "d803b017279f5b1101c9b28bbc203c3c4f8d2862d647d92bd596d28d560cc163",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#content-value-audit-how-much-of-the-repository-is-ai-slop",
+      "source": "2026/2026-11-27.md",
+      "anchor": "content-value-audit-how-much-of-the-repository-is-ai-slop",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Content-value audit (how much of the repository is AI slop)",
+      "entry_sha256": "afa9d2dc634008d2d994a4a7b7e7ccdf5677b23266b1f3b51608f275ac350142",
       "stream": "research",
       "areas": [
         "research-standards"
