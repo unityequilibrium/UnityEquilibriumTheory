@@ -106,3 +106,9 @@
 - Finding: r spans more than 75 orders of magnitude: E. coli genome copy 7e-6 to 6e-5 (5.7e9 to 5e10 ATP per division), memory 7e-10 to 1e-8 (0.3 to 3.97 pJ/bit), CMB ~3e-82; r also depends on the reader.
 - Consequence: trace feedback cannot take w = r E/(kT ln 2) with a universal r; w must come from each system's mechanism.
 - Open (L0): selected recorders (genomes, memory) have far higher r than incidental records; "selection for persistence raises r" is a testable hypothesis.
+
+## 2026-11-27 — Stress test 12: parameter scaling returns in the parent action
+- Question: does the parent action escape the legacy problem that kappa had to change with scale? Note: `Doc/STRESS_12_PARAMETER_SCALING_RETURNS.md`.
+- Finding: no running is needed, but the action fixes no value: 5 dimensionful parameters leave 4 unpredicted ratios to the Planck mass, lane choice plays the role of the per-domain kappa table, and data push the couplings toward zero.
+- New numbers: the dark-energy lane needs m_psi = 4.3e-33 eV = 1.8e-60 reduced Planck masses; at the T041 best point Lambda_eff is 97.8% of dark energy and xi_c psi0^2 = 7.2e-5.
+- Literature: scale symmetry broken spontaneously (Higgs-dilaton, arXiv:1107.2163, ties n_s to w0) is the closest mechanism; also asymptotic safety, cosmological natural selection, trackers. The author decides which to pursue.
