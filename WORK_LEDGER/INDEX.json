@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1013,
+    "entries": 1014,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 776,
+      "research": 777,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "b17f481f43d545216b891d839fdb39334a91e5ce3dc3b071641da950d6801938",
-      "entries": 10
+      "sha256": "5fc5beaf4c26dc2a5b15737127594d4e46af365a6360630d0fa3888d8023c456",
+      "entries": 11
     },
     {
       "path": "2026-08-14.md",
@@ -20686,9 +20686,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
       "start_line": 93,
-      "end_line": 101,
+      "end_line": 102,
       "title": "Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain",
-      "entry_sha256": "2d7ddaa9c52a2b1fdadada2a11d7e3c65af66cf99ef6316fe3b39d064103a4b5",
+      "entry_sha256": "277e6f328743487d2aa1834038baceac91208f1ee826eb075e41dfb1f146b30d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked",
+      "source": "2026/2026-11-27.md",
+      "anchor": "data-shape-check-for-the-optomechanics-lane-masked",
+      "start_line": 103,
+      "end_line": 111,
+      "title": "Data-shape check for the optomechanics lane (masked)",
+      "entry_sha256": "2462130ece049ca21a098c4fb825b5d55d39c51757245309c0d7cba826810223",
       "stream": "research",
       "areas": [
         "research-core"
