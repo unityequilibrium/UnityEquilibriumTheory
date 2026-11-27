@@ -33,7 +33,8 @@
 | ตัวพยายามทำให้พัง | `05_tests/physics/test_stability_attacks.py`, `test_portal_fifth_force.py`, `test_fidelity_static_vacuum.py` |
 | โมดูลเสริม (vacuum, fifth force) | `03_lanes/scalar_tensor/uet_vacuum_structure.py`, `uet_portal_fifth_force.py` |
 | ฉากหลังจักรวาล FRW (2026-11-24) | `03_lanes/scalar_tensor/uet_frw_background.py`: ψ = 0 คือ ΛCDM; ψ ที่ถูกปล่อยให้ไหล (thawing) ให้ w(a) แบบ quintessence; ξ_c = 0 ไม่มีทาง w < −1; ξ_c > 0 ยังมีช่วง phantom ในอดีต (1+w ถึงอย่างน้อย −0.086) ที่ Cassini และ LLR ยอมให้ และจบที่ z ≈ 1.5–2.2 (`C_C1_FRW_DARK_ENERGY`, L1; ตัวตรวจ `05_tests/physics/test_frw_background.py`) |
-| ฉากหลังถึงยุค CMB (2026-11-26) | `03_lanes/scalar_tensor/uet_frw_cmb.py`: ใส่รังสีและปล่อย ψ ในยุครังสี; ξ_c = 0 ได้ w(a) เท่าเดิม, ξ_c ≠ 0 ขยับ w0 ได้ถึง 0.05; มุม θ* ของ CMB ขยับจาก ΛCDM +0.57% ที่จุดดีสุดของ T040 (ความหนาแน่นคงที่) | C_C2_FRW_CMB_ANGLE (L1) |
+| ฉากหลังถึงยุค CMB (2026-11-26) | `03_lanes/scalar_tensor/uet_frw_cmb.py`: ใส่รังสีและปล่อย ψ ในยุครังสี; ξ_c = 0 ได้ w(a) เท่าเดิม, ξ_c ≠ 0 ขยับ w0 ได้ถึง 0.05; มุม θ* ของ CMB ขยับจาก ΛCDM +0.57% ที่จุดดีสุดของ T040 (ความหนาแน่นคงที่) | C_C2_FRW_CMB_ANGLE (L2, T041) |
+| การเติบโตของโครงสร้าง (2026-11-26) | `03_lanes/scalar_tensor/uet_frw_growth.py`: G ที่สสารรู้สึก (quasi-static) และการเติบโตเชิงเส้นบนฉากหลัง C2; ที่จุดดีสุดของ T041 โตช้ากว่า ΛCDM 0.44%, จุดอื่นที่ผ่านขอบเขตวันนี้ช้ากว่า 1.5–4.3% | C_C3_FRW_GROWTH (L1) |
 | เทียบข้อมูลจริง | ทุกไฟล์อยู่ใน `03_lanes/scalar_tensor/`: T001 pulsar คู่ (`t001_binary_pulsar_constraint.py`), T005 fifth force (`t005_fifth_force_constraint.py`), T016 ดาวเทียม MICROSCOPE (`t016_microscope_portal.py`), T019 ช่วงระยะ 1 ซม.–100 กม. (`t019_portal_gap_rotwash.py`), T020 เส้นทาง ข กับ LLR (`t020_route_b_llr.py`) |
 | ภาค χ (สสาร) เทียบข้อมูลจริง | T015 ฮีเลียมเหลว (`03_lanes/open_system/t015_he_ii_tree_level.py`) **FAILED** |
 
@@ -72,7 +73,7 @@
 
 ## 3. ผลการทดสอบกับข้อมูลจริงทั้งหมด (`docs/standard/`)
 
-**นับรวม (2026-11-23):** 27 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 17 · ไม่ชี้ขาด 6 (T002, T014, T023, T025, T026, T028) · **พัง 4 (T015, T018, T024, T027)** · ข้ออ้างใน claims.json 79 ข้อ: L1 51, L2 23, FAILED 5 · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
+**นับรวม (2026-11-23):** 27 การ์ด (ไม่มีเลข T003, T004) · ผ่าน 17 · ไม่ชี้ขาด 6 (T002, T014, T023, T025, T026, T028) · **พัง 4 (T015, T018, T024, T027)** · ข้ออ้างใน claims.json 81 ข้อ: L1 51, L2 25, FAILED 5 · ทุกตัวที่ผ่าน ฟิสิกส์มาตรฐานหรือ null ก็ผ่านด้วย จึง**ยังไม่มีการทดสอบไหนที่แยก UET ออกจากฟิสิกส์เดิมได้**
 
 | Card | ชั้น | สรุป | ผล |
 |---|---|---|---|

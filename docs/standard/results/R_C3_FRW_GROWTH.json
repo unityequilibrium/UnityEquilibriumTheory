@@ -1,0 +1,94 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_C3_FRW_GROWTH",
+  "claim_id": "C_C3_FRW_GROWTH",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "quasi_static_closed_form_vs_linear_system",
+      "value": "rel < 1e-12 at 20 random points; Psi/Phi equals the C1 PPN gamma",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "brans_dicke_limit",
+      "value": "G_eff = (2 omega + 4) / ((2 omega + 3) F), rel < 1e-12 at 20 random points",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lcdm_growth_vs_heath_integral",
+      "value": "rel < 1e-9 (D(1)/D(0.5), 3 values of Omega_m, general code path)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "meszaros_growing_mode_at_a_1e-3",
+      "value": "rel < 1e-8 (radiation included, general code path)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "rk4_convergence_order_growth",
+      "value": "4 (2 grid pairs)",
+      "uncertainty": 0.3,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T041_best_D0_over_LCDM",
+      "value": "-0.44% (same Omega_m and early amplitude)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T041_best_fD_z0.5_over_LCDM",
+      "value": "-1.07% (f sigma8 proxy)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T041_best_growth_index_gamma0",
+      "value": "0.5555 vs LambdaCDM 0.5545",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "T041_best_mu_z1_minus_1",
+      "value": "-0.10%",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "allowed_C2_points_D0_over_LCDM",
+      "value": "-1.54%, -1.68%, -4.30%, -3.47% (4 points)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "allowed_C2_points_fD_z0.5_over_LCDM",
+      "value": "-3.25%, -3.53%, -8.93%, -7.32%",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "max_abs_mu_minus_1_allowed_coupled_points",
+      "value": "+0.32%",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "only_faster_growing_point",
+      "value": "xi = 0.03, psi_i = 1, m/H0 = 1: D0 +3.35%, fails Cassini (gamma - 1 = -6.5e-3)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_frw_growth.py",
+    "commit": "020c0b435"
+  },
+  "artifacts": [],
+  "date": "2026-11-26",
+  "note": "Wave C3. Quasi-static sub-horizon growth (Boisseau et al. 2000; Tsujikawa 2007) on the C2 background, massless limit inside the Compton length of psi (1/m is Gpc-scale for m/H0 of 1 to 3). Numbers from report() of uet_frw_growth.py on the T041 best point and six AI-chosen C2 points, each against LambdaCDM with the same Omega_m and early amplitude. Most of the suppression comes from the background (xi = 0 gives nearly the same numbers); the coupling changes G for clustering by at most 0.32% on allowed points. Not computed: transfer function, k dependence near the Compton scale, massive neutrinos, non-linear growth, sigma8 normalisation. Nearest theory: extended quintessence. Not UET-distinct. Prepares a growth Test Card (f sigma8 or S8) that would need data and the author's approval."
+}
