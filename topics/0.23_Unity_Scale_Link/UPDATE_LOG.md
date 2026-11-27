@@ -121,3 +121,7 @@
 ## 2026-11-27 — Wave D1: option D of STRESS_12 (attractors)
 - Core wave D1 (`core/03_lanes/scalar_tensor/uet_attractor.py`, claim C_D1_ATTRACTOR_INITIAL_CONDITIONS at L1).
 - Finding: the card's potential has no tracker (1 + w0 = 0.256 psi_i^2); the S1 restriction broken by the mass term gives the cosmon exponential, which removes psi_i but not the vacuum-energy tuning, and Cassini makes it look like Lambda.
+
+## 2026-11-27 — Wave C1: option C of STRESS_12 (persistence selection)
+- Core wave C1 (`core/03_lanes/scalar_tensor/uet_selection_of_scale.py`, claim C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS at L1).
+- Finding: inside one universe selection picks states, not couplings; the S1 scale is a flat direction (neutral); with the mass breaking G drifts at <= 2.3e-5 H. Fixing couplings this way needs them as fields (action change) or many universes.

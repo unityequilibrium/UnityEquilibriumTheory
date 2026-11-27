@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1007,
+    "entries": 1008,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 770,
+      "research": 771,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "7e0a4c7f6a91daab2c36d5fe86d38c98fc45dfca07ad6406693e98dcb10e2cfc",
-      "entries": 4
+      "sha256": "64bbafd542666a6aa9ff081e2517cbc1a9c2eb9a893f946a1f7fa7bcd200d577",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -20566,9 +20566,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Wave D1: attractors and the initial field value (STRESS_12 option D)",
-      "entry_sha256": "811098ebf9e6457182c9611add386da82739301f98ae99082d625810a5034ba4",
+      "entry_sha256": "c5d472d1fdf8c83d21cacb6358c86612f0b48c4b12080149bf5f3741913c2996",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Wave C1: persistence selection inside one universe (STRESS_12 option C)",
+      "entry_sha256": "81b4d270ed648162d9696d838d1431f93857045e011db2fed949153b0606858b",
       "stream": "research",
       "areas": [
         "research-core"

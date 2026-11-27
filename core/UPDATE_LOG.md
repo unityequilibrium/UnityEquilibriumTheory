@@ -2,6 +2,13 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-27 — Can persistence selection fix the parameters? (C1)
+ทำ: ดูว่าการคัดสรรด้วยการคงอยู่ (N = b τ) ในจักรวาลเดียวผูกค่าอะไรได้ (ทาง C ของ STRESS_12) (uet_selection_of_scale.py, ทดสอบ physics 5 ข้อ)
+ผล: เลือกได้แค่สถานะ ไม่ใช่ค่าคงที่ของ action; สเกลของ S1 เป็นทิศราบ ทุกค่าอยู่ได้นานเท่ากัน จึงไม่ถูกเลือก; ถ้ามีพจน์มวล มวล Planck ลอย ≤ 2.3e-5 H (ต่ำกว่าขอบ LLR 96 เท่า)
+ระดับ: C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS L1; ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ทาง B (asymptotic safety), ทาง A2 (พจน์ Higgs-dilaton)
+commit: d082c1f1c (code) + this commit (records)
+
 ## 2026-11-27 — Can an attractor remove psi_i? (D1)
 ทำ: ดูว่าศักย์ของ action แม่มี tracker/attractor ไหม (ทาง D ของ STRESS_12) และลอง S1 + พจน์มวล (uet_attractor.py, ทดสอบ physics 6 ข้อ)
 ผล: ไม่มี tracker; 1 + w0 = 0.256 ψ_i² (exponent 2.0000) จึงยังต้อง fit ψ_i; S1 + มวลให้ exponential ที่ลบ ψ_i ได้ แต่ Cassini บังคับ 1 + w ≤ 7.7e-6 และยังต้องจูนพลังงานสุญญากาศ

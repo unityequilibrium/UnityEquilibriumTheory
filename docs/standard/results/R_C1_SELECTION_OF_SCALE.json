@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_C1_SELECTION_OF_SCALE",
+  "claim_id": "C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "littles_law_phase_fractions",
+      "value": "stochastic simulation within 0.02 of b_i tau_i / sum b_j tau_j (3 phases)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "flat_direction_neutral",
+      "value": "every psi0 static de Sitter (residual < 1e-12 at 20 points): all values of the scale persist equally",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "planck_mass_drift_on_cosmon_attractor",
+      "value": "d ln F / dN = 4 xi / (1 + 4 xi), Jordan-frame integration rel < 1e-8 (xi = 0.01, 0.05, 0.2)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "gdot_over_G_H_max_at_cassini",
+      "value": "2.30e-05",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "llr_bound_over_drift",
+      "value": "96",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_selection_of_scale.py",
+    "commit": "d082c1f1c"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave C1 (topic 0.23 STRESS_12, option C; the author asked to research every option). Inside one universe selection acts on solutions (vacua, phases, field values), never on the couplings of the action, which have no field equation. The only selectable scale of the S1 restriction is a flat direction, so selection is neutral; with the cosmon breaking it drifts, within LLR by a factor 96 under Cassini. Fixing couplings by selection needs them promoted to fields (an action change, author decision) or a selection across universes (cosmological natural selection), which the author's layer 3 does not claim. Nearest theory: Little's law, cosmological natural selection, the cosmon. Not UET-distinct."
+}
