@@ -1,8 +1,0 @@
-{
-  "runs_dir": "runs_param_CI_s\\C_I",
-  "out_csv": "CI_s_validation_transient_v2.csv",
-  "grade_counts": {
-    "PASS": 420
-  },
-  "issues": []
-}

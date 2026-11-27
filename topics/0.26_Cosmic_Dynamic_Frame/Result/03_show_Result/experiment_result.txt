@@ -1,3 +1,0 @@
-Required_Density: 2.9255e-16
-Benchmark_Match: None
-Anomaly_Explained: False

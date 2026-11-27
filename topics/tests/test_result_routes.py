@@ -44,22 +44,6 @@ def test_result_routes(tmp_path, monkeypatch):
         assert UETPathManager.get_result_dir("0.4", "example", category=kind) == topic / "Result" / folder
 
 
-def test_protein_figure_in_relocated_layout(tmp_path, monkeypatch):
-    from matplotlib import image
-
-    root = Path(__file__).resolve().parents[2]
-    relative = Path("topics/0.22_Biophysics_Origin_of_Life/Code/Legacy/03_Research/Research_Protein_Folding_Siege.py")
-    fixture = tmp_path / relative
-    fixture.parent.mkdir(parents=True)
-    fixture.write_bytes((root / relative).read_bytes())
-    monkeypatch.chdir(fixture.parent)
-    plot = runpy.run_path(str(fixture))["save_fold_figure"]
-    path = plot("HP", [(0, 0), (1, 0)], 0)
-    assert path == fixture.parents[3] / "Result/02_Figures/Protein_Folding_Siege.png"
-    assert image.imread(path).size > 0
-    assert not (fixture.parents[2] / "Result").exists()
-
-
 def test_reviewed_cleanup(tmp_path, monkeypatch):
     subprocess.run(["git", "init", "-q", str(tmp_path)], check=True)
     (tmp_path / ".gitignore").write_text("__pycache__/\n_Logs/\n")
@@ -96,19 +80,3 @@ def test_reviewed_cleanup(tmp_path, monkeypatch):
     assert len(list(logs.iterdir())) == 4
     reset_topic_logs.LogResetter(dry_run=False, reviewed_runs=reviewed).reset_topic("0.4", force=True)
     assert sorted(p.name for p in logs.iterdir()) == ["124_retained", "125_tracked", "126_unknown"]
-
-
-def test_mcmillan_output_roundtrip(tmp_path, monkeypatch):
-    root = Path(__file__).resolve().parents[2]
-    topic = root / "topics/0.4_Superconductivity_Superfluids"
-    source = topic / "Code/03_Research/Experiment_Superconductor_Data.py"
-    relative = Path("Result/artifacts/0_4_superconductivity_superfluids_verification.json")
-    monkeypatch.chdir(tmp_path)
-    study = runpy.run_path(str(source))
-    assert study["ARTIFACT_PATH"] == topic / relative
-    saved = json.loads((topic / relative).read_text(encoding="utf-8-sig"))
-    study["write_artifact"](tmp_path / relative, saved["metrics"]["average_relative_error_percent"], saved["results"])
-    replica = json.loads((tmp_path / relative).read_text(encoding="utf-8"))
-    assert replica["model_gate_status"] == saved["model_gate_status"] == "FAIL"
-    assert not Path(replica["inputs"][0]["path"]).is_absolute()
-    assert not (tmp_path / "docs").exists()

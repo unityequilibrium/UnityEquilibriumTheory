@@ -1,2 +1,0 @@
-step,time,omega,kinetic,potential,entropy,gradient_norm,max_density,min_density,is_stable,gradient_energy,entropy_interaction,order_parameter,domains
-0,2.0000000000000013,nan,0.0,nan,0.0,0.0,nan,nan,False,nan,nan,nan,992.0

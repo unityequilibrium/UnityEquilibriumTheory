@@ -15,10 +15,10 @@ ROOT = Path(__file__).resolve().parents[2]
 
 def test_historical_core_and_topic_locators_resolve_without_rewriting_them() -> None:
     old_core = "docs/core/02_equations/covariant/uet_covariant_response.py"
-    old_topic = "docs/topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md"
+    old_topic = "docs/topics/0.13_Thermodynamic_Bridge/README.md"
 
     assert canonical_path_for(old_core) == "core/02_equations/covariant/uet_covariant_response.py"
-    assert canonical_path_for(old_topic) == "topics/0.10_Fluid_Dynamics_Chaos/CORE_O2_GOLDSTONE_CURRENT_BOUND.md"
+    assert canonical_path_for(old_topic) == "topics/0.13_Thermodynamic_Bridge/README.md"
     assert canonical_existing_path(ROOT / old_core) == ROOT / canonical_path_for(old_core)
     assert canonical_existing_path(ROOT / old_topic) == ROOT / canonical_path_for(old_topic)
     assert canonical_existing_path(ROOT / old_core).is_file()

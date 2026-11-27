@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1019,
+    "entries": 1020,
     "by_stream": {
       "book-history": 94,
-      "operations": 144,
+      "operations": 145,
       "research": 780,
       "review": 1
     },
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "af11092a66e53a828184d06576aed91ff7b3e290cbff039ef049ce5ae603fa40",
-      "entries": 7
+      "sha256": "074ab694784c3595d5135d2c686f7fcaf1d8a40dc83b10f2ed12a62f275e8d2c",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -20806,9 +20806,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed",
       "start_line": 63,
-      "end_line": 71,
+      "end_line": 72,
       "title": "Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed",
-      "entry_sha256": "5691a442b7c91b3ded84a7eb490b493bdc2507bb5a655c4b49599561a11bf409",
+      "entry_sha256": "593c04ff8ed00478d347e70f38203ddf7bd2eab7d306e55a7e80915eed21b357",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-4-old-core-research-topics-removed",
+      "start_line": 73,
+      "end_line": 81,
+      "title": "Cleanup phase 4: old core-research topics removed",
+      "entry_sha256": "7d9354c69633aaa27307d93699089dc75e75d7640e427d8e9ab48a3d7179ef67",
       "stream": "operations",
       "areas": [
         "repo-ops"

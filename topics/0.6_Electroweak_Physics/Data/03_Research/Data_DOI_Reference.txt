@@ -1,5 +1,0 @@
-Source: Particle Data Group (PDG) 2024
-DOI: 10.1093/ptep/ptac097
-URL: https://pdg.lbl.gov/
-License: Open Access
-Content: Electroweak Parameters (W mass, Z mass, sin²θ_W, Higgs mass)

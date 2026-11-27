@@ -1,8 +1,0 @@
-{
-  "source": "CRC Handbook of Chemistry and Physics, 97th Edition",
-  "fluid": "Water at 20°C, 1 atm",
-  "density_kg_m3": 998.2,
-  "dynamic_viscosity_Pa_s": 0.001002,
-  "kinematic_viscosity_m2_s": 1.004e-06,
-  "thermal_conductivity_W_mK": 0.598
-}

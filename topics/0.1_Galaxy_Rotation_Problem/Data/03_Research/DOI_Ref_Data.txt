@@ -1,5 +1,0 @@
-Source: SPARC (Spitzer Photometry & Accurate Rotation Curves)
-DOI: 10.3847/0004-6256/152/6/157
-URL: http://astroweb.cwru.edu/SPARC/
-License: Academic Use Only (Lelli et al. 2016)
-Content: 175 Galaxy Rotation Curves (High Precision)

@@ -1,8 +1,0 @@
-{
-  "source": "Sreenivasan, K.R. (1995). On the universality of the Kolmogorov constant",
-  "doi": "10.1063/1.868716",
-  "kolmogorov_constant_C": 1.5,
-  "energy_spectrum_slope": -1.6666666666666667,
-  "dissipation_range_exponent": -7,
-  "notes": "Universal constants for inertial range turbulence"
-}

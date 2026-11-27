@@ -1,7 +1,0 @@
-{
-  "data_source": "Bell Tests + NIST CODATA",
-  "method": "UET Bell Violation",
-  "parameters": {
-    "beta": 1.0
-  }
-}

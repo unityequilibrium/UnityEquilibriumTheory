@@ -1,9 +1,0 @@
-{
-    "source": "NIST CODATA 2018",
-    "h_planck": 6.62607015e-34,
-    "hbar": 1.054571817e-34,
-    "c_light": 299792458,
-    "G_newton": 6.6743e-11,
-    "kB_boltzmann": 1.380649e-23,
-    "fine_structure_alpha": 0.0072973525692838015
-}

@@ -5,7 +5,7 @@
 > The Thai and English files have the same content. Edit both together.
 
 ![Evidence](https://img.shields.io/badge/claims-52_L1_·_25_L2_·_6_FAILED-blue)
-![Topics](https://img.shields.io/badge/research_topics-40-blue)
+![Topics](https://img.shields.io/badge/topics-6_research_·_13_future_concepts-blue)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 UET is a research program that turns one idea into a calculation procedure:
@@ -195,40 +195,24 @@ Failures are recorded the same way as passes; see [`docs/standard/results/`](doc
 Each numbered folder under [`topics/`](topics/README.md) asks how the UET accounting applies to one field.
 "Question studied" is what the topic works on; the earlier headline claims for each topic are in
 [`docs/history/LEGACY_CLAIMS.md`](docs/history/LEGACY_CLAIMS.md) and are not current results.
-"Package" is the documentation tier from [`topics/README.md`](topics/README.md) (A = most complete, D = concept only); it is not an evidence level.
+"Package" (future concepts only) is the old documentation tier (D = concept only); it is not an evidence level.
 No topic result has been raised to an evidence level under Standard v2 yet, except where a claim is named.
 
-### Core research (0.0–0.26)
+### Core research topics kept after the 2026-11-27 cleanup
 
-| ID | Topic | Question studied | Package |
-|---|---|---|---|
-| 0.0 | [Grand Unification](topics/0.0_Grand_Unification/) | Whether one balance law can link the other topics | C |
-| 0.1 | [Galaxy Rotation](topics/0.1_Galaxy_Rotation_Problem/) | Galaxy rotation curves (SPARC) without added dark matter | A |
-| 0.2 | [Black Holes](topics/0.2_Black_Hole_Physics/) | Horizons and black hole shadows | B |
-| 0.3 | [Hubble Tension](topics/0.3_Cosmology_Hubble_Tension/) | The mismatch between early- and late-universe expansion rates | B |
-| 0.4 | [Superconductivity](topics/0.4_Superconductivity_Superfluids/) | Phase locking in superconductors and superfluids | B |
-| 0.5 | [Nuclear Binding](topics/0.5_Nuclear_Binding_Hadrons/) | Binding energy and stability of nuclei and hadrons | B |
-| 0.6 | [Electroweak](topics/0.6_Electroweak_Physics/) | Electroweak parameters such as the W boson mass | B |
-| 0.7 | [Neutrinos](topics/0.7_Neutrino_Physics/) | Neutrino mass and mixing (NuFIT) | B |
-| 0.8 | [Muon g−2](topics/0.8_Muon_g2_Anomaly/) | The muon anomalous magnetic moment | B |
-| 0.9 | [Quantum Nonlocality](topics/0.9_Quantum_Nonlocality/) | Bell correlations | B |
-| 0.10 | [Fluid Dynamics](topics/0.10_Fluid_Dynamics_Chaos/) | Turbulence and chaos in fluids | B |
-| 0.11 | [Phase Transitions](topics/0.11_Phase_Transitions/) | Critical points and critical exponents | B |
-| 0.12 | [Vacuum Energy](topics/0.12_Vacuum_Energy_Casimir/) | Vacuum energy and the Casimir effect | B |
-| 0.13 | [Thermodynamic Bridge](topics/0.13_Thermodynamic_Bridge/) | How energy use links to information and retained state (He-4, graphite) | B |
-| 0.14 | [Complex Systems](topics/0.14_Complex_Systems/) | Emergence of order from noise | B |
-| 0.15 | [Cluster Dynamics](topics/0.15_Cluster_Dynamics/) | Galaxy cluster dynamics and the virial theorem | B |
-| 0.16 | [Heavy Nuclei](topics/0.16_Heavy_Nuclei/) | Stability of superheavy nuclei | B |
-| 0.17 | [Mass Generation](topics/0.17_Mass_Generation/) | The particle mass hierarchy | B |
-| 0.18 | [Mathnicry](topics/0.18_Mathnicry/) | Mathematical problems read through the UET structure | B |
-| 0.19 | [Gravity & GR](topics/0.19_Gravity_GR/) | Gravity, the equivalence principle and the CODATA checkpoint | B · claim T001 at L2 |
-| 0.20 | [Atomic Physics](topics/0.20_Atomic_Physics/) | Atomic spectra and the Rydberg constant (NIST) | B |
-| 0.21 | [Yang–Mills](topics/0.21_Yang_Mills_Mass_Gap/) | The mass gap | A |
-| 0.22 | [Origin of Life](topics/0.22_Biophysics_Origin_of_Life/) | Biophysics, protein folding and error correction | B |
-| 0.23 | [Unity Scale Link](topics/0.23_Unity_Scale_Link/) | Stress-testing UET across scales; collecting ways it can fail | B |
-| 0.24 | [Artificial Intelligence](topics/0.24_Artificial_Intelligence/) | AI systems as resource-using systems | B |
-| 0.25 | [Strategy & Economics](topics/0.25_Strategy_Power_Economics/) | Energy, time and resources in economies and technology | A · claim T021 at L2 |
-| 0.26 | [Cosmic Dynamic Frame](topics/0.26_Cosmic_Dynamic_Frame/) | A drag-like term for galaxy dynamics | B |
+The old core-research topics 0.0–0.26 used topic-local engines with fitted or anchored values, and none passed the
+2026-11-16 distinctness screen ([`docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md`](docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md)).
+They were removed from the working tree on 2026-11-27 (STANDARD §8) and are kept at git tag `archive/legacy-2026-11`.
+Only the topics that current records cite or that active work uses remain:
+
+| ID | Topic | Why it is kept |
+|---|---|---|
+| 0.3 | [Cosmology](topics/0.3_Cosmology_Hubble_Tension/) | Proposals of Test Cards T040 and T041 (dark-energy w(a)) |
+| 0.11 | [Phase Transitions](topics/0.11_Phase_Transitions/) | Only the 8 files a calculation contract locks |
+| 0.13 | [Thermodynamic Bridge](topics/0.13_Thermodynamic_Bridge/) | The only topic that uses the parent action; T015 and its contracts |
+| 0.18 | [Mathnicry](topics/0.18_Mathnicry/) | Active Lean work |
+| 0.23 | [Unity Scale Link](topics/0.23_Unity_Scale_Link/) | Stress tests of UET; T028 and open PR #96 |
+| 0.25 | [Strategy & Economics](topics/0.25_Strategy_Power_Economics/) | Test Cards T021 and T024 |
 
 ### Future concepts (0.27–0.39)
 

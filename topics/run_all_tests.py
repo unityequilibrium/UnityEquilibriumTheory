@@ -42,17 +42,7 @@ PYTEST_COUNTS = re.compile(r"(?:(\d+) passed)?(?:,?\s*(\d+) failed)?(?:,?\s*(\d+
 COLLECTION_ERROR = re.compile(r"ERROR collecting|errors? during collection|ImportError while importing|no tests ran", re.I)
 GRID_PHASES = {"01_Engine", "02_Proof", "03_Research", "04_Competitor"}
 # Reviewed readout configuration, not a new research-status registry.
-LEGACY_RESULT_READOUTS = {
-    "0.19_Gravity_GR": {
-        "path": "topics/0.19_Gravity_GR/Result/artifacts/0_19_gravity_gr_verification.json",
-        "outcome_field": "status",
-        "suite_scope": "synthetic constant-checkpoint failure/reporting tests only; real engine/CODATA comparison and other gravity paths remain unreviewed",
-    },
-    "0.4_Superconductivity_Superfluids": {
-        "path": "topics/0.4_Superconductivity_Superfluids/Result/artifacts/0_4_superconductivity_superfluids_verification.json",
-        "outcome_field": "model_gate_status",
-        "suite_scope": "decision-helper and saved-result reporting only; benchmark, input provenance and other Topic paths remain unreviewed",
-    },
+LEGACY_RESULT_READOUTS: dict[str, dict[str, str]] = {
 }
 # These scripts compare supplied profile values; their tests do not cover the
 # Topic's engines, research or physical engineering requirements.
@@ -67,12 +57,7 @@ PROFILE_ONLY_CODE = {
     "0.36_Orbital_Manufacturing": "Code/05_Simulation/Sim_Orbital_Crystallization.py",
     "0.39_Bio_Smart_City": "Code/05_Simulation/Sim_Bio_City.py",
 }
-SOFTWARE_SCOPE_LIMITS = {
-    "0.24_Artificial_Intelligence": (
-        "synthetic scaling/sparsity audit, invalid-input and isolated-output software tests only; "
-        "live benchmark inputs, AI engine paths and physical/theory correspondence remain unreviewed"
-    ),
-}
+SOFTWARE_SCOPE_LIMITS: dict[str, str] = {}
 for _topic in PROFILE_CHECK_TOPICS:
     LEGACY_RESULT_READOUTS[_topic] = {
         "path": f"topics/{_topic}/Result/artifacts/rd_sim_artifact.json",

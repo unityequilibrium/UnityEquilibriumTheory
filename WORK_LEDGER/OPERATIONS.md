@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 144. Counts describe records, not accomplishments.
+Indexed entries: 145. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Cleanup phase 4: old core-research topics removed](2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed) (L73) | repo-ops | explicit_stream_and_area |
 | 2026-11-27 | [Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed](2026/2026-11-27.md#cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed) (L63) | repo-ops | explicit_stream_and_area |
 | 2026-11-27 | [Cleanup plan (draft) after the content-value audit](2026/2026-11-27.md#cleanup-plan-draft-after-the-content-value-audit) (L53) | repo-ops | explicit_stream_and_area |
 | 2026-11-25 | [Research CI job timeout raised to 40 minutes](2026/2026-11-25.md#research-ci-job-timeout-raised-to-40-minutes) (L153) | repo-ops | explicit_stream_and_area |

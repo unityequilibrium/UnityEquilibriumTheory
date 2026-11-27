@@ -1,2 +1,0 @@
-Required Coupling Strength: 1.274274985703132e-18
-Conclusion: Mass exists because Strong Force > Vacuum Viscosity.

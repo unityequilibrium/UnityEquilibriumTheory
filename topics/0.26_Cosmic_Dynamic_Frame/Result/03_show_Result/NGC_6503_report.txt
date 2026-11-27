@@ -1,4 +1,0 @@
-Galaxy: NGC_6503
-Model Error: 260.5530%
-Fluid Contribution at Edge: 442.90 km/s
-Hypothesis Status: Weak Fit

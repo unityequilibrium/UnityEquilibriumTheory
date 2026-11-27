@@ -182,40 +182,24 @@ $$\tau = \int \frac{dF}{P(F)} \qquad N = b\,\tau \qquad \frac{dx_i}{dt} = x_i\,(
 แต่ละโฟลเดอร์ใต้ [`topics/`](topics/README.md) ศึกษาว่าบัญชีของ UET ใช้กับสาขาหนึ่งได้อย่างไร
 "คำถามที่ศึกษา" คือสิ่งที่ topic นั้นทำ ส่วนข้ออ้างหัวเรื่องเดิมของแต่ละ topic อยู่ใน
 [`docs/history/LEGACY_CLAIMS.md`](docs/history/LEGACY_CLAIMS.md) และไม่ใช่ผลปัจจุบัน
-"Package" คือระดับความครบของเอกสารจาก [`topics/README.md`](topics/README.md) (A = ครบที่สุด, D = แนวคิดเท่านั้น) ไม่ใช่ระดับหลักฐาน
+"Package" (เฉพาะแนวคิดอนาคต) คือระดับความครบของเอกสารแบบเดิม (D = แนวคิดเท่านั้น) ไม่ใช่ระดับหลักฐาน
 ยังไม่มีผลของ topic ใดถูกยกเป็นระดับหลักฐานตาม Standard v2 ยกเว้นที่ระบุชื่อ claim ไว้
 
-### งานวิจัยหลัก (0.0–0.26)
+### หัวข้อวิจัยหลักที่เหลือหลังเก็บกวาด 2026-11-27
 
-| ID | หัวข้อ | คำถามที่ศึกษา | Package |
-|---|---|---|---|
-| 0.0 | [Grand Unification](topics/0.0_Grand_Unification/) | กฎสมดุลเดียวเชื่อม topic อื่นทั้งหมดได้ไหม | C |
-| 0.1 | [Galaxy Rotation](topics/0.1_Galaxy_Rotation_Problem/) | เส้นโค้งการหมุนของดาราจักร (SPARC) โดยไม่เพิ่มสสารมืด | A |
-| 0.2 | [Black Holes](topics/0.2_Black_Hole_Physics/) | ขอบฟ้าและเงาของหลุมดำ | B |
-| 0.3 | [Hubble Tension](topics/0.3_Cosmology_Hubble_Tension/) | อัตราการขยายตัวของเอกภพยุคต้นกับยุคหลังที่ไม่ตรงกัน | B |
-| 0.4 | [Superconductivity](topics/0.4_Superconductivity_Superfluids/) | การล็อกเฟสในตัวนำยิ่งยวดและของไหลยิ่งยวด | B |
-| 0.5 | [Nuclear Binding](topics/0.5_Nuclear_Binding_Hadrons/) | พลังงานยึดเหนี่ยวและเสถียรภาพของนิวเคลียสและแฮดรอน | B |
-| 0.6 | [Electroweak](topics/0.6_Electroweak_Physics/) | parameter ไฟฟ้าอ่อน เช่น มวล W boson | B |
-| 0.7 | [Neutrinos](topics/0.7_Neutrino_Physics/) | มวลและการผสมของนิวตริโน (NuFIT) | B |
-| 0.8 | [Muon g−2](topics/0.8_Muon_g2_Anomaly/) | magnetic moment ผิดปกติของมิวออน | B |
-| 0.9 | [Quantum Nonlocality](topics/0.9_Quantum_Nonlocality/) | สหสัมพันธ์แบบ Bell | B |
-| 0.10 | [Fluid Dynamics](topics/0.10_Fluid_Dynamics_Chaos/) | ความปั่นป่วนและความโกลาหลในของไหล | B |
-| 0.11 | [Phase Transitions](topics/0.11_Phase_Transitions/) | จุดวิกฤตและ critical exponent | B |
-| 0.12 | [Vacuum Energy](topics/0.12_Vacuum_Energy_Casimir/) | พลังงานสุญญากาศและปรากฏการณ์ Casimir | B |
-| 0.13 | [Thermodynamic Bridge](topics/0.13_Thermodynamic_Bridge/) | การใช้พลังงานเชื่อมกับข้อมูลและสถานะที่คงอยู่อย่างไร (He-4, graphite) | B |
-| 0.14 | [Complex Systems](topics/0.14_Complex_Systems/) | ระเบียบที่เกิดขึ้นจาก noise | B |
-| 0.15 | [Cluster Dynamics](topics/0.15_Cluster_Dynamics/) | พลวัตของกระจุกดาราจักรและ virial theorem | B |
-| 0.16 | [Heavy Nuclei](topics/0.16_Heavy_Nuclei/) | เสถียรภาพของนิวเคลียสหนักยิ่งยวด | B |
-| 0.17 | [Mass Generation](topics/0.17_Mass_Generation/) | ลำดับชั้นของมวลอนุภาค | B |
-| 0.18 | [Mathnicry](topics/0.18_Mathnicry/) | โจทย์คณิตศาสตร์ผ่านโครงสร้างของ UET | B |
-| 0.19 | [Gravity & GR](topics/0.19_Gravity_GR/) | แรงโน้มถ่วง หลักความสมมูล และจุดตรวจ CODATA | B · claim T001 ที่ L2 |
-| 0.20 | [Atomic Physics](topics/0.20_Atomic_Physics/) | สเปกตรัมอะตอมและค่าคงที่ Rydberg (NIST) | B |
-| 0.21 | [Yang–Mills](topics/0.21_Yang_Mills_Mass_Gap/) | mass gap | A |
-| 0.22 | [Origin of Life](topics/0.22_Biophysics_Origin_of_Life/) | ชีวฟิสิกส์ การพับโปรตีน และการแก้ข้อผิดพลาด | B |
-| 0.23 | [Unity Scale Link](topics/0.23_Unity_Scale_Link/) | ทดสอบ UET ข้ามสเกล และรวบรวมจุดที่มันอาจผิด | B |
-| 0.24 | [Artificial Intelligence](topics/0.24_Artificial_Intelligence/) | ระบบ AI ในฐานะระบบที่ใช้ทรัพยากร | B |
-| 0.25 | [Strategy & Economics](topics/0.25_Strategy_Power_Economics/) | พลังงาน เวลา และทรัพยากรในเศรษฐกิจและเทคโนโลยี | A · claim T021 ที่ L2 |
-| 0.26 | [Cosmic Dynamic Frame](topics/0.26_Cosmic_Dynamic_Frame/) | เทอมคล้ายแรงหน่วงสำหรับพลวัตดาราจักร | B |
+topic วิจัยหลักเดิม 0.0–0.26 ใช้ engine ของตัวเองที่ fit หรือยึดค่าไว้ และไม่มี topic ไหนผ่านการคัดกรองเมื่อ 2026-11-16
+([`docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md`](docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md))
+จึงลบออกจาก working tree เมื่อ 2026-11-27 (STANDARD §8) และเก็บไว้ที่ git tag `archive/legacy-2026-11`
+เหลือเฉพาะ topic ที่ record ปัจจุบันอ้างถึงหรือมีงานทำอยู่:
+
+| ID | หัวข้อ | เหตุที่เก็บ |
+|---|---|---|
+| 0.3 | [Cosmology](topics/0.3_Cosmology_Hubble_Tension/) | proposal ของ Test Card T040 และ T041 (w(a) ของพลังงานมืด) |
+| 0.11 | [Phase Transitions](topics/0.11_Phase_Transitions/) | เฉพาะ 8 ไฟล์ที่ calculation contract lock ไว้ |
+| 0.13 | [Thermodynamic Bridge](topics/0.13_Thermodynamic_Bridge/) | topic เดียวที่ใช้ parent action; T015 และ contract ของมัน |
+| 0.18 | [Mathnicry](topics/0.18_Mathnicry/) | มีงาน Lean ทำอยู่ |
+| 0.23 | [Unity Scale Link](topics/0.23_Unity_Scale_Link/) | stress test ของ UET; T028 และ PR #96 ที่เปิดอยู่ |
+| 0.25 | [Strategy & Economics](topics/0.25_Strategy_Power_Economics/) | Test Card T021 และ T024 |
 
 ### แนวคิดอนาคต (0.27–0.39)
 

@@ -1,4 +1,0 @@
-Galaxy: NGC_2403
-Model Error: 299.3750%
-Fluid Contribution at Edge: 442.90 km/s
-Hypothesis Status: Weak Fit
