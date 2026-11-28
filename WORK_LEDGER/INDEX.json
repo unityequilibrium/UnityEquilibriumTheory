@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1021,
+    "entries": 1022,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 784,
+      "research": 785,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -470,8 +470,8 @@
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "af2d40e00ad1cb49fd7cd9775f94c994deb6f3943293cf1d64a3e8ec308f92ed",
-      "entries": 1
+      "sha256": "2622adb154ebeb8e27981e2dffcf4473c1ef8f258ecaa9e27144790846e81f20",
+      "entries": 2
     },
     {
       "path": "2026-08-14.md",
@@ -20851,9 +20851,29 @@
       "source": "2026/2026-11-28.md",
       "anchor": "q2-screen-chemical-replicators-liu-et-al-2022-no-claim",
       "start_line": 3,
-      "end_line": 11,
+      "end_line": 12,
       "title": "Q2 screen: chemical replicators (Liu et al. 2022), no claim",
-      "entry_sha256": "6b64f761cf1c7f996ff6ae90c13f8fb9d8b42815229694d6b0b327189027326c",
+      "entry_sha256": "71d7d69e11c5761380a54740ca0011adc7189e0a75ebb9e66d57dbaa0229288c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#q2-flow-scan-search-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "q2-flow-scan-search-no-claim",
+      "start_line": 13,
+      "end_line": 21,
+      "title": "Q2 flow-scan search (no claim)",
+      "entry_sha256": "aba296fc1741ed2a7b3cb0866085ceeb252395a9152d08dab63081cac3b6e5a2",
       "stream": "research",
       "areas": [
         "research-core"
