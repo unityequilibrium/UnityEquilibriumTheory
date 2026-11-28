@@ -1,159 +1,30 @@
-# UET Research Topics Audit Index
+# UET topics
 
-<!-- UET-RESEARCH-RETROSPECTIVE: 2026-10-19; navigation notice, not a physics gate -->
-> **ทบทวนก่อนวิจัยต่อ — 19 ต.ค. 2026:** Tier และผลเฉพาะสายไม่ปิดข้ออ้างของทั้งทฤษฎี รายงานทบทวนช่วยระบุข้อผิดพลาดเดิมและสิ่งที่ยังขาด อ่าน [รายงานข้อผิดพลาดและบทเรียน UET](../meta/UET_RESEARCH_RETROSPECTIVE.md) โดยเฉพาะข้อ R01–R18 และลำดับแก้ใน §8 ก่อนขยายงาน สถานะจริงยังอ้างอิง artifact/gate ของเส้นทางนั้น
+Evidence is tracked per claim in [`docs/standard/claims.json`](../docs/standard/claims.json) under
+[`docs/STANDARD.md`](../docs/STANDARD.md), not per topic.
 
-This page is the conservative entrypoint for `docs/topics`.
+On 2026-11-27 the old core-research topics (0.0–0.26) were removed from the working tree with the author's approval
+(STANDARD §8, plan in [`docs/meta/CLEANUP_PLAN_2026-11-27.md`](../docs/meta/CLEANUP_PLAN_2026-11-27.md)).
+They used topic-local engines with fitted or anchored values and none passed the distinctness screen
+([`docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md`](../docs/meta/TOPIC_DISTINCTNESS_SCREEN_2026-11-16.md)).
+Every removed file is kept at git tag `archive/legacy-2026-11`: `git show archive/legacy-2026-11:topics/<path>`.
 
-It does not certify the theory. It reports how well each topic currently matches the
-repository standards for structure, data provenance, verification, mathematical framing,
-physical framing, and public claim discipline.
+## Kept research topics
 
-## Research Standard v2 status (2026-11-09)
-
-Evidence is now tracked **per claim**, not per topic. The controlling standard is
-[docs/STANDARD.md](../STANDARD.md), and the claim register is
-[docs/standard/claims.json](../standard/claims.json). There are five levels:
-`L0_SPECULATIVE`, `L1_CONSISTENT`, `L2_CONFRONTED`, `L3_REPLICATED` and `FAILED`.
-
-| Claim | Level | What it says | Evidence |
-| :-- | :-- | :-- | :-- |
-| `C_PARENT_EOM_DERIVED` | `L1_CONSISTENT` | The implemented scalar, O(2) matter and metric equations (diagonal and t-x off-diagonal) follow from the parent action | [R_W4_PARENT_EOM](../standard/results/R_W4_PARENT_EOM.json), [R_A2_OFFDIAGONAL_METRIC](../standard/results/R_A2_OFFDIAGONAL_METRIC.json) |
-| `C_EPSILON_REDUNDANT` | `L1_CONSISTENT` | epsilon is not an independent coupling; epsilon = 0 is a degenerate point, not a GR limit | [R_W4_EPSILON_REDUNDANCY](../standard/results/R_W4_EPSILON_REDUNDANCY.json) |
-| `C_UET_DEF_MAPPING` | `L1_CONSISTENT` | With minimal matter coupling, the parent action maps onto Damour-Esposito-Farese with beta0 = -2 xi_c and alpha0 = 0 | [R_W5_DEF_MAPPING](../standard/results/R_W5_DEF_MAPPING.json) |
-| `C_T001_BINARY_PULSAR_XI_C` | `L2_CONFRONTED` (constraint) | Binary pulsars exclude xi_c in [2.0, 2.4] when m_psi <= 2.5e-18 eV; this is not a prediction, and xi_c remains free | [R_T001_BINARY_PULSAR](../standard/results/R_T001_BINARY_PULSAR.json), [Test Card T001](../standard/tests/T001.json) |
-| `C_EXCHANGE_DERIVED` | `L1_CONSISTENT` | Matter exchanges energy-momentum with the response field only through the portal: Q = (1/2) eps h \|chi\|^2 grad phi | [R_A2_EXCHANGE_IDENTITY](../standard/results/R_A2_EXCHANGE_IDENTITY.json) |
-| `C_VACUUM_SHIFT_ROUTE` | `L1_CONSISTENT` | The true vacuum can sit at psi0 != 0 (chi condensate or small lam_chi), which gives gamma_PPN != 1: a falsification route | [R_B1_VACUUM_STRUCTURE](../standard/results/R_B1_VACUUM_STRUCTURE.json) |
-| `C_PORTAL_FIFTH_FORCE` | `L1_CONSISTENT` | With chi = ordinary matter, the portal gives a Yukawa force with alpha = g_c^2/(2 kappa m_chi^4), lambda = 1/m_psi | [R_B1B_PORTAL_FIFTH_FORCE](../standard/results/R_B1B_PORTAL_FIFTH_FORCE.json) |
-| `C_T005_PORTAL_G_C` | `L2_CONFRONTED` (constraint) | Fifth-force data limit the portal: g_c < 5.1e-10 eV for m_psi <= 5.1e-3 eV, g_c < 3.9e-15 eV at m_psi = 1.0e-15 eV; g_c remains free | [R_T005_FIFTH_FORCE](../standard/results/R_T005_FIFTH_FORCE.json), [Test Card T005](../standard/tests/T005.json) |
-| `C_LAYER2_OPEN_FROM_CLOSED` | `L1_CONSISTENT` | Layer 2: friction, burn power, KMS noise, second-law heat flow and P proportional to F emerge for a mode inside a closed system | [R_A3_LAYER2_OPEN_FROM_CLOSED](../standard/results/R_A3_LAYER2_OPEN_FROM_CLOSED.json) |
-| `C_L3_BURN_LAW_SELECTION` | `L1_CONSISTENT` | Lifetime from the burn law tau = integral dF/P(F); lowest R* still wins; two resources give a Nash-stable mixed equilibrium | [R_A4_BURN_LAW_SELECTION](../standard/results/R_A4_BURN_LAW_SELECTION.json) |
-| `C_B4_DISTINCTNESS_AUDIT` | `L1_CONSISTENT` | Every layer reduces to known theory; the only cross-layer effect (portal drag) has three free parameters: no numerical UET-distinct prediction yet | [R_B4_DISTINCTNESS_AUDIT](../standard/results/R_B4_DISTINCTNESS_AUDIT.json) |
-| `C_R2_LASER_LAYER3` | `L1_CONSISTENT` | Laser mode competition is the layer-3 model term for term; R* is the threshold inversion | [R_R2_LASER_LAYER3](../standard/results/R_R2_LASER_LAYER3.json) |
-| `C_T006_ENERGY_USE_GRAVITY_TRACE` | `L2_CONFRONTED` (PASS) | The Sun's energy use is written into its gravity: predicted -8.76e-14/yr vs measured -6.13e-14/yr (z = 1.48); no trace disfavoured at 4.2 sigma | [R_T006_SOLAR_MASS_LOSS](../standard/results/R_T006_SOLAR_MASS_LOSS.json), [Test Card T006](../standard/tests/T006.json) |
-| `C_R3_TRACE_RECORD_PLUS_POTENTIAL` | `L1_CONSISTENT` | The trace of energy use = readable record I + potential difference D (Sigma = I + D); D dominates at long times | [R_R3_TRACE_DECOMPOSITION](../standard/results/R_R3_TRACE_DECOMPOSITION.json) |
-| `C_T007_RESOURCE_SELECTION_CHEMOSTAT` | `L2_CONFRONTED` (PASS) | Layer-3 selection predicts Tilman's (1977) chemostat regions from monoculture data: boundaries 86.9 and 6.2 vs about 80 and 6 | [R_T007_TILMAN_CHEMOSTAT](../standard/results/R_T007_TILMAN_CHEMOSTAT.json), [Test Card T007](../standard/tests/T007.json) |
-| `C_T008_WHITE_DWARF_COOLING_ABUNDANCE` | `L2_CONFRONTED` (PASS) | Burn-law lifetime reproduces the white dwarf luminosity-function slope: 0.286 vs 0.320 per mag | [R_T008_WHITE_DWARF_LF](../standard/results/R_T008_WHITE_DWARF_LF.json), [Test Card T008](../standard/tests/T008.json) |
-| `C_T009_DECAY_CHAIN_ABUNDANCE` | `L2_CONFRONTED` (PASS) | Abundance law in the 238U-234U chain: equilibrium vs direct half-life, z = 0.56 | [R_T009_U234_SECULAR_EQUILIBRIUM](../standard/results/R_T009_U234_SECULAR_EQUILIBRIUM.json), [Test Card T009](../standard/tests/T009.json) |
-| `C_T010_TWO_CARRIER_RECORDS` | `L2_CONFRONTED` (PASS) | Gravitational waves and light from GW170817 travel at the same speed, as c_T = 1 requires | [R_T010_GW170817_CARRIER_SPEED](../standard/results/R_T010_GW170817_CARRIER_SPEED.json), [Test Card T010](../standard/tests/T010.json) |
-| `C_T011_PULSATION_RECORD_AGE` | `L2_CONFRONTED` (PASS) | P2: pulsation-timing delay equals the record age from an independent RV orbit, z = 0.04 and 0.17 | [R_T011_PULSATION_DELAY_VS_RV](../standard/results/R_T011_PULSATION_DELAY_VS_RV.json), [Test Card T011](../standard/tests/T011.json) |
-| `C_T012_COMMON_PAST_CONTACT` | `L2_CONFRONTED` (PASS) | P4: a quench correlation front stays below the common-past bound and beats the direct-contact bound by 3.9 and 6.0 sigma | [R_T012_CORRELATION_FRONT_BOUND](../standard/results/R_T012_CORRELATION_FRONT_BOUND.json), [Test Card T012](../standard/tests/T012.json) |
-| `C_T013_LORENTZ_TIME_STRUCTURE` | `L2_CONFRONTED` (PASS) | P3 as part of the Lorentz time transformation: Ives-Stilwell epsilon of 7Li+ at beta = 0.338 is (1.47 +- 2.30)e-9, z = 0.64 | [R_T013_IVES_STILWELL_LORENTZ_TIME](../standard/results/R_T013_IVES_STILWELL_LORENTZ_TIME.json), [Test Card T013](../standard/tests/T013.json) |
-| `C_B5_PORTAL_DRAG_BOUND` | `L1_CONSISTENT` | Portal drag bounded by orbit survival: Gamma g_c^2 <= 9.1e-44 eV^3 (Jupiter); friction time of psi >= ~60 yr at the T005 bound | [R_B5_PORTAL_DRAG_BOUND](../standard/results/R_B5_PORTAL_DRAG_BOUND.json) |
-| `C_OBS_DELAY_GAP` | `L1_CONSISTENT` | A source observed through a finite-speed signal is recorded at its retarded time, and the error of treating the record as the present equals the rate of change times the record age at first order. | [R_O1_OBSERVATION_DELAY](../standard/results/R_O1_OBSERVATION_DELAY.json) |
-| `C_OBS_SHARED_RECORD_CONTACT` | `L1_CONSISTENT` | Two systems share a record (mutual information) only after causal contact by overlapping past cones, t >= d/(2c), earlier than the direct signal d/c; before contact the shared record is super-exponentially small. | [R_O2_SHARED_RECORD_CONE](../standard/results/R_O2_SHARED_RECORD_CONE.json) |
-| `C_OBS_MEMORY_VS_MARKOV` | `L1_CONSISTENT` | An observer that keeps a history of records estimates the present with a bias one order lower than one that treats the newest record as the present, but amplifies measurement noise, so memory helps only below a crossover noise level. | [R_O3_MARKOV_VS_HISTORY](../standard/results/R_O3_MARKOV_VS_HISTORY.json) |
-| `C_OBS_FIELD_CAUSAL` | `L1_CONSISTENT` | The canonical response scalar of the parent action propagates only inside the light cone: the PDE solution converges at second order to the exact retarded solution and the field vanishes outside the cone. | [R_O4_FIELD_CAUSALITY](../standard/results/R_O4_FIELD_CAUSALITY.json) |
-| `C_L3_SELECTION_FORMAL` | `L1_CONSISTENT` | Selection by free-energy exhaustion gives Little's law, replicator dynamics and lowest-R* exclusion | [R_L3_SELECTION_FORMAL](../standard/results/R_L3_SELECTION_FORMAL.json) |
-| `C_T002_STELLAR_PHASE_ABUNDANCE` | `L2_CONFRONTED` (INCONCLUSIVE) | Globular-cluster R = N_HB/N_RGB: predicted 1.467 +/- 0.023 against 1.39 +/- 0.03, z = 2.05 | [R_T002_STELLAR_PHASES](../standard/results/R_T002_STELLAR_PHASES.json), [Test Card T002](../standard/tests/T002.json) |
-
-The core theory card is [docs/core/THEORY_CARD.md](../core/THEORY_CARD.md); the fidelity of the equations to the author's logic is tracked in [docs/core/FIDELITY_MATRIX.md](../core/FIDELITY_MATRIX.md). In the action
-itself, UET does not yet differ from the known scalar-tensor class.
-
-How to read the rest of this page:
-- Tier `A`-`D`, `Structured` and `Draft` measure how complete a topic's
-  documentation package is. They are not evidence levels (STANDARD.md §13).
-- Status words from older waves, such as `PASS`, `CLOSED_FOR_CORE`, `CLOSED_FOR_LANE`,
-  `BLOCKED` and `*_NO_GO`, are `LEGACY_UNREVIEWED`. At most they count as candidates for `L1`,
-  and only after the physics tests of STANDARD.md §6 have been run. `*_NO_GO` maps to `FAILED`
-  for its stated scope. No topic result below has been promoted under v2 yet.
-
-## Current baseline
-
-- Canonical numbered topics in scope: `41` directories (`0.0` through `0.39`, with one canonical `0.33` future-topic directory)
-- Core research scope for this phase: `0.0-0.26`
-- Future concept scope for this phase: `0.27-0.39`
-- Tier `A`: `3` topics
-- Tier `B`: `23` topics
-- Tier `C`: `1` topic
-- Tier `D`: `13` topics
-- Current `Structured` topics in metadata: `0.1`, `0.3`, `0.10`, `0.21`, `0.25`
-- Current run-contract pass count: 26/27 core topics; the latest scalar Hubble artifact for 0.3 passes its stated benchmark threshold; full cosmology remains blocked
-- Topic 0.25 note: Tier A is Package Tier A only; its Book-aligned Evidence Grade A program has 15 waves and 20 lane-scoped gates. The corrected legacy proxies fail their baselines and the global panel is blocked.
-- `0.10` passed the latest run but showed threshold instability in the previous run, so it remains below Tier `A` until repeated-run stability is demonstrated
-
-## Read this first
-
-- [Topic audit inventory](../meta/topic_audit_inventory.md)
-- [Executive ranking](../meta/topic_executive_ranking.md)
-- [Public claim risk summary](../meta/public_claim_risk_summary.md)
-- [Topic readiness metadata](../meta/topic_readiness.json)
-
-## What the tiers mean
-
-| Tier | Meaning |
+| Topic | Why it is kept |
 | :-- | :-- |
-| `A` | structured candidate with standards package already present |
-| `B` | research exists but is not yet standardized |
-| `C` | concept-heavy or evidence-light topic inside the core research scope |
-| `D` | shell, speculative, or future-concept topic that should stay explicitly exploratory |
+| [0.3](./0.3_Cosmology_Hubble_Tension/) | Proposals of Test Cards T040 and T041 |
+| [0.11](./0.11_Phase_Transitions/) | Only the 8 files a calculation contract locks |
+| [0.13](./0.13_Thermodynamic_Bridge/) | Uses the parent action; T015 and its contracts |
+| [0.18](./0.18_Mathnicry/) | Active Lean work |
+| [0.23](./0.23_Unity_Scale_Link/) | Stress tests of UET (T028, open PR #96) |
+| [0.25](./0.25_Strategy_Power_Economics/) | Test Cards T021 and T024 |
 
-## Score legend
+## Future concepts (0.27–0.39)
 
-| Score | Meaning |
-| :-- | :-- |
-| `0` | missing |
-| `1` | exists but weak |
-| `2` | substantive but incomplete |
-| `3` | standardized and auditable |
+The author's ideas for later development. They are exploratory, carry no evidence level, and were kept on purpose.
 
-## Core research topics (`0.0-0.26`)
+## Other folders
 
-These topics determine the current scientific credibility of the repo.
-
-| Topic | Current status | Tier | One-line audit view |
-| :-- | :-- | :-- | :-- |
-| [0.0](./0.0_Grand_Unification/) | `Draft` | `C` | broad synthesis topic with code and references, but no standards package or manifested data path |
-| [0.1](./0.1_Galaxy_Rotation_Problem/) | `Structured` | `A` | current normalization template with standards root docs and manifested dataset framing |
-| [0.2](./0.2_Black_Hole_Physics/) | `Draft` | `B` | has research scaffolding, but still needs verification and method boundary docs |
-| [0.3](./0.3_Cosmology_Hubble_Tension/) | `Structured` | `B` | structured package exists, the latest scalar Hubble artifact passes its stated threshold; full cosmology remains blocked |
-| [0.4](./0.4_Superconductivity_Superfluids/) | `Draft` | `B` | evidence exists, yet the topic lacks a standards root package |
-| [0.5](./0.5_Nuclear_Binding_Hadrons/) | `Draft` | `B` | active topic with claim-risk and data-provenance cleanup still required |
-| [0.6](./0.6_Electroweak_Physics/) | `Draft` | `B` | references and code exist, but benchmark packaging is incomplete |
-| [0.7](./0.7_Neutrino_Physics/) | `Draft` | `B` | research assets exist, but data workflow and claim discipline remain weak |
-| [0.8](./0.8_Muon_g2_Anomaly/) | `Draft` | `B` | benchmark-oriented topic that still lacks manifest-backed verification framing |
-| [0.9](./0.9_Quantum_Nonlocality/) | `Draft` | `B` | has local materials, but not a standardized evidence contract |
-| [0.10](./0.10_Fluid_Dynamics_Chaos/) | `Structured` | `B` | structured package exists and latest run passed, but repeated-run speed-threshold stability is not yet demonstrated |
-| [0.11](./0.11_Phase_Transitions/) | `Structured` | `B` | Wave 55 replicate/temporal acquisition remains controlling; core Wave 9 adds only conditional charge-coordinate compatibility, with Topic C identity, EOS, transport, estimator acceptance, and exponent rerun blocked |
-| [0.12](./0.12_Vacuum_Energy_Casimir/) | `Draft` | `B` | topic has research assets, yet audit-grade verification remains absent |
-| [0.13](./0.13_Thermodynamic_Bridge/) | `Draft` | `B` | bounded O(2)/He-4 thermal bridge is `CLOSED_FOR_CORE` with 13/13 acceptance; graphite external validation, complete two-fluid transport, curved 3+1, Gravity, and global UET closure remain open; under v2 this is `LEGACY_UNREVIEWED` (13/13 includes non-evidence criteria) |
-| [0.14](./0.14_Complex_Systems/) | `Draft` | `B` | substantial local material exists, but standards migration has not happened |
-| [0.15](./0.15_Cluster_Dynamics/) | `Draft` | `B` | real-source references are visible, but verification specs are missing |
-| [0.16](./0.16_Heavy_Nuclei/) | `Draft` | `B` | technically active topic, not yet packaged for auditability |
-| [0.17](./0.17_Mass_Generation/) | `Draft` | `B` | evidence exists, but claim wording is stronger than the current standards package |
-| [0.18](./0.18_Mathnicry/) | `Draft` | `B` | proof-focused foldering exists, but the proof boundary is undocumented |
-| [0.19](./0.19_Gravity_GR/) | `Draft` | `B` | CODATA checkpoint remains primary; core candidate GR program adds an exact response-null and bounded local covariant infrastructure, while physical GR benchmarks and completion remain blocked; v2: binary-pulsar constraint on the core parent action is `L2` (`C_T001_BINARY_PULSAR_XI_C`) |
-| [0.20](./0.20_Atomic_Physics/) | `Draft` | `B` | code/data exist, but verification and limitations are not normalized |
-| [0.21](./0.21_Yang_Mills_Mass_Gap/) | `Structured` | `A` | strongest math-facing standards candidate, but public wording still needs restraint |
-| [0.22](./0.22_Biophysics_Origin_of_Life/) | `Draft` | `B` | source-referenced context with synthetic primary WARN plus a separate class-C finite HP benchmark; raw-data, biological-correspondence, and external-replication blockers remain explicit |
-| [0.23](./0.23_Unity_Scale_Link/) | `Draft` | `B` | topic has local material, but evidence packaging is still incomplete |
-| [0.24](./0.24_Artificial_Intelligence/) | `Draft` | `B` | relatively conservative README, but verification framing remains weak |
-| [0.25](./0.25_Strategy_Power_Economics/) | Structured | A | Package Tier A / Claim C; Book-aligned 15-wave program, failed legacy proxy baselines, and blocked global complete-case panel |
-| [0.26](./0.26_Cosmic_Dynamic_Frame/) | `Draft` | `B` | data path still appears partly manual, so the topic stays below structured grade |
-## Future concepts (`0.27-0.38`)
-
-These topics are intentionally kept outside the current theory-credibility core. In this
-phase they are treated as exploratory or proposal-level work, not as evidence-bearing topics.
-
-| Topic | Current status | Tier | One-line audit view |
-| :-- | :-- | :-- | :-- |
-| [0.27](./0.27_Cold_Light_Hologram/) | `Draft` | `D` | exploratory research shell with thin evidence and no current role in theory-core credibility |
-| [0.28](./0.28_Material_Synthesis/) | `Draft` | `D` | future-facing materials topic with partial assets, but not part of the current theory evidence core |
-| [0.29](./0.29_Ocean_Recovery/) | `Draft` | `D` | exploratory application topic with no current auditable theory-core package |
-| [0.30](./0.30_Mega_Flora_Biotech/) | `Draft` | `D` | concept-rich future topic with code and docs, but no clear real-data package |
-| [0.31](./0.31_SpaceTime_Propulsion/) | `Draft` | `D` | integration-heavy future topic that still lacks explicit benchmark boundaries |
-| [0.32](./0.32_Micro_Nuclear_Fusion/) | `Draft` | `D` | future engineering topic with partial assets, not yet part of the current theory evidence core |
-| [0.33](./0.33_Battery_Tech/) | `Draft` | `D` | standardized exploratory battery package; synthetic baseline only and outside theory-core credibility |
-| [0.34](./0.34_Information_Centric_Nanofabrication/) | `Draft` | `D` | active future concept area, but still missing several core pillars and manifests |
-| [0.35](./0.35_ICN_Digital_Automation/) | `Draft` | `D` | infrastructure-facing shell that should remain exploratory until evidence assets exist |
-| [0.36](./0.36_Orbital_Manufacturing/) | `Draft` | `D` | README-driven integration vision with no auditable data or verification path |
-| [0.37](./0.37_Quantum_Photovoltaics/) | `Draft` | `D` | standardized exploratory solar-paint package; synthetic baseline only and outside theory-core credibility |
-| [0.38](./0.38_Bio_Synthetic_Integration/) | `Draft` | `D` | application-facing concept topic that currently lacks manifested data and standardized proof boundaries |
-
-## Working rules for readers
-
-- Treat `Tier A` topics as internal normalization templates, not external scientific confirmation.
-- Treat `Tier B` topics as real work-in-progress that still need standards migration.
-- Treat `0.0-0.26` as the only scope that currently determines theory-core credibility.
-- Treat `0.27-0.38` as exploratory future concepts unless they are re-entered into the core pipeline with a full standards package.
-- Use the metadata and audit docs above instead of old badge language when summarizing repo status.
+- [`For Work/`](./For%20Work/) operational standards still in force under STANDARD §15 (do not edit).
+- `run_all_tests.py`, `tests/`, `test_suite_config.json` the shared test runner used by CI.

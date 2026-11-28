@@ -1,6 +1,0 @@
-Name,Mass_SolarMass,Distance_Mpc,Spin_a,Method
-GW150914_Primary,36.0,410,0.32,LIGO_GravitationalWaves
-GW150914_Secondary,29.0,410,0.44,LIGO_GravitationalWaves
-GW150914_Final,62.0,410,0.67,LIGO_GravitationalWaves
-M87_Star,6.5e9,16.8,0.90,EHT_ShadowImaging
-Sgr_A_Star,4.0e6,0.008,0.90,EHT_ShadowImaging

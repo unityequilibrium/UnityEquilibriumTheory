@@ -64,9 +64,10 @@ Its old status vocabularies and workflow ladders are replaced.
 
 ## 5. Legacy work
 
-- Earlier gates, artifacts, calculation contracts and update logs are preserved unchanged. Their provenance label is `LEGACY_UNREVIEWED`.
+- Earlier gates, artifacts, calculation contracts and update logs are never edited. Their provenance label is `LEGACY_UNREVIEWED`.
+- Since 2026-11-27 (STANDARD §8, author approval) legacy material that Standard v2 replaces is removed from the working tree; it stays in git history at tag `archive/legacy-2026-11`. Services kept for later development stay while they still work. Files any calculation contract locks are never removed. Plan: `docs/meta/CLEANUP_PLAN_2026-11-27.md`.
 - Old status vocabularies map to the v2 levels as set out in §13 of the standard.
-- Old audit scripts (inventory, compatibility, aggregate, reconcile, migration, scientific links) may still be run as diagnostics. They do not control status.
+- Most old audit scripts were removed on 2026-11-27; the ones still in `docs/scripts/audit/` are there because CI, a calculation contract or kept topic 0.13 code uses them. They do not control status.
 - `docs/scripts/audit/audit_calculation_completeness.py --check` is still part of CI for calculation contracts.
 
 ## 6. Git workflow

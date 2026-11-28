@@ -1,7 +1,0 @@
-{
-  "fluid": "Air",
-  "viscosity": 1.825e-05,
-  "v_in": 50.0,
-  "grid_size": 50,
-  "optimization": "VectorizedMatrix"
-}

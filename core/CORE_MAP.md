@@ -10,7 +10,7 @@
 | ลำดับ | ไฟล์ | บอกอะไร |
 |---|---|---|
 | 1 | [`AUTHOR_PROPOSITION.md`](AUTHOR_PROPOSITION.md) | เจตนาและตรรกะ 10 ข้อของผู้เขียน (แหล่งเดียวของเจตนา) |
-| 1b | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) | thought experiment "สิ่งที่เห็นคือบันทึกของอดีต" เวอร์ชัน 3 (ฉบับเดิมอยู่ `08_history/research_notes/` เก็บเป็นประวัติ) |
+| 1b | [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) | thought experiment "สิ่งที่เห็นคือบันทึกของอดีต" เวอร์ชัน 3 (ฉบับเดิมอยู่ใน `08_history/research_notes/` ของ tag `archive/legacy-2026-11`) |
 | 2 | [`THEORY_CARD.md`](THEORY_CARD.md) | **สมการหลักของชั้น 1** (parent action) พร้อมสถานะและพารามิเตอร์ที่ซ้ำซ้อน |
 | 3 | [`FIDELITY_MATRIX.md`](FIDELITY_MATRIX.md) | ตรรกะแต่ละข้อของผู้เขียนตรงกับสมการไหม (ตรง 8 ข้อ) |
 | 4 | [`SYNTHESIS_AUDIT.md`](SYNTHESIS_AUDIT.md) | หลักการที่ยืมจากทฤษฎีอื่นใช้ถูกเงื่อนไขไหม และขอบเขตของกฎรวม |
@@ -120,10 +120,7 @@
 |---|---|---|
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
 | `topics/For Work/` (30 ไฟล์ ย้ายจาก `docs/topics/For Work/` 2026-11-19) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าแก้เนื้อหาจะพัง (การย้ายไม่กระทบ เพราะ hash คิดจากเนื้อหาและ audit แปล path เดิมให้) |
-| `00_governance/` (ยกเว้น calculation contract), `07_artifacts/`, audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ |
-| `08_history/archived_tests/`, `topics/0.10_*/Archive/tests/`, `topics/0.13_*/Archive/tests/` | test ป้าย C ที่พังหลังย้ายโฟลเดอร์ 2026-11-14 เก็บเข้าคลังตามที่ผู้เขียนตัดสิน (2026-11-18) ไม่ถูกรัน | README ของแต่ละคลังบอกว่าแต่ละไฟล์พังเพราะอะไร |
-| `08_history/research_notes/THOUGHT_EXPERIMENT_OBSERVATION_PAST_BEHAVIOR.md` | v2 ของ thought experiment ใช้คำว่า being ซึ่งผู้เขียนถอนแล้ว ใช้ [`THOUGHT_EXPERIMENT.md`](THOUGHT_EXPERIMENT.md) แทน | manifest และ inventory หลายไฟล์ล็อก hash ไว้ |
-| `08_history/README_LEGACY_2026-11-14.md` | README เดิมของ core (engine Ω = C·I) มีถ้อยคำเก่า ไม่ใช่แหล่งควบคุมข้ออ้าง | ประวัติ (README ปัจจุบันเขียนใหม่ 2026-11-18) |
+| `00_governance/` (ยกเว้น calculation contract), audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ; `07_artifacts/` และ `08_history/` ลบแล้ว 2026-11-27 (เก็บที่ tag `archive/legacy-2026-11`) เหลือเฉพาะไฟล์ที่ contract lock, checker ใน CI อ่าน หรือโค้ดของ topic 0.13 ใช้ |
 
 ## 5. กฎการแก้ไฟล์
 

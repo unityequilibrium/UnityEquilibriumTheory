@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1038,
+    "entries": 1043,
     "by_stream": {
       "book-history": 94,
-      "operations": 144,
+      "operations": 149,
       "research": 799,
       "review": 1
     },
@@ -465,13 +465,13 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "862149defa351056b088bc06e7d306e1a8c8fd5c6c283bbf8a35f1c1e706e249",
-      "entries": 23
+      "sha256": "69cc7776df76db433c87e924b6a450a5c8dc92b6692d6773a80611908b7c5746",
+      "entries": 27
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "fc9fa3864e2781cfd5248d8ff3ee8d4c7b733c8d734ac056f24da77b93229473",
-      "entries": 3
+      "sha256": "74f87271c0250fa5e3bd6ab44ef438f1914399c5e5e05b2ff2b6dc935e5f2d2b",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -20827,11 +20827,51 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-27.md#cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed",
+      "start_line": 72,
+      "end_line": 81,
+      "title": "Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed",
+      "entry_sha256": "593c04ff8ed00478d347e70f38203ddf7bd2eab7d306e55a7e80915eed21b357",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-4-old-core-research-topics-removed",
+      "start_line": 82,
+      "end_line": 91,
+      "title": "Cleanup phase 4: old core-research topics removed",
+      "entry_sha256": "d0bda722135e292ee8935ebf3bdb8fe2ca00ec794317ca339f7f181bb57cb5e2",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
-      "start_line": 72,
-      "end_line": 81,
+      "start_line": 92,
+      "end_line": 101,
       "title": "Stress test 12: parameter scaling returns in the parent action (topic 0.23)",
       "entry_sha256": "8542bec615cb89af13d81b2f5e3e179a1ea81840bacd72cf37761477782100ac",
       "stream": "research",
@@ -20850,8 +20890,8 @@
       "id": "2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-s1-scale-invariant-restriction-of-the-parent-action",
-      "start_line": 82,
-      "end_line": 91,
+      "start_line": 102,
+      "end_line": 111,
       "title": "Wave S1: scale-invariant restriction of the parent action",
       "entry_sha256": "78cf7a46e6af51d5b2e494c394a6a3c8205689a2ed5f04e0a62d1b75f71dc200",
       "stream": "research",
@@ -20870,8 +20910,8 @@
       "id": "2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
-      "start_line": 92,
-      "end_line": 101,
+      "start_line": 112,
+      "end_line": 121,
       "title": "Wave D1: attractors and the initial field value (STRESS_12 option D)",
       "entry_sha256": "c5d472d1fdf8c83d21cacb6358c86612f0b48c4b12080149bf5f3741913c2996",
       "stream": "research",
@@ -20890,8 +20930,8 @@
       "id": "2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
-      "start_line": 102,
-      "end_line": 111,
+      "start_line": 122,
+      "end_line": 131,
       "title": "Wave C1: persistence selection inside one universe (STRESS_12 option C)",
       "entry_sha256": "606648b0832c119778b8b2d10a202a55a235be934b744b055b5d93e90309f410",
       "stream": "research",
@@ -20910,8 +20950,8 @@
       "id": "2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
-      "start_line": 112,
-      "end_line": 121,
+      "start_line": 132,
+      "end_line": 141,
       "title": "Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)",
       "entry_sha256": "db8af5bb40c811547cc7b990a31b625d9f12d8af5aecc891c1316c62c4d7453b",
       "stream": "research",
@@ -20930,8 +20970,8 @@
       "id": "2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
-      "start_line": 122,
-      "end_line": 131,
+      "start_line": 142,
+      "end_line": 151,
       "title": "Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)",
       "entry_sha256": "03f28919d4639f4b8781a14766340cb42c2567e2ec1cdbb7ce8b3704721b6cda",
       "stream": "research",
@@ -20950,8 +20990,8 @@
       "id": "2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved",
       "source": "2026/2026-11-27.md",
       "anchor": "theory-card-v2-drafted-higgs-dilaton-form-not-approved",
-      "start_line": 132,
-      "end_line": 141,
+      "start_line": 152,
+      "end_line": 161,
       "title": "Theory Card v2 drafted (Higgs-dilaton form, not approved)",
       "entry_sha256": "c665b0cd22b2f3d1707e5bee4db4bb9fc650b9601cf669eff5b934381aace572",
       "stream": "research",
@@ -20970,8 +21010,8 @@
       "id": "2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
-      "start_line": 142,
-      "end_line": 151,
+      "start_line": 162,
+      "end_line": 171,
       "title": "Stress test 13 and wave J1: where combining sectors forces new relations",
       "entry_sha256": "1fa471c5daeb805b33f2bc1e6e9d8a08ff28093088b0d8bdd47abd54b80af0a6",
       "stream": "research",
@@ -20990,8 +21030,8 @@
       "id": "2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
-      "start_line": 152,
-      "end_line": 161,
+      "start_line": 172,
+      "end_line": 181,
       "title": "Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain",
       "entry_sha256": "277e6f328743487d2aa1834038baceac91208f1ee826eb075e41dfb1f146b30d",
       "stream": "research",
@@ -21010,8 +21050,8 @@
       "id": "2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked",
       "source": "2026/2026-11-27.md",
       "anchor": "data-shape-check-for-the-optomechanics-lane-masked",
-      "start_line": 162,
-      "end_line": 171,
+      "start_line": 182,
+      "end_line": 191,
       "title": "Data-shape check for the optomechanics lane (masked)",
       "entry_sha256": "fbe559764b4b6b94f2162761893a812851faaeb40b389c9df3ee3198a4b51698",
       "stream": "research",
@@ -21030,8 +21070,8 @@
       "id": "2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
       "source": "2026/2026-11-27.md",
       "anchor": "t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
-      "start_line": 172,
-      "end_line": 181,
+      "start_line": 192,
+      "end_line": 201,
       "title": "T042 data intake and draft (red-blue antisymmetry of backaction)",
       "entry_sha256": "1bed1fe311b39b7e512837c4d65f47ce99be34a53e8a7b9a1e4c704f8014c929",
       "stream": "research",
@@ -21050,8 +21090,8 @@
       "id": "2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures",
       "source": "2026/2026-11-27.md",
       "anchor": "t042-run-and-result-backaction-antisymmetry-from-two-figures",
-      "start_line": 182,
-      "end_line": 191,
+      "start_line": 202,
+      "end_line": 211,
       "title": "T042 run and result (backaction antisymmetry from two figures)",
       "entry_sha256": "da520be987b2cd88923398096609dd51e7a729debb79c43a839ddc61ba5579fc",
       "stream": "research",
@@ -21070,8 +21110,8 @@
       "id": "2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
-      "start_line": 192,
-      "end_line": 201,
+      "start_line": 212,
+      "end_line": 221,
       "title": "Field map for layers 2-3 (STANDARD section 16 step 0), no claim",
       "entry_sha256": "23ba4a04dc41042621fdb7c395d865604a19a8598ead0fabe7e89d515ad049b3",
       "stream": "research",
@@ -21090,8 +21130,8 @@
       "id": "2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
-      "start_line": 202,
-      "end_line": 211,
+      "start_line": 222,
+      "end_line": 231,
       "title": "Q1 screen: when do R* and MaxEP pick different winners (no claim)",
       "entry_sha256": "392c4eb016f29de0285b5ebebd82b717144e1e67b24b04ab9a844ea5d9781332",
       "stream": "research",
@@ -21110,8 +21150,8 @@
       "id": "2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
-      "start_line": 212,
-      "end_line": 221,
+      "start_line": 232,
+      "end_line": 241,
       "title": "Q1 data search: no dataset separates R* from MaxEP (no claim)",
       "entry_sha256": "90738ef185e6d771ddb6e99aead64310b1cbfaa862e997ff8120a7125109bfef",
       "stream": "research",
@@ -21130,16 +21170,56 @@
       "id": "2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
-      "start_line": 222,
-      "end_line": 230,
+      "start_line": 242,
+      "end_line": 251,
       "title": "Q1 He-Ne check: both rules pick the 3.39 um line (no claim)",
-      "entry_sha256": "2e10ebc883d506d92fe06b6a644894e467331243c19a762d3cfc7768ccc51c9b",
+      "entry_sha256": "d5d04e687ea3e34f2b4c6f5552cd213919ba2d3a7f417cb24f581f6c5c3d844c",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed",
+      "start_line": 252,
+      "end_line": 262,
+      "title": "Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed",
+      "entry_sha256": "6cf9cec6642fe7fa2c503f39feea7023f6ee66b3fe96b5ffe995ffa80755cb4f",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-6-old-public-documents-and-media-removed-logos-kept",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-6-old-public-documents-and-media-removed-logos-kept",
+      "start_line": 263,
+      "end_line": 271,
+      "title": "Cleanup phase 6: old public documents and media removed (logos kept)",
+      "entry_sha256": "052eddae2e47c15ff189e4cfe5724e2117facf1333897c642c0e57af5ca791bf",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
@@ -21191,15 +21271,35 @@
       "source": "2026/2026-11-28.md",
       "anchor": "q2-bartus-2026-si-data-shape-check-no-claim",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Q2: Bartus 2026 SI data-shape check (no claim)",
-      "entry_sha256": "05a5fce91dd5e06f8f322591f5c287a6f1f142b1c9031060101cf1e01d1fe701",
+      "entry_sha256": "d956ebea35fca2a79cfd0b2dd17e38f62f7e1d2002058c857791a31f49e25563",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check",
+      "source": "2026/2026-11-28.md",
+      "anchor": "cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Cleanup PR #98: keep docs/scripts/debug for the public-boundary check",
+      "entry_sha256": "f69096f52693d2af8518ea0ab863ed806e0f8976ebe28f42099b3836b63ff615",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

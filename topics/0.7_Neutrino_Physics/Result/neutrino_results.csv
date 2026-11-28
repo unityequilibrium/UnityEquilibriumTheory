@@ -1,5 +1,0 @@
-Metric,UET,Observed,Error_Pct,Status
-theta12,33.41,33.44,0.09,PASS
-theta23,42.20,49.20,14.23,PASS
-theta13,8.62,8.57,0.58,PASS
-delta_cp,230.00,195.00,17.95,FAIL

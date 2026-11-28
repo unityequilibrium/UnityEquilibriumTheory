@@ -1,6 +1,0 @@
-Parameters,Test_Loss,Compute_FLOPs
-1e7,3.6,1e17
-1e8,3.1,1e18
-1e9,2.8,1e19
-1e10,2.5,1e20
-1.75e11,2.0,3e23

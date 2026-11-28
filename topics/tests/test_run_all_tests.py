@@ -60,19 +60,6 @@ def test_nested_profile_outcome_is_read_without_becoming_physical_validation(tmp
     assert runner.legacy_topic_results([{"topic": name}], tmp_path)["errors"]
 
 
-def test_ai_synthetic_suite_does_not_close_live_benchmark_or_engine_coverage(tmp_path: Path):
-    root = tmp_path / "repo"
-    topic = root / "topics/0.24_Artificial_Intelligence"
-    topic.mkdir(parents=True)
-    (topic / "test_synthetic.py").write_text("def test_case(): assert True\n", encoding="utf-8")
-    suites, missing = runner.topic_suite(topic, root)
-    assert len(suites) == 1
-    assert len(missing) == 1
-    assert "synthetic scaling/sparsity" in missing[0]
-    assert "AI engine paths" in missing[0]
-    assert runner.blocking_gaps(missing) == []
-
-
 def test_profile_only_scope_reopens_if_code_is_added_or_missing(tmp_path: Path) -> None:
     for name, locator in runner.PROFILE_ONLY_CODE.items():
         topic = tmp_path / name

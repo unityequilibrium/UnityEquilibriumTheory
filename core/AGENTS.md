@@ -38,10 +38,10 @@ Use `core/core_paths.py` as the path authority. Keep `__init__.py`, `AGENTS.md`,
 ## Legacy and diagnostics
 
 - Do not delete or rewrite legacy engines, gates or artifacts. Their provenance label is `LEGACY_UNREVIEWED`.
-- Archived failing tests live in `08_history/archived_tests/` (core) and in each topic's `Archive/tests/`. They are not evidence and are not run.
+- Legacy tests (regression, numerical, equation, artifact), legacy output in `07_artifacts/` and `08_history/` were removed on 2026-11-27, except files a calculation contract locks (STANDARD §8); they are kept at git tag `archive/legacy-2026-11`. Only `05_tests/physics/` and the two tests a contract locks remain.
 - The foundation gates F0–F8, the main-theory wave gates, the aggregate, reconcile v4, migration and scientific-link audits are **diagnostic tools**. They do not decide a claim's level.
 - Re-running them is optional. Never hand-edit generated output. Never hide a failed result through clipping, fallback parameters or renamed statuses.
-- The old core README is kept at `08_history/README_LEGACY_2026-11-14.md`. It is not a claim source.
+- The old core README is at `08_history/README_LEGACY_2026-11-14.md` in tag `archive/legacy-2026-11`. It is not a claim source.
 
 ## Wave close
 

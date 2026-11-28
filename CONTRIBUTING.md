@@ -82,7 +82,7 @@ internal benchmark, and externally supported research.
 
 See
 [\`04_Claim_and_Evidence_Rubric.md\`](topics/For%20Work/04_Claim_and_Evidence_Rubric.md)
-and the [documentation style guide](docs/UET_Documentation_Details/STANDARDS/documentation_style_guide.md).
+and [Research Standard v2](docs/STANDARD.md).
 
 ## Standard work packages
 

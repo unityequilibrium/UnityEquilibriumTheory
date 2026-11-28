@@ -1,4 +1,0 @@
-Galaxy: UGC_128
-Model Error: 411.1727%
-Fluid Contribution at Edge: 456.96 km/s
-Hypothesis Status: Weak Fit

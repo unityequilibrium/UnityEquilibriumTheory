@@ -1,3 +1,0 @@
-Metric,Value,Notes,Status
-Speedup_vs_NS,210.5x,Gradient Flow Approximation,PASS
-Stability_High_Re,Stable,Unconditionally Stable,PASS
