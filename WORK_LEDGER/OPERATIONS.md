@@ -6,16 +6,17 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 148. Counts describe records, not accomplishments.
+Indexed entries: 149. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
 | 2026-11-28 | [Cleanup PR #98: keep docs/scripts/debug for the public-boundary check](2026/2026-11-28.md#cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check) (L33) | repo-ops | explicit_stream_and_area |
-| 2026-11-27 | [Cleanup phase 6: old public documents and media removed (logos kept)](2026/2026-11-27.md#cleanup-phase-6-old-public-documents-and-media-removed-logos-kept) (L254) | repo-ops | explicit_stream_and_area |
-| 2026-11-27 | [Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed](2026/2026-11-27.md#cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed) (L243) | repo-ops | explicit_stream_and_area |
-| 2026-11-27 | [Cleanup phase 4: old core-research topics removed](2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed) (L73) | repo-ops | explicit_stream_and_area |
-| 2026-11-27 | [Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed](2026/2026-11-27.md#cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed) (L63) | repo-ops | explicit_stream_and_area |
-| 2026-11-27 | [Cleanup plan (draft) after the content-value audit](2026/2026-11-27.md#cleanup-plan-draft-after-the-content-value-audit) (L53) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Cleanup phase 6: old public documents and media removed (logos kept)](2026/2026-11-27.md#cleanup-phase-6-old-public-documents-and-media-removed-logos-kept) (L263) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed](2026/2026-11-27.md#cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed) (L252) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Cleanup phase 4: old core-research topics removed](2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed) (L82) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Cleanup phases 2-3: section 8 amended, legacy output, history and tests removed](2026/2026-11-27.md#cleanup-phases-2-3-section-8-amended-legacy-output-history-and-tests-removed) (L72) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Cleanup plan (draft) after the content-value audit](2026/2026-11-27.md#cleanup-plan-draft-after-the-content-value-audit) (L62) | repo-ops | explicit_stream_and_area |
+| 2026-11-27 | [Fix: standard tests could write into the repository named by GIT_DIR](2026/2026-11-27.md#fix-standard-tests-could-write-into-the-repository-named-by-git_dir) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-25 | [Research CI job timeout raised to 40 minutes](2026/2026-11-25.md#research-ci-job-timeout-raised-to-40-minutes) (L153) | repo-ops | explicit_stream_and_area |
 | 2026-11-25 | [Repair: another session's git config in this folder](2026/2026-11-25.md#repair-another-sessions-git-config-in-this-folder) (L3) | repo-ops | explicit_stream_and_area |
 | 2026-11-19 | [Main Validation red because its audit job checked out one commit](2026/2026-11-19.md#main-validation-red-because-its-audit-job-checked-out-one-commit) (L83) | repo-ops | explicit_stream_and_area |
