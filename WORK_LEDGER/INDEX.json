@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1044,
+    "entries": 1047,
     "by_stream": {
       "book-history": 94,
       "operations": 149,
-      "research": 800,
+      "research": 803,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -470,8 +470,8 @@
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "bf535d4f7ae53e14ecbf289fb6aca8d5facedc98f8bedc8e14bb21229df3ed36",
-      "entries": 5
+      "sha256": "9b1f06504b05f2336bbbdc0c80591f28f7acf6e9b2056a3ff32b385f3af1d37c",
+      "entries": 8
     },
     {
       "path": "2026-08-14.md",
@@ -21307,11 +21307,71 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-28.md#open-item-inventory-and-card-v2-physics-v2-w4-v2-ef-v2-um-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "open-item-inventory-and-card-v2-physics-v2-w4-v2-ef-v2-um-no-claim",
+      "start_line": 43,
+      "end_line": 52,
+      "title": "Open-item inventory and Card v2 physics (V2-W4, V2-EF, V2-UM; no claim)",
+      "entry_sha256": "f44ea2a34be2b79383e877d06016132d7a54898a3c79d6fe9d345706612e2312",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#card-v2-author-decisions-recorded",
+      "source": "2026/2026-11-28.md",
+      "anchor": "card-v2-author-decisions-recorded",
+      "start_line": 53,
+      "end_line": 62,
+      "title": "Card v2 author decisions recorded",
+      "entry_sha256": "19f64578bd4b5f9d57186c16c615665911a383bc659c48ef443ec82950042e3a",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#card-v2-approved-as-a-parallel-card",
+      "source": "2026/2026-11-28.md",
+      "anchor": "card-v2-approved-as-a-parallel-card",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Card v2 approved as a parallel card",
+      "entry_sha256": "518df479671f2cd33b1c5826c3a2bd656ba72928f910dd82692d1143423b14b1",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-28.md#game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim",
       "source": "2026/2026-11-28.md",
       "anchor": "game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim",
-      "start_line": 43,
-      "end_line": 51,
+      "start_line": 73,
+      "end_line": 81,
       "title": "Game-physics lane (debris coarse graining, energy-budget sleeping; no claim)",
       "entry_sha256": "0a7dae883520b7f0c72597baa435692f926a863d94a934d88a06d22487ac0aed",
       "stream": "research",

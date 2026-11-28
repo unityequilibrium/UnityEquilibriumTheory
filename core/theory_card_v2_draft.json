@@ -2,7 +2,7 @@
   "schema": "uet-theory-card-v2",
   "card_id": "UET_PARENT",
   "version": 2,
-  "status": "DRAFT",
+  "status": "APPROVED",
   "drafted_by": "claude",
   "draft_date": "2026-11-27",
   "core_equations": [
@@ -15,19 +15,29 @@
     {
       "formula_id": "UET-V2-METRIC-EOM",
       "expression": "F G_mn = T^phi_mn + T^chi_mn + (nabla_m nabla_n - g_mn box) F",
-      "code_path": "none yet",
-      "level": "L0_SPECULATIVE"
+      "code_path": "core/03_lanes/scalar_tensor/uet_card_v2.py::metric_residual",
+      "level": "L0_SPECULATIVE",
+      "derivation_check": "core/05_tests/physics/test_card_v2_field_equations.py (passes; card not approved)"
     },
     {
       "formula_id": "UET-V2-DILATON-EOM",
       "expression": "box phi + xi_phi phi R - dV/dphi = 0",
-      "code_path": "none yet",
-      "level": "L0_SPECULATIVE"
+      "code_path": "core/03_lanes/scalar_tensor/uet_card_v2.py::dilaton_residual",
+      "level": "L0_SPECULATIVE",
+      "derivation_check": "core/05_tests/physics/test_card_v2_field_equations.py (passes; card not approved)"
     },
     {
       "formula_id": "UET-V2-MATTER-EOM",
       "expression": "box chi_A + xi_chi R chi_A - 2 (dV/dX) chi_A = 0",
-      "code_path": "none yet",
+      "code_path": "core/03_lanes/scalar_tensor/uet_card_v2.py::matter_residual",
+      "level": "L0_SPECULATIVE",
+      "derivation_check": "core/05_tests/physics/test_card_v2_field_equations.py (passes; card not approved)"
+    },
+    {
+      "formula_id": "UET-V2-DILATATION",
+      "expression": "phi E_phi + chi_A E_A + g^mn E_mn = box J / 2, J = (1 + 6 xi_phi) phi^2 + (1 + 6 xi_chi) X (off shell)",
+      "code_path": "core/03_lanes/scalar_tensor/uet_card_v2.py::dilatation_combination",
+      "derivation_check": "core/05_tests/physics/test_card_v2_field_equations.py (passes)",
       "level": "L0_SPECULATIVE"
     }
   ],
@@ -81,6 +91,12 @@
       "meaning": "phi quartic (lambda_psi of v1)",
       "mass_dimension": 0,
       "independent": true
+    },
+    {
+      "symbol": "Lambda0",
+      "meaning": "integration constant of unimodular gravity (option b only); initial data, not a coupling",
+      "mass_dimension": 4,
+      "independent": false
     }
   ],
   "nearest_known_class": {
@@ -88,7 +104,11 @@
     "references": [
       "M. Shaposhnikov and D. Zenhausern, Phys. Lett. B 671, 162 (2009)",
       "J. Garcia-Bellido, J. Rubio, M. Shaposhnikov and D. Zenhausern, Phys. Rev. D 84, 123504 (2011), arXiv:1107.2163",
-      "A. Zee, Phys. Rev. Lett. 42, 417 (1979)"
+      "A. Zee, Phys. Rev. Lett. 42, 417 (1979)",
+      "J. Rubio and M. Shaposhnikov, Phys. Rev. D 90, 027307 (2014), arXiv:1406.5182",
+      "M. Trashorras, S. Nesseris and J. Garcia-Bellido, arXiv:1604.06760",
+      "O. F. Ramadan, J. Sakstein and D. Rubin, arXiv:2405.18747",
+      "S. Bhattacharya et al., arXiv:2405.17396"
     ],
     "variable_map": "phi = dilaton; chi_A = Higgs-like field but O(2) with 2 components instead of an SU(2) doublet"
   },
@@ -101,13 +121,22 @@
     {
       "parameter": "k, Z, epsilon, phi_star",
       "absorbed_by": "canonical normalization and shift, as in v1"
+    },
+    {
+      "parameter": "initial dilaton value (option b)",
+      "absorbed_by": "shift symmetry: rescales A, which Omega_DE fixes"
     }
   ],
   "predictions": [
     {
-      "observable": "no fifth force from the dilaton (derivative coupling in the Einstein frame, literature)",
-      "system": "solar system",
-      "claim_id": "none yet"
+      "observable": "gamma_PPN - 1 = 0, no long-range fifth force, no DEF scalarisation, for every xi_phi (under the matter condition)",
+      "system": "solar system, binary pulsars, laboratory",
+      "claim_id": "none (draft card); derivation core/05_tests/physics/test_card_v2_einstein_frame.py"
+    },
+    {
+      "observable": "portal-mediated force range <= 0.21 fm (nucleon lane) or 1.6e-18 m (Higgs-like lane)",
+      "system": "laboratory",
+      "claim_id": "none (draft card)"
     },
     {
       "observable": "m_chi^2 / M_Pl^2 = 2 alpha / (xi_phi + xi_chi alpha / lambda_chi)",
@@ -115,9 +144,9 @@
       "claim_id": "C_A2_HIGGS_DILATON_EXTENSION"
     },
     {
-      "observable": "w(a): exactly -1 with ordinary gravity; w0 > -1 possible with unimodular gravity",
+      "observable": "w(a): -1 under (a); under (b) exponential thawing with wa/(1 + w0) between -1.51 and -1.28, set by xi_phi alone",
       "system": "cosmology",
-      "claim_id": "none yet"
+      "claim_id": "none (draft card); derivation core/05_tests/physics/test_card_v2_unimodular.py"
     }
   ],
   "lane_mappings": [
@@ -142,17 +171,51 @@
       "standard_quantity": "time derivative of phi"
     },
     {
+      "lane": "response (matter-coupled mode)",
+      "symbol": "Phi",
+      "standard_quantity": "heavy radial mode at the vacuum, candidate if layers 2-3 need a field that couples to matter"
+    },
+    {
       "lane": "He-4 (Topic 13)",
       "symbol": "O(2) sector",
       "standard_quantity": "not from the action: chi = He-4 atom at tree level FAILED in T015 (2026-11-16); author decision 2026-11-16: Topic 13 Phi (He II superfluid fraction, e0 and Z_Phi by calibration) is a phenomenological closure outside the action"
     }
   ],
-  "open_author_decisions": [
-    "replace v1 or keep v2 as a parallel card",
-    "ordinary gravity or unimodular gravity",
-    "chi as ordinary matter (nucleon lane) or another field (e.g. Higgs)",
-    "after approval: W4-v2 sympy derivation check before any Test Card uses v2"
+  "open_author_decisions": [],
+  "evidence_impact": "see core/THEORY_CARD_V2_DRAFT.md section 9 and topics/0.23_Unity_Scale_Link/Doc/STRESS_14_OPEN_ITEMS_AND_CARD_V2_PHYSICS.md section 3: T001, T005, T016, T019 have no v2 counterpart; C1, C2, T040, T041 become w = -1 (a) or exponential thawing (b); layers 2-3, observation layer, Lorentz and O8 unchanged",
+  "source": "core/THEORY_CARD_V2_DRAFT.md",
+  "draft_revision": 2,
+  "revision_date": "2026-11-28",
+  "matter_condition": "every matter mass outside chi comes from phi or chi through dimensionless couplings (degree-1 function of the fields); without it the dilaton is Brans-Dicke and Cassini needs xi_phi <= 5.75e-6",
+  "gravity_options": {
+    "a_ordinary": "w = -1 exactly (U0 = V/F^2 at the vacuum)",
+    "b_unimodular": "V -> V + Lambda0; Einstein-frame U = U0 + A exp(-lam sigma), lam = 4 sqrt(xi_phi / (1 + 6 xi_phi)) < 1.633; one-parameter thawing w(a) if U0 = 0"
+  },
+  "difference_note": "none at the level of the action; only the chi lane (not the inflaton, so the Higgs-dilaton n_s - w0 relation and its bound xi_dilaton < 0.00328 do not bind UET) and O(2) instead of an SU(2) doublet",
+  "open_physics": [
+    "quantum level: dilaton decoupling needs scale-invariant regularisation",
+    "layers 2-3 re-derived with v2 modes (dilaton friction through derivative couplings)",
+    "growth and CMB under (b), background only",
+    "no coupling value is predicted (hierarchy moved, not explained)"
   ],
-  "evidence_impact": "claims tied to v1 (T001, T005, T016, T019, C1, C2, C3, T040, T041) would need recomputation or a v1 label",
-  "source": "core/THEORY_CARD_V2_DRAFT.md"
+  "author_decisions": {
+    "date": "2026-11-28",
+    "by": "santxkoz",
+    "role": "AUTHOR",
+    "source": "chat",
+    "note": "choices only; the card itself is not approved",
+    "parallel_or_replace": "parallel to v1 (v1 stays in force)",
+    "gravity": "b_unimodular",
+    "chi_lane": "Higgs-like field giving masses to other matter",
+    "matter_condition": "accepted"
+  },
+  "role": "PARALLEL",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-28",
+    "role": "AUTHOR",
+    "scope": "parallel card; v1 (core/theory_card.json) stays the card in force",
+    "source": "chat"
+  },
+  "tooling_note": "check_schema.py matches Test Card theory_card refs against core/theory_card.json (v1) only; Test Cards on v2 need an owner-approved checker change first"
 }
