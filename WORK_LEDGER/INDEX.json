@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1043,
+    "entries": 1044,
     "by_stream": {
       "book-history": 94,
       "operations": 149,
-      "research": 799,
+      "research": 800,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -470,8 +470,8 @@
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "74f87271c0250fa5e3bd6ab44ef438f1914399c5e5e05b2ff2b6dc935e5f2d2b",
-      "entries": 4
+      "sha256": "bf535d4f7ae53e14ecbf289fb6aca8d5facedc98f8bedc8e14bb21229df3ed36",
+      "entries": 5
     },
     {
       "path": "2026-08-14.md",
@@ -21291,15 +21291,35 @@
       "source": "2026/2026-11-28.md",
       "anchor": "cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check",
       "start_line": 33,
-      "end_line": 41,
+      "end_line": 42,
       "title": "Cleanup PR #98: keep docs/scripts/debug for the public-boundary check",
-      "entry_sha256": "f69096f52693d2af8518ea0ab863ed806e0f8976ebe28f42099b3836b63ff615",
+      "entry_sha256": "4d69d84810d8ddf3d5ddc9396eab65dd1b4223f9c5e79dc0eb613b385c2de665",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Game-physics lane (debris coarse graining, energy-budget sleeping; no claim)",
+      "entry_sha256": "0a7dae883520b7f0c72597baa435692f926a863d94a934d88a06d22487ac0aed",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
