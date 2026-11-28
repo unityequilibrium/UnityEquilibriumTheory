@@ -504,6 +504,30 @@
       "license": "arXiv non-exclusive distribution licence 1.0: no redistribution, so the file is kept local and not committed",
       "visibility": "PRIVATE_LOCAL",
       "note": "Downloaded with the author's permission (2026-11-26, chat: 'Chen 2019 priors') for Test Card T041 while it is a DRAFT. The .tex was extracted from arXiv-1808.05724v1.tar.gz (5,832,773 bytes, sha256 9a01121d3a36ff2fd00b39023906e030a4044b9581a5596b7c0e7b535ec4a110); figures were not kept. Before approval only the table layout and the z* convention were read with every digit masked; no value was read."
+    },
+    {
+      "data_id": "ARCIZET2006_FIG4_PNG",
+      "description": "Figure 4 of Arcizet et al., 'Radiation-pressure cooling and optomechanical instability of a micromirror': frequency shift and damping ratio Gamma_eff/Gamma_m versus normalised detuning for five incident powers (points: measurements; lines: fits)",
+      "source": "O. Arcizet, P.-F. Cohadon, T. Briant, M. Pinard, A. Heidmann, Nature 444, 71 (2006), arXiv:quant-ph/0607205 (ar5iv rendering)",
+      "doi_or_url": "https://doi.org/10.1038/nature05244 ; https://ar5iv.labs.arxiv.org/html/quant-ph/0607205/assets/Cohadon_fig4.png",
+      "retrieved": "2026-11-27",
+      "path": "docs/data/external/optomechanics/arcizet2006/private/Cohadon_fig4.png",
+      "sha256": "8f8d93dfac0a11b2ef34223d5f2499fa797f4ec876a9c30bf1c1f6aa5c6f67aa",
+      "license": "arXiv non-exclusive distribution licence: no redistribution, so the file is kept local and not committed",
+      "visibility": "PRIVATE_LOCAL",
+      "note": "Downloaded with the author's permission (2026-11-27, chat: 'Download both') for Test Card T042 while it is a DRAFT; 138,411 bytes, PNG 1065 x 710. Not opened before approval: only the caption was read, with every digit masked."
+    },
+    {
+      "data_id": "BENEVIDES2017_FIG3_JPG",
+      "description": "Figure 3 of Benevides et al., 'Ultrahigh-Q optomechanical crystal cavities fabricated in a CMOS foundry': (a) optomechanical linewidth modification versus laser detuning (points: Lorentzian fits; line: theory), (b-d) mechanical spectra map, optical mode and extreme linewidths",
+      "source": "R. Benevides, F. G. S. Santos, G. O. Luiz, G. S. Wiederhecker, T. P. Mayer Alegre, Sci. Rep. 7, 2491 (2017)",
+      "doi_or_url": "https://doi.org/10.1038/s41598-017-02515-4 ; https://cdn.ncbi.nlm.nih.gov/pmc/blobs/7aac/5449385/44c2434fa07e/41598_2017_2515_Fig3_HTML.jpg",
+      "retrieved": "2026-11-27",
+      "path": "docs/data/external/optomechanics/cmos_foundry2017/41598_2017_2515_Fig3_HTML.jpg",
+      "sha256": "8d4c415fa41e44faead7e80cbe10fa29b70b79dc6b12d4cb0c7f3f4e2970426b",
+      "license": "CC BY 4.0 (Scientific Reports, open access); attribution: Benevides et al. 2017",
+      "visibility": "PUBLIC",
+      "note": "Downloaded with the author's permission (2026-11-27, chat: 'Download both') for Test Card T042 while it is a DRAFT; 163,315 bytes, JPEG 675 x 348 (the whole figure, so panel (a) is small). Not opened before approval: only the caption was read, with every digit masked."
     }
   ]
 }

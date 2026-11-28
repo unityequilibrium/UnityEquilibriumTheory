@@ -1,0 +1,70 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_S1_SCALE_SYMMETRY",
+  "claim_id": "C_S1_SCALE_INVARIANT_RESTRICTION",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "scaling_of_restricted_action",
+      "value": "invariant at 20 random points (rel < 1e-10), sympy geometry from the card text",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "terms_checked_against_geometry",
+      "value": "13 of 13 scale with the assigned power of s (rel < 1e-9)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "terms_forbidden",
+      "value": "R / (2 kappa); eps xi phi* phi R / kappa  (phi* != 0); F Lambda / kappa; eps xi phi^2 Lambda / kappa; eps rho*; eps mu^2 phi^2 / 2; m^2 |chi|^2 / 2; eps h phi |chi|^2 / 2  (portal)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "free_parameters",
+      "value": "7 -> 3 dimensionless + 1 scale (<psi>)",
+      "uncertainty": null,
+      "unit": "count"
+    },
+    {
+      "name": "static_de_sitter_for_every_psi0",
+      "value": "residual < 1e-12 at 20 random points; an explicit mass breaks it",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "brans_dicke_identity",
+      "value": "gamma - 1 = -1/(omega + 2), omega = 1/(4 xi_c), rel < 1e-12",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "cassini_xi_c_max",
+      "value": "5.750e-06",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lambda_psi_over_xi_c2_for_observed_dark_energy",
+      "value": "2.87e-120 (reduced Planck units, h = 0.674, Omega_Lambda = 0.685)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lambda_psi_max_at_cassini_bound",
+      "value": "9.5e-131",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_scale_symmetry.py",
+    "commit": "8e089c344"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave S1 (topic 0.23 STRESS_12, option A, chosen by the author 2026-11-27). Global scale symmetry imposed on UET_PARENT v1 without adding terms. Survivors: eps xi phi^2 R/(2 kappa) with phi* = 0, the kinetic terms, lambda_phi phi^4 and lambda_chi |chi|^4. The restricted theory is induced gravity (Brans-Dicke with omega = 1/(4 xi_c)) plus a decoupled massless chi: the portal and the thawing dark energy of C1-C3 are forbidden, dark energy is an exact cosmological constant lambda/(4 xi^2), and the vacuum-energy hierarchy moves into lambda ~ 1e-130. The Higgs-dilaton class restores matter coupling and masses with a quartic portal and xi_chi |chi|^2 R, which are not in the card: adding them is the author's decision (Theory Card v2). Nearest theory: induced gravity (Zee 1979), Higgs-dilaton. Not UET-distinct."
+}

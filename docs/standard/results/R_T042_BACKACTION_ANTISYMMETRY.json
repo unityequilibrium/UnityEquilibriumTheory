@@ -1,0 +1,41 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_T042_BACKACTION_ANTISYMMETRY",
+  "claim_id": "C_O8_OPTOMECHANICS_LANE",
+  "test_card_id": "T042",
+  "level": "L1_CONSISTENT",
+  "outcome": "INCONCLUSIVE",
+  "numbers": [
+    {
+      "name": "R Arcizet 2006 Fig. 4 (5 power curves pooled)",
+      "value": "+0.040 (reading sd 0.011; 32 pairs)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "R Benevides 2017 Fig. 3a",
+      "value": "+0.217 (reading sd 0.106; 58 pairs)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "criteria",
+      "value": "PASS |R| <= 0.15 in both; FAIL |R| > 0.35 in either; INCONCLUSIVE otherwise",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "points read per series",
+      "value": "Arcizet [36, 27, 32, 16, 16]; Benevides [131]",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "core/03_lanes/optomechanics/t042_backaction_antisymmetry.py",
+    "commit": "a79c55c0f"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "INCONCLUSIVE under Test Card T042 (approved before the figures were opened; one run). Arcizet: |R| = 0.040 is inside the PASS limit, but the pairs come only from the tails (|phi| about 1.5 to 2.9): on the blue side the points between phi = 0.3 and 1.5 sit at damping ratio near 0 on the bottom axis and were not read, so the red peak (ratio up to about 7 near phi = -0.7) has no partner. This is a property of the measurement (on the blue side the damping cannot be measured below 0, where the resonator self-oscillates), not of the reader. Benevides: R = 0.217 with a large reading spread (0.106) because the panel is about 180 x 80 pixels. Two deviations were entered with the calibration after approval and before computing R: an exclusion box for the Arcizet inset and a 3 x 3 opening to separate its markers from same-colour fit lines. Not UET-distinct: the linear optomechanics model predicts R = 0. Recorded at L1; the claim stays L1."
+}

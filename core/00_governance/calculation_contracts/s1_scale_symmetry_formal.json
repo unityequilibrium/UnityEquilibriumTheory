@@ -1,0 +1,140 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "s1_scale_symmetry_formal",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "tool:new_formal_contract",
+    "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
+  },
+  "question": "Which terms of the parent action survive global scale symmetry, how many parameters remain, and what does the restricted theory do?",
+  "output": {
+    "quantity": "surviving terms, parameter count, Brans-Dicke omega and Cassini bound on xi_c, Einstein-frame vacuum energy lambda/xi^2",
+    "unit": "natural",
+    "domain": "declared formal domain of the code",
+    "accuracy": "exact or as asserted by the listed physics tests",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "s1_scale_symmetry"
+    ],
+    "assumptions": "as declared in the code and Theory Card",
+    "approximation": "none beyond the code",
+    "initial_boundary": "algebraic",
+    "drive_environment": "not relevant to a formal derivation",
+    "parameters": "symbolic or test-sampled"
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "none"
+  },
+  "observation": {
+    "source_state": "not applicable to this formal derivation",
+    "generated_trace": "not applicable to this formal derivation",
+    "carrier": "not applicable to this formal derivation",
+    "observer_state": "not applicable to this formal derivation",
+    "readout": "not applicable to this formal derivation",
+    "backaction": "not applicable to this formal derivation",
+    "frame": "not applicable to this formal derivation",
+    "time_convention": "not applicable to this formal derivation",
+    "product_level": "not applicable to this formal derivation",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/uet_scale_symmetry.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/scalar_tensor/uet_scale_symmetry.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
+      "evidence": [
+        "core/05_tests/physics/test_scale_symmetry.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "natural",
+    "numerical": "test tolerances",
+    "approximation": "none declared",
+    "measurement": "not applicable",
+    "systematic": "not applicable",
+    "omissions": "none declared",
+    "dependence": "not applicable",
+    "acceptance": "formal coverage only",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "core/03_lanes/scalar_tensor/uet_scale_symmetry.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "eb3412c1fa6829351c071563d99a2c62f30b0267af95948116fb786702c98a86",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/05_tests/physics/test_scale_symmetry.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "739fd203f37e79022f4e93310883087b9a01330642879ae9e001f2aba1f2631b",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/scalar_tensor/uet_scale_symmetry.py"
+  ],
+  "evidence": [
+    "core/03_lanes/scalar_tensor/uet_scale_symmetry.py",
+    "core/05_tests/physics/test_scale_symmetry.py"
+  ],
+  "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
+  "next_action": "Refresh identities with this tool when the code or tests change."
+}

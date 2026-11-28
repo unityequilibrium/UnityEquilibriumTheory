@@ -6,10 +6,26 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 780. Counts describe records, not accomplishments.
+Indexed entries: 796. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-27 | [Q1 He-Ne check: both rules pick the 3.39 um line (no claim)](2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim) (L213) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Q1 data search: no dataset separates R* from MaxEP (no claim)](2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim) (L203) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Q1 screen: when do R* and MaxEP pick different winners (no claim)](2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim) (L193) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Field map for layers 2-3 (STANDARD section 16 step 0), no claim](2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim) (L183) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [T042 run and result (backaction antisymmetry from two figures)](2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures) (L173) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [T042 data intake and draft (red-blue antisymmetry of backaction)](2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction) (L163) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Data-shape check for the optomechanics lane (masked)](2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked) (L153) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain](2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain) (L143) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Stress test 13 and wave J1: where combining sectors forces new relations](2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations) (L133) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Theory Card v2 drafted (Higgs-dilaton form, not approved)](2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved) (L123) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)](2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended) (L113) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)](2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b) (L103) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave C1: persistence selection inside one universe (STRESS_12 option C)](2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c) (L93) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave D1: attractors and the initial field value (STRESS_12 option D)](2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d) (L83) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Wave S1: scale-invariant restriction of the parent action](2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action) (L73) | research-core | explicit_stream_and_area |
+| 2026-11-27 | [Stress test 12: parameter scaling returns in the parent action (topic 0.23)](2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Content-value audit (how much of the repository is AI slop)](2026/2026-11-27.md#content-value-audit-how-much-of-the-repository-is-ai-slop) (L43) | research-standards | explicit_stream_and_area |
 | 2026-11-27 | [STANDARD.md section 16 (research design) in force after author approval](2026/2026-11-27.md#standardmd-section-16-research-design-in-force-after-author-approval) (L33) | research-standards | explicit_stream_and_area |
 | 2026-11-27 | [Proposal: research-design standard (question quality before a Test Card)](2026/2026-11-27.md#proposal-research-design-standard-question-quality-before-a-test-card) (L23) | research-standards | explicit_stream_and_area |

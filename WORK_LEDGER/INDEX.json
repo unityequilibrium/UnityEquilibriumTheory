@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1018,
+    "entries": 1034,
     "by_stream": {
       "book-history": 94,
       "operations": 143,
-      "research": 780,
+      "research": 796,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "37f66ecccb3b2d84b2b4e470a9431cc4717320ef112361d8f15c20ac9eb7d22d",
-      "entries": 6
+      "sha256": "4c8936d6a689ce0fa8b342e775f191155316d42d31590f2dee98159b85d13e6e",
+      "entries": 22
     },
     {
       "path": "2026-08-14.md",
@@ -20786,15 +20786,335 @@
       "source": "2026/2026-11-27.md",
       "anchor": "cleanup-plan-draft-after-the-content-value-audit",
       "start_line": 53,
-      "end_line": 61,
+      "end_line": 62,
       "title": "Cleanup plan (draft) after the content-value audit",
-      "entry_sha256": "716cc292cd6cd3dff063ad42a8387d0ee0a7e9b529dd14692ef4e382b16df651",
+      "entry_sha256": "33a20fb33e8e8e356829547aecde4e5030590fa99e2878b649aeab2c7f1e029a",
       "stream": "operations",
       "areas": [
         "repo-ops"
       ],
       "related_streams": [
         "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
+      "source": "2026/2026-11-27.md",
+      "anchor": "stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
+      "start_line": 63,
+      "end_line": 72,
+      "title": "Stress test 12: parameter scaling returns in the parent action (topic 0.23)",
+      "entry_sha256": "8542bec615cb89af13d81b2f5e3e179a1ea81840bacd72cf37761477782100ac",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-s1-scale-invariant-restriction-of-the-parent-action",
+      "start_line": 73,
+      "end_line": 82,
+      "title": "Wave S1: scale-invariant restriction of the parent action",
+      "entry_sha256": "78cf7a46e6af51d5b2e494c394a6a3c8205689a2ed5f04e0a62d1b75f71dc200",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
+      "start_line": 83,
+      "end_line": 92,
+      "title": "Wave D1: attractors and the initial field value (STRESS_12 option D)",
+      "entry_sha256": "c5d472d1fdf8c83d21cacb6358c86612f0b48c4b12080149bf5f3741913c2996",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
+      "start_line": 93,
+      "end_line": 102,
+      "title": "Wave C1: persistence selection inside one universe (STRESS_12 option C)",
+      "entry_sha256": "606648b0832c119778b8b2d10a202a55a235be934b744b055b5d93e90309f410",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
+      "start_line": 103,
+      "end_line": 112,
+      "title": "Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)",
+      "entry_sha256": "db8af5bb40c811547cc7b990a31b625d9f12d8af5aecc891c1316c62c4d7453b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
+      "start_line": 113,
+      "end_line": 122,
+      "title": "Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)",
+      "entry_sha256": "03f28919d4639f4b8781a14766340cb42c2567e2ec1cdbb7ce8b3704721b6cda",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved",
+      "source": "2026/2026-11-27.md",
+      "anchor": "theory-card-v2-drafted-higgs-dilaton-form-not-approved",
+      "start_line": 123,
+      "end_line": 132,
+      "title": "Theory Card v2 drafted (Higgs-dilaton form, not approved)",
+      "entry_sha256": "c665b0cd22b2f3d1707e5bee4db4bb9fc650b9601cf669eff5b934381aace572",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
+      "source": "2026/2026-11-27.md",
+      "anchor": "stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
+      "start_line": 133,
+      "end_line": 142,
+      "title": "Stress test 13 and wave J1: where combining sectors forces new relations",
+      "entry_sha256": "1fa471c5daeb805b33f2bc1e6e9d8a08ff28093088b0d8bdd47abd54b80af0a6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
+      "source": "2026/2026-11-27.md",
+      "anchor": "wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
+      "start_line": 143,
+      "end_line": 152,
+      "title": "Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain",
+      "entry_sha256": "277e6f328743487d2aa1834038baceac91208f1ee826eb075e41dfb1f146b30d",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked",
+      "source": "2026/2026-11-27.md",
+      "anchor": "data-shape-check-for-the-optomechanics-lane-masked",
+      "start_line": 153,
+      "end_line": 162,
+      "title": "Data-shape check for the optomechanics lane (masked)",
+      "entry_sha256": "fbe559764b4b6b94f2162761893a812851faaeb40b389c9df3ee3198a4b51698",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
+      "source": "2026/2026-11-27.md",
+      "anchor": "t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
+      "start_line": 163,
+      "end_line": 172,
+      "title": "T042 data intake and draft (red-blue antisymmetry of backaction)",
+      "entry_sha256": "1bed1fe311b39b7e512837c4d65f47ce99be34a53e8a7b9a1e4c704f8014c929",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures",
+      "source": "2026/2026-11-27.md",
+      "anchor": "t042-run-and-result-backaction-antisymmetry-from-two-figures",
+      "start_line": 173,
+      "end_line": 182,
+      "title": "T042 run and result (backaction antisymmetry from two figures)",
+      "entry_sha256": "da520be987b2cd88923398096609dd51e7a729debb79c43a839ddc61ba5579fc",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
+      "start_line": 183,
+      "end_line": 192,
+      "title": "Field map for layers 2-3 (STANDARD section 16 step 0), no claim",
+      "entry_sha256": "23ba4a04dc41042621fdb7c395d865604a19a8598ead0fabe7e89d515ad049b3",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
+      "start_line": 193,
+      "end_line": 202,
+      "title": "Q1 screen: when do R* and MaxEP pick different winners (no claim)",
+      "entry_sha256": "392c4eb016f29de0285b5ebebd82b717144e1e67b24b04ab9a844ea5d9781332",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
+      "start_line": 203,
+      "end_line": 212,
+      "title": "Q1 data search: no dataset separates R* from MaxEP (no claim)",
+      "entry_sha256": "90738ef185e6d771ddb6e99aead64310b1cbfaa862e997ff8120a7125109bfef",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
+      "source": "2026/2026-11-27.md",
+      "anchor": "q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
+      "start_line": 213,
+      "end_line": 221,
+      "title": "Q1 He-Ne check: both rules pick the 3.39 um line (no claim)",
+      "entry_sha256": "2e10ebc883d506d92fe06b6a644894e467331243c19a762d3cfc7768ccc51c9b",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],
