@@ -6,10 +6,13 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 799. Counts describe records, not accomplishments.
+Indexed entries: 802. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-28 | [Card v2 approved as a parallel card](2026/2026-11-28.md#card-v2-approved-as-a-parallel-card) (L63) | research-core | explicit_stream_and_area |
+| 2026-11-28 | [Card v2 author decisions recorded](2026/2026-11-28.md#card-v2-author-decisions-recorded) (L53) | research-core | explicit_stream_and_area |
+| 2026-11-28 | [Open-item inventory and Card v2 physics (V2-W4, V2-EF, V2-UM; no claim)](2026/2026-11-28.md#open-item-inventory-and-card-v2-physics-v2-w4-v2-ef-v2-um-no-claim) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2: Bartus 2026 SI data-shape check (no claim)](2026/2026-11-28.md#q2-bartus-2026-si-data-shape-check-no-claim) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2 flow-scan search (no claim)](2026/2026-11-28.md#q2-flow-scan-search-no-claim) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2 screen: chemical replicators (Liu et al. 2022), no claim](2026/2026-11-28.md#q2-screen-chemical-replicators-liu-et-al-2022-no-claim) (L3) | research-core | explicit_stream_and_area |

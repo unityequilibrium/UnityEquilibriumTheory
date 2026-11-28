@@ -2,6 +2,42 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-28 — Card v2 approved as a parallel card
+ทำ: ผู้เขียนอนุมัติ Card v2 ในแชต ("Approve parallel card"); เพิ่ม approval ใน theory_card_v2_draft.json และ §12 ของการ์ด
+ผล: v2 เป็นการ์ดคู่ขนาน (APPROVED); v1 ยังเป็นการ์ดหลัก; ระดับของสมการและ claim ไม่เปลี่ยน
+ระดับ: ไม่มี claim ใหม่; check_schema ยังรับ Test Card ได้เฉพาะ v1 (แก้ตัวตรวจต้องขออนุมัติแยก)
+ถัดไป: ลงทะเบียน derivation check ของ v2 เป็น claim L1 หรือ derive ชั้น 2–3 ด้วย mode ของ v2
+
+## 2026-11-28 — Author decisions on Card v2
+ทำ: ผู้เขียนตัดสิน 4 ข้อของ Card v2 ในแชต บันทึกใน §11 ของ THEORY_CARD_V2_DRAFT.md และ author_decisions ใน JSON
+ผล: v2 คู่ขนานกับ v1; unimodular gravity (ข); χ คล้าย Higgs; รับข้อกำหนดมวลทุกตัวมาจาก field
+ระดับ: การ์ดยังเป็น DRAFT (เลือกทางแล้ว แต่ยังไม่อนุมัติการ์ด); ไม่มี claim ใหม่
+ถัดไป: ผู้เขียนอนุมัติการ์ดหรือไม่; หลังอนุมัติ derive ชั้น 2–3 ด้วย mode ของ v2
+
+## 2026-11-28 — Theory Card v2, second draft (after V2-W4, V2-EF, V2-UM)
+ทำ: เขียน core/THEORY_CARD_V2_DRAFT.md และ theory_card_v2_draft.json ใหม่จากผลสาม wave ข้างล่างและรายการเรื่องค้างใน topic 0.23 STRESS_14
+ผล: เพิ่มข้อกำหนด "มวลทุกตัวมาจาก field", ทางเลือก gravity (ก)/(ข) พร้อมผล, ตาราง prediction, ผลต่อหลักฐาน v1 ทุกข้อ, สิ่งที่ยังไม่รู้
+ระดับ: DRAFT ยังไม่อนุมัติ v1 ยังใช้อยู่; ไม่มี claim ใหม่
+ถัดไป: ผู้เขียนตัดสิน 4 ข้อใน §11 ของการ์ด
+
+## 2026-11-28 — Draft Card v2 under unimodular gravity: which w(a)? (V2-UM)
+ทำ: Λ₀ จาก unimodular ใน Einstein frame และ integrate thawing (uet_card_v2_unimodular.py, physics test 29 ข้อ)
+ผล: U = U₀ + A e^(−λσ), λ = 4√(ξ_φ/(1+6ξ_φ)) < 1.633; ถ้า U₀ = 0 w(a) ขึ้นกับ ξ_φ ตัวเดียว, wa/(1+w₀) ล็อกที่ −1.51 ถึง −1.28; λ = 0.48–0.77 ของวงการ ↔ ξ_φ ≈ 0.016–0.048
+ระดับ: ไม่มี claim (การ์ดเป็น DRAFT); exponential quintessence ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ถ้าผู้เขียนเลือก (ข) Test Card ใหม่ต้องใช้ข้อมูลที่ไม่ได้ใช้ fit; วงการตอบรูปนี้แล้ว (§16 B1)
+
+## 2026-11-28 — Does the draft Card v2 dilaton couple to matter? (V2-EF)
+ทำ: Einstein frame ของ v2: Killing vector ของ field space, scalar charge, สเปกตรัมที่ vacuum (uet_card_v2_einstein.py, physics test 108 ข้อ)
+ผล: มวลดีกรี 1 → charge = 0 พอดี ไม่มี Cassini bound บน ξ_φ; มวลคงที่ → Brans–Dicke ξ_φ ≤ 5.75e-6, β₀ = 0; สเปกตรัม {0, 0, m_r²}, ระยะ portal ≤ 0.21 fm
+ระดับ: ไม่มี claim (การ์ดเป็น DRAFT); ตรงกับวรรณกรรม Higgs-dilaton ไม่ใช่ผลเฉพาะ UET
+ถัดไป: ระดับควอนตัมต้องใช้ regularization ที่คงตัวต่อสเกล (ยังไม่ได้ทำ)
+
+## 2026-11-28 — Do the draft Card v2 field equations follow from its action? (V2-W4)
+ทำ: derivation check ด้วย sympy ของสมการ v2 ทั้งสี่ (uet_card_v2.py, physics test 65 ข้อ)
+ผล: ตรงทุกสมการ (20 จุดต่อสมการ, rel < 1e-10); identity ใหม่ φE_φ + χE_χ + tr E = ½□J (scale current); de Sitter ที่ H² = β_eff φ₀²/(12ξ_φ) สำหรับ φ₀ ทุกค่า
+ระดับ: ไม่มี claim (การ์ดเป็น DRAFT); เป็นสมการตำราของคลาส Higgs-dilaton
+ถัดไป: V2-EF
+
 ## 2026-11-27 — Is optomechanical backaction antisymmetric in the detuning? (T042)
 ทำ: Test Card T042 (ผู้เขียนอนุมัติก่อนเปิดรูป) อ่านจุดจากรูป Arcizet 2006 Fig. 4 และ Benevides 2017 Fig. 3a ด้วยโปรแกรม รันครั้งเดียว
 ผล: INCONCLUSIVE; Arcizet R = +0.040 (ได้คู่จากหางเท่านั้น เพราะฝั่งน้ำเงินใกล้ศูนย์วัด damping ต่ำกว่า 0 ไม่ได้); Benevides R = +0.217 ± 0.106 (รูปเล็ก)

@@ -146,3 +146,8 @@
 ## 2026-11-27 — T042 drafted (optomechanics lane, red-blue antisymmetry)
 - Two figures downloaded with permission and registered (not opened): Arcizet 2006 Fig. 4, Benevides 2017 Fig. 3.
 - Draft card T042 on C_O8_OPTOMECHANICS_LANE: PASS if |R| <= 0.15 in both figures, FAIL if |R| > 0.35 in either. Proposal: `Doc/PROPOSAL_T042_BACKACTION_ANTISYMMETRY_2026-11-27.md`.
+
+## 2026-11-28 — Stress test 14: every open item, and the physics Card v2 needed
+- Question: what is each inconclusive result stuck on, is there new data, and what must be known before Card v2 is rewritten? Note: `Doc/STRESS_14_OPEN_ITEMS_AND_CARD_V2_PHYSICS.md`.
+- Finding: 16 items; new data leads for T028 (Ne for 120 eukaryotes, Lewin & Eyre-Walker 2026) and T026; T023/T025 and T033 cannot be decided in principle; Card v2 is consistent (V2-W4), escapes Cassini when all masses come from the fields (V2-EF) and gives one-parameter dark energy under unimodular gravity (V2-UM).
+- None of the 16 separates UET from standard physics.
