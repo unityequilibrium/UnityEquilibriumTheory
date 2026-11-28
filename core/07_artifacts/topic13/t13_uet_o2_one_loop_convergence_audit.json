@@ -1,0 +1,401 @@
+{
+  "schema_version": "t13-uet-o2-one-loop-convergence-v1",
+  "artifact": "t13_uet_o2_one_loop_convergence_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_ONE_LOOP_CONVERGENCE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ONE_LOOP_CONVERGENCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "cutoff-factor sweep for the thermal-only one-loop normal determinant",
+      "quadrature-order convergence for pressure, Phi response derivative, scalar density, charge, entropy, energy, and susceptibility",
+      "a reproducible plateau baseline at cutoff_factor=70 and quadrature_order=256",
+      "low-order quadrature is excluded from the reference when high-cutoff resolution is insufficient"
+    ],
+    "equation_or_mapping": {
+      "cutoff_control": "p in [0, cutoff_factor * max(T, m_eff, |mu|)]",
+      "quadrature_control": "Gauss-Legendre order N over the explicit thermal-only integral",
+      "acceptance": "max relative drift on the declared plateau <= 1e-8"
+    },
+    "units": {
+      "cutoff": "natural momentum units",
+      "pressure": "natural energy density",
+      "response_derivative": "natural energy density per natural Phi field unit",
+      "charge_density": "natural charge density",
+      "entropy_density": "natural entropy density",
+      "energy_density": "natural energy density",
+      "susceptibility": "natural charge density per natural chemical-potential unit"
+    },
+    "derivation_class": "numerical convergence audit of an action-derived thermal one-loop normal-background integral; not renormalization or physical validation",
+    "observable": "converged thermal normal-background thermodynamic outputs and Phi response derivative",
+    "data_role": "ACTION_DERIVED_NUMERICAL_CONVERGENCE_NOT_PHYSICAL_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/standard_o2_finite_temperature_comparator.py",
+        "sha256": "7278240bb5eea189f6c919933b434c0855d79ccf7ea1532501bb177cad5d1052"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json",
+        "sha256": "dc1143ef4b7837eb93e47d3a0136bf790b1b6ca589756a54bd2aea679c536801"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_ONE_LOOP_CONVERGENCE",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "condensate_goldstone_and_normal_two_fluid_completion_not_derived",
+      "physical_Kubo_coefficient_record_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "numerical stability of action-derived normal branch only; no full thermal, transport, Core, or Gravity unlock",
+    "claim_boundary": "This closes numerical convergence of the declared thermal-only one-loop normal-background integral. It does not close vacuum renormalization, interacting finite-temperature UET dynamics, condensate/two-fluid response, Kubo transport, SI Phi calibration, external validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "cutoff_factor": 70.0,
+    "quadrature_order": 256,
+    "values": {
+      "pressure": 0.0018429129850452265,
+      "pressure_phi_derivative": 6.492209837205052e-05,
+      "thermal_scalar_density": 0.0021640699457350174,
+      "charge_density": 0.002888011495050176,
+      "entropy_density": 0.025520430707306113,
+      "energy_density": 0.007666840061521948,
+      "charge_susceptibility": 0.016412987290065725
+    }
+  },
+  "policy": {
+    "cutoff_factors": [
+      30.0,
+      40.0,
+      50.0,
+      70.0,
+      100.0
+    ],
+    "quadrature_orders": [
+      64,
+      96,
+      128,
+      192,
+      256
+    ],
+    "plateau_min_order": 96,
+    "relative_drift_threshold": 1e-08,
+    "thermal_only": true,
+    "vacuum_counterterm_included": false,
+    "condensate_included": false,
+    "parameter_fitting": false
+  },
+  "grid": {
+    "30": {
+      "64": {
+        "pressure": 0.0018429129850453113,
+        "pressure_phi_derivative": 6.492209837206086e-05,
+        "thermal_scalar_density": 0.0021640699457353622,
+        "charge_density": 0.0028880114950503386,
+        "entropy_density": 0.02552043070730648,
+        "energy_density": 0.007666840061522024,
+        "charge_susceptibility": 0.016412987290066905
+      },
+      "96": {
+        "pressure": 0.0018429129850452226,
+        "pressure_phi_derivative": 6.492209837205081e-05,
+        "thermal_scalar_density": 0.002164069945735027,
+        "charge_density": 0.002888011495050192,
+        "entropy_density": 0.02552043070730625,
+        "energy_density": 0.007666840061522001,
+        "charge_susceptibility": 0.01641298729006581
+      },
+      "128": {
+        "pressure": 0.0018429129850452302,
+        "pressure_phi_derivative": 6.492209837205092e-05,
+        "thermal_scalar_density": 0.0021640699457350305,
+        "charge_density": 0.0028880114950501842,
+        "entropy_density": 0.025520430707306113,
+        "energy_density": 0.007666840061521947,
+        "charge_susceptibility": 0.01641298729006577
+      },
+      "192": {
+        "pressure": 0.0018429129850451094,
+        "pressure_phi_derivative": 6.492209837205074e-05,
+        "thermal_scalar_density": 0.002164069945735025,
+        "charge_density": 0.0028880114950501803,
+        "entropy_density": 0.02552043070730576,
+        "energy_density": 0.0076668400615219415,
+        "charge_susceptibility": 0.016412987290065746
+      },
+      "256": {
+        "pressure": 0.001842912985045126,
+        "pressure_phi_derivative": 6.492209837205066e-05,
+        "thermal_scalar_density": 0.002164069945735022,
+        "charge_density": 0.0028880114950501743,
+        "entropy_density": 0.025520430707305763,
+        "energy_density": 0.007666840061521925,
+        "charge_susceptibility": 0.016412987290065715
+      }
+    },
+    "40": {
+      "64": {
+        "pressure": 0.0018429129850442618,
+        "pressure_phi_derivative": 6.49220983723029e-05,
+        "thermal_scalar_density": 0.00216406994574343,
+        "charge_density": 0.0028880114950523977,
+        "entropy_density": 0.02552043070730285,
+        "energy_density": 0.007666840061522214,
+        "charge_susceptibility": 0.01641298729017748
+      },
+      "96": {
+        "pressure": 0.0018429129850448393,
+        "pressure_phi_derivative": 6.492209837205043e-05,
+        "thermal_scalar_density": 0.0021640699457350144,
+        "charge_density": 0.0028880114950501773,
+        "entropy_density": 0.02552043070730506,
+        "energy_density": 0.007666840061521966,
+        "charge_susceptibility": 0.016412987290065725
+      },
+      "128": {
+        "pressure": 0.0018429129850453191,
+        "pressure_phi_derivative": 6.49220983720512e-05,
+        "thermal_scalar_density": 0.00216406994573504,
+        "charge_density": 0.002888011495050192,
+        "entropy_density": 0.025520430707306384,
+        "energy_density": 0.007666840061521952,
+        "charge_susceptibility": 0.01641298729006582
+      },
+      "192": {
+        "pressure": 0.0018429129850452179,
+        "pressure_phi_derivative": 6.49220983720507e-05,
+        "thermal_scalar_density": 0.0021640699457350235,
+        "charge_density": 0.0028880114950501803,
+        "entropy_density": 0.02552043070730608,
+        "energy_density": 0.007666840061521946,
+        "charge_susceptibility": 0.016412987290065746
+      },
+      "256": {
+        "pressure": 0.0018429129850449613,
+        "pressure_phi_derivative": 6.492209837205071e-05,
+        "thermal_scalar_density": 0.002164069945735024,
+        "charge_density": 0.0028880114950501773,
+        "entropy_density": 0.025520430707305294,
+        "energy_density": 0.007666840061521928,
+        "charge_susceptibility": 0.016412987290065732
+      }
+    },
+    "50": {
+      "64": {
+        "pressure": 0.0018429129850727397,
+        "pressure_phi_derivative": 6.492209837067532e-05,
+        "thermal_scalar_density": 0.0021640699456891774,
+        "charge_density": 0.0028880114950611165,
+        "entropy_density": 0.025520430707399136,
+        "energy_density": 0.00766684006152918,
+        "charge_susceptibility": 0.01641298728856038
+      },
+      "96": {
+        "pressure": 0.0018429129850449115,
+        "pressure_phi_derivative": 6.492209837205012e-05,
+        "thermal_scalar_density": 0.002164069945735004,
+        "charge_density": 0.0028880114950501643,
+        "entropy_density": 0.02552043070730519,
+        "energy_density": 0.007666840061521938,
+        "charge_susceptibility": 0.016412987290065646
+      },
+      "128": {
+        "pressure": 0.001842912985045481,
+        "pressure_phi_derivative": 6.492209837205169e-05,
+        "thermal_scalar_density": 0.0021640699457350565,
+        "charge_density": 0.0028880114950502055,
+        "entropy_density": 0.02552043070730689,
+        "energy_density": 0.007666840061521971,
+        "charge_susceptibility": 0.016412987290065906
+      },
+      "192": {
+        "pressure": 0.0018429129850450034,
+        "pressure_phi_derivative": 6.492209837205074e-05,
+        "thermal_scalar_density": 0.002164069945735025,
+        "charge_density": 0.002888011495050179,
+        "entropy_density": 0.02552043070730546,
+        "energy_density": 0.007666840061521942,
+        "charge_susceptibility": 0.016412987290065746
+      },
+      "256": {
+        "pressure": 0.0018429129850453115,
+        "pressure_phi_derivative": 6.492209837205071e-05,
+        "thermal_scalar_density": 0.002164069945735024,
+        "charge_density": 0.00288801149505018,
+        "entropy_density": 0.02552043070730633,
+        "energy_density": 0.007666840061521939,
+        "charge_susceptibility": 0.016412987290065746
+      }
+    },
+    "70": {
+      "64": {
+        "pressure": 0.0018429129848938099,
+        "pressure_phi_derivative": 6.492209913447282e-05,
+        "thermal_scalar_density": 0.002164069971149094,
+        "charge_density": 0.002888011504810511,
+        "entropy_density": 0.02552043070584445,
+        "energy_density": 0.0076668400631138495,
+        "charge_susceptibility": 0.016412987434661887
+      },
+      "96": {
+        "pressure": 0.0018429129850454056,
+        "pressure_phi_derivative": 6.492209837205932e-05,
+        "thermal_scalar_density": 0.0021640699457353106,
+        "charge_density": 0.0028880114950503057,
+        "entropy_density": 0.025520430707306453,
+        "energy_density": 0.007666840061521913,
+        "charge_susceptibility": 0.016412987290065066
+      },
+      "128": {
+        "pressure": 0.0018429129850451031,
+        "pressure_phi_derivative": 6.492209837205304e-05,
+        "thermal_scalar_density": 0.0021640699457351016,
+        "charge_density": 0.0028880114950502475,
+        "entropy_density": 0.025520430707305947,
+        "energy_density": 0.0076668400615220265,
+        "charge_susceptibility": 0.016412987290066152
+      },
+      "192": {
+        "pressure": 0.0018429129850451355,
+        "pressure_phi_derivative": 6.492209837205089e-05,
+        "thermal_scalar_density": 0.0021640699457350296,
+        "charge_density": 0.002888011495050182,
+        "entropy_density": 0.025520430707305822,
+        "energy_density": 0.007666840061521938,
+        "charge_susceptibility": 0.01641298729006576
+      },
+      "256": {
+        "pressure": 0.0018429129850452265,
+        "pressure_phi_derivative": 6.492209837205052e-05,
+        "thermal_scalar_density": 0.0021640699457350174,
+        "charge_density": 0.002888011495050176,
+        "entropy_density": 0.025520430707306113,
+        "energy_density": 0.007666840061521948,
+        "charge_susceptibility": 0.016412987290065725
+      }
+    },
+    "100": {
+      "64": {
+        "pressure": 0.0018429129612801628,
+        "pressure_phi_derivative": 6.492206728504112e-05,
+        "thermal_scalar_density": 0.002164068909501371,
+        "charge_density": 0.00288801106391043,
+        "entropy_density": 0.025520430678324584,
+        "energy_density": 0.0076668399889155275,
+        "charge_susceptibility": 0.01641298260621485
+      },
+      "96": {
+        "pressure": 0.0018429129850516296,
+        "pressure_phi_derivative": 6.492209837700642e-05,
+        "thermal_scalar_density": 0.0021640699459002143,
+        "charge_density": 0.002888011495120699,
+        "entropy_density": 0.025520430707323117,
+        "energy_density": 0.0076668400615356016,
+        "charge_susceptibility": 0.016412987290791388
+      },
+      "128": {
+        "pressure": 0.0018429129850456056,
+        "pressure_phi_derivative": 6.492209837205463e-05,
+        "thermal_scalar_density": 0.0021640699457351545,
+        "charge_density": 0.00288801149505032,
+        "entropy_density": 0.02552043070730777,
+        "energy_density": 0.007666840061522177,
+        "charge_susceptibility": 0.016412987290066558
+      },
+      "192": {
+        "pressure": 0.0018429129850452447,
+        "pressure_phi_derivative": 6.492209837205106e-05,
+        "thermal_scalar_density": 0.0021640699457350357,
+        "charge_density": 0.002888011495050191,
+        "entropy_density": 0.025520430707306176,
+        "energy_density": 0.007666840061521954,
+        "charge_susceptibility": 0.01641298729006581
+      },
+      "256": {
+        "pressure": 0.001842912985045102,
+        "pressure_phi_derivative": 6.492209837205063e-05,
+        "thermal_scalar_density": 0.002164069945735021,
+        "charge_density": 0.0028880114950501704,
+        "entropy_density": 0.025520430707305686,
+        "energy_density": 0.0076668400615219215,
+        "charge_susceptibility": 0.016412987290065698
+      }
+    }
+  },
+  "drift": {
+    "plateau_max_relative_drift": {
+      "pressure": 3.474434898555728e-12,
+      "pressure_phi_derivative": 7.633612909704775e-11,
+      "thermal_scalar_density": 7.633618754721647e-11,
+      "charge_density": 2.4419229158416056e-11,
+      "entropy_density": 6.662802719330836e-13,
+      "energy_density": 1.7808042176558532e-12,
+      "charge_susceptibility": 4.421270623805647e-11
+    },
+    "cutoff_tail_relative_drift_order_192": {
+      "pressure": 5.930154048149798e-14,
+      "pressure_phi_derivative": 2.7137578335690565e-15,
+      "thermal_scalar_density": 2.8056080987052396e-15,
+      "charge_density": 3.153484071821522e-15,
+      "entropy_density": 1.3866677767235185e-14,
+      "energy_density": 2.0363684593013417e-15,
+      "charge_susceptibility": 2.9593794517071026e-15
+    },
+    "quadrature_order_relative_drift_cutoff_70": {
+      "pressure": 4.94179504012488e-14,
+      "pressure_phi_derivative": 5.636266269720363e-15,
+      "thermal_scalar_density": 5.611216197410495e-15,
+      "charge_density": 2.1023227145476878e-15,
+      "entropy_density": 1.1419616984781945e-14,
+      "energy_density": 1.3575789728675619e-15,
+      "charge_susceptibility": 2.1138424655050796e-15
+    },
+    "excluded_low_order_relative_drift_cutoff_100_order_64": {
+      "pressure": 1.2895380245573975e-08,
+      "pressure_phi_derivative": 4.788355611405329e-07,
+      "thermal_scalar_density": 4.788355610570326e-07,
+      "charge_density": 1.4928602140443338e-07,
+      "entropy_density": 1.1356206842517518e-09,
+      "energy_density": 9.470188538297756e-09,
+      "charge_susceptibility": 2.853746727405144e-07
+    }
+  },
+  "checks": {
+    "reference_is_high_order": true,
+    "reference_cutoff_is_in_sweep": true,
+    "plateau_contains_multiple_orders": true,
+    "plateau_contains_multiple_cutoffs": true,
+    "plateau_metric_drift_is_bounded": true,
+    "cutoff_tail_is_resolved": true,
+    "quadrature_order_is_resolved": true,
+    "low_order_is_not_used_as_reference": true,
+    "cutoff_factor_is_explicit_in_comparator": true,
+    "cutoff_factor_is_forwarded_to_branch": true,
+    "branch_audit_passes": true,
+    "vacuum_counterterm_remains_excluded": true,
+    "condensate_remains_excluded": true,
+    "no_holdout_or_alpha_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_one_loop_normal_branch.py": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+    "docs/core/standard_o2_finite_temperature_comparator.py": "7278240bb5eea189f6c919933b434c0855d79ccf7ea1532501bb177cad5d1052",
+    "docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json": "dc1143ef4b7837eb93e47d3a0136bf790b1b6ca589756a54bd2aea679c536801"
+  },
+  "controlling_blocker": "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+  "next_controller": "Close the thermal one-loop vacuum/renormalization contract or retain the thermal-only scope, then derive interacting finite-temperature and condensate/two-fluid sectors before physical transport matching.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

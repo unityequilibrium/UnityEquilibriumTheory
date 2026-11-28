@@ -1,0 +1,88 @@
+{
+  "schema_version": "t13-xie-2026-holdout-access-audit-v1",
+  "artifact": "t13_xie_2026_holdout_access_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_HOLDOUT_DATA_UNCONSUMED_METADATA_ONLY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "what_is_closed": [
+    "The audit distinguishes metadata observation from source-data consumption.",
+    "No numeric holdout payload, source rows, curves, or source bytes were consumed by Topic 13 research paths.",
+    "No holdout-derived fit, tuning, calibration, threshold adjustment, or claim promotion occurred."
+  ],
+  "what_remains_open": [
+    "Xie 2026 remains locked and cannot be used for calibration, tuning, fitting, or threshold changes."
+  ],
+  "equation_or_mapping": {
+    "access_contract": "metadata_only_observed is distinct from numeric_payload_consumed",
+    "holdout_rule": "numeric_payload_consumed = used_for_fit = used_for_tuning = used_for_calibration = used_for_threshold_adjustment = false"
+  },
+  "units": "not applicable; access-control metadata only",
+  "derivation_class": "research provenance and access-control audit",
+  "observable": "holdout access/consumption state",
+  "data_role": "HOLDOUT",
+  "verification_status": {
+    "required_controls": [
+      "numeric payload consumption is false",
+      "source rows consumption is false",
+      "fit, tuning, calibration, and threshold adjustment are false",
+      "the audit path did not read holdout source data",
+      "the holdout remains locked"
+    ],
+    "interpretation": "Metadata-only observation is recorded transparently and is not treated as source-data access. Legacy xie_2026_accessed and holdout_not_accessed fields remain compatibility fields; this artifact is the canonical current access-control record."
+  },
+  "open_blockers": [
+    "Xie 2026 remains locked and cannot be used for calibration, tuning, fitting, or threshold changes."
+  ],
+  "dependency_unlocked": "The full Topic 13 gate may evaluate holdout integrity without treating metadata-only observation as numeric holdout consumption.",
+  "claim_boundary": "This is an access-control and audit result only; it is not evidence for the thermal bridge, alpha_Phi_K, prediction, or external validation.",
+  "major_result": {
+    "major_result_id": "T13_XIE_2026_HOLDOUT_ACCESS_CONTROL",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The audit distinguishes metadata observation from source-data consumption.",
+      "No numeric holdout payload, source rows, curves, or source bytes were consumed by Topic 13 research paths.",
+      "No holdout-derived fit, tuning, calibration, threshold adjustment, or claim promotion occurred."
+    ],
+    "what_remains_open": [
+      "Xie 2026 remains locked and cannot be used for calibration, tuning, fitting, or threshold changes."
+    ],
+    "dependency_unlocked": "The full Topic 13 gate may evaluate holdout integrity without treating metadata-only observation as numeric holdout consumption.",
+    "claim_boundary": "This is an access-control and audit result only; it is not evidence for the thermal bridge, alpha_Phi_K, prediction, or external validation."
+  },
+  "source": {
+    "identity": "Xie 2026 graphite thermal holdout",
+    "data_role": "HOLDOUT",
+    "locator": "Metadata/article identity observed during source discovery; no holdout source payload is archived in this artifact.",
+    "source_payload_hash": null
+  },
+  "audit": {
+    "metadata_only_observed": true,
+    "source_data_payload_observed": false,
+    "numeric_payload_consumed": false,
+    "numeric_rows_consumed": false,
+    "source_bytes_archived": false,
+    "source_curves_digitized": false,
+    "audit_path_read_source_data": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false,
+    "used_for_threshold_adjustment": false,
+    "used_for_candidate_selection": false,
+    "locked_holdout_remains_unconsumed": true,
+    "claim_promotion": false
+  },
+  "verification": {
+    "required_controls": [
+      "numeric payload consumption is false",
+      "source rows consumption is false",
+      "fit, tuning, calibration, and threshold adjustment are false",
+      "the audit path did not read holdout source data",
+      "the holdout remains locked"
+    ],
+    "interpretation": "Metadata-only observation is recorded transparently and is not treated as source-data access. Legacy xie_2026_accessed and holdout_not_accessed fields remain compatibility fields; this artifact is the canonical current access-control record."
+  },
+  "evidence_artifacts": [],
+  "controlling_blocker": null,
+  "next_action": "Keep Xie 2026 locked until a separately approved preregistered comparison and source-data access audit exist."
+}

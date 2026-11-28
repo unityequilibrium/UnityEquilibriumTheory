@@ -1,0 +1,127 @@
+{
+  "schema_version": "t13-iaea-cv-uncertainty-boundary-audit-v1",
+  "artifact": "t13_iaea_cv_uncertainty_boundary_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_IAEA_CV_UNCERTAINTY_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the IAEA Table 4.11 comparator remains source-traceable but does not provide a standard uncertainty for derived c_v",
+      "the table's probable-error Delta c_p is not promoted to c_v standard uncertainty",
+      "the c_w thermoelastic term lacks a source-locked uncertainty contract in this lane",
+      "same-row density, CTE, and compressibility uncertainty needed for volumetric propagation is not available in the package",
+      "the IAEA manufactured-graphite comparator is not silently substituted for Ding TTG C_src"
+    ],
+    "equation_or_mapping": "c_p = c_v + c_w + c_e; c_v = c_p - c_w - c_e",
+    "units": {
+      "source_row": "cal g^-1 K^-1",
+      "mass_specific_conversion": "J kg^-1 K^-1",
+      "required_output": "J m^-3 K^-1 with standard uncertainty"
+    },
+    "derivation_class": "source-provenance boundary and uncertainty no-go; no UET derivation",
+    "observable": "source-grade volumetric c_v uncertainty availability",
+    "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_iaea_cv_uncertainty_boundary_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json",
+        "sha256": "43c28e1bb5f33e7c10261e2d3a84a31c54b55fa8d2413f44c5c9e5461c3e6fd5"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+        "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+        "sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_IAEA_CV_UNCERTAINTY_BOUNDARY_NO_GO",
+    "open_blockers": [
+      "c_v_source_uncertainty_not_closed",
+      "direct_volumetric_c_v_or_same_state_Cp_source_missing",
+      "density_uncertainty_not_source_locked",
+      "material_regime_mapping_to_Ding_TTG_not_closed"
+    ],
+    "dependency_unlocked": "The IAEA uncertainty route is closed as a scoped no-go; a direct uncertainty-grade same-regime volumetric c_v or accepted independent source route is still required.",
+    "claim_boundary": "This source package closes only the scoped no-go that the IAEA Table 4.11 comparator cannot supply uncertainty-grade volumetric c_v or Ding C_src. It does not reject the comparator value; it prevents unsupported uncertainty propagation and material substitution."
+  },
+  "source": {
+    "source_id": "iaea_graphite_engineering_handbook_table_4_11_uncertainty_boundary",
+    "title": "The Industrial Graphite Engineering Handbook",
+    "publisher": "International Atomic Energy Agency Graphite Knowledge Base",
+    "official_url": "https://nucleus.iaea.org/sites/graphiteknowledgebase/Meetings2/Old%20Meetings/2017/Background%20Info/GraphiteHandbook.pdf",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+    "local_raw_size_bytes": 34100266,
+    "local_raw_sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a",
+    "source_locators": [
+      "Chapter 4, section 4-14, Table 4.11 definition of cp, cv, cw, and ce",
+      "Chapter 4, section 4-15, Table 4.11 manufactured-graphite 300 K row",
+      "Chapter 4, section 4-15, discussion of probable error and high-temperature compressibility",
+      "Chapter 3, section 3-1, bulk-density method and grade-specific averages",
+      "Chapter 4, section 4-8, CTE method and precision discussion"
+    ],
+    "material": "manufactured-graphite average curve; no identity or morphology match to Ding TTG specimen is established",
+    "license_or_terms": "Official IAEA-hosted handbook archived for research provenance; publication terms remain subject to source owner",
+    "local_hash_observed": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_cv_uncertainty_boundary_source_package.json",
+    "package_sha256": "43c28e1bb5f33e7c10261e2d3a84a31c54b55fa8d2413f44c5c9e5461c3e6fd5"
+  },
+  "boundary_observations": {
+    "table_row_is_source_locked": true,
+    "table_row_quantity": "manufactured-graphite lattice c_v derived from c_p - c_w - c_e",
+    "delta_cp_is_standard_uncertainty": false,
+    "delta_cp_meaning": "probable-error envelope for c_p, not a standard uncertainty for c_v",
+    "cw_uncertainty_is_source_locked": false,
+    "high_temperature_compressibility_is_explicitly_rough": true,
+    "same_table_row_density_with_uncertainty": false,
+    "same_table_row_cte_with_uncertainty": false,
+    "same_table_row_compressibility_with_uncertainty": false,
+    "direct_volumetric_cv_with_uncertainty": false,
+    "cv_standard_uncertainty_available": false,
+    "material_regime_equivalent_to_Ding_TTG": false,
+    "substitution_for_Ding_C_src_allowed": false
+  },
+  "mapping_contract": {
+    "source_relation": "c_p = c_v + c_w + c_e; c_v = c_p - c_w - c_e",
+    "provided_units": "cal g^-1 K^-1 in source; mass-specific J kg^-1 K^-1 after declared conversion",
+    "required_for_Topic13": "uncertainty-grade volumetric c_v or C_src in a declared material regime",
+    "conversion_route": "c_v^V = rho*c_v requires source-locked same-regime density and uncertainty",
+    "uncertainty_propagation_status": "OPEN_NOT_SOURCE_LOCKED",
+    "equivalence_result": "NOT_ESTABLISHED"
+  },
+  "checks": {
+    "raw_pdf_present": true,
+    "raw_pdf_hash_matches": true,
+    "raw_size_matches_package": true,
+    "source_identity_and_locators_present": true,
+    "table_row_source_locked": true,
+    "probable_error_not_promoted": true,
+    "cw_uncertainty_not_invented": true,
+    "rough_compressibility_boundary_recorded": true,
+    "same_row_density_uncertainty_missing_recorded": true,
+    "same_row_cte_uncertainty_missing_recorded": true,
+    "same_row_compressibility_uncertainty_missing_recorded": true,
+    "direct_volumetric_cv_uncertainty_missing_recorded": true,
+    "cv_standard_uncertainty_missing_recorded": true,
+    "ding_equivalence_not_claimed": true,
+    "ding_substitution_forbidden": true,
+    "conversion_requires_source_locked_density": true,
+    "uncertainty_propagation_open": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true,
+    "no_target_fit": true,
+    "no_alpha_fit": true,
+    "underlying_cv_lane_is_comparator_only": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "iaea_table_derived_cv_uncertainty_and_volumetric_conversion_not_source_locked",
+  "next_controller": "Acquire direct uncertainty-grade same-regime volumetric c_v or a same-state Cp/density/thermoelastic package; do not infer uncertainty from the table probable error or use it as Ding C_src.",
+  "claim_boundary": "This source package closes only the scoped no-go that the IAEA Table 4.11 comparator cannot supply uncertainty-grade volumetric c_v or Ding C_src. It does not reject the comparator value; it prevents unsupported uncertainty propagation and material substitution."
+}

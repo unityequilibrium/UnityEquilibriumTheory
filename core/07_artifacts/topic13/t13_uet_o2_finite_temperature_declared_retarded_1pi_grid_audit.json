@@ -1,0 +1,238 @@
+{
+  "schema_version": "1.0",
+  "artifact": "t13_uet_o2_finite_temperature_declared_retarded_1pi_grid_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_ACTION_DERIVED_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+  "major_result_id": "T13_UET_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "state": {
+    "temperature": 0.35,
+    "mass_squared": 0.5,
+    "quartic_coupling": 0.8,
+    "species_count": 2,
+    "reference_euclidean_s": 0.5,
+    "invariant_grid": [
+      4.75,
+      5.0,
+      5.5
+    ],
+    "three_body_threshold_s": 4.5,
+    "points": [
+      {
+        "invariant_s": 4.75,
+        "external_energy": 2.179449471770337,
+        "greater_measure": 1.4548892521449768e-05,
+        "lesser_measure": 2.8739476445750827e-08,
+        "spectral_measure": 1.4520153045004018e-05,
+        "retarded_spectral_density": 4.561640613518409e-05,
+        "principal_value_real_part": 0.00018852522304727232,
+        "retarded_imaginary_part": -4.561640613518408e-05,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "fdt_residual": 0.003942955405912313,
+        "pv_inner_convergence_residual": 0.0004183177470783957,
+        "pv_outer_convergence_residual": 0.00028892386785935357,
+        "retarded_i0_consistency_residual": 6.776263578034403e-21,
+        "one_to_three_completed": true,
+        "two_to_two_completed": true,
+        "response_pair_consistent": true
+      },
+      {
+        "invariant_s": 5.0,
+        "external_energy": 2.23606797749979,
+        "greater_measure": 1.80044141236472e-05,
+        "lesser_measure": 3.025333982760964e-08,
+        "spectral_measure": 1.7974160783819592e-05,
+        "retarded_spectral_density": 5.646749147288939e-05,
+        "principal_value_real_part": 0.00022612810773143732,
+        "retarded_imaginary_part": -5.6467491472889383e-05,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "fdt_residual": 0.003355020533523042,
+        "pv_inner_convergence_residual": 0.000413482055117046,
+        "pv_outer_convergence_residual": 0.00028622770182661273,
+        "retarded_i0_consistency_residual": 6.776263578034403e-21,
+        "one_to_three_completed": true,
+        "two_to_two_completed": true,
+        "response_pair_consistent": true
+      },
+      {
+        "invariant_s": 5.5,
+        "external_energy": 2.345207879911715,
+        "greater_measure": 3.0084560320159013e-05,
+        "lesser_measure": 3.700945536329265e-08,
+        "spectral_measure": 3.004755086479572e-05,
+        "retarded_spectral_density": 9.439716505520786e-05,
+        "principal_value_real_part": 0.0003025209862163946,
+        "retarded_imaginary_part": -9.439716505520786e-05,
+        "kms_log_ratio_residual": 0.0,
+        "fdt_residual": 0.002457339085519275,
+        "pv_inner_convergence_residual": 0.0004057808094370731,
+        "pv_outer_convergence_residual": 0.00028197681492037134,
+        "retarded_i0_consistency_residual": 0.0,
+        "one_to_three_completed": true,
+        "two_to_two_completed": true,
+        "response_pair_consistent": true
+      }
+    ],
+    "max_kms_log_ratio_residual": 8.881784197001252e-16,
+    "max_fdt_residual": 0.003942955405912313,
+    "max_pv_inner_convergence_residual": 0.0004183177470783957,
+    "max_pv_outer_convergence_residual": 0.00028892386785935357,
+    "max_retarded_i0_consistency_residual": 6.776263578034403e-21,
+    "matched_state_witness": true,
+    "positive_spectral_grid_witness": true,
+    "lower_half_plane_grid_witness": true,
+    "declared_retarded_response_grid_completed": true,
+    "declared_1pi_pole_subtracted_response_completed": true,
+    "full_finite_temperature_1pi_self_energy_completed": false,
+    "all_finite_temperature_sunset_channels_completed": false,
+    "unique_physical_renormalization_scheme_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "covariant_entropy_current_completed": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT"
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+    "equations": {
+      "declared_retarded_response": "Sigma_R,T^declared(s+i0)=Re Sigma_R,T^declared,sub(s)-i*pi*rho_T^declared(s)",
+      "combined_spectral_measure": "rho_T^declared(s)=rho_>,13(s)+rho_>,22(s)-rho_<,13(s)-rho_<,22(s)",
+      "combined_kms": "log(rho_>^declared/rho_<^declared)=sqrt(s)/T",
+      "combined_fdt": "N_T^declared=rho_T^declared*coth(sqrt(s)/(2*T))",
+      "pole_subtracted_real_part": "Re Sigma_R,T^declared,sub(s)=Re Sigma_R,T,13^sub(s)+Re Sigma_R,T,22^sub(s)"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature or metric",
+      "R_gen": "derived physical/history trace; no independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "unit_contract": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; declared channel grid only"
+    },
+    "derivation_class": "action-derived matched composition of the audited equal-mass O(2) 1<->3 and labeled 2<->2 thermal cuts; no fitted coefficient",
+    "observable": "multi-invariant greater/lesser measures, spectral density, retarded sign, KMS/FDT residuals, pole-subtracted real part, and convergence",
+    "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT",
+    "included": {
+      "matched_timelike_response_grid": true,
+      "declared_channel_composition": true,
+      "retarded_i0_sign_and_consistency": true,
+      "pole_subtracted_real_part": true,
+      "grid_level_kms_fdt": true
+    },
+    "excluded": {
+      "complete_finite_temperature_1pi_self_energy": true,
+      "all_finite_temperature_sunset_channels": true,
+      "unique_physical_renormalization": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the state-matched retarded response-grid contract for the declared 1<->3 and labeled 2<->2 thermal sunset channels. It does not close the complete finite-temperature 1PI self-energy, all sunset channels, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "checks": {
+    "declared_response_grid_completed": true,
+    "declared_pole_subtracted_response_completed": true,
+    "grid_has_multiple_points": true,
+    "all_points_above_three_body_threshold": true,
+    "matched_state_witness": true,
+    "positive_spectral_grid": true,
+    "lower_half_plane_grid": true,
+    "all_one_to_three_channel_contracts_completed": true,
+    "all_two_to_two_channel_contracts_completed": true,
+    "finite_numeric_state": true,
+    "kms_residual_within_threshold": true,
+    "fdt_residual_within_threshold": true,
+    "pv_inner_convergence_within_threshold": true,
+    "pv_outer_convergence_within_threshold": true,
+    "retarded_i0_consistency": true,
+    "full_finite_temperature_1pi_self_energy_stays_open": true,
+    "all_finite_temperature_sunset_channels_stays_open": true,
+    "physical_kubo_not_emitted": true,
+    "alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_2026_not_accessed": true,
+    "contract_excludes_full_1pi": true,
+    "contract_excludes_physical_kubo": true,
+    "contract_excludes_holdout": true
+  },
+  "failed_checks": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+      "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+      "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+      "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+    }
+  ],
+  "derivation_class": "action-derived matched composition of the audited equal-mass O(2) 1<->3 and labeled 2<->2 thermal cuts; no fitted coefficient",
+  "observable": "multi-invariant greater/lesser measures, spectral density, retarded sign, KMS/FDT residuals, pole-subtracted real part, and convergence",
+  "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT",
+  "controlling_blocker": "complete_finite_temperature_1pi_self_energy_and_all_channel_physical_renormalization_missing",
+  "next_action": "Derive the full interacting finite-temperature retarded 1PI self-energy and physical renormalization anchor; keep this declared grid lane non-SI and separate from physical Kubo admission.",
+  "claim_boundary": "This closes only the state-matched retarded response-grid contract for the declared 1<->3 and labeled 2<->2 thermal sunset channels. It does not close the complete finite-temperature 1PI self-energy, all sunset channels, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+    "topic": "Topic 13 Thermodynamic Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "state-matched declared 1<->3 plus labeled 2<->2 retarded response grid",
+      "grid-level KMS/FDT, retarded i0 sign, spectral positivity, and PV convergence"
+    ],
+    "equation_or_mapping": {
+      "declared_retarded_response": "Sigma_R,T^declared(s+i0)=Re Sigma_R,T^declared,sub(s)-i*pi*rho_T^declared(s)",
+      "combined_spectral_measure": "rho_T^declared(s)=rho_>,13(s)+rho_>,22(s)-rho_<,13(s)-rho_<,22(s)",
+      "combined_kms": "log(rho_>^declared/rho_<^declared)=sqrt(s)/T",
+      "combined_fdt": "N_T^declared=rho_T^declared*coth(sqrt(s)/(2*T))",
+      "pole_subtracted_real_part": "Re Sigma_R,T^declared,sub(s)=Re Sigma_R,T,13^sub(s)+Re Sigma_R,T,22^sub(s)"
+    },
+    "units": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; declared channel grid only"
+    },
+    "derivation_class": "action-derived matched composition of the audited equal-mass O(2) 1<->3 and labeled 2<->2 thermal cuts; no fitted coefficient",
+    "observable": "multi-invariant greater/lesser measures, spectral density, retarded sign, KMS/FDT residuals, pole-subtracted real part, and convergence",
+    "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT",
+    "verification_status": "PASS_ACTION_DERIVED_O2_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_LANE",
+    "open_blockers": [
+      "complete_finite_temperature_1pi_self_energy_missing",
+      "all_finite_temperature_sunset_channels_missing",
+      "physical_renormalization_anchor_missing"
+    ],
+    "dependency_unlocked": "declared retarded response-grid lane only; no physical Kubo, SI, alpha, Core, Gravity, Galaxy, or external-validation unlock",
+    "claim_boundary": "This closes only the state-matched retarded response-grid contract for the declared 1<->3 and labeled 2<->2 thermal sunset channels. It does not close the complete finite-temperature 1PI self-energy, all sunset channels, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+        "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+        "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+      }
+    ]
+  }
+}

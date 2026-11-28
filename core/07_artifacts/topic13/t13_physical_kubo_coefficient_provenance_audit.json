@@ -1,0 +1,145 @@
+{
+  "schema_version": "t13-physical-kubo-coefficient-provenance-audit-v1",
+  "artifact": "t13_physical_kubo_coefficient_provenance_audit",
+  "generated_at": "2026-08-15",
+  "status": "PASS_KUBO_PROVENANCE_GATE_OPEN_PHYSICAL_COEFFICIENT",
+  "major_result": {
+    "major_result_id": "T13_PHYSICAL_KUBO_COEFFICIENT_PROVENANCE_GATE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the minimum Kubo/transport coefficient record schema is linked to the implemented Landau-frame transport contract",
+      "the available external records are classified as structure/readiness sources and not coefficient data",
+      "synthetic transport controls are separated from physical coefficient evidence",
+      "the acceptance boundary for temperature, chemical potential, space-response state, correlator locator, units, source hash, and evidence status is machine-readable",
+      "the absence of an accepted physical coefficient record is an explicit blocker rather than an implicit default"
+    ],
+    "equation_or_mapping": {
+      "record_to_transport": "KuboCoefficientRecord -> constitutive transport coefficient only when value, state, correlator, source hash, and matched evidence all pass",
+      "required_transport_role": "physical coefficient record -> Landau-frame dissipative constitutive relation",
+      "synthetic_boundary": "SYNTHETIC_CONTROL -> simulation-only control; never physical coefficient evidence"
+    },
+    "units": {
+      "coefficient_value": "coefficient-specific units declared per record; no value supplied by this audit",
+      "temperature": "source-declared temperature state; SI K or declared natural-unit equivalent",
+      "chemical_potential": "source-declared chemical-potential units",
+      "space_response": "declared response-state units or normalized lane contract",
+      "source_hash": "SHA-256 or equivalent reproducible source identity"
+    },
+    "derivation_class": "external source-readiness inventory and acceptance-gate audit; no coefficient derivation",
+    "observable": "physical dissipative transport coefficient readiness",
+    "data_role": "EXTERNAL_READINESS_INVENTORY_NOT_COEFFICIENT_DATA",
+    "evidence_artifacts": [
+      "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+      "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+      "docs/core/artifacts/covariant_superfluid_transport_verification.json"
+    ],
+    "verification_status": "PASS_KUBO_PROVENANCE_GATE_OPEN_PHYSICAL_COEFFICIENT",
+    "open_blockers": [
+      "physical_Kubo_coefficient_record_missing",
+      "finite_temperature_normal_component_not_derived",
+      "curved_3p1_transport_solver_missing",
+      "base_Phi_SI_anchor_and_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "Kubo coefficient acceptance gate only; no physical transport, Full Topic 13, Core curved 3+1, Gravity, or external validation unlock",
+    "claim_boundary": "This result closes the acceptance/provenance boundary for a future physical transport coefficient record. It does not supply a coefficient, derive transport from the conservative action, complete finite-temperature two-fluid dynamics, or validate UET externally."
+  },
+  "source_inventory": [
+    {
+      "path": "docs/data/external/relativistic_transport/son_relativistic_superfluid_2002/source_record.json",
+      "title": "Low-Energy Quantum Effective Action for Relativistic Superfluids",
+      "benchmark_role": "EXTERNAL_RELATIVISTIC_SUPERFLUID_EFT_ROLE_SOURCE_NOT_UET_DERIVATION",
+      "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+      "coefficient_data_status": "NOT_PROVIDED"
+    },
+    {
+      "path": "docs/data/external/relativistic_transport/chapman_hoyos_oz_superfluid_kubo_2013/source_record.json",
+      "title": "Superfluid Kubo Formulas from Partition Function",
+      "benchmark_role": "EXTERNAL_SUPERFLUID_KUBO_STRUCTURE_SOURCE_NOT_COEFFICIENT_DATA",
+      "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+      "coefficient_data_status": "NOT_PROVIDED"
+    },
+    {
+      "path": "docs/data/external/relativistic_transport/crossley_glorioso_liu_2017/source_record.json",
+      "title": "Effective field theory of dissipative fluids",
+      "benchmark_role": "EXTERNAL_DISSIPATIVE_EFT_READINESS_SOURCE_NOT_UET_DERIVATION",
+      "local_copy_status": "TEMPORARY_INSPECTION_ONLY_NOT_REDISTRIBUTED",
+      "coefficient_data_status": "NOT_PROVIDED"
+    },
+    {
+      "path": "docs/data/external/relativistic_transport/haehl_loganayagam_rangamani_2018/source_record.json",
+      "title": "Effective Action for Relativistic Hydrodynamics: Fluctuations, Dissipation, and Entropy Inflow",
+      "benchmark_role": "EXTERNAL_DISSIPATIVE_EFT_READINESS_SOURCE_NOT_UET_DERIVATION",
+      "local_copy_status": "NOT_INGESTED_URL_METADATA_ONLY",
+      "coefficient_data_status": "NOT_PROVIDED"
+    },
+    {
+      "path": "docs/data/external/relativistic_transport/jain_kovtun_2024/source_record.json",
+      "title": "Schwinger-Keldysh effective field theory for stable and causal relativistic hydrodynamics",
+      "benchmark_role": "EXTERNAL_COVARIANT_TRANSPORT_READINESS_SOURCE_NOT_UET_DERIVATION",
+      "local_copy_status": "TEMPORARY_INSPECTION_ONLY_NOT_REDISTRIBUTED",
+      "coefficient_data_status": "NOT_PROVIDED"
+    }
+  ],
+  "required_coefficient_fields": [
+    "coefficient_name",
+    "value",
+    "units",
+    "hydrodynamic_frame",
+    "temperature",
+    "chemical_potential",
+    "space_response",
+    "correlator_formula_id",
+    "source_path_or_url",
+    "source_hash",
+    "evidence_status"
+  ],
+  "accepted_evidence_statuses": [
+    "KUBO_MATCHED",
+    "SOURCE_LOCKED",
+    "EXTERNALLY_MATCHED"
+  ],
+  "checks": {
+    "transport_contract_requires_external_or_microscopic_match": true,
+    "transport_verifier_reports_physical_coefficients_blocked": true,
+    "transport_verifier_reports_finite_temperature_blocked": true,
+    "required_fields_match_implemented_record": true,
+    "all_source_records_have_identity": true,
+    "all_source_records_have_formula_locator": true,
+    "all_source_records_have_claim_boundary": true,
+    "all_source_records_are_readiness_or_structure_only": true,
+    "all_source_records_have_no_numeric_coefficient_payload": true,
+    "synthetic_controls_are_not_physical_evidence": true,
+    "no_default_physical_coefficient_is_allowed": true,
+    "no_target_curve_used": true,
+    "xie_2026_not_accessed": true,
+    "numeric_transport_coefficient_not_emitted": true,
+    "parameter_fitting_not_performed": true,
+    "base_phi_alpha_not_emitted": true
+  },
+  "transport_contract": {
+    "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+    "required_fields": [
+      "value",
+      "units",
+      "hydrodynamic_frame",
+      "temperature",
+      "chemical_potential",
+      "space_response",
+      "correlator_formula_id",
+      "source_path_or_url",
+      "source_hash",
+      "evidence_status"
+    ],
+    "physical_values": "REQUIRED_EXTERNAL_OR_MICROSCOPIC_MATCH_NO_DEFAULTS"
+  },
+  "transport_verification": {
+    "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+    "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+    "finite_temperature_two_fluid_completion": "BLOCKED",
+    "full_SK_KMS_completion": "BLOCKED"
+  },
+  "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+  "next_controller": "Acquire or microscopically derive one state-matched coefficient record with declared units, correlator locator, source hash, and accepted evidence status; then rerun the transport verifier.",
+  "claim_boundary": "The audit closes only the provenance gate and records a scoped source-readiness no-go. It does not close physical transport, finite-temperature normal response, SK/KMS microscopic matching, alpha_Phi_K, or Full Topic 13."
+}

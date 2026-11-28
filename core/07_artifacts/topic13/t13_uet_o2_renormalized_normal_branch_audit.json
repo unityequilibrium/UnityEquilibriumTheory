@@ -1,0 +1,187 @@
+{
+  "schema_version": "t13-uet-o2-renormalized-normal-one-loop-v1",
+  "artifact": "t13_uet_o2_renormalized_normal_branch_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_RENORMALIZED_NORMAL_ONE_LOOP_SCHEME",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_RENORMALIZED_NORMAL_ONE_LOOP_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "declared mass-squared Taylor-subtraction scheme through second order at Phi_*",
+      "finite normal-branch vacuum plus thermal one-loop state in natural units",
+      "reference-point renormalization conditions and cutoff convergence",
+      "action-derived response curvature with an explicit vacuum contribution",
+      "thermal pressure, entropy, charge, and energy identities for the combined state"
+    ],
+    "equation_or_mapping": {
+      "reference": "m_ref^2=m_eff(Phi_*)^2",
+      "vacuum_subtraction": "V_vac^R(x)=integral[E(x)-E(x0)-(x-x0)E'(x0)-1/2*(x-x0)^2 E''(x0)] d^3k/(2*pi)^3",
+      "conditions": "V_vac^R(x0)=partial_x V_vac^R(x0)=partial_x^2 V_vac^R(x0)=0",
+      "total_grand_potential": "Omega_R=V_vac^R+Omega_N^(1,T)",
+      "response_curvature": "kappa_Phi^R=epsilon_nc U''(Phi)+kappa_Phi^T+(partial_Phi m_eff^2)^2 partial_x^2 V_vac^R"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "vacuum_grand_potential": "natural energy density",
+      "mass_derivatives": "natural derivative with respect to mass-squared",
+      "response_curvature": "natural mass dimension two",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived declared BPHZ-style mass-squared subtraction plus thermal one-loop normal determinant; not a microscopic matching",
+    "observable": "natural-unit renormalized normal-branch grand potential and response curvature",
+    "data_role": "ACTION_DERIVED_RENORMALIZED_NORMAL_ONE_LOOP_SCHEME_NOT_PHYSICAL",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+        "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/uet_o2_normal_response_curvature.py",
+        "sha256": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_RENORMALIZED_NORMAL_ONE_LOOP_SCHEME",
+    "open_blockers": [
+      "interacting_finite_temperature_self_energy_and_unique_microscopic_scheme_matching_missing",
+      "condensate_and_finite_temperature_normal_two_fluid_eos_completion_missing",
+      "physical_kubo_coefficients_and_microscopic_sk_kms_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ttg_numeric_source_package_is_provisional"
+    ],
+    "dependency_unlocked": "renormalized normal one-loop scheme lane only; no full Topic 13, Core, Gravity, transport, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes a declared natural-unit subtraction scheme for the normal one-loop vacuum plus thermal determinant. It does not establish the unique physical renormalization scheme, interacting finite-temperature self-energy, condensate/two-fluid EOS, physical Kubo coefficients, microscopic SK/KMS matching, entropy production, SI Phi mapping, alpha_Phi_K, or external validation."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "phi_reference": 0.0,
+    "phi_response": 0.2,
+    "effective_mass_sq_at_reference": 0.5,
+    "effective_mass_sq_at_response": 0.494,
+    "reference_mass_sq": 0.5,
+    "vacuum_grand_potential": -4.5669276315658857e-10,
+    "vacuum_mass_derivative": 2.288202950915236e-07,
+    "vacuum_mass_second_derivative": -7.64272571478107e-05,
+    "vacuum_response_curvature": -6.878453143302963e-08,
+    "total_response_curvature": 0.11199639830213032,
+    "pressure": 0.0018429134417379898,
+    "entropy_density": 0.025520430707306113,
+    "charge_density": 0.002888011495050176,
+    "energy_density": 0.007666839604829185,
+    "momentum_cutoff": 49.49747468305833,
+    "quadrature_order": 256
+  },
+  "finite_difference_checks": {
+    "mass_second_derivative_finite_difference": -7.642881385428165e-05,
+    "mass_second_derivative_analytic": -7.64272571478107e-05,
+    "mass_second_derivative_abs_error": 1.5567064709498795e-09,
+    "vacuum_response_curvature_finite_difference": -7.412663879136831e-08,
+    "vacuum_response_curvature_analytic": -6.878453143302963e-08,
+    "vacuum_response_curvature_abs_error": 5.342107358338678e-09,
+    "total_response_curvature_finite_difference": 0.1120163929595858,
+    "total_response_curvature_analytic": 0.11199639830213032,
+    "total_response_curvature_abs_error": 1.999465745548823e-05,
+    "entropy_finite_difference": 0.02552043369146665,
+    "entropy_analytic": 0.025520430707306113,
+    "entropy_abs_error": 2.984160536734226e-09,
+    "charge_finite_difference": 0.0028880115475363004,
+    "charge_analytic": 0.002888011495050176,
+    "charge_abs_error": 5.248612438765732e-11
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 40.0,
+      "vacuum_grand_potential": -4.566858285021941e-10,
+      "vacuum_mass_derivative": 2.2867650660984828e-07,
+      "vacuum_mass_second_derivative": -7.637932759327765e-05,
+      "vacuum_response_curvature": -6.874139483394988e-08,
+      "total_response_curvature": 0.11199639834526691,
+      "pressure": 0.0018429134417306677,
+      "entropy_density": 0.02552043070730506,
+      "charge_density": 0.0028880114950501773
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 55.0,
+      "vacuum_grand_potential": -4.5725304483464067e-10,
+      "vacuum_mass_derivative": 2.287770667632442e-07,
+      "vacuum_mass_second_derivative": -7.641284780670052e-05,
+      "vacuum_response_curvature": -6.877156302603047e-08,
+      "total_response_curvature": 0.11199639831509872,
+      "pressure": 0.001842913442298199,
+      "entropy_density": 0.025520430707305884,
+      "charge_density": 0.0028880114950501795
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 70.0,
+      "vacuum_grand_potential": -4.5669276315658857e-10,
+      "vacuum_mass_derivative": 2.288202950915236e-07,
+      "vacuum_mass_second_derivative": -7.64272571478107e-05,
+      "vacuum_response_curvature": -6.878453143302963e-08,
+      "total_response_curvature": 0.11199639830213032,
+      "pressure": 0.0018429134417379898,
+      "entropy_density": 0.025520430707306113,
+      "charge_density": 0.002888011495050176
+    }
+  ],
+  "convergence_relative_errors": {
+    "vacuum_mass_second_derivative": 0.00018853667720026968,
+    "vacuum_response_curvature": 0.0001885366772003094,
+    "total_response_curvature": 1.157930462492142e-10,
+    "pressure": 3.0398020948767734e-10,
+    "entropy_density": 8.97255620232867e-15,
+    "charge_density": 1.2013272654558242e-15
+  },
+  "numerical_stability_note": "The subtracted vacuum potential is a small difference of large Taylor-cancelled terms. Curvature acceptance therefore uses mass-derivative finite differences and records potential finite-difference sensitivity instead of hiding cancellation.",
+  "checks": {
+    "reference_mass_matches_phi_star": true,
+    "reference_vacuum_potential_zero": true,
+    "reference_vacuum_first_derivative_zero": true,
+    "reference_vacuum_second_derivative_zero": true,
+    "normal_branch_selected": true,
+    "positive_effective_mass_squared": true,
+    "all_reference_values_finite": true,
+    "mass_second_derivative_matches_finite_difference": true,
+    "vacuum_response_curvature_matches_finite_difference": true,
+    "total_response_curvature_matches_finite_difference": true,
+    "entropy_matches_pressure_derivative": true,
+    "charge_matches_pressure_derivative": true,
+    "vacuum_is_temperature_and_mu_independent": true,
+    "vacuum_second_derivative_converges": true,
+    "response_curvature_converges": true,
+    "thermal_pressure_converges": true,
+    "scheme_is_natural_units": true,
+    "subtraction_order_is_declared": true,
+    "condensate_is_excluded": true,
+    "interacting_self_energy_is_excluded": true,
+    "physical_kubo_is_excluded": true,
+    "physical_si_mapping_is_excluded": true,
+    "alpha_is_not_emitted": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_renormalized_normal_branch.py": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c",
+    "docs/core/uet_o2_one_loop_normal_branch.py": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+    "docs/core/uet_o2_normal_response_curvature.py": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2"
+  },
+  "controlling_blocker": "interacting_finite_temperature_self_energy_and_unique_microscopic_scheme_matching_missing",
+  "next_controller": "Close the finite-temperature renormalized action beyond the declared free normal determinant, then match the physical Kubo/SK-KMS and SI Phi observable interfaces without using Xie 2026 or fitting alpha_Phi_K.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

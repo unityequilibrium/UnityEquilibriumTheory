@@ -1,0 +1,157 @@
+{
+  "schema_version": "t13-uet-o2-hartree-normal-stability-boundary-v1",
+  "artifact": "t13_uet_o2_hartree_normal_stability_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_HARTREE_NORMAL_ONE_SIDED_STABILITY_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_HARTREE_NORMAL_STABILITY_BOUNDARY_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "one-sided Hartree normal-branch stability condition r_T=M^2-Z*mu^2",
+      "critical boundary root M_c^2=Z*mu_c^2 using the existing thermal tadpole",
+      "stable-side and unstable-side residual-sign witnesses",
+      "Bose-domain regularity, gap residual, and quadrature/cutoff convergence"
+    ],
+    "equation_or_mapping": {
+      "normal_gap": "M^2=m_eff(Phi)^2+(N+2)*lambda*I_T(M^2;T,mu)",
+      "normal_curvature": "r_T=M^2-Z*mu^2",
+      "critical_boundary": "r_T(mu_c,T,Phi)=0, hence M_c^2=Z*mu_c^2",
+      "boundary_residual": "F(mu_c)=Z*mu_c^2-m_eff(Phi)^2-(N+2)*lambda*I_T(Z*mu_c^2;T,mu_c)",
+      "one_sided_sign": "F(mu<mu_c)<0 gives a stable normal gap; F(mu>mu_c)>0 places the Hartree root below r_T=0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "T_mu_M": "natural energy",
+      "r_T_mass_squared": "natural energy squared",
+      "Phi": "natural action response field; not temperature",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived one-sided Hartree stability-boundary root with quadrature convergence",
+    "observable": "natural-unit one-sided Hartree normal-branch stability boundary",
+    "data_role": "ACTION_DERIVED_INTERNAL_NO_EXTERNAL_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_normal_stability.py",
+        "sha256": "b3073220c311dd3e68b1925b51d86a1a7aa8aad65d35c931ac34a0340a7991e7"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+        "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_HARTREE_NORMAL_ONE_SIDED_STABILITY_BOUNDARY",
+    "open_blockers": [
+      "vacuum_counterterm_and_unique_microscopic_finite_temperature_scheme_matching_missing",
+      "condensed_branch_and_renormalized_finite_temperature_phase_transition_missing",
+      "condensate_and_normal_two_fluid_eos_completion_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "one-sided Hartree normal stability-boundary lane only; no renormalized condensed phase, Full Topic 13, Core, Gravity, transport, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only the one-sided natural-unit Hartree normal-branch stability boundary under the declared thermal determinant convention. It does not close a renormalized finite-temperature phase transition, the condensed branch, a complete two-fluid EOS, physical Kubo/SK/KMS transport, an SI Phi map, alpha_Phi_K, TTG validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "space_response": 0.2,
+    "critical_chemical_potential": 0.659465499827425,
+    "critical_dressed_mass_sq": 0.5218736945551625,
+    "base_mass_sq": 0.494,
+    "thermal_tadpole": 0.008710529548426698,
+    "thermal_self_energy": 0.027873694554965436,
+    "critical_residual": 1.9709581189353287e-13,
+    "bose_domain_margin": 0.08697894909252707,
+    "lower_probe_residual": -0.05088464034594463,
+    "upper_probe_residual": 0.053495869954812196,
+    "independent_low_probe_residual": -0.05088464034594463,
+    "independent_high_probe_residual": 0.053495869954812196,
+    "momentum_cutoff": 49.199593494255616,
+    "quadrature_order": 256,
+    "iterations": 38,
+    "condensed_branch_included": false,
+    "vacuum_counterterm_included": false
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 40.0,
+      "critical_chemical_potential": 0.659465499827425,
+      "critical_dressed_mass_sq": 0.5218736945551625,
+      "thermal_tadpole": 0.008710529548434875,
+      "thermal_self_energy": 0.027873694554991602,
+      "critical_residual": 1.709292429818987e-13,
+      "bose_domain_margin": 0.08697894909252707
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 55.0,
+      "critical_chemical_potential": 0.659465499827425,
+      "critical_dressed_mass_sq": 0.5218736945551625,
+      "thermal_tadpole": 0.008710529548426695,
+      "thermal_self_energy": 0.027873694554965425,
+      "critical_residual": 1.9710622023438873e-13,
+      "bose_domain_margin": 0.08697894909252707
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 70.0,
+      "critical_chemical_potential": 0.659465499827425,
+      "critical_dressed_mass_sq": 0.5218736945551625,
+      "thermal_tadpole": 0.008710529548426698,
+      "thermal_self_energy": 0.027873694554965436,
+      "critical_residual": 1.9709581189353287e-13,
+      "bose_domain_margin": 0.08697894909252707
+    }
+  ],
+  "convergence_relative_errors": {
+    "critical_chemical_potential": 0.0,
+    "critical_dressed_mass_sq": 0.0,
+    "thermal_tadpole": 3.9830494032136865e-16,
+    "thermal_self_energy": 3.7341088155128306e-16
+  },
+  "checks": {
+    "critical_residual_is_closed": true,
+    "critical_condition_is_closed": true,
+    "bose_domain_is_regular": true,
+    "thermal_self_energy_is_non_negative": true,
+    "stable_side_probe_is_negative": true,
+    "unstable_side_probe_is_positive": true,
+    "independent_probe_signs_match": true,
+    "critical_mu_is_positive": true,
+    "critical_state_is_finite": true,
+    "critical_mu_converges": true,
+    "critical_mass_converges": true,
+    "tadpole_converges": true,
+    "self_energy_converges": true,
+    "natural_units_are_declared": true,
+    "Z_condition_is_declared": true,
+    "condensed_branch_is_excluded": true,
+    "physical_kubo_is_excluded": true,
+    "alpha_is_not_emitted": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_normal_stability.py": "b3073220c311dd3e68b1925b51d86a1a7aa8aad65d35c931ac34a0340a7991e7",
+    "docs/core/uet_o2_finite_temperature_self_energy.py": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "condensed_branch_and_renormalized_finite_temperature_phase_transition_missing",
+  "next_controller": "Derive or source-lock the renormalized condensed finite-temperature branch and match its retarded Kubo/SK/KMS coefficients; retain this boundary as a one-sided Hartree diagnostic without promoting it to a phase transition.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

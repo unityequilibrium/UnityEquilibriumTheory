@@ -1,0 +1,104 @@
+{
+  "schema_version": "t13-covariant-action-symbolic-si-conversion-audit-v1",
+  "artifact": "t13_covariant_action_symbolic_si_conversion_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_SYMBOLIC_ACTION_SI_CONVERSION_CONTRACT",
+  "major_result": {
+    "major_result_id": "T13_COVARIANT_ACTION_SYMBOLIC_SI_CONVERSION_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Natural-unit energy-density coefficients of mass dimension four have an explicit conditional SI conversion.",
+      "Natural-unit heat-capacity-density coefficients of mass dimension three have an explicit conditional SI conversion including k_B.",
+      "Natural energy-response and alpha-response coefficients have an explicit conversion to kelvin.",
+      "The covariant field-to-normalized-Phi relation is represented as an explicit declared scale rather than an implicit identity."
+    ],
+    "equation_or_mapping": {
+      "energy_density": "u_SI = u_nat * E_ref^4/(hbar*c)^3 [J m^-3]",
+      "heat_capacity_density": "C_SI = C_nat * k_B*E_ref^3/(hbar*c)^3 [J m^-3 K^-1]",
+      "thermal_response": "Delta_Tq = (E_ref/k_B) * Delta_theta",
+      "alpha_response": "alpha_Phi_K = (E_ref/k_B) * alpha_Phi_theta",
+      "field_normalization": "Phi_normalized = Phi_covariant/Phi_scale",
+      "e0": "e0_SI = e0_nat * E_ref^4/(hbar*c)^3; e0_nat and E_ref remain open"
+    },
+    "units": {
+      "E_ref": "J",
+      "hbar_c": "J m",
+      "energy_density": "J m^-3",
+      "heat_capacity_density": "J m^-3 K^-1",
+      "temperature": "K",
+      "alpha_Phi_K": "K per normalized Phi",
+      "Phi_normalized": "dimensionless"
+    },
+    "derivation_class": "symbolic natural-unit conversion from exact SI defining constants; no physical parameter calibration",
+    "observable": "conditional covariant-action to thermal-observable unit map",
+    "data_role": "FORMULA_CONTRACT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/data/external/constants/codata/si_2019_exact_constants.json",
+        "sha256": "dcced6d840f4f4fbcea90128061ab7a528be04e1b37917893dbf4a28934b3560"
+      },
+      {
+        "path": "docs/core/thermal_covariant_action_si_conversion.py",
+        "sha256": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe"
+      },
+      {
+        "path": "docs/core/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      },
+      {
+        "path": "docs/core/UET_GR_NONCLOSED_RESEARCH_SPEC.md",
+        "sha256": "d15cc8e345a3df986f7608d48e3152134c4325dfa24e5dc9364b085fe37dd6c9"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_SYMBOLIC_ACTION_SI_CONVERSION_CONTRACT",
+    "open_blockers": [
+      "energy_reference_provenance_missing",
+      "covariant_field_normalization_provenance_missing",
+      "base_Phi_to_Phi_E_map_missing",
+      "e0_energy_density_scale_not_source_locked",
+      "temperature_dependent_response_coefficient_provenance_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "Symbolic unit-contract lane only; no SI physical map, alpha calibration, transport, Core, Gravity, or external-validation dependency is unlocked.",
+    "claim_boundary": "This closes only the conditional unit conversion algebra. It does not choose E_ref, derive e0, identify covariant Phi with base Phi, emit alpha_Phi_K, or validate a TTG response."
+  },
+  "constants": {
+    "h_J_s": 6.62607015e-34,
+    "c_m_per_s": 299792458.0,
+    "k_B_J_per_K": 1.380649e-23,
+    "hbar_definition": "h/(2*pi)",
+    "source_hash": "dcced6d840f4f4fbcea90128061ab7a528be04e1b37917893dbf4a28934b3560"
+  },
+  "inputs": {
+    "energy_reference_J": null,
+    "phi_scale_in_energy_reference_units": null,
+    "e0_nat": null,
+    "alpha_Phi_theta_nat": null
+  },
+  "checks": {
+    "codata_record_is_si": true,
+    "k_B_is_exact": true,
+    "h_is_exact": true,
+    "c_is_exact": true,
+    "module_declares_open_energy_reference": true,
+    "module_declares_open_field_normalization": true,
+    "module_declares_no_hidden_e0": true,
+    "response_parent_is_natural_only": true,
+    "response_defaults_are_not_physical": true,
+    "spec_declares_covariant_action": true,
+    "contract_equations_have_units": true,
+    "base_phi_map_remains_open": true,
+    "no_numeric_alpha_or_e0": true,
+    "holdout_not_consumed": true
+  },
+  "controlling_blocker": "energy_reference_and_base_Phi_normalization_provenance_missing",
+  "next_controller": "Declare a coefficient-provenance-backed E_ref and covariant-Phi normalization, then derive e0 and test the physical observable map without target fitting or Xie 2026 access.",
+  "claim_boundary": "Conditional symbolic unit contract only; no numeric e0, alpha_Phi_K, Kelvin prediction, or Full Topic 13 closure.",
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "fit_or_tuning_used": false
+  }
+}

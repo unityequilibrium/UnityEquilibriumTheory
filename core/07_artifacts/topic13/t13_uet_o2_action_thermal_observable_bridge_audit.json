@@ -1,0 +1,180 @@
+{
+  "schema_version": "t13-uet-o2-action-natural-phi-thermal-bridge-v1",
+  "artifact": "t13_uet_o2_action_thermal_observable_bridge_audit",
+  "generated_at": "2026-08-15",
+  "status": "PASS_ACTION_DERIVED_NATURAL_PHI_THERMAL_BRIDGE_LANE",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ACTION_NATURAL_PHI_THERMAL_BRIDGE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "action-derived natural-unit energy-density response to the existing Phi variable",
+      "fixed-(mu,Phi) natural thermal susceptibility for the local response map",
+      "first-order natural quasi-temperature response",
+      "local derivative refinement and thermodynamic branch-lock controls"
+    ],
+    "equation_or_mapping": {
+      "action_eos": "p=p_qp(T,mu,Phi); epsilon=-p+T*partial_T p+mu*partial_mu p",
+      "energy_response": "Delta_epsilon^nat=(partial_Phi epsilon)_(T,mu)*Delta_Phi",
+      "thermal_susceptibility": "C_epsilon_T^nat=(partial_T epsilon)_(mu,Phi)",
+      "natural_temperature_response": "Delta_T_q^nat=Delta_epsilon^nat/C_epsilon_T^nat",
+      "natural_bridge_coefficient": "alpha_Phi_T^nat=(partial_Phi epsilon)_(T,mu)/(partial_T epsilon)_(mu,Phi)"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature": "natural energy",
+      "energy_density": "natural energy density",
+      "energy_response_derivative": "natural energy density per Phi",
+      "C_epsilon_T": "natural energy density per natural energy at fixed (mu,Phi); not source c_v",
+      "alpha_Phi_T_natural": "natural energy per Phi; not K per normalized Phi",
+      "Phi": "existing effective response variable; normalization-dependent and not temperature",
+      "Delta_Tq_natural": "natural energy response; not SI Kelvin",
+      "alpha_Phi_K": "not emitted; requires independent Phi/e0/SI calibration",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature quasiparticle EOS, thermodynamic identity, and local finite-difference response derivatives",
+    "observable": "natural-unit local Phi-induced energy-density response and quasi-temperature response",
+    "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_BRIDGE_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+        "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      },
+      {
+        "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+        "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_NATURAL_PHI_THERMAL_BRIDGE_LANE",
+    "open_blockers": [
+      "physical_Phi_SI_energy_anchor_missing",
+      "independent_alpha_Phi_K_calibration_missing",
+      "fixed_density_c_v_or_Ding_C_src_not_source_locked",
+      "material_regime_mapping_to_TTG_not_closed",
+      "full_finite_temperature_EOS_transport_SK_KMS_entropy_completion_missing"
+    ],
+    "dependency_unlocked": "action-derived natural-unit Phi-to-thermal bridge lane only; no SI, alpha, TTG, physical transport, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only the action-derived natural-unit local bridge. It does not calibrate base Phi in SI, identify C_epsilon_T with source c_v, emit alpha_Phi_K, predict TTG temperature, or close Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "pressure": 0.00011541104065114354,
+    "entropy_density": 0.0031073474100778336,
+    "charge_density": 0.0004871367148896776,
+    "energy_density": 0.0007387032397773671,
+    "thermodynamic_identity_residual": 0.0,
+    "energy_response_derivative": 4.091655367513959e-05,
+    "refined_energy_response_derivative": 4.091652105027649e-05,
+    "energy_temperature_susceptibility": 0.01768326164348574,
+    "refined_energy_temperature_susceptibility": 0.01768282747047201,
+    "alpha_phi_temperature_natural": 0.0023138578447835533,
+    "refined_alpha_phi_temperature_natural": 0.002313912812789792,
+    "response_probe_phi": 0.001,
+    "linear_energy_response": 4.091655367513959e-08,
+    "linear_temperature_response_natural": 2.3138578447835533e-06,
+    "exact_energy_response": 4.0917912607664475e-08,
+    "linearization_relative_residual": 3.321118889703099e-05,
+    "response_refinement_relative_change": 7.973518339314533e-07,
+    "susceptibility_refinement_relative_change": 2.455337046373951e-05,
+    "coefficient_refinement_relative_change": 2.37554353538764e-05,
+    "phi_ontology_preserved": true,
+    "normalized_beta_t13_emitted": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "numeric_e0_emitted": false,
+    "physical_cv_emitted": false,
+    "landauer_identity_used": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_NATURAL_UNIT_LOCAL_BRIDGE_NO_SI_CALIBRATION"
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_NATURAL_PHI_THERMAL_BRIDGE_LANE",
+    "equations": {
+      "action_eos": "p=p_qp(T,mu,Phi); epsilon=-p+T*partial_T p+mu*partial_mu p",
+      "energy_response": "Delta_epsilon^nat=(partial_Phi epsilon)_(T,mu)*Delta_Phi",
+      "thermal_susceptibility": "C_epsilon_T^nat=(partial_T epsilon)_(mu,Phi)",
+      "natural_temperature_response": "Delta_T_q^nat=Delta_epsilon^nat/C_epsilon_T^nat",
+      "natural_bridge_coefficient": "alpha_Phi_T^nat=(partial_Phi epsilon)_(T,mu)/(partial_T epsilon)_(mu,Phi)"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature": "natural energy",
+      "energy_density": "natural energy density",
+      "energy_response_derivative": "natural energy density per Phi",
+      "C_epsilon_T": "natural energy density per natural energy at fixed (mu,Phi); not source c_v",
+      "alpha_Phi_T_natural": "natural energy per Phi; not K per normalized Phi",
+      "Phi": "existing effective response variable; normalization-dependent and not temperature",
+      "Delta_Tq_natural": "natural energy response; not SI Kelvin",
+      "alpha_Phi_K": "not emitted; requires independent Phi/e0/SI calibration",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature quasiparticle EOS, thermodynamic identity, and local finite-difference response derivatives",
+    "observable": "natural-unit local Phi-induced energy-density response and quasi-temperature response",
+    "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_BRIDGE_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "included": {
+      "non_circular_action_to_energy_map": true,
+      "thermodynamic_identity": true,
+      "local_energy_to_temperature_response": true,
+      "branch_lock": true,
+      "finite_difference_refinement": true
+    },
+    "excluded": {
+      "physical_cv": true,
+      "SI_kelvin_map": true,
+      "numeric_alpha_Phi_K": true,
+      "base_Phi_to_Phi_E_scale": true,
+      "normalized_beta_T13": true,
+      "physical_Kubo": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only the action-derived natural-unit local bridge. It does not calibrate base Phi in SI, identify C_epsilon_T with source c_v, emit alpha_Phi_K, predict TTG temperature, or close Full Topic 13."
+  },
+  "checks": {
+    "status_contract_is_named": true,
+    "action_eos_identity_is_explicit": true,
+    "energy_response_equation_is_explicit": true,
+    "thermal_response_equation_is_explicit": true,
+    "fixed_mu_susceptibility_is_not_called_cv": true,
+    "normal_branch_is_locked": true,
+    "thermodynamic_identity_closes": true,
+    "natural_susceptibility_is_positive": true,
+    "response_derivatives_are_finite": true,
+    "natural_bridge_map_is_resolved": true,
+    "linear_response_is_local": true,
+    "response_refinement_is_stable": true,
+    "susceptibility_refinement_is_stable": true,
+    "coefficient_refinement_is_stable": true,
+    "phi_ontology_is_preserved": true,
+    "physical_cv_is_not_emitted": true,
+    "si_alpha_is_not_emitted": true,
+    "normalized_beta_is_not_emitted": true,
+    "e0_is_not_emitted": true,
+    "landauer_is_not_used": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "calibration_path_may_read_holdout": false,
+    "target_data_used": false,
+    "parameter_fitting_performed": false
+  },
+  "controlling_blocker": "physical_Phi_SI_energy_anchor_missing_and_independent_alpha_Phi_K_open",
+  "next_controller": "source-lock an independent Phi/SI response record and fixed-density thermal-capacity source; do not relabel C_epsilon_T or emit alpha_Phi_K",
+  "claim_boundary": "This closes only the action-derived natural-unit local bridge. It does not calibrate base Phi in SI, identify C_epsilon_T with source c_v, emit alpha_Phi_K, predict TTG temperature, or close Full Topic 13."
+}

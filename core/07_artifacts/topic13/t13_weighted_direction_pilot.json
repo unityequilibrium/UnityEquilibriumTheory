@@ -1,0 +1,144 @@
+{
+  "major_result_id": "T13_WEIGHTED_DIRECTION_TRANSPORT_PILOT",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "WARN_COARSE_ANGULAR_COMPARISON_NOT_CONVERGED",
+  "completed": true,
+  "what_is_closed": "Weighted rule propagated through susceptibility, conserved projector, collision and heat response",
+  "equation_or_mapping": "w_state=w_radial*w_direction; same conserved projection and full heat tensor",
+  "units": "natural response; dimensionless angular weights",
+  "derivation_class": "Analytic degree-four quadrature, finite collocation experiment",
+  "observable": "Internal heat response, not SI conductivity",
+  "data_role": "INTERNAL_NO_FIT",
+  "state": [
+    0.22,
+    0.35,
+    0.15
+  ],
+  "config": {
+    "eos": {
+      "matter": {
+        "matter_kinetic": 1.0,
+        "matter_mass_sq": 1.0,
+        "matter_quartic": 1.0,
+        "response_coupling": 0.8,
+        "unit_lane": "natural"
+      },
+      "response": {
+        "epsilon_nc": 0.05,
+        "einstein_coupling": 1.0,
+        "cosmological_constant": 0.0,
+        "phi_equilibrium": 0.0,
+        "response_kinetic": 1.0,
+        "response_mass_sq": 1.0,
+        "response_quartic": 1.0,
+        "curvature_coupling": 0.0,
+        "equilibrium_density": 0.0,
+        "unit_lane": "natural"
+      },
+      "branch_tolerance": 1e-12,
+      "inversion_tolerance": 1e-13,
+      "inversion_max_iterations": 256,
+      "phase_convention": "theta_equals_minus_mu_t",
+      "metric_signature": "minus_plus_plus_plus",
+      "unit_lane": "natural"
+    },
+    "quadrature_order": 128,
+    "cutoff_factor": 60.0,
+    "derivative_step": 0.0001,
+    "phase_tolerance": 1e-10
+  },
+  "controls": {
+    "radial_order": 8,
+    "collision_integration_order": 24,
+    "angular_order": 24,
+    "cutoff_factor": 48.0,
+    "transition_quadrature_order": 24,
+    "transition_channel_count": 64,
+    "transition_interpolation_order": 40
+  },
+  "rules": [
+    "axis6",
+    "axis_cube14"
+  ],
+  "rows": [
+    {
+      "rule": "axis6",
+      "state_count": 96,
+      "kappa": 254.8247192440348,
+      "entropy_residual": 2.0463630789890885e-12,
+      "boost_residual": 1.1102230246251565e-16,
+      "isotropy_residual": 4.450120184959954e-11,
+      "conservation_residual": 3.4647596134647054e-23,
+      "shear_xy_source_norm": 0.0,
+      "projection_correction": 0.29644482815660006,
+      "basis_coverage_count": 96,
+      "original_gates": {
+        "entropy": true,
+        "boost": true,
+        "isotropy": true
+      }
+    },
+    {
+      "rule": "axis_cube14",
+      "state_count": 224,
+      "kappa": 254.82471242642325,
+      "entropy_residual": 9.094947017729282e-13,
+      "boost_residual": 2.2737367544323206e-13,
+      "isotropy_residual": 5.2684812788691394e-08,
+      "conservation_residual": 1.337569752414941e-22,
+      "shear_xy_source_norm": 0.016524288791764267,
+      "projection_correction": 2.046232668558852e-09,
+      "basis_coverage_count": 224,
+      "original_gates": {
+        "entropy": true,
+        "boost": true,
+        "isotropy": false
+      }
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "angular_and_transition_convergence",
+    "weighted_transition_interpolation_correspondence",
+    "physical_material_mapping"
+  ],
+  "claim_boundary": "Coarse pilot only; degree-six moments incomplete. No material or full Topic13 closure.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_weighted_direction_pilot.py",
+      "sha256": "dd06ef344e183dff9b292eab72559caad88e9a0edf4853c63609102f4c3ada64"
+    },
+    {
+      "path": "docs/core/test/test_topic13_weighted_directions.py",
+      "sha256": "c48a2e38e376a7635e74bec0e79bad4a866a58fa063d21cd12a25ba9b09f2fba"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "04df81c0a906ea14de8e563d86d1a3fba28741554b244276749a0296310000eb"
+    },
+    {
+      "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+      "sha256": "566d6a57a377269a0d551189341b4550e4da9ee8fa711ab04b7d4785bbcff209"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    }
+  ],
+  "verification_status": "TWO_DECLARED_RULES_EVALUATED_NOT_CONVERGENCE",
+  "kappa_relative_change": -2.6754121695837796e-08
+}

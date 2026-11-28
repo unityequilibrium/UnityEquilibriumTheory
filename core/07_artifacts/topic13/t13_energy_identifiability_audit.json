@@ -1,0 +1,610 @@
+{
+  "major_result_id": "T13_HARMONIC_ENERGY_OBSERVABILITY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Energy functional tested against the declared frequency-weighted response null space"
+  ],
+  "equation_registry_ids": [
+    "uet.diagnostic.harmonic_energy_identifiability"
+  ],
+  "equation_or_mapping": "A=S/f; deltaI=A delta_n up to common factors; deltaU/(h*1e12 Hz)=sum f_THz delta_n; c identifiable iff c in row(A)",
+  "units": {
+    "f": "THz",
+    "A": "angstrom^-2/(atomic mass unit*THz)",
+    "energy_witness": "h*1e12 Hz per declared q-mode set"
+  },
+  "derivation_class": "LINEAR_ALGEBRA_ON_FIXED_HARMONIC_RESPONSE",
+  "observable": "population energy at fixed frequencies and fixed q",
+  "data_role": "SOURCE_MODEL_PLUS_SYNTHETIC_COUNTEREXAMPLE",
+  "verification_status": "NULL_SPACE_TESTED_NOT_THERMOMETRY",
+  "results": [
+    {
+      "q_fractional": [
+        0.005,
+        0.0,
+        0
+      ],
+      "full_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.9975220747730782,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0001360041835956,
+            1.0000003867004603,
+            1.0000006254751892,
+            0.9811420106211309,
+            0.9794537441835001,
+            1.0117649863623406,
+            1.1344353837448988,
+            1.1347446572914373,
+            1.25,
+            1.2491345878694975,
+            1.2381966672066715,
+            1.2388202128632413
+          ],
+          "n_minus": [
+            0.9998639958164045,
+            0.9999996132995397,
+            0.9999993745248108,
+            1.018857989378869,
+            1.0205462558165,
+            0.9882350136376594,
+            0.8655646162551011,
+            0.8652553427085627,
+            0.75,
+            0.7508654121305025,
+            0.7618033327933285,
+            0.7611797871367588
+          ],
+          "normalized_response_difference": 4.1369446101051914e-16,
+          "energy_difference": 106.89826371731027,
+          "relative_energy_difference_to_unit_population": 0.4317655635380204,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.9971468197709659,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0000003867004603,
+            1.0000006254751892,
+            0.9811420106211309,
+            0.9794537441835001,
+            1.25,
+            1.249134587869499,
+            1.2381966672066722,
+            1.2388202128632402
+          ],
+          "n_minus": [
+            0.9999996132995397,
+            0.9999993745248108,
+            1.0188579893788692,
+            1.0205462558165,
+            0.75,
+            0.750865412130501,
+            0.7618033327933278,
+            0.7611797871367599
+          ],
+          "normalized_response_difference": 4.440841750388448e-16,
+          "energy_difference": 92.78642101172555,
+          "relative_energy_difference_to_unit_population": 0.48063569930977357,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.9975220747730782,
+        "1e-10": 0.9975220747730782,
+        "1e-11": 0.9975220747730782
+      },
+      "visible_indices": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q_fractional": [
+        0.02,
+        0.0,
+        0
+      ],
+      "full_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.9905833431025675,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0005608635043834,
+            1.0000238725523878,
+            0.968753296930132,
+            1.0000450882228924,
+            0.9545443947967832,
+            1.0117627239340814,
+            1.134302636257139,
+            1.134610669285373,
+            1.25,
+            1.235059384837757,
+            1.2341433158966018,
+            1.244225585341286
+          ],
+          "n_minus": [
+            0.9994391364956166,
+            0.9999761274476123,
+            1.031246703069868,
+            0.9999549117771076,
+            1.0454556052032167,
+            0.9882372760659185,
+            0.8656973637428612,
+            0.865389330714627,
+            0.75,
+            0.7649406151622431,
+            0.7658566841033982,
+            0.755774414658714
+          ],
+          "normalized_response_difference": 1.6715625575881535e-15,
+          "energy_difference": 105.44461807094359,
+          "relative_energy_difference_to_unit_population": 0.41841612044208004,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.9891541256958177,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0000238725523878,
+            0.9687532969301321,
+            1.0000450882228924,
+            0.9545443947967835,
+            1.25,
+            1.2350593848377576,
+            1.2341433158966006,
+            1.2442255853412842
+          ],
+          "n_minus": [
+            0.9999761274476123,
+            1.031246703069868,
+            0.9999549117771076,
+            1.0454556052032165,
+            0.75,
+            0.7649406151622424,
+            0.7658566841033994,
+            0.7557744146587158
+          ],
+          "normalized_response_difference": 1.7956007194150144e-15,
+          "energy_difference": 91.35123443631517,
+          "relative_energy_difference_to_unit_population": 0.46275331387083235,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.9905833431025675,
+        "1e-10": 0.9905833431025675,
+        "1e-11": 0.9905833431025675
+      },
+      "visible_indices": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q_fractional": [
+        0.1,
+        0.0,
+        0
+      ],
+      "full_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.8464710587590324,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0047382739306343,
+            1.0130620125119218,
+            1.0019191065553108,
+            0.8879476731209973,
+            0.8949287298768798,
+            1.0006580215732048,
+            1.1398123514615695,
+            1.1401104618196334,
+            1.2377972161967519,
+            1.1867646634568556,
+            1.25,
+            1.0795796939837192
+          ],
+          "n_minus": [
+            0.9952617260693656,
+            0.9869379874880782,
+            0.9980808934446891,
+            1.1120523268790028,
+            1.1050712701231202,
+            0.9993419784267953,
+            0.8601876485384305,
+            0.8598895381803666,
+            0.7622027838032482,
+            0.8132353365431443,
+            0.75,
+            0.9204203060162808
+          ],
+          "normalized_response_difference": 5.599710257171698e-15,
+          "energy_difference": 82.5594891432433,
+          "relative_energy_difference_to_unit_population": 0.29704481309933284,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 6,
+        "observable_null_fraction": 0.8218921013716899,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0019191065553108,
+            0.8879476731209972,
+            0.8949287298768797,
+            1.0006580215732048,
+            1.237797216196752,
+            1.1867646634568554,
+            1.25,
+            1.0795796939837192
+          ],
+          "n_minus": [
+            0.9980808934446891,
+            1.1120523268790028,
+            1.1050712701231202,
+            0.9993419784267953,
+            0.7622027838032479,
+            0.8132353365431446,
+            0.75,
+            0.9204203060162808
+          ],
+          "normalized_response_difference": 6.173510109965145e-15,
+          "energy_difference": 67.99849643515601,
+          "relative_energy_difference_to_unit_population": 0.30508769632905997,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.8464710587590324,
+        "1e-10": 0.8464710587590324,
+        "1e-11": 0.8464710587590324
+      },
+      "visible_indices": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q_fractional": [
+        0.005,
+        0.005,
+        0
+      ],
+      "full_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.9252340197460474,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0001674411953005,
+            1.0000006716860088,
+            1.0000126820402038,
+            0.9896142697324722,
+            0.9773476608097635,
+            1.0083274686786883,
+            1.095146432207493,
+            1.0953652315021662,
+            1.0842787268640195,
+            1.1150998983005407,
+            1.130591847040531,
+            1.25
+          ],
+          "n_minus": [
+            0.9998325588046996,
+            0.9999993283139911,
+            0.9999873179597962,
+            1.0103857302675279,
+            1.0226523391902365,
+            0.9916725313213117,
+            0.9048535677925068,
+            0.9046347684978339,
+            0.9157212731359805,
+            0.8849001016994593,
+            0.869408152959469,
+            0.75
+          ],
+          "normalized_response_difference": 1.3348992626230534e-15,
+          "energy_difference": 65.09995863379831,
+          "relative_energy_difference_to_unit_population": 0.26191327787293134,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.9133980246563908,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0000006716860088,
+            1.0000126820402038,
+            0.9896142697324719,
+            0.9773476608097634,
+            1.0842787268640233,
+            1.115099898300544,
+            1.1305918470405338,
+            1.25
+          ],
+          "n_minus": [
+            0.9999993283139911,
+            0.9999873179597962,
+            1.010385730267528,
+            1.0226523391902367,
+            0.9157212731359767,
+            0.884900101699456,
+            0.8694081529594662,
+            0.75
+          ],
+          "normalized_response_difference": 1.4511686812242718e-15,
+          "energy_difference": 55.11275261664329,
+          "relative_energy_difference_to_unit_population": 0.2840813730180322,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.9252340197460474,
+        "1e-10": 0.9252340197460474,
+        "1e-11": 0.9252340197460474
+      },
+      "visible_indices": [
+        1,
+        2,
+        3,
+        4,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q_fractional": [
+        0.02,
+        0.02,
+        0
+      ],
+      "full_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.7195843177464284,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0011081394457142,
+            1.0000001515534342,
+            1.0126460627079183,
+            0.950915462081088,
+            0.9999984210063415,
+            1.0012576388410221,
+            1.1440781799255446,
+            1.1444065144536912,
+            1.25,
+            1.2417083401184896,
+            0.9808377332403089,
+            1.0009640716825945
+          ],
+          "n_minus": [
+            0.9988918605542858,
+            0.9999998484465659,
+            0.9873539372920817,
+            1.049084537918912,
+            1.0000015789936585,
+            0.9987423611589779,
+            0.8559218200744554,
+            0.8555934855463088,
+            0.75,
+            0.7582916598815104,
+            1.0191622667596911,
+            0.9990359283174055
+          ],
+          "normalized_response_difference": 1.2234521389474215e-15,
+          "energy_difference": 59.85101598612152,
+          "relative_energy_difference_to_unit_population": 0.23309311837564287,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.6673027235150355,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0000001515534342,
+            0.950915462081088,
+            0.9999984210063415,
+            1.0012576388410221,
+            1.25,
+            1.2417083401184896,
+            0.9808377332403088,
+            1.0009640716825947
+          ],
+          "n_minus": [
+            0.9999998484465659,
+            1.049084537918912,
+            1.0000015789936585,
+            0.9987423611589777,
+            0.75,
+            0.7582916598815103,
+            1.0191622667596913,
+            0.9990359283174052
+          ],
+          "normalized_response_difference": 1.4143816659463655e-15,
+          "energy_difference": 44.74206354390963,
+          "relative_energy_difference_to_unit_population": 0.22137490650120645,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.7195843177464284,
+        "1e-10": 0.7195843177464284,
+        "1e-11": 0.7195843177464284
+      },
+      "visible_indices": [
+        1,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ]
+    },
+    {
+      "q_fractional": [
+        0.1,
+        0.1,
+        0
+      ],
+      "full_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.5274974629409052,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            1.0204620685404664,
+            1.0284582911105002,
+            0.9996758491788853,
+            0.9865250174043405,
+            1.0227281880120749,
+            0.9993233008118498,
+            1.2266772366000755,
+            1.2270992463404082,
+            1.25,
+            0.9348721642532071,
+            0.8958292571138263,
+            1.2479474616490425
+          ],
+          "n_minus": [
+            0.9795379314595336,
+            0.9715417088894999,
+            1.0003241508211147,
+            1.0134749825956595,
+            0.9772718119879252,
+            1.0006766991881502,
+            0.7733227633999245,
+            0.7729007536595918,
+            0.75,
+            1.0651278357467928,
+            1.1041707428861736,
+            0.7520525383509575
+          ],
+          "normalized_response_difference": 5.823113147100167e-15,
+          "energy_difference": 54.615944261548364,
+          "relative_energy_difference_to_unit_population": 0.18203511754720872,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "visible_energy": {
+        "rank": 5,
+        "observable_null_fraction": 0.42534671583582934,
+        "relative_rank_tolerance": 1e-10,
+        "identifiable_at_numerical_tolerance": false,
+        "synthetic_witness": {
+          "n_plus": [
+            0.9996758491788852,
+            0.9865250174043403,
+            1.0227281880120744,
+            0.9993233008118501,
+            1.25,
+            0.934872164253207,
+            0.8958292571138267,
+            1.2479474616490422
+          ],
+          "n_minus": [
+            1.0003241508211147,
+            1.0134749825956597,
+            0.9772718119879256,
+            1.00067669918815,
+            0.75,
+            1.065127835746793,
+            1.1041707428861733,
+            0.7520525383509578
+          ],
+          "normalized_response_difference": 7.696835073580103e-15,
+          "energy_difference": 31.291263082115414,
+          "relative_energy_difference_to_unit_population": 0.12836990411265273,
+          "interpretation": "Constructed positive occupations, not observed data, fit, equilibrium or source preparation"
+        }
+      },
+      "tolerance_sweep": {
+        "1e-09": 0.5274974629409052,
+        "1e-10": 0.5274974629409052,
+        "1e-11": 0.5274974629409052
+      },
+      "visible_indices": [
+        2,
+        3,
+        4,
+        5,
+        8,
+        9,
+        10,
+        11
+      ]
+    }
+  ],
+  "assumptions": [
+    "fixed source gaps and scattering factors",
+    "no work from changing frequencies",
+    "no equilibrium population constraint",
+    "no Brillouin-zone integration or material temperature"
+  ],
+  "open_blockers": [
+    "independent energy-sensitive data or justified closure",
+    "detector/covariance response",
+    "independent Phi coupling"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "dependency_unlocked": [
+    "energy-sensitive observable design only"
+  ],
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_finiteq_scattering_geometry_audit.json": "51039984fc1076db192b0759a5db9046e3c99f27ac9aa820cc8b5d530ba44272",
+    "docs/scripts/audit/audit_topic13_energy_identifiability.py": "eeddc3b301596aa4bf6275b79becda9fd6eac037bed97412a8c81d0bd4200599",
+    "docs/core/test/test_topic13_energy_identifiability.py": "ca48e0a86cfa86908177638c11d156b2191708e956e60c4b3edd4dd59d4ed839",
+    "docs/core/artifacts/uet_equation_correspondence_registry_topic13_energy_identifiability_addendum.json": "85e1ffae692bf7431a51b38f3db77f73baeef5cdbf23b1ef426441ec6dc14812"
+  },
+  "claim_boundary": "Conditional numerical counterexamples, not observed populations or a universal no-go. No holdout read, fit or calibration."
+}

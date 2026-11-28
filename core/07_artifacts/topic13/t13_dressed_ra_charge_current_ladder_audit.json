@@ -1,0 +1,861 @@
+{
+  "schema_version": "t13-dressed-ra-charge-current-ladder-v1",
+  "major_result_id": "T13_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER",
+  "what_is_closed": [
+    "The RA diagonal uses the same-kernel KMS retarded width Gamma_R, not the tagged out-scattering rate.",
+    "An independently assembled width-loss block agrees with the event-expanded loss block, and L_vector=D_RA-K_gain is explicit.",
+    "The directly resummed finite-basis Bethe-Salpeter charge-current solution agrees with the kinetic Galerkin solution without a fitted relaxation time.",
+    "The deflated rung spectral radius is reported explicitly; a failed Neumann series cannot be misreported as a converged ladder."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.same_kernel_dressed_ra_charge_current_ladder"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "retarded_width": "Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)",
+    "ra_pair": "integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma_R)",
+    "ladder_decomposition": "L_vector=D_RA-K_gain",
+    "bethe_salpeter": "(D_RA-K_gain) chi=J_charge",
+    "preconditioned_ladder": "(I-D_RA^(-1/2)K_gain D_RA^(-1/2))x=D_RA^(-1/2)J_charge"
+  },
+  "ontology": {
+    "C": "unchanged",
+    "Phi": "effective response variable; internal exchange line only",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "Gamma_R": 1,
+    "D_RA": 1,
+    "K_gain": 1,
+    "L_vector": 1,
+    "charge_response_form": 1
+  },
+  "derivation_class": "same_kernel_kms_retarded_width_direct_bethe_salpeter_charge_ladder",
+  "observable": "Finite-basis charge-current response form, not SI conductivity",
+  "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+  "reference_state": {
+    "temperature": 0.25,
+    "chemical_potential": 0.1,
+    "effective_mass": 1.0,
+    "momentum_cutoff": 12.0,
+    "radial_order": 12,
+    "incoming_angular_order": 4,
+    "outgoing_angular_order": 4,
+    "outgoing_azimuth_order": 8,
+    "feature_order": 4,
+    "basis_dimension": 8,
+    "retarded_widths_by_species_and_momentum": [
+      [
+        1.3136087357070488e-07,
+        1.4026653767798636e-07,
+        1.385098905600378e-07,
+        1.1322677062915165e-07,
+        8.813850618801605e-08,
+        6.981173439418762e-08,
+        5.721920167175818e-08,
+        4.863113595151334e-08,
+        4.278992147280308e-08,
+        3.889290860877567e-08,
+        3.6449039236654845e-08,
+        3.517275733445156e-08
+      ],
+      [
+        9.008430739037488e-08,
+        9.832583459039119e-08,
+        1.0047499803258115e-07,
+        8.387243654695648e-08,
+        6.608572093284727e-08,
+        5.2732093836246875e-08,
+        4.3423051175905705e-08,
+        3.7018962646588195e-08,
+        3.263902683355335e-08,
+        2.9706389006829302e-08,
+        2.7863074550951346e-08,
+        2.6899147212919114e-08
+      ]
+    ],
+    "tagged_loss_widths_by_species_and_momentum": [
+      [
+        1.3295383639930904e-07,
+        1.412040795992871e-07,
+        1.386114473615079e-07,
+        1.132285135558367e-07,
+        8.81385152487299e-08,
+        6.981173441864697e-08,
+        5.7219201671811575e-08,
+        4.8631135951513476e-08,
+        4.278992147280308e-08,
+        3.889290860877567e-08,
+        3.6449039236654845e-08,
+        3.517275733445156e-08
+      ],
+      [
+        9.255220492118705e-08,
+        9.980056293676381e-08,
+        1.0063909941635322e-07,
+        8.387530992677193e-08,
+        6.608573605243683e-08,
+        5.273209387736441e-08,
+        4.342305117599588e-08,
+        3.7018962646588434e-08,
+        3.263902683355335e-08,
+        2.9706389006829302e-08,
+        2.7863074550951346e-08,
+        2.6899147212919114e-08
+      ]
+    ],
+    "maximum_kms_gain_loss_residual": 1.577978457015352e-16,
+    "raw_event_loss_matrix": [
+      [
+        3.398026135700989e-11,
+        2.4503537496780996e-12,
+        2.351349741502259e-13,
+        2.8377865120280775e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.4503537496780996e-12,
+        2.351349741502259e-13,
+        2.8377865120280775e-14,
+        4.1318828449273805e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.351349741502259e-13,
+        2.8377865120280775e-14,
+        4.1318828449273805e-15,
+        6.990454436866648e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.8377865120280775e-14,
+        4.1318828449273805e-15,
+        6.990454436866648e-16,
+        1.3422226614550342e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.500235322367725e-11,
+        3.990179122889373e-12,
+        3.848855626235442e-13,
+        4.666219650128322e-14
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.990179122889373e-12,
+        3.8488556262354425e-13,
+        4.666219650128321e-14,
+        6.818907611938505e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.848855626235442e-13,
+        4.666219650128321e-14,
+        6.818907611938503e-15,
+        1.1570473398013153e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.666219650128322e-14,
+        6.818907611938505e-15,
+        1.1570473398013153e-15,
+        2.227333068632384e-16
+      ]
+    ],
+    "raw_width_loss_matrix": [
+      [
+        3.401303790713237e-11,
+        2.454989339014842e-12,
+        2.346311078054368e-13,
+        2.832432049211252e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.454989339014842e-12,
+        2.346311078054368e-13,
+        2.8324320492112512e-14,
+        4.140167063936044e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.346311078054368e-13,
+        2.8324320492112512e-14,
+        4.1401670639360445e-15,
+        7.015392243678296e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.832432049211252e-14,
+        4.140167063936044e-15,
+        7.015392243678296e-16,
+        1.3450958377384943e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.504718409926144e-11,
+        3.996545109927333e-12,
+        3.8396825445386447e-13,
+        4.6570274353330104e-14
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.996545109927333e-12,
+        3.8396825445386447e-13,
+        4.65702743533301e-14,
+        6.8321063265933274e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.8396825445386447e-13,
+        4.65702743533301e-14,
+        6.832106326593328e-15,
+        1.1610005711044378e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.6570274353330104e-14,
+        6.8321063265933274e-15,
+        1.1610005711044378e-15,
+        2.231653924334762e-16
+      ]
+    ],
+    "normalized_ra_diagonal": [
+      [
+        1.349560424123023e-07,
+        -8.527003635899844e-09,
+        -3.748649596454807e-09,
+        1.624255433340693e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -8.527003635899942e-09,
+        1.2102818291577307e-07,
+        -1.3039352246335308e-08,
+        -7.083723008092275e-10,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        -3.748649596454384e-09,
+        -1.3039352246335733e-08,
+        1.198008690667403e-07,
+        -1.8991763105222115e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.6242554333402145e-09,
+        -7.083723008088362e-10,
+        -1.8991763105222085e-08,
+        9.382255275867097e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        9.76262746500037e-08,
+        -4.83804549161842e-09,
+        -3.340704981692288e-09,
+        1.3776061002316595e-09
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -4.838045491618516e-09,
+        8.776894578112466e-08,
+        -7.563163053053785e-09,
+        -1.274181410085691e-09
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -3.340704981692242e-09,
+        -7.563163053053937e-09,
+        8.643131330864257e-08,
+        -1.2458641396009198e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.3776061002315867e-09,
+        -1.274181410085722e-09,
+        -1.2458641396007852e-08,
+        6.946832414230268e-08
+      ]
+    ],
+    "normalized_gain_rung": [
+      [
+        6.884952674477352e-08,
+        1.3295339392562429e-09,
+        -5.493569194760881e-09,
+        2.649013846566583e-09,
+        4.406569252712379e-08,
+        -4.1514805868067765e-09,
+        5.36453359579536e-10,
+        -5.603895911687864e-10
+      ],
+      [
+        1.3295339392561535e-09,
+        3.5259530884660164e-08,
+        6.587724358175582e-09,
+        -2.2010460983115564e-09,
+        -4.222530532212611e-09,
+        2.3533038911139182e-08,
+        -1.5897673844471102e-09,
+        -6.31575934600347e-11
+      ],
+      [
+        -5.493569194760523e-09,
+        6.587724358175064e-09,
+        2.8319047593763163e-08,
+        -9.243520025851742e-09,
+        6.465070712748787e-10,
+        -1.6615778366637375e-09,
+        1.6548892176247542e-08,
+        -1.6925980756403912e-09
+      ],
+      [
+        2.6490138465662258e-09,
+        -2.201046098311368e-09,
+        -9.243520025850717e-09,
+        2.8811050312004482e-08,
+        -6.188336460840673e-10,
+        -4.974556643740183e-12,
+        -1.7188534324287804e-09,
+        1.095725527988744e-08
+      ],
+      [
+        4.4065692527123803e-08,
+        -4.22253053221262e-09,
+        6.465070712748785e-10,
+        -6.188336460840322e-10,
+        6.795653458541129e-08,
+        5.400262646795139e-10,
+        -4.233536289212525e-09,
+        1.8138275274958096e-09
+      ],
+      [
+        -4.151480586806807e-09,
+        2.3533038911139202e-08,
+        -1.6615778366637844e-09,
+        -4.974556643719504e-12,
+        5.400262646794353e-10,
+        3.4839260138476455e-08,
+        5.557013933979962e-09,
+        -2.1068988848975774e-09
+      ],
+      [
+        5.364533595795592e-10,
+        -1.5897673844471894e-09,
+        1.6548892176247615e-08,
+        -1.718853432429007e-09,
+        -4.233536289212501e-09,
+        5.557013933979892e-09,
+        2.657702972748756e-08,
+        -6.588162296127812e-09
+      ],
+      [
+        -5.603895911687775e-10,
+        -6.315759345998425e-11,
+        -1.6925980756403833e-09,
+        1.0957255279887853e-08,
+        1.8138275274957211e-09,
+        -2.106898884897468e-09,
+        -6.588162296126945e-09,
+        2.5822909133325216e-08
+      ]
+    ],
+    "normalized_collision_operator": [
+      [
+        6.610651566752877e-08,
+        -9.856537575156087e-09,
+        1.744919598306074e-09,
+        -1.02475841322589e-09,
+        -4.406569252712379e-08,
+        4.1514805868067765e-09,
+        -5.36453359579536e-10,
+        5.603895911687864e-10
+      ],
+      [
+        -9.856537575156095e-09,
+        8.576865203111291e-08,
+        -1.962707660451089e-08,
+        1.492673797502329e-09,
+        4.222530532212611e-09,
+        -2.3533038911139182e-08,
+        1.5897673844471102e-09,
+        6.31575934600347e-11
+      ],
+      [
+        1.7449195983061393e-09,
+        -1.9627076604510797e-08,
+        9.148182147297713e-08,
+        -9.748243079370372e-09,
+        -6.465070712748787e-10,
+        1.6615778366637375e-09,
+        -1.6548892176247542e-08,
+        1.6925980756403912e-09
+      ],
+      [
+        -1.0247584132260115e-09,
+        1.4926737975025316e-09,
+        -9.748243079371368e-09,
+        6.501150244666649e-08,
+        6.188336460840673e-10,
+        4.974556643740183e-12,
+        1.7188534324287804e-09,
+        -1.095725527988744e-08
+      ],
+      [
+        -4.4065692527123803e-08,
+        4.22253053221262e-09,
+        -6.465070712748785e-10,
+        6.188336460840322e-10,
+        2.9669740064592413e-08,
+        -5.378071756297934e-09,
+        8.928313075202374e-10,
+        -4.362214272641501e-10
+      ],
+      [
+        4.151480586806807e-09,
+        -2.3533038911139202e-08,
+        1.6615778366637844e-09,
+        4.974556643719504e-12,
+        -5.378071756297951e-09,
+        5.2929685642648205e-08,
+        -1.3120176987033747e-08,
+        8.327174748118863e-10
+      ],
+      [
+        -5.364533595795592e-10,
+        1.5897673844471894e-09,
+        -1.6548892176247615e-08,
+        1.718853432429007e-09,
+        8.928313075202591e-10,
+        -1.312017698703383e-08,
+        5.9854283581155e-08,
+        -5.870479099881387e-09
+      ],
+      [
+        5.603895911687775e-10,
+        6.315759345998425e-11,
+        1.6925980756403833e-09,
+        -1.0957255279887853e-08,
+        -4.362214272641343e-10,
+        8.327174748117461e-10,
+        -5.870479099880907e-09,
+        4.3645415008977465e-08
+      ]
+    ],
+    "ra_preconditioned_kernel": [
+      [
+        0.5119073902364838,
+        0.03781468495833744,
+        -0.025855510507053606,
+        0.014382071126547179,
+        0.38351627563905466,
+        -0.019848756736900928,
+        0.013037992899609403,
+        -0.008952618351989048
+      ],
+      [
+        0.037814684958337,
+        0.3029137651025007,
+        0.08272688618954477,
+        -0.012317179382495035,
+        -0.019168825749120627,
+        0.22749442993421445,
+        0.003495202557947188,
+        0.0022798728015424306
+      ],
+      [
+        -0.02585551050705113,
+        0.08272688618954067,
+        0.23724138514730098,
+        -0.039621447482072074,
+        0.013050596064307822,
+        0.0035591825403053744,
+        0.16453666795012137,
+        0.006742133963004028
+      ],
+      [
+        0.01438207112654445,
+        -0.012317179382493227,
+        -0.039621447482062144,
+        0.2996151253939751,
+        -0.009137249909152151,
+        0.0025232948345184987,
+        0.006818501185235237,
+        0.13689469292184453
+      ],
+      [
+        0.3835162756390549,
+        -0.019168825749120745,
+        0.013050596064307854,
+        -0.009137249909151856,
+        0.6972185321354232,
+        0.03590944085971117,
+        -0.02260629322768041,
+        0.01064985383642088
+      ],
+      [
+        -0.019848756736901178,
+        0.22749442993421448,
+        0.0035591825403049177,
+        0.002523294834518652,
+        0.035909440859710345,
+        0.4069382072560028,
+        0.09388689561038874,
+        -0.013687403217302177
+      ],
+      [
+        0.01303799289960961,
+        0.0034952025579465095,
+        0.16453666795012187,
+        0.0068185011852331355,
+        -0.0226062932276802,
+        0.093886895610388,
+        0.30961783426402234,
+        -0.030479972990335988
+      ],
+      [
+        -0.008952618351988939,
+        0.002279872801542986,
+        0.006742133963004644,
+        0.13689469292184964,
+        0.01064985383642005,
+        -0.013687403217300349,
+        -0.030479972990324455,
+        0.36627565473060514
+      ]
+    ],
+    "event_width_loss_relative_residual": 0.0008711534761167241,
+    "d_minus_k_collision_relative_residual": 1.5317999440270258e-18,
+    "rung_symmetry_residual": 2.2998397393148944e-21,
+    "collision_null_residual": 2.434561489097971e-16,
+    "preconditioned_null_count": 1,
+    "dissipative_mode_count": 7,
+    "deflated_kernel_spectral_radius": 0.6361231530522272,
+    "source_null_overlap": 6.39280295366973e-14,
+    "free_ra_response_form": 2087.886832713018,
+    "dressed_ladder_response_form": 2611.3452311150227,
+    "kinetic_galerkin_response_form": 2611.345231115026,
+    "ladder_kinetic_response_relative_residual": 1.2190006201692572e-15,
+    "ladder_kinetic_solution_relative_residual": 2.236224521768846e-15,
+    "equation_residual": 1.5004623222605368e-15,
+    "ladder_enhancement_factor": 1.2507120549832762,
+    "neumann_converged": true,
+    "neumann_divergence_detected": false,
+    "neumann_iterations": 46,
+    "neumann_response_relative_residual": 1.3187845280773995e-11,
+    "retarded_width_used_in_ra_pair": true,
+    "tagged_out_rate_used_as_ra_width": false,
+    "fitted_relaxation_time_used": false,
+    "posterior_collision_projection_used": false,
+    "physical_kubo_coefficient_emitted": false,
+    "xie_2026_accessed": false,
+    "parameter_fitting_performed": false
+  },
+  "whole_action_scale_witnesses": [
+    {
+      "scale": 1.5,
+      "ratios": {
+        "ra_diagonal_trace": 1.4999999999999893,
+        "collision_trace": 1.5000000000001628,
+        "gain_rung_norm": 1.499999999999944,
+        "dressed_response": 1.4999999999999734
+      },
+      "energy_exponents": {
+        "ra_diagonal_trace": 0.9999999999999825,
+        "collision_trace": 1.0000000000002676,
+        "gain_rung_norm": 0.999999999999908,
+        "dressed_response": 0.9999999999999561
+      },
+      "enhancement_ratio": 0.999999999999986
+    },
+    {
+      "scale": 2.0,
+      "ratios": {
+        "ra_diagonal_trace": 2.0,
+        "collision_trace": 2.0,
+        "gain_rung_norm": 2.0,
+        "dressed_response": 1.9999999999999991
+      },
+      "energy_exponents": {
+        "ra_diagonal_trace": 1.0,
+        "collision_trace": 1.0,
+        "gain_rung_norm": 1.0,
+        "dressed_response": 0.9999999999999993
+      },
+      "enhancement_ratio": 1.0
+    },
+    {
+      "scale": 3.0,
+      "ratios": {
+        "ra_diagonal_trace": 2.9999999999999787,
+        "collision_trace": 3.0000000000003255,
+        "gain_rung_norm": 2.999999999999888,
+        "dressed_response": 2.999999999999947
+      },
+      "energy_exponents": {
+        "ra_diagonal_trace": 0.9999999999999936,
+        "collision_trace": 1.0000000000000986,
+        "gain_rung_norm": 0.999999999999966,
+        "dressed_response": 0.9999999999999838
+      },
+      "enhancement_ratio": 0.9999999999999865
+    }
+  ],
+  "convergence": {
+    "radial_rows": [
+      {
+        "radial_order": 8,
+        "event_width_loss_relative_residual": 0.013706763613654856,
+        "dressed_response": 3039.3551399524595,
+        "free_response": 2393.516796191797,
+        "enhancement": 1.26982820625626,
+        "deflated_kernel_spectral_radius": 6.865980501287056,
+        "neumann_converged": false
+      },
+      {
+        "radial_order": 12,
+        "event_width_loss_relative_residual": 0.0009145891652423089,
+        "dressed_response": 2614.2475633769145,
+        "free_response": 2088.1662995781653,
+        "enhancement": 1.251934562829131,
+        "deflated_kernel_spectral_radius": 0.6655464625993185,
+        "neumann_converged": true
+      },
+      {
+        "radial_order": 16,
+        "event_width_loss_relative_residual": 0.0001022047842144695,
+        "dressed_response": 2634.940227913861,
+        "free_response": 2103.9005055579178,
+        "enhancement": 1.2524072411946687,
+        "deflated_kernel_spectral_radius": 0.6655802428315536,
+        "neumann_converged": true
+      }
+    ],
+    "angular_rows": [
+      {
+        "angular_order": 4,
+        "azimuth_order": 8,
+        "event_width_loss_relative_residual": 0.0008711534761167241,
+        "dressed_response": 2611.3452311150227,
+        "free_response": 2087.886832713018,
+        "enhancement": 1.2507120549832762,
+        "deflated_kernel_spectral_radius": 0.6361231530522272,
+        "neumann_converged": true
+      },
+      {
+        "angular_order": 6,
+        "azimuth_order": 12,
+        "event_width_loss_relative_residual": 0.000846260259204756,
+        "dressed_response": 2610.9159583702885,
+        "free_response": 2089.628539624445,
+        "enhancement": 1.2494641554041617,
+        "deflated_kernel_spectral_radius": 0.6352265832364212,
+        "neumann_converged": true
+      },
+      {
+        "angular_order": 8,
+        "azimuth_order": 16,
+        "event_width_loss_relative_residual": 0.0008447961097928321,
+        "dressed_response": 2610.8829606310865,
+        "free_response": 2089.9248861688793,
+        "enhancement": 1.249271195299844,
+        "deflated_kernel_spectral_radius": 0.635160595679795,
+        "neumann_converged": true
+      }
+    ],
+    "radial_last_relative_differences": {
+      "dressed_response": 0.007853181760152905,
+      "free_response": 0.007478588430482849,
+      "enhancement": 0.00037741586761098883
+    },
+    "angular_last_relative_differences": {
+      "dressed_response": 1.2638376618859315e-05,
+      "free_response": 0.00014179770114981097,
+      "enhancement": 0.0001544342856759728
+    }
+  },
+  "thresholds": {
+    "event_width_loss_relative": 0.005,
+    "radial_last_refinement_relative": 0.01,
+    "angular_last_refinement_relative": 0.001,
+    "algebraic_relative": 1e-10
+  },
+  "checks": {
+    "kms_retarded_width_used_in_ra_pair": true,
+    "event_width_loss_blocks_agree": true,
+    "d_minus_gain_rung_equals_collision": true,
+    "gain_rung_symmetric": true,
+    "single_momentum_null_mode": true,
+    "ladder_matches_kinetic_response": true,
+    "ladder_matches_kinetic_solution": true,
+    "ladder_equation_residual": true,
+    "whole_action_scaling": true,
+    "radial_convergence": true,
+    "angular_convergence": true,
+    "finite_positive_responses": true,
+    "no_clipping_fit_or_absolute_mode_cutoff": true,
+    "no_holdout_or_physical_kubo": true
+  },
+  "open_blockers": [
+    "self_consistent_dressed_width_and_resonant_resummation",
+    "continuum_and_cutoff_limit",
+    "additional_normal_or_response_heat_carrier",
+    "tensor_shear_channel",
+    "number_changing_and_response_cuts",
+    "physical_Kubo_and_SI_frame_normalization"
+  ],
+  "controlling_blocker": "independent_heat_carrier_and_continuum_physical_Kubo_mapping_missing",
+  "source_hashes": {
+    "docs/core/uet_o2_dressed_ra_charge_current_ladder.py": "03f8d7f64e8db521c1c18f84d78aafb882b28b7ab32093b86c5a4d95992aa9d2",
+    "docs/core/uet_o2_same_kernel_tagged_width.py": "30f4d4d78a2bc4f0403f504d72dac684e98251915b890a1c99af5bae2f5be92e",
+    "docs/core/uet_o2_invariant_vector_current_galerkin.py": "8fa2dbbab44e5d497f4d82e7c22a6aff4cdf9fbfe41a39f8a64e4cb58c3a2ab6",
+    "docs/core/test/test_topic13_dressed_ra_charge_current_ladder.py": "73037331089b90c2b58f38b3e64d4d8e6193b2437bd0c6291aa5d6868191f867",
+    "docs/scripts/audit/audit_topic13_dressed_ra_charge_current_ladder.py": "244c065387c71eaa974fecac863eea81a9cc243c6a27f4fcb88b12ad51ef21b9"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json",
+      "sha256": "aa2cee30973fee3f0f109140db77ac6620cde4ff0fec53596442c7c337961293"
+    },
+    {
+      "path": "docs/core/artifacts/t13_vector_current_heat_rank_boundary_audit.json",
+      "sha256": "c7c957d022b0ad7d44c8c996b734c92705178fd225533900303f573aeb308af7"
+    }
+  ],
+  "dependency_unlocked": [
+    "charge_current_continuum_ladder_hardening",
+    "multicomponent_heat_carrier_ladder_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Finite-basis tree-elastic charge-current RA ladder only; not an independent heat channel, dressed self-consistent width, physical Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The RA diagonal uses the same-kernel KMS retarded width Gamma_R, not the tagged out-scattering rate.",
+      "An independently assembled width-loss block agrees with the event-expanded loss block, and L_vector=D_RA-K_gain is explicit.",
+      "The directly resummed finite-basis Bethe-Salpeter charge-current solution agrees with the kinetic Galerkin solution without a fitted relaxation time.",
+      "The deflated rung spectral radius is reported explicitly; a failed Neumann series cannot be misreported as a converged ladder."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "self_consistent_dressed_width_and_resonant_resummation",
+      "continuum_and_cutoff_limit",
+      "additional_normal_or_response_heat_carrier",
+      "tensor_shear_channel",
+      "number_changing_and_response_cuts",
+      "physical_Kubo_and_SI_frame_normalization"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "charge_current_continuum_ladder_hardening",
+      "multicomponent_heat_carrier_ladder_design"
+    ],
+    "STATUS": "PASS_SCOPED_SAME_KERNEL_DRESSED_RA_CHARGE_CURRENT_LADDER",
+    "WHAT_CHANGED": "Repaired the KMS retarded width and solved the same-kernel finite-basis charge-current RA ladder.",
+    "EQUATION_OR_MAPPING": {
+      "retarded_width": "Gamma_R=Gamma_out-Gamma_in=Gamma_out/(1+f)",
+      "ra_pair": "integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma_R)",
+      "ladder_decomposition": "L_vector=D_RA-K_gain",
+      "bethe_salpeter": "(D_RA-K_gain) chi=J_charge",
+      "preconditioned_ladder": "(I-D_RA^(-1/2)K_gain D_RA^(-1/2))x=D_RA^(-1/2)J_charge"
+    },
+    "VERIFICATION": {
+      "kms_retarded_width_used_in_ra_pair": true,
+      "event_width_loss_blocks_agree": true,
+      "d_minus_gain_rung_equals_collision": true,
+      "gain_rung_symmetric": true,
+      "single_momentum_null_mode": true,
+      "ladder_matches_kinetic_response": true,
+      "ladder_matches_kinetic_solution": true,
+      "ladder_equation_residual": true,
+      "whole_action_scaling": true,
+      "radial_convergence": true,
+      "angular_convergence": true,
+      "finite_positive_responses": true,
+      "no_clipping_fit_or_absolute_mode_cutoff": true,
+      "no_holdout_or_physical_kubo": true
+    },
+    "CONTROLLING_BLOCKER": "independent_heat_carrier_and_continuum_physical_Kubo_mapping_missing",
+    "NEXT_ACTION": "Take the charge ladder toward a continuum/cutoff limit and introduce a genuinely independent normal or response carrier before constructing heat conductivity.",
+    "CLAIM_BOUNDARY": "Finite-basis tree-elastic charge-current RA ladder only; not an independent heat channel, dressed self-consistent width, physical Kubo/SI coefficient, external validation, or Full Topic 13 closure."
+  }
+}

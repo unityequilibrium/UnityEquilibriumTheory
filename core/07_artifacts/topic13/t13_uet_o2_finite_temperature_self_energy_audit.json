@@ -1,0 +1,160 @@
+{
+  "schema_version": "t13-uet-o2-finite-temperature-self-energy-v1",
+  "artifact": "t13_uet_o2_finite_temperature_self_energy_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_ACTION_DERIVED_HARTREE_THERMAL_SELF_ENERGY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_SELF_ENERGY_HARTREE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "O(2) Hartree thermal tadpole from the declared natural-unit action",
+      "self-consistent dressed normal-branch mass gap",
+      "implicit finite-temperature response derivative",
+      "quadrature/cutoff convergence and weak-coupling high-temperature witness"
+    ],
+    "equation_or_mapping": {
+      "thermal_tadpole": "I_T(M^2;T,mu)=1/2 integral[(n_B(E-mu)+n_B(E+mu))/E] d^3k/(2*pi)^3",
+      "hartree_self_energy": "Pi_T=(N+2)*lambda*I_T, N=2",
+      "gap_equation": "M^2=m_eff^2(Phi)+Pi_T(M^2;T,mu)",
+      "implicit_response": "dM^2/dPhi=(d m_eff^2/dPhi)/(1-dPi_T/dM^2)",
+      "action_mass_map": "d m_eff^2/dPhi=-epsilon_nc*response_coupling"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "T_mu_M": "natural energy",
+      "mass_squared": "natural energy squared",
+      "Pi_T": "natural energy squared",
+      "Phi": "natural action response field; not temperature",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived finite-temperature Hartree thermal tadpole with a self-consistent normal gap",
+    "observable": "natural-unit dressed mass-squared, thermal self-energy, and response derivative",
+    "data_role": "ACTION_DERIVED_INTERNAL_NO_EXTERNAL_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+        "sha256": "89aaead673f37904735c7f501d48895ed83d8eb0ea08603af2151e71b7f718cf"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_HARTREE_THERMAL_SELF_ENERGY",
+    "open_blockers": [
+      "vacuum_counterterm_and_unique_microscopic_finite_temperature_scheme_matching_missing",
+      "condensate_and_normal_two_fluid_completion_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "action-derived Hartree finite-temperature self-energy lane only; no full Topic 13, Core, Gravity, transport, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only the declared natural-unit O(2) Hartree self-energy and implicit response derivative on the homogeneous normal branch. It is not a unique microscopic finite-temperature action, a condensate/two-fluid closure, a physical Kubo coefficient, an SI Phi map, an alpha_Phi_K calibration, TTG validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "phi_response": 0.2,
+    "base_mass_sq": 0.494,
+    "dressed_mass_sq": 0.5008399405508752,
+    "thermal_self_energy": 0.006839940551230413,
+    "self_energy_mass_derivative": -0.012318107807070343,
+    "dressed_mass_response_derivative": -0.029634953448563085,
+    "gap_residual": -3.551898358766792e-13,
+    "momentum_cutoff": 49.199593494255616,
+    "quadrature_order": 256,
+    "iterations": 38
+  },
+  "finite_difference_checks": {
+    "dressed_mass_response_derivative_finite_difference": -0.029634954624158105,
+    "dressed_mass_response_derivative_implicit": -0.029634953448563085,
+    "dressed_mass_response_derivative_abs_error": 1.1755950206360222e-09,
+    "weak_high_temperature_ratio": 0.32767865243469596,
+    "weak_high_temperature_limit": 0.3333333333333333,
+    "weak_high_temperature_relative_error": 0.016964042695912063
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 40.0,
+      "base_mass_sq": 0.494,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_self_energy": 0.006839940551230403,
+      "self_energy_mass_derivative": -0.012318107807070275,
+      "dressed_mass_response_derivative": -0.02963495344856309,
+      "gap_residual": -3.551802948975613e-13
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 55.0,
+      "base_mass_sq": 0.494,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_self_energy": 0.006839940551230438,
+      "self_energy_mass_derivative": -0.012318107807070424,
+      "dressed_mass_response_derivative": -0.029634953448563085,
+      "gap_residual": -3.5521498936708085e-13
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 70.0,
+      "base_mass_sq": 0.494,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_self_energy": 0.006839940551230413,
+      "self_energy_mass_derivative": -0.012318107807070343,
+      "dressed_mass_response_derivative": -0.029634953448563085,
+      "gap_residual": -3.551898358766792e-13
+    }
+  ],
+  "convergence_relative_errors": {
+    "dressed_mass_sq": 0.0,
+    "thermal_self_energy": 3.677442839344405e-15,
+    "self_energy_mass_derivative": 6.618873990054887e-15,
+    "dressed_mass_response_derivative": 0.0
+  },
+  "weak_coupling_witness": {
+    "temperature": 10.0,
+    "matter_quartic": 0.001,
+    "expected_limit": "(N+2)/12 with N=2",
+    "ratio": 0.32767865243469596,
+    "relative_error": 0.016964042695912063,
+    "source_role": "analytic_internal_limit_witness_not_external_data"
+  },
+  "checks": {
+    "gap_residual_is_closed": true,
+    "normal_branch_is_selected": true,
+    "thermal_self_energy_is_non_negative": true,
+    "self_energy_mass_derivative_is_non_positive": true,
+    "implicit_response_matches_finite_difference": true,
+    "dressed_mass_converges": true,
+    "self_energy_converges": true,
+    "self_energy_derivative_converges": true,
+    "response_derivative_converges": true,
+    "weak_high_temperature_witness": true,
+    "all_reference_values_finite": true,
+    "natural_units_are_declared": true,
+    "vacuum_counterterm_boundary_is_declared": true,
+    "condensate_boundary_is_declared": true,
+    "physical_kubo_boundary_is_declared": true,
+    "sk_kms_boundary_is_declared": true,
+    "alpha_is_not_emitted": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_self_energy.py": "89aaead673f37904735c7f501d48895ed83d8eb0ea08603af2151e71b7f718cf",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "interacting_finite_temperature_self_energy_and_unique_microscopic_scheme_matching_missing",
+  "next_controller": "Close the microscopic finite-temperature scheme and physical SK/KMS/Kubo interfaces, then return to the independent Phi SI anchor and alpha_Phi_K without reading or fitting Xie 2026.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

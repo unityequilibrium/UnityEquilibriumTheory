@@ -1,0 +1,146 @@
+{
+  "schema_version": "t13-uet-o2-collisionless-kubo-v1",
+  "artifact": "t13_uet_o2_collisionless_kubo_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_COLLISIONLESS_KUBO_DC_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_COLLISIONLESS_KUBO_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the declared collisionless normal quasiparticle response has a positive Drude weight but no finite DC Kubo coefficient",
+      "a positive width regularizes the response as D/gamma, and the coefficient diverges as the width tends to zero",
+      "the diagnostic width is therefore a regulator, not a physical UET transport input",
+      "the next physical transport step is narrowed to an interaction collision kernel or a state-matched microscopic self-energy/retarded correlator"
+    ],
+    "equation_or_mapping": {
+      "collisionless_conductivity": "sigma(omega;gamma)=D/(gamma-i*omega)",
+      "retarded_spectral_density": "rho_JJ(omega;gamma)=2*D*omega*gamma/(gamma^2+omega^2)",
+      "dc_kubo_limit": "K_DC(gamma)=1/2 lim_{omega->0} rho_JJ/omega=D/gamma",
+      "collisionless_limit": "gamma->0^+ gives a zero-width Drude peak and no finite K_DC",
+      "drude_weight": "D=chi_perp_qp from the declared static normal response witness"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "drude_weight": "formal natural-unit response weight",
+      "diagnostic_width": "formal inverse-time/energy unit",
+      "regulated_coefficient": "formal response-coefficient unit; diagnostic only",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived static response plus exact Drude-limit boundary; no collision kernel",
+    "observable": "finite-temperature normal retarded-current transport boundary",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_collisionless_kubo.py",
+        "sha256": "ca2013138f968ab01272d4df54404ed1bf103b6ff6bb45a373ac75b34170096c"
+      },
+      {
+        "path": "docs/core/uet_o2_formal_transverse_response.py",
+        "sha256": "bb30501e3486323dc56e814b5855a66383949a71029b4683cd4bc9931c6bbd58"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      }
+    ],
+    "verification_status": "PASS_COLLISIONLESS_KUBO_DC_NO_GO",
+    "open_blockers": [
+      "interaction_collision_kernel_or_microscopic_width_missing",
+      "retarded_physical_Kubo_match_missing",
+      "interacting_finite_temperature_self_energy_and_renormalization_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "collisionless Kubo structural boundary only; no physical transport, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This is a scoped collisionless no-go. Diagnostic widths are regulators only; no physical transport coefficient, SI observable, alpha_Phi_K, or external validation is emitted."
+  },
+  "contract": {
+    "status": "PASS_COLLISIONLESS_KUBO_DC_NO_GO",
+    "equations": {
+      "collisionless_conductivity": "sigma(omega;gamma)=D/(gamma-i*omega)",
+      "retarded_spectral_density": "rho_JJ(omega;gamma)=2*D*omega*gamma/(gamma^2+omega^2)",
+      "dc_kubo_limit": "K_DC(gamma)=1/2 lim_{omega->0} rho_JJ/omega=D/gamma",
+      "collisionless_limit": "gamma->0^+ gives a zero-width Drude peak and no finite K_DC",
+      "drude_weight": "D=chi_perp_qp from the declared static normal response witness"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "drude_weight": "formal natural-unit response weight",
+      "diagnostic_width": "formal inverse-time/energy unit",
+      "regulated_coefficient": "formal response-coefficient unit; diagnostic only",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived static response plus exact Drude-limit boundary; no collision kernel",
+    "observable": "finite-temperature normal retarded-current transport boundary",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
+    "scope": {
+      "closed": "collisionless normal response cannot yield a finite DC Kubo coefficient",
+      "open": "interaction collision kernel, microscopic self-energy/width, matched retarded correlator, SI map, alpha_Phi_K, and TTG validation"
+    },
+    "claim_boundary": "This is a scoped collisionless no-go. Diagnostic widths are regulators only; no physical transport coefficient, SI observable, alpha_Phi_K, or external validation is emitted."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "drude_weight": 0.0008468305206465916,
+    "diagnostic_widths": [
+      0.1,
+      0.01,
+      0.001
+    ],
+    "regulated_dc_coefficients": [
+      0.008468305206465916,
+      0.08468305206465916,
+      0.8468305206465916
+    ],
+    "probe_frequency": 0.2,
+    "probe_spectral_density": [
+      0.0006774644165172733,
+      8.44718723836999e-05,
+      8.468093504128312e-06
+    ],
+    "collisionless_dc_is_finite": false
+  },
+  "checks": {
+    "normal_drude_weight_is_positive": true,
+    "regulated_coefficients_match_D_over_gamma": true,
+    "width_reduction_increases_regulated_coefficient": true,
+    "diagnostic_limit_spans_two_orders_of_magnitude": true,
+    "broadened_spectral_density_is_nonnegative": true,
+    "zero_frequency_spectral_density_is_zero": true,
+    "collisionless_dc_is_not_finite": true,
+    "physical_coefficient_not_emitted": true,
+    "no_source_rows_consumed": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "failed_checks": [],
+  "numeric_alpha_Phi_K_emitted": false,
+  "physical_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "interaction_collision_kernel_or_microscopic_width_missing",
+  "next_controller": "derive a state-matched interaction collision kernel or obtain a microscopic retarded correlator with a declared width; do not promote D/gamma diagnostics to physical transport",
+  "claim_promotion": false,
+  "primary_literature_context": [
+    {
+      "locator": "https://arxiv.org/abs/hep-ph/9409250",
+      "role": "leading weak-coupling scalar transport requires resummed diagrams or an equivalent linearized Boltzmann equation; context only, no numeric input consumed"
+    }
+  ]
+}

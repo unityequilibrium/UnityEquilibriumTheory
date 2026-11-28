@@ -1,0 +1,212 @@
+{
+  "schema_version": "t13-uet-o2-continuum-limit-boundary-v1",
+  "artifact": "t13_uet_o2_continuum_limit_boundary_audit",
+  "generated_at": "2026-08-17",
+  "status": "PASS_SCOPED_CONTINUUM_LIMIT_CURRENT_SCHEME_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONTINUUM_LIMIT_CURRENT_SCHEME_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the existing radial/channel resolution sequence is source-linked and machine-readable",
+      "the repository continuum-controller threshold 1e-2 is applied without adjustment",
+      "the declared current finite-cutoff discretization fails continuum promotion because the maximum adjacent response change is above threshold",
+      "a fixed-channel radial refinement also fails continuum promotion, so channel-count growth is not the sole cause of the current no-go",
+      "no extrapolated continuum response is emitted and the finite-cutoff lane remains separately bounded"
+    ],
+    "equation_or_mapping": {
+      "adjacent_change": "r_i=abs(D_i-D_(i-1))/max(abs(D_(i-1)),1e-300)",
+      "acceptance_controller": "max_i(r_i)<=1e-2 is required before continuum promotion",
+      "current_result": "max_i(r_i)>1e-2 => no-go for the declared current discretization scheme"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "dc_response": "finite-cutoff formal natural-unit response",
+      "threshold": "dimensionless relative change",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "acceptance-boundary audit over the existing action-derived resolution sequence",
+    "observable": "finite-cutoff DC response stability under declared radial/channel refinement",
+    "data_role": "ACTION_DERIVED_INTERNAL_CONVERGENCE_BOUNDARY_NO_SOURCE_ROWS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_continuum_limit_boundary.py",
+        "sha256": "6472bb8c8d926a003e0e4bfb61464a0ce9f8dba5c6d386940f129338b6f1779e"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_tree_level_bs_sk_match_audit.json",
+        "sha256": "0861c4dc1b453685ea479054919d2f42b59a2c088284c81d40a0a25244302506"
+      },
+      {
+        "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+        "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_collision_operator.py",
+        "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CONTINUUM_LIMIT_CURRENT_SCHEME_NO_GO",
+    "open_blockers": [
+      "new_continuum_discretization_or_matched_extrapolation_missing",
+      "loop_renormalized_microscopic_vertex_missing",
+      "microscopic_SK_KMS_action_match_missing",
+      "physical_Kubo_coefficient_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "scoped no-go for continuum promotion of the current finite-cutoff scheme; finite-cutoff formal lane remains available, but no continuum, physical Kubo, SI, alpha, TTG, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only a scoped no-go for continuum promotion of the declared current finite-cutoff discretization. It does not prove that every future continuum formulation is impossible and does not close physical transport."
+  },
+  "contract": {
+    "status": "PASS_SCOPED_CONTINUUM_LIMIT_CURRENT_SCHEME_NO_GO",
+    "equations": {
+      "adjacent_change": "r_i=abs(D_i-D_(i-1))/max(abs(D_(i-1)),1e-300)",
+      "acceptance_controller": "max_i(r_i)<=1e-2 is required before continuum promotion",
+      "current_result": "max_i(r_i)>1e-2 => no-go for the declared current discretization scheme"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "dc_response": "finite-cutoff formal natural-unit response",
+      "threshold": "dimensionless relative change",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "acceptance-boundary audit over the existing action-derived resolution sequence",
+    "observable": "finite-cutoff DC response stability under declared radial/channel refinement",
+    "data_role": "ACTION_DERIVED_INTERNAL_CONVERGENCE_BOUNDARY_NO_SOURCE_ROWS",
+    "closed_scope": [
+      "the current resolution sequence is machine-readable",
+      "the existing 1e-2 continuum-controller threshold is applied without adjustment",
+      "the current discretization is rejected for continuum promotion when the sequence is nonconverged",
+      "no extrapolated continuum response is emitted"
+    ],
+    "excluded_scope": [
+      "mathematical no-go for every future discretization",
+      "microscopic Bethe-Salpeter or SK/KMS matching",
+      "physical Kubo coefficient",
+      "SI map or alpha_Phi_K",
+      "TTG validation"
+    ],
+    "claim_boundary": "This closes only a scoped no-go for continuum promotion of the declared current finite-cutoff discretization. It does not prove that every future continuum formulation is impossible and does not close physical transport."
+  },
+  "boundary": {
+    "radial_orders": [
+      8,
+      10,
+      12,
+      14
+    ],
+    "channel_counts": [
+      64,
+      96,
+      128,
+      160
+    ],
+    "dc_responses": [
+      83.41842727925236,
+      43.76008656209477,
+      33.16514282309893,
+      31.829328610830117
+    ],
+    "relative_changes": [
+      0.47541462972440046,
+      0.2421143231506593,
+      0.04027765595323908
+    ],
+    "acceptance_threshold": 0.01,
+    "maximum_relative_change": 0.47541462972440046,
+    "current_scheme_continuum_no_go": true,
+    "extrapolated_response_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false
+  },
+  "fixed_channel_diagnostic": {
+    "radial_orders": [
+      14,
+      16,
+      18,
+      20
+    ],
+    "channel_counts": [
+      256,
+      256,
+      256,
+      256
+    ],
+    "dc_responses": [
+      31.91618070918445,
+      43.26469745225899,
+      51.34620772843344,
+      53.83086922781929
+    ],
+    "relative_changes": [
+      0.35557251810548895,
+      0.18679225216106268,
+      0.048390360443502554
+    ],
+    "maximum_relative_change": 0.35557251810548895,
+    "acceptance_threshold": 0.01,
+    "channel_count_held_constant": true,
+    "configuration": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "collision_integration_order": 32,
+      "angular_order": 32,
+      "cutoff_factor": 48.0,
+      "transition_quadrature_order": 32,
+      "transition_channel_count": 256,
+      "transition_interpolation_order": 40
+    }
+  },
+  "source": {
+    "path": "docs/core/artifacts/t13_uet_o2_tree_level_bs_sk_match_audit.json",
+    "major_result_id": "T13_UET_O2_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+    "source_status": "PASS_ACTION_DERIVED_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+    "source_sha256": "0861c4dc1b453685ea479054919d2f42b59a2c088284c81d40a0a25244302506"
+  },
+  "checks": {
+    "source_tree_level_lane_is_present": true,
+    "resolution_sequence_has_four_points": true,
+    "adjacent_change_count_is_three": true,
+    "resolution_values_are_finite": true,
+    "repository_threshold_is_unchanged": true,
+    "current_scheme_fails_continuum_acceptance": true,
+    "fixed_channel_count_is_held_constant": true,
+    "fixed_channel_sequence_has_four_points": true,
+    "fixed_channel_values_are_finite": true,
+    "fixed_channel_threshold_is_unchanged": true,
+    "fixed_channel_sequence_still_fails_acceptance": true,
+    "fixed_channel_has_no_extrapolation": true,
+    "existing_controller_is_visible": true,
+    "existing_lane_does_not_claim_continuum": true,
+    "finite_cutoff_algebraic_lane_remains_pass": true,
+    "no_extrapolated_response_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_remains_separate": true
+  },
+  "failed_checks": [],
+  "continuum_limit_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "controlling_blocker": "new_continuum_discretization_or_matched_extrapolation_missing",
+  "next_controller": "replace or analytically control the current basis/cutoff dependence, then rerun the same 1e-2 convergence gate; do not call the present finite-cutoff response a continuum or physical Kubo result"
+}

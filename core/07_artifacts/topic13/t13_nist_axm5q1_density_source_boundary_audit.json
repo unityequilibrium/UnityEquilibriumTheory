@@ -1,0 +1,135 @@
+{
+  "schema_version": "t13-nist-axm5q1-density-source-boundary-v1",
+  "artifact": "t13_nist_axm5q1_density_source_boundary_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the NIST AXM-5Q1 specimen-103 density row is source-locked with material, specimen, method, locator, units, and PDF hash",
+      "same-grade density availability is separated from direct volumetric c_v and from the Ding HOPG material-regime question",
+      "the source-reported +/-0.1% precision is retained as a precision boundary and is not relabeled as a standard uncertainty"
+    ],
+    "equation_or_mapping": {
+      "mass_to_volume": "c_p^V = rho * c_p",
+      "density_conversion": "1 g cm^-3 = 1000 kg m^-3",
+      "cp_to_cv_contract": "c_v^V = rho*c_p - T*alpha_V^2*K_T"
+    },
+    "units": {
+      "density": "kg m^-3",
+      "source_density": "g cm^-3",
+      "temperature": "approximately 20 C; nominal 293.15 K",
+      "precision": "dimensionless relative bound"
+    },
+    "derivation_class": "source transcription plus explicit unit conversion; no UET derivation",
+    "observable": "same-grade AXM-5Q1 density input for volumetric thermodynamic conversion",
+    "data_role": "SOURCE_LOCKED_SAME_GRADE_DENSITY_NOT_CV_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_nist_axm5q1_density_source_boundary_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf",
+        "sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NIST_AXM5Q1_DENSITY_SOURCE_BOUNDARY",
+    "open_blockers": [
+      "density_uncertainty_not_source_locked",
+      "c_v_source_uncertainty_not_closed",
+      "direct_volumetric_c_v_or_same_state_Cp_source_missing",
+      "AXM_5Q1_to_Ding_HOPG_material_regime_mapping_not_closed",
+      "same_grade_alpha_V_and_K_T_not_source_locked"
+    ],
+    "dependency_unlocked": "same-grade AXM-5Q1 density availability only; no volumetric c_v, Ding C_src, alpha, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes only the source availability of one same-grade AXM-5Q1 density row. It does not close density uncertainty, direct volumetric c_v, Cp-to-Cv material inputs, Ding/HOPG equivalence, e0, alpha_Phi_K, or Full Topic 13."
+  },
+  "source": {
+    "source_id": "nist_srm_260_89_axm5q1_density",
+    "title": "Standard Reference Materials: A fine-grained, isotropic graphite for use as NBS thermophysical property RM's from 5 to 2500 K",
+    "publisher": "National Bureau of Standards / NIST",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-89.pdf",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf",
+    "sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2",
+    "material": "AXM-5Q1 fine-grained isotropic graphite",
+    "source_locators": [
+      "PDF p. 5, Section 2.2 Measurements: density measurements at approximately 20 C by hydrostatic weighing and estimated precision +/-0.1%",
+      "PDF p. 6, Table 1: AXM-5Q1 specimen 103 density row",
+      "PDF p. 74, Table 20: reference density input 1730 kg m^-3 is a separate calculated-property baseline and is not merged with specimen 103"
+    ],
+    "density_precision_statement": "NIST states density measurements are estimated precise to +/-0.1%; this artifact records it as a source precision boundary only.",
+    "rows": [
+      {
+        "source_row_id": "nist_sp260_89_axm5q1_specimen_103_density_20C",
+        "material": "AXM-5Q1 fine-grained isotropic graphite",
+        "specimen_id": "103",
+        "temperature_C_nominal": 20.0,
+        "temperature_K_nominal": 293.15,
+        "temperature_scope": "approximately 20 C as reported by NIST",
+        "density_g_per_cm3": 1.721,
+        "density_kg_per_m3": 1721.0,
+        "measurement_method": "hydrostatic weighing",
+        "source_locator": "PDF p. 5, Section 2.2 Measurements; PDF p. 6, Table 1, AXM-5Q1 specimen 103 row",
+        "uncertainty_boundary": {
+          "reported_relative_precision_bound": 0.001,
+          "reported_absolute_precision_bound_kg_per_m3": 1.721,
+          "reported_units": "relative fraction and kg m^-3",
+          "status": "SOURCE_ESTIMATED_PRECISION_NOT_STANDARD_UNCERTAINTY",
+          "do_not_use_as_standard_uncertainty": true
+        },
+        "data_role": "CALIBRATION_CANDIDATE_DENSITY_ONLY_NOT_CONSUMED"
+      }
+    ],
+    "preprocessing": "byte-preserving PDF archive; manual row transcription; explicit g cm^-3 to kg m^-3 conversion; no interpolation, fitting, curve digitization, or target access"
+  },
+  "rows": [
+    {
+      "source_row_id": "nist_sp260_89_axm5q1_specimen_103_density_20C",
+      "material": "AXM-5Q1 fine-grained isotropic graphite",
+      "specimen_id": "103",
+      "temperature_C_nominal": 20.0,
+      "temperature_K_nominal": 293.15,
+      "temperature_scope": "approximately 20 C as reported by NIST",
+      "density_g_per_cm3": 1.721,
+      "density_kg_per_m3": 1721.0,
+      "measurement_method": "hydrostatic weighing",
+      "source_locator": "PDF p. 5, Section 2.2 Measurements; PDF p. 6, Table 1, AXM-5Q1 specimen 103 row",
+      "uncertainty_boundary": {
+        "reported_relative_precision_bound": 0.001,
+        "reported_absolute_precision_bound_kg_per_m3": 1.721,
+        "reported_units": "relative fraction and kg m^-3",
+        "status": "SOURCE_ESTIMATED_PRECISION_NOT_STANDARD_UNCERTAINTY",
+        "do_not_use_as_standard_uncertainty": true
+      },
+      "data_role": "CALIBRATION_CANDIDATE_DENSITY_ONLY_NOT_CONSUMED"
+    }
+  ],
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "source_locators_declared": true,
+    "material_identity_declared": true,
+    "hydrostatic_method_declared": true,
+    "density_unit_conversion_is_explicit": true,
+    "source_precision_boundary_is_recorded": true,
+    "precision_not_promoted_to_standard_uncertainty": true,
+    "row_is_finite": true,
+    "direct_volumetric_cv_not_emitted": true,
+    "ding_material_mapping_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "direct_volumetric_c_v_emitted": false,
+  "controlling_blocker": "density_uncertainty_not_source_locked",
+  "next_controller": "Keep the source-locked density row separate from c_p/c_v and obtain a declared standard uncertainty or direct volumetric c_v with same-state alpha_V and K_T; do not infer Ding C_src or alpha_Phi_K from this row.",
+  "claim_boundary": "Density source boundary only. No direct volumetric c_v, Cp-to-Cv calibration, Ding material match, UET bridge, alpha calibration, or Full Topic 13 closure is claimed."
+}

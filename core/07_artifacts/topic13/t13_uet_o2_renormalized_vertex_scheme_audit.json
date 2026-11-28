@@ -1,0 +1,233 @@
+{
+  "schema_version": "t13-uet-o2-renormalized-vertex-scheme-v1",
+  "artifact": "t13_uet_o2_renormalized_vertex_scheme_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_RENORMALIZED_O2_ONE_LOOP_VERTEX_SCHEME",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_RENORMALIZED_VERTEX_SCHEME",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the existing mass-squared reference subtraction is applied explicitly to the O(2) one-loop bubble",
+      "the raw vacuum growth and finite subtracted bubble are reported on the same cutoff sequence",
+      "the retained finite thermal contribution, reference condition, and equilibrium KMS/FDT witness are verified",
+      "the resulting finite natural-unit one-loop vertex is closed as one declared scheme lane"
+    ],
+    "equation_or_mapping": {
+      "reference_mass": "m_ref^2=m_eff(Phi_*)^2",
+      "vacuum_counterterm": "B_vac^R(m;Lambda)=B_vac(m;Lambda)-B_vac(m_ref;Lambda)",
+      "renormalized_bubble": "B^R(m;T)=B_vac^R(m)+B_thermal(m;T)",
+      "renormalized_vertex": "Gamma_R^(4)=V-(B_s^R*(V.V)+B_t^R*(V.V)+B_u^R*(V.V))/2",
+      "reference_condition": "B_vac^R(m_ref;Lambda)=0"
+    },
+    "units": {
+      "mass_temperature_momentum": "natural energy",
+      "quartic_coupling": "dimensionless",
+      "bubble_vertex": "dimensionless",
+      "Phi": "effective action response variable; not temperature"
+    },
+    "derivation_class": "action-derived mass-squared reference subtraction applied to the O(2) one-loop vertex bubble; not a physical scheme match",
+    "observable": "finite natural-unit renormalized one-loop vertex in one declared subtraction scheme",
+    "data_role": "ACTION_DERIVED_RENORMALIZED_ONE_LOOP_VERTEX_SCHEME_NOT_PHYSICAL",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+        "sha256": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+        "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+        "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+      },
+      {
+        "path": "docs/core/uet_o2_equilibrium_kms.py",
+        "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_RENORMALIZED_O2_ONE_LOOP_VERTEX_SCHEME",
+    "open_blockers": [
+      "unique_physical_renormalization_scheme_match_missing",
+      "finite_chemical_potential_charged_propagator_and_vertex_missing",
+      "full_interacting_SK_action_and_KMS_match_missing",
+      "continuum_limit_not_converged",
+      "physical_Kubo_coefficient_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "one declared natural-unit renormalized zero-density vertex scheme only; no unique physical scheme, finite-density charged vertex, full SK/KMS, physical Kubo, SI, alpha, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes one declared natural-unit mass-squared reference-subtraction scheme for the zero-density one-loop O(2) vertex. It does not select a unique physical renormalization, derive the charged finite-density propagator, match a full interacting SK/KMS action, establish a continuum limit, provide physical Kubo transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_RENORMALIZED_O2_ONE_LOOP_VERTEX_SCHEME",
+    "equations": {
+      "reference_mass": "m_ref^2=m_eff(Phi_*)^2",
+      "vacuum_counterterm": "B_vac^R(m;Lambda)=B_vac(m;Lambda)-B_vac(m_ref;Lambda)",
+      "renormalized_bubble": "B^R(m;T)=B_vac^R(m)+B_thermal(m;T)",
+      "renormalized_vertex": "Gamma_R^(4)=V-(B_s^R*(V.V)+B_t^R*(V.V)+B_u^R*(V.V))/2",
+      "reference_condition": "B_vac^R(m_ref;Lambda)=0"
+    },
+    "scheme": {
+      "name": "mass-squared reference subtraction at Phi_*",
+      "subtraction_order": 0,
+      "reference_point": "Phi=Phi_* = reference_space_response",
+      "finite_counterterm_origin": "declared scheme condition, not external measurement",
+      "cutoff_role": "numerical regulator with an explicit convergence sequence"
+    },
+    "domain": {
+      "unit_lane": "natural",
+      "chemical_potential": "mu=0 only",
+      "external_momentum": "zero Euclidean frequency and zero spatial momentum",
+      "thermal_piece": "finite state-dependent contribution is retained"
+    },
+    "units": {
+      "mass_temperature_momentum": "natural energy",
+      "quartic_coupling": "dimensionless",
+      "bubble_vertex": "dimensionless",
+      "Phi": "effective action response variable; not temperature"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived mass-squared reference subtraction applied to the O(2) one-loop vertex bubble; not a physical scheme match",
+    "observable": "finite natural-unit renormalized one-loop vertex in one declared subtraction scheme",
+    "data_role": "ACTION_DERIVED_RENORMALIZED_ONE_LOOP_VERTEX_SCHEME_NOT_PHYSICAL",
+    "included": {
+      "reference_subtraction": true,
+      "finite_thermal_bubble": true,
+      "cutoff_convergence_sequence": true,
+      "equilibrium_kms_fdt_witness": true
+    },
+    "excluded": {
+      "unique_physical_renormalization": true,
+      "finite_chemical_potential_vertex": true,
+      "full_interacting_sk_kms_match": true,
+      "continuum_limit": true,
+      "physical_kubo_coefficient": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes one declared natural-unit mass-squared reference-subtraction scheme for the zero-density one-loop O(2) vertex. It does not select a unique physical renormalization, derive the charged finite-density propagator, match a full interacting SK/KMS action, establish a continuum limit, provide physical Kubo transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.0,
+    "space_response": 0.15,
+    "reference_space_response": 0.0,
+    "effective_mass": 0.7039176088151227,
+    "reference_mass": 0.7071067811865476,
+    "quartic_coupling": 0.8,
+    "raw_vacuum_values": [
+      0.0226530270235778,
+      0.03132284349531725,
+      0.040074159997744885,
+      0.048846082244006175,
+      0.05762317052657713
+    ],
+    "reference_vacuum_values": [
+      0.02259708610779153,
+      0.031265924639407756,
+      0.04001699219816668,
+      0.04878885192486508,
+      0.05756592455973829
+    ],
+    "subtracted_vacuum_values": [
+      5.5940915786267115e-05,
+      5.691885590949214e-05,
+      5.716779957820606e-05,
+      5.723031914109389e-05,
+      5.724596683884253e-05
+    ],
+    "thermal_values": [
+      0.0007204923749193588,
+      0.0007204923750649983,
+      0.0007204923750649976,
+      0.000720492375065003,
+      0.0007204923750649822
+    ],
+    "renormalized_bubble_values": [
+      0.0007764332907056259,
+      0.0007774112309744904,
+      0.0007776601746432037,
+      0.0007777226942060969,
+      0.0007777383419038247
+    ],
+    "renormalized_vertex_norms": [
+      3.9130979978480114,
+      3.9130903333482068,
+      3.9130883822796467,
+      3.913087892289477,
+      3.9130877696523747
+    ],
+    "renormalized_correction_norms": [
+      0.006324724742364682,
+      0.006332690916779255,
+      0.006334718779571607,
+      0.00633522805581085,
+      0.006335355519924206
+    ],
+    "raw_vacuum_growth_ratio": 2.543729386214107,
+    "thermal_cutoff_relative_change": 2.0211653480899047e-10,
+    "renormalized_bubble_last_relative_change": 2.0119893432968065e-05,
+    "renormalized_vertex_last_relative_change": 3.1340237077930863e-08,
+    "reference_subtraction_residual": 0.0,
+    "kms_ratio_residual": 0.0,
+    "kms_noise_fdt_residual": 0.0,
+    "renormalized_vertex_scheme_completed": true,
+    "physical_renormalization_scheme_matched": false,
+    "finite_density_vertex_completed": false,
+    "full_interacting_sk_kms_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_RENORMALIZED_ONE_LOOP_VERTEX_SCHEME_NOT_PHYSICAL"
+  },
+  "checks": {
+    "reference_and_target_masses_are_distinct": true,
+    "raw_vacuum_growth_is_visible": true,
+    "subtracted_vacuum_values_are_finite": true,
+    "thermal_piece_is_finite_and_stable": true,
+    "renormalized_bubble_is_finite": true,
+    "renormalized_bubble_cutoff_change_is_bounded": true,
+    "renormalized_vertex_cutoff_change_is_bounded": true,
+    "reference_subtraction_condition_is_explicit": true,
+    "equilibrium_kms_ratio_holds": true,
+    "equilibrium_kms_noise_fdt_holds": true,
+    "declared_scheme_is_not_physical_scheme_match": true,
+    "finite_density_vertex_remains_open": true,
+    "full_interacting_sk_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "scheme_boundary_is_explicit": true,
+    "thermal_external_boundaries_are_explicit": true
+  },
+  "failed_checks": [],
+  "renormalized_vertex_scheme_completed": true,
+  "physical_renormalization_scheme_matched": false,
+  "finite_density_vertex_completed": false,
+  "full_interacting_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "unique_physical_renormalization_and_finite_density_charged_vertex_missing",
+  "next_controller": "match the declared subtraction scheme to a finite-density charged propagator and full interacting SK/KMS construction; keep physical Kubo, alpha, source, and holdout gates independent",
+  "claim_promotion": false
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "t13-ding-2017-acs-supplementary-payload-boundary-v1",
+  "artifact": "t13_ding_2017_acs_supplementary_payload_boundary_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_DING_2017_ACS_SUPPLEMENTARY_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
+  "major_result": {
+    "major_result_id": "T13_DING_2017_ACS_SUPPLEMENTARY_PAYLOAD_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the official ACS Figshare supplementary object is source-locked by DOI, locator, file identity, size, and SHA-256",
+      "all 18 supplementary pages were reviewed as methods, equations, figures, and narrative material",
+      "the public supplementary route contains no accepted machine-readable mode-resolved C_src(T) rows",
+      "the public supplementary route contains no raw fc2/fc3 or force-constant input package, uncertainty package, or numerical-convergence record",
+      "plotted figures are retained as visual context only and are not digitized or used for target fitting"
+    ],
+    "equation_or_mapping": {
+      "source_method": "Supplementary Eq. 15a-15b define heat-current and thermal-conductivity expressions for the graphite-ribbon BTE calculation; they are method equations, not a C_src(T) payload.",
+      "topic13_required_source": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src",
+      "measurement_layer": "y_TTG = Delta_Tq(t) / Delta_Tq(0)"
+    },
+    "units": {
+      "required_C_src": "J m^-3 K^-1; no numeric C_src rows are supplied by this route",
+      "supplementary_file": "PDF bytes; not a thermal-observable unit"
+    },
+    "derivation_class": "public-source provenance and payload-availability boundary; no UET derivation",
+    "observable": "Ding 2017 graphite phonon-hydrodynamic transport method boundary",
+    "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_ding_2017_acs_supplementary_payload_boundary_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2017_acs_supplementary_information.pdf",
+        "sha256": "048b3ecfa9ccd02db0a0fc4ec14bb352f04275cf4e0216e689f0689d4ad0a6e5"
+      }
+    ],
+    "verification_status": "PASS_DING_2017_ACS_SUPPLEMENTARY_BOUNDARY_NO_MACHINE_READABLE_C_SRC",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "ding_2017_public_supplementary_has_no_machine_readable_C_src_or_raw_force_constants",
+      "ding_2017_public_supplementary_has_no_source_grade_uncertainty_or_convergence_package"
+    ],
+    "dependency_unlocked": "Ding 2017 public supplementary provenance boundary only; no C_src, alpha, bridge, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes only the public payload boundary for the Ding 2017 ACS supplementary route. It does not close Ding 2022 C_src, establish a same-regime reproduction, derive alpha_Phi_K, or validate UET transport."
+  },
+  "source": {
+    "article_title": "Phonon Hydrodynamic Heat Conduction and Knudsen Minimum in Graphite",
+    "article_doi": "10.1021/acs.nanolett.7b04932",
+    "article_url": "https://pubs.acs.org/doi/10.1021/acs.nanolett.7b04932",
+    "supplementary_doi": "10.1021/acs.nanolett.7b04932.s001",
+    "figshare_article_id": 5723020,
+    "figshare_article_url": "https://acs.figshare.com/articles/journal_contribution/Phonon_Hydrodynamic_Heat_Conduction_and_Knudsen_Minimum_in_Graphite/5723020",
+    "figshare_api_url": "https://api.figshare.com/v2/articles/5723020",
+    "figshare_file_id": 10060339,
+    "figshare_file_name": "nl7b04932_si_001.pdf",
+    "figshare_download_url": "https://ndownloader.figshare.com/files/10060339",
+    "license_observed": "CC BY-NC 4.0",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2017_acs_supplementary_information.pdf",
+    "size_bytes": 1417911,
+    "sha256": "048b3ecfa9ccd02db0a0fc4ec14bb352f04275cf4e0216e689f0689d4ad0a6e5",
+    "official_md5": "57506d1a11065383dca07cbbee0928d0",
+    "reviewed_page_count": 18,
+    "package_inventory": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2017_acs_supplementary_information.pdf",
+        "media_type": "application/pdf",
+        "role": "supplementary methods, equations, figures, and narrative",
+        "numeric_payload_role": false
+      }
+    ],
+    "numeric_payload_objects": [],
+    "payload_classification": {
+      "pdf_equations_and_methods": true,
+      "figure_only_numeric_context": true,
+      "machine_readable_C_src_rows": false,
+      "mode_resolved_PBTE_response": false,
+      "raw_force_constants": false,
+      "uncertainty_package": false,
+      "numerical_convergence_package": false
+    }
+  },
+  "review_boundary": {
+    "content_review": "All 18 supplementary pages were reviewed for row-level C_src, mode-resolved PBTE response, raw force constants, uncertainty, and convergence payload. The file contains methods, equations, figures, and narrative only.",
+    "equation_review": "The Eq. 15 heat-current and thermal-conductivity expressions were treated as source-method context and not converted into numeric C_src rows.",
+    "figure_route": "Figures were not digitized and are not used for target fitting or calibration.",
+    "holdout_accessed": false,
+    "target_fit_performed": false,
+    "alpha_Phi_K_fit_performed": false,
+    "numeric_alpha_Phi_K_emitted": false
+  },
+  "checks": {
+    "supplementary_file_present": true,
+    "pdf_header_present": true,
+    "size_matches_figshare_metadata": true,
+    "sha256_matches_downloaded_source": true,
+    "official_md5_recorded": true,
+    "page_marker_count_matches_reviewed_pdf": true,
+    "public_package_inventory_contains_only_pdf": true,
+    "no_machine_readable_C_src_payload": true,
+    "no_raw_force_constant_payload": true,
+    "no_source_grade_uncertainty_or_convergence_payload": true,
+    "no_curve_digitization_performed": true,
+    "holdout_not_accessed": true,
+    "alpha_phi_k_fit_not_performed": true
+  },
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_controller": "Obtain an authorized numeric Ding-compatible PBTE payload or complete an accepted same-regime reproduction with mode-resolved C_src(T), J m^-3 K^-1 units, uncertainty, convergence, and material-state mapping; do not relabel this PDF or its figures as C_src.",
+  "claim_boundary": "Public supplementary provenance boundary only; no Ding C_src, no independent alpha_Phi_K calibration, no TTG prediction, no external validation, and no Full Topic 13 closure."
+}

@@ -1,0 +1,185 @@
+{
+  "schema_version": "t13-independent-csrc-acceptance-contract-v1",
+  "artifact": "t13_independent_csrc_acceptance_contract",
+  "generated_at": "2026-08-14",
+  "status": "PASS_SCOPED_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
+  "major_result": {
+    "major_result_id": "T13_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the independent-reproduction route is now an explicit machine-readable source gate",
+      "full Topic 13 may accept an independent reproduction only when material/state, PBTE response, units, uncertainty, convergence, and provenance are all present",
+      "the current MP48 harmonic comparator is evaluated and rejected without silent substitution for Ding C_src",
+      "raw-author Ding C_src and accepted independent reproduction are separate source routes",
+      "Calorine/Zenodo candidate PBTE reproduction is evaluated with numeric C_src rows and latest q-mesh preflight, but rejected for full Ding acceptance because material/state equivalence and source-grade uncertainty are not closed"
+    ],
+    "what_is_remains_open": [
+      "Ding author numeric payload or a qualifying independent PBTE reproduction",
+      "mode-resolved C_src(T) in J m^-3 K^-1 with uncertainty",
+      "same material regime, temperature/state, and response-contract mapping",
+      "Calorine candidate material/state equivalence and source-grade uncertainty"
+    ],
+    "dependency_unlocked": "source acceptance policy only; no Ding C_src, alpha, transport, Core, or Gravity unlock",
+    "equation_or_mapping": {
+      "source_response": "C_src(T) = sum_mu c_mu(T)",
+      "temperature_response": "Delta_Tq = Delta_u_ph / C_src",
+      "acceptance_rule": "accepted_independent_C_src := provenance and raw payload + material/state match + PBTE response + SI units + uncertainty + convergence"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "temperature": "K",
+      "uncertainty": "source-declared standard or otherwise explicitly qualified uncertainty"
+    },
+    "derivation_class": "source acceptance contract and candidate qualification audit; no UET derivation",
+    "observable": "Ding-compatible mode-resolved PBTE heat-capacity response",
+    "data_role": "SOURCE_ACCEPTANCE_GATE_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_numeric_input_availability_package.json",
+        "sha256": "4112477b5b42e8724656452d9a66bb62366e205f9b996ba0276c8475628d60f2",
+        "summary": {
+          "role": "Ding official OA and author-request availability"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_c_src_independent_reproduction_boundary_audit.json",
+        "sha256": "2144fbc51827b442216547d9d5f3d9e5fd432ad364e9a0a55d187b4a9890fbad",
+        "summary": {
+          "role": "current independent comparator boundary"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_material_regime_boundary_audit.json",
+        "sha256": "64742790afda02aae657ceed146c6a88c235185066ff283f067ed52c376d14e0",
+        "summary": {
+          "role": "material/state equivalence controller"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json",
+        "sha256": "585ebc548e5354c2c4905af9b3efca5f9c9d1365527046d4103751ce7869b45d",
+        "summary": {
+          "role": "independent force-constant convergence controller"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+        "summary": {
+          "role": "Calorine candidate reproduction evaluation",
+          "accepted_for_full_topic13": false,
+          "material_state_match_to_ding": false,
+          "source_grade_uncertainty_present": false
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json",
+        "sha256": "5e4e0d42d6e70612eabce988b86ab10b628dea14d4270bf2364ad58f572d014b",
+        "summary": {
+          "role": "Calorine candidate provenance boundary",
+          "upstream_model_origin_recorded": true,
+          "accepted_for_full_topic13": false
+        }
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json",
+        "sha256": "5db4a9487f728e5275906a1d4514c154b02cee4854fadcc0ea45f3ac6d5a0221",
+        "summary": {
+          "role": "Calorine isotope-mass state sensitivity",
+          "status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+          "source_grade_uncertainty_present": false
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_state_uncertainty_decomposition_audit.json",
+        "sha256": "d1b7619f1f0040e1010eb561de5422d2063fb554055c15fd7f14186d4134e481",
+        "summary": {
+          "role": "Calorine state uncertainty decomposition",
+          "status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+          "source_grade_uncertainty_present": false
+        }
+      }
+    ],
+    "verification_status": "PASS_SCOPED_INDEPENDENT_C_SRC_ACCEPTANCE_CONTRACT",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "claim_boundary": "This closes the acceptance policy and current candidate evaluation only. It does not emit C_src, replace Ding data with MP48, calibrate alpha_Phi_K, or close Topic 13."
+  },
+  "acceptance_contract": {
+    "required_fields": [
+      "source_identity_and_locator",
+      "raw_numeric_or_reproduction_payload",
+      "source_hash",
+      "material_identity_morphology_isotope_defect_state",
+      "temperature_and_state",
+      "PBTE_mode_resolved_response_contract",
+      "C_src_rows_with_J_m^-3_K^-1_units",
+      "uncertainty_and_preprocessing",
+      "mesh_or_numerical_convergence",
+      "independence_statement",
+      "holdout_and_fit_audit"
+    ],
+    "rejection_rules": [
+      "figure-derived normalized TTG rows cannot satisfy C_src acceptance",
+      "harmonic c_v or DOS comparators cannot satisfy PBTE C_src acceptance without a declared response mapping",
+      "a different graphite grade or morphology cannot satisfy Ding equivalence by label alone",
+      "missing uncertainty or convergence cannot be repaired by changing a threshold",
+      "Xie 2026 holdout cannot be read by source, calibration, or tuning paths"
+    ]
+  },
+  "candidate_evaluations": {
+    "ding_author_payload": {
+      "accepted_for_full_topic13": false,
+      "source_route": "RAW_AUTHOR_DING_C_SRC",
+      "reason": "No numeric author payload is present in the captured package; the request route remains open."
+    },
+    "mp48_harmonic_comparator": {
+      "accepted_for_full_topic13": false,
+      "source_route": "INDEPENDENT_PBTE_REPRODUCTION",
+      "material_equivalent_to_ding": false,
+      "mode_resolved_ding_c_src_ready": false,
+      "force_constant_mesh_pass": true,
+      "reason": "MP48 is a harmonic ideal AB graphite comparator, not a Ding-equivalent PBTE response; it remains comparison-only."
+    },
+    "calorine_zenodo_nep_bte_candidate_reproduction": {
+      "accepted_for_full_topic13": false,
+      "source_route": "INDEPENDENT_PBTE_REPRODUCTION",
+      "audit_status": "PASS_SCOPED_CALORINE_NUMERIC_C_SRC_REPRODUCTION",
+      "material_equivalent_to_ding": false,
+      "volumetric_csrc_rows_present": true,
+      "mode_heat_capacity_input_unit": "eV K^-1 per mode per primitive cell",
+      "si_csrc_output_unit": "J m^-3 K^-1",
+      "latest_mesh_pair_relative_change": 0.0023908135252728663,
+      "numerical_preflight_pass": true,
+      "source_grade_uncertainty_present": false,
+      "target_fit_performed": false,
+      "alpha_Phi_K_fit_performed": false,
+      "holdout_accessed": false,
+      "byte_source_locator": "https://zenodo.org/records/21198312",
+      "isotope_mass_sensitivity_status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+      "state_uncertainty_decomposition_status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+      "natural_composition_mass_envelope": 5.1197301212210954e-05,
+      "mesh_numerical_envelope": 0.0023908135252728663,
+      "source_grade_uncertainty_closed": false,
+      "upstream_model_origin_locator": "https://github.com/brucefan1983/GPUMD/blob/master/potentials/nep/C_2024_NEP4.txt",
+      "provenance_boundary_repaired": true,
+      "reason": "Numeric candidate output is reproducible, but the public Calorine state is not demonstrated equivalent to Ding natural-graphite TTG and it has no source-grade statistical/systematic uncertainty package."
+    }
+  },
+  "acceptance": {
+    "raw_author_numeric_C_src_available": false,
+    "accepted_independent_reproduction_available": false,
+    "accepted_for_full_topic13": false,
+    "status": "BLOCKED",
+    "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "claim_promotion": false,
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_controller": "Obtain an authorized Ding numeric package or a same-regime PBTE reproduction with material/state equivalence and source-grade uncertainty; the Calorine candidate remains numeric comparison evidence only and must not calibrate alpha_Phi_K.",
+  "claim_boundary": "Source acceptance policy plus explicit Calorine candidate evaluation; no candidate is accepted for Ding C_src, no alpha_Phi_K is emitted, no holdout is used, and Full Topic 13 remains open."
+}

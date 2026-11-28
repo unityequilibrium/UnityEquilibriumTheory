@@ -1,0 +1,100 @@
+{
+  "schema_version": "t13-farooqui-ig210-thermophysical-source-audit-v1",
+  "artifact": "t13_farooqui_ig210_thermophysical_source_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "major_result": {
+    "major_result_id": "T13_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "published Table 1 IG-210 density, C_p, thermal diffusivity, alpha_l, and thermal-conductivity rows at 500, 700, and 1000 C",
+      "same-grade IG-210 batch statement and source locators",
+      "source expanded uncertainty bounds at coverage factor k=2",
+      "explicit separation of C_p from the unresolved C_p-to-C_v correction"
+    ],
+    "equation_or_mapping": {
+      "conditional_volume_expansion": "alpha_V = 3*alpha_l under isotropic geometry",
+      "cp_to_cv": "c_v^V = rho*(C_p - T*alpha_V^2*K_T)",
+      "thermal_diffusivity_conductivity_context": "kappa = rho*C_p*D is source context only; it is not a UET transport derivation"
+    },
+    "units": {
+      "temperature": "C and K",
+      "density": "kg m^-3",
+      "specific_heat": "J kg^-1 K^-1",
+      "thermal_diffusivity": "m^2 s^-1",
+      "alpha_l": "K^-1",
+      "thermal_conductivity": "W m^-1 K^-1",
+      "uncertainty": "expanded relative source bounds, k=2"
+    },
+    "derivation_class": "source transcription with unit normalization; conditional geometry mapping only; no UET derivation",
+    "observable": "IG-210 high-temperature thermophysical property comparator",
+    "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json",
+        "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+        "sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_FAROOQUI_IG210_THERMOPHYSICAL_SOURCE",
+    "open_blockers": [
+      "same_state_IG210_isothermal_K_T_missing",
+      "C_p_to_C_v_correction_not_closed",
+      "Ding_TTG_material_regime_mapping_not_closed",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "IG-210 density/C_p/alpha_l source lane only; no C_v, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
+    "claim_boundary": "This package closes only a source-traceable IG-210 thermophysical comparator with density, C_p, diffusivity, alpha_l, and stated source uncertainty. It is not C_v, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "doi": "10.1007/s10765-021-02928-4",
+    "official_url": "https://doi.org/10.1007/s10765-021-02928-4",
+    "repository_url": "https://eprintspublications.npl.co.uk/9538/",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/farooqui_2022_ig210_thermophysical_table.pdf",
+    "size_bytes": 4116498,
+    "md5": "95237ebba081f28e48d5ee7ec88babe8",
+    "sha256": "777eebdc380f0707c3b63e612cce8977fcb6cab4ee5ed086e45f09aa81e2bd45"
+  },
+  "row_summary": {
+    "count": 3,
+    "temperatures_C": [
+      500.0,
+      700.0,
+      1000.0
+    ],
+    "same_grade_ig210": true,
+    "density_uncertainty_locked": true,
+    "specific_heat_uncertainty_locked": true,
+    "K_T_present": false,
+    "C_v_emitted": false
+  },
+  "checks": {
+    "raw_pdf_present": true,
+    "raw_pdf_size_matches": true,
+    "raw_pdf_md5_matches": true,
+    "raw_pdf_sha256_matches": true,
+    "source_identity_locator_and_license_present": true,
+    "material_batch_and_temperature_scope_declared": true,
+    "numeric_rows_have_identity_units_and_expected_values": true,
+    "source_uncertainty_rows_are_preserved": true,
+    "density_correction_footnote_is_declared": true,
+    "alpha_volume_conversion_is_conditional": true,
+    "cp_is_not_relabelled_as_cv": true,
+    "kt_and_cv_are_explicitly_open": true,
+    "ding_equivalence_is_not_claimed": true,
+    "alpha_phi_k_is_not_emitted": true,
+    "no_fit_or_holdout_access": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "same_state_IG210_isothermal_K_T_and_independent_alpha_Phi_K_missing",
+  "next_controller": "source-lock a permitted same-state IG-210 K_T record or retain the C_p-to-C_v blocker; pursue independent Phi SI anchor separately",
+  "claim_boundary": "This package closes only a source-traceable IG-210 thermophysical comparator with density, C_p, diffusivity, alpha_l, and stated source uncertainty. It is not C_v, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+}

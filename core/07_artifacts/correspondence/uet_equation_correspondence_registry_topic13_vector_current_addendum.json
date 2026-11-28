@@ -1,0 +1,100 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "unchanged",
+        "Phi": "effective response variable; internal exchange only",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "collision_operator": 1,
+        "charge_source_function": 0,
+        "grand_heat_source_function": 1,
+        "charge_response_form": 1,
+        "heat_response_form": 3
+      },
+      "derivation_class": "invariant_vector_galerkin_with_landau_source_rank_no_go",
+      "observable": "Vector charge/heat source rank and collision response form, not conductivity",
+      "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+      "verification_status": "PASS_VECTOR_CURRENT_HEAT_RANK_BOUNDARY",
+      "controlling_blocker": "additional_heat_carrier_channel_and_dressed_RA_ladder_missing",
+      "claim_boundary": "Finite vector charge-current lane and structural Landau-frame heat-rank no-go only; not a heat conductivity, complete normal component, dressed ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.invariant_vector_current_landau_heat_rank_boundary",
+      "version": "1",
+      "classification": "candidate_vector_current_and_heat_rank_no_go",
+      "relation_or_code_path": {
+        "vector_features": "F_qk^i=(p^i/m)*y(E)^k",
+        "vector_quadratic_form": "Q_ab^(l=1)=(beta/12)*sum_events W_without_beta DeltaF_a dot DeltaF_b",
+        "vector_operator": "L_vector=G_vector^(-1/2) Q_vector G_vector^(-1/2)",
+        "charge_source": "J_charge^i=q*p^i/E",
+        "grand_heat_source": "J_Q^i=(E-mu*q)*p^i/E=P^i-mu*J_charge^i",
+        "landau_rank_boundary": "P_perp J_Q=-mu*P_perp J_charge"
+      },
+      "standard_physics_counterpart": "Linearized relativistic vector collision operator and Landau-frame current projection",
+      "variables": {
+        "L_vector": "vector collision rate operator",
+        "J_charge": "Noether charge current source",
+        "J_Q": "grand heat current source"
+      },
+      "mathematical_role": "vector transport precursor and independent-heat-channel rank gate",
+      "observable_mapping": "Vector charge/heat source rank and collision response form, not conductivity",
+      "parameter_dimensions": {
+        "collision_operator": 1,
+        "charge_source_function": 0,
+        "grand_heat_source_function": 1,
+        "charge_response_form": 1,
+        "heat_response_form": 3
+      },
+      "source_or_origin": "Same invariant O(2)-Phi elastic kernel and Landau-frame decomposition",
+      "assumptions": {
+        "natural_units": true,
+        "equal_mass_two_charge_species": true,
+        "elastic_2to2_only": true,
+        "normal_response_background": true
+      },
+      "symmetry_and_conservation": "Eventwise momentum conservation, charge conjugation and PSD vector quadratic form",
+      "limiting_cases": [
+        "mu=0 heat-source null",
+        "energy scales 1.5, 2, 3",
+        "radial orders 12, 16, 24",
+        "angular orders 4, 6, 8"
+      ],
+      "implementation_paths": [
+        "docs/core/uet_o2_invariant_vector_current_galerkin.py"
+      ],
+      "verifier_paths": [
+        "docs/scripts/audit/audit_topic13_vector_current_heat_rank_boundary.py",
+        "docs/core/test/test_topic13_invariant_vector_current_galerkin.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_CANDIDATE",
+      "proof_status": "VECTOR_LANE_VERIFIED_INDEPENDENT_HEAT_CHANNEL_REJECTED_IN_DECLARED_LANE",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_vector_current_heat_rank_boundary_audit.json",
+          "sha256": "c7c957d022b0ad7d44c8c996b734c92705178fd225533900303f573aeb308af7"
+        }
+      ],
+      "downstream_dependencies": [
+        "charge_current_dressed_RA_ladder",
+        "multicomponent_heat_channel_design"
+      ],
+      "dependency_role": "charge_ladder_precursor_and_heat_channel_no_go",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "additional_normal_component_or_response_channel_for_independent_heat_transport",
+        "same_width_dressed_RA_ladder",
+        "tensor_shear_channel",
+        "number_changing_and_response_cuts",
+        "physical_Kubo_and_SI_frame_normalization"
+      ],
+      "next_hardening_step": "Use the charge-current vector lane in the same-width dressed RA ladder, and add a genuinely independent normal/response carrier before reopening heat conductivity."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

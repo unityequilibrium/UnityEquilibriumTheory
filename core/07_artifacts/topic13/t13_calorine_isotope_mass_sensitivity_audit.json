@@ -1,0 +1,641 @@
+{
+  "schema_version": "t13-calorine-isotope-mass-sensitivity-audit-v1",
+  "artifact": "t13_calorine_isotope_mass_sensitivity_audit",
+  "status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "NIST representative carbon isotope composition and uncertainty bounds are source-located",
+      "the same mass-independent force constants are rerun under natural-reference, composition-bound, and pure-isotope mass states",
+      "the mass-only contribution to C_src sensitivity is reported in J m^-3 K^-1 without fitting"
+    ],
+    "equation_or_mapping": {
+      "mass_average": "m_bar = f_12 m_12 + f_13 m_13",
+      "sensitivity": "delta_C_src_state(T) = |C_src_state(T)-C_src_natural(T)| / C_src_natural(T)"
+    },
+    "units": {
+      "mass": "amu",
+      "C_src": "J m^-3 K^-1",
+      "temperature": "K"
+    },
+    "derivation_class": "external isotope composition plus mass-only harmonic sensitivity; no UET derivation",
+    "observable": "Calorine candidate C_src isotope-state sensitivity",
+    "data_role": "STATE_SENSITIVITY_NOT_CALIBRATION",
+    "verification_status": "PASS_SCOPED_CALORINE_ISOTOPE_MASS_SENSITIVITY",
+    "open_blockers": [
+      "calorine_route_defect_state_mapping_to_ding_missing",
+      "calorine_route_morphology_mapping_to_ding_missing",
+      "source_grade_uncertainty_not_closed_by_mass_only_sensitivity"
+    ],
+    "dependency_unlocked": "isotope mass sensitivity lane only; no Ding C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "Mass-only harmonic isotope sensitivity does not establish Ding material equivalence or source-grade uncertainty. Defect, morphology, isotope-scattering, and TTG response mapping remain separate."
+  },
+  "source": {
+    "nist_locator": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=C",
+    "isotope_masses_amu": {
+      "12C": 12.0,
+      "13C": 13.00335483507
+    },
+    "representative_fraction_13C": {
+      "value": 0.0107,
+      "uncertainty": 0.0008
+    },
+    "source_note": "NIST representative composition is used for a mass-averaged sensitivity; it is not a measurement of the Ding specimen's isotope ratio."
+  },
+  "force_constant_identity": {
+    "poscar": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+      "size_bytes": 503,
+      "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+      "locator": null
+    },
+    "fc2": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+      "size_bytes": 32706,
+      "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+      "locator": null
+    },
+    "fc3": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+      "size_bytes": 9346643,
+      "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+      "locator": null
+    },
+    "reused_for_all_states": true
+  },
+  "runs": [
+    {
+      "schema_version": "t13-calorine-isotope-mass-state-run-v1",
+      "state": {
+        "name": "natural_reference",
+        "fraction_12C": 0.9893,
+        "fraction_13C": 0.0107,
+        "mass_amu": 12.010735896735248,
+        "role": "NIST representative natural-composition reference"
+      },
+      "run": {
+        "dim": [
+          4,
+          4,
+          2
+        ],
+        "mesh": [
+          10,
+          10,
+          5
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "transport_solver": "RTA control; isotope scattering disabled",
+        "force_constants_mass_independent_reused": true,
+        "target_curve_used": false,
+        "fit_performed": false,
+        "alpha_Phi_K_fit_performed": false,
+        "holdout_accessed": false
+      },
+      "unit_contract": {
+        "mass": "amu",
+        "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+        "output": "J m^-3 K^-1",
+        "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)"
+      },
+      "geometry": {
+        "primitive_volume_A3": 34.40911529816803,
+        "q_weight_sum": 500.0,
+        "frequency_range_THz": [
+          -0.0004508078648300966,
+          45.70326192162146
+        ]
+      },
+      "c_src_rows": [
+        {
+          "temperature_K": 200.0,
+          "C_src_J_m^-3_K^-1": 951146.3504377909
+        },
+        {
+          "temperature_K": 250.0,
+          "C_src_J_m^-3_K^-1": 1315489.1738627444
+        },
+        {
+          "temperature_K": 300.0,
+          "C_src_J_m^-3_K^-1": 1669095.9128925726
+        }
+      ],
+      "force_constants": {
+        "poscar": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+          "size_bytes": 503,
+          "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+          "locator": null
+        },
+        "fc2": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+          "size_bytes": 32706,
+          "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+          "locator": null
+        },
+        "fc3": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+          "size_bytes": 9346643,
+          "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+          "locator": null
+        }
+      },
+      "output_artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/natural_reference/kappa-m10105.hdf5",
+        "size_bytes": 151885,
+        "sha256": "e1e0b0950efdc69d76eeaa9a908c8eb5e56384f5619c6b09d0df62968520d6c3",
+        "locator": null
+      },
+      "claim_boundary": "Mass-averaged harmonic isotope sensitivity only; no isotope-disorder scattering, vacancy, morphology, Ding-equivalence, Phi map, alpha_Phi_K, or external-validation claim."
+    },
+    {
+      "schema_version": "t13-calorine-isotope-mass-state-run-v1",
+      "state": {
+        "name": "natural_lower_13C",
+        "fraction_12C": 0.9901,
+        "fraction_13C": 0.009899999999999999,
+        "mass_amu": 12.009933212867193,
+        "role": "NIST composition lower bound"
+      },
+      "run": {
+        "dim": [
+          4,
+          4,
+          2
+        ],
+        "mesh": [
+          10,
+          10,
+          5
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "transport_solver": "RTA control; isotope scattering disabled",
+        "force_constants_mass_independent_reused": true,
+        "target_curve_used": false,
+        "fit_performed": false,
+        "alpha_Phi_K_fit_performed": false,
+        "holdout_accessed": false
+      },
+      "unit_contract": {
+        "mass": "amu",
+        "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+        "output": "J m^-3 K^-1",
+        "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)"
+      },
+      "geometry": {
+        "primitive_volume_A3": 34.40911529816803,
+        "q_weight_sum": 500.0,
+        "frequency_range_THz": [
+          -0.00045082294899498673,
+          45.70478918482381
+        ]
+      },
+      "c_src_rows": [
+        {
+          "temperature_K": 200.0,
+          "C_src_J_m^-3_K^-1": 951097.6543115906
+        },
+        {
+          "temperature_K": 250.0,
+          "C_src_J_m^-3_K^-1": 1315428.8282939242
+        },
+        {
+          "temperature_K": 300.0,
+          "C_src_J_m^-3_K^-1": 1669026.854123508
+        }
+      ],
+      "force_constants": {
+        "poscar": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+          "size_bytes": 503,
+          "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+          "locator": null
+        },
+        "fc2": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+          "size_bytes": 32706,
+          "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+          "locator": null
+        },
+        "fc3": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+          "size_bytes": 9346643,
+          "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+          "locator": null
+        }
+      },
+      "output_artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/natural_lower_13C/kappa-m10105.hdf5",
+        "size_bytes": 151843,
+        "sha256": "f4c8d9f42717a1ecd4bfebaa8654fef80b774edb2932c2dcec78299129c293c9",
+        "locator": null
+      },
+      "claim_boundary": "Mass-averaged harmonic isotope sensitivity only; no isotope-disorder scattering, vacancy, morphology, Ding-equivalence, Phi map, alpha_Phi_K, or external-validation claim."
+    },
+    {
+      "schema_version": "t13-calorine-isotope-mass-state-run-v1",
+      "state": {
+        "name": "natural_upper_13C",
+        "fraction_12C": 0.9885,
+        "fraction_13C": 0.0115,
+        "mass_amu": 12.011538580603306,
+        "role": "NIST composition upper bound"
+      },
+      "run": {
+        "dim": [
+          4,
+          4,
+          2
+        ],
+        "mesh": [
+          10,
+          10,
+          5
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "transport_solver": "RTA control; isotope scattering disabled",
+        "force_constants_mass_independent_reused": true,
+        "target_curve_used": false,
+        "fit_performed": false,
+        "alpha_Phi_K_fit_performed": false,
+        "holdout_accessed": false
+      },
+      "unit_contract": {
+        "mass": "amu",
+        "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+        "output": "J m^-3 K^-1",
+        "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)"
+      },
+      "geometry": {
+        "primitive_volume_A3": 34.40911529816803,
+        "q_weight_sum": 500.0,
+        "frequency_range_THz": [
+          -0.00045079289233681446,
+          45.70173481151318
+        ]
+      },
+      "c_src_rows": [
+        {
+          "temperature_K": 200.0,
+          "C_src_J_m^-3_K^-1": 951195.045078252
+        },
+        {
+          "temperature_K": 250.0,
+          "C_src_J_m^-3_K^-1": 1315549.5170942561
+        },
+        {
+          "temperature_K": 300.0,
+          "C_src_J_m^-3_K^-1": 1669164.9685037553
+        }
+      ],
+      "force_constants": {
+        "poscar": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+          "size_bytes": 503,
+          "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+          "locator": null
+        },
+        "fc2": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+          "size_bytes": 32706,
+          "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+          "locator": null
+        },
+        "fc3": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+          "size_bytes": 9346643,
+          "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+          "locator": null
+        }
+      },
+      "output_artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/natural_upper_13C/kappa-m10105.hdf5",
+        "size_bytes": 152139,
+        "sha256": "cae5e9dbf0e7c31d34f294d1a92adf454583b751a4128e5a08e51353251f0cc6",
+        "locator": null
+      },
+      "claim_boundary": "Mass-averaged harmonic isotope sensitivity only; no isotope-disorder scattering, vacancy, morphology, Ding-equivalence, Phi map, alpha_Phi_K, or external-validation claim."
+    },
+    {
+      "schema_version": "t13-calorine-isotope-mass-state-run-v1",
+      "state": {
+        "name": "pure_12C_stress",
+        "fraction_12C": 1.0,
+        "fraction_13C": 0.0,
+        "mass_amu": 12.0,
+        "role": "isotopic stress bound; not Ding specimen state"
+      },
+      "run": {
+        "dim": [
+          4,
+          4,
+          2
+        ],
+        "mesh": [
+          10,
+          10,
+          5
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "transport_solver": "RTA control; isotope scattering disabled",
+        "force_constants_mass_independent_reused": true,
+        "target_curve_used": false,
+        "fit_performed": false,
+        "alpha_Phi_K_fit_performed": false,
+        "holdout_accessed": false
+      },
+      "unit_contract": {
+        "mass": "amu",
+        "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+        "output": "J m^-3 K^-1",
+        "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)"
+      },
+      "geometry": {
+        "primitive_volume_A3": 34.40911529816803,
+        "q_weight_sum": 500.0,
+        "frequency_range_THz": [
+          -0.0004510094144921199,
+          45.72370174683219
+        ]
+      },
+      "c_src_rows": [
+        {
+          "temperature_K": 200.0,
+          "C_src_J_m^-3_K^-1": 950494.916761735
+        },
+        {
+          "temperature_K": 250.0,
+          "C_src_J_m^-3_K^-1": 1314681.8583798031
+        },
+        {
+          "temperature_K": 300.0,
+          "C_src_J_m^-3_K^-1": 1668171.9904154472
+        }
+      ],
+      "force_constants": {
+        "poscar": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+          "size_bytes": 503,
+          "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+          "locator": null
+        },
+        "fc2": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+          "size_bytes": 32706,
+          "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+          "locator": null
+        },
+        "fc3": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+          "size_bytes": 9346643,
+          "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+          "locator": null
+        }
+      },
+      "output_artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/pure_12C_stress/kappa-m10105.hdf5",
+        "size_bytes": 151724,
+        "sha256": "dd2776a40e3211b52a8bcd8612e46a56899dfbcbbc0fedb87c492d230bc16d3e",
+        "locator": null
+      },
+      "claim_boundary": "Mass-averaged harmonic isotope sensitivity only; no isotope-disorder scattering, vacancy, morphology, Ding-equivalence, Phi map, alpha_Phi_K, or external-validation claim."
+    },
+    {
+      "schema_version": "t13-calorine-isotope-mass-state-run-v1",
+      "state": {
+        "name": "pure_13C_stress",
+        "fraction_12C": 0.0,
+        "fraction_13C": 1.0,
+        "mass_amu": 13.00335483507,
+        "role": "isotopic stress bound; not Ding specimen state"
+      },
+      "run": {
+        "dim": [
+          4,
+          4,
+          2
+        ],
+        "mesh": [
+          10,
+          10,
+          5
+        ],
+        "temperatures_K": [
+          200.0,
+          250.0,
+          300.0
+        ],
+        "transport_solver": "RTA control; isotope scattering disabled",
+        "force_constants_mass_independent_reused": true,
+        "target_curve_used": false,
+        "fit_performed": false,
+        "alpha_Phi_K_fit_performed": false,
+        "holdout_accessed": false
+      },
+      "unit_contract": {
+        "mass": "amu",
+        "mode_heat_capacity_input": "eV K^-1 per mode per primitive cell",
+        "output": "J m^-3 K^-1",
+        "aggregation": "C_src = sum_q w_q sum_mu c_qmu / (sum_q w_q V_primitive)"
+      },
+      "geometry": {
+        "primitive_volume_A3": 34.40911529816803,
+        "q_weight_sum": 500.0,
+        "frequency_range_THz": [
+          -0.00043326000675474025,
+          43.9242444024444
+        ]
+      },
+      "c_src_rows": [
+        {
+          "temperature_K": 200.0,
+          "C_src_J_m^-3_K^-1": 1010253.0503301116
+        },
+        {
+          "temperature_K": 250.0,
+          "C_src_J_m^-3_K^-1": 1388378.705233617
+        },
+        {
+          "temperature_K": 300.0,
+          "C_src_J_m^-3_K^-1": 1752156.551817715
+        }
+      ],
+      "force_constants": {
+        "poscar": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/POSCAR",
+          "size_bytes": 503,
+          "sha256": "c673b66e7750fa4abe594e6117879e1ca779dccfe120ae84aa842a15fcab1de7",
+          "locator": null
+        },
+        "fc2": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc2.hdf5",
+          "size_bytes": 32706,
+          "sha256": "ea90e4790166ca54657d4f69a077f4d299d595dd27e107b82d96b4f9eeccad9c",
+          "locator": null
+        },
+        "fc3": {
+          "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/force_constants_dim_4x4x2/fc3.hdf5",
+          "size_bytes": 9346643,
+          "sha256": "9d42c80e59757b783462aea57227d0d58f3becc2e3d145fbb370cb137a60b7e2",
+          "locator": null
+        }
+      },
+      "output_artifact": {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/pure_13C_stress/kappa-m10105.hdf5",
+        "size_bytes": 151960,
+        "sha256": "c124ccad81b8f639585fb2ba8d041da792e5de0f1a6ca55c31f1be473f11502b",
+        "locator": null
+      },
+      "claim_boundary": "Mass-averaged harmonic isotope sensitivity only; no isotope-disorder scattering, vacancy, morphology, Ding-equivalence, Phi map, alpha_Phi_K, or external-validation claim."
+    }
+  ],
+  "sensitivity": [
+    {
+      "state": {
+        "name": "natural_reference",
+        "fraction_12C": 0.9893,
+        "fraction_13C": 0.0107,
+        "mass_amu": 12.010735896735248,
+        "role": "NIST representative natural-composition reference"
+      },
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "relative_change_to_natural_reference": 0.0
+        },
+        {
+          "temperature_K": 250.0,
+          "relative_change_to_natural_reference": 0.0
+        },
+        {
+          "temperature_K": 300.0,
+          "relative_change_to_natural_reference": 0.0
+        }
+      ]
+    },
+    {
+      "state": {
+        "name": "natural_lower_13C",
+        "fraction_12C": 0.9901,
+        "fraction_13C": 0.009899999999999999,
+        "mass_amu": 12.009933212867193,
+        "role": "NIST composition lower bound"
+      },
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "relative_change_to_natural_reference": 5.1197301212210954e-05
+        },
+        {
+          "temperature_K": 250.0,
+          "relative_change_to_natural_reference": 4.5873101823361726e-05
+        },
+        {
+          "temperature_K": 300.0,
+          "relative_change_to_natural_reference": 4.13749554660461e-05
+        }
+      ]
+    },
+    {
+      "state": {
+        "name": "natural_upper_13C",
+        "fraction_12C": 0.9885,
+        "fraction_13C": 0.0115,
+        "mass_amu": 12.011538580603306,
+        "role": "NIST composition upper bound"
+      },
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "relative_change_to_natural_reference": 5.119573916118123e-05
+        },
+        {
+          "temperature_K": 250.0,
+          "relative_change_to_natural_reference": 4.5871325063496155e-05
+        },
+        {
+          "temperature_K": 300.0,
+          "relative_change_to_natural_reference": 4.1373063494612554e-05
+        }
+      ]
+    },
+    {
+      "state": {
+        "name": "pure_12C_stress",
+        "fraction_12C": 1.0,
+        "fraction_13C": 0.0,
+        "mass_amu": 12.0,
+        "role": "isotopic stress bound; not Ding specimen state"
+      },
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "relative_change_to_natural_reference": 0.0006848932088695135
+        },
+        {
+          "temperature_K": 250.0,
+          "relative_change_to_natural_reference": 0.0006136998304369604
+        },
+        {
+          "temperature_K": 300.0,
+          "relative_change_to_natural_reference": 0.0005535466655863108
+        }
+      ]
+    },
+    {
+      "state": {
+        "name": "pure_13C_stress",
+        "fraction_12C": 0.0,
+        "fraction_13C": 1.0,
+        "mass_amu": 13.00335483507,
+        "role": "isotopic stress bound; not Ding specimen state"
+      },
+      "rows": [
+        {
+          "temperature_K": 200.0,
+          "relative_change_to_natural_reference": 0.06214259232043032
+        },
+        {
+          "temperature_K": 250.0,
+          "relative_change_to_natural_reference": 0.05540868964876619
+        },
+        {
+          "temperature_K": 300.0,
+          "relative_change_to_natural_reference": 0.04976385016796117
+        }
+      ]
+    }
+  ],
+  "interpretation": {
+    "isotope_mass_state_mapped": true,
+    "isotope_disorder_scattering_mapped": false,
+    "defect_state_mapped": false,
+    "morphology_mapped": false,
+    "ding_material_equivalence": false,
+    "source_grade_uncertainty_closed": false,
+    "target_fit_performed": false,
+    "alpha_Phi_K_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "controlling_blocker": "material_regime_mapping_to_TTG_not_closed",
+  "next_controller": "Add a source-locked defect/morphology response contract or retain the Calorine route as a non-Ding sensitivity comparator; do not convert the mass-only envelope into source-grade uncertainty.",
+  "claim_boundary": "Candidate isotope mass sensitivity only; not Ding C_src acceptance, not a UET Phi map, not alpha_Phi_K calibration, not TTG prediction, and not Full Topic 13 closure."
+}

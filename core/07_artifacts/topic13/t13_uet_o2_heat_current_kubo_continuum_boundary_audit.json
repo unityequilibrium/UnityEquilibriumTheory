@@ -1,0 +1,178 @@
+{
+  "schema_version": "t13-uet-o2-heat-current-kubo-continuum-boundary-v1",
+  "artifact": "t13_uet_o2_heat_current_kubo_continuum_boundary_audit",
+  "generated_at": "2026-08-17",
+  "status": "PASS_SCOPED_HEAT_CURRENT_KUBO_CONTINUUM_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_HEAT_CURRENT_KUBO_CONTINUUM_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the heat-current cutoff response sequence is machine-readable and finite",
+      "the repository continuum-controller threshold 1e-2 is applied without adjustment",
+      "the declared cutoff sequence fails continuum promotion",
+      "an independent radial/quadrature refinement also fails continuum promotion",
+      "the finite-cutoff heat-current Kubo match remains separately bounded and is not relabeled as a continuum result"
+    ],
+    "equation_or_mapping": {
+      "heat_response": "kappa_natural=(1/3)*Tr[(b_q^perp)^T*L_cont^+*b_q^perp]",
+      "adjacent_change": "r_i=abs(kappa_i-kappa_(i-1))/max(abs(kappa_(i-1)),1e-300)",
+      "acceptance_controller": "max_i(r_i)<=1e-2 is required before continuum promotion",
+      "current_result": "max_i(r_i)>1e-2 => no-go for the declared heat-current discretization"
+    },
+    "units": {
+      "unit_lane": "natural finite-cutoff",
+      "kappa_natural": "formal finite-cutoff natural-unit response",
+      "threshold": "dimensionless relative change",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-cutoff response boundary under cutoff and order refinement",
+    "observable": "heat-current DC response stability under declared cutoff and quadrature refinement",
+    "data_role": "ACTION_DERIVED_INTERNAL_CONVERGENCE_BOUNDARY_NO_SOURCE_ROWS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_heat_current_kubo_continuum_boundary.py",
+        "sha256": "df3b1e51508fafd68e7041c992f4bbdbe47d43f50065f46ff7ad24b705409457"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_heat_current_kubo_match_audit.json",
+        "sha256": "378b4e60dc39707037fd25b4a35031c4c2775ac38d015622fd23a9c4611e7770"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_collision_operator.py",
+        "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+      },
+      {
+        "path": "docs/core/uet_o2_covariant_entropy_heat_flux_balance.py",
+        "sha256": "89171426c2209521a16ca99e79ef4312cc9d3a987991692cc40ac9235a2fc251"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_HEAT_CURRENT_KUBO_CONTINUUM_NO_GO",
+    "open_blockers": [
+      "new_regularized_continuum_heat_current_scheme_missing",
+      "loop_renormalized_off_shell_self_energy_missing",
+      "physical_heat_Kubo_coefficient_record_missing",
+      "finite_temperature_condensed_two_fluid_completion_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "scoped no-go for continuum promotion of the declared heat-current discretization; finite-cutoff formal Kubo lane remains available, but no continuum, physical Kubo, SI, TTG, Core, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only a scoped no-go for continuum promotion of the declared finite-cutoff heat-current discretization. It does not prove that every future continuum formulation is impossible and does not close physical transport."
+  },
+  "contract": {
+    "status": "PASS_SCOPED_HEAT_CURRENT_KUBO_CONTINUUM_NO_GO",
+    "equations": {
+      "heat_response": "kappa_natural=(1/3)*Tr[(b_q^perp)^T*L_cont^+*b_q^perp]",
+      "adjacent_change": "r_i=abs(kappa_i-kappa_(i-1))/max(abs(kappa_(i-1)),1e-300)",
+      "acceptance_controller": "max_i(r_i)<=1e-2 is required before continuum promotion",
+      "current_result": "max_i(r_i)>1e-2 => no-go for the declared heat-current discretization"
+    },
+    "unit_contract": {
+      "unit_lane": "natural finite-cutoff",
+      "kappa_natural": "formal finite-cutoff natural-unit response",
+      "threshold": "dimensionless relative change",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-cutoff response boundary under cutoff and order refinement",
+    "observable": "heat-current DC response stability under declared cutoff and quadrature refinement",
+    "data_role": "ACTION_DERIVED_INTERNAL_CONVERGENCE_BOUNDARY_NO_SOURCE_ROWS",
+    "closed_scope": [
+      "the heat-current cutoff sequence is machine-readable",
+      "the existing 1e-2 continuum-controller threshold is applied without adjustment",
+      "the declared heat-current discretization is rejected for continuum promotion",
+      "an independent radial/quadrature refinement also rejects promotion",
+      "no extrapolated continuum response or physical coefficient is emitted"
+    ],
+    "excluded_scope": [
+      "mathematical no-go for every future heat-current discretization",
+      "loop-renormalized off-shell self-energy",
+      "physical Kubo coefficient or SI mapping",
+      "dimensional Phi-to-thermal-observable calibration",
+      "TTG validation"
+    ],
+    "claim_boundary": "This closes only a scoped no-go for continuum promotion of the declared finite-cutoff heat-current discretization. It does not prove that every future continuum formulation is impossible and does not close physical transport."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "cutoff_factors": [
+      36.0,
+      48.0,
+      64.0,
+      80.0
+    ],
+    "cutoff_kappa_natural": [
+      161.78872233390436,
+      257.37286696883626,
+      273.01469507418705,
+      208.14153806022534
+    ],
+    "cutoff_relative_changes": [
+      0.5907960904571736,
+      0.06077496936475731,
+      0.23761782125439634
+    ],
+    "acceptance_threshold": 0.01,
+    "cutoff_maximum_relative_change": 0.5907960904571736,
+    "cutoff_sequence_fails_acceptance": true,
+    "baseline_kappa_natural": 257.37286696883626,
+    "refined_kappa_natural": 134.80837648730227,
+    "baseline_to_refined_relative_change": 0.476213720292336,
+    "refinement_fails_acceptance": true,
+    "operator_family_is_shared": true,
+    "finite_cutoff_boundary_declared": true,
+    "extrapolated_response_emitted": false,
+    "physical_kubo_coefficient_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false
+  },
+  "checks": {
+    "cutoff_sequence_has_four_points": true,
+    "cutoff_response_count_matches": true,
+    "adjacent_change_count_is_three": true,
+    "responses_are_finite": true,
+    "responses_are_positive": true,
+    "repository_threshold_is_unchanged": true,
+    "cutoff_sequence_fails_continuum_acceptance": true,
+    "independent_refinement_fails_acceptance": true,
+    "shared_operator_family_is_declared": true,
+    "finite_cutoff_boundary_is_declared": true,
+    "finite_cutoff_heat_match_is_passing": true,
+    "finite_cutoff_heat_match_is_lane_only": true,
+    "no_extrapolated_response_emitted": true,
+    "no_physical_coefficient_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_remains_separate": true
+  },
+  "failed_checks": [],
+  "continuum_limit_completed": false,
+  "physical_kubo_coefficient_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  },
+  "controlling_blocker": "heat_current_continuum_scheme_no_go",
+  "next_controller": "replace or analytically control the declared heat-current cutoff/order dependence, then rerun the unchanged 1e-2 convergence gate before any physical Kubo or SI promotion"
+}

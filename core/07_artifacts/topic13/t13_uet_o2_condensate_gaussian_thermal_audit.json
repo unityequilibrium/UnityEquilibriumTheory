@@ -1,0 +1,202 @@
+{
+  "schema_version": "t13-uet-o2-condensate-gaussian-thermal-v1",
+  "artifact": "t13_uet_o2_condensate_gaussian_thermal_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_FIXED_BACKGROUND_GAUSSIAN_FINITE_T_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSATE_GAUSSIAN_FINITE_T_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "thermal Bose determinant of the two positive-frequency quadratic O(2) condensate branches on a fixed tree-level background",
+      "finite-temperature pressure, entropy, generalized mu-response, Phi-response derivative, and energy identity for the declared Gaussian lane",
+      "mode-root positivity over the declared wavenumber witness and quadrature/cutoff convergence",
+      "explicit separation from thermal background backreaction, vacuum renormalization, interacting self-energy, normal two-fluid transport, and SI calibration"
+    ],
+    "equation_or_mapping": {
+      "condensed_control": "q=Z*mu^2-m_eff(Phi)^2 > 0",
+      "quadratic_roots": "omega_+-^2=k^2+q/Z+2*mu^2 +- sqrt((q/Z+2*mu^2)^2+4*mu^2*k^2)",
+      "thermal_grand_potential": "Omega_G=T integral sum_{a=+,-} log(1-exp(-omega_a/T)) d^3k/(2 pi)^3",
+      "thermal_pressure": "p_G=-Omega_G",
+      "entropy": "s_G=partial_T p_G at fixed tree-level background",
+      "charge_response": "n_G=partial_mu p_G at fixed Phi and background branch",
+      "response_derivative": "partial_Phi p_G at fixed tree-level background",
+      "energy_identity": "epsilon_G=-p_G+T*s_G+mu*n_G"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "T_mu_omega_k": "natural energy",
+      "pressure_entropy_energy": "natural thermodynamic densities",
+      "charge_density": "natural grand-canonical O(2) response density",
+      "Phi": "fixed action response input; no SI map"
+    },
+    "derivation_class": "action-derived fixed-background Gaussian thermal determinant from the declared O(2) quadratic spectrum; no self-consistent renormalization or transport matching",
+    "observable": "natural-unit Gaussian quasiparticle pressure, entropy, generalized mu-response, energy, and Phi-response derivative",
+    "data_role": "ACTION_DERIVED_FIXED_BACKGROUND_GAUSSIAN_FINITE_T_NOT_FULL_UET_EOS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensate_gaussian_thermal.py",
+        "sha256": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5"
+      },
+      {
+        "path": "docs/core/uet_o2_condensate_fluctuations.py",
+        "sha256": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_FIXED_BACKGROUND_GAUSSIAN_FINITE_T_LANE",
+    "open_blockers": [
+      "thermal_background_backreaction_and_self_consistent_phase_boundary_not_closed",
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "normal_two_fluid_current_and_physical_Kubo_coefficient_missing",
+      "microscopic_SK_KMS_matching_and_entropy_production_not_closed",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "fixed-background Gaussian finite-temperature quasiparticle lane only; no physical two-fluid, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This result derives only the natural-unit Gaussian thermal determinant of the two quadratic O(2) condensate modes on a fixed tree-level background. It is not a self-consistent finite-temperature UET EOS, renormalized one-loop action, normal-fluid or dissipative transport derivation, microscopic SK/KMS match, SI Phi calibration, external validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "condensate_control": 1.534,
+    "pressure": 0.0019655643051478254,
+    "entropy_density": 0.02822963891527505,
+    "charge_density": 8.310652542837869e-05,
+    "energy_density": 0.005199883906727831,
+    "response_pressure_derivative": -2.1158196080191363e-05,
+    "low_branch_pressure": 0.001965534569392471,
+    "high_branch_pressure": 2.9735755354425873e-08,
+    "low_branch_entropy": 0.028227862046660234,
+    "high_branch_entropy": 1.7768686148168525e-06,
+    "low_branch_charge": 8.33767311843609e-05,
+    "high_branch_charge": -2.70205755982202e-07,
+    "momentum_cutoff": 274.7089368768333,
+    "quadrature_order": 256,
+    "fixed_tree_level_background": true
+  },
+  "mode_records": [
+    {
+      "wavenumber": 0.01,
+      "goldstone_omega_sq": 2.7442425539092596e-05,
+      "high_omega_sq": 9.316839224241129,
+      "goldstone_frequency": 0.005238551855149722,
+      "high_frequency": 3.0523497873345264
+    },
+    {
+      "wavenumber": 0.1,
+      "goldstone_omega_sq": 0.002749828085095274,
+      "high_omega_sq": 9.333916838581573,
+      "goldstone_frequency": 0.0524388032385873,
+      "high_frequency": 3.055145960274496
+    },
+    {
+      "wavenumber": 0.5,
+      "goldstone_omega_sq": 0.07200523813089443,
+      "high_omega_sq": 9.744661428535771,
+      "goldstone_frequency": 0.2683379178030836,
+      "high_frequency": 3.1216440265564827
+    },
+    {
+      "wavenumber": 1.0,
+      "goldstone_omega_sq": 0.32353535736044314,
+      "high_omega_sq": 10.993131309306223,
+      "goldstone_frequency": 0.5688016854409305,
+      "high_frequency": 3.3155891345741595
+    }
+  ],
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 50.0,
+      "pressure": 0.0019655461508464775,
+      "entropy_density": 0.028229566285599864,
+      "charge_density": 8.31065235126826e-05,
+      "energy_density": 0.005199883901119976,
+      "response_pressure_derivative": -2.1158196098282228e-05
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 70.0,
+      "pressure": 0.0019655638066624465,
+      "entropy_density": 0.02822963692133121,
+      "charge_density": 8.310652542839638e-05,
+      "energy_density": 0.005199883906727272,
+      "response_pressure_derivative": -2.1158196080188388e-05
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 90.0,
+      "pressure": 0.0019655643051478254,
+      "entropy_density": 0.02822963891527505,
+      "charge_density": 8.310652542837869e-05,
+      "energy_density": 0.005199883906727831,
+      "response_pressure_derivative": -2.1158196080191363e-05
+    }
+  ],
+  "convergence_relative_errors": {
+    "pressure": 2.5360929557852805e-07,
+    "entropy_density": 7.063299129986005e-08,
+    "charge_density": 2.1281178400258894e-13,
+    "energy_density": 1.0742181350276227e-13,
+    "response_pressure_derivative": 1.405970385888492e-13
+  },
+  "finite_difference_checks": {
+    "dp_dmu_finite_difference": 8.310576434921584e-05,
+    "dp_dT_finite_difference": 0.028229638938861292,
+    "dp_dPhi_finite_difference": -2.115820153629488e-05,
+    "abs_dp_dmu_error": 7.610791628539539e-10,
+    "abs_dp_dT_error": 2.358624059950465e-11,
+    "abs_dp_dPhi_error": 5.456103518747431e-12
+  },
+  "checks": {
+    "condensed_tree_background_selected": true,
+    "condensate_control_positive": true,
+    "temperature_positive": true,
+    "pressure_positive": true,
+    "entropy_positive": true,
+    "energy_positive": true,
+    "mode_roots_nonnegative": true,
+    "high_mode_above_low_mode": true,
+    "branch_pressure_decomposition_closes": true,
+    "branch_entropy_decomposition_closes": true,
+    "branch_response_decomposition_is_finite": true,
+    "dp_dmu_matches_response": true,
+    "dp_dT_matches_entropy": true,
+    "dp_dPhi_matches_response": true,
+    "energy_identity_closes": true,
+    "convergence_pressure": true,
+    "convergence_entropy": true,
+    "convergence_charge": true,
+    "convergence_energy": true,
+    "convergence_response": true,
+    "fixed_background_is_declared": true,
+    "thermal_backreaction_is_excluded": true,
+    "vacuum_counterterm_is_excluded": true,
+    "self_energy_is_excluded": true,
+    "normal_two_fluid_is_open": true,
+    "physical_kubo_is_not_emitted": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_not_state": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_condensate_gaussian_thermal.py": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5",
+    "docs/core/uet_o2_condensate_fluctuations.py": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "thermal_background_backreaction_and_self_consistent_phase_boundary_not_closed",
+  "next_controller": "Derive a self-consistent finite-temperature background/effective potential with vacuum renormalization or retain this Gaussian fixed-background boundary; then close normal Kubo/SK/KMS and SI Phi mapping.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

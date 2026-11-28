@@ -1,0 +1,123 @@
+{
+  "major_result_id": "T13_OPEN_UED_SOURCE_ACQUISITION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "verification_status": "ARCHIVE_HASH_VERIFIED_NUMERIC_MAPPING_OPEN",
+  "what_is_closed": [
+    "Permitted processed experimental archive downloaded and checksum verified",
+    "Author processing notebook pinned and inspected as JSON only"
+  ],
+  "equation_or_mapping": "Processed pump-on/off diffraction images versus delay; not phonon occupations yet",
+  "units": {
+    "delay": "ps according to notebook axis label",
+    "momentum": "inverse angstrom according to notebook axis label",
+    "image_counts": "UNVERIFIED_PAYLOAD_UNITS"
+  },
+  "derivation_class": "source_acquisition_not_physics_derivation",
+  "data_role": "EXTERNAL_COMPARISON_CANDIDATE",
+  "observable": "time- and momentum-dependent electron scattering",
+  "source": {
+    "doi": "10.5281/zenodo.14760926",
+    "license": "CC-BY-4.0",
+    "metadata_publication_date": "2025-01-29",
+    "archive_url": "https://zenodo.org/api/records/14760926/files/UED_PROCESSED.zip/content",
+    "publisher_md5": "bc1a594e27c93e8b3264ad083b1a1bc7"
+  },
+  "notebook": {
+    "repository": "https://github.com/remiclaude/UED_processing",
+    "commit": "7f7036bfda28f9330f19b40e57f4edf464b67d64",
+    "path": "UED_data_paper.ipynb",
+    "executed": false,
+    "code_redistribution_license": "NOT_ESTABLISHED_LOCAL_ONLY",
+    "inspected_cells": [
+      {
+        "index": 1,
+        "sha256": "bdac04a30b804c9843085d5b55961b24d7ecc2283c79d5c287652573a18fb04a",
+        "reads_pickle": true,
+        "has_ps_label": false,
+        "has_pump_pair": true
+      },
+      {
+        "index": 3,
+        "sha256": "fd95a604860e50db11d2cc4f6c3374e6c0c570020feae0ae4196eee34ee989ac",
+        "reads_pickle": false,
+        "has_ps_label": false,
+        "has_pump_pair": true
+      },
+      {
+        "index": 5,
+        "sha256": "38b96df9df7c7981078fc9aebffda06f3c31028393933c521e0fd6b01f302657",
+        "reads_pickle": false,
+        "has_ps_label": false,
+        "has_pump_pair": true
+      },
+      {
+        "index": 6,
+        "sha256": "97bd692e430e8ca084cdef9597b18434f6b296337c008bc35b60f4f545879dbf",
+        "reads_pickle": false,
+        "has_ps_label": false,
+        "has_pump_pair": true
+      },
+      {
+        "index": 7,
+        "sha256": "772c96fd5eda5580fbb85e3c3bfe417b7910059ca024495674b31c2e9485f719",
+        "reads_pickle": false,
+        "has_ps_label": false,
+        "has_pump_pair": true
+      },
+      {
+        "index": 8,
+        "sha256": "82284314c91f789f173451be66a0bd2feba6d64edbe5f1c7a6f35764f03c5adf",
+        "reads_pickle": false,
+        "has_ps_label": true,
+        "has_pump_pair": true
+      }
+    ]
+  },
+  "archive_members": [
+    {
+      "name": "PROCESSED/",
+      "compressed_bytes": 0,
+      "uncompressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true
+    },
+    {
+      "name": "PROCESSED/PROC_400nm",
+      "compressed_bytes": 147624031,
+      "uncompressed_bytes": 147444526,
+      "crc32": "77191c98",
+      "is_directory": false
+    },
+    {
+      "name": "PROCESSED/PROC_800nm",
+      "compressed_bytes": 124295579,
+      "uncompressed_bytes": 124144288,
+      "crc32": "bcfed89b",
+      "is_directory": false
+    }
+  ],
+  "pickle_deserialized": false,
+  "numeric_rows_extracted": false,
+  "payload_integrity": "Published archive MD5 verified; member CRC metadata listed, not inflated/verified.",
+  "open_blockers": [
+    "safe numeric decoding",
+    "payload units/uncertainty/row identity",
+    "detector-to-mode inversion and unobserved modes",
+    "same-state pump/material map",
+    "independent Phi source coefficient"
+  ],
+  "dependency_unlocked": [
+    "safe payload inspection only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "alpha_Phi_K": null,
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_14760926_metadata.json": "21df2454477daf9c72113bdd7c06f1cb3c842fdf7f775b9284ec7260ab7895df",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_data_paper_7f7036b.ipynb": "92ebd5037dd08825866c82464693f6fefec6fdcc254b6914c317a5a24af98243",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_14760926_processed.zip": "aab8afaf44893b6036ab70dbe28f39d5631f6fc38a0c9c0125923fc9de40cfbd",
+    "docs/scripts/audit/audit_topic13_ued_source_acquisition.py": "fe5e92df15ccde1d949192ce9e8113d6225ca19642ad95d4cbd5a0d268330dbd"
+  },
+  "claim_boundary": "Neither a mode lifetime nor TTG validation, physical occupation curve or Phi calibration."
+}

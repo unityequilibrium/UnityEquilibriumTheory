@@ -1,0 +1,305 @@
+{
+  "major_result_id": "T13_COMPOSITE_ALPHA_MEASUREMENT_DESIGN",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "equation_or_mapping": "log|alpha|=log|chi|+log|g|+log|Z|-log|C_src|; identifiable iff target is in rowspace(A)",
+  "units": "Logs of magnitudes relative to fixed unit references, not logs of dimensionful values",
+  "derivation_class": "Conditional linear structural identifiability",
+  "observable": "alpha magnitude, conditional on declared signs and normalized-Phi convention",
+  "data_role": "HYPOTHETICAL_DESIGN_NO_MEASUREMENTS",
+  "factor_order": [
+    "chi_u_theta",
+    "g_Phi_theta",
+    "Z_Phi",
+    "C_src"
+  ],
+  "designs": {
+    "heat_capacity_only": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ]
+      ],
+      "rank": 1,
+      "individual_factors_identifiable": false,
+      "alpha_magnitude_identifiable": false,
+      "target_rowspace_residual": 1.7320508075688772,
+      "measurement_combination": [
+        -1.0
+      ],
+      "null_directions": [
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "target_null_overlaps": [
+        1.0,
+        1.0,
+        -1.0
+      ]
+    },
+    "heat_capacity_and_gZ": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "rank": 2,
+      "individual_factors_identifiable": false,
+      "alpha_magnitude_identifiable": false,
+      "target_rowspace_residual": 1.0,
+      "measurement_combination": [
+        -1.0,
+        0.9999999999999998
+      ],
+      "null_directions": [
+        [
+          0.0,
+          -0.7071067811865475,
+          0.7071067811865475,
+          0.0
+        ],
+        [
+          -1.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "target_null_overlaps": [
+        0.0,
+        -1.0
+      ]
+    },
+    "heat_capacity_and_full_numerator": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "rank": 2,
+      "individual_factors_identifiable": false,
+      "alpha_magnitude_identifiable": true,
+      "target_rowspace_residual": 0.0,
+      "measurement_combination": [
+        -1.0,
+        1.0
+      ],
+      "null_directions": [
+        [
+          -0.2113248654051871,
+          -0.5773502691896257,
+          0.7886751345948129,
+          0.0
+        ],
+        [
+          -0.7886751345948129,
+          0.5773502691896257,
+          0.2113248654051871,
+          0.0
+        ]
+      ],
+      "target_null_overlaps": [
+        0.0,
+        -2.7755575615628914e-17
+      ]
+    },
+    "heat_capacity_chi_and_gZ": {
+      "matrix": [
+        [
+          0,
+          0,
+          0,
+          1
+        ],
+        [
+          1,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          1,
+          1,
+          0
+        ]
+      ],
+      "rank": 3,
+      "individual_factors_identifiable": false,
+      "alpha_magnitude_identifiable": true,
+      "target_rowspace_residual": 3.1401849173675503e-16,
+      "measurement_combination": [
+        -1.0,
+        1.0,
+        0.9999999999999998
+      ],
+      "null_directions": [
+        [
+          0.0,
+          0.7071067811865475,
+          -0.7071067811865475,
+          0.0
+        ]
+      ],
+      "target_null_overlaps": [
+        0.0
+      ]
+    },
+    "all_factors": {
+      "matrix": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "rank": 4,
+      "individual_factors_identifiable": true,
+      "alpha_magnitude_identifiable": true,
+      "target_rowspace_residual": 0.0,
+      "measurement_combination": [
+        1.0,
+        1.0,
+        1.0,
+        -1.0
+      ],
+      "null_directions": [],
+      "target_null_overlaps": []
+    },
+    "normalized_shape_only": {
+      "matrix": [
+        [
+          0.0,
+          0.0,
+          0.0,
+          0.0
+        ]
+      ],
+      "rank": 0,
+      "individual_factors_identifiable": false,
+      "alpha_magnitude_identifiable": false,
+      "target_rowspace_residual": 2.0,
+      "measurement_combination": [
+        0.0
+      ],
+      "null_directions": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "target_null_overlaps": [
+        1.0,
+        1.0,
+        1.0,
+        -1.0
+      ]
+    }
+  },
+  "what_is_closed": "Separate identification of every factor is sufficient but not necessary to identify their target product",
+  "verification_status": "ALGEBRAIC_DESIGN_ONLY",
+  "open_blockers": [
+    "independent_source_backed_numerator_measurement",
+    "fixed_Phi_amplitude_and_units",
+    "admissible_material_operator",
+    "sign_and_covariance_provenance"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "alpha_value_emitted": false,
+  "claim_boundary": "No source or calibration found; no physical gate relaxed. Composite calibration cannot close missing action/transport derivations or the entire topic.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_composite_alpha_design.py",
+      "sha256": "39c25a1268104ba10ecaea5e6bd5ef49eafe925aecbb5bbd6dc3d019781e27ab"
+    },
+    {
+      "path": "docs/core/test/test_topic13_composite_alpha_design.py",
+      "sha256": "b4f2efd04fc40c05cd9aee317e61bd041d47526b948756988e0d385a5f01493e"
+    },
+    {
+      "path": "docs/core/uet_material_interface_factor_resolution.py",
+      "sha256": "7ebcbed3f6c2056a06e393afd9cba2c81614237bf924da0dc4f54b42ee9b3ce1"
+    },
+    {
+      "path": "docs/core/uet_material_lattice_interface_contract.py",
+      "sha256": "85be68b8054556b78378fb06b8a6e99c8f936063cab55c4359d86ff9f93b9ca3"
+    }
+  ]
+}

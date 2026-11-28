@@ -1,0 +1,454 @@
+{
+  "schema_version": "t13-mp48-force-constant-harmonic-reconstruction-v1",
+  "artifact": "t13_mp48_force_constant_harmonic_reconstruction_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION",
+  "major_result": {
+    "major_result_id": "T13_MP48_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the archived 200x200 MP48 force-constant matrix parses with every indexed pair present exactly once",
+      "the primitive-to-supercell mapping is source-consistent and reconstructs a 12-mode primitive dynamical matrix",
+      "the reconstructed Gamma acoustic modes and finite q-grid stability agree with the force-constant acoustic and Hermitian contracts",
+      "the limited harmonic q-grid reaches the deposited MP48 frequency envelope without parameter fitting",
+      "the result is separated from Ding PBTE C_src, UET transport, and Phi calibration"
+    ],
+    "equation_or_mapping": {
+      "dynamical_matrix": "D_ij(q) = sum_R Phi_ij(R) exp(2*pi*i*q.R) / sqrt(m_i*m_j)",
+      "frequency_mapping": "nu_mu(q) = sign(lambda_mu)*sqrt(abs(lambda_mu))*frequency_unit_conversion_factor",
+      "primitive_supercell_mapping": "supercell Cartesian coordinates -> primitive fractional coordinates -> (primitive atom, integer translation)"
+    },
+    "units": {
+      "force_constants": "eV Angstrom^-2",
+      "masses": "atomic mass units",
+      "q": "dimensionless primitive reciprocal fractional coordinates",
+      "frequency": "THz",
+      "volume": "Angstrom^3"
+    },
+    "derivation_class": "source-locked harmonic lattice-dynamics reconstruction from deposited force constants; no UET derivation",
+    "observable": "MP48 graphite harmonic phonon frequency envelope and acoustic consistency",
+    "data_role": "INTERNAL_HARMONIC_SOURCE_RECONSTRUCTION_NOT_DING_PBTE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_mp48_force_constant_harmonic_reconstruction_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+        "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+        "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+        "sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_FORCE_CONSTANT_HARMONIC_RECONSTRUCTION",
+    "open_blockers": [
+      "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+      "third_order_PBTE_response_and_transport_not_reproduced",
+      "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing",
+      "finite_temperature_interacting_transport_SK_KMS_entropy_and_dissipative_balance_missing"
+    ],
+    "dependency_unlocked": "MP48 harmonic force-constant source lane only; no Ding full-source, alpha, transport, Core, or Gravity unlock",
+    "claim_boundary": "This is a source-traceable harmonic reconstruction from MP48 force constants. It is not Ding's PBTE C_src, not an accepted Ding-regime reproduction, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "force_constants_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+    "force_constants_sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "phonopy_metadata_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+    "phonopy_metadata_sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "summary_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+    "summary_sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5",
+    "primitive_cell_atoms": 4,
+    "supercell_atoms": 200,
+    "space_group": "P6_3/mmc",
+    "space_group_number": 194,
+    "primitive_volume_A3": 37.09595476532482,
+    "declared_summary_volume_A3": 37.09595476532483,
+    "supercell_matrix": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "frequency_unit_conversion_factor": 15.633302
+  },
+  "reconstruction": {
+    "force_constant_shape": [
+      200,
+      200,
+      3,
+      3
+    ],
+    "primitive_to_supercell_mapping_row_count": 200,
+    "primitive_to_supercell_max_mapping_error": 3.6418022968069345e-15,
+    "representative_supercell_indices_one_based": [
+      1,
+      51,
+      101,
+      151
+    ],
+    "representative_translation_by_primitive": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0,
+        -1,
+        0
+      ]
+    ],
+    "row_force_residuals_eV_per_A2": [
+      9.461213302152096e-14,
+      7.976078685822448e-14,
+      5.756062625538586e-14,
+      6.451655663740571e-14
+    ],
+    "max_force_constant_pair_symmetry_residual_eV_per_A2": 1.1000000000000004e-14,
+    "gamma_frequencies_THz": [
+      -6.661141567750756e-07,
+      -3.666803634097203e-07,
+      8.166090418196627e-07,
+      0.8719054497380475,
+      0.8719054497384446,
+      2.2825543608622656,
+      26.083401777169723,
+      26.143419750925634,
+      47.526003220354156,
+      47.5260032203542,
+      47.607844341179046,
+      47.60784434117908
+    ],
+    "gamma_eigenvalues_eV_per_A2_per_amu": [
+      -1.8154984912338024e-15,
+      -5.501408208224845e-16,
+      2.7285186930890297e-15,
+      0.0031105511640110747,
+      0.0031105511640139084,
+      0.02131772343963923,
+      2.783729469814299,
+      2.796554945748271,
+      9.241897575700994,
+      9.24189757570101,
+      9.273754599130077,
+      9.273754599130092
+    ],
+    "gamma_acoustic_max_abs_frequency_THz": 8.166090418196627e-07,
+    "q_grid": [
+      [
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.5
+      ],
+      [
+        0.0,
+        0.2,
+        0.0
+      ],
+      [
+        0.0,
+        0.2,
+        0.5
+      ],
+      [
+        0.0,
+        0.4,
+        0.0
+      ],
+      [
+        0.0,
+        0.4,
+        0.5
+      ],
+      [
+        0.0,
+        0.6,
+        0.0
+      ],
+      [
+        0.0,
+        0.6,
+        0.5
+      ],
+      [
+        0.0,
+        0.8,
+        0.0
+      ],
+      [
+        0.0,
+        0.8,
+        0.5
+      ],
+      [
+        0.2,
+        0.0,
+        0.0
+      ],
+      [
+        0.2,
+        0.0,
+        0.5
+      ],
+      [
+        0.2,
+        0.2,
+        0.0
+      ],
+      [
+        0.2,
+        0.2,
+        0.5
+      ],
+      [
+        0.2,
+        0.4,
+        0.0
+      ],
+      [
+        0.2,
+        0.4,
+        0.5
+      ],
+      [
+        0.2,
+        0.6,
+        0.0
+      ],
+      [
+        0.2,
+        0.6,
+        0.5
+      ],
+      [
+        0.2,
+        0.8,
+        0.0
+      ],
+      [
+        0.2,
+        0.8,
+        0.5
+      ],
+      [
+        0.4,
+        0.0,
+        0.0
+      ],
+      [
+        0.4,
+        0.0,
+        0.5
+      ],
+      [
+        0.4,
+        0.2,
+        0.0
+      ],
+      [
+        0.4,
+        0.2,
+        0.5
+      ],
+      [
+        0.4,
+        0.4,
+        0.0
+      ],
+      [
+        0.4,
+        0.4,
+        0.5
+      ],
+      [
+        0.4,
+        0.6,
+        0.0
+      ],
+      [
+        0.4,
+        0.6,
+        0.5
+      ],
+      [
+        0.4,
+        0.8,
+        0.0
+      ],
+      [
+        0.4,
+        0.8,
+        0.5
+      ],
+      [
+        0.6,
+        0.0,
+        0.0
+      ],
+      [
+        0.6,
+        0.0,
+        0.5
+      ],
+      [
+        0.6,
+        0.2,
+        0.0
+      ],
+      [
+        0.6,
+        0.2,
+        0.5
+      ],
+      [
+        0.6,
+        0.4,
+        0.0
+      ],
+      [
+        0.6,
+        0.4,
+        0.5
+      ],
+      [
+        0.6,
+        0.6,
+        0.0
+      ],
+      [
+        0.6,
+        0.6,
+        0.5
+      ],
+      [
+        0.6,
+        0.8,
+        0.0
+      ],
+      [
+        0.6,
+        0.8,
+        0.5
+      ],
+      [
+        0.8,
+        0.0,
+        0.0
+      ],
+      [
+        0.8,
+        0.0,
+        0.5
+      ],
+      [
+        0.8,
+        0.2,
+        0.0
+      ],
+      [
+        0.8,
+        0.2,
+        0.5
+      ],
+      [
+        0.8,
+        0.4,
+        0.0
+      ],
+      [
+        0.8,
+        0.4,
+        0.5
+      ],
+      [
+        0.8,
+        0.6,
+        0.0
+      ],
+      [
+        0.8,
+        0.6,
+        0.5
+      ],
+      [
+        0.8,
+        0.8,
+        0.0
+      ],
+      [
+        0.8,
+        0.8,
+        0.5
+      ]
+    ],
+    "q_grid_sample_count": 50,
+    "q_grid_frequency_min_THz": -6.661141567750756e-07,
+    "q_grid_frequency_max_THz": 48.41862978666018,
+    "q_grid_max_negative_frequency_abs_THz": 6.661141567750756e-07,
+    "q_grid_negative_eigenvalue_count_beyond_roundoff": 0,
+    "q_grid_max_hermitian_residual": 8.005932084973442e-15,
+    "deposited_summary_max_frequency_THz": 48.4370817598,
+    "q_grid_to_summary_max_frequency_relative_gap": -0.0003809472509372913,
+    "q_grid_is_not_claimed_as_deposited_mesh_reproduction": true
+  },
+  "checks": {
+    "force_constants_file_present": true,
+    "phonopy_metadata_present": true,
+    "summary_metadata_present": true,
+    "force_constant_header_is_200_by_200": true,
+    "all_force_constant_pairs_present_once": true,
+    "force_constants_are_finite": true,
+    "primitive_supercell_mapping_has_200_rows": true,
+    "primitive_supercell_mapping_error_is_small": true,
+    "force_constant_pair_symmetry_is_within_roundoff": true,
+    "acoustic_sum_rule_is_within_roundoff": true,
+    "gamma_acoustic_frequencies_are_within_roundoff": true,
+    "q_grid_has_no_negative_modes_beyond_roundoff": true,
+    "dynamical_matrices_are_hermitian_within_roundoff": true,
+    "q_grid_sample_count_is_50": true,
+    "summary_volume_matches_primitive_volume": true,
+    "summary_frequency_metadata_is_finite": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+  "next_controller": "Use this harmonic force-constant reconstruction as a comparator only; obtain Ding-compatible mode-resolved C_src or an accepted same-regime PBTE reproduction with convergence, uncertainty, and material-state contracts.",
+  "claim_boundary": "This closes a source-traceable MP48 harmonic force-constant consistency lane, not Ding source closure, the Phi-to-thermal bridge, alpha_Phi_K, physical transport, or Full Topic 13."
+}

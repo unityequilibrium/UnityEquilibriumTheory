@@ -1,0 +1,748 @@
+{
+  "artifact": "t13_uet_o2_finite_temperature_all_22_permutation_identity_audit",
+  "checks": {
+    "action_graph_weight": true,
+    "alpha_not_emitted": true,
+    "fdt_convergence": true,
+    "full_1pi_still_open": true,
+    "kms_convergence": true,
+    "no_fit": true,
+    "no_holdout": true,
+    "no_target_data": true,
+    "physical_kubo_not_emitted": true,
+    "physical_renormalization_still_open": true,
+    "pv_inner_convergence": true,
+    "pv_outer_convergence": true,
+    "reference_maps": true,
+    "response_identity": true,
+    "status": true,
+    "three_allowed_permutations": true,
+    "unit_jacobians": true
+  },
+  "contract": {
+    "claim_boundary": "This closes the equal-mass permutation identity and action-level coverage of the three allowed 2<->2 signed cuts. It does not by itself close the complete off-shell finite-temperature 1PI object, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT",
+    "derivation_class": "exact equal-mass dummy-line relabeling with unit Jacobian, combined with the action-level sunset symmetry factor",
+    "equations": {
+      "aggregate_graph_weight": "w_22=3*(1/6)=1/2",
+      "allowed_signed_cuts": "++-, +-+, -++",
+      "dummy_line_relabeling": "k_ref=(k_plus,1,k_plus,2,k_minus)",
+      "process_form": "P+k_minus=k_plus,1+k_plus,2",
+      "relabeling_jacobian": "|det J|=1",
+      "response_identity": "I_22^(++-)=I_22^(+-+)=I_22^(-++) for equal masses and common T,couplings",
+      "single_cut_graph_weight": "w_single=1/6"
+    },
+    "excluded": {
+      "TTG_validation": true,
+      "Xie_2026_holdout": true,
+      "alpha_Phi_K": true,
+      "complete_off_shell_finite_temperature_1pi_self_energy": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "physical_kubo_coefficient": true,
+      "unique_physical_renormalization": true
+    },
+    "included": {
+      "aggregate_graph_weight_contract": true,
+      "all_three_allowed_2_to_2_permutations": true,
+      "equal_mass_relabeling_identity": true,
+      "state_matched_response_diagnostics": true
+    },
+    "observable": "permutation inventory, relabeling maps, aggregate response identity, KMS/FDT, and PV convergence",
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature or metric",
+      "R_gen": "derived physical/history trace; no independent state or backreaction",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
+    "unit_contract": {
+      "Phi": "effective response variable; dimensional SI map remains open",
+      "invariant_s_and_self_energy": "energy squared",
+      "thermal_measures": "declared energy squared measure",
+      "unit_lane": "natural vacuum 3+1"
+    }
+  },
+  "evidence": {
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT",
+    "holdout_accessed": false,
+    "module": {
+      "path": "docs\\core\\uet_o2_finite_temperature_all_22_permutation_identity.py",
+      "sha256": "4e4609b56b9fc230ff70cca5c87bf2ccc809ed09b4f14e8b7906551c7b10d250"
+    },
+    "parameter_fitting_performed": false,
+    "target_data_used": false
+  },
+  "failed_checks": [],
+  "major_result": {
+    "claim_boundary": "This closes the equal-mass permutation identity and action-level coverage of the three allowed 2<->2 signed cuts. It does not by itself close the complete off-shell finite-temperature 1PI object, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+    "closure_level": "CLOSED_FOR_LANE",
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT",
+    "dependency_unlocked": "equal-mass 2<->2 permutation identity and action-level coverage only",
+    "derivation_class": "exact equal-mass dummy-line relabeling with unit Jacobian, combined with the action-level sunset symmetry factor",
+    "equation_or_mapping": {
+      "aggregate_graph_weight": "w_22=3*(1/6)=1/2",
+      "allowed_signed_cuts": "++-, +-+, -++",
+      "dummy_line_relabeling": "k_ref=(k_plus,1,k_plus,2,k_minus)",
+      "process_form": "P+k_minus=k_plus,1+k_plus,2",
+      "relabeling_jacobian": "|det J|=1",
+      "response_identity": "I_22^(++-)=I_22^(+-+)=I_22^(-++) for equal masses and common T,couplings",
+      "single_cut_graph_weight": "w_single=1/6"
+    },
+    "evidence_artifacts": [
+      "docs\\core\\uet_o2_finite_temperature_all_22_permutation_identity.py",
+      "docs/scripts/audit/audit_topic13_uet_o2_finite_temperature_all_22_permutation_identity.py",
+      "docs/core/artifacts/t13_uet_o2_finite_temperature_all_22_permutation_identity_audit.json"
+    ],
+    "major_result_id": "T13_UET_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
+    "observable": "permutation inventory, relabeling maps, aggregate response identity, KMS/FDT, and PV convergence",
+    "open_blockers": [
+      "complete_off_shell_all_channel_1pi_missing",
+      "physical_renormalization_anchor_missing",
+      "physical_kubo_coefficient_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "topic": "0.13_Thermodynamic_Bridge",
+    "units": {
+      "Phi": "effective response variable; dimensional SI map remains open",
+      "invariant_s_and_self_energy": "energy squared",
+      "thermal_measures": "declared energy squared measure",
+      "unit_lane": "natural vacuum 3+1"
+    },
+    "verification_status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE",
+    "what_is_closed": [
+      "all three allowed equal-mass 2<->2 signed-cut permutations",
+      "unit-Jacobian dummy-line relabeling to the reference kernel",
+      "action-level aggregate graph weight 3*(1/6)=1/2"
+    ]
+  },
+  "schema_version": "t13-uet-o2-finite-t-all-22-permutation-identity-audit-v1",
+  "state": {
+    "action_level_multiplicity_contract_preserved": true,
+    "aggregate_graph_weight": 0.5,
+    "all_finite_temperature_sunset_channels_completed": false,
+    "all_three_permutation_identity_completed": true,
+    "complete_off_shell_finite_temperature_1pi_self_energy_completed": false,
+    "covariant_entropy_current_completed": false,
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_22_PERMUTATION_IDENTITY_NO_HOLDOUT",
+    "invariant_grid": [
+      0.25,
+      1.0,
+      4.0,
+      4.75,
+      5.0,
+      5.5,
+      7.0
+    ],
+    "mass_squared": 0.5,
+    "max_fdt_residual": 2.6926011101365283e-16,
+    "max_kms_log_ratio_residual": 1.7763568394002505e-15,
+    "max_pv_inner_convergence_residual": 0.014920561773350124,
+    "max_pv_outer_convergence_residual": 0.005424851497988344,
+    "max_response_identity_residual": 0.0,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "permutation_count": 3,
+    "physical_kubo_coefficient_emitted": false,
+    "points": [
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 2.5376331275031165e-06,
+        "aggregate_lesser_measure": 6.081464091151067e-07,
+        "aggregate_principal_value_real_part": 1.1359801986236609e-05,
+        "aggregate_spectral_measure": 1.92948671838801e-06,
+        "fdt_residual": 2.6926011101365283e-16,
+        "invariant_s": 0.25,
+        "kms_log_ratio_residual": 2.220446049250313e-16,
+        "pv_inner_convergence_residual": 0.014920561773350124,
+        "pv_outer_convergence_residual": 0.005424851497988344,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 2.5376331275031165e-06,
+        "aggregate_lesser_measure": 6.081464091151067e-07,
+        "aggregate_principal_value_real_part": 1.1359801986236609e-05,
+        "aggregate_spectral_measure": 1.92948671838801e-06,
+        "fdt_residual": 2.6926011101365283e-16,
+        "invariant_s": 0.25,
+        "kms_log_ratio_residual": 2.220446049250313e-16,
+        "pv_inner_convergence_residual": 0.014920561773350124,
+        "pv_outer_convergence_residual": 0.005424851497988344,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 2.5376331275031165e-06,
+        "aggregate_lesser_measure": 6.081464091151067e-07,
+        "aggregate_principal_value_real_part": 1.1359801986236609e-05,
+        "aggregate_spectral_measure": 1.92948671838801e-06,
+        "fdt_residual": 2.6926011101365283e-16,
+        "invariant_s": 0.25,
+        "kms_log_ratio_residual": 2.220446049250313e-16,
+        "pv_inner_convergence_residual": 0.014920561773350124,
+        "pv_outer_convergence_residual": 0.005424851497988344,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.1142664455533844e-05,
+        "aggregate_lesser_measure": 6.39952405301488e-07,
+        "aggregate_principal_value_real_part": -8.158071064220527e-06,
+        "aggregate_spectral_measure": 1.0502712050232355e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 1.0,
+        "kms_log_ratio_residual": 4.440892098500626e-16,
+        "pv_inner_convergence_residual": 0.003959156772535815,
+        "pv_outer_convergence_residual": 0.0019322142832001456,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.1142664455533844e-05,
+        "aggregate_lesser_measure": 6.39952405301488e-07,
+        "aggregate_principal_value_real_part": -8.158071064220527e-06,
+        "aggregate_spectral_measure": 1.0502712050232355e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 1.0,
+        "kms_log_ratio_residual": 4.440892098500626e-16,
+        "pv_inner_convergence_residual": 0.003959156772535815,
+        "pv_outer_convergence_residual": 0.0019322142832001456,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.1142664455533844e-05,
+        "aggregate_lesser_measure": 6.39952405301488e-07,
+        "aggregate_principal_value_real_part": -8.158071064220527e-06,
+        "aggregate_spectral_measure": 1.0502712050232355e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 1.0,
+        "kms_log_ratio_residual": 4.440892098500626e-16,
+        "pv_inner_convergence_residual": 0.003959156772535815,
+        "pv_outer_convergence_residual": 0.0019322142832001456,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3187303157124107e-05,
+        "aggregate_lesser_measure": 4.3498395369087606e-08,
+        "aggregate_principal_value_real_part": -7.088332879242398e-05,
+        "aggregate_spectral_measure": 1.3143804761755019e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006770362121935153,
+        "pv_outer_convergence_residual": 0.0003083839456329724,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3187303157124107e-05,
+        "aggregate_lesser_measure": 4.3498395369087606e-08,
+        "aggregate_principal_value_real_part": -7.088332879242398e-05,
+        "aggregate_spectral_measure": 1.3143804761755019e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006770362121935153,
+        "pv_outer_convergence_residual": 0.0003083839456329724,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3187303157124107e-05,
+        "aggregate_lesser_measure": 4.3498395369087606e-08,
+        "aggregate_principal_value_real_part": -7.088332879242398e-05,
+        "aggregate_spectral_measure": 1.3143804761755019e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006770362121935153,
+        "pv_outer_convergence_residual": 0.0003083839456329724,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3311160671428043e-05,
+        "aggregate_lesser_measure": 2.629449547572779e-08,
+        "aggregate_principal_value_real_part": -8.334887865194606e-05,
+        "aggregate_spectral_measure": 1.3284866175952315e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.75,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006481657165481426,
+        "pv_outer_convergence_residual": 0.00029447069463627403,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3311160671428043e-05,
+        "aggregate_lesser_measure": 2.629449547572779e-08,
+        "aggregate_principal_value_real_part": -8.334887865194606e-05,
+        "aggregate_spectral_measure": 1.3284866175952315e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.75,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006481657165481426,
+        "pv_outer_convergence_residual": 0.00029447069463627403,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3311160671428043e-05,
+        "aggregate_lesser_measure": 2.629449547572779e-08,
+        "aggregate_principal_value_real_part": -8.334887865194606e-05,
+        "aggregate_spectral_measure": 1.3284866175952315e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 4.75,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006481657165481426,
+        "pv_outer_convergence_residual": 0.00029447069463627403,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3345835992133534e-05,
+        "aggregate_lesser_measure": 2.2425395726887995e-08,
+        "aggregate_principal_value_real_part": -8.739928837947891e-05,
+        "aggregate_spectral_measure": 1.3323410596406646e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 5.0,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006414187569445403,
+        "pv_outer_convergence_residual": 0.0002912089165199144,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3345835992133534e-05,
+        "aggregate_lesser_measure": 2.2425395726887995e-08,
+        "aggregate_principal_value_real_part": -8.739928837947891e-05,
+        "aggregate_spectral_measure": 1.3323410596406646e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 5.0,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006414187569445403,
+        "pv_outer_convergence_residual": 0.0002912089165199144,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3345835992133534e-05,
+        "aggregate_lesser_measure": 2.2425395726887995e-08,
+        "aggregate_principal_value_real_part": -8.739928837947891e-05,
+        "aggregate_spectral_measure": 1.3323410596406646e-05,
+        "fdt_residual": 0.0,
+        "invariant_s": 5.0,
+        "kms_log_ratio_residual": 0.0,
+        "pv_inner_convergence_residual": 0.0006414187569445403,
+        "pv_outer_convergence_residual": 0.0002912089165199144,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3407847379117105e-05,
+        "aggregate_lesser_measure": 1.649407948178557e-08,
+        "aggregate_principal_value_real_part": -9.537506284683844e-05,
+        "aggregate_spectral_measure": 1.3391353299635318e-05,
+        "fdt_residual": 1.2619359390798838e-16,
+        "invariant_s": 5.5,
+        "kms_log_ratio_residual": 1.7763568394002505e-15,
+        "pv_inner_convergence_residual": 0.0006307400177205754,
+        "pv_outer_convergence_residual": 0.0002860317537047251,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3407847379117105e-05,
+        "aggregate_lesser_measure": 1.649407948178557e-08,
+        "aggregate_principal_value_real_part": -9.537506284683844e-05,
+        "aggregate_spectral_measure": 1.3391353299635318e-05,
+        "fdt_residual": 1.2619359390798838e-16,
+        "invariant_s": 5.5,
+        "kms_log_ratio_residual": 1.7763568394002505e-15,
+        "pv_inner_convergence_residual": 0.0006307400177205754,
+        "pv_outer_convergence_residual": 0.0002860317537047251,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3407847379117105e-05,
+        "aggregate_lesser_measure": 1.649407948178557e-08,
+        "aggregate_principal_value_real_part": -9.537506284683844e-05,
+        "aggregate_spectral_measure": 1.3391353299635318e-05,
+        "fdt_residual": 1.2619359390798838e-16,
+        "invariant_s": 5.5,
+        "kms_log_ratio_residual": 1.7763568394002505e-15,
+        "pv_inner_convergence_residual": 0.0006307400177205754,
+        "pv_outer_convergence_residual": 0.0002860317537047251,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3552718504109645e-05,
+        "aggregate_lesser_measure": 7.0642932349031e-09,
+        "aggregate_principal_value_real_part": -0.00011854893224808728,
+        "aggregate_spectral_measure": 1.3545654210874741e-05,
+        "fdt_residual": 1.2493311432985156e-16,
+        "invariant_s": 7.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006122878113083797,
+        "pv_outer_convergence_residual": 0.0002770011812490299,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          2,
+          3,
+          1
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "-++",
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3552718504109645e-05,
+        "aggregate_lesser_measure": 7.0642932349031e-09,
+        "aggregate_principal_value_real_part": -0.00011854893224808728,
+        "aggregate_spectral_measure": 1.3545654210874741e-05,
+        "fdt_residual": 1.2493311432985156e-16,
+        "invariant_s": 7.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006122878113083797,
+        "pv_outer_convergence_residual": 0.0002770011812490299,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          3,
+          2
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "+-+",
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      },
+      {
+        "aggregate_graph_weight": 0.5,
+        "aggregate_greater_measure": 1.3552718504109645e-05,
+        "aggregate_lesser_measure": 7.0642932349031e-09,
+        "aggregate_principal_value_real_part": -0.00011854893224808728,
+        "aggregate_spectral_measure": 1.3545654210874741e-05,
+        "fdt_residual": 1.2493311432985156e-16,
+        "invariant_s": 7.0,
+        "kms_log_ratio_residual": 8.881784197001252e-16,
+        "pv_inner_convergence_residual": 0.0006122878113083797,
+        "pv_outer_convergence_residual": 0.0002770011812490299,
+        "relabeling_jacobian_absolute": 1.0,
+        "relabeling_to_reference": [
+          1,
+          2,
+          3
+        ],
+        "response_identity_completed": true,
+        "response_identity_residual": 0.0,
+        "sign_label": "++-",
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "single_cut_graph_weight": 0.16666666666666666
+      }
+    ],
+    "quartic_coupling": 0.8,
+    "reference_signs": [
+      1,
+      1,
+      -1
+    ],
+    "signs": [
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ]
+    ],
+    "single_cut_graph_weight": 0.16666666666666666,
+    "species_count": 2,
+    "target_data_used": false,
+    "temperature": 0.35,
+    "unique_physical_renormalization_scheme_match_completed": false,
+    "xie_2026_accessed": false
+  },
+  "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_22_PERMUTATION_IDENTITY_LANE"
+}

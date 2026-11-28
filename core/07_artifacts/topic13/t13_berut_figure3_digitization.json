@@ -1,0 +1,179 @@
+{
+  "schema_version": "t13-berut-figure3-digitization-v1",
+  "artifact": "t13_berut_figure3_digitization",
+  "generated_at": "2026-08-17",
+  "status": "PASS_SCOPED_BERUT_FIGURE3_DIGITIZATION",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "T13_BERUT_FIGURE3_DIGITIZATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Figure 3c panel, axes, units, marker-series identity, and ten marker centers are recorded.",
+      "The continuous fit curve and Landauer reference line are explicitly excluded from the numeric rows.",
+      "Pixel-coordinate digitization uncertainty is declared separately from the source-reported 1 s.d. error bars."
+    ],
+    "equation_or_mapping": "<Q>_panel_c(tau) is retained as a figure-derived kT comparison; no SI heat or Phi mapping is emitted.",
+    "units": {
+      "tau": "s",
+      "mean_heat": "kT",
+      "digitization_uncertainty": "s and kT"
+    },
+    "derivation_class": "figure-derived manual transcription with hash-pinned panel locator",
+    "observable": "Berut Figure 3c mean dissipated heat versus erasure duration",
+    "data_role": "FIGURE_DERIVED_COMPARISON_ONLY",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012_figure3_panel_c_digitized.json",
+        "sha256": "00fb44ef1d25563ab6d7c7fc63a44cb5625e31abc2bd9f6b8b896ea712f3adb4",
+        "role": "figure-derived marker transcription and pixel mapping"
+      },
+      {
+        "path": "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json",
+        "sha256": "6541785ec09e37f97de93ed5c0abb682e39a1fb85fa8397f8113bf5f406f36c0",
+        "role": "remote binary and embedded raster identity",
+        "source_sha256": "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa",
+        "embedded_asset_sha256": "95823a29ed7f979d3979eb6fa776bce7df8eaa4485632073347874b5c868b188"
+      },
+      {
+        "locator": "https://www.nature.com/articles/nature10872",
+        "doi": "10.1038/nature10872",
+        "figure_locator": "Figure 3c: Erasure rate and approach to the Landauer limit",
+        "role": "official publisher figure/caption locator"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_BERUT_FIGURE3_DIGITIZATION",
+    "open_blockers": [
+      "berut_figure3_digitization_is_figure_derived_not_raw_numeric_source",
+      "berut_measurement_error_bars_are_not_numeric_transcribed",
+      "berut_permissioned_raw_numeric_package_missing"
+    ],
+    "dependency_unlocked": "Berut figure-derived comparison lane only; no raw source, alpha, Full Topic 13, Core, Gravity, or transport dependency is unlocked.",
+    "claim_boundary": "This closes a transparent Figure 3c transcription lane only. It is not a raw numeric source, source-grade uncertainty package, calibration, prediction, UET proof, or external validation."
+  },
+  "source_locator": {
+    "article_url": "https://www.nature.com/articles/nature10872",
+    "doi": "10.1038/nature10872",
+    "figure_locator": "Figure 3c: Erasure rate and approach to the Landauer limit",
+    "embedded_asset_id": "jpeg_1",
+    "embedded_asset_sha256": "95823a29ed7f979d3979eb6fa776bce7df8eaa4485632073347874b5c868b188",
+    "publisher_binary_sha256": "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa"
+  },
+  "axis_mapping": {
+    "x": {
+      "model": "tau_s = 0.04800761484202776 * x_px - 4.3206507647684465",
+      "tick_pairs_px_value": [
+        [
+          298.0,
+          10.0
+        ],
+        [
+          507.0,
+          20.0
+        ],
+        [
+          715.0,
+          30.0
+        ],
+        [
+          923.0,
+          40.0
+        ]
+      ],
+      "inferred_zero_tick_px": 89.9992798847815,
+      "coordinate_uncertainty_px": 2.0
+    },
+    "y": {
+      "model": "heat_kT = -0.008598426850158929 * y_px + 13.692140830846105",
+      "tick_pairs_px_value": [
+        [
+          1592.0,
+          0.0
+        ],
+        [
+          1476.5,
+          1.0
+        ],
+        [
+          1360.0,
+          2.0
+        ],
+        [
+          1243.5,
+          3.0
+        ],
+        [
+          1127.0,
+          4.0
+        ]
+      ],
+      "coordinate_uncertainty_px": 2.0
+    }
+  },
+  "series_counts": {
+    "r_ge_0.90": 6,
+    "r_ge_0.85": 3,
+    "r_ge_0.75": 1
+  },
+  "row_count": 10,
+  "row_payload_sha256": "48188fcea7ffeab6bb235e667b5be1dcf6ea21ba8bc0c375b4cd2ece194a9738",
+  "preprocessing": {
+    "method": "manual marker-center transcription from the hash-pinned embedded raster using linear axis calibration from visible ticks",
+    "fit_performed": false,
+    "curve_digitized": false,
+    "unit_conversion_performed": false,
+    "measurement_error_bars_transcribed": false,
+    "measurement_error_bar_basis": "Figure caption states 1 s.d.; numeric intervals are not accepted from the raster-only route",
+    "digitization_uncertainty": "propagated from a 2 px coordinate envelope; this is not the experiment's measurement uncertainty",
+    "holdout_accessed": false,
+    "xie_2026_accessed": false,
+    "target_data_used": false
+  },
+  "checks": {
+    "data_schema_is_expected": true,
+    "source_asset_hash_matches_remote_inventory": true,
+    "publisher_binary_hash_matches_remote_inventory": true,
+    "panel_and_units_are_explicit": true,
+    "axis_models_are_explicit": true,
+    "rows_are_nonempty_and_unique": true,
+    "series_marker_contract_is_respected": true,
+    "rows_have_positive_digitization_uncertainty": true,
+    "pixel_centers_are_finite": true,
+    "source_error_bars_not_promoted": true,
+    "continuous_fit_not_digitized": true,
+    "no_unit_conversion_or_fit": true,
+    "no_target_or_holdout_access": true,
+    "no_alpha_calibration_emitted": true
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/berut_2012_figure3_panel_c_digitized.json",
+      "sha256": "00fb44ef1d25563ab6d7c7fc63a44cb5625e31abc2bd9f6b8b896ea712f3adb4",
+      "role": "figure-derived marker transcription and pixel mapping"
+    },
+    {
+      "path": "docs/core/artifacts/t13_berut_figure3_remote_binary_identity.json",
+      "sha256": "6541785ec09e37f97de93ed5c0abb682e39a1fb85fa8397f8113bf5f406f36c0",
+      "role": "remote binary and embedded raster identity",
+      "source_sha256": "e4bab6be849a093b7578bc52ce6df9be95dc25d83d51ecb718b4f798a37d50fa",
+      "embedded_asset_sha256": "95823a29ed7f979d3979eb6fa776bce7df8eaa4485632073347874b5c868b188"
+    },
+    {
+      "locator": "https://www.nature.com/articles/nature10872",
+      "doi": "10.1038/nature10872",
+      "figure_locator": "Figure 3c: Erasure rate and approach to the Landauer limit",
+      "role": "official publisher figure/caption locator"
+    }
+  ],
+  "open_blockers": [
+    "berut_figure3_digitization_is_figure_derived_not_raw_numeric_source",
+    "berut_measurement_error_bars_are_not_numeric_transcribed",
+    "berut_permissioned_raw_numeric_package_missing"
+  ],
+  "controlling_blocker": "berut_figure3_digitization_is_figure_derived_not_raw_numeric_source",
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "xie_2026_consumed": false
+}

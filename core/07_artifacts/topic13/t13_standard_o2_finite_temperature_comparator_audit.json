@@ -1,0 +1,110 @@
+{
+  "schema_version": "t13-standard-o2-finite-temperature-comparator-v1",
+  "artifact": "t13_standard_o2_finite_temperature_comparator_audit",
+  "generated_at": "2026-09-15",
+  "status": "PASS_STANDARD_O2_FINITE_T_NORMAL_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_STANDARD_O2_FINITE_TEMPERATURE_NORMAL_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "standard finite-temperature normal-branch thermodynamic integrals for a free complex scalar using the declared m_eff(Phi)",
+      "pressure, charge-density, entropy, energy, and charge-susceptibility unit relations in the natural-unit comparator lane",
+      "even/odd charge symmetry and numerical pressure-derivative first-law checks",
+      "explicit separation of thermal comparator variables from UET Phi, C, R_gen, R_obs, alpha_Phi_K, and Kubo data"
+    ],
+    "equation_or_mapping": {
+      "dispersion": "E_k = sqrt(k^2 + m_eff(Phi)^2)",
+      "pressure": "p_T = T integral [L(E_k-mu)+L(E_k+mu)] d^3k/(2 pi)^3",
+      "occupation": "n_B(x) = 1/(exp(x/T)-1)",
+      "charge_density": "n_T = integral [n_B(E_k-mu)-n_B(E_k+mu)] d^3k/(2 pi)^3",
+      "entropy_density": "s_T = partial p_T / partial T",
+      "energy_density": "epsilon_T = -p_T + T*s_T + mu*n_T",
+      "susceptibility": "chi_T = partial n_T / partial mu >= 0"
+    },
+    "units": {
+      "temperature": "natural energy units",
+      "chemical_potential": "natural energy units",
+      "pressure": "natural energy density",
+      "charge_density": "natural charge density",
+      "entropy_density": "natural entropy density",
+      "energy_density": "natural energy density",
+      "susceptibility": "charge density per natural chemical-potential unit"
+    },
+    "derivation_class": "standard finite-temperature free-complex-scalar grand-canonical comparator using UET m_eff(Phi) input; not UET finite-temperature derivation",
+    "observable": "normal-branch thermal pressure, charge, entropy, energy, and susceptibility",
+    "data_role": "STANDARD_THERMAL_QFT_COMPARATOR_NOT_UET_CLOSURE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/standard_o2_finite_temperature_comparator.py",
+        "sha256": "c40f3df6a8cd76c2c801e5807d0accf0b5b137544d48e2bf36377bf195410a1a"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_STANDARD_O2_FINITE_T_NORMAL_COMPARATOR",
+    "open_blockers": [
+      "finite_temperature_UET_effective_action_not_derived",
+      "condensate_and_normal_two_fluid_sector_not_derived",
+      "physical_Kubo_coefficient_record_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing",
+      "SK_KMS_physical_matching_missing"
+    ],
+    "dependency_unlocked": "standard finite-temperature normal comparator lane only; no physical UET EOS, transport, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This is a standard thermodynamic comparator. It does not derive the finite-temperature UET action, a two-fluid normal component, transport coefficients, KMS matching, SI Phi calibration, external validation, or global UET closure."
+  },
+  "state": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "effective_mass": 0.7028513356322231,
+    "pressure": 0.0018429129850450034,
+    "charge_density": 0.002888011495050179,
+    "entropy_density": 0.02552043070730546,
+    "energy_density": 0.007666840061521942,
+    "charge_susceptibility": 0.016412987290065746,
+    "momentum_cutoff": 35.14256678161116,
+    "quadrature_order": 192
+  },
+  "finite_difference_checks": {
+    "dp_dmu": 0.0028880115466353284,
+    "dp_dT": 0.025520433692329675,
+    "abs_dp_dmu_minus_n": 5.158514934655578e-11,
+    "abs_dp_dT_minus_s": 2.9850242139195515e-09
+  },
+  "checks": {
+    "natural_unit_domain_is_declared": true,
+    "normal_branch_is_declared": true,
+    "pressure_is_positive": true,
+    "entropy_is_positive": true,
+    "energy_is_positive": true,
+    "susceptibility_is_positive": true,
+    "pressure_is_even_in_mu": true,
+    "entropy_is_even_in_mu": true,
+    "energy_is_even_in_mu": true,
+    "charge_is_odd_in_mu": true,
+    "charge_is_pressure_derivative": true,
+    "entropy_is_temperature_derivative": true,
+    "phi_enters_only_through_effective_mass": true,
+    "alpha_not_emitted": true,
+    "kubo_not_emitted": true,
+    "si_map_not_emitted": true,
+    "c_not_relabelled": true,
+    "trace_is_not_state": true
+  },
+  "source_hashes": {
+    "docs/core/standard_o2_finite_temperature_comparator.py": "c40f3df6a8cd76c2c801e5807d0accf0b5b137544d48e2bf36377bf195410a1a",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "finite_temperature_UET_effective_action_and_normal_two_fluid_sector_not_derived",
+  "next_controller": "If the standard comparator is retained, source-lock the intended material/state regime; separately derive the UET finite-temperature effective action, Kubo coefficients, and SI Phi mapping.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

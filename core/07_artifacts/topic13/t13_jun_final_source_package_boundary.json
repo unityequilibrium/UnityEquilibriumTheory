@@ -1,0 +1,105 @@
+{
+  "schema_version": "t13-jun-final-source-package-boundary-v1",
+  "artifact": "t13_jun_final_source_package_boundary",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_JUN_FINAL_SOURCE_BOUNDARY",
+  "claim_promotion": false,
+  "major_result": {
+    "major_result_id": "T13_JUN_FINAL_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Final Jun PRL identity is confirmed through APS and an institutional reprint route.",
+      "The final-source PDF is archived locally with a reproducible byte hash.",
+      "The source remains explicitly separated from machine-readable numeric calibration data."
+    ],
+    "equation_or_mapping": "W_min = k_B T ln(2); no numeric Phi-to-thermal calibration is emitted",
+    "units": "source-defined work/energy units; no new numeric row conversion",
+    "derivation_class": "final-source identity and provenance-boundary audit",
+    "observable": "Jun feedback-trap erasure work relative to the Landauer lower bound",
+    "data_role": "SOURCE_IDENTITY_ONLY; no calibration consumed",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/jun_2014_final_source_package.json",
+        "sha256": "b835eb1b7b52602517a349db4e003e3c71fa5bf430afc662f5e368e9079e677c",
+        "role": "Jun final-source package"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/jun_2014_prl_reprint.pdf",
+        "sha256": "3283e23a31a546dec28d9e33364456297e13e89f302546cabd8b5c8d0eb92519",
+        "bytes": 1085095,
+        "role": "final PRL provenance archive; not a machine-readable row table"
+      },
+      {
+        "doi": "10.1103/PhysRevLett.113.190601",
+        "publisher_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.190601",
+        "institutional_reprint_url": "https://www.sfu.ca/chaos/assets/papers/2014/prl14-reprint.pdf"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_JUN_FINAL_SOURCE_BOUNDARY",
+    "open_blockers": [
+      "jun_machine_readable_numeric_row_parity_and_uncertainty_not_closed"
+    ],
+    "dependency_unlocked": "Jun final-source identity lane only; no Landauer dataset, alpha_Phi_K, Full Topic 13, Core, Gravity, or transport dependency is unlocked.",
+    "claim_boundary": "The final Jun paper identity and local PDF provenance are closed for lane. This does not close a machine-readable numeric row package, source-grade uncertainty, alpha_Phi_K, the UET bridge, TTG validation, or external validation."
+  },
+  "equation_or_mapping": {
+    "landauer_constraint": "W_min = k_B T ln(2)",
+    "uet_mapping": "No Delta_Tq = alpha_Phi_K * Delta_Phi calibration is emitted from Jun."
+  },
+  "units": {
+    "temperature": "K",
+    "work_or_heat": "source-defined work/energy units; no new row conversion emitted",
+    "alpha_Phi_K": "not emitted"
+  },
+  "derivation_class": "external final-source identity and local provenance audit",
+  "observable": "Jun feedback-trap erasure work relative to the Landauer lower bound",
+  "data_role": "SOURCE_IDENTITY_AND_FINAL_PARITY_SURFACE_ONLY",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/jun_2014_final_source_package.json",
+      "sha256": "b835eb1b7b52602517a349db4e003e3c71fa5bf430afc662f5e368e9079e677c",
+      "role": "Jun final-source package"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/jun_2014_prl_reprint.pdf",
+      "sha256": "3283e23a31a546dec28d9e33364456297e13e89f302546cabd8b5c8d0eb92519",
+      "bytes": 1085095,
+      "role": "final PRL provenance archive; not a machine-readable row table"
+    },
+    {
+      "doi": "10.1103/PhysRevLett.113.190601",
+      "publisher_url": "https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.113.190601",
+      "institutional_reprint_url": "https://www.sfu.ca/chaos/assets/papers/2014/prl14-reprint.pdf"
+    }
+  ],
+  "verification_status": {
+    "package_identity_complete": true,
+    "final_source_confirmed": true,
+    "doi_is_jun_prl_identity": true,
+    "publisher_and_reprint_locators_present": true,
+    "local_archive_present": true,
+    "local_archive_hash_matches": true,
+    "local_archive_size_matches": true,
+    "identity_probe_markers_present": true,
+    "numeric_table_not_transcribed": true,
+    "unit_conversion_not_performed": true,
+    "numeric_rows_emitted_zero": true,
+    "alpha_not_emitted": true,
+    "calibration_not_eligible": true,
+    "target_curve_not_read": true,
+    "holdout_not_read": true
+  },
+  "open_blockers": [
+    "jun_machine_readable_numeric_row_parity_and_uncertainty_not_closed"
+  ],
+  "dependency_unlocked": "none beyond the named Jun source controller",
+  "claim_boundary": "The final Jun paper identity and local PDF provenance are closed for lane. This does not close a machine-readable numeric row package, source-grade uncertainty, alpha_Phi_K, the UET bridge, TTG validation, or external validation.",
+  "numeric_rows_emitted": 0,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "jun_machine_readable_numeric_row_parity_and_uncertainty_not_closed",
+  "next_action": "Create a source-row parity/transcription artifact only if the final PDF table/figure can be captured with locator, units, preprocessing, uncertainty, and hash; keep it outside alpha calibration."
+}

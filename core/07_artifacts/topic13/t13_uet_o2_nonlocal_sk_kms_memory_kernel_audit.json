@@ -1,0 +1,268 @@
+{
+  "schema_version": "t13-uet-o2-nonlocal-sk-kms-memory-kernel-v1",
+  "artifact": "t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the explicit causal exponential memory kernel and its retarded transfer function",
+      "the action-derived collision-width source for the formal memory damping rate",
+      "positive spectral density, lower-half-plane memory pole, and causal transform identity",
+      "equilibrium charged KMS/FDT noise and a nonnegative formal entropy-production witness"
+    ],
+    "equation_or_mapping": {
+      "influence_functional": "S_IF=integral dt dt' [Phi_a(t) K_R(t-t') Phi_r(t') + i Phi_a(t) N(t-t') Phi_a(t')/2]",
+      "causal_memory": "g_R(t)=gamma_memory/memory_time*exp(-t/memory_time)*Theta(t)",
+      "retarded_kernel": "K_R(omega)=kappa-chi*omega^2-i*omega*gamma_memory/(1-i*omega*memory_time)",
+      "spectral_density": "rho(omega)=-2 Im K_R(omega)=2*gamma_memory*omega/(1+omega^2*memory_time^2)",
+      "kms_fdt": "N(omega)=rho(omega)*coth(beta_th*omega/2); G^>/G^<=exp(beta_th*omega)",
+      "memory_rate_source": "gamma_memory=mean(action-derived normal collision widths); memory_time=1/(m_eff+gamma_memory)",
+      "entropy_witness": "sigma_formal=beta_th*sum_omega[gamma_memory/(1+omega^2*tau^2)]*|v_omega|^2>=0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_frequency": "natural energy/inverse time",
+      "kappa": "natural kernel stiffness units",
+      "chi": "natural inertial kernel units",
+      "gamma_memory": "natural damping rate",
+      "memory_time": "inverse natural energy",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "formal causal exponential memory kernel with damping rate inherited from an action-derived collision comparator; KMS/FDT and positivity are algebraically verified, not source-calibrated",
+    "observable": "formal nonlocal retarded kernel, spectral density, KMS/FDT noise, and entropy-positivity witness",
+    "data_role": "ACTION_DERIVED_FORMAL_NONLOCAL_SK_KMS_MEMORY_CONTROL_NOT_PHYSICAL_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_nonlocal_sk_kms_memory_kernel.py",
+        "sha256": "9a80cbb16f227c102da432e461c8648c86f07a4ad8cea269f848b4f172efcb93"
+      },
+      {
+        "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+        "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+      },
+      {
+        "path": "docs/core/uet_o2_open_system_sk_kms.py",
+        "sha256": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063"
+      },
+      {
+        "path": "docs/core/uet_o2_equilibrium_kms.py",
+        "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+    "open_blockers": [
+      "physical_retarded_self_energy_and_dissipative_kernel_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "condensed_two_fluid_completion_missing",
+      "physical_Kubo_coefficient_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "formal action-derived nonlocal SK/KMS memory-kernel control only; no physical retarded self-energy, Kubo, SI, alpha, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes a formal action-derived nonlocal SK/KMS memory-kernel control with explicit causal support, positive spectral density, KMS/FDT noise, and entropy positivity. It does not identify the kernel with a physical retarded self-energy, select a unique renormalization, close the condensed/two-fluid sector, provide a physical Kubo coefficient or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+    "equations": {
+      "influence_functional": "S_IF=integral dt dt' [Phi_a(t) K_R(t-t') Phi_r(t') + i Phi_a(t) N(t-t') Phi_a(t')/2]",
+      "causal_memory": "g_R(t)=gamma_memory/memory_time*exp(-t/memory_time)*Theta(t)",
+      "retarded_kernel": "K_R(omega)=kappa-chi*omega^2-i*omega*gamma_memory/(1-i*omega*memory_time)",
+      "spectral_density": "rho(omega)=-2 Im K_R(omega)=2*gamma_memory*omega/(1+omega^2*memory_time^2)",
+      "kms_fdt": "N(omega)=rho(omega)*coth(beta_th*omega/2); G^>/G^<=exp(beta_th*omega)",
+      "memory_rate_source": "gamma_memory=mean(action-derived normal collision widths); memory_time=1/(m_eff+gamma_memory)",
+      "entropy_witness": "sigma_formal=beta_th*sum_omega[gamma_memory/(1+omega^2*tau^2)]*|v_omega|^2>=0"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_mass_frequency": "natural energy/inverse time",
+      "kappa": "natural kernel stiffness units",
+      "chi": "natural inertial kernel units",
+      "gamma_memory": "natural damping rate",
+      "memory_time": "inverse natural energy",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "formal causal exponential memory kernel with damping rate inherited from an action-derived collision comparator; KMS/FDT and positivity are algebraically verified, not source-calibrated",
+    "observable": "formal nonlocal retarded kernel, spectral density, KMS/FDT noise, and entropy-positivity witness",
+    "data_role": "ACTION_DERIVED_FORMAL_NONLOCAL_SK_KMS_MEMORY_CONTROL_NOT_PHYSICAL_TRANSPORT",
+    "included": {
+      "nonlocal_influence_kernel": true,
+      "causal_time_support": true,
+      "retarded_memory_pole": true,
+      "positive_spectral_density": true,
+      "charged_action_derived_rate_source": true,
+      "kms_fdt": true,
+      "formal_entropy_positivity": true
+    },
+    "excluded": {
+      "physical_retarded_self_energy": true,
+      "unique_physical_renormalization": true,
+      "condensed_two_fluid_completion": true,
+      "physical_kubo_coefficient": true,
+      "entropy_current_heat_flux_dissipative_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes a formal action-derived nonlocal SK/KMS memory-kernel control with explicit causal support, positive spectral density, KMS/FDT noise, and entropy positivity. It does not identify the kernel with a physical retarded self-energy, select a unique renormalization, close the condensed/two-fluid sector, provide a physical Kubo coefficient or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.25,
+    "space_response": 0.15,
+    "effective_mass": 0.7039176088151227,
+    "beta_th": 4.545454545454546,
+    "kappa": 0.49550000000000005,
+    "chi": 1.0,
+    "gamma_memory": 3.0546703281336107e-06,
+    "memory_time": 1.4206146400767916,
+    "frequency_grid": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ],
+    "retarded_real": [
+      0.49300001079431227,
+      0.4855000425366424,
+      0.4555001606146253,
+      0.33550052484673254,
+      -0.1444987880652144
+    ],
+    "retarded_imag": [
+      -1.5196678850764977e-07,
+      -2.9942421512571293e-07,
+      -5.652997680065491e-07,
+      -9.236261504504826e-07,
+      -1.0663824230359122e-06
+    ],
+    "spectral_density": [
+      3.0393357701529953e-07,
+      5.988484302514259e-07,
+      1.1305995360130981e-06,
+      1.8472523009009653e-06,
+      2.1327648460718245e-06
+    ],
+    "noise_kernel": [
+      2.686118214385388e-06,
+      2.680144939490071e-06,
+      2.656307884105901e-06,
+      2.56315178820329e-06,
+      2.248194272887037e-06
+    ],
+    "kms_ratio_residuals": [
+      0.0,
+      1.4093979737512402e-16,
+      1.7891924454411033e-16,
+      2.8833932784850474e-16,
+      7.488546547861213e-16
+    ],
+    "fdt_residuals": [
+      4.235164736271502e-22,
+      4.235164736271502e-22,
+      4.235164736271502e-22,
+      4.235164736271502e-22,
+      0.0
+    ],
+    "causal_transform_residuals": [
+      2.9889909560422605e-14,
+      3.013091904343644e-14,
+      3.1787884628822243e-14,
+      3.7060573388479974e-14,
+      5.3571710797773444e-14
+    ],
+    "kernel_reality_residuals": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "memory_pole_imaginary_part": -0.7039206634854508,
+    "negative_time_support_residual": 0.0,
+    "positive_time_memory_value": 7.910311365058398e-07,
+    "spectral_density_minimum": 3.0393357701529953e-07,
+    "entropy_production_witness": 2.488306426945604e-05,
+    "source_collision_widths": [
+      3.0546703281336107e-06,
+      3.0546703281336107e-06
+    ],
+    "formal_nonlocal_influence_functional_completed": true,
+    "physical_retarded_self_energy_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FORMAL_NONLOCAL_SK_KMS_MEMORY_CONTROL_NOT_PHYSICAL_TRANSPORT"
+  },
+  "checks": {
+    "formal_nonlocal_influence_functional_completed": true,
+    "memory_rate_is_source_derived": true,
+    "memory_time_is_positive_and_nonzero": true,
+    "causal_negative_time_support_is_zero": true,
+    "positive_time_memory_is_visible": true,
+    "retarded_memory_pole_is_lower_half_plane": true,
+    "retarded_imaginary_part_has_damping_sign": true,
+    "spectral_density_is_nonnegative": true,
+    "causal_transform_matches_exponential_memory": true,
+    "kernel_reality_condition_holds": true,
+    "kms_ratio_holds": true,
+    "fdt_noise_holds": true,
+    "formal_entropy_is_nonnegative": true,
+    "physical_retarded_self_energy_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "formal_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "formal_nonlocal_influence_functional_completed": true,
+  "physical_retarded_self_energy_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "physical_retarded_self_energy_and_dissipative_kernel_missing",
+  "next_controller": "replace the formal collision-width memory control with a state-matched microscopic retarded self-energy and entropy-current kernel; keep physical Kubo, alpha, source, and holdout gates independent",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_FORMAL_NONLOCAL_SK_KMS_MEMORY_CONTROL_NOT_PHYSICAL_TRANSPORT",
+  "audit": {
+    "path": "docs/core/artifacts/t13_uet_o2_nonlocal_sk_kms_memory_kernel_audit.json",
+    "summary": {
+      "status": "PASS_ACTION_DERIVED_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+      "major_result_id": "T13_UET_O2_NONLOCAL_SK_KMS_MEMORY_KERNEL_LANE",
+      "closure_level": "CLOSED_FOR_LANE"
+    }
+  },
+  "open_blockers": [
+    "physical_retarded_self_energy_and_dissipative_kernel_missing",
+    "unique_physical_renormalization_scheme_match_missing",
+    "condensed_two_fluid_completion_missing",
+    "physical_Kubo_coefficient_missing",
+    "entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes a formal action-derived nonlocal SK/KMS memory-kernel control with explicit causal support, positive spectral density, KMS/FDT noise, and entropy positivity. It does not identify the kernel with a physical retarded self-energy, select a unique renormalization, close the condensed/two-fluid sector, provide a physical Kubo coefficient or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+}

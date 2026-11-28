@@ -1,0 +1,89 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective coordinate, not q",
+        "Phi": "effective response, not a kinetic particle identity",
+        "R_gen": "derived trace excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "Gamma_spatial": 1,
+        "energy": 1,
+        "kinetic_velocity_source_without_weight": 0,
+        "transverse_F": 0
+      },
+      "derivation_class": "exact_tree_mapping_and_structural_no_go",
+      "observable": "Microscopic-to-kinetic current-source interface boundary, not a transport coefficient",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_TREE_SOURCE_MATCH_AND_TRANSVERSE_NO_GO",
+      "controlling_blocker": "state_matched_retarded_three_and_four_point_spectral_kernel_missing",
+      "claim_boundary": "Tree on-shell source match and transverse non-uniqueness no-go only; not a retarded microscopic vertex, Bethe-Salpeter kernel, continuum Kubo coefficient, SI transport, external validation, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.microscopic_current_ladder_matching_boundary",
+      "version": "1",
+      "classification": "structural_interface_no_go",
+      "relation_or_code_path": {
+        "tree_handoff": "Gamma_tree^i=2*q*p^i; Gamma_tree^i/(2E)=q*p^i/E=b_kin^i/sqrt(w)",
+        "transverse_family": "Gamma_F^mu=Gamma^mu+F(P,Q)*(Q_z,-Q_0); Q_mu*(Gamma_F-Gamma)^mu=0",
+        "static_boundary": "bounded F implies transverse addition vanishes at Q=0",
+        "required_ladder_handoff": "Gamma_R,on-shell with LSZ/residue and K_4,R -> Bethe-Salpeter resolvent on the same action/state"
+      },
+      "standard_physics_counterpart": "LSZ/on-shell current source and transverse Ward ambiguity",
+      "variables": {
+        "Gamma": "1PI current vertex",
+        "b_kin": "kinetic source",
+        "q": "O(2) charge sign, not C"
+      },
+      "mathematical_role": "Microscopic-to-kinetic matching boundary",
+      "observable_mapping": "Microscopic-to-kinetic current-source interface boundary, not a transport coefficient",
+      "parameter_dimensions": {
+        "Gamma_spatial": 1,
+        "energy": 1,
+        "kinetic_velocity_source_without_weight": 0,
+        "transverse_F": 0
+      },
+      "source_or_origin": "Canonical action and existing finite-cutoff contracts",
+      "assumptions": {
+        "external_state": "tree on shell for the closed mapping",
+        "transverse_no_go": "bounded arbitrary F at finite Q",
+        "action_bridge": "all canonical coefficients explicitly matched"
+      },
+      "symmetry_and_conservation": "Ward contraction preserved for the full transverse family",
+      "limiting_cases": [
+        "tree on shell",
+        "Q=0",
+        "finite Q transverse addition"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_DIAGNOSTIC",
+      "proof_status": "TREE_HANDOFF_AND_TRANSVERSE_NONUNIQUENESS_CHECKED",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json",
+          "sha256": "35c6b34b5427546cde2dbdf84370734a07c973a551209b505ffce58e14f6c79b"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "narrowed_microscopic_transport_controller",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "retarded_finite_k_three_point_spectral_continuation",
+        "same_state_on_shell_residue_and_LSZ_matching",
+        "microscopic_retarded_four_point_kernel",
+        "collision_ladder_continuum_and_heat_current_matching"
+      ],
+      "next_hardening_step": "Derive a state-matched retarded finite-k three-point spectral kernel and microscopic four-point ladder kernel using the explicit bridged action parameters."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

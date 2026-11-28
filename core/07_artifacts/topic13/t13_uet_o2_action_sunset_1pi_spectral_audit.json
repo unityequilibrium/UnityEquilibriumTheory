@@ -1,0 +1,322 @@
+{
+  "schema_version": "t13-uet-o2-action-sunset-1pi-spectral-v1",
+  "artifact": "t13_uet_o2_action_sunset_1pi_spectral_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_O2_SUNSET_1PI_SPECTRAL_INTERFACE_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ACTION_NORMALIZED_SUNSET_SPECTRAL_INTERFACE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "O(2) action four-point tensor under the declared lambda*(chi^2)^2/4 convention",
+      "explicit bath/final species sum with identical-final-state symmetry factor",
+      "action-normalized neutral continuum sunset cut and on-shell mapping to the old comparator",
+      "finite-regulator retarded dispersion interface with two subtractions in omega^2",
+      "KMS ratio, spectral/noise positivity, retarded sign, subtraction, and quadrature controls"
+    ],
+    "equation_or_mapping": {
+      "interaction_potential": "W_int=lambda*(chi_a chi_a)^2/4",
+      "action_four_point_vertex": "V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "action_matrix_element_squared": "M2_action=sum_{b,c,d}|V_abcd|^2/(1+delta_cd)=28*lambda^2 for O(2)",
+      "action_cross_section": "sigma_action=M2_action/(16*pi*s)",
+      "greater_cut": "Gamma_>=integral n_k*v_rel*sigma_action*<(1+n_3)(1+n_4)>_CM",
+      "lesser_cut": "Gamma_<=integral (1+n_k)*v_rel*sigma_action*<n_3*n_4>_CM",
+      "spectral_density": "rho_cut(omega)=2*omega*(Gamma_>-Gamma_<)",
+      "noise_density": "N_cut(omega)=2*omega*(Gamma_>+Gamma_<)",
+      "kms": "Gamma_>(omega)/Gamma_<(omega)=exp(beta*omega)",
+      "retarded_dispersion": "Sigma_R^eta(omega)=integral_0^Omega dnu/pi*rho_cut(nu)*[1/(omega-nu+i*eta)-1/(omega+nu+i*eta)]",
+      "twice_subtraction": "Sigma_R,sub2(omega;omega_*)=Sigma_R^eta(omega)-Sigma_R^eta(omega_*)-(omega^2-omega_*^2)*dSigma_R^eta/d(omega^2)|_{omega_*}"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "quartic_coupling": "dimensionless",
+      "matrix_element_squared": "dimensionless",
+      "cross_section": "inverse energy squared",
+      "cut_rate": "energy",
+      "spectral_density": "energy squared in declared cut normalization",
+      "regulator_eta": "energy; numerical retarded smearing",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived O(2) contact vertex, explicit species/symmetry-factor sum, neutral thermal phase-space cut, and finite-regulator twice-subtracted dispersion interface",
+    "observable": "action vertex normalization, on-shell cut, KMS ratio, positive spectral/noise density, retarded sign, subtraction residual, and quadrature convergence",
+    "data_role": "ACTION_DERIVED_INTERNAL_O2_SUNSET_SPECTRAL_INTERFACE_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+        "sha256": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b"
+      },
+      {
+        "path": "docs/core/uet_o2_sunset_dispersion_interface.py",
+        "sha256": "325ddfded4a6ee8cd9d692082ed451df0d2acc739315b0a1902112e744bbd65e"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json",
+        "sha256": "5944a7a18f8d657671a7c06f11fde6d7fa1c6d79cd94bc21dbf9c57d70bac663"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_O2_SUNSET_1PI_SPECTRAL_INTERFACE_LANE",
+    "open_blockers": [
+      "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "microscopic_SK_KMS_match_missing",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "action-normalized sunset spectral interface only; no physical 1PI, Kubo, entropy, SI mapping, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only an internal action-normalized O(2) sunset spectral interface with a finite regulator and twice-subtracted dispersion. It does not close the zero-regulator physical 1PI self-energy, unique renormalization, microscopic SK/KMS matching, physical transport, entropy-current balance, dimensional Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_SUNSET_1PI_SPECTRAL_INTERFACE_LANE",
+    "equations": {
+      "interaction_potential": "W_int=lambda*(chi_a chi_a)^2/4",
+      "action_four_point_vertex": "V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "action_matrix_element_squared": "M2_action=sum_{b,c,d}|V_abcd|^2/(1+delta_cd)=28*lambda^2 for O(2)",
+      "action_cross_section": "sigma_action=M2_action/(16*pi*s)",
+      "greater_cut": "Gamma_>=integral n_k*v_rel*sigma_action*<(1+n_3)(1+n_4)>_CM",
+      "lesser_cut": "Gamma_<=integral (1+n_k)*v_rel*sigma_action*<n_3*n_4>_CM",
+      "spectral_density": "rho_cut(omega)=2*omega*(Gamma_>-Gamma_<)",
+      "noise_density": "N_cut(omega)=2*omega*(Gamma_>+Gamma_<)",
+      "kms": "Gamma_>(omega)/Gamma_<(omega)=exp(beta*omega)",
+      "retarded_dispersion": "Sigma_R^eta(omega)=integral_0^Omega dnu/pi*rho_cut(nu)*[1/(omega-nu+i*eta)-1/(omega+nu+i*eta)]",
+      "twice_subtraction": "Sigma_R,sub2(omega;omega_*)=Sigma_R^eta(omega)-Sigma_R^eta(omega_*)-(omega^2-omega_*^2)*dSigma_R^eta/d(omega^2)|_{omega_*}"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "quartic_coupling": "dimensionless",
+      "matrix_element_squared": "dimensionless",
+      "cross_section": "inverse energy squared",
+      "cut_rate": "energy",
+      "spectral_density": "energy squared in declared cut normalization",
+      "regulator_eta": "energy; numerical retarded smearing",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived O(2) contact vertex, explicit species/symmetry-factor sum, neutral thermal phase-space cut, and finite-regulator twice-subtracted dispersion interface",
+    "observable": "action vertex normalization, on-shell cut, KMS ratio, positive spectral/noise density, retarded sign, subtraction residual, and quadrature convergence",
+    "data_role": "ACTION_DERIVED_INTERNAL_O2_SUNSET_SPECTRAL_INTERFACE_NO_HOLDOUT",
+    "included": {
+      "action_vertex_tensor": true,
+      "final_state_symmetry_factor": true,
+      "action_normalized_continuum_cut": true,
+      "kms_ratio": true,
+      "twice_subtracted_formal_dispersion": true
+    },
+    "excluded": {
+      "full_1PI_retarded_self_energy": true,
+      "zero_eta_physical_limit": true,
+      "unique_physical_renormalization": true,
+      "microscopic_SK_KMS_match": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current": true,
+      "heat_flux_dissipative_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only an internal action-normalized O(2) sunset spectral interface with a finite regulator and twice-subtracted dispersion. It does not close the zero-regulator physical 1PI self-energy, unique renormalization, microscopic SK/KMS matching, physical transport, entropy-current balance, dimensional Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.22,
+      "chemical_potential": 0.0,
+      "space_response": 0.15,
+      "effective_mass": 0.7039176088151227,
+      "external_species": 0,
+      "quartic_coupling": 0.8,
+      "action_vertex_factor": 2.0,
+      "action_matrix_element_squared": 17.920000000000005,
+      "comparator_matrix_element_squared": 0.6400000000000001,
+      "action_to_comparator_matrix_element_ratio": 28.000000000000004,
+      "reference_energy": 0.7039176088151227,
+      "regulator_eta": 0.025,
+      "frequency_lower": 0.17597940220378067,
+      "frequency_upper": 4.223505652890736,
+      "radial_cutoff": 16.894022611562946,
+      "radial_order": 40,
+      "center_of_mass_order": 32,
+      "frequency_order": 10,
+      "probe_energies": [
+        0.6,
+        0.76,
+        0.9,
+        1.05
+      ],
+      "greater_cut": [
+        2.1963650817686093e-05,
+        2.4574063616215047e-05,
+        2.0351596836823177e-05,
+        1.698220694211687e-05
+      ],
+      "lesser_cut": [
+        1.4363657289240663e-06,
+        7.765813380154101e-07,
+        3.4036057335111297e-07,
+        1.4362333619406236e-07
+      ],
+      "spectral_density": [
+        2.463274210651443e-05,
+        3.617217306286345e-05,
+        3.602022527424972e-05,
+        3.53610255724379e-05
+      ],
+      "noise_density": [
+        2.8080019855932188e-05,
+        3.8532980330430294e-05,
+        3.724552333831372e-05,
+        3.596424358445295e-05
+      ],
+      "kms_ratios": [
+        15.291127026637103,
+        31.643901821044548,
+        59.79422538999148,
+        118.24127883487324
+      ],
+      "kms_target_ratios": [
+        15.291127026637104,
+        31.64390182104453,
+        59.79422538999145,
+        118.24127883487313
+      ],
+      "kms_max_residual": 9.614818009570288e-16,
+      "on_shell_greater_cut": 2.666976000981499e-05,
+      "on_shell_lesser_cut": 1.0875254054401623e-06,
+      "on_shell_spectral_cut": 3.601557082171803e-05,
+      "raw_real_response": [
+        -5.5009923796450836e-05,
+        -4.0622694964146904e-05,
+        -3.2194347057725613e-05,
+        -2.593846259153948e-05,
+        -4.566529479459461e-05
+      ],
+      "raw_imaginary_response": [
+        -2.339685856055159e-05,
+        -3.4202160270970766e-05,
+        -3.47910157387747e-05,
+        -3.4456608866648116e-05,
+        -3.303838906627245e-05
+      ],
+      "twice_subtracted_real_response": [
+        7.593261951026374e-07,
+        -1.078441082740424e-06,
+        -9.977233696779504e-06,
+        -2.552976399861647e-05,
+        0.0
+      ],
+      "twice_subtracted_imaginary_response": [
+        6.078132449869498e-06,
+        9.959918034827066e-07,
+        6.5205137841300175e-06,
+        1.4549018944744786e-05,
+        0.0
+      ],
+      "reference_subtraction_residual": 0.0,
+      "reference_first_s_derivative_residual": 7.664451946564387e-05,
+      "retarded_imaginary_sign_witness": true,
+      "spectral_positivity_witness": true,
+      "dispersion_convergence_residual": 0.00014470962893902502,
+      "convergence_threshold": 0.02,
+      "convergence_passed": true,
+      "action_vertex_normalization_completed": true,
+      "action_continuum_cut_completed": true,
+      "twice_subtracted_dispersion_interface_completed": true,
+      "full_1pi_retarded_self_energy_completed": false,
+      "zero_eta_physical_limit_completed": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "microscopic_sk_kms_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_INTERNAL_O2_SUNSET_SPECTRAL_INTERFACE_NO_HOLDOUT"
+    }
+  },
+  "vertex_checks": {
+    "vertex_0000": 4.800000000000001,
+    "vertex_0011": 1.6,
+    "vertex_0101": 1.6,
+    "vertex_0110": 1.6,
+    "matrix_squared_external_0": 17.920000000000005,
+    "matrix_squared_external_1": 17.920000000000005
+  },
+  "on_shell_mapping": {
+    "greater_action_to_comparator": 3.811206161326878e-16,
+    "lesser_action_to_comparator": 3.894313378874467e-16,
+    "spectral_action_to_comparator": 3.7629633091630453e-16,
+    "expected_matrix_element_ratio": 28.000000000000004
+  },
+  "checks": {
+    "action_vertex_tensor_is_explicit": true,
+    "action_vertex_crossed_components_are_explicit": true,
+    "final_state_symmetry_factor_is_included": true,
+    "external_species_orthogonal_lane_matches": true,
+    "action_to_comparator_ratio_is_28": true,
+    "action_on_shell_mapping_is_not_silent": true,
+    "canonical_effective_mass_is_preserved": true,
+    "neutral_lane_is_explicit": true,
+    "kms_ratio_is_small": true,
+    "spectral_density_is_positive": true,
+    "retarded_imaginary_sign_is_consistent": true,
+    "retarded_response_is_finite": true,
+    "twice_subtraction_is_exact_at_reference": true,
+    "twice_subtraction_first_s_derivative_is_small": true,
+    "dispersion_convergence_is_within_declared_threshold": true,
+    "continuum_artifact_is_passed": true,
+    "full_1pi_self_energy_remains_open": true,
+    "zero_eta_physical_limit_remains_open": true,
+    "unique_renormalization_remains_open": true,
+    "microscopic_sk_kms_match_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "full_1pi_boundary_is_explicit": true,
+    "physical_transport_boundary_is_explicit": true,
+    "alpha_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "action_vertex_normalization_completed": true,
+  "action_continuum_cut_completed": true,
+  "twice_subtracted_dispersion_interface_completed": true,
+  "full_1pi_retarded_self_energy_completed": false,
+  "zero_eta_physical_limit_completed": false,
+  "unique_physical_renormalization_scheme_match_completed": false,
+  "microscopic_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+  "next_controller": "match the finite-regulator action branch to a complete microscopic 1PI renormalization and physical zero-eta limit before calling it physical thermal transport",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_ACTION_NORMALIZED_SUNSET_SPECTRAL_INTERFACE_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_INTERNAL_O2_SUNSET_SPECTRAL_INTERFACE_NO_HOLDOUT",
+  "open_blockers": [
+    "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+    "unique_physical_renormalization_scheme_match_missing",
+    "microscopic_SK_KMS_match_missing",
+    "physical_Kubo_coefficient_missing",
+    "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes only an internal action-normalized O(2) sunset spectral interface with a finite regulator and twice-subtracted dispersion. It does not close the zero-regulator physical 1PI self-energy, unique renormalization, microscopic SK/KMS matching, physical transport, entropy-current balance, dimensional Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+}

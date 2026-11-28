@@ -1,0 +1,87 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "not q or collision density",
+        "Phi": "effective response; exchange is lane-specific, not particle ontology",
+        "R_gen": "excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "E": 1,
+        "Gamma_width": 1,
+        "RA_pair_integral": -3,
+        "cross_section": -2
+      },
+      "derivation_class": "pole_approximation_match_and_structural_rung_no_go",
+      "observable": "Microscopic-to-kinetic normalization and rung compatibility boundary",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_RA_PAIR_MATCH_LEGACY_RUNG_BLOCKED",
+      "controlling_blocker": "charge_resolved_contact_plus_Phi_SK_rung_and_self_consistent_width_missing",
+      "claim_boundary": "Dressed pole-pair normalization and legacy-rung incompatibility only; not a completed microscopic rung, self-consistent width, ladder, physical Kubo/SI coefficient or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.dressed_ra_pair_microscopic_rung_boundary",
+      "version": "1",
+      "classification": "structural_interface_no_go",
+      "relation_or_code_path": {
+        "RA_pair": "integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma) in the pole approximation",
+        "source_match": "(2q p_i)^2*[1/(4E^2 Gamma)]*[-dn/dE]=(q p_i/E)^2*n(1+n)/(T Gamma)",
+        "legacy_rung": "sigma_legacy=lambda^2/(16*pi*s)",
+        "required_rung": "sigma_channel=|M_contact+M_Phi(s,t,u)|^2/[16*pi*s*S_final] with charge-resolved channels"
+      },
+      "standard_physics_counterpart": "Pinch-pole kinetic reduction and cut four-point ladder rung",
+      "variables": {
+        "Gamma_width": "dressed pole width",
+        "M": "charge-resolved scattering amplitude"
+      },
+      "mathematical_role": "RA pair and rung matching boundary",
+      "observable_mapping": "Microscopic-to-kinetic normalization and rung compatibility boundary",
+      "parameter_dimensions": {
+        "E": 1,
+        "Gamma_width": 1,
+        "RA_pair_integral": -3,
+        "cross_section": -2
+      },
+      "source_or_origin": "Canonical current/pole approximation and production action scattering amplitude",
+      "assumptions": {
+        "pole": "narrow positive-energy quasiparticle",
+        "rung_comparison": "same synthetic action coefficients"
+      },
+      "symmetry_and_conservation": "charge-resolved channels required",
+      "limiting_cases": [
+        "Gamma>0",
+        "G=0 contact",
+        "G nonzero Phi exchange"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py"
+      ],
+      "evidence_class": "INTERNAL_STRUCTURAL_DIAGNOSTIC",
+      "proof_status": "RA_PAIR_MATCHED_LEGACY_RUNG_REJECTED",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_dressed_ra_pair_microscopic_rung_boundary_audit.json",
+          "sha256": "750da3a5b6546482d25784330f875c7e0a01a787a7a5c74db31349093307826f"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "microscopic_ladder_controller",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "charge_resolved_contact_plus_Phi_SK_rung",
+        "self_consistent_width_from_same_rung",
+        "number_changing_response_channels",
+        "continuum_ladder_and_heat_current_match"
+      ],
+      "next_hardening_step": "Replace the legacy rung by charge-resolved contact plus Phi-exchange SK cuts and derive Gamma from the same kernel before solving the ladder."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

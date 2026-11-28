@@ -1,0 +1,149 @@
+{
+  "schema_version": "t13-iaea-gr280-same-state-cp-source-audit-v1",
+  "artifact": "t13_iaea_gr280_same_state_cp_source_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
+  "same_state_cp_and_density_rows": true,
+  "major_result": {
+    "major_result_id": "T13_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "IAEA-THPH identity, official locator, and archived raw PDF hash",
+      "GR-280 300 C / 573 K Cp row from Table 4.4",
+      "GR-280 300 C density row from Table 4.6",
+      "same-state Cp-density availability boundary",
+      "conditional Cp-only volumetric conversion and uncertainty propagation",
+      "the boundary that published density precision is not a standard uncertainty",
+      "the non-equivalence of reactor graphite GR-280 to Ding HOPG/TTG"
+    ],
+    "equation_or_mapping": "C_p^V = rho*C_p; u(C_p^V | rho fixed) = rho*u(C_p); c_v^V = C_p^V - T*alpha_V^2*K_T",
+    "units": {
+      "C_p": "J kg^-1 K^-1",
+      "rho": "kg m^-3",
+      "C_p^V": "J m^-3 K^-1",
+      "u(C_p^V | rho fixed)": "J m^-3 K^-1",
+      "alpha_V": "K^-1",
+      "K_T": "Pa = J m^-3"
+    },
+    "derivation_class": "source transcription plus same-temperature row matching, mass-to-volume conversion, and conditional one-input uncertainty propagation",
+    "observable": "reactor-graphite same-state volumetric Cp comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_iaea_gr280_same_state_cp_source_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json",
+        "sha256": "d090b066a8d3e6ea405a553700a1c15b33b28d652636cf6aff1cc054e2ab9d73"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_thermophysical_properties_web.pdf",
+        "sha256": "bdb8454de8bdadf83ecdb1794621180651bcf00108f1214f8f3a82193c05976b"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_IAEA_GR280_SAME_STATE_CP_COMPARATOR",
+    "open_blockers": [
+      "density_standard_uncertainty_not_reported",
+      "c_v_source_uncertainty_not_closed",
+      "same_grade_alpha_V_and_K_T_missing",
+      "material_regime_mapping_to_Ding_TTG_not_closed",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "The full gate may close only the availability sub-blocker for a same-state Cp source; no Ding C_src, c_v uncertainty, alpha calibration, transport, Core, Gravity, or Galaxy dependency is unlocked.",
+    "claim_boundary": "This closes a source-traceable same-state reactor-graphite Cp and density comparator lane. It is not a direct volumetric measurement, not source-grade density uncertainty, not c_v, not Ding TTG C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "iaea_thph_2008_graphite_gr280",
+    "title": "Thermophysical Properties of Materials for Nuclear Engineering: A Tutorial and Collection of Data",
+    "publisher": "International Atomic Energy Agency",
+    "publication_year": 2008,
+    "official_url": "https://www-pub.iaea.org/MTCD/Publications/PDF/IAEA-THPH_web.pdf",
+    "source_locators": [
+      "Section 4.2 Graphite (carbon), printed PDF page 132, Table 4.3: GR-280 initial-state density context",
+      "Section 4.2 Graphite (carbon), printed PDF page 133, Table 4.4: 300 C / 573 K heat-capacity row",
+      "Section 4.2 Graphite (carbon), printed PDF page 134, Table 4.5: heat-capacity uncertainty by temperature",
+      "Section 4.2 Graphite (carbon), printed PDF page 134, Table 4.6: initial-state reactor-graphite density at 300 C"
+    ],
+    "retrieved_on": "2026-08-20",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_thermophysical_properties_web.pdf",
+    "local_raw_size_bytes": 3066483,
+    "local_raw_sha256": "bdb8454de8bdadf83ecdb1794621180651bcf00108f1214f8f3a82193c05976b",
+    "material": "reactor graphite GR-280 in initial state; not Ding HOPG/TTG",
+    "temperature_scope": "same-source tabular state at 300 C / approximately 573 K",
+    "license_or_terms": "Official IAEA publication archived for research provenance; publication terms remain subject to source owner",
+    "local_hash_observed": "bdb8454de8bdadf83ecdb1794621180651bcf00108f1214f8f3a82193c05976b",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_gr280_same_state_cp_source_package.json",
+    "package_sha256": "d090b066a8d3e6ea405a553700a1c15b33b28d652636cf6aff1cc054e2ab9d73"
+  },
+  "source_rows": [
+    {
+      "source_row_id": "iaea_gr280_cp_table_4_4_300C",
+      "temperature_C": 300.0,
+      "temperature_K_source": 573.0,
+      "quantity": "graphite specific heat capacity at constant pressure",
+      "value_kJ_per_kg_K": 1.404,
+      "value_J_per_kg_K": 1404.0,
+      "source_uncertainty": {
+        "relative_fraction": 0.08783333333333333,
+        "relative_percent": 8.783333333333333,
+        "method": "linear interpolation of Table 4.5 uncertainty from 10 percent at 500 K to 5 percent at 800 K",
+        "standard_uncertainty": false
+      },
+      "source_locator": "printed PDF page 133, Table 4.4, 300 C / 573 K row",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "iaea_gr280_density_table_4_6_300C",
+      "temperature_C": 300.0,
+      "quantity": "reactor graphite density in initial state",
+      "value_kg_per_m3": 1700.0,
+      "uncertainty": null,
+      "uncertainty_status": "source reports a table value but no standard uncertainty or interval for this row",
+      "source_locator": "printed PDF page 134, Table 4.6, 300 C row",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    }
+  ],
+  "derived_comparator": {
+    "same_state_cp_density_rows": true,
+    "temperature_match_basis": "exact 300 C row match; the source labels the heat-capacity row as 573 K",
+    "cp_volumetric_J_per_m3_K": 2386800.0,
+    "cp_volumetric_cp_only_uncertainty_J_per_m3_K": 209640.6,
+    "cp_volumetric_standard_uncertainty_J_per_m3_K": null,
+    "density_standard_uncertainty_reported": false,
+    "cp_uncertainty_propagated_conditionally": true,
+    "direct_volumetric_cp_measured": false,
+    "c_v_emitted": false,
+    "alpha_V_and_K_T_emitted": false,
+    "material_match_to_Ding_TTG": false,
+    "cp_relative_uncertainty_reconstructed": 0.08783333333333333,
+    "cp_uncertainty_reconstructed_J_per_kg_K": 123.318,
+    "cp_volumetric_reconstructed_J_per_m3_K": 2386800.0,
+    "cp_volumetric_cp_only_uncertainty_reconstructed_J_per_m3_K": 209640.6
+  },
+  "checks": {
+    "raw_pdf_present": true,
+    "raw_pdf_hash_matches": true,
+    "raw_size_matches_package": true,
+    "source_identity_and_locators_present": true,
+    "cp_row_is_300C_573K": true,
+    "density_row_is_300C": true,
+    "same_state_rows_are_explicit": true,
+    "cp_uncertainty_interpolation_matches_package": true,
+    "cp_volume_reconstruction_matches_package": true,
+    "cp_volume_uncertainty_reconstruction_matches_package": true,
+    "density_standard_uncertainty_not_invented": true,
+    "cv_not_emitted": true,
+    "alpha_and_KT_not_emitted": true,
+    "material_match_not_claimed": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true,
+    "no_fit_or_alpha_calibration": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "density_standard_uncertainty_c_v_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Acquire a source-grade density uncertainty or direct same-state volumetric c_v record, then match alpha_V and K_T to the same specimen and material regime; keep this comparator out of calibration and holdout paths.",
+  "claim_boundary": "Source-locked IAEA GR-280 same-state Cp and density comparator only; it does not close c_v, Ding C_src, base-Phi SI mapping, alpha_Phi_K, or Full Topic 13."
+}

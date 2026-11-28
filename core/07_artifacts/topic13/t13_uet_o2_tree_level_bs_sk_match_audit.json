@@ -1,0 +1,216 @@
+{
+  "schema_version": "t13-uet-o2-tree-level-bs-sk-match-v1",
+  "artifact": "t13_uet_o2_tree_level_bs_sk_match_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the declared tree-level charged-sector action vertex normalization and cross-section relation",
+      "exact elastic-channel kinematics and action-derived detailed-balance interface",
+      "the finite-cutoff conservative operator vertex decomposition and algebraic Bethe-Salpeter identity",
+      "the formal SK retarded/noise notation with algebraic KMS and fluctuation-dissipation matching",
+      "a positive formal entropy witness and a recorded, nonconverged continuum-resolution controller"
+    ],
+    "equation_or_mapping": {
+      "declared_action_channel": "M_tree=lambda in the declared charged elastic channel; sigma_22=|M_tree|^2/(16*pi*s)",
+      "exact_channel_kinematics": "p1+p2=p3+p4; E1+E2=E3+E4",
+      "conservative_operator_match": "L_cont=L_width+K_transition; K_transition=sum_c W_c*u_c^P*(u_c^P)^T",
+      "bethe_salpeter_kernel": "K_BS=gamma_ref*I-L_cont; G_R=G_0+G_0*K_BS*G_R",
+      "sk_action": "S_SK=integral [Phi_a D_R Phi_r + i*Phi_a N Phi_a/2]",
+      "kms_fdt": "N(omega)=coth(beta_th*omega/2)*rho(omega); rho=2*Im K_R; G^>/G^<=exp(beta_th*omega)",
+      "entropy_witness": "sigma_formal=b_perp^T*L_cont*b_perp/T>=0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "quartic_coupling": "dimensionless action coupling in the declared lane",
+      "cross_section": "inverse energy squared",
+      "response_noise_entropy": "formal natural-unit quantities",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "tree-level action-derived constant-amplitude charged-sector vertex, exact elastic kinematics, conservative collocation decomposition, and formal SK/KMS algebra",
+    "observable": "tree-level action cross-section normalization, finite-cutoff BS response, and formal SK/KMS noise interface",
+    "data_role": "ACTION_DERIVED_TREE_LEVEL_VERTEX_FORMAL_SK_MATCH_NOT_FULL_MICROSCOPIC",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+        "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+      },
+      {
+        "path": "docs/core/uet_o2_continuum_collision_operator.py",
+        "sha256": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2"
+      },
+      {
+        "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+        "sha256": "d1cae79dbbcd289c33b04c209ad4d0140ab3c22ce16bb568c267f041d2b3ece7"
+      },
+      {
+        "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+        "sha256": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+    "open_blockers": [
+      "continuum_limit_not_converged",
+      "loop_renormalized_microscopic_vertex_missing",
+      "full_interacting_SK_action_and_KMS_match_missing",
+      "full_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "named tree-level action vertex normalization and formal finite-cutoff SK/KMS/Bethe-Salpeter interface only; no continuum-limit, microscopic, physical Kubo, SI, alpha, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes only the declared tree-level action vertex normalization and formal SK/KMS/Bethe-Salpeter interface on a finite-cutoff conservative collocation lane. The recorded resolution sequence does not establish a continuum limit. The result is not a loop-renormalized microscopic vertex, a full interacting SK action match, a physical Kubo coefficient, an SI map, an alpha_Phi_K calibration, TTG validation, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_TREE_LEVEL_BS_SK_MATCH_INTERFACE_LANE",
+    "equations": {
+      "declared_action_channel": "M_tree=lambda in the declared charged elastic channel; sigma_22=|M_tree|^2/(16*pi*s)",
+      "exact_channel_kinematics": "p1+p2=p3+p4; E1+E2=E3+E4",
+      "conservative_operator_match": "L_cont=L_width+K_transition; K_transition=sum_c W_c*u_c^P*(u_c^P)^T",
+      "bethe_salpeter_kernel": "K_BS=gamma_ref*I-L_cont; G_R=G_0+G_0*K_BS*G_R",
+      "sk_action": "S_SK=integral [Phi_a D_R Phi_r + i*Phi_a N Phi_a/2]",
+      "kms_fdt": "N(omega)=coth(beta_th*omega/2)*rho(omega); rho=2*Im K_R; G^>/G^<=exp(beta_th*omega)",
+      "entropy_witness": "sigma_formal=b_perp^T*L_cont*b_perp/T>=0"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "quartic_coupling": "dimensionless action coupling in the declared lane",
+      "cross_section": "inverse energy squared",
+      "response_noise_entropy": "formal natural-unit quantities",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "tree-level action-derived constant-amplitude charged-sector vertex, exact elastic kinematics, conservative collocation decomposition, and formal SK/KMS algebra",
+    "observable": "tree-level action cross-section normalization, finite-cutoff BS response, and formal SK/KMS noise interface",
+    "data_role": "ACTION_DERIVED_TREE_LEVEL_VERTEX_FORMAL_SK_MATCH_NOT_FULL_MICROSCOPIC",
+    "included": {
+      "tree_level_action_vertex_normalization": true,
+      "action_cross_section_match": true,
+      "conservative_operator_vertex_decomposition": true,
+      "algebraic_bethe_salpeter_match": true,
+      "formal_sk_action_kms_fdt_match": true,
+      "formal_entropy_witness": true,
+      "continuum_sequence_recorded": true
+    },
+    "excluded": {
+      "loop_renormalized_vertex": true,
+      "full_microscopic_bethe_salpeter_solution": true,
+      "full_interacting_sk_influence_functional": true,
+      "continuum_limit": true,
+      "physical_kubo_coefficient": true,
+      "entropy_current_heat_flux_dissipative_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only the declared tree-level action vertex normalization and formal SK/KMS/Bethe-Salpeter interface on a finite-cutoff conservative collocation lane. The recorded resolution sequence does not establish a continuum limit. The result is not a loop-renormalized microscopic vertex, a full interacting SK action match, a physical Kubo coefficient, an SI map, an alpha_Phi_K calibration, TTG validation, or Full Topic 13 closure."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "effective_mass": 1.0,
+    "quartic_coupling": 1.0,
+    "transition_channel_count": 64,
+    "transition_state_count": 256,
+    "action_channel_amplitude": 1.0,
+    "action_channel_cross_section_min": 4.718595071738728e-06,
+    "action_channel_cross_section_max": 0.0003871272070352501,
+    "action_vertex_cross_section_residual": 1.1102230246251565e-16,
+    "exact_channel_kinematic_residual": 1.4210854715202004e-14,
+    "exact_channel_detailed_balance_residual": 8.543090354715029e-14,
+    "action_width_vertex_decomposition_residual": 2.4147484638442308e-22,
+    "algebraic_bethe_salpeter_residual": 4.513280234121269e-16,
+    "formal_sk_action_kms_residual": 1.729285121923951e-16,
+    "formal_sk_noise_fdt_residual": 2.0024586688771869e-16,
+    "formal_sk_entropy_witness": 7.653163030092222e-10,
+    "continuum_sequence_radial_orders": [
+      8,
+      10,
+      12,
+      14
+    ],
+    "continuum_sequence_channel_counts": [
+      64,
+      96,
+      128,
+      160
+    ],
+    "continuum_sequence_dc_responses": [
+      83.41842727925236,
+      43.76008656209477,
+      33.16514282309893,
+      31.829328610830117
+    ],
+    "continuum_sequence_relative_changes": [
+      0.47541462972440046,
+      0.2421143231506593,
+      0.04027765595323908
+    ],
+    "continuum_sequence_max_relative_change": 0.47541462972440046,
+    "continuum_limit_completed": false,
+    "tree_level_action_match_completed": true,
+    "formal_sk_action_kms_match_completed": true,
+    "microscopic_bethe_salpeter_match_completed": false,
+    "microscopic_sk_kms_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_TREE_LEVEL_VERTEX_FORMAL_SK_MATCH_NOT_FULL_MICROSCOPIC"
+  },
+  "checks": {
+    "tree_level_action_match_is_declared": true,
+    "action_vertex_cross_section_normalization_is_checked": true,
+    "exact_channel_kinematics_are_conserved": true,
+    "exact_channel_detailed_balance_holds": true,
+    "action_width_vertex_decomposition_is_resolved": true,
+    "algebraic_bethe_salpeter_identity_is_resolved": true,
+    "formal_sk_action_kms_match_is_resolved": true,
+    "formal_sk_noise_fdt_match_is_resolved": true,
+    "formal_entropy_witness_is_positive": true,
+    "continuum_resolution_sequence_is_recorded": true,
+    "continuum_sequence_is_finite": true,
+    "continuum_controller_is_visible": true,
+    "continuum_limit_is_not_claimed": true,
+    "microscopic_bethe_salpeter_match_not_claimed": true,
+    "microscopic_sk_kms_match_not_claimed": true,
+    "physical_kubo_coefficient_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "tree_level_boundary_is_explicit": true,
+    "thermal_and_external_boundaries_are_explicit": true
+  },
+  "failed_checks": [],
+  "continuum_limit_completed": false,
+  "microscopic_bethe_salpeter_match_completed": false,
+  "microscopic_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "microscopic_bethe_salpeter_vertex_and_SK_action_match_missing",
+  "next_controller": "derive the loop-renormalized microscopic vertex and full interacting SK/KMS action match on top of the tree-level interface; test a declared continuum-limit sequence without consuming Xie 2026",
+  "claim_promotion": false
+}

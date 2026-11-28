@@ -1,0 +1,257 @@
+{
+  "schema_version": "t13-graphite-alpha-v-kt-matched-source-boundary-v1",
+  "artifact": "t13_graphite_alpha_v_kt_matched_source_boundary_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
+  "major_result": {
+    "major_result_id": "T13_GRAPHITE_ALPHA_V_K_T_MATCHED_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "The Lowitzer full-text route supplies a same-study, same-sample alpha_V/K_T pair with source-reported uncertainty at 300 K. The pair closes the source-grade thermodynamic correction-input lane, while Ding material equivalence, c_v, and C_src remain separate.",
+    "equation_or_mapping": {
+      "cp_cv_correction": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
+      "volumetric_conversion": "c_p^V = rho * c_p; c_v^V = c_p^V - T * alpha_V^2 * K_T"
+    },
+    "units": {
+      "alpha_V": "K^-1",
+      "K_T": "Pa",
+      "temperature": "K",
+      "volumetric_heat_capacity": "J m^-3 K^-1"
+    },
+    "derivation_class": "source compatibility and uncertainty-boundary audit; no UET derivation",
+    "observable": "same-state graphite alpha_V/K_T correction inputs",
+    "data_role": "SOURCE_PROVENANCE_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "role": "nist_alpha_v",
+        "path": "docs/core/07_artifacts/topic13/t13_nist_graphite_alpha_v_source_boundary_audit.json",
+        "sha256": "63fb151ac425e773fa90326fe462b353dea0abcaef0192c3e9231515bd92d0e6"
+      },
+      {
+        "role": "hanfland_kt",
+        "path": "docs/core/07_artifacts/topic13/t13_graphite_isothermal_kt_source_audit.json",
+        "sha256": "e052fa8081dd30dbd0c584bacc1a260bc34363964c945500294ddd6de812bfbc"
+      },
+      {
+        "role": "bosak_elastic_bulk",
+        "path": "docs/core/07_artifacts/topic13/t13_graphite_elastic_bulk_modulus_source_audit.json",
+        "sha256": "dacbd3ae7690f93189981bb09b1e4ba9c27b293eacdc9996ad0d317da1dd0fd0"
+      },
+      {
+        "role": "tpg_alpha_v",
+        "path": "docs/core/07_artifacts/topic13/t13_tpg_anisotropic_alpha_v_source_audit.json",
+        "sha256": "0ec2ebe1c8b63b5d3b3d77e3ba048cdff651919bcf12358584c9750b414fe1ce"
+      },
+      {
+        "role": "nelson_riley_alpha_v",
+        "path": "docs/core/07_artifacts/topic13/t13_natural_graphite_nelson_riley_alpha_v_source_audit.json",
+        "sha256": "ad0f287f97995d0ad37e33c823973637eedd22ca6392e4d7fcf5f680ee815046"
+      },
+      {
+        "role": "nist_alpha_v",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/nist_axm5q1_density_source_package.json",
+        "sha256": "dc0c0ffac3fda2b21f8f765da5c111a9a5b39d12f8b9a542cf81461d773e8974"
+      },
+      {
+        "role": "hanfland_kt",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
+        "sha256": "31990b3e4181b5e0b50ae5deebe4a78f9d2e69547e5e581405e22f2ad09f6b13"
+      },
+      {
+        "role": "bosak_elastic_bulk",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
+        "sha256": "53c99428d840fb9bc235d01c5791effbab6ac610072718e1591caee5d77e151d"
+      },
+      {
+        "role": "tpg_alpha_v",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
+        "sha256": "7cf6fc2e9edc54c73c782adbf4d45426613854bd5f8364ec708a89a6e5fd11c1"
+      },
+      {
+        "role": "nelson_riley_alpha_v",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/argonne_anl_5524_nelson_riley_alpha_v_source_package.json",
+        "sha256": "1acbb63f2bfa0f3b3bba707ca924cc0196ad9032b814c48d9087d4ff45c420d2"
+      },
+      {
+        "role": "lowitzer_candidate",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_candidate_source_package.json",
+        "sha256": "0d4e91553567e887ed26e237dcdbd8bbefde5e786a19176bd011416a4db919f3"
+      },
+      {
+        "role": "lowitzer_full",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/lowitzer_2006_graphite_pvt_full_source_package.json",
+        "sha256": "0c045335d72f5bb19705ad7df983972a98f156e0f8954ca133dfc87630c1a9ef"
+      },
+      {
+        "role": "lowitzer_full_audit",
+        "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "d8be3fc1d7fe8593c8a894ea9cd92431746d3acc4d2a0532baec0bd2a98efed6"
+      },
+      {
+        "role": "tohei_table_comparator",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/tohei_2006_graphite_alpha_v_kt_table_comparator_source_package.json",
+        "sha256": "7a8dfafd8c06145e08194505aeca933b6f90c27e184cf4db45b56d9375b140c9"
+      },
+      {
+        "role": "farooqui_ig210_thermophysical",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/farooqui_2022_ig210_thermophysical_source_package.json",
+        "sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_GRAPHITE_ALPHA_V_K_T_SOURCE_PAIR_LOCKED_MATERIAL_OPEN",
+    "open_blockers": [
+      "same_state_IG210_K_T_missing",
+      "density_uncertainty_not_source_locked",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "Current alpha_V/K_T source-pair inventory boundary only; no Cp-to-Cv input closure, Ding C_src, alpha_Phi_K, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This closes a route-level source compatibility boundary, including the screened abstract-only Lowitzer candidate, not the existence of all possible future alpha_V/K_T data. It is not a same-state thermodynamic correction, Ding validation, UET calibration, TTG prediction, or external validation."
+  },
+  "source_pair_observations": {
+    "nist_alpha_v": {
+      "source_id": "nist_srm_260_89_axm_5q1_graphite",
+      "material": "AXM-5Q1 fine-grained isotropic graphite",
+      "alpha_V_rows": 4,
+      "K_T_emitted": false,
+      "source_sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2"
+    },
+    "hanfland_kt": {
+      "source_id": "hanfland_beister_syassen_1989_graphite_eos",
+      "material": "natural graphite powder prepared by grinding natural graphite flakes",
+      "temperature_K": 300.0,
+      "same_state_alpha_V_available": false,
+      "source_sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e"
+    },
+    "bosak_elastic_bulk": {
+      "source_id": "bosak_krisch_2007_graphite_ixs_elasticity",
+      "material": "kish graphite single-crystalline domains",
+      "temperature_scope": "room temperature; the source abstract and Table II do not provide a resolved temperature series",
+      "thermal_K_T_claimed": false,
+      "source_sha256": "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d"
+    },
+    "tpg_alpha_v": {
+      "source_id": "ihep_2001_32_tpg_thermal_expansion",
+      "same_specimen_for_both_axes": false,
+      "same_temperature_point": false,
+      "same_state_K_T": false,
+      "source_sha256": "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e"
+    },
+    "nelson_riley_alpha_v": {
+      "source_id": "argonne_anl_5524_graphite_thermal_expansion_table",
+      "same_specimen_alpha_V": false,
+      "alpha_V_uncertainty_status": "NOT_AVAILABLE_IN_SOURCE",
+      "source_sha256": "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561"
+    },
+    "lowitzer_pvt_candidate": {
+      "source_id": "lowitzer_winkler_tucker_2006_graphite_pvt",
+      "payload_state": "ABSTRACT_ONLY",
+      "reported_scope": {
+        "pressure_min_GPa": 0.0,
+        "pressure_max_GPa": 6.0,
+        "temperature_min_K": 0.0,
+        "temperature_max_K": 1250.0,
+        "measurement_method": "in situ neutron powder diffraction on PEARL/HiPr with a heatable Paris-Edinburgh cell",
+        "temperature_measurement": "neutron resonance absorption spectroscopy",
+        "pressure_standard": "internal MgO standard",
+        "fit_method": "Rietveld-refined data fitted with several equations of state"
+      },
+      "abstract_reported_fit_values": {
+        "B_GPa": 38.0,
+        "B_prime": 9.0,
+        "dB_dT_GPa_per_K": -0.002,
+        "uncertainty_reported_in_accessible_abstract": false
+      },
+      "numeric_alpha_V_rows_available": false,
+      "numeric_K_T_rows_available": false,
+      "source_grade_uncertainty_available": false,
+      "same_state_alpha_V_and_K_T_pair_closed": false,
+      "local_raw_sha256": null
+    },
+    "lowitzer_full_pvt_pair": {
+      "source_id": "lowitzer_winkler_tucker_2006_graphite_pvt",
+      "payload_state": "FULL_TEXT_ARCHIVED",
+      "same_study_pair_present": true,
+      "same_sample_pair_present": true,
+      "same_temperature_point_present": true,
+      "same_grade_alpha_V_and_K_T_pair_closed": true,
+      "source_grade_uncertainty_available": true,
+      "ding_material_regime_mapping_closed": false,
+      "correction_witness_J_m3_K": 11673.6,
+      "source_sha256": "0c045335d72f5bb19705ad7df983972a98f156e0f8954ca133dfc87630c1a9ef"
+    },
+    "tohei_table_comparator": {
+      "source_id": "tohei_kuwabara_oba_tanaka_2006_graphite_qha",
+      "payload_state": "REMOTE_PRIMARY_TABLE_LOCATOR_SCREENED",
+      "source_locator": "Table I, printed page 2; graphite columns; 300 K rows",
+      "calculated_graphite_pair": true,
+      "experimental_same_specimen_pair": false,
+      "source_grade_uncertainty_available": false,
+      "Ding_material_regime_mapping_closed": false,
+      "source_sha256": null
+    },
+    "farooqui_ig210_thermophysical": {
+      "source_id": "farooqui_2022_npl_ig210_thermophysical_table",
+      "material": "IG-210 grade isotropic graphite from Toyo Tanso",
+      "temperature_scope": "500 C, 700 C, and 1000 C Table 1 thermophysical values",
+      "row_count": 3,
+      "same_grade_source": true,
+      "same_state_K_T_present": false,
+      "c_v_present": false,
+      "Ding_material_regime_mapping_closed": false,
+      "source_sha256": "e4bd7e50b5d5e9025eae9bd410f74c3bb5699a8f22f32c4fc5c7994978d9d266"
+    }
+  },
+  "checks": {
+    "nist_alpha_source_is_lane_locked": true,
+    "nist_alpha_has_rows": true,
+    "nist_is_axm_5q1": true,
+    "nist_does_not_emit_kt": true,
+    "hanfland_kt_source_is_lane_locked": true,
+    "hanfland_is_natural_graphite_powder": true,
+    "hanfland_same_state_alpha_is_missing": true,
+    "hanfland_ding_mapping_is_open": true,
+    "bosak_bulk_is_not_thermal_kt": true,
+    "bosak_ding_mapping_is_not_claimed": true,
+    "tpg_same_specimen_is_false": true,
+    "tpg_same_temperature_is_false": true,
+    "tpg_ding_mapping_is_open": true,
+    "nelson_uncertainty_is_not_row_level": true,
+    "nelson_same_specimen_is_false": true,
+    "all_current_pairs_fail_same_state_contract": true,
+    "lowitzer_candidate_is_abstract_only": true,
+    "lowitzer_has_no_numeric_alpha_rows": true,
+    "lowitzer_has_no_numeric_kt_rows": true,
+    "lowitzer_has_no_source_grade_uncertainty": true,
+    "lowitzer_does_not_close_pair": true,
+    "lowitzer_ding_mapping_is_open": true,
+    "lowitzer_does_not_emit_correction": true,
+    "lowitzer_full_audit_passes": true,
+    "lowitzer_full_payload_is_archived": true,
+    "lowitzer_full_has_numeric_pair": true,
+    "lowitzer_full_pair_has_uncertainty": true,
+    "lowitzer_full_same_sample_pair": true,
+    "lowitzer_full_ding_mapping_remains_open": true,
+    "lowitzer_full_does_not_emit_ding_values": true,
+    "tohei_is_a_primary_table_comparator": true,
+    "tohei_has_numeric_graphite_alpha_and_b0": true,
+    "tohei_same_calculation_pair_is_explicit": true,
+    "tohei_experimental_pair_is_not_same_specimen": true,
+    "tohei_uncertainty_is_not_promoted": true,
+    "tohei_ding_mapping_is_open": true,
+    "tohei_does_not_emit_correction": true,
+    "farooqui_source_is_lane_locked": true,
+    "farooqui_has_same_grade_rows": true,
+    "farooqui_has_alpha_l_cp_and_k": true,
+    "farooqui_same_state_kt_is_missing": true,
+    "farooqui_cv_is_missing": true,
+    "farooqui_ding_mapping_is_open": true,
+    "farooqui_does_not_emit_alpha": true,
+    "holdout_is_unconsumed": true
+  },
+  "same_grade_pair_route_available": true,
+  "controlling_blocker": "material_regime_mapping_to_TTG_not_closed",
+  "next_controller": "Use the source-locked Lowitzer pair only as a thermodynamic correction comparator; obtain a Ding-equivalent material/state and source-grade c_p or c_v before using any correction in C_src.",
+  "claim_boundary": "No Ding C_src, alpha_Phi_K, TTG prediction, or Full Topic 13 closure is emitted; only the source-state correction term is recorded."
+}

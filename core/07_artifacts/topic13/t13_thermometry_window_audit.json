@@ -1,0 +1,54 @@
+{
+  "major_result_id": "T13_LATE_THERMOMETRY_TRANSFER_BOUNDARY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Acquired UED delays do not overlap the reviewed source-specific >100 ps equilibrium window"
+  ],
+  "equation_or_mapping": "source eligibility comparison only, not a universal thermalization threshold",
+  "units": {
+    "delay": "ps"
+  },
+  "derivation_class": "SOURCE_SCOPE_COMPARISON",
+  "observable": "time-window eligibility",
+  "data_role": "METADATA_AUDIT_NOT_CALIBRATION",
+  "verification_status": "NO_OVERLAP_NO_CALIBRATION_TRANSFER",
+  "literature": {
+    "url": "https://arxiv.org/pdf/1709.02805",
+    "locator": "Main text Figure 3 discussion; SI 5",
+    "late_time_condition_ps": 100.0,
+    "comparison": ">",
+    "temperature_origin": "Debye-Waller model inference under quasi-equilibrium, not an independently measured calibration table",
+    "numeric_calibration_acquired": false
+  },
+  "acquired_scans": [
+    {
+      "member": "PROCESSED/PROC_400nm",
+      "rows": 38,
+      "maximum_delay_ps": 42.262440000000026,
+      "eligible_row_indices": []
+    },
+    {
+      "member": "PROCESSED/PROC_800nm",
+      "rows": 32,
+      "maximum_delay_ps": 8.932440000000023,
+      "eligible_row_indices": []
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "open_blockers": [
+    "same-sample equilibrium evidence",
+    "independent numeric calibration",
+    "Phi coupling"
+  ],
+  "dependency_unlocked": [
+    "reject this unsupported calibration transfer only"
+  ],
+  "evidence_hashes": {
+    "docs/core/artifacts/t13_ued_numeric_inventory_audit.json": "b5ec9fbb53c2be6c8b6628dc9561605cd1df271d94511b9be55e1d42e67baddc",
+    "docs/scripts/audit/audit_topic13_thermometry_window.py": "a757cea4c9d87a0e7c6810429982a8e9718d0b8048fbd442d877b1de3a01be2e",
+    "docs/core/test/test_topic13_thermometry_window.py": "d4c251620a38156254c8b38a05fe22d5e1c8aa67cdf33e3b844e37ed77142379"
+  },
+  "claim_boundary": "Different samples may equilibrate differently. Nonoverlap rejects the proposed justification, not equilibrium itself or all thermometry routes. No holdout, fit or invented rows."
+}

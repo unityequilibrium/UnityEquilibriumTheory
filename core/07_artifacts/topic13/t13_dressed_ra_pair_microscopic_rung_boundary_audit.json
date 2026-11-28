@@ -1,0 +1,291 @@
+{
+  "schema_version": "t13-dressed-ra-pair-rung-boundary-v1",
+  "major_result_id": "T13_DRESSED_RA_PAIR_MICROSCOPIC_RUNG_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_LEGACY_RUNG_NO_GO",
+  "verification_status": "PASS_RA_PAIR_MATCH_LEGACY_RUNG_BLOCKED",
+  "what_is_closed": [
+    "The narrow-width dressed scalar RA pole-pair energy integral reproduces the kinetic 1/Gamma source normalization.",
+    "Combining the canonical tree current with the RA pair and thermal derivative exactly reproduces the weighted kinetic current source squared.",
+    "The legacy M=lambda transition/SK rung is not the charge-resolved production-action rung: contact-only cross sections differ by factors 8 and 16, and Phi exchange adds kinematic dependence."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.dressed_ra_pair_microscopic_rung_boundary"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "RA_pair": "integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma) in the pole approximation",
+    "source_match": "(2q p_i)^2*[1/(4E^2 Gamma)]*[-dn/dE]=(q p_i/E)^2*n(1+n)/(T Gamma)",
+    "legacy_rung": "sigma_legacy=lambda^2/(16*pi*s)",
+    "required_rung": "sigma_channel=|M_contact+M_Phi(s,t,u)|^2/[16*pi*s*S_final] with charge-resolved channels"
+  },
+  "ontology": {
+    "C": "not q or collision density",
+    "Phi": "effective response; exchange is lane-specific, not particle ontology",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "E": 1,
+    "Gamma_width": 1,
+    "RA_pair_integral": -3,
+    "cross_section": -2
+  },
+  "derivation_class": "pole_approximation_match_and_structural_rung_no_go",
+  "observable": "Microscopic-to-kinetic normalization and rung compatibility boundary",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2,
+    "response_quartic": 1.0
+  },
+  "RA_pair_rows": [
+    {
+      "energy": 0.7,
+      "width": 0.01,
+      "numeric": 51.020408163265316,
+      "analytic": 51.02040816326531,
+      "quadrature_error": 4.355215220911351e-11,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 0.7,
+      "width": 0.05,
+      "numeric": 10.204081632653065,
+      "analytic": 10.204081632653063,
+      "quadrature_error": 8.969947339259208e-12,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 0.7,
+      "width": 0.2,
+      "numeric": 2.5510204081632653,
+      "analytic": 2.5510204081632657,
+      "quadrature_error": 1.256516056527128e-12,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.0,
+      "width": 0.01,
+      "numeric": 24.999999999999996,
+      "analytic": 25.0,
+      "quadrature_error": 2.134251332998904e-11,
+      "relative_error": 1.1102230246251565e-16
+    },
+    {
+      "energy": 1.0,
+      "width": 0.05,
+      "numeric": 5.000000000000001,
+      "analytic": 5.0,
+      "quadrature_error": 4.397115925497828e-12,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.0,
+      "width": 0.2,
+      "numeric": 1.2499999999999998,
+      "analytic": 1.25,
+      "quadrature_error": 6.156952497741102e-13,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 2.0,
+      "width": 0.01,
+      "numeric": 6.249999999999999,
+      "analytic": 6.25,
+      "quadrature_error": 5.33562833249726e-12,
+      "relative_error": 1.1102230246251565e-16
+    },
+    {
+      "energy": 2.0,
+      "width": 0.05,
+      "numeric": 1.2500000000000002,
+      "analytic": 1.25,
+      "quadrature_error": 1.099278981374457e-12,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 2.0,
+      "width": 0.2,
+      "numeric": 0.31249999999999994,
+      "analytic": 0.3125,
+      "quadrature_error": 3.8657143755311087e-13,
+      "relative_error": 2.220446049250313e-16
+    }
+  ],
+  "source_match_rows": [
+    {
+      "energy": 1.0954451150103321,
+      "thermal_weight": 0.022726618312864526,
+      "qft": 0.00946942429702689,
+      "kinetic": 0.009469424297026888,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.0954451150103321,
+      "thermal_weight": 0.022726618312864526,
+      "qft": 0.0018938848594053778,
+      "kinetic": 0.0018938848594053774,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.0954451150103321,
+      "thermal_weight": 0.11776726713617851,
+      "qft": 0.0490696946400744,
+      "kinetic": 0.049069694640074386,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.0954451150103321,
+      "thermal_weight": 0.11776726713617851,
+      "qft": 0.009813938928014878,
+      "kinetic": 0.009813938928014878,
+      "relative_error": 0.0
+    },
+    {
+      "energy": 1.224744871391589,
+      "thermal_weight": 0.013487727010502795,
+      "qft": 0.04046318103150838,
+      "kinetic": 0.040463181031508394,
+      "relative_error": 3.3306690738754696e-16
+    },
+    {
+      "energy": 1.224744871391589,
+      "thermal_weight": 0.013487727010502795,
+      "qft": 0.008092636206301676,
+      "kinetic": 0.008092636206301677,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.224744871391589,
+      "thermal_weight": 0.06861613044777086,
+      "qft": 0.20584839134331256,
+      "kinetic": 0.20584839134331262,
+      "relative_error": 2.220446049250313e-16
+    },
+    {
+      "energy": 1.224744871391589,
+      "thermal_weight": 0.06861613044777086,
+      "qft": 0.04116967826866252,
+      "kinetic": 0.041169678268662524,
+      "relative_error": 2.220446049250313e-16
+    }
+  ],
+  "rung_comparison_rows": [
+    {
+      "channel": "unlike",
+      "charges": [
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "legacy_amplitude": 0.1,
+      "action_contact_amplitude": 0.4,
+      "action_full_amplitude": 0.36444444444444446,
+      "legacy_cross_section": 3.9788735772973844e-05,
+      "action_contact_cross_section": 0.0006366197723675815,
+      "action_full_cross_section": 0.0005284730060987182,
+      "contact_to_legacy_ratio": 16.0,
+      "full_to_legacy_ratio": 13.281975308641973
+    },
+    {
+      "channel": "like",
+      "charges": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "legacy_amplitude": 0.1,
+      "action_contact_amplitude": 0.4,
+      "action_full_amplitude": 0.3191919191919192,
+      "legacy_cross_section": 3.9788735772973844e-05,
+      "action_contact_cross_section": 0.00031830988618379076,
+      "action_full_cross_section": 0.00020269074580890088,
+      "contact_to_legacy_ratio": 8.0,
+      "full_to_legacy_ratio": 5.094174063871032
+    }
+  ],
+  "checks": {
+    "RA_pair_integral": true,
+    "dressed_pair_matches_kinetic_source": true,
+    "production_contact_differs_from_legacy_rung": true,
+    "known_charge_counting_ratios": true,
+    "Phi_exchange_changes_rung": true
+  },
+  "open_blockers": [
+    "charge_resolved_contact_plus_Phi_SK_rung",
+    "self_consistent_width_from_same_rung",
+    "number_changing_response_channels",
+    "continuum_ladder_and_heat_current_match"
+  ],
+  "controlling_blocker": "charge_resolved_contact_plus_Phi_SK_rung_and_self_consistent_width_missing",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_dressed_ra_pair_microscopic_rung_boundary.py": "839b9375e4c2893e399b2b5b730796bf1422e18363a5afd47422faff7c2a6f0a",
+    "docs/core/test/test_topic13_dressed_ra_pair_microscopic_rung_boundary.py": "b3c4f79345d1e09cd01f763c429674bf6f4eeb69e6012a9f25e81200b2e3fd51",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
+    "docs/core/uet_o2_action_derived_transition_kernel.py": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f",
+    "docs/core/uet_o2_contact_sk_transition_vertex_match.py": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json",
+      "sha256": "1c9de62464ed8ce7015e1ee42d107de95d3b5ed1b724aec63e8d78d213a2e640"
+    },
+    {
+      "path": "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json",
+      "sha256": "35c6b34b5427546cde2dbdf84370734a07c973a551209b505ffce58e14f6c79b"
+    }
+  ],
+  "dependency_unlocked": [
+    "dressed_RA_pair_to_kinetic_source_normalization"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Dressed pole-pair normalization and legacy-rung incompatibility only; not a completed microscopic rung, self-consistent width, ladder, physical Kubo/SI coefficient or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The narrow-width dressed scalar RA pole-pair energy integral reproduces the kinetic 1/Gamma source normalization.",
+      "Combining the canonical tree current with the RA pair and thermal derivative exactly reproduces the weighted kinetic current source squared.",
+      "The legacy M=lambda transition/SK rung is not the charge-resolved production-action rung: contact-only cross sections differ by factors 8 and 16, and Phi exchange adds kinematic dependence."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "charge_resolved_contact_plus_Phi_SK_rung",
+      "self_consistent_width_from_same_rung",
+      "number_changing_response_channels",
+      "continuum_ladder_and_heat_current_match"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "dressed_RA_pair_to_kinetic_source_normalization"
+    ],
+    "STATUS": "PASS_RA_PAIR_MATCH_LEGACY_RUNG_BLOCKED",
+    "WHAT_CHANGED": "Closed the dressed RA-pair normalization and blocked reuse of the legacy constant-amplitude rung as a microscopic action match.",
+    "EQUATION_OR_MAPPING": {
+      "RA_pair": "integral dp0/(2pi) G_R G_A=1/(4E^2 Gamma) in the pole approximation",
+      "source_match": "(2q p_i)^2*[1/(4E^2 Gamma)]*[-dn/dE]=(q p_i/E)^2*n(1+n)/(T Gamma)",
+      "legacy_rung": "sigma_legacy=lambda^2/(16*pi*s)",
+      "required_rung": "sigma_channel=|M_contact+M_Phi(s,t,u)|^2/[16*pi*s*S_final] with charge-resolved channels"
+    },
+    "VERIFICATION": {
+      "RA_pair_integral": true,
+      "dressed_pair_matches_kinetic_source": true,
+      "production_contact_differs_from_legacy_rung": true,
+      "known_charge_counting_ratios": true,
+      "Phi_exchange_changes_rung": true
+    },
+    "CONTROLLING_BLOCKER": "charge_resolved_contact_plus_Phi_SK_rung_and_self_consistent_width_missing",
+    "NEXT_ACTION": "Replace the legacy rung by charge-resolved contact plus Phi-exchange SK cuts and derive Gamma from the same kernel before solving the ladder.",
+    "CLAIM_BOUNDARY": "Dressed pole-pair normalization and legacy-rung incompatibility only; not a completed microscopic rung, self-consistent width, ladder, physical Kubo/SI coefficient or Full Topic 13 closure."
+  }
+}

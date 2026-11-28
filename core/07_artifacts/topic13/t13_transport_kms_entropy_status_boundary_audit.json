@@ -1,0 +1,116 @@
+{
+  "schema_version": "t13-transport-kms-entropy-status-boundary-v1",
+  "artifact": "t13_transport_kms_entropy_status_boundary_audit",
+  "generated_at": "2026-08-17",
+  "status": "PASS_SCOPED_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the conservative single-copy action is shown not to identify a unique physical dissipative/Kubo sector",
+      "formal local and open-system SK/KMS/FDT interfaces are named and kept separate from microscopic matching",
+      "the natural-unit covariant heat-flux, entropy-current, and conserved dissipative-balance lane is verified",
+      "the physical Kubo admission boundary requires state, units, correlator locator, source identity, and hash",
+      "the absence of a physical coefficient, finite-temperature normal sector, and full SK/KMS match is machine-readable"
+    ],
+    "equation_or_mapping": {
+      "dissipative_response": "J_diss^A = -L^(AB) X_B",
+      "entropy_production": "nabla_mu J_S^mu = X_A L^(AB) X_B >= 0",
+      "sk_kms": "N(omega) = coth(beta_th omega / 2) * 2 Im D_R(omega)",
+      "heat_flux": "q^mu = kappa_natural * X_T^mu; J_S^mu = s*u^mu + q^mu/T",
+      "physical_admission": "KuboCoefficientRecord -> constitutive coefficient only after matched physical evidence"
+    },
+    "units": {
+      "formal_lane": "natural units and declared local SI interface",
+      "physical_coefficient": "coefficient-specific source-declared units required",
+      "physical_temperature": "K or source-declared equivalent with conversion contract",
+      "physical_heat_flux": "W m^-2 only after dimensional and source matching"
+    },
+    "derivation_class": "structural identifiability no-go plus formal SK/KMS/entropy and natural-unit balance boundary; no physical coefficient derivation",
+    "observable": "transport/KMS/entropy closure state and physical-evidence admission boundary",
+    "data_role": "INTERNAL_STATUS_BOUNDARY_NO_PHYSICAL_TRANSPORT_EVIDENCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_transport_coefficient_identifiability_no_go.json",
+        "sha256": "bc20ce022d9e944f72ad506fddde4f5efb5df9ca3fa42d278a4667e6d3afdca2",
+        "summary": {
+          "role": "transport_identifiability",
+          "status": "PASS_SCOPED_NO_GO_CONSERVATIVE_ACTION_KUBO_IDENTIFIABILITY"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_sk_kms_entropy_contract_audit.json",
+        "sha256": "d9632a317270260f4d18be5d1cb8e7f0889ca9e3e9631ebe47aa32212320f4ba",
+        "summary": {
+          "role": "formal_sk_kms_entropy",
+          "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_open_system_sk_kms_audit.json",
+        "sha256": "4b8aa86cd3f7b7a88c2c1aff356a0af1a531501fcb97f3600167c149cb0eb422",
+        "summary": {
+          "role": "open_system_sk_kms",
+          "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_covariant_entropy_heat_flux_balance_audit.json",
+        "sha256": "9ea6f37eb43e353b8c89e42b1c3dd01c957b2063e41a09230483989accb2b3f4",
+        "summary": {
+          "role": "covariant_entropy_heat_flux",
+          "status": "PASS_ACTION_DERIVED_COVARIANT_ENTROPY_HEAT_FLUX_BALANCE_LANE"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "af78a1eb742e6438d679263771ef85b0f500726f4342a5f0a7ccefbe07a54f63",
+        "summary": {
+          "role": "physical_kubo_gate",
+          "status": "PASS_KUBO_PROVENANCE_GATE_OPEN_PHYSICAL_COEFFICIENT"
+        }
+      },
+      {
+        "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+        "summary": {
+          "role": "transport_verification",
+          "status": null
+        }
+      }
+    ],
+    "verification_status": "PASS_SCOPED_TRANSPORT_KMS_ENTROPY_STATUS_BOUNDARY",
+    "open_blockers": [
+      "physical_Kubo_coefficient_record_missing",
+      "finite_temperature_normal_component_not_derived",
+      "microscopic_interacting_SK_match_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "curved_3p1_transport_solver_missing"
+    ],
+    "dependency_unlocked": "structural/formal transport, KMS, entropy, and heat-flux lane only; no physical transport, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes the transport/KMS/entropy status boundary and scoped formal lanes only. It does not provide a physical Kubo coefficient, complete finite-temperature two-fluid transport, SI Phi calibration, TTG prediction, external validation, or Full Topic 13 closure."
+  },
+  "checks": {
+    "conservative_action_identifiability_no_go_passes": true,
+    "formal_sk_kms_entropy_interface_passes": true,
+    "formal_open_system_sk_kms_lane_passes": true,
+    "natural_covariant_entropy_balance_lane_passes": true,
+    "physical_kubo_admission_boundary_is_explicit": true,
+    "physical_coefficient_is_not_emitted": true,
+    "finite_temperature_normal_sector_is_not_promoted": true,
+    "full_sk_kms_match_is_not_promoted": true,
+    "no_physical_result_flags_are_present": true,
+    "ontology_boundary_is_preserved": true
+  },
+  "physical_closure_status": "BLOCKED",
+  "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+  "next_controller": "Obtain a state-matched physical Kubo record or a microscopic interacting SK/influence-functional match, then complete the finite-temperature normal sector and dimensional Phi-to-thermal map without using synthetic controls or the locked holdout.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  }
+}

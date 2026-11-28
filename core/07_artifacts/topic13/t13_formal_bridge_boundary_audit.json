@@ -1,0 +1,182 @@
+{
+  "schema_version": "t13-formal-bridge-boundary-v1",
+  "artifact": "t13_formal_bridge_boundary_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the non-Landauer beta boundary: beta_th, beta_core, beta_wave, and the candidate beta_T13 are not interchangeable by symbol alias",
+      "the named finite-temperature beta_T13 functional, derivative, and unit contract are formal interfaces rather than source-backed physical coefficients",
+      "the named Phi_E bridge Delta_Tq=(e0/c_v)*Phi_E has explicit units and uncertainty boundaries while base Phi remains unmapped",
+      "the normalized-lane and covariant-field rescaling no-gos prevent a numeric base alpha_Phi_K from being extracted without an additional dimensional anchor",
+      "the normalized collective-response EOS, SK/KMS, entropy-current, and dissipative-balance interfaces are declared with their physical-coefficient boundary",
+      "the current evidence cannot promote a formal interface, synthetic witness, or standard comparator into a physical Topic 13 bridge"
+    ],
+    "equation_or_mapping": {
+      "beta_boundary": "beta_th=1/(k_B*T); beta_T13=T0*(da_Phi/dT)|T0; beta_T13 is not beta_th or beta_core",
+      "named_energy_bridge": "Phi_E=Delta_u/e0; Delta_Tq=(e0/c_v)*Phi_E",
+      "base_observable_boundary": "y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
+      "scale_no_go": "Delta_Phi'=s*Delta_Phi; alpha_Phi_K'=alpha_Phi_K/s",
+      "formal_eos": "f_hat(C,Phi,T)=a_C*C^2/2+b_C*C^4/4+a_Phi(T)*Phi^2/2+b_Phi*Phi^4/4-g*C^2*Phi/2",
+      "formal_sk_kms_entropy": "N(omega)=coth(beta_th*omega/2)*2*Im(D_R); nabla_mu J_S^mu>=0"
+    },
+    "units": {
+      "base_Phi": "dimensionless normalized response; SI scale open",
+      "Phi_E": "dimensionless named energy-response coordinate",
+      "e0": "J m^-3; open for base Phi",
+      "c_v": "J m^-3 K^-1 or source-specific C_src with regime matching open",
+      "Delta_Tq": "K",
+      "alpha_Phi_K": "K per normalized base Phi; not emitted",
+      "beta_T13": "dimensionless local stiffness-temperature slope; source provenance open"
+    },
+    "derivation_class": "cross-artifact formal interface composition plus scoped algebraic identifiability/no-go audit",
+    "observable": "formal response, energy-to-temperature, entropy, and transport interfaces only; no physical Kelvin or heat-flux prediction",
+    "data_role": "INTERNAL_FORMAL_BOUNDARY_AUDIT_NO_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_beta_symbol_separation_noncircularity_audit.json",
+        "sha256": "8696cb7972260fbb6b8350340689857a25ab4a5f1e414f86daba4b5ae573819a",
+        "summary": {
+          "status": "PASS_SCOPED_NO_GO_BETA_SYMBOL_IDENTIFICATION",
+          "major_result_id": "T13_BETA_SYMBOL_SEPARATION_NONCIRCULARITY_NO_GO",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_thermal_response_beta_contract_audit.json",
+        "sha256": "fad34747b2b6fda634aa7b96c5dccf3d2081d46d04b985ebbe53ba8ecf532336",
+        "summary": {
+          "status": "PASS_NAMED_FINITE_TEMPERATURE_BETA_CONTRACT",
+          "major_result_id": "T13_THERMAL_RESPONSE_BETA_CONTRACT",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "87e3532d59fec8cecb0b16c7090a5a5ade9bc30656450b8106dc0f7b7a0656c9",
+        "summary": {
+          "status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
+          "major_result_id": "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_energy_response_bridge_audit.json",
+        "sha256": "3ec9c33acb3802abe4158ce8922aee88a37b4454425bddc0efcb8244e9732151",
+        "summary": {
+          "status": "PASS_NAMED_BRANCH_OPEN_INPUTS",
+          "major_result_id": "T13_PHI_E_TTG_BRIDGE_CONDITIONAL",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_phi_e_reference_normalization_audit.json",
+        "sha256": "bcfa29d9442a6b973e12e02de69e557384076fb01ab3b67e3261a8b362ca0771",
+        "summary": {
+          "status": "PASS_NAMED_PHI_E_REFERENCE_NORMALIZATION",
+          "major_result_id": "T13_PHI_E_REFERENCE_NORMALIZATION",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "cafb22891c93080065c13810f83e4ed1b9f40a49fafddf51f25aff9950a816f0",
+        "summary": {
+          "status": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
+          "major_result_id": "T13_PHI_ENERGY_ANCHOR_IDENTIFIABILITY_NO_GO",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_field_normalization_identifiability_no_go.json",
+        "sha256": "6842d65c2295b2f4871adb3e071214c60ecb59ea4b877841a770cd39ccd0827e",
+        "summary": {
+          "status": "PASS_SCOPED_NO_GO_COVARIANT_FIELD_NORMALIZATION",
+          "major_result_id": "T13_COVARIANT_FIELD_NORMALIZATION_IDENTIFIABILITY_NO_GO",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_collective_response_eos_stability_audit.json",
+        "sha256": "17f6fdc1e190af09dfcfd5a18cbdb924176031ecf3dd244904595788a631f426",
+        "summary": {
+          "status": "PASS_NAMED_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
+          "major_result_id": "T13_COLLECTIVE_RESPONSE_EOS_STABILITY_CONTRACT",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        "sha256": "37026f4226706b5945fdfeb3e9b392d9f4f8cb83545ef52f334b754609c22268",
+        "summary": {
+          "status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+          "major_result_id": "T13_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "e39e85d454bcb8d73fa1138cbac13acdecb456ec677d9b9f01673d17e7585515",
+        "summary": {
+          "status": "PASS_KUBO_PROVENANCE_GATE_OPEN_PHYSICAL_COEFFICIENT",
+          "major_result_id": "T13_PHYSICAL_KUBO_COEFFICIENT_PROVENANCE_GATE",
+          "closure_level": "CLOSED_FOR_LANE"
+        }
+      }
+    ],
+    "verification_status": "PASS_FORMAL_NONCIRCULAR_BRIDGE_BOUNDARY",
+    "open_blockers": [
+      "physical_Phi_field_normalization_and_SI_energy_anchor_missing",
+      "independent_alpha_Phi_K_calibration_missing",
+      "beta_T13_source_backed_temperature_coefficient_provenance_missing",
+      "ding_pbte_numeric_C_src_or_independent_reproduction_package_missing",
+      "physical_Kubo_coefficient_provenance_missing",
+      "finite_temperature_normal_component_not_derived",
+      "full_SK_KMS_microscopic_matching_entropy_production_and_dissipative_balance_missing",
+      "non_circular_UET_bridge_core_derivation_missing"
+    ],
+    "dependency_unlocked": "formal Topic 13 boundary only; no Full Topic 13, Core curved 3+1, Gravity, transport, Galaxy, or external-validation unlock",
+    "claim_boundary": "The formal bridge boundary is closed as a lane-level result. It does not derive a physical UET beta, identify base Phi with Phi_E, emit alpha_Phi_K, close EOS/transport/KMS/entropy physically, or promote Topic 13."
+  },
+  "checks": {
+    "beta_symbol_no_go_is_lane_closed": true,
+    "beta_contract_is_lane_closed": true,
+    "conditional_dimensional_formula_is_lane_closed": true,
+    "named_energy_response_map_is_lane_closed": true,
+    "named_phi_e_reference_is_lane_closed": true,
+    "normalized_phi_energy_no_go_is_lane_closed": true,
+    "covariant_normalization_no_go_is_lane_closed": true,
+    "eos_formula_stability_contract_is_lane_closed": true,
+    "sk_kms_entropy_interface_is_lane_closed": true,
+    "kubo_gate_is_lane_closed_but_physical_value_open": true,
+    "landauer_non_derivation_is_explicit": true,
+    "beta_action_term_is_not_promoted_to_physical_coefficient": true,
+    "base_phi_map_remains_separate_from_phi_e": true,
+    "normalized_scale_no_go_is_explicit": true,
+    "formal_entropy_is_not_physical_transport": true,
+    "no_input_used_target_or_holdout": true,
+    "no_numeric_base_alpha_emitted": true
+  },
+  "physical_bridge_status": {
+    "beta_T13_source_provenance": "OPEN",
+    "base_Phi_SI_anchor": "OPEN",
+    "alpha_Phi_K": "OPEN_CALIBRATION",
+    "physical_kubo_coefficients": "BLOCKED_NOT_PROVIDED",
+    "finite_temperature_normal_component": "BLOCKED",
+    "full_SK_KMS_entropy_dissipation": "INTERFACE_ONLY_NOT_FULL_MATCH"
+  },
+  "numeric_beta_T13_emitted": false,
+  "numeric_e0_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "numeric_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "source_rows_consumed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "physical_Phi_SI_anchor_and_independent_alpha_Phi_K_missing",
+  "next_controller": "Acquire or derive a source-locked dimensional response amplitude for base Phi, or an independent paired Phi/SI observable record; then source-lock beta_T13 and one state-matched physical Kubo coefficient before testing full EOS/transport/KMS/entropy closure.",
+  "claim_boundary": "No physical temperature prediction, base-alpha calibration, fit, source-row calibration, or Xie 2026 holdout result is produced by this audit."
+}

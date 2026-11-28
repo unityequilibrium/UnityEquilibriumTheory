@@ -1,0 +1,581 @@
+{
+  "schema_version": "t13-zenodo-hitrace-isotropic-graphite-cp-source-audit-v1",
+  "artifact": "t13_zenodo_hitrace_isotropic_graphite_cp_source_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "Zenodo record identity, DOI, file locator, and local workbook hashes",
+      "three-laboratory same-block isotropic-graphite Cp source package",
+      "row-level identity for all 27 populated numeric source rows",
+      "LNE and PTB expanded uncertainty transcription and reconstruction",
+      "VINCA missing-uncertainty boundary without imputation",
+      "high-temperature Cp-only comparator boundary from 1000 C to 2800 C"
+    ],
+    "equation_or_mapping": "C_p(T) is retained as mass-specific source data; c_v^V = rho*(C_p - T*alpha_V^2*K_T) is not evaluated",
+    "units": {
+      "temperature": "K and C",
+      "C_p": "J kg^-1 K^-1",
+      "expanded_uncertainty": "J kg^-1 K^-1, coverage factor k=2"
+    },
+    "derivation_class": "source transcription, row identity preservation, and uncertainty reconstruction from reported absolute Cp uncertainty",
+    "observable": "same-block isotropic-graphite mass-specific heat-capacity comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_zenodo_hitrace_isotropic_graphite_cp_source_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_hitrace_isotropic_graphite_cp_source_package.json",
+        "sha256": "5d3cbbbf1eeab24c7f66f1cc01b16e80005aa80dfc9918edf62d82e6473dc8e3"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_6091274_isotropic_graphite_specific_heat.xlsx",
+        "sha256": "c38e74d22c8b409b347b5d65384f0c172d4a43162ffffe7c2eba231f48d57020",
+        "md5": "6b9e617fb0266da9a5724d04eccb18b8"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_ZENODO_HITRACE_ISOTROPIC_GRAPHITE_CP_COMPARATOR",
+    "open_blockers": [
+      "c_v_source_uncertainty_not_closed",
+      "density_uncertainty_not_source_locked",
+      "same_grade_alpha_V_and_K_T_missing",
+      "material_regime_mapping_to_Ding_TTG_not_closed",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "This lane supplies a source-locked high-temperature Cp comparator only. It does not unlock c_v, Ding C_src, alpha_Phi_K, EOS, transport, Core, Gravity, or Galaxy dependencies.",
+    "claim_boundary": "This is not c_v, not volumetric, not a Ding/HOPG/TTG source, not an alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "zenodo_6091274_hitrace_isotropic_graphite_specific_heat",
+    "title": "Specific heat of isotropic graphite from 1000 C to 2800 C",
+    "publisher": "Zenodo",
+    "publication_year": 2022,
+    "doi": "10.5281/zenodo.6091274",
+    "official_url": "https://zenodo.org/records/6091274",
+    "download_url": "https://zenodo.org/records/6091274/files/Specific%20heat%20-%20Isotropic%20graphite%20-%20from%201000%20%C2%B0C%20to%202800%20%C2%B0C.xlsx?download=1",
+    "source_locators": [
+      "Zenodo record metadata: title, authors, publication date, DOI, and file identity",
+      "Information!A1:C6: inter-laboratory description, material, and measurement methods",
+      "LNE -C!A5:E15: drop-calorimetry Cp table and expanded uncertainty",
+      "PTB-ADEM-C!A5:E11: flash-calorimetry Cp table and expanded uncertainty",
+      "VINCA-C!A5:E16: pulse-calorimetry Cp table without reported row uncertainty"
+    ],
+    "retrieved_on": "2026-08-20",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_6091274_isotropic_graphite_specific_heat.xlsx",
+    "local_raw_size_bytes": 27320,
+    "local_raw_md5": "6b9e617fb0266da9a5724d04eccb18b8",
+    "local_raw_sha256": "c38e74d22c8b409b347b5d65384f0c172d4a43162ffffe7c2eba231f48d57020",
+    "material": "Isotropic graphite specimens machined from the same block for the Hi-Trace inter-laboratory test",
+    "temperature_scope": "1000 C to 2800 C, source tables report temperature in K and C",
+    "license_or_terms": "Open Zenodo record download; reuse remains subject to the source record and referenced publication terms",
+    "local_hash_observed": "c38e74d22c8b409b347b5d65384f0c172d4a43162ffffe7c2eba231f48d57020",
+    "local_md5_observed": "6b9e617fb0266da9a5724d04eccb18b8",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_hitrace_isotropic_graphite_cp_source_package.json",
+    "package_sha256": "5d3cbbbf1eeab24c7f66f1cc01b16e80005aa80dfc9918edf62d82e6473dc8e3"
+  },
+  "source_rows": [
+    {
+      "source_row_id": "zenodo_lne_r06",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 6,
+      "cell_range": "A6:E6",
+      "temperature_K": 1273.15,
+      "temperature_C": 1000.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1775.9,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 62.1565,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r07",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 7,
+      "cell_range": "A7:E7",
+      "temperature_K": 1473.15,
+      "temperature_C": 1200.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1836.6,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 64.281,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r08",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 8,
+      "cell_range": "A8:E8",
+      "temperature_K": 1673.15,
+      "temperature_C": 1400.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1897.2,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 66.402,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r09",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 9,
+      "cell_range": "A9:E9",
+      "temperature_K": 1873.15,
+      "temperature_C": 1600.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1957.7,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 68.5195,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r10",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 10,
+      "cell_range": "A10:E10",
+      "temperature_K": 2073.15,
+      "temperature_C": 1800.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2018.1,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 70.6335,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r11",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 11,
+      "cell_range": "A11:E11",
+      "temperature_K": 2273.15,
+      "temperature_C": 2000.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2078.5,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 72.7475,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r12",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 12,
+      "cell_range": "A12:E12",
+      "temperature_K": 2473.15,
+      "temperature_C": 2200.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2138.9,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 74.8615,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r13",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 13,
+      "cell_range": "A13:E13",
+      "temperature_K": 2673.15,
+      "temperature_C": 2400.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2199.2,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 76.972,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r14",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 14,
+      "cell_range": "A14:E14",
+      "temperature_K": 2873.15,
+      "temperature_C": 2600.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2259.5,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 79.0825,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_lne_r15",
+      "laboratory": "LNE",
+      "sheet": "LNE -C",
+      "excel_row": 15,
+      "cell_range": "A15:E15",
+      "temperature_K": 3073.15,
+      "temperature_C": 2800.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2319.9,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 81.1965,
+        "reported_relative_percent": 3.5,
+        "derived_relative_fraction": 0.035
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r06",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 6,
+      "cell_range": "A6:E6",
+      "temperature_K": 1496.18389391305,
+      "temperature_C": 1223.0338939130502,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1855.49515718467,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 166.3423276747368,
+        "reported_relative_fraction": 0.08964848387269674,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r07",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 7,
+      "cell_range": "A7:E7",
+      "temperature_K": 1696.92339317463,
+      "temperature_C": 1423.7733931746302,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1944.32625668135,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 188.1104602624896,
+        "reported_relative_fraction": 0.09674840300905244,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r08",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 8,
+      "cell_range": "A8:E8",
+      "temperature_K": 1798.7903520925,
+      "temperature_C": 1525.6403520925,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1959.05031884601,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 191.4560423331756,
+        "reported_relative_fraction": 0.09772900700475824,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r09",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 9,
+      "cell_range": "A9:E9",
+      "temperature_K": 1900.06689633849,
+      "temperature_C": 1626.91689633849,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1982.76542085271,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 225.841935097558,
+        "reported_relative_fraction": 0.11390249836031144,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r10",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 10,
+      "cell_range": "A10:E10",
+      "temperature_K": 2078.88881439995,
+      "temperature_C": 1805.7388143999501,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1998.60828771665,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 256.127872618796,
+        "reported_relative_fraction": 0.128153112439764,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_ptb_r11",
+      "laboratory": "PTB-ADEM",
+      "sheet": "PTB-ADEM-C",
+      "excel_row": 11,
+      "cell_range": "A11:E11",
+      "temperature_K": 2311.11318904153,
+      "temperature_C": 2037.9631890415299,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2104.0493631301,
+      "uncertainty": {
+        "type": "expanded",
+        "coverage_factor": 2,
+        "value_J_per_kg_K": 335.689995685058,
+        "reported_relative_fraction": 0.1595447338676822,
+        "raw_percentage_column_interpretation": "raw column equals u_abs/Cp; absolute uncertainty is the authoritative value"
+      },
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r06",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 6,
+      "cell_range": "A6:E6",
+      "temperature_K": 1673.15,
+      "temperature_C": 1400.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1851.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r07",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 7,
+      "cell_range": "A7:E7",
+      "temperature_K": 1773.15,
+      "temperature_C": 1500.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1881.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r08",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 8,
+      "cell_range": "A8:E8",
+      "temperature_K": 1873.15,
+      "temperature_C": 1600.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1915.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r09",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 9,
+      "cell_range": "A9:E9",
+      "temperature_K": 1973.15,
+      "temperature_C": 1700.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1954.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r10",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 10,
+      "cell_range": "A10:E10",
+      "temperature_K": 2073.15,
+      "temperature_C": 1800.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 1996.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r11",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 11,
+      "cell_range": "A11:E11",
+      "temperature_K": 2173.15,
+      "temperature_C": 1900.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2042.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r12",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 12,
+      "cell_range": "A12:E12",
+      "temperature_K": 2273.15,
+      "temperature_C": 2000.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2089.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r13",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 13,
+      "cell_range": "A13:E13",
+      "temperature_K": 2373.15,
+      "temperature_C": 2100.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2139.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r14",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 14,
+      "cell_range": "A14:E14",
+      "temperature_K": 2473.15,
+      "temperature_C": 2200.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2194.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r15",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 15,
+      "cell_range": "A15:E15",
+      "temperature_K": 2573.15,
+      "temperature_C": 2300.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2262.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    },
+    {
+      "source_row_id": "zenodo_vinca_r16",
+      "laboratory": "VINCA",
+      "sheet": "VINCA-C",
+      "excel_row": 16,
+      "cell_range": "A16:E16",
+      "temperature_K": 2673.15,
+      "temperature_C": 2400.0,
+      "quantity": "specific_heat_at_constant_pressure_Cp",
+      "value_J_per_kg_K": 2356.0,
+      "uncertainty": null,
+      "uncertainty_status": "NOT_REPORTED",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION"
+    }
+  ],
+  "derived_comparator": {
+    "same_block_material_claim": true,
+    "laboratory_count": 3,
+    "row_count": 27,
+    "uncertainty_bearing_row_count": 16,
+    "uncertainty_missing_row_count": 11,
+    "temperature_min_K": 1273.15,
+    "temperature_max_K": 3073.15,
+    "quantity_is_Cp_not_Cv": true,
+    "direct_volumetric_measurement": false,
+    "density_rows_present": false,
+    "alpha_V_and_K_T_rows_present": false,
+    "c_v_emitted": false,
+    "material_match_to_Ding_TTG": false,
+    "calibration_record_emitted": false
+  },
+  "checks": {
+    "raw_workbook_present": true,
+    "raw_workbook_size_matches": true,
+    "raw_workbook_md5_matches": true,
+    "raw_workbook_sha256_matches": true,
+    "source_identity_and_locators_present": true,
+    "same_block_interlaboratory_scope_present": true,
+    "all_numeric_rows_have_identity_and_units": true,
+    "laboratory_row_counts_match_source_tables": true,
+    "lne_expanded_uncertainty_reconstructed": true,
+    "ptb_expanded_uncertainty_reconstructed": true,
+    "vinca_uncertainty_not_imputed": true,
+    "quantity_boundary_is_cp_not_cv": true,
+    "no_unlicensed_density_or_elastic_conversion": true,
+    "ding_material_match_not_claimed": true,
+    "not_calibration_or_fit": true,
+    "holdout_not_accessed": true,
+    "no_target_fit_or_alpha_fit": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "c_v_source_uncertainty_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Acquire source-grade same-state density, alpha_V, and K_T or direct volumetric c_v for the relevant material regime; keep this Cp comparator out of calibration and holdout paths.",
+  "claim_boundary": "Source-locked high-temperature same-block isotropic-graphite Cp comparator only; it does not close c_v, Ding C_src, base-Phi SI mapping, alpha_Phi_K, or Full Topic 13."
+}

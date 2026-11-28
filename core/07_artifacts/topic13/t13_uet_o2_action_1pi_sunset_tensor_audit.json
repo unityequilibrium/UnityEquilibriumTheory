@@ -1,0 +1,243 @@
+{
+  "schema_version": "t13-uet-o2-action-1pi-sunset-tensor-v1",
+  "artifact": "t13_uet_o2_action_1pi_sunset_tensor_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_O2_1PI_SUNSET_TENSOR_INTERFACE_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ACTION_1PI_SUNSET_TENSOR_INTERFACE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "action-derived O(N) four-point tensor and O(2) specialization",
+      "three-internal-line sunset vertex contraction",
+      "sunset symmetry factor 1/6 and diagonal O(2) 1PI tensor prefactor 8*lambda^2",
+      "two-point local counterterm basis delta_m2 and delta_Z, with delta_lambda kept as an action subdivergence requirement",
+      "invariant subtraction variable match s=p^2=omega^2 for the declared rest-energy lane"
+    ],
+    "equation_or_mapping": {
+      "interaction_potential": "W_int=lambda*(chi_a chi_a)^2/4",
+      "action_four_point_vertex": "V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "sunset_vertex_contraction": "S_ab=sum_{i,j,k} V_aijk*V_bijk=12*(N+2)*lambda^2*delta_ab",
+      "sunset_1pi_prefactor": "Sigma_sunset,ab^(2)(p)=S_ab/6*I_3(p)=2*(N+2)*lambda^2*delta_ab*I_3(p)",
+      "sunset_loop_integral": "I_3(p)=integral d^4k/(2*pi)^4 d^4q/(2*pi)^4 D(k)D(q)D(p-k-q)",
+      "invariant_subtraction": "Sigma_R,ab(s)=Sigma_ab(s)-Sigma_ab(s_*)-(s-s_*)*dSigma_ab/ds|s_*",
+      "rest_energy_match": "p=(omega,0), s=p^2=omega^2",
+      "counterterm_basis": "two-point sunset: delta_m2 and delta_Z; full action subdivergence also requires delta_lambda"
+    },
+    "units": {
+      "unit_lane": "natural 3+1",
+      "temperature_mass_momentum_frequency": "energy",
+      "invariant_s": "energy squared",
+      "quartic_coupling": "dimensionless",
+      "vertex_tensor": "dimensionless",
+      "sunset_loop_integral_I3": "energy squared",
+      "self_energy_and_delta_m2": "energy squared",
+      "delta_Z_and_delta_lambda": "dimensionless",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived O(N) species contraction, explicit sunset symmetry factor, local counterterm power-counting interface, and invariant subtraction match",
+    "observable": "vertex contraction matrix, diagonal 1PI sunset prefactor, species symmetry, counterterm basis, and rest-energy subtraction-variable match",
+    "data_role": "ACTION_DERIVED_INTERNAL_1PI_TENSOR_INTERFACE_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+        "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+      },
+      {
+        "path": "docs/core/uet_o2_action_sunset_1pi_spectral.py",
+        "sha256": "b0265da3808352deb526bbbe911c4f87cbec3d9d7f40a4fc4d9bdf2c6e627e2b"
+      },
+      {
+        "path": "docs/core/uet_o2_action_sunset_zero_eta.py",
+        "sha256": "89e1d55e1f3d05b7129fc7b3f0ff35c7a8f83e28cb954874727309e1e0371e44"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_O2_1PI_SUNSET_TENSOR_INTERFACE_LANE",
+    "open_blockers": [
+      "full_off_shell_1PI_loop_integral_and_retarded_continuation_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "microscopic_SK_KMS_match_missing",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "action-derived 1PI sunset tensor and counterterm interface only; no full loop, physical renormalization, SK/KMS, transport, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only the action-derived O(2) sunset 1PI tensor and local counterterm interface. It does not evaluate the full off-shell loop, select a unique physical renormalization, match microscopic SK/KMS, emit transport or entropy production, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_1PI_SUNSET_TENSOR_INTERFACE_LANE",
+    "equations": {
+      "interaction_potential": "W_int=lambda*(chi_a chi_a)^2/4",
+      "action_four_point_vertex": "V_abcd=2*lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "sunset_vertex_contraction": "S_ab=sum_{i,j,k} V_aijk*V_bijk=12*(N+2)*lambda^2*delta_ab",
+      "sunset_1pi_prefactor": "Sigma_sunset,ab^(2)(p)=S_ab/6*I_3(p)=2*(N+2)*lambda^2*delta_ab*I_3(p)",
+      "sunset_loop_integral": "I_3(p)=integral d^4k/(2*pi)^4 d^4q/(2*pi)^4 D(k)D(q)D(p-k-q)",
+      "invariant_subtraction": "Sigma_R,ab(s)=Sigma_ab(s)-Sigma_ab(s_*)-(s-s_*)*dSigma_ab/ds|s_*",
+      "rest_energy_match": "p=(omega,0), s=p^2=omega^2",
+      "counterterm_basis": "two-point sunset: delta_m2 and delta_Z; full action subdivergence also requires delta_lambda"
+    },
+    "unit_contract": {
+      "unit_lane": "natural 3+1",
+      "temperature_mass_momentum_frequency": "energy",
+      "invariant_s": "energy squared",
+      "quartic_coupling": "dimensionless",
+      "vertex_tensor": "dimensionless",
+      "sunset_loop_integral_I3": "energy squared",
+      "self_energy_and_delta_m2": "energy squared",
+      "delta_Z_and_delta_lambda": "dimensionless",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived O(N) species contraction, explicit sunset symmetry factor, local counterterm power-counting interface, and invariant subtraction match",
+    "observable": "vertex contraction matrix, diagonal 1PI sunset prefactor, species symmetry, counterterm basis, and rest-energy subtraction-variable match",
+    "data_role": "ACTION_DERIVED_INTERNAL_1PI_TENSOR_INTERFACE_NO_HOLDOUT",
+    "included": {
+      "action_vertex_tensor": true,
+      "sunset_internal_species_contraction": true,
+      "sunset_symmetry_factor": true,
+      "two_point_counterterm_basis": true,
+      "invariant_subtraction_variable_match": true
+    },
+    "excluded": {
+      "full_off_shell_loop_integral": true,
+      "physical_retarded_1PI_self_energy": true,
+      "unique_physical_renormalization": true,
+      "microscopic_SK_KMS_match": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current": true,
+      "heat_flux_dissipative_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the action-derived O(2) sunset 1PI tensor and local counterterm interface. It does not evaluate the full off-shell loop, select a unique physical renormalization, match microscopic SK/KMS, emit transport or entropy production, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "species_count": 2,
+      "external_species": 0,
+      "quartic_coupling": 0.8,
+      "vertex_tensor_norm": 7.838367176906171,
+      "vertex_contraction_matrix": [
+        [
+          30.72000000000001,
+          0.0
+        ],
+        [
+          0.0,
+          30.72000000000001
+        ]
+      ],
+      "vertex_contraction_diagonal": 30.72000000000001,
+      "vertex_contraction_off_diagonal_maximum": 0.0,
+      "sunset_symmetry_factor": 0.16666666666666666,
+      "sunset_tensor_prefactor": 5.120000000000001,
+      "expected_sunset_tensor_prefactor": 5.120000000000001,
+      "tensor_contraction_residual": 0.0,
+      "reference_invariant_s": 0.5,
+      "probe_invariants_s": [
+        0.36,
+        0.64,
+        0.81,
+        1.21
+      ],
+      "invariant_subtraction_conditions": [
+        "Sigma_R,ab(s_*)=0",
+        "dSigma_R,ab/ds|s_* = 0"
+      ],
+      "two_point_counterterm_basis": [
+        "delta_m2",
+        "delta_Z"
+      ],
+      "action_subdivergence_counterterm_basis": [
+        "delta_m2",
+        "delta_Z",
+        "delta_lambda"
+      ],
+      "action_scattering_matrix_element_squared": 17.920000000000005,
+      "sunset_to_scattering_prefactor_ratio": 0.2857142857142857,
+      "action_scattering_comparison_available": true,
+      "action_vertex_tensor_completed": true,
+      "one_pi_sunset_tensor_completed": true,
+      "local_counterterm_basis_completed": true,
+      "invariant_subtraction_interface_matched": true,
+      "full_1pi_retarded_self_energy_completed": false,
+      "loop_integral_evaluated": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "microscopic_sk_kms_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_O2_1PI_SUNSET_TENSOR_INTERFACE_NO_HOLDOUT"
+    }
+  },
+  "checks": {
+    "action_vertex_tensor_is_completed": true,
+    "sunset_vertex_contraction_is_diagonal": true,
+    "o2_raw_vertex_contraction_matches": true,
+    "sunset_symmetry_factor_is_one_sixth": true,
+    "o2_1pi_sunset_prefactor_matches": true,
+    "tensor_contraction_residual_is_small": true,
+    "action_scattering_comparator_is_independent": true,
+    "sunset_to_scattering_ratio_is_reported_not_identified": true,
+    "local_two_point_counterterm_basis_is_present": true,
+    "action_subdivergence_basis_is_separate": true,
+    "invariant_subtraction_interface_is_matched": true,
+    "natural_unit_contract_is_present": true,
+    "state_is_finite": true,
+    "full_loop_integral_remains_open": true,
+    "unique_renormalization_remains_open": true,
+    "microscopic_sk_kms_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "full_off_shell_boundary_is_explicit": true,
+    "alpha_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "action_vertex_tensor_completed": true,
+  "one_pi_sunset_tensor_completed": true,
+  "local_counterterm_basis_completed": true,
+  "invariant_subtraction_interface_matched": true,
+  "full_1pi_retarded_self_energy_completed": false,
+  "loop_integral_evaluated": false,
+  "unique_physical_renormalization_scheme_match_completed": false,
+  "microscopic_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "full_off_shell_1PI_loop_integral_and_unique_physical_renormalization_missing",
+  "next_controller": "evaluate the action-derived off-shell sunset loop with a declared regulator, prove its subtraction/continuation against the zero-eta interface, then match the finite-temperature result to SK/KMS",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_ACTION_1PI_SUNSET_TENSOR_INTERFACE_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_O2_1PI_SUNSET_TENSOR_INTERFACE_NO_HOLDOUT",
+  "open_blockers": [
+    "full_off_shell_1PI_loop_integral_and_retarded_continuation_missing",
+    "unique_physical_renormalization_scheme_match_missing",
+    "microscopic_SK_KMS_match_missing",
+    "physical_Kubo_coefficient_missing",
+    "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes only the action-derived O(2) sunset 1PI tensor and local counterterm interface. It does not evaluate the full off-shell loop, select a unique physical renormalization, match microscopic SK/KMS, emit transport or entropy production, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+}

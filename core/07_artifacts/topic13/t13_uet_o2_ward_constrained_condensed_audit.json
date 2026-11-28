@@ -1,0 +1,298 @@
+{
+  "schema_version": "t13-uet-o2-ward-constrained-condensed-v1",
+  "artifact": "t13_uet_o2_ward_constrained_condensed_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_WARD_CONSTRAINED_CONDENSED_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the finite local counterterm coefficient is derived algebraically from the Goldstone/Ward condition at the tree condensate boundary",
+      "the Ward point is stationary under the constrained completion to the declared numerical tolerance",
+      "the Ward point has a zero low mode, positive high mode, and positive one-sided stationarity direction",
+      "reference anchors, quadrature convergence, cutoff convergence, ontology, and no-fit policy pass"
+    ],
+    "equation_or_mapping": {
+      "tree_ward_boundary": "x_W=q/lambda, q=Z*mu^2-m_eff(Phi)^2",
+      "off_shell_modes": "(y-k^2-r_sigma/Z)(y-k^2-r_pi/Z)-4*mu^2*y=0",
+      "goldstone_condition": "omega_G^2(k=0;x_W)=0",
+      "stationarity_derivative": "D_a(x)=D_0(x)+3*a*(x-x_*)^2/Lambda_*^2",
+      "ward_constrained_coefficient": "a_W=-D_0(x_W)*Lambda_*^2/[3*(x_W-x_*)^2]",
+      "constrained_stationarity": "D_{a_W}(x_W)=0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_mode_squared": "natural energy squared",
+      "temperature_and_chemical_potential": "natural energy",
+      "finite_coefficient": "dimensionless local counterterm parameter",
+      "Phi": "fixed effective response input; no SI map"
+    },
+    "derivation_class": "action-derived O(2) determinant plus algebraically Ward-constrained finite local counterterm; not microscopic 2PI or 1/N matching",
+    "observable": "formal Ward-constrained condensed stationarity witness in natural units",
+    "data_role": "INTERNAL_WARD_CONSTRAINED_FORMAL_WITNESS_NO_SOURCE_ROWS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_ward_constrained_condensed.py",
+        "sha256": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+        "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+      }
+    ],
+    "verification_status": "PASS_FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY",
+    "open_blockers": [
+      "physical_finite_temperature_renormalization_scheme_missing",
+      "ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing",
+      "condensate_and_finite_temperature_normal_two_fluid_eos_completion_missing",
+      "retarded_physical_Kubo_match_missing",
+      "microscopic_SK_KMS_matching_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "formal Ward-constrained condensed stationarity lane only; no physical renormalization, full condensed EOS, two-fluid, transport, Core, Gravity, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only a formal Ward-constrained stationarity lane. The coefficient is derived from symmetry compatibility, not fitted, but it is not a microscopic finite-temperature renormalization, a complete condensed EOS, physical transport, SI calibration, TTG validation, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "FORMAL_WARD_CONSTRAINED_CONDENSED_STATIONARITY",
+    "equations": {
+      "tree_ward_boundary": "x_W=q/lambda, q=Z*mu^2-m_eff(Phi)^2",
+      "off_shell_modes": "(y-k^2-r_sigma/Z)(y-k^2-r_pi/Z)-4*mu^2*y=0",
+      "goldstone_condition": "omega_G^2(k=0;x_W)=0",
+      "stationarity_derivative": "D_a(x)=D_0(x)+3*a*(x-x_*)^2/Lambda_*^2",
+      "ward_constrained_coefficient": "a_W=-D_0(x_W)*Lambda_*^2/[3*(x_W-x_*)^2]",
+      "constrained_stationarity": "D_{a_W}(x_W)=0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_mode_squared": "natural energy squared",
+      "temperature_and_chemical_potential": "natural energy",
+      "finite_coefficient": "dimensionless local counterterm parameter",
+      "Phi": "fixed effective response input; no SI map"
+    },
+    "derivation_class": "action-derived O(2) determinant plus algebraically Ward-constrained finite local counterterm; not microscopic 2PI or 1/N matching",
+    "scope": {
+      "closed": "formal compatibility of the tree Goldstone boundary and the declared stationarity derivative under one symmetry-constrained local completion",
+      "physical_renormalization": "NOT_INCLUDED",
+      "condensed_eos": "NOT_INCLUDED",
+      "normal_two_fluid": "NOT_INCLUDED",
+      "physical_kubo": "NOT_INCLUDED",
+      "sk_kms": "NOT_MATCHED_MICROSCOPICALLY"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace only; not an independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "data_role": "INTERNAL_WARD_CONSTRAINED_FORMAL_WITNESS_NO_SOURCE_ROWS",
+    "claim_boundary": "This closes only a formal Ward-constrained stationarity lane. The coefficient is derived from symmetry compatibility, not fitted, but it is not a microscopic finite-temperature renormalization, a complete condensed EOS, physical transport, SI calibration, TTG validation, or Full Topic 13 closure."
+  },
+  "reference": {
+    "quadrature_order": 256,
+    "momentum_cutoff": 176.24840424809526,
+    "x_boundary": 1.9175,
+    "reference_x": 3.835,
+    "base_boundary_derivative": 0.011741494171722888,
+    "ward_counterterm_coefficient": -0.004082223093167454,
+    "ward_boundary_derivative": -1.734723475976807e-18,
+    "ward_boundary_low_mode_sq": 0.0,
+    "ward_boundary_high_mode_sq": 9.316666666666668,
+    "near_boundary_x": 1.936675,
+    "near_boundary_derivative": 0.007018833356261021,
+    "reference_derivative": 0.7672267350012217,
+    "reference_counterterm_anchors": [
+      -0.0,
+      -0.0,
+      -0.0
+    ]
+  },
+  "reference_parameters": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "reference_factor": 2.0,
+    "one_sided_fraction": 0.01,
+    "derivative_tolerance": 1e-10,
+    "goldstone_tolerance": 1e-10
+  },
+  "quadrature_records": [
+    {
+      "quadrature_order": 96,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011741494156273532,
+      "ward_counterterm_coefficient": -0.0040822230877961005,
+      "ward_boundary_derivative": -1.734723475976807e-18,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.0070204409358901355,
+      "reference_derivative": 0.7672267350034327,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    {
+      "quadrature_order": 192,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011741494171731297,
+      "ward_counterterm_coefficient": -0.004082223093170378,
+      "ward_boundary_derivative": -3.469446951953614e-18,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.0070188361866336275,
+      "reference_derivative": 0.7672267350012183,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011741494171722888,
+      "ward_counterterm_coefficient": -0.004082223093167454,
+      "ward_boundary_derivative": -1.734723475976807e-18,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.007018833356261021,
+      "reference_derivative": 0.7672267350012217,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ]
+    }
+  ],
+  "quadrature_convergence_relative_errors": {
+    "ward_counterterm_coefficient": 7.162461119904723e-13,
+    "ward_boundary_low_mode_sq": 0.0,
+    "ward_boundary_high_mode_sq": 0.0,
+    "near_boundary_derivative": 4.0325399717637895e-07
+  },
+  "cutoff_records": [
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 97.9157801378307,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011736276133816845,
+      "ward_counterterm_coefficient": -0.004080408912235323,
+      "ward_boundary_derivative": -1.734723475976807e-18,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.007018833381675239,
+      "reference_derivative": 0.7672267350012181,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "cutoff_factor": 50.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 137.082092192963,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011739972278803384,
+      "ward_counterterm_coefficient": -0.004081693969162411,
+      "ward_boundary_derivative": 0.0,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.007018833375230732,
+      "reference_derivative": 0.7672267350012153,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "cutoff_factor": 70.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "reference_x": 3.835,
+      "base_boundary_derivative": 0.011741494171722888,
+      "ward_counterterm_coefficient": -0.004082223093167454,
+      "ward_boundary_derivative": -1.734723475976807e-18,
+      "ward_boundary_low_mode_sq": 0.0,
+      "ward_boundary_high_mode_sq": 9.316666666666668,
+      "near_boundary_x": 1.936675,
+      "near_boundary_derivative": 0.007018833356261021,
+      "reference_derivative": 0.7672267350012217,
+      "reference_counterterm_anchors": [
+        -0.0,
+        -0.0,
+        -0.0
+      ],
+      "cutoff_factor": 90.0
+    }
+  ],
+  "cutoff_convergence_relative_errors": {
+    "ward_counterterm_coefficient": 0.00012961663117549982,
+    "ward_boundary_low_mode_sq": 0.0,
+    "ward_boundary_high_mode_sq": 0.0,
+    "near_boundary_derivative": 2.7026872210303642e-09
+  },
+  "checks": {
+    "reference_values_are_finite": true,
+    "condensed_control_is_positive": true,
+    "ward_coefficient_is_algebraically_derived": true,
+    "base_scheme_has_nonzero_ward_point_derivative": true,
+    "ward_boundary_stationarity_is_closed": true,
+    "ward_boundary_has_zero_goldstone_mode": true,
+    "ward_boundary_high_mode_is_positive": true,
+    "one_sided_stable_direction_is_positive": true,
+    "reference_counterterm_anchors_are_zero": true,
+    "reference_derivative_is_finite": true,
+    "quadrature_converges": true,
+    "cutoff_converges": true,
+    "ward_constraint_is_not_fit": true,
+    "no_external_source_rows": true,
+    "no_holdout_or_fit": true,
+    "physical_renormalization_is_excluded": true,
+    "physical_kubo_is_excluded": true,
+    "normal_two_fluid_is_excluded": true,
+    "external_calibration_is_excluded": true,
+    "natural_units_are_declared": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_is_separate": true
+  },
+  "failed_checks": [],
+  "source_hashes": {
+    "docs/core/uet_o2_ward_constrained_condensed.py": "361da29567144649f248d85ea961d035bd427d8645d0af991d464f97fe50afa3",
+    "docs/core/uet_o2_finite_temperature_stationarity_scheme.py": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+  },
+  "controlling_blocker": "ward_preserving_condensed_2PI_or_1N_microscopic_completion_missing",
+  "next_controller": "Replace the formal Ward-constrained local completion with a source-backed or microscopically renormalized symmetry-improved 2PI/controlled 1/N condensed branch, then close the physical EOS and retarded Kubo/SK-KMS interfaces.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  },
+  "parameter_policy": {
+    "ward_counterterm_coefficient": "algebraically derived from the Ward condition; not fitted to a target curve",
+    "reference_factor": "declared internal reference construction"
+  }
+}

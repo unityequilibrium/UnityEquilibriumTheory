@@ -1,0 +1,150 @@
+{
+  "schema_version": "t13-tree-level-charged-ward-vertex-audit-v1",
+  "artifact": "t13_uet_o2_tree_level_charged_ward_vertex_audit",
+  "generated_at": "2026-08-16",
+  "status": "PASS_ACTION_DERIVED_TREE_LEVEL_CHARGED_WARD_VERTEX_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_TREE_LEVEL_CHARGED_WARD_VERTEX_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "tree-level finite-density charged Euclidean propagator/current-vertex pair",
+      "finite-density Euclidean Ward identity on the declared normal branch",
+      "zero-transfer vertex limit and charge-conjugation boundary"
+    ],
+    "what_remains_open": [
+      "loop_renormalized_off_shell_self_energy_and_current_vertex_missing",
+      "continuum_limit_missing",
+      "physical_kubo_coefficient_missing",
+      "finite_temperature_two_fluid_completion_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "equation_or_mapping": {
+      "charged_euclidean_inverse": "D_E^-1(P)=(omega_n+i*mu_eff)^2+|p|^2+m_eff(Phi)^2",
+      "bare_euclidean_vertex": "Gamma_E^0=2*(omega_n+i*mu_eff)+nu_m; Gamma_E^i=2*p_i+q_i",
+      "ward_identity": "nu_m*Gamma_E^0+q_i*Gamma_E^i=D_E^-1(P+Q)-D_E^-1(P)"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum": "energy",
+      "D_E_inverse": "energy^2",
+      "Q_and_Gamma_E": "energy",
+      "Q_dot_Gamma": "energy^2"
+    },
+    "derivation_class": "tree-level action-derived finite-density charged Euclidean propagator and bare current vertex",
+    "observable": "tree-level charged Euclidean Ward-identity residual",
+    "data_role": "ACTION_DERIVED_TREE_LEVEL_WARD_IDENTITY_NO_EXTERNAL_DATA",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_tree_level_charged_ward_vertex.py",
+        "sha256": "ae592064486a75214c6fb4c1bd90627ef8951990c39eff2ad06e08406bff50b3"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+        "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_TREE_LEVEL_CHARGED_WARD_VERTEX_LANE",
+    "open_blockers": [
+      "loop_renormalized_off_shell_self_energy_and_current_vertex_missing",
+      "continuum_limit_missing",
+      "physical_kubo_coefficient_missing",
+      "finite_temperature_two_fluid_completion_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "tree-level charged Ward interface only; no loop, continuum, physical Kubo, SI, TTG, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only the tree-level charged Euclidean Ward identity in the declared natural-unit normal branch. It is not a loop-renormalized off-shell vertex, physical Kubo coefficient, SI map, TTG prediction, or Full Topic 13 closure."
+  },
+  "checks": {
+    "state_is_finite": true,
+    "normal_branch_is_explicit": true,
+    "ward_identity_residual": true,
+    "zero_transfer_vertex_limit": true,
+    "charge_conjugation_boundary": true,
+    "tree_level_vertex_is_closed": true,
+    "loop_renormalized_vertex_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_TREE_LEVEL_CHARGED_WARD_VERTEX_LANE",
+    "equations": {
+      "charged_euclidean_inverse": "D_E^-1(P)=(omega_n+i*mu_eff)^2+|p|^2+m_eff(Phi)^2",
+      "bare_euclidean_vertex": "Gamma_E^0=2*(omega_n+i*mu_eff)+nu_m; Gamma_E^i=2*p_i+q_i",
+      "ward_identity": "nu_m*Gamma_E^0+q_i*Gamma_E^i=D_E^-1(P+Q)-D_E^-1(P)"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum": "energy",
+      "D_E_inverse": "energy^2",
+      "Q_and_Gamma_E": "energy",
+      "Q_dot_Gamma": "energy^2"
+    },
+    "ontology": {
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived physical/history trace; no independent state or backreaction",
+      "R_obs": "separate observer record; not part of the vertex dynamics"
+    },
+    "derivation_class": "tree-level action-derived finite-density charged Euclidean propagator and bare current vertex",
+    "observable": "tree-level charged Euclidean Ward-identity residual",
+    "data_role": "ACTION_DERIVED_TREE_LEVEL_WARD_IDENTITY_NO_EXTERNAL_DATA",
+    "included": {
+      "normal_branch_propagator": true,
+      "bare_charged_current_vertex": true,
+      "finite_density_ward_identity": true,
+      "charge_conjugation_boundary": true
+    },
+    "excluded": {
+      "loop_renormalized_offshell_self_energy": true,
+      "loop_renormalized_current_vertex": true,
+      "continuum_limit": true,
+      "physical_kubo_coefficient": true,
+      "finite_temperature_two_fluid_transport": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the tree-level charged Euclidean Ward identity in the declared natural-unit normal branch. It is not a loop-renormalized off-shell vertex, physical Kubo coefficient, SI map, TTG prediction, or Full Topic 13 closure."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.35,
+      "chemical_potential": 0.1,
+      "effective_chemical_potential": 0.1,
+      "effective_mass": 1.0,
+      "sample_count": 3,
+      "ward_residuals": [
+        5.827095445643407e-16,
+        2.5750433960628582e-15,
+        2.181179504496779e-16
+      ],
+      "max_ward_residual": 2.5750433960628582e-15,
+      "zero_transfer_vertex_residual": 0.0,
+      "charge_conjugation_residual": 0.0,
+      "normal_branch": true,
+      "tree_level_current_vertex_completed": true,
+      "loop_renormalized_offshell_vertex_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_TREE_LEVEL_WARD_IDENTITY_NO_EXTERNAL_DATA"
+    }
+  },
+  "controlling_blocker": "loop_renormalized_off_shell_self_energy_and_current_vertex_missing",
+  "next_controller": "derive and renormalize the finite-temperature retarded self-energy and vertex together through the SK/KMS action before physical Kubo admission",
+  "claim_boundary": "This closes only the tree-level charged Euclidean Ward identity in the declared natural-unit normal branch. It is not a loop-renormalized off-shell vertex, physical Kubo coefficient, SI map, TTG prediction, or Full Topic 13 closure."
+}

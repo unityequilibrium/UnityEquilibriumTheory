@@ -1,0 +1,165 @@
+{
+  "schema_version": "t13-gatech-standard-transport-comparator-audit-v1",
+  "artifact": "t13_gatech_standard_transport_comparator_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_STANDARD_GRAPHITE_TRANSPORT_COMPARATOR_CONDITIONAL",
+  "major_result": {
+    "major_result_id": "T13_GATECH_STANDARD_TRANSPORT_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "conditional standard graphite volumetric heat-capacity conversion from archived cp and assumed density",
+      "conditional reconstruction of k from measured diffusivity and source-defined cp",
+      "first-order comparator uncertainty envelope with density uncertainty explicitly excluded",
+      "separation of Fourier/Cattaneo synthetic controls from UET Phi-response and trace-only lanes"
+    ],
+    "equation_or_mapping": {
+      "volumetric_heat_capacity": "c_p^vol = c_p^mass * rho_assumed",
+      "thermal_conductivity": "k = D * c_p^vol",
+      "uncertainty": "sigma_k/k = sqrt((sigma_D/D)^2 + (sigma_cp/cp)^2) when rho uncertainty is explicitly excluded",
+      "fourier_comparator": "q_F = -k grad(T); sigma_F = q_F^2/(k T^2) >= 0",
+      "cattaneo_control": "tau_q dq/dt + q = -k grad(T)"
+    },
+    "units": {
+      "c_p_mass": "J kg^-1 K^-1",
+      "rho_assumed": "kg m^-3",
+      "c_p_vol": "J m^-3 K^-1",
+      "D": "m^2 s^-1",
+      "k": "W m^-1 K^-1",
+      "q": "W m^-2",
+      "T": "K"
+    },
+    "derivation_class": "source-backed standard unit conversion and comparator algebra; no UET derivation",
+    "observable": "conditional graphite material thermal-transport comparator at 573.15 K",
+    "data_role": "STANDARD_MATERIAL_COMPARATOR_NOT_UET_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_gatech_standard_transport_comparator_audit.json"
+      },
+      {
+        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+        "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+        "sha256": "baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900"
+      }
+    ],
+    "verification_status": "PASS_STANDARD_GRAPHITE_TRANSPORT_COMPARATOR_CONDITIONAL",
+    "open_blockers": [
+      "source_density_is_assumed_without_uncertainty",
+      "Cp_to_c_v_and_material_regime_mapping_remain_open",
+      "not_Ding_PBTE_C_src",
+      "not_UET_Phi_transport_coefficient",
+      "base_Phi_SI_anchor_and_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "none until audit passes; after pass, standard comparator lane only",
+    "claim_boundary": "This will be a conditional standard graphite material comparator. It is not Ding PBTE C_src, not UET constitutive transport, not a Phi calibration, not external validation of UET, and not a TTG prediction."
+  },
+  "source_identity": {
+    "source_id": "gatech_gen3csp_graphite",
+    "package": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+    "source_audit": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+    "raw_workbook": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+    "row_identity": "Sheet1!A3:G3 at 300 degC = 573.15 K",
+    "source_hash": "baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900",
+    "source_data_role": "independent material comparator; not consumed by UET calibration"
+  },
+  "inputs": {
+    "temperature_K": 573.15,
+    "cp_mass_J_per_kg_K": 1259.8169447352202,
+    "sigma_cp_95pct_J_per_kg_K": 69.84706816781019,
+    "diffusivity_m2_per_s": 3.30411666666667e-05,
+    "sigma_diffusivity_95pct_m2_per_s": 1.92932827975038e-06,
+    "rho_assumed_kg_per_m3": 1780.0,
+    "rho_uncertainty_status": "NOT_SOURCE_LOCKED",
+    "reported_k_W_per_m_K": 74.0939625200673,
+    "reported_k_uncertainty_95pct_W_per_m_K": 5.52004525723003
+  },
+  "derived_comparator": {
+    "temperature_K": 573.15,
+    "cp_mass_J_per_kg_K": 1259.8169447352202,
+    "sigma_cp_95pct_J_per_kg_K": 69.84706816781019,
+    "rho_assumed_kg_per_m3": 1780.0,
+    "cv_conditional_J_per_m3_K": 2242474.161628692,
+    "sigma_cv_conditional_95pct_J_per_m3_K": 124327.78133870215,
+    "diffusivity_m2_per_s": 3.30411666666667e-05,
+    "sigma_diffusivity_95pct_m2_per_s": 1.92932827975038e-06,
+    "k_reconstructed_W_per_m_K": 74.0939625200673,
+    "sigma_k_conditional_95pct_W_per_m_K": 5.966025639374508,
+    "k_reported_W_per_m_K": 74.0939625200673,
+    "k_reported_uncertainty_95pct_W_per_m_K": 5.52004525723003,
+    "sigma_k_difference_propagated_minus_source_reported_W_per_m_K": 0.4459803821444783,
+    "sigma_k_ratio_propagated_to_source_reported": 1.080792885087372
+  },
+  "uncertainty_contract": {
+    "status": "SOURCE_REPORTED_AND_FIRST_ORDER_PROPAGATED_ENVELOPES_SEPARATE",
+    "confidence": "95% source-reported cp and diffusivity inputs; propagated first-order comparator envelope",
+    "independence_warning": "k is source-derived from D, cp, and assumed rho; it is not an independent fourth measurement",
+    "excluded_terms": [
+      "density uncertainty",
+      "Cp-to-cv correction",
+      "thermal expansion",
+      "bulk modulus",
+      "TTG regime mismatch"
+    ],
+    "comparison_policy": "Do not force equality; retain source-reported k uncertainty and separately report first-order propagation from archived D and cp because covariance and provider aggregation are not source-locked."
+  },
+  "synthetic_controls": {
+    "fourier": {
+      "status": "SYNTHETIC_COMPARATOR_ONLY",
+      "equation": "q_F = -k grad(T); sigma_F = q_F^2/(k T^2)"
+    },
+    "cattaneo": {
+      "status": "SYNTHETIC_COMPARATOR_ONLY",
+      "equation": "tau_q dq/dt + q = -k grad(T)",
+      "relaxation_time_source": "not supplied by Georgia Tech package; explicit control input only"
+    },
+    "trace_only": {
+      "status": "NOT_A_TRANSPORT_SOURCE",
+      "backreaction": false
+    },
+    "phi_response": {
+      "status": "DIMENSIONAL_MAP_OPEN",
+      "alpha_Phi_K_emitted": false
+    }
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  },
+  "checks": {
+    "source_audit_passes": true,
+    "raw_hash_matches": true,
+    "temperature_is_declared": true,
+    "cp_unit_conversion_matches": true,
+    "diffusivity_unit_conversion_matches": true,
+    "assumed_density_matches": true,
+    "volumetric_cp_conversion_is_explicit": true,
+    "conductivity_relation_matches_reported": true,
+    "conditional_sigma_cp_matches": true,
+    "conditional_sigma_diffusivity_matches": true,
+    "conditional_sigma_k_is_finite": true,
+    "source_reported_sigma_k_is_recorded": true,
+    "uncertainty_difference_is_disclosed": true,
+    "density_uncertainty_remains_open": true,
+    "k_dependency_is_disclosed": true,
+    "c_v_regime_remains_open": true,
+    "standard_comparator_not_uet_calibration": true,
+    "cattaneo_tau_not_source_claimed": true,
+    "trace_has_no_backreaction": true,
+    "phi_alpha_not_emitted": true,
+    "target_curve_not_used": true,
+    "xie_not_accessed": true,
+    "alpha_fit_not_used": true
+  },
+  "controlling_blocker": "standard_comparator_is_not_a_UET_Phi_transport_coefficient_or_Ding_C_src",
+  "next_controller": "Source-lock independent density/Cv and a material-regime map if a physical graphite comparator is needed; separately acquire a state-matched UET Kubo coefficient and base-Phi SI anchor.",
+  "claim_boundary": "Conditional standard graphite comparator only. No Ding-specific C_src, UET Phi transport coefficient, alpha_Phi_K, TTG prediction, holdout comparison, or Full Topic 13 closure is emitted."
+}

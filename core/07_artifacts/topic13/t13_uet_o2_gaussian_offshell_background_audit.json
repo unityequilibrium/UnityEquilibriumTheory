@@ -1,0 +1,186 @@
+{
+  "schema_version": "t13-uet-o2-gaussian-offshell-background-v1",
+  "artifact": "t13_uet_o2_gaussian_offshell_background_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_OFFSHELL_THERMAL_BACKREACTION_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_GAUSSIAN_OFFSHELL_BACKGROUND_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "off-shell homogeneous O(2) radial/phase Hessian at fixed Phi",
+      "recovery of the existing stationary condensate determinant at A^2=q/lambda",
+      "thermal-only stable-domain diagnostic around the tree-level background",
+      "one-sided thermal tadpole evidence showing fixed tree-level A is not a finite-temperature stationary point under the declared Gaussian determinant"
+    ],
+    "equation_or_mapping": {
+      "tree_grand_potential": "Omega_tree(A)=0.5*(m_eff(Phi)^2-Z*mu^2)*A^2+0.25*lambda*A^4",
+      "radial_curvature": "r_sigma=-q+3*lambda*A^2",
+      "phase_curvature": "r_pi=-q+lambda*A^2",
+      "off_shell_determinant": "(y-k^2-r_sigma/Z)*(y-k^2-r_pi/Z)-4*mu^2*y=0",
+      "thermal_grand_potential": "Omega_G(A,T)=T integral sum_a log(1-exp(-omega_a(A)/T)) d^3k/(2*pi)^3",
+      "tree_background": "A_tree^2=q/lambda for q=Z*mu^2-m_eff(Phi)^2>0"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "A_mu_T_omega_k": "natural energy powers from the declared O(2) action",
+      "grand_potential": "natural thermodynamic density",
+      "Phi": "fixed action response input; no SI map"
+    },
+    "derivation_class": "action-derived off-shell Gaussian Hessian and thermal-only effective-potential boundary; no vacuum renormalization or interacting self-energy",
+    "observable": "natural-unit homogeneous grand-potential density and quadratic mode stability",
+    "data_role": "ACTION_DERIVED_OFFSHELL_GAUSSIAN_THERMAL_BACKGROUND_BOUNDARY",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_gaussian_offshell_background.py",
+        "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+      },
+      {
+        "path": "docs/core/uet_o2_condensate_gaussian_thermal.py",
+        "sha256": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5"
+      },
+      {
+        "path": "docs/core/uet_o2_condensate_fluctuations.py",
+        "sha256": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_OFFSHELL_THERMAL_BACKREACTION_BOUNDARY",
+    "open_blockers": [
+      "self_consistent_finite_temperature_phase_boundary_requires_thermal_self_energy_or_declared_renormalized_effective_action",
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "normal_two_fluid_current_and_physical_Kubo_coefficient_missing",
+      "microscopic_SK_KMS_matching_and_entropy_production_not_closed",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "off-shell Gaussian thermal background boundary diagnostic only; no Full Topic 13, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes the off-shell Hessian and thermal-only stable-domain diagnostic. It does not close a renormalized self-consistent finite-temperature phase boundary, vacuum loop terms, interacting self-energy, normal-fluid transport, microscopic SK/KMS matching, SI Phi calibration, external validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "tree_amplitude": 1.3847382424126229,
+    "condensate_control": 1.534,
+    "radial_curvature": 3.0680000000000005,
+    "phase_curvature": 0.0,
+    "tree_grand_potential": -0.73536125,
+    "reference_status": "PASS",
+    "reference_grand_potential": -0.7373268145664527,
+    "right_status": "PASS",
+    "right_grand_potential": -0.737325782895423,
+    "left_status": "FloatingPointError",
+    "one_sided_step": 0.0001,
+    "right_one_sided_slope": 0.01031671029605441,
+    "tadpole_threshold": 0.001,
+    "vacuum_counterterm_included": false,
+    "interacting_self_energy_included": false
+  },
+  "stationary_root_records": [
+    {
+      "wavenumber": 0.01,
+      "existing_low_omega_sq": 2.7442425539092596e-05,
+      "offshell_low_omega_sq": 2.7442425539092596e-05,
+      "existing_high_omega_sq": 9.316839224241129,
+      "offshell_high_omega_sq": 9.316839224241129,
+      "low_abs_error": 0.0,
+      "high_abs_error": 0.0
+    },
+    {
+      "wavenumber": 0.1,
+      "existing_low_omega_sq": 0.002749828085095274,
+      "offshell_low_omega_sq": 0.0027498280850943857,
+      "existing_high_omega_sq": 9.333916838581573,
+      "offshell_high_omega_sq": 9.333916838581573,
+      "low_abs_error": 8.881784197001252e-16,
+      "high_abs_error": 0.0
+    },
+    {
+      "wavenumber": 0.5,
+      "existing_low_omega_sq": 0.07200523813089443,
+      "offshell_low_omega_sq": 0.07200523813089532,
+      "existing_high_omega_sq": 9.744661428535771,
+      "offshell_high_omega_sq": 9.744661428535773,
+      "low_abs_error": 8.881784197001252e-16,
+      "high_abs_error": 1.7763568394002505e-15
+    },
+    {
+      "wavenumber": 1.0,
+      "existing_low_omega_sq": 0.32353535736044314,
+      "offshell_low_omega_sq": 0.32353535736044314,
+      "existing_high_omega_sq": 10.993131309306223,
+      "offshell_high_omega_sq": 10.993131309306225,
+      "low_abs_error": 0.0,
+      "high_abs_error": 1.7763568394002505e-15
+    }
+  ],
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 50.0,
+      "status": "PASS",
+      "grand_potential": -0.7373268119566551,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.0019655619566551243
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 70.0,
+      "status": "PASS",
+      "grand_potential": -0.7373268144947932,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.001965564494793282
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 90.0,
+      "status": "PASS",
+      "grand_potential": -0.7373268145664527,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.001965564566452671
+    }
+  ],
+  "convergence_relative_errors": {
+    "grand_potential": 9.718818674574974e-11,
+    "thermal_grand_potential": 3.645740800527646e-08
+  },
+  "checks": {
+    "condensed_tree_background_selected": true,
+    "condensate_control_positive": true,
+    "tree_amplitude_positive": true,
+    "stationary_curvature_recovery": true,
+    "tree_grand_potential_matches_eos": true,
+    "stationary_roots_recover_existing_determinant": true,
+    "reference_offshell_thermal_state_is_stable": true,
+    "reference_grand_potential_is_finite": true,
+    "right_offshell_thermal_state_is_stable": true,
+    "thermal_tadpole_is_resolved_one_sided": true,
+    "decreasing_amplitude_hits_unstable_domain": true,
+    "thermal_only_potential_converges": true,
+    "thermal_only_branch_is_explicit": true,
+    "vacuum_counterterm_is_excluded": true,
+    "self_energy_is_excluded": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_not_state": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_gaussian_offshell_background.py": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09",
+    "docs/core/uet_o2_condensate_gaussian_thermal.py": "589b832c3baaf99ed8b9bf8afdab0602fb4de6d129098116d11797e1af519dc5",
+    "docs/core/uet_o2_condensate_fluctuations.py": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "thermal_background_backreaction_requires_self_consistent_renormalized_phase_boundary",
+  "next_controller": "Declare or derive the thermal self-energy/vacuum renormalization needed to make the finite-temperature phase boundary stationary; then close normal Kubo/SK/KMS, entropy, SI Phi mapping, and alpha calibration.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

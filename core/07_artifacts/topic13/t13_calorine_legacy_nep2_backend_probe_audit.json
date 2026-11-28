@@ -1,0 +1,164 @@
+{
+  "schema_version": "t13-calorine-legacy-nep2-backend-probe-v1",
+  "artifact": "t13_calorine_legacy_nep2_backend_probe_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_LEGACY_NEP2_BACKEND_PROBE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the hash-locked public C-CX model and graphite primitive structure are accepted by a pinned legacy Calorine 1.0 NEP2 engine",
+      "the backend route is source-linked to Calorine tag 1.0 and commit eedb2ac9f49cb60a64512e987b98993d3a44e186",
+      "the four-atom force probe completed without rewriting the C-CX model bytes"
+    ],
+    "what_remains_open": [
+      "same-workflow fc2/fc3 generation and exact 4x4x2, 8x8x4, 10x10x5 PBTE rerun",
+      "source-grade C_src uncertainty and Ding material/regime equivalence",
+      "independent base-Phi SI anchor and alpha_Phi_K calibration"
+    ],
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not heat capacity or model parameter",
+      "Phi": "effective response variable; no Phi calibration is present in this backend probe",
+      "R_gen": "derived history trace; not involved in model evaluation",
+      "R_obs": "observer record kept separate; no observer data are consumed"
+    },
+    "equation_or_mapping": {
+      "model_route": "NEP2 model -> force backend -> fc2/fc3 -> PBTE -> C_src(T)",
+      "required_output": "C_src(T) in J m^-3 K^-1",
+      "thermal_bridge": "Delta_Tq = alpha_Phi_K * Delta_Phi remains uninstantiated"
+    },
+    "units": {
+      "probe_energy": "eV",
+      "probe_force_diagnostic": "source/backend diagnostic; no SI transport unit emitted",
+      "required_C_src": "J m^-3 K^-1",
+      "alpha_Phi_K": "K per normalized Phi; not emitted"
+    },
+    "derivation_class": "SOFTWARE_COMPATIBILITY_BOUNDARY_NO_UET_DERIVATION",
+    "observable": "whether the pinned legacy force backend accepts the source model format",
+    "data_role": "EXTERNAL_MODEL_BACKEND_PROBE_NOT_C_SRC",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX.txt",
+        "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz",
+        "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_legacy_nep2_backend_probe_receipt.txt",
+        "sha256": "5ecf57f7cf2ae9bb306af28d9b3001f9f8a6d5cdde2173d9c84c270041ece7e1"
+      }
+    ],
+    "verification_status": "PASS_LEGACY_NEP2_MODEL_PROBE",
+    "open_blockers": [
+      "calorine_legacy_backend_same_workflow_pbte_rerun_missing",
+      "calorine_route_source_grade_uncertainty_missing",
+      "calorine_route_material_regime_mapping_to_Ding_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "legacy force-backend route only; no numeric C_src, alpha, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This result closes only the legacy force-backend compatibility lane. It is not a PBTE C_src result, not source-grade uncertainty, not Ding-regime equivalence, not an alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "model": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX.txt",
+      "size_bytes": 44098,
+      "sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408",
+      "locator": "https://zenodo.org/api/records/7811021/files/nep-C-CX.txt/content"
+    },
+    "structure": {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_7811021_nep_C_CX/graphite-prim.xyz",
+      "size_bytes": 324,
+      "sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+      "locator": "https://zenodo.org/api/records/21198312/files/graphite-prim.xyz/content"
+    }
+  },
+  "runtime_probe": {
+    "status": "PASS_LEGACY_NEP2_MODEL_PROBE",
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_legacy_nep2_backend_probe_receipt.txt",
+    "sha256": "5ecf57f7cf2ae9bb306af28d9b3001f9f8a6d5cdde2173d9c84c270041ece7e1",
+    "backend": {
+      "locator": "https://gitlab.com/materials-modeling/calorine/-/tree/1.0",
+      "tag": "1.0",
+      "commit": "eedb2ac9f49cb60a64512e987b98993d3a44e186",
+      "engine": "Calorine 1.0 legacy NEP3 class, NEP2 model branch",
+      "source_files": [
+        {
+          "upstream_path": "src/nepy/nep.cpp",
+          "sha256": "433a919d15b320d8d301f8b7c345762cbf4a2bd99133521a94470f8df8a2ddb3"
+        },
+        {
+          "upstream_path": "src/nepy/nep.h",
+          "sha256": "44a9eb6adb871b5f0e7af89b0d5ac79481f1c0c0032813f90177153983c6ddf7"
+        }
+      ]
+    },
+    "observed": {
+      "source_commit": "eedb2ac9f49cb60a64512e987b98993d3a44e186",
+      "source_tag": "1.0",
+      "model_sha256": "cf75256947a8953b8041ccc26a34ac307724f69bf2edbcc97b46d87bc5e72408",
+      "structure_sha256": "87fdd172bd5b77e1aa5bd9b4d85c3f21eb5df6521089cc4b769e12d481a1aed0",
+      "returncode": "0",
+      "total_potential_eV": "-32.659482039609543",
+      "potential_count": "4",
+      "force_l2": "3.6892015109582541e-14",
+      "virial_count": "36"
+    },
+    "checks": {
+      "receipt_present": true,
+      "receipt_hash_matches": true,
+      "legacy_backend_commit_matches": true,
+      "legacy_backend_tag_matches": true,
+      "model_hash_matches": true,
+      "structure_hash_matches": true,
+      "returncode_zero": true,
+      "nep2_header_accepted": true,
+      "potential_count_matches": true,
+      "force_diagnostic_present": true,
+      "virial_count_matches": true
+    },
+    "execution": {
+      "environment": "Ubuntu 24.04 WSL2, Python 3.12.3, GCC 13.3",
+      "compile_contract": "g++ -std=c++11 -O3 -fopenmp legacy_probe.cpp nep.cpp",
+      "binary_sha256": "dc6e65c21b4b5d090f66ab88fea3c12da54126b04ab657517c51021df7976580",
+      "probe_kind": "four-atom graphite primitive-cell force evaluation",
+      "fit_or_tuning_used": false
+    }
+  },
+  "checks": {
+    "model_present": true,
+    "structure_present": true,
+    "model_hash_matches": true,
+    "structure_hash_matches": true,
+    "receipt_status_pass": true,
+    "holdout_accessed": false,
+    "numeric_csrc_emitted": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "fit_or_tuning_used": false
+  },
+  "source_package": {
+    "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/calorine_legacy_nep2_backend_probe_source_package.json",
+    "sha256": "b8873b1cbb2cffb52a00ef78ab2152c5c49cbc02b520af358a2a6981ea7f2509"
+  },
+  "acceptance": {
+    "accepted_for_full_topic13": false,
+    "accepted_as_independent_csrc_reproduction": false,
+    "legacy_backend_model_probe_performed": true,
+    "numeric_rerun_performed": false,
+    "numeric_csrc_emitted": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "holdout_accessed": false,
+    "fit_or_tuning_used": false
+  },
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "controlling_blocker": "calorine_legacy_backend_same_workflow_pbte_rerun_missing",
+  "next_controller": "Run the exact 4x4x2 state and 8x8x4/10x10x5 mesh workflow with this pinned legacy backend, then package fc2/fc3, mode-resolved C_src, convergence, and source-grade uncertainty; do not calibrate alpha from the rerun.",
+  "claim_boundary": "This result closes only the legacy force-backend compatibility lane. It is not a PBTE C_src result, not source-grade uncertainty, not Ding-regime equivalence, not an alpha_Phi_K calibration, and not Full Topic 13 closure."
+}

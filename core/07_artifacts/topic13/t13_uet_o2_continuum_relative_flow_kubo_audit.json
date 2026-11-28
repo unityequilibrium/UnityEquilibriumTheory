@@ -1,0 +1,256 @@
+{
+  "schema_version": "t13-uet-o2-continuum-relative-flow-kubo-v1",
+  "artifact": "t13_uet_o2_continuum_relative_flow_kubo_audit",
+  "generated_at": "2026-08-18",
+  "status": "PASS_ACTION_DERIVED_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the screened contact-channel response is evaluated on a compactified k in [0,infinity) domain",
+      "radial-order, angular-order, and compactification-scale refinements pass the unchanged 1e-2 controller",
+      "the relative-flow operator is symmetric positive semidefinite and conserves common flow",
+      "the continuum thermal response has a natural-unit retarded KMS/FDT and entropy interface"
+    ],
+    "equation_or_mapping": {
+      "radial_map": "k=Lambda*u/(1-u), u in (0,1), dk=Lambda/(1-u)^2 du",
+      "mode_susceptibility": "D_a=(1/3) integral[d^3k/(2*pi)^3] k^2 v_a^2[-partial_E n_a]",
+      "screened_contact_channel": "sigma_ab=lambda^2/[16*pi*(s_med+m_H^2)]",
+      "medium_invariant": "s_med=2*E_a*E_b*(1-cos(theta)); m_H^2=2*lambda*A_*^2",
+      "relative_kernel": "L_rel=Gamma_rel*((1,-1),(-1,1))",
+      "retarded_response": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "continuum_controller": "max(radial, angular, scale relative changes)<=1e-2"
+    },
+    "units": {
+      "unit_lane": "natural continuum thermal integral",
+      "temperature_chemical_potential_mass": "energy",
+      "radial_map_scale": "energy",
+      "collision_rate": "energy",
+      "relative_response": "natural-unit response coefficient",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived tree-condensate screened contact channel with a compactified continuum thermal integral and explicit convergence controller",
+    "observable": "continuum natural relative-flow response and retarded KMS/FDT interface",
+    "data_role": "ACTION_DERIVED_CONTINUUM_THERMAL_CONTACT_RESPONSE_NOT_PHYSICAL_KUBO",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_continuum_relative_flow_kubo.py",
+        "sha256": "70850509063f5adf4493a21ceea420c9f414e1605eea7220a00ce3549d0bca30"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_relative_flow_collision.py",
+        "sha256": "d311f7106787e92638ac6a8d3d48a5b4d0ea6dbd688d83a52b2be824dff82d21"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
+    "open_blockers": [
+      "loop_renormalized_condensed_vertex_missing",
+      "complete_condensed_scattering_channels_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "complete_two_fluid_constitutive_tensor_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "continuum natural-unit screened contact response lane only; no physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only the continuum thermal integral of the declared screened contact channel. It is not a loop-renormalized physical Kubo coefficient, a complete two-fluid transport tensor, an SI Phi calibration, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_CONTINUUM_RELATIVE_FLOW_KUBO_LANE",
+    "equations": {
+      "radial_map": "k=Lambda*u/(1-u), u in (0,1), dk=Lambda/(1-u)^2 du",
+      "mode_susceptibility": "D_a=(1/3) integral[d^3k/(2*pi)^3] k^2 v_a^2[-partial_E n_a]",
+      "screened_contact_channel": "sigma_ab=lambda^2/[16*pi*(s_med+m_H^2)]",
+      "medium_invariant": "s_med=2*E_a*E_b*(1-cos(theta)); m_H^2=2*lambda*A_*^2",
+      "relative_kernel": "L_rel=Gamma_rel*((1,-1),(-1,1))",
+      "retarded_response": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "continuum_controller": "max(radial, angular, scale relative changes)<=1e-2"
+    },
+    "unit_contract": {
+      "unit_lane": "natural continuum thermal integral",
+      "temperature_chemical_potential_mass": "energy",
+      "radial_map_scale": "energy",
+      "collision_rate": "energy",
+      "relative_response": "natural-unit response coefficient",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived tree-condensate screened contact channel with a compactified continuum thermal integral and explicit convergence controller",
+    "observable": "continuum natural relative-flow response and retarded KMS/FDT interface",
+    "data_role": "ACTION_DERIVED_CONTINUUM_THERMAL_CONTACT_RESPONSE_NOT_PHYSICAL_KUBO",
+    "closed_scope": [
+      "the screened thermal contact-channel integral is evaluated on k in [0,infinity)",
+      "radial order, angular order, and compactification-scale refinements are checked",
+      "the relative operator remains symmetric positive semidefinite with a common-flow zero mode",
+      "the continuum thermal response has an explicit natural-unit retarded KMS/FDT interface"
+    ],
+    "excluded_scope": [
+      "vacuum loop renormalization or running-coupling matching",
+      "complete condensed microscopic vertex and all scattering channels",
+      "physical SI Kubo coefficient and source uncertainty",
+      "dimensional Phi map, alpha_Phi_K, TTG prediction, and Full Topic 13 closure"
+    ],
+    "claim_boundary": "This closes only the continuum thermal integral of the declared screened contact channel. It is not a loop-renormalized physical Kubo coefficient, a complete two-fluid transport tensor, an SI Phi calibration, or Full Topic 13 closure."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.2,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "branch": "condensed",
+      "effective_mass": 1.0,
+      "condensate_amplitude": 0.7989993742175272,
+      "tree_radial_screening_sq": 1.2768000000000002,
+      "radial_orders": [
+        24,
+        32,
+        40
+      ],
+      "angular_order": 24,
+      "angular_refined_order": 36,
+      "radial_scale": 1.0,
+      "mode_susceptibility": [
+        4.171834872082964e-09,
+        0.003635472568511086
+      ],
+      "mode_rate": [
+        6.565068245782616e-05,
+        0.00013926709959857648
+      ],
+      "relative_susceptibility": 4.171830084758648e-09,
+      "relative_collision_rate": 0.00013926701512120032,
+      "dc_relative_response": 2.9955622163137602e-05,
+      "radial_relative_collision_rates": [
+        0.00013926703331533884,
+        0.00013926701512470216,
+        0.00013926701512120032
+      ],
+      "radial_dc_responses": [
+        2.9955608465975803e-05,
+        2.9955622144549586e-05,
+        2.9955622163137602e-05
+      ],
+      "radial_max_relative_change": 4.5662793172363093e-07,
+      "angular_refined_relative_change": 2.06194987822215e-06,
+      "scale_refined_relative_change": 1.6133063996982916e-09,
+      "collision_operator": [
+        [
+          0.00013926701512120032,
+          -0.00013926701512120032
+        ],
+        [
+          -0.00013926701512120032,
+          0.00013926701512120032
+        ]
+      ],
+      "collision_eigenvalues": [
+        0.0,
+        0.00027853403024240064
+      ],
+      "common_flow_conservation_residual": 0.0,
+      "source_common_mode_residual": 0.0,
+      "symmetric_kernel_residual": 0.0,
+      "retarded_frequency_over_rate": [
+        0.0,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "retarded_response_real": [
+        2.9955622163137602e-05,
+        2.8193526741776562e-05,
+        2.3964497730510083e-05,
+        1.4977811081568801e-05
+      ],
+      "retarded_response_imag": [
+        0.0,
+        7.0483816854441405e-06,
+        1.1982248865255042e-05,
+        1.4977811081568801e-05
+      ],
+      "spectral_density": [
+        0.0,
+        1.4096763370888281e-05,
+        2.3964497730510083e-05,
+        2.9955622163137602e-05
+      ],
+      "kms_ratio": [
+        1.000348228155155,
+        1.000696577573158,
+        1.0013936403666315
+      ],
+      "kms_target_ratio": [
+        1.000348228155155,
+        1.000696577573158,
+        1.0013936403666315
+      ],
+      "kms_residual": 0.0,
+      "fdt_residual": 0.0,
+      "entropy_production_at_unit_force": 0.000149778110815688,
+      "continuum_integrals_finite": true,
+      "continuum_convergence_passes": true,
+      "finite_cutoff_used": false,
+      "loop_renormalized_vertex_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_phi_k_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_CONTINUUM_THERMAL_CONTACT_RESPONSE_NOT_PHYSICAL_KUBO"
+    }
+  },
+  "checks": {
+    "continuum_integrals_are_finite": true,
+    "continuum_convergence_passes": true,
+    "threshold_is_unchanged": true,
+    "response_is_positive": true,
+    "collision_rate_is_positive": true,
+    "operator_is_symmetric": true,
+    "common_flow_is_conserved": true,
+    "source_has_no_common_mode": true,
+    "operator_is_positive_semidefinite": true,
+    "kms_is_closed": true,
+    "fdt_is_closed": true,
+    "entropy_is_nonnegative": true,
+    "state_numeric_values_are_finite": true,
+    "no_finite_cutoff_is_used": true,
+    "loop_renormalization_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "holdout_is_unread": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_is_derived": true,
+    "R_obs_is_separate": true
+  },
+  "failed_checks": [],
+  "continuum_limit_completed": true,
+  "loop_renormalized_vertex_completed": false,
+  "physical_kubo_coefficient_emitted": false,
+  "numeric_alpha_phi_k_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "loop_renormalized_condensed_vertex_and_physical_kubo_match_missing",
+  "next_controller": "derive and source-lock the loop-renormalized condensed vertex/retarded correlator, then attach units and uncertainty; do not promote this continuum thermal contact response as physical Kubo",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  }
+}

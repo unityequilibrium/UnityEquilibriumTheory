@@ -1,0 +1,542 @@
+{
+  "schema_version": "t13-mp48-force-constant-csrc-mesh-convergence-v1",
+  "artifact": "t13_mp48_force_constant_csrc_mesh_convergence_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
+  "major_result": {
+    "major_result_id": "T13_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the deposited MP48 second-order force constants were tested on seven explicit q-meshes",
+      "the native 5x5x2 result and coarse pre-asymptotic changes are retained as diagnostics",
+      "the complete 20x20x8 through 35x35x14 fine tail is accepted only when all three adjacent pairs and all target temperatures satisfy the declared tolerance",
+      "the mesh-step and negative-mode diagnostics are source-traceable and emitted in machine-readable form",
+      "the independent route is prevented from becoming Ding C_src, an alpha_Phi_K calibration, or a holdout fit"
+    ],
+    "equation_or_mapping": {
+      "mode_heat_capacity": "c_mu(T) = k_B*x_mu^2*exp(x_mu)/(exp(x_mu)-1)^2; x_mu=h*nu_mu/(k_B*T)",
+      "mesh_sum": "C_src^mesh(T) = N_A/N_q * sum_(q,mu) c_mu(q,T)",
+      "Ding_boundary": "Delta_Tq = Delta_u_ph / C_src"
+    },
+    "units": {
+      "frequency": "THz",
+      "q": "dimensionless primitive reciprocal fractional coordinates",
+      "heat_capacity": "J K^-1 mol^-1 primitive cell",
+      "eigenvalue": "eV A^-2 amu^-1"
+    },
+    "derivation_class": "source-locked harmonic lattice-dynamics reconstruction and deterministic mesh sensitivity audit; no UET derivation",
+    "observable": "independent MP48 harmonic graphite heat-capacity comparator",
+    "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_mp48_force_constant_csrc_mesh_convergence_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+        "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+        "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+        "sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+        "sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902"
+      }
+    ],
+    "verification_status": "PASS_MP48_FORCE_CONSTANT_C_SRC_MESH_CONVERGENCE",
+    "open_blockers": [
+      "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+      "Ding_C_src_uncertainty_or_PBTE_convergence_contract_missing",
+      "base_Phi_to_Delta_u_ph_mapping_and_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "No Ding-source or Core dependency unlock; only the q-mesh convergence question is closed for this independent lane",
+    "claim_boundary": "This audit does not establish Ding PBTE C_src, same-regime material equivalence, UET transport, a Phi-to-energy anchor, alpha_Phi_K, or Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "force_constants_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+    "force_constants_sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "phonopy_metadata_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+    "phonopy_metadata_sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "summary_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+    "summary_sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5",
+    "thermal_properties_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+    "thermal_properties_sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902",
+    "primitive_cell_atoms": 4,
+    "supercell_matrix": [
+      [
+        5,
+        0,
+        0
+      ],
+      [
+        0,
+        5,
+        0
+      ],
+      [
+        0,
+        0,
+        2
+      ]
+    ],
+    "temperature_rows_K": [
+      100.0,
+      200.0,
+      250.0,
+      300.0
+    ]
+  },
+  "mesh_policy": {
+    "meshes": [
+      [
+        5,
+        5,
+        2
+      ],
+      [
+        10,
+        10,
+        4
+      ],
+      [
+        15,
+        15,
+        6
+      ],
+      [
+        20,
+        20,
+        8
+      ],
+      [
+        25,
+        25,
+        10
+      ],
+      [
+        30,
+        30,
+        12
+      ],
+      [
+        35,
+        35,
+        14
+      ]
+    ],
+    "acceptance_tolerance_abs_relative_step": 0.01,
+    "tolerance_role": "declared numerical source-acceptance criterion; not the TTG leakage threshold and not a physical uncertainty bound",
+    "native_mesh": "5x5x2",
+    "fine_tail_meshes": [
+      "20x20x8",
+      "25x25x10",
+      "30x30x12",
+      "35x35x14"
+    ],
+    "acceptance_policy": "complete_three_pair_fine_tail_across_all_target_temperatures",
+    "coarse_mesh_steps_retained_as_diagnostic": true,
+    "fine_tail_pair_count_is_complete": true,
+    "fine_tail_max_abs_relative_step": 0.00653145749584183,
+    "fine_tail_converged": true,
+    "finest_pair_meshes": [
+      "30x30x12",
+      "35x35x14"
+    ],
+    "finest_pair_max_abs_relative_step": 0.0007133166616816178,
+    "finest_pair_converged": true,
+    "continuum_convergence_required_for_Ding_acceptance": true
+  },
+  "mesh_results": {
+    "5x5x2": {
+      "q_shape": [
+        5,
+        5,
+        2
+      ],
+      "q_point_count": 50,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 7.801267972917876
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 20.63040372403281
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 27.812204143576402
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 34.79992722259255
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "10x10x4": {
+      "q_shape": [
+        10,
+        10,
+        4
+      ],
+      "q_point_count": 400,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.7954577948927724
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 16.179596680738324
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.609212147117578
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 31.095721212197944
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "15x15x6": {
+      "q_shape": [
+        15,
+        15,
+        6
+      ],
+      "q_point_count": 1350,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.45256129196939
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 15.90827045415353
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.43297100261873
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 30.993622365758597
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "20x20x8": {
+      "q_shape": [
+        20,
+        20,
+        8
+      ],
+      "q_point_count": 3200,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.3829447664091985
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 15.883548443401994
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.423732666912418
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 30.990423995600715
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "25x25x10": {
+      "q_shape": [
+        25,
+        25,
+        10
+      ],
+      "q_point_count": 6250,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.3608492064566162
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 15.880651144164645
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.423004038813115
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 30.990239770302168
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "30x30x12": {
+      "q_shape": [
+        30,
+        30,
+        12
+      ],
+      "q_point_count": 10800,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.3535243694361823
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 15.880312714286607
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.422946168486696
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 30.99022928371591
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    },
+    "35x35x14": {
+      "q_shape": [
+        35,
+        35,
+        14
+      ],
+      "q_point_count": 17150,
+      "rows": [
+        {
+          "temperature_K": 100.0,
+          "heat_capacity_J_per_mol_cell_K": 3.351132244628108
+        },
+        {
+          "temperature_K": 200.0,
+          "heat_capacity_J_per_mol_cell_K": 15.880276178078802
+        },
+        {
+          "temperature_K": 250.0,
+          "heat_capacity_J_per_mol_cell_K": 23.422942129433906
+        },
+        {
+          "temperature_K": 300.0,
+          "heat_capacity_J_per_mol_cell_K": 30.9902287910457
+        }
+      ],
+      "negative_eigenvalue_count_beyond_tolerance": 0,
+      "minimum_eigenvalue_eV_per_A2_per_amu": -2.2303635759766666e-15
+    }
+  },
+  "deposited_reference_rows": [
+    {
+      "temperature_K": 100.0,
+      "deposited_heat_capacity_J_per_mol_cell_K": 7.33043875459715
+    },
+    {
+      "temperature_K": 200.0,
+      "deposited_heat_capacity_J_per_mol_cell_K": 20.562698832644053
+    },
+    {
+      "temperature_K": 250.0,
+      "deposited_heat_capacity_J_per_mol_cell_K": 27.78828145778704
+    },
+    {
+      "temperature_K": 300.0,
+      "deposited_heat_capacity_J_per_mol_cell_K": 34.791236430507276
+    }
+  ],
+  "relative_mesh_steps": [
+    {
+      "from_mesh": "5x5x2",
+      "to_mesh": "10x10x4",
+      "temperature_K": 100.0,
+      "relative_step": -0.5134819354919335
+    },
+    {
+      "from_mesh": "5x5x2",
+      "to_mesh": "10x10x4",
+      "temperature_K": 200.0,
+      "relative_step": -0.2157401814735037
+    },
+    {
+      "from_mesh": "5x5x2",
+      "to_mesh": "10x10x4",
+      "temperature_K": 250.0,
+      "relative_step": -0.1511204209044884
+    },
+    {
+      "from_mesh": "5x5x2",
+      "to_mesh": "10x10x4",
+      "temperature_K": 300.0,
+      "relative_step": -0.10644292405272016
+    },
+    {
+      "from_mesh": "10x10x4",
+      "to_mesh": "15x15x6",
+      "temperature_K": 100.0,
+      "relative_step": -0.09034391144720122
+    },
+    {
+      "from_mesh": "10x10x4",
+      "to_mesh": "15x15x6",
+      "temperature_K": 200.0,
+      "relative_step": -0.01676965328238411
+    },
+    {
+      "from_mesh": "10x10x4",
+      "to_mesh": "15x15x6",
+      "temperature_K": 250.0,
+      "relative_step": -0.007464931205693248
+    },
+    {
+      "from_mesh": "10x10x4",
+      "to_mesh": "15x15x6",
+      "temperature_K": 300.0,
+      "relative_step": -0.0032833728390675443
+    },
+    {
+      "from_mesh": "15x15x6",
+      "to_mesh": "20x20x8",
+      "temperature_K": 100.0,
+      "relative_step": -0.020163733435267006
+    },
+    {
+      "from_mesh": "15x15x6",
+      "to_mesh": "20x20x8",
+      "temperature_K": 200.0,
+      "relative_step": -0.0015540351053738855
+    },
+    {
+      "from_mesh": "15x15x6",
+      "to_mesh": "20x20x8",
+      "temperature_K": 250.0,
+      "relative_step": -0.00039424517297781403
+    },
+    {
+      "from_mesh": "15x15x6",
+      "to_mesh": "20x20x8",
+      "temperature_K": 300.0,
+      "relative_step": -0.00010319446111006769
+    },
+    {
+      "from_mesh": "20x20x8",
+      "to_mesh": "25x25x10",
+      "temperature_K": 100.0,
+      "relative_step": -0.00653145749584183
+    },
+    {
+      "from_mesh": "20x20x8",
+      "to_mesh": "25x25x10",
+      "temperature_K": 200.0,
+      "relative_step": -0.0001824088142314828
+    },
+    {
+      "from_mesh": "20x20x8",
+      "to_mesh": "25x25x10",
+      "temperature_K": 250.0,
+      "relative_step": -3.110640433201528e-05
+    },
+    {
+      "from_mesh": "20x20x8",
+      "to_mesh": "25x25x10",
+      "temperature_K": 300.0,
+      "relative_step": -5.944587869288753e-06
+    },
+    {
+      "from_mesh": "25x25x10",
+      "to_mesh": "30x30x12",
+      "temperature_K": 100.0,
+      "relative_step": -0.0021794601811834236
+    },
+    {
+      "from_mesh": "25x25x10",
+      "to_mesh": "30x30x12",
+      "temperature_K": 200.0,
+      "relative_step": -2.131083133594114e-05
+    },
+    {
+      "from_mesh": "25x25x10",
+      "to_mesh": "30x30x12",
+      "temperature_K": 250.0,
+      "relative_step": -2.470662017639569e-06
+    },
+    {
+      "from_mesh": "25x25x10",
+      "to_mesh": "30x30x12",
+      "temperature_K": 300.0,
+      "relative_step": -3.383835148751402e-07
+    },
+    {
+      "from_mesh": "30x30x12",
+      "to_mesh": "35x35x14",
+      "temperature_K": 100.0,
+      "relative_step": -0.0007133166616816178
+    },
+    {
+      "from_mesh": "30x30x12",
+      "to_mesh": "35x35x14",
+      "temperature_K": 200.0,
+      "relative_step": -2.300723446868602e-06
+    },
+    {
+      "from_mesh": "30x30x12",
+      "to_mesh": "35x35x14",
+      "temperature_K": 250.0,
+      "relative_step": -1.724399979474711e-07
+    },
+    {
+      "from_mesh": "30x30x12",
+      "to_mesh": "35x35x14",
+      "temperature_K": 300.0,
+      "relative_step": -1.5897598126812795e-08
+    }
+  ],
+  "max_abs_relative_mesh_step": 0.5134819354919335,
+  "max_abs_relative_fine_tail_mesh_step": 0.00653145749584183,
+  "max_abs_relative_finest_pair_mesh_step": 0.0007133166616816178,
+  "checks": {
+    "force_constants_file_present": true,
+    "phonopy_metadata_present": true,
+    "summary_metadata_present": true,
+    "thermal_properties_file_present": true,
+    "force_constant_shape_is_200_by_200": true,
+    "all_force_constant_pairs_present_once": true,
+    "primitive_supercell_mapping_error_is_small": true,
+    "all_mesh_rows_are_finite": true,
+    "all_meshes_have_no_negative_modes_beyond_tolerance": true,
+    "deposited_reference_rows_present": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+  "next_controller": "Use the asymptotically converged MP48 harmonic route only as an independent comparator while closing Ding material matching, uncertainty, and base-Phi mapping.",
+  "claim_boundary": "The MP48 force-constant route is a harmonic comparator. A finite native-mesh match is not a continuum convergence proof, a Ding PBTE reproduction, a Phi calibration, or external validation."
+}

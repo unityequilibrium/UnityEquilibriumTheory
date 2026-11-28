@@ -1,0 +1,221 @@
+{
+  "schema_version": "t13-uet-o2-one-loop-vertex-uv-boundary-v1",
+  "artifact": "t13_uet_o2_one_loop_vertex_uv_boundary_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the O(2)-invariant bare four-point tensor and its permutation/rotation identities",
+      "the tree-level Keldysh contour interaction expansion into classical and quantum vertices",
+      "the zero-external-momentum one-loop Euclidean bubble decomposition into finite thermal and logarithmically growing vacuum parts",
+      "the equilibrium KMS/FDT witness attached to the declared finite-temperature mode"
+    ],
+    "equation_or_mapping": {
+      "bare_o2_vertex": "V_abcd=lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "zero_external_bubble": "B_E^Lambda(0)=integral_0^Lambda d^3k/(2*pi)^3*[(1+2*n_B(E))/(4*E^3)+n_B(E)*(1+n_B(E))/(2*T*E^2)]",
+      "one_loop_vertex": "Gamma_1PI^(4)=V-(1/2)*[B_s*(V.V)+B_t*(V.V)+B_u*(V.V)]",
+      "sk_contour_interaction": "V(phi_r+phi_a/2)-V(phi_r-phi_a/2)=lambda*(phi_r^2)*(phi_r.phi_a)+(lambda/4)*(phi_a^2)*(phi_r.phi_a)",
+      "equilibrium_kms": "G^>/G^<=exp(beta_th*E); N=coth(beta_th*E/2)*rho"
+    },
+    "units": {
+      "field": "natural mass dimension one",
+      "mass_temperature_momentum": "natural energy",
+      "quartic_coupling": "dimensionless",
+      "bubble_and_vertex": "dimensionless in 3+1 natural units"
+    },
+    "derivation_class": "action-derived O(2) tensor vertex, Keldysh contour expansion, zero-external-momentum one-loop Euclidean bubble, and equilibrium KMS witness",
+    "observable": "bare O(2) four-point tensor, contour vertex weights, and finite-cutoff one-loop UV boundary",
+    "data_role": "ACTION_DERIVED_ONE_LOOP_VERTEX_UV_BOUNDARY_NOT_RENORMALIZED",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+        "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+      },
+      {
+        "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+        "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+      },
+      {
+        "path": "docs/core/uet_o2_equilibrium_kms.py",
+        "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_one_loop_uv_boundary_audit.json",
+        "sha256": "fad6c31402440f3de813fbe0c5488fe2efdb79bd327bd58960c4678a88cbf16c"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_microscopic_vertex_missing",
+      "finite_chemical_potential_charged_propagator_and_vertex_missing",
+      "full_interacting_SK_action_and_KMS_match_missing",
+      "continuum_limit_not_converged",
+      "physical_Kubo_coefficient_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "named O(2) bare tensor and one-loop UV boundary only; no renormalized microscopic vertex, finite-density SK match, physical Kubo, SI, alpha, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes only the O(2) bare tensor/contour identity and the finite-cutoff one-loop UV boundary at mu=0. The logarithmically growing vacuum bubble is an explicit renormalization blocker. This is not a renormalized microscopic vertex, a finite-density charged SK action, a full interacting KMS match, a physical Kubo coefficient, an SI map, an alpha_Phi_K calibration, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_ONE_LOOP_VERTEX_UV_BOUNDARY",
+    "equations": {
+      "bare_o2_vertex": "V_abcd=lambda*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)",
+      "zero_external_bubble": "B_E^Lambda(0)=integral_0^Lambda d^3k/(2*pi)^3*[(1+2*n_B(E))/(4*E^3)+n_B(E)*(1+n_B(E))/(2*T*E^2)]",
+      "one_loop_vertex": "Gamma_1PI^(4)=V-(1/2)*[B_s*(V.V)+B_t*(V.V)+B_u*(V.V)]",
+      "sk_contour_interaction": "V(phi_r+phi_a/2)-V(phi_r-phi_a/2)=lambda*(phi_r^2)*(phi_r.phi_a)+(lambda/4)*(phi_a^2)*(phi_r.phi_a)",
+      "equilibrium_kms": "G^>/G^<=exp(beta_th*E); N=coth(beta_th*E/2)*rho"
+    },
+    "domain": {
+      "unit_lane": "natural",
+      "chemical_potential": "mu=0 only; charged finite-density propagator is not silently substituted",
+      "background": "homogeneous normal O(2) mass eigenstate",
+      "external_momentum": "zero Euclidean frequency and zero spatial momentum",
+      "cutoff": "finite Lambda sequence; vacuum bubble is not renormalized"
+    },
+    "units": {
+      "field": "natural mass dimension one",
+      "mass_temperature_momentum": "natural energy",
+      "quartic_coupling": "dimensionless",
+      "bubble_and_vertex": "dimensionless in 3+1 natural units"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable in the action; not temperature",
+      "R_gen": "derived history trace; no backreaction in this lane",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived O(2) tensor vertex, Keldysh contour expansion, zero-external-momentum one-loop Euclidean bubble, and equilibrium KMS witness",
+    "observable": "bare O(2) four-point tensor, contour vertex weights, and finite-cutoff one-loop UV boundary",
+    "data_role": "ACTION_DERIVED_ONE_LOOP_VERTEX_UV_BOUNDARY_NOT_RENORMALIZED",
+    "included": {
+      "o2_tensor_vertex": true,
+      "o2_rotation_and_permutation_checks": true,
+      "tree_level_sk_contour_identity": true,
+      "finite_cutoff_one_loop_bubble": true,
+      "vacuum_thermal_bubble_separation": true,
+      "equilibrium_kms_witness": true
+    },
+    "excluded": {
+      "vacuum_counterterm": true,
+      "renormalized_one_loop_vertex": true,
+      "finite_chemical_potential_vertex": true,
+      "full_interacting_sk_influence_functional": true,
+      "physical_kubo_coefficient": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only the O(2) bare tensor/contour identity and the finite-cutoff one-loop UV boundary at mu=0. The logarithmically growing vacuum bubble is an explicit renormalization blocker. This is not a renormalized microscopic vertex, a finite-density charged SK action, a full interacting KMS match, a physical Kubo coefficient, an SI map, an alpha_Phi_K calibration, or Full Topic 13 closure."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.0,
+    "space_response": 0.15,
+    "effective_mass": 1.0,
+    "quartic_coupling": 1.0,
+    "tree_vertex_tensor_norm": 4.898979485566356,
+    "tree_vertex_symmetry_residual": 0.0,
+    "tree_vertex_o2_rotation_residual": 8.881784197001252e-16,
+    "contour_action_identity_residual": 3.4670477549072174e-16,
+    "contour_classical_vertex_weight": 1.0,
+    "contour_quantum_vertex_weight": 0.25,
+    "cutoff_multipliers": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "bubble_cutoffs": [
+      8.0,
+      16.0,
+      32.0,
+      64.0
+    ],
+    "bubble_vacuum_values": [
+      0.022597086107791535,
+      0.03126592463940775,
+      0.04001699219816668,
+      0.04878885192486508
+    ],
+    "bubble_thermal_values": [
+      0.00015534712733347337,
+      0.00015534712733347673,
+      0.00015534712733347665,
+      0.00015534712733347798
+    ],
+    "bubble_total_values": [
+      0.02275243323512501,
+      0.03142127176674123,
+      0.040172339325500156,
+      0.04894419905219856
+    ],
+    "one_loop_vertex_norms": [
+      4.620992433787383,
+      4.515461149399941,
+      4.409167450906695,
+      4.3028795849193475
+    ],
+    "one_loop_correction_norms": [
+      0.2895911969229193,
+      0.39992749811582634,
+      0.5113104039573872,
+      0.6229579508919684
+    ],
+    "thermal_cutoff_relative_change": 2.9661695791593287e-14,
+    "vacuum_growth_ratio": 2.1590771346418225,
+    "one_loop_correction_growth_ratio": 2.151163286423315,
+    "kms_ratio_residual": 0.0,
+    "kms_noise_fdt_residual": 2.1737996091473846e-16,
+    "one_loop_renormalized_vertex_completed": false,
+    "full_interacting_sk_kms_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_ONE_LOOP_VERTEX_UV_BOUNDARY_NOT_RENORMALIZED"
+  },
+  "checks": {
+    "zero_chemical_potential_domain_is_explicit": true,
+    "o2_vertex_permutation_symmetry_holds": true,
+    "o2_vertex_rotation_invariance_holds": true,
+    "tree_level_sk_contour_identity_holds": true,
+    "thermal_bubble_is_positive_and_finite": true,
+    "vacuum_bubble_is_positive_and_finite": true,
+    "thermal_bubble_is_cutoff_stable": true,
+    "vacuum_bubble_grows_with_cutoff": true,
+    "one_loop_correction_growth_is_visible": true,
+    "one_loop_vertex_values_are_finite": true,
+    "equilibrium_kms_ratio_holds": true,
+    "equilibrium_kms_noise_fdt_holds": true,
+    "renormalized_vertex_not_claimed": true,
+    "full_interacting_sk_not_claimed": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "renormalization_boundary_is_explicit": true,
+    "finite_density_boundary_is_explicit": true,
+    "thermal_and_external_boundaries_are_explicit": true
+  },
+  "failed_checks": [],
+  "one_loop_renormalized_vertex_completed": false,
+  "full_interacting_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "vacuum_counterterm_and_renormalized_microscopic_vertex_missing",
+  "next_controller": "derive a declared vacuum counterterm and finite-density charged propagator/vertex before claiming an interacting microscopic SK/KMS match; keep alpha/source/holdout gates independent",
+  "claim_promotion": false
+}

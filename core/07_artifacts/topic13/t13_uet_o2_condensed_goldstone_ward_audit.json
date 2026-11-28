@@ -1,0 +1,253 @@
+{
+  "schema_version": "t13-uet-o2-condensed-goldstone-ward-v1",
+  "artifact": "t13_uet_o2_condensed_goldstone_ward_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_SCOPED_CONDENSED_GOLDSTONE_WARD_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSED_GOLDSTONE_WARD_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the tree stationary condensate boundary satisfies the zero-momentum Goldstone condition",
+      "the declared finite-temperature scheme-B stationary witness is interior and has a resolved nonzero zero-momentum low-mode gap",
+      "the current stationary witness therefore cannot be accepted as a symmetry-consistent broken O(2) phase or phase-transition result",
+      "the current scheme cannot satisfy its stationarity condition and the Goldstone/Ward condition at the same condensate point",
+      "a symmetry-improved or otherwise Ward-preserving finite-temperature condensed construction is required before condensed EOS promotion"
+    ],
+    "equation_or_mapping": {
+      "tree_ward_boundary": "x_boundary=q/lambda, omega_G^2(k=0)=0",
+      "off_shell_modes": "(y-k^2-r_sigma/Z)(y-k^2-r_pi/Z)-4*mu^2*y=0",
+      "ward_test": "omega_G^2(k=0; x_stationary) = 0 is required for a broken O(2) stationary branch",
+      "observed_boundary": "omega_G^2(k=0; x_boundary)=0",
+      "boundary_stationarity": "partial_x Omega_scheme_B(x_boundary)=-0.13207100582827716 != 0",
+      "observed_stationary": "omega_G^2(k=0; x_stationary)>0 for the declared scheme-B witness"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_mode_squared": "natural energy squared",
+      "temperature_and_chemical_potential": "natural energy",
+      "Phi": "fixed effective response input; no SI map"
+    },
+    "derivation_class": "action-derived off-shell O(2) determinant plus finite-temperature stationarity witness; scoped Ward consistency audit, not microscopic completion",
+    "observable": "zero-momentum phase-mode Ward residual of the declared stationary condensate witness",
+    "data_role": "INTERNAL_ACTION_DERIVED_WARD_BOUNDARY_NOT_EXTERNAL_VALIDATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+        "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+      },
+      {
+        "path": "docs/core/uet_o2_gaussian_offshell_background.py",
+        "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CONDENSED_GOLDSTONE_WARD_BOUNDARY",
+    "open_blockers": [
+      "physical_finite_temperature_renormalization_scheme_missing",
+      "ward_preserving_condensed_2PI_or_1N_completion_missing",
+      "condensate_and_finite_temperature_normal_two_fluid_eos_completion_missing",
+      "retarded_physical_Kubo_match_missing",
+      "microscopic_SK_KMS_matching_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "Goldstone/Ward rejection of the current stationarity witness only; no condensed phase, phase transition, two-fluid, transport, Core, Gravity, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only a scoped Ward-consistency boundary. It rejects the current finite-temperature stationarity witness as a complete broken O(2) phase because its zero-momentum phase mode is gapped. It does not prove that every future symmetry-improved construction fails, and it does not close the condensed EOS, Kubo/SK-KMS transport, SI mapping, alpha_Phi_K, TTG, or Full Topic 13."
+  },
+  "contract": {
+    "status": "SCOPED_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+    "equations": {
+      "x_definition": "x=A^2",
+      "stable_domain": "x>=q/lambda, q=Z*mu^2-m_eff(Phi)^2>0",
+      "taylor_subtracted_vacuum": "V_vac^R(x)=integral[S(x)-S(x_*)-(x-x_*)S'(x_*)-1/2*(x-x_*)^2*S''(x_*)] d^3k/(2*pi)^3",
+      "finite_local_counterterm": "Delta V_a(x)=a*(x-x_*)^3/Lambda_*^2",
+      "shared_reference_conditions": "Delta V_a(x_*)=partial_x Delta V_a(x_*)=partial_x^2 Delta V_a(x_*)=0",
+      "stationarity": "partial_x[Omega_tree+Omega_G+V_vac^R+Delta V_a]=0",
+      "witness": "scheme_A(a=0) and scheme_B(a=-0.05) share anchors but have different stationary-point behavior"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_reference_x": "natural amplitude squared",
+      "Lambda_star_sq": "natural amplitude squared",
+      "Omega": "natural thermodynamic density",
+      "Phi": "fixed action response input; no SI map",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "internal two-scheme finite-counterterm identifiability witness with analytic mode derivatives and numerical convergence",
+    "scope": {
+      "scheme_A": "declared Taylor-subtracted Gaussian completion with a=0",
+      "scheme_B": "same reference anchors plus declared finite local coefficient a=-0.05",
+      "vacuum_counterterm": "declared finite subtraction only; not source or microscopic matching",
+      "condensed_branch": "stationarity witness only; not a complete interacting branch",
+      "physical_kubo": "NOT_INCLUDED",
+      "sk_kms": "NOT_MATCHED_MICROSCOPICALLY"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace only; not an independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "claim_boundary": "This closes only the structural non-identifiability of a finite-temperature condensed stationarity outcome under two admissible finite local completions sharing the current reference anchors. It does not select a physical renormalization scheme, establish a physical phase transition, close two-fluid transport, provide SK/KMS/Kubo coefficients, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "reference": {
+    "quadrature_order": 256,
+    "momentum_cutoff": 176.24840424809526,
+    "x_boundary": 1.9175,
+    "stationary_x": 2.169974254196495,
+    "scheme_b_boundary_derivative": -0.13207100582827716,
+    "stationarity_residual": -5.118322432551281e-12,
+    "tree_boundary_low_mode_sq": 0.0,
+    "tree_boundary_high_mode_sq": 9.316666666666668,
+    "stationary_low_mode_sq": 0.05185301641084461,
+    "stationary_high_mode_sq": 9.938078328113143
+  },
+  "reference_parameters": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "scheme_b_coefficient": -0.05,
+    "goldstone_zero_tolerance": 1e-10,
+    "goldstone_gap_floor": 0.0001
+  },
+  "quadrature_records": [
+    {
+      "quadrature_order": 96,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.1699742328783764,
+      "scheme_b_boundary_derivative": -0.1320710058437265,
+      "stationarity_residual": -4.14737688636535e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.05185301158184963,
+      "stationary_high_mode_sq": 9.938078276093822
+    },
+    {
+      "quadrature_order": 192,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.169974254196495,
+      "scheme_b_boundary_derivative": -0.13207100582826875,
+      "stationarity_residual": -5.0751347568933625e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.05185301641084461,
+      "stationary_high_mode_sq": 9.938078328113143
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.169974254196495,
+      "scheme_b_boundary_derivative": -0.13207100582827716,
+      "stationarity_residual": -5.118322432551281e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.05185301641084461,
+      "stationary_high_mode_sq": 9.938078328113143
+    }
+  ],
+  "quadrature_convergence_relative_errors": {
+    "stationary_x": 0.0,
+    "stationary_low_mode_sq": 0.0,
+    "stationary_high_mode_sq": 0.0
+  },
+  "cutoff_records": [
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 97.9157801378307,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.169981828239653,
+      "scheme_b_boundary_derivative": -0.1320762238661832,
+      "stationarity_residual": -3.243807999986359e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.051854732092727396,
+      "stationary_high_mode_sq": 9.938096809879681,
+      "cutoff_factor": 50.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 137.082092192963,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.1699764633005545,
+      "scheme_b_boundary_derivative": -0.13207252772119665,
+      "stationarity_residual": 6.847647449070848e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.05185351681896844,
+      "stationary_high_mode_sq": 9.938083718649178,
+      "cutoff_factor": 70.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "x_boundary": 1.9175,
+      "stationary_x": 2.169974254196495,
+      "scheme_b_boundary_derivative": -0.13207100582827716,
+      "stationarity_residual": -5.118322432551281e-12,
+      "tree_boundary_low_mode_sq": 0.0,
+      "tree_boundary_high_mode_sq": 9.316666666666668,
+      "stationary_low_mode_sq": 0.05185301641084461,
+      "stationary_high_mode_sq": 9.938078328113143,
+      "cutoff_factor": 90.0
+    }
+  ],
+  "cutoff_relative_errors": {
+    "stationary_x": 1.018032382369693e-06,
+    "stationary_low_mode_sq": 9.650511358144343e-06,
+    "stationary_high_mode_sq": 5.424123112485773e-07
+  },
+  "external_literature_context": {
+    "source_url": "https://arxiv.org/abs/0810.5510",
+    "title": "Kaon condensation in the color-flavor-locked phase of quark matter, the Goldstone theorem, and the 2PI Hartree approximation",
+    "authors": [
+      "Jens O. Andersen",
+      "Lars E. Leganger"
+    ],
+    "role": "primary literature context for finite-temperature 2PI Hartree renormalization and Goldstone consistency; not a numeric UET input"
+  },
+  "checks": {
+    "all_reference_values_are_finite": true,
+    "tree_boundary_satisfies_goldstone_zero_mode": true,
+    "stationary_point_is_interior": true,
+    "stationarity_residual_is_closed": true,
+    "stationary_modes_are_positive": true,
+    "stationary_goldstone_gap_is_resolved": true,
+    "current_scheme_is_not_stationary_at_ward_boundary": true,
+    "ward_and_current_stationarity_are_incompatible": true,
+    "stationary_witness_fails_goldstone_ward_identity": true,
+    "quadrature_gap_converges": true,
+    "cutoff_gap_converges": true,
+    "finite_counterterm_is_declared_not_fitted": true,
+    "physical_phase_transition_is_not_claimed": true,
+    "physical_kubo_is_not_emitted": true,
+    "natural_units_are_declared": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_is_separate": true,
+    "no_holdout_or_fit": true
+  },
+  "failed_checks": [],
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_stationarity_scheme.py": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f",
+    "docs/core/uet_o2_gaussian_offshell_background.py": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+  },
+  "controlling_blocker": "ward_preserving_condensed_2PI_or_1N_completion_missing",
+  "next_controller": "Replace the current stationarity witness with a Ward-preserving symmetry-improved 2PI or controlled 1/N condensed construction, then rerun the finite-temperature EOS and state-matched Kubo/SK-KMS gates.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  },
+  "parameter_policy": {
+    "scheme_b_coefficient": "declared internal witness, not fitted to target data",
+    "ward_gap_floor": "fixed numerical rejection tolerance, not a physical threshold"
+  }
+}

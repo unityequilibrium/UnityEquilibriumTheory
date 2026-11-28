@@ -1,0 +1,110 @@
+{
+  "schema_version": "t13-dimensional-bridge-contract-v1",
+  "artifact": "t13_dimensional_bridge_contract_audit",
+  "generated_at": "2026-09-15",
+  "status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
+  "major_result": {
+    "major_result_id": "T13_ALPHA_PHI_K_CONDITIONAL_DERIVATION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "The local-equilibrium alpha_Phi_K formula, regularity domain, and dimensional unit contract are implemented as an explicit conditional bridge.",
+    "equation_or_mapping": {
+      "free_energy": "f_th(C,Phi,T) = e0 * f_hat(C,Phi; a_Phi(T), ...)",
+      "equilibrium": "a_Phi(T0)*Phi0 + b_Phi*Phi0^3 - (g/2)*C0^2 = 0",
+      "alpha_conditional": "alpha_Phi_K = -(a_Phi(T0) + 3*b_Phi*Phi0^2) / (a_Phi'(T0)*Phi0)",
+      "joint_response": "Delta_Tq = -((a_Phi + 3*b_Phi*Phi0^2)*Delta_Phi - g*C0*Delta_C)/(a_Phi'(T0)*Phi0)"
+    },
+    "units": {
+      "C": "dimensionless normalized coordinate",
+      "Phi": "dimensionless normalized response coordinate",
+      "a_phi_T0": "dimensionless coefficient in f_hat",
+      "b_phi": "dimensionless coefficient in f_hat",
+      "da_phi_dT_per_K": "K^-1",
+      "e0_J_per_m3": "J m^-3",
+      "free_energy_density": "J m^-3",
+      "entropy_density": "J m^-3 K^-1",
+      "alpha_Phi_K": "K per normalized Phi",
+      "Delta_Tq": "K"
+    },
+    "derivation_class": "conditional implicit-function derivation with explicit normalized-to-SI unit contract",
+    "observable": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+    "data_role": "symbolic/formula audit; no target, calibration, or holdout data",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_dimensional_bridge_contract_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json",
+        "sha256": "62943cca93cedf856959a3d01dfa8e44fbd5ddae086b9ad7cf0b06427da9b816"
+      }
+    ],
+    "verification_status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
+    "open_blockers": [
+      "a_Phi_T_origin_not_source_locked",
+      "dimensional_free_energy_density_scale_e0_missing",
+      "equilibrium_phi_reference_and_temperature_branch_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "conditional formula/unit lane only; no Kelvin prediction or downstream transport dependency",
+    "claim_boundary": "The formula is conditional on new thermal inputs and is not a first-principles UET prediction or numeric calibration."
+  },
+  "conditional_inputs": {
+    "a_Phi_T": {
+      "status": "OPEN_NOT_SOURCE_LOCKED",
+      "units": "dimensionless coefficient function"
+    },
+    "da_Phi_dT": {
+      "status": "OPEN_NOT_SOURCE_LOCKED",
+      "units": "K^-1"
+    },
+    "e0": {
+      "status": "OPEN_NOT_SOURCE_LOCKED",
+      "units": "J m^-3"
+    },
+    "Phi0": {
+      "status": "OPEN_BRANCH_REFERENCE",
+      "units": "normalized Phi"
+    },
+    "b_Phi_and_g": {
+      "status": "NORMALIZED_CANDIDATE_ONLY",
+      "units": "dimensionless in f_hat"
+    }
+  },
+  "checks": {
+    "conditional_alpha_formula_is_implemented": true,
+    "joint_response_formula_is_implemented": true,
+    "free_energy_density_unit_path_is_implemented": true,
+    "entropy_density_unit_path_is_implemented": true,
+    "regularity_domain_is_enforced": true,
+    "alpha_unit_contract_explicit": true,
+    "energy_scale_unit_contract_explicit": true,
+    "entropy_unit_contract_explicit": true,
+    "reference_formula_is_recorded": true,
+    "temperature_law_missing_is_explicit": true,
+    "energy_scale_missing_is_explicit": true,
+    "cross_lane_comparator_not_promoted": true,
+    "o2_finite_temperature_not_promoted": true,
+    "normalized_scale_no_go_preserved": true,
+    "target_data_not_used": true,
+    "xie_2026_not_consumed": true,
+    "no_numeric_alpha_emitted": true
+  },
+  "input_identity": {
+    "derivation_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_derivation_audit.json",
+    "derivation_sha256": "62943cca93cedf856959a3d01dfa8e44fbd5ddae086b9ad7cf0b06427da9b816",
+    "inventory_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/thermal_closure_source_inventory.json",
+    "inventory_sha256": "2586399a694ec8ac1533cabba8d5460ac865f19f939d5223ad851a5a7b3bf4d5",
+    "calibration_path": "docs/core/artifacts/thermal_dimensional_calibration_contract.json",
+    "calibration_sha256": "2e4117e7ac400cb4de4877b5750c1f16013f35c824122b16eb414f83719214b1"
+  },
+  "witness": {
+    "role": "unit and regularity test only; not an external input or fitted alpha",
+    "alpha_K_per_normalized_phi": -190.0,
+    "joint_delta_Tq_K": -3.56,
+    "free_energy_density_J_per_m3": 0.75,
+    "entropy_density_J_per_m3_K": -0.03
+  },
+  "controlling_blocker": "conditional_alpha_inputs_a_Phi_T_e0_and_equilibrium_reference_not_source_locked",
+  "next_controller": "source-lock or derive a_Phi(T), da_Phi/dT, e0, and the equilibrium Phi branch independently of TTG target residuals and Xie 2026",
+  "claim_boundary": "This closes a conditional formula and unit lane only. It does not close alpha_Phi_K, the dimensional observable map, the thermal bridge, or Full Topic 13."
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "t13-calorine-zenodo-nep-bte-candidate-boundary-v1",
+  "artifact": "t13_calorine_zenodo_nep_bte_candidate_boundary_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_SCOPED_CALORINE_NEP_BTE_CANDIDATE_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_ZENODO_NEP_BTE_CANDIDATE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the public Calorine tutorial route is source-located to its documentation and Zenodo input record",
+      "the public package contains graphite structure and NEP model inputs, not deposited mode-resolved C_src rows or force-constant/PBTE output",
+      "the tutorial itself declares small supercell/mesh and RTA settings as convenience settings rather than converged graphite transport evidence",
+      "the route is classified as a candidate independent-reproduction path and is not promoted into Topic 13 source closure"
+    ],
+    "equation_or_mapping": {
+      "candidate_route": "NEP graphite -> fc2/fc3 -> phono3py BTE -> mode-resolved heat-capacity rows",
+      "required_topic13_quantity": "C_src(T)=sum_mu c_mu(T), with C_src rows in J m^-3 K^-1",
+      "measurement_layer": "y_TTG = Delta_Tq(t) / Delta_Tq(0)"
+    },
+    "units": {
+      "source_inputs": "graphite structure; NEP model units are source/package-defined",
+      "required_output": "J m^-3 K^-1 for C_src(T); source-grade uncertainty required",
+      "tutorial_transport_output": "W m^-1 K^-1 for thermal conductivity"
+    },
+    "derivation_class": "public-source provenance and acceptance-boundary audit; no UET derivation",
+    "observable": "candidate graphite PBTE heat-capacity/transport reproduction",
+    "data_role": "EXTERNAL_CANDIDATE_ROUTE_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_candidate_boundary_audit.json"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CALORINE_NEP_BTE_CANDIDATE_BOUNDARY",
+    "open_blockers": [
+      "calorine_route_has_no_deposited_mode_resolved_C_src_rows",
+      "calorine_route_has_no_source_grade_uncertainty_or_convergence_package",
+      "calorine_route_material_defect_state_is_not_mapped_to_Ding_natural_graphite_TTG",
+      "calorine_route_does_not_supply_base_Phi_SI_anchor_or_alpha_Phi_K"
+    ],
+    "dependency_unlocked": "public candidate-route provenance only; no Ding C_src, alpha, bridge, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes only the public Calorine/Zenodo candidate-route boundary. It is not an accepted Ding-regime PBTE reproduction, not a source-backed C_src package, not an alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "documentation_url": "https://calorine.materialsmodeling.org/get_started/thermal_conductivity_bte.html",
+    "zenodo_record_url": "https://zenodo.org/records/21198312",
+    "zenodo_record_doi": "10.5281/zenodo.21198312",
+    "tutorial_inputs": [
+      {
+        "name": "graphite-prim.xyz",
+        "source_locator": "https://zenodo.org/api/records/21198312/files/graphite-prim.xyz/content",
+        "source_checksum": "md5:76a98ce37aa503552a23883c4054f64a",
+        "size_bytes": 324
+      },
+      {
+        "name": "nep-C.txt",
+        "source_locator": "https://zenodo.org/api/records/21198312/files/nep-C.txt/content",
+        "source_checksum": "md5:6196d0146f2314249bc2c8b9b743cad5",
+        "size_bytes": 116974,
+        "upstream_model_origin_locator": "https://github.com/brucefan1983/GPUMD/blob/master/potentials/nep/C_2024_NEP4.txt",
+        "provenance_note": "Zenodo record supplies the local bytes; the record identifies the GPUMD path as the model origin."
+      }
+    ],
+    "underlying_record_payload_inventory": [
+      "NEP model files",
+      "graphite primitive/relaxed structures",
+      "ASE DFT databases for model construction",
+      "no deposited fc2.hdf5",
+      "no deposited fc3.hdf5",
+      "no deposited mode-resolved C_src rows",
+      "no uncertainty/convergence report for the Topic 13 acceptance contract"
+    ],
+    "tutorial_declared_controls": {
+      "supercell": "4x4x2",
+      "q_mesh": "16x16x8",
+      "transport_solver": "RTA via --bterta",
+      "tutorial_warning": "the documentation says larger supercell/mesh and LBTE are needed for accurate graphite transport"
+    },
+    "zenodo_record_role": "byte source for the local tutorial input files",
+    "upstream_model_origin": {
+      "locator": "https://github.com/brucefan1983/GPUMD/blob/master/potentials/nep/C_2024_NEP4.txt",
+      "role": "upstream model origin identified by the Zenodo tutorial record; local bytes remain pinned by Zenodo hash"
+    },
+    "related_zenodo_record_7811021": {
+      "locator": "https://zenodo.org/records/7811021",
+      "role": "related rotational-disorder record, not the nep-C.txt input source"
+    }
+  },
+  "acceptance": {
+    "accepted_for_full_topic13": false,
+    "accepted_as_independent_csrc_reproduction": false,
+    "candidate_route_ready_for_future_rerun": true,
+    "raw_numeric_or_reproduction_payload_present": false,
+    "mode_resolved_csrc_rows_present": false,
+    "source_grade_uncertainty_present": false,
+    "mesh_or_numerical_convergence_present": false,
+    "material_state_mapping_to_ding_present": false,
+    "base_phi_si_anchor_present": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "target_fit_performed": false,
+    "holdout_accessed": false,
+    "fit_or_tuning_used": false
+  },
+  "checks": {
+    "documentation_locator_present": true,
+    "zenodo_locator_present": true,
+    "input_checksums_present": true,
+    "tutorial_explicitly_warns_small_supercell_mesh": true,
+    "tutorial_explicitly_uses_rta": true,
+    "deposited_csrc_payload_present": false,
+    "source_grade_uncertainty_present": false,
+    "material_regime_mapping_present": false,
+    "base_phi_anchor_present": false,
+    "alpha_phi_k_fit_not_performed": true,
+    "holdout_not_accessed": true,
+    "upstream_model_origin_recorded": true
+  },
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_controller": "If this route is pursued, run a separately source-locked PBTE reproduction with declared graphite defect/isotope state, converged fc2/fc3 and q-mesh, mode-resolved C_src(T), uncertainty, and an independent no-fit/no-holdout audit; otherwise retain it as comparator provenance only.",
+  "claim_boundary": "Candidate source route only. No numeric C_src, no temperature prediction, no alpha_Phi_K, no holdout result, and no Full Topic 13 closure are emitted."
+}

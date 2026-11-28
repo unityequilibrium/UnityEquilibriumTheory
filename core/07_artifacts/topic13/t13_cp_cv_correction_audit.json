@@ -1,0 +1,108 @@
+{
+  "schema_version": "t13-cp-cv-correction-audit-v1",
+  "artifact": "t13_cp_cv_correction_audit",
+  "generated_at": "2026-08-11",
+  "status": "PASS_FORMULA_UNIT_CONTRACT_OPEN_INPUTS",
+  "major_result": {
+    "major_result_id": "T13_CP_CV_CORRECTION_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "The standard c_p-to-c_v correction, mass-to-volume conversion, unit contract, and first-order uncertainty propagation are explicit and tested; no material calibration is emitted.",
+    "equation_or_mapping": {
+      "mass_specific": "c_p - c_v = T * alpha_V^2 * K_T / rho",
+      "volumetric": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
+      "volumetric_cp": "c_p^V = rho * c_p",
+      "volumetric_cv": "c_v^V = rho * c_p - T * alpha_V^2 * K_T",
+      "uncertainty": "sigma_cvV from independent first-order input propagation; covariance is not supplied"
+    },
+    "units": {
+      "T": "K",
+      "alpha_V": "K^-1",
+      "K_T": "Pa = J m^-3",
+      "rho": "kg m^-3",
+      "c_p_mass": "J kg^-1 K^-1",
+      "c_v_volumetric": "J m^-3 K^-1"
+    },
+    "derivation_class": "standard thermodynamic identity with unit-checked implementation and first-order uncertainty propagation",
+    "observable": "volumetric c_v input to the named Phi_E response branch",
+    "data_role": "FORMULA_CONTRACT_ONLY; synthetic witness not calibration",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_cp_cv_correction_audit.json"
+      },
+      {
+        "path": "docs/core/thermal_cp_cv_correction.py",
+        "sha256": "5b768b74f46e7734acc1372a51bdbcaca28d7f822be151cc248675dac446ff47"
+      }
+    ],
+    "verification_status": "PASS_FORMULA_UNIT_CONTRACT_OPEN_INPUTS",
+    "open_blockers": [
+      "volumetric_alpha_V_not_source_locked",
+      "isothermal_bulk_modulus_K_T_not_source_locked",
+      "density_uncertainty_not_source_locked",
+      "c_v_source_uncertainty_not_closed",
+      "material_regime_mapping_to_TTG_not_closed"
+    ],
+    "dependency_unlocked": "c_p-to-c_v formula contract only; no volumetric c_v calibration or base Phi Kelvin prediction",
+    "claim_boundary": "This closes the standard correction equation as a named formula lane. It does not provide graphite alpha_V, K_T, density uncertainty, c_v, e0, alpha_Phi_K, or any TTG prediction."
+  },
+  "source_anchor": {
+    "source_id": "nist_sp960_11_materials_properties",
+    "source_url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication960-11.pdf",
+    "locator": "Section 6.3.1.5, pp. 69-70, Eq. (21)",
+    "role": "standard thermodynamic relation and units guidance",
+    "numeric_graphite_inputs_consumed": false
+  },
+  "contract": {
+    "formula_mass_specific": "c_p - c_v = T * alpha_V^2 * K_T / rho",
+    "formula_volumetric": "c_p^V - c_v^V = T * alpha_V^2 * K_T",
+    "volumetric_cp_map": "c_p^V = rho * c_p",
+    "volumetric_cv_map": "c_v^V = rho * c_p - T * alpha_V^2 * K_T",
+    "alpha_V": "volumetric thermal expansion coefficient [K^-1]",
+    "K_T": "isothermal bulk modulus [Pa = J m^-3]",
+    "rho": "mass density [kg m^-3]",
+    "c_p_mass": "mass-specific constant-pressure heat capacity [J kg^-1 K^-1]",
+    "c_v_volumetric": "constant-volume heat capacity density [J m^-3 K^-1]",
+    "uncertainty_method": "independent first-order propagation; no covariance supplied",
+    "source_role": "standard thermodynamic identity; numeric material inputs remain open",
+    "base_Phi_identity": "not asserted",
+    "R_gen_identity": "unchanged derived history trace; no new physical state"
+  },
+  "checks": {
+    "mass_formula_is_explicit": true,
+    "volumetric_formula_is_explicit": true,
+    "mass_and_volume_corrections_are_consistent": true,
+    "mass_cv_map_is_consistent": true,
+    "volumetric_cv_is_positive": true,
+    "uncertainty_propagation_is_finite": true,
+    "cp_unit_is_mass_specific": true,
+    "cv_unit_is_volumetric": true,
+    "alpha_requires_volumetric_definition": true,
+    "bulk_modulus_is_isothermal": true,
+    "uncertainty_policy_is_explicit": true,
+    "base_phi_identity_is_not_asserted": true,
+    "r_gen_boundary_is_preserved": true
+  },
+  "witness": {
+    "role": "synthetic algebra and unit witness only",
+    "temperature_K": 573.15,
+    "cp_mass_J_per_kg_K": 1259.81694473522,
+    "density_kg_per_m3": 1780.0,
+    "alpha_volume_per_K": 2e-05,
+    "bulk_modulus_Pa": 30000000000.0,
+    "cp_minus_cv_mass_J_per_kg_K": 3.8639325842696635,
+    "cp_minus_cv_volumetric_J_per_m3_K": 6877.800000000001,
+    "cv_mass_J_per_kg_K": 1255.9530121509504,
+    "cv_volumetric_J_per_m3_K": 2235596.3616286917,
+    "sigma_cv_volumetric_J_per_m3_K": 126857.3147643325,
+    "not_a_source_value": true
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "controlling_blocker": "alpha_V_K_T_density_uncertainty_and_material_regime_inputs_not_source_locked",
+  "next_controller": "source-lock volumetric alpha_V, isothermal K_T, density uncertainty, and TTG material-regime correspondence before producing c_v",
+  "claim_boundary": "Formula closure only; Topic 13 full bridge remains blocked and global claim promotion remains false."
+}

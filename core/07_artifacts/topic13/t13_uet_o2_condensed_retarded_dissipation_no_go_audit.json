@@ -1,0 +1,187 @@
+{
+  "schema_version": "t13-uet-o2-condensed-retarded-dissipation-no-go-v1",
+  "artifact": "t13_uet_o2_condensed_retarded_dissipation_no_go_audit",
+  "generated_at": "2026-08-16",
+  "status": "PASS_SCOPED_CONDENSED_RETARDED_DISSIPATION_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSED_RETARDED_DISSIPATION_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the conservative action fixes the condensed phase stiffness and tree Goldstone sector",
+      "the conservative action alone has no dissipative imaginary retarded kernel",
+      "two causal positive-memory extensions can agree at zero frequency and differ at finite frequency",
+      "a unique condensed dissipative kernel requires an independent SK/influence-functional derivation or state-matched retarded source"
+    ],
+    "equation_or_mapping": {
+      "condensed_branch": "q=Z*mu^2-m_eff(Phi)^2>0",
+      "phase_stiffness": "f_s=Z*q/lambda",
+      "goldstone_boundary": "det K_tree(omega,k)=0 and omega_G(k->0)->0",
+      "conservative_retarded_kernel": "K_R^cons(omega,k) is real; Im K_R^cons=0",
+      "causal_memory_witness": "M_R,j(t)=gamma*Lambda_j*exp(-Lambda_j*t)*H(t)",
+      "frequency_memory_witness": "M_R,j(omega)=gamma*Lambda_j/(Lambda_j-i*omega)",
+      "entropy_boundary": "Re M_R,j(omega)>=0 for omega>=0",
+      "identifiability_witness": "M_R,A(0)=M_R,B(0) but M_R,A(omega_probe)!=M_R,B(omega_probe)"
+    },
+    "units": {
+      "unit_lane": "natural normalized structural diagnostic",
+      "phase_stiffness": "natural action-derived coefficient",
+      "memory_kernel": "normalized witness; no physical transport units assigned",
+      "gamma_and_cutoff": "witness parameters, not calibrated coefficients",
+      "Phi": "effective response variable; not temperature or a metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "tree-level conservative O(2) phase action plus explicit causal PSD memory-kernel witnesses; structural identifiability no-go",
+    "observable": "difference between admissible retarded condensed dissipative extensions of the same conservative phase sector",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NOT_PHYSICAL_TRANSPORT_EVIDENCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensed_retarded_dissipation_no_go.py",
+        "sha256": "10c05e45a462c4748df6300d5ee48c81fe2b95da6903317015fe2e13134801e3"
+      },
+      {
+        "path": "docs/core/uet_o2_condensate_fluctuations.py",
+        "sha256": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      },
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      },
+      {
+        "path": "docs/core/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CONDENSED_RETARDED_DISSIPATION_NO_GO",
+    "open_blockers": [
+      "condensed_sk_influence_functional_or_physical_retarded_correlator_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "complete_two_fluid_constitutive_tensor_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "condensed conservative-action dissipation no-go only; requires SK/influence or matched retarded source before physical transport",
+    "claim_boundary": "This closes only the scoped no-go that the current conservative condensed action cannot identify a unique dissipative retarded kernel. It does not supply a physical coefficient or close the SK/KMS, SI, alpha_Phi_K, TTG, or Full Topic 13 gates."
+  },
+  "contract": {
+    "status": "PASS_SCOPED_CONDENSED_RETARDED_DISSIPATION_NO_GO",
+    "equations": {
+      "condensed_branch": "q=Z*mu^2-m_eff(Phi)^2>0",
+      "phase_stiffness": "f_s=Z*q/lambda",
+      "goldstone_boundary": "det K_tree(omega,k)=0 and omega_G(k->0)->0",
+      "conservative_retarded_kernel": "K_R^cons(omega,k) is real; Im K_R^cons=0",
+      "causal_memory_witness": "M_R,j(t)=gamma*Lambda_j*exp(-Lambda_j*t)*H(t)",
+      "frequency_memory_witness": "M_R,j(omega)=gamma*Lambda_j/(Lambda_j-i*omega)",
+      "entropy_boundary": "Re M_R,j(omega)>=0 for omega>=0",
+      "identifiability_witness": "M_R,A(0)=M_R,B(0) but M_R,A(omega_probe)!=M_R,B(omega_probe)"
+    },
+    "unit_contract": {
+      "unit_lane": "natural normalized structural diagnostic",
+      "phase_stiffness": "natural action-derived coefficient",
+      "memory_kernel": "normalized witness; no physical transport units assigned",
+      "gamma_and_cutoff": "witness parameters, not calibrated coefficients",
+      "Phi": "effective response variable; not temperature or a metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "tree-level conservative O(2) phase action plus explicit causal PSD memory-kernel witnesses; structural identifiability no-go",
+    "observable": "difference between admissible retarded condensed dissipative extensions of the same conservative phase sector",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NOT_PHYSICAL_TRANSPORT_EVIDENCE",
+    "closed_scope": [
+      "the conservative action fixes the condensed phase stiffness and tree Goldstone sector",
+      "the conservative action alone has no dissipative imaginary retarded kernel",
+      "two causal positive-memory extensions can agree at zero frequency and differ at finite frequency",
+      "a unique condensed dissipative kernel requires an independent SK/influence-functional derivation or state-matched retarded source"
+    ],
+    "excluded_scope": [
+      "physical Kubo coefficient",
+      "microscopic condensed collision kernel",
+      "complete two-fluid constitutive tensor",
+      "SI heat-flux or Phi normalization",
+      "numeric alpha_Phi_K",
+      "TTG prediction or external validation"
+    ],
+    "claim_boundary": "This closes only the scoped no-go that the current conservative condensed action cannot identify a unique dissipative retarded kernel. It does not supply a physical coefficient or close the SK/KMS, SI, alpha_Phi_K, TTG, or Full Topic 13 gates."
+  },
+  "state": {
+    "temperature": 0.2,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "wavenumber": 0.23,
+    "omega_probe": 0.7,
+    "condensate_control": 1.534,
+    "goldstone_frequency": 0.12113458500770467,
+    "radial_frequency": 3.067212591096626,
+    "goldstone_polynomial_residual": -2.040034807748725e-15,
+    "phase_stiffness": 2.3009999999999997,
+    "conservative_static_kernel": 0.1217229,
+    "conservative_imaginary_part": 0.0,
+    "witness_zero_frequency_a": {
+      "real": 0.8,
+      "imag": 0.0
+    },
+    "witness_zero_frequency_b": {
+      "real": 0.8,
+      "imag": 0.0
+    },
+    "witness_probe_a": {
+      "real": 0.5369127516778524,
+      "imag": 0.3758389261744966
+    },
+    "witness_probe_b": {
+      "real": 0.776228016979988,
+      "imag": 0.13583990297149787
+    },
+    "witness_parameters": {
+      "gamma": 0.8,
+      "cutoff_a": 1.0,
+      "cutoff_b": 4.0,
+      "role": "normalized structural witnesses, not physical coefficients"
+    }
+  },
+  "checks": {
+    "condensed_branch_is_selected": true,
+    "tree_goldstone_polynomial_closes": true,
+    "phase_stiffness_is_positive": true,
+    "conservative_imaginary_part_is_zero": true,
+    "witness_a_is_causal": true,
+    "witness_b_is_causal": true,
+    "witness_a_has_nonnegative_real_part": true,
+    "witness_b_has_nonnegative_real_part": true,
+    "zero_frequency_reactive_match": true,
+    "finite_frequency_witnesses_are_distinct": true,
+    "same_conservative_static_kernel": true,
+    "physical_transport_coefficient_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_remains_separate": true
+  },
+  "failed_checks": [],
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "condensed_sk_influence_functional_or_physical_retarded_correlator_missing",
+  "next_controller": "obtain an allowed state-matched retarded correlator or derive a microscopic condensed SK/influence functional; do not promote the normalized memory witnesses",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  }
+}

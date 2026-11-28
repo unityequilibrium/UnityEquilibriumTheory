@@ -1,0 +1,104 @@
+{
+  "schema_version": "t13-gatech-source-audit-v1",
+  "artifact": "t13_gatech_graphite_source_audit",
+  "generated_at": "2026-08-11",
+  "status": "PASS_SOURCE_CP_95CI_CV_OPEN",
+  "major_result": {
+    "major_result_id": "T13_SOURCE_CP_95CI_ANCHOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "One independent graphite specific-heat row, workbook identity, raw hash, Celsius-to-kelvin locator, 95% confidence interval, publisher interpolation, and derived-conductivity dependency are source-locked without target fitting.",
+    "equation_or_mapping": "c_p,mass(T=573.15 K) = 1.25981694473522 +/- 0.0698470681678102 J g^-1 K^-1 at 95% confidence",
+    "units": {
+      "source_temperature": "degC and K after exact +273.15 conversion",
+      "specific_heat": "J g^-1 K^-1",
+      "uncertainty": "J g^-1 K^-1 at 95% confidence",
+      "required_TTG_quantity": "J m^-3 K^-1 c_v; not supplied by this row"
+    },
+    "derivation_class": "source extraction and provenance audit; no UET derivation",
+    "observable": "independent material heat-capacity candidate",
+    "data_role": "CALIBRATION_CANDIDATE_NOT_CONSUMED",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+        "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+        "sha256": "baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900",
+        "bytes": 11234
+      }
+    ],
+    "verification_status": "PASS_SOURCE_CP_95CI_CV_OPEN",
+    "open_blockers": [
+      "source_quantity_is_c_p_not_volumetric_c_v",
+      "density_uncertainty_missing_for_volumetric_conversion",
+      "source_k_is_derived_not_independent_density_evidence",
+      "material_regime_mapping_to_TTG_not_closed"
+    ],
+    "dependency_unlocked": "independent c_p source anchor only; no numeric alpha or TTG holdout comparison",
+    "claim_boundary": "The source package is a traceable independent c_p candidate at 573.15 K. It is not c_v, not an alpha_Phi_K calibration, and not external validation of UET."
+  },
+  "row_identity": {
+    "worksheet": "Sheet1",
+    "excel_range": "A3:G3",
+    "key": "source_id + worksheet + excel_row + temperature_C",
+    "temperature_C": 300.0,
+    "temperature_K": 573.15
+  },
+  "reported_values": {
+    "average_specific_heat_J_per_g_K": 1.25981694473522,
+    "uncertainty_95pct_J_per_g_K": 0.0698470681678102,
+    "uncertainty_confidence": "95%",
+    "average_thermal_conductivity_W_per_m_K": 74.0939625200673,
+    "uncertainty_thermal_conductivity_95pct_W_per_m_K": 5.52004525723003,
+    "average_thermal_diffusivity_mm2_per_s": 33.0411666666667,
+    "uncertainty_thermal_diffusivity_95pct_mm2_per_s": 1.92932827975038
+  },
+  "source_identity": {
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+    "package_sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51",
+    "raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+    "raw_sha256": "baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900",
+    "raw_bytes": 11234,
+    "worksheet": "Sheet1",
+    "excel_row": 3
+  },
+  "reported_row": [
+    300.0,
+    74.0939625200673,
+    5.52004525723003,
+    1.25981694473522,
+    0.0698470681678102,
+    33.0411666666667,
+    1.92932827975038
+  ],
+  "checks": {
+    "raw_workbook_present": true,
+    "raw_hash_matches": true,
+    "raw_bytes_match": true,
+    "worksheet_header_present": true,
+    "target_row_unique": true,
+    "target_excel_row_matches_manifest": true,
+    "temperature_C_matches": true,
+    "temperature_K_conversion_explicit": true,
+    "specific_heat_matches": true,
+    "specific_heat_uncertainty_matches": true,
+    "uncertainty_is_95pct": true,
+    "density_uncertainty_gap_is_explicit": true,
+    "cv_conversion_gap_is_explicit": true,
+    "no_additional_local_interpolation_or_fit": true,
+    "publisher_cp_interpolation_disclosed": true,
+    "conductivity_is_declared_derived": true,
+    "density_is_declared_assumed": true,
+    "candidate_not_consumed": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true
+  },
+  "controlling_blocker": "gatech_source_is_c_p_and_volumetric_c_v_conversion_remains_open",
+  "next_controller": "source-lock a direct volumetric c_v or an independently measured same-grade density with uncertainty plus Cp-to-cv inputs; do not invert the source-derived conductivity into density and do not use the 573.15 K row as TTG target data",
+  "claim_boundary": "Source closure only: this artifact source-locks c_p and discloses the source dependency graph. The reported k is not independent density or volumetric-heat-capacity evidence and this does not close alpha_Phi_K or Full Topic 13."
+}

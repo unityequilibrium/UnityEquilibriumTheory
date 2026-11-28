@@ -1,0 +1,1335 @@
+{
+  "schema_version": "t13-charged-static-confluent-vertex-v1",
+  "major_result_id": "T13_CHARGED_STATIC_CONFLUENT_VERTEX_MATCH",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "PASS_SCOPED_STATIC_CONFLUENT_VERTEX",
+  "what_is_closed": [
+    "The strict Euclidean P=Q=0 temporal charged vertex is derived diagram by diagram without artificial pole splitting.",
+    "The mixed thermal confluent derivative, bath/mean response, and vacuum subtraction jointly match the thermodynamic derivative of the full static inverse propagator.",
+    "Charge-even, zero-density and spatial-isotropy limits are explicit in the declared normal lane."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.charged_static_confluent_vertex"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "source_identity": "partial_mu D_static^-1 = i Gamma_static^0",
+    "full_vertex": "Gamma_static^0=-i partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]",
+    "confluent_derivative": "partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t(a-W)) dt",
+    "bath_mean": "Gamma_bath^0=i[-4 lambda_chi+G^2/M0^2] partial_mu I_chi",
+    "mixed": "Gamma_mix^0=i G^2 q partial_r B_T(r)|r=q*mu",
+    "vacuum": "Gamma_vac^0=-2 i mu partial_s Sigma_vac(s)|s=mu^2"
+  },
+  "ontology": {
+    "C": "collective lane coordinate, not O(2) charge",
+    "Phi": "effective response; internal exchanged response remains lane-specific",
+    "R_gen": "derived trace excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "mu": 1,
+    "T": 1,
+    "Gamma0": 1,
+    "self_energy": 2
+  },
+  "derivation_class": "derived_relation_with_numerical_quadrature",
+  "observable": "Internal static Euclidean density-source vertex, not physical heat/current conductivity",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2,
+    "response_quartic": 1.0
+  },
+  "samples": [
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        -0.0,
+        -2.9270644650731696e-26
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        -2.9270644650731696e-26
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        2.9270644650731696e-26
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        2.9270644650731696e-26
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -1.0967419488867359e-06
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        4.602605553789165e-07
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3999996188854496
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -1.0967419488867359e-06
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        4.602605553789165e-07
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3999996188854496
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        3.2406828637616664e-23
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        3.2406828637616664e-23
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        -0.0,
+        -3.2406828637616664e-23
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        -3.2406828637616664e-23
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.00018592421584326144
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        2.4343541594364815e-05
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3998386746925942
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.00018592421584326144
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        2.4343541594364815e-05
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3998386746925942
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        4.550362561480328e-23
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        4.550362561480328e-23
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        -0.0,
+        -4.550362561480328e-23
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        -4.550362561480328e-23
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0011512945614718926
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        8.613035827239252e-05
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.39893509116364356
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0011512945614718926
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        8.613035827239254e-05
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.39893509116364356
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        7.724117933338823e-22
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        7.724117933338823e-22
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.0
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.0
+      ],
+      "mixed_thermal_confluent": [
+        -0.0,
+        -7.724117933338823e-22
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        0.0
+      ],
+      "total": [
+        0.0,
+        -7.724117933338823e-22
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": -1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.003624552793966866
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        0.0002035927001550996
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3965792952730313
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": 1,
+      "bare": [
+        0.0,
+        0.4
+      ],
+      "bath_and_response_mean": [
+        -0.0,
+        -0.003624552793966866
+      ],
+      "mixed_thermal_confluent": [
+        0.0,
+        0.0002035927001550996
+      ],
+      "vacuum_and_counterterm": [
+        0.0,
+        2.553668430415531e-07
+      ],
+      "total": [
+        0.0,
+        0.3965792952730313
+      ],
+      "spatial_vertex_by_isotropy": 0.0,
+      "boundary": "Thermodynamic Euclidean P=Q=0 limit; not the collisionless retarded order of limits."
+    }
+  ],
+  "finite_difference_witnesses": [
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        -1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        -1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        -1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.0,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        1.548101820924888e-26
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.548101820924888e-26,
+      "relative_error": null
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188852606
+      ],
+      "absolute_error": 1.890154699424329e-13,
+      "relative_error": 4.72539125085146e-13
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188863708
+      ],
+      "absolute_error": 9.212075546827236e-13,
+      "relative_error": 2.3030210809886146e-12
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188852606
+      ],
+      "absolute_error": 1.890154699424329e-13,
+      "relative_error": 4.72539125085146e-13
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188852606
+      ],
+      "absolute_error": 1.890154699424329e-13,
+      "relative_error": 4.72539125085146e-13
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188863708
+      ],
+      "absolute_error": 9.212075546827236e-13,
+      "relative_error": 2.3030210809886146e-12
+    },
+    {
+      "T": 0.1,
+      "mu": 0.2,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3999996188854496
+      ],
+      "finite_difference": [
+        0.0,
+        0.3999996188852606
+      ],
+      "absolute_error": 1.890154699424329e-13,
+      "relative_error": 4.72539125085146e-13
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        -3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        -3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.0,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        -3.2854224651482554e-23
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.2854224651482554e-23,
+      "relative_error": null
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.39983867468784684
+      ],
+      "absolute_error": 4.747369164448401e-12,
+      "relative_error": 1.1873211535013868e-11
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.3998386746917326
+      ],
+      "absolute_error": 8.615885782603527e-13,
+      "relative_error": 2.1548405214293485e-12
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.3998386746917326
+      ],
+      "absolute_error": 8.615885782603527e-13,
+      "relative_error": 2.1548405214293485e-12
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.39983867468784684
+      ],
+      "absolute_error": 4.747369164448401e-12,
+      "relative_error": 1.1873211535013868e-11
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.3998386746917326
+      ],
+      "absolute_error": 8.615885782603527e-13,
+      "relative_error": 2.1548405214293485e-12
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3998386746925942
+      ],
+      "finite_difference": [
+        0.0,
+        0.3998386746917326
+      ],
+      "absolute_error": 8.615885782603527e-13,
+      "relative_error": 2.1548405214293485e-12
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        -3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        -3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.0,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        -3.914586645570817e-22
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 3.914586645570817e-22,
+      "relative_error": null
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.3989350911509648
+      ],
+      "absolute_error": 1.2678802452370519e-11,
+      "relative_error": 3.178161744506104e-11
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.39893509116151193
+      ],
+      "absolute_error": 2.131683718431532e-12,
+      "relative_error": 5.343434973907832e-12
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.3989350911637324
+      ],
+      "absolute_error": 8.876233081878127e-14,
+      "relative_error": 2.224981777357638e-13
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.3989350911509648
+      ],
+      "absolute_error": 1.2678802452370519e-11,
+      "relative_error": 3.178161744506104e-11
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.39893509116151193
+      ],
+      "absolute_error": 2.131683718431532e-12,
+      "relative_error": 5.343434973907832e-12
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.3989350911636436
+      ],
+      "finite_difference": [
+        0.0,
+        0.3989350911637324
+      ],
+      "absolute_error": 8.876233081878127e-14,
+      "relative_error": 2.224981777357638e-13
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        -1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        -1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.0,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        -1.3697797080286786e-21
+      ],
+      "finite_difference": [
+        -0.0,
+        -0.0
+      ],
+      "absolute_error": 1.3697797080286786e-21,
+      "relative_error": null
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": -1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929524761215
+      ],
+      "absolute_error": 2.5419277793758965e-11,
+      "relative_error": 6.409633104493752e-11
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": -1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929526759617
+      ],
+      "absolute_error": 5.435263350506148e-12,
+      "relative_error": 1.3705363379695969e-11
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": -1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929527203706
+      ],
+      "absolute_error": 9.943712520055215e-13,
+      "relative_error": 2.50737056588752e-12
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": 1,
+      "h": 0.0001,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929524761215
+      ],
+      "absolute_error": 2.5419277793758965e-11,
+      "relative_error": 6.409633104493752e-11
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": 1,
+      "h": 5e-05,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929526759617
+      ],
+      "absolute_error": 5.435263350506148e-12,
+      "relative_error": 1.3705363379695969e-11
+    },
+    {
+      "T": 1.0,
+      "mu": 0.2,
+      "q": 1,
+      "h": 2.5e-05,
+      "explicit": [
+        0.0,
+        0.39657929527303143
+      ],
+      "finite_difference": [
+        0.0,
+        0.39657929527203706
+      ],
+      "absolute_error": 9.943712520055215e-13,
+      "relative_error": 2.50737056588752e-12
+    }
+  ],
+  "refinement_relative_changes": [
+    1.1287193762761969e-13,
+    0.0
+  ],
+  "checks": {
+    "explicit_matches_thermodynamic_derivative": true,
+    "finite_difference_step_convergence": true,
+    "quadrature_refinement": true,
+    "charge_even_static_limit": true,
+    "zero_mu_temporal_vertex": true,
+    "no_spatial_static_current": true
+  },
+  "approximation_contract": {
+    "order": "strict one loop in normal zero-field propagators",
+    "limit": "P=Q=0 thermodynamic Euclidean limit",
+    "confluent_policy": "analytic divided-difference derivative; no epsilon splitting",
+    "retarded_limit": "not evaluated"
+  },
+  "open_blockers": [
+    "real_time_finite_k_transverse_vertex",
+    "collision_and_heat_current_ladder_matching",
+    "material_SI_calibration_and_full_T13_acceptance"
+  ],
+  "controlling_blocker": "real_time_finite_k_transverse_vertex_and_collision_heat_ladder_matching",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_charged_static_confluent_vertex.py": "0937ef4376b1b2ccb61da36e433063b0748c80e9afb8ac0e5e7511e7d991cef2",
+    "docs/core/test/test_topic13_charged_static_confluent_vertex.py": "09f508e13a74e551ea4e3c45a6e86e19e6993759187849ead0e4f6fb61be2a3d",
+    "docs/scripts/audit/audit_topic13_charged_one_loop_match.py": "f45703398824555a81f90dd04ee6a1dd259d56c0d1623efbe878d5bc5fb6f91b",
+    "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py": "261ac5a2762e3a73125a266316c68f09186aad696d257dae0b23917ec10b1b8c"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
+      "sha256": "7fdf5d1ab04d88657750d567d0cd52a9b770d395210c30180944f547b3772c63"
+    }
+  ],
+  "dependency_unlocked": [
+    "static_density_response_internal_handoff"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Static natural-unit Euclidean one-loop density-current lane only; not a finite-k retarded vertex, Kubo coefficient, heat current, SI mapping, external validation, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The strict Euclidean P=Q=0 temporal charged vertex is derived diagram by diagram without artificial pole splitting.",
+      "The mixed thermal confluent derivative, bath/mean response, and vacuum subtraction jointly match the thermodynamic derivative of the full static inverse propagator.",
+      "Charge-even, zero-density and spatial-isotropy limits are explicit in the declared normal lane."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "real_time_finite_k_transverse_vertex",
+      "collision_and_heat_current_ladder_matching",
+      "material_SI_calibration_and_full_T13_acceptance"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "static_density_response_internal_handoff"
+    ],
+    "STATUS": "PASS_SCOPED_STATIC_CONFLUENT_VERTEX",
+    "WHAT_CHANGED": "Resolved the coincident-pole static vertex with an analytic confluent derivative and matched it to the full static inverse-propagator derivative.",
+    "EQUATION_OR_MAPPING": {
+      "source_identity": "partial_mu D_static^-1 = i Gamma_static^0",
+      "full_vertex": "Gamma_static^0=-i partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]",
+      "confluent_derivative": "partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t(a-W)) dt",
+      "bath_mean": "Gamma_bath^0=i[-4 lambda_chi+G^2/M0^2] partial_mu I_chi",
+      "mixed": "Gamma_mix^0=i G^2 q partial_r B_T(r)|r=q*mu",
+      "vacuum": "Gamma_vac^0=-2 i mu partial_s Sigma_vac(s)|s=mu^2"
+    },
+    "VERIFICATION": {
+      "explicit_matches_thermodynamic_derivative": true,
+      "finite_difference_step_convergence": true,
+      "quadrature_refinement": true,
+      "charge_even_static_limit": true,
+      "zero_mu_temporal_vertex": true,
+      "no_spatial_static_current": true
+    },
+    "CONTROLLING_BLOCKER": "real_time_finite_k_transverse_vertex_and_collision_heat_ladder_matching",
+    "NEXT_ACTION": "Derive the real-time finite-k transverse/current vertex and then match collision and heat-current ladders.",
+    "CLAIM_BOUNDARY": "Static natural-unit Euclidean one-loop density-current lane only; not a finite-k retarded vertex, Kubo coefficient, heat current, SI mapping, external validation, or Full Topic 13 closure."
+  }
+}

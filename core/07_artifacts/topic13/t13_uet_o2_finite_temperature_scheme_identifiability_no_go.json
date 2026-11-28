@@ -1,0 +1,123 @@
+{
+  "schema_version": "t13-uet-o2-finite-temperature-scheme-identifiability-no-go-v1",
+  "artifact": "t13_uet_o2_finite_temperature_scheme_identifiability_no_go",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_NO_GO_FINITE_TEMPERATURE_SCHEME_IDENTIFIABILITY",
+  "formal_no_go_closure": "CLOSED_AS_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_SCHEME_IDENTIFIABILITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the currently declared second-order reference conditions do not select a unique finite-temperature renormalization completion",
+      "two finite local counterterm completions share the reference value, first derivative, and second derivative while differing off reference",
+      "the named Hartree branch is explicitly separated from a unique microscopic finite-temperature action",
+      "the no-go is structural and does not use source rows, target curves, fitting, or the locked holdout"
+    ],
+    "equation_or_mapping": {
+      "finite_local_counterterm": "Delta V_a(x)=a*(x-x_*)^3/Lambda_*^2",
+      "reference_conditions": "Delta V_a(x_*)=partial_x Delta V_a(x_*)=partial_x^2 Delta V_a(x_*)=0",
+      "off_reference_difference": "Delta V_a(x)!=0 for a!=0 and x!=x_*",
+      "named_hartree_branch": "M^2=m_eff^2(Phi)+(N+2)*lambda*I_T(M^2;T,mu)"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_x_star": "mass squared",
+      "Lambda_star_sq": "mass squared",
+      "Delta_V": "energy density",
+      "finite_coefficient": "dimensionless local scheme parameter"
+    },
+    "derivation_class": "algebraic finite-local-counterterm identifiability no-go under shared second-order reference conditions",
+    "observable": "difference between admissible off-reference finite-temperature action completions; no physical observable emitted",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py",
+        "sha256": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+        "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+        "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_FINITE_TEMPERATURE_SCHEME_IDENTIFIABILITY",
+    "open_blockers": [
+      "source_backed_or_declared_physical_finite_temperature_renormalization_scheme_missing",
+      "interacting_finite_temperature_self_energy_microscopic_matching_missing",
+      "condensate_and_normal_two_fluid_completion_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "finite-temperature scheme identifiability no-go only; named Hartree branch remains an approximation and no physical EOS, transport, KMS, SI, alpha, Full Topic 13, Core, or Gravity dependency is unlocked",
+    "claim_boundary": "This closes only the non-uniqueness of the finite local renormalization completion under the currently declared reference conditions. It does not provide a physical counterterm, select a microscopic scheme, or close the Hartree branch, transport, KMS, SI map, alpha_Phi_K, or Full Topic 13."
+  },
+  "witnesses": [
+    {
+      "name": "scheme_A",
+      "finite_coefficient": 0.0,
+      "reference_mass_sq": 0.5,
+      "scale_sq": 0.5,
+      "reference_value": 0.0,
+      "reference_first_derivative": 0.0,
+      "reference_second_derivative": 0.0,
+      "off_reference_value": 0.0,
+      "off_reference_first_derivative": 0.0,
+      "off_reference_second_derivative": 0.0,
+      "coefficient_origin": "underdetermined_finite_local_counterterm"
+    },
+    {
+      "name": "scheme_B",
+      "finite_coefficient": 0.75,
+      "reference_mass_sq": 0.5,
+      "scale_sq": 0.5,
+      "reference_value": 0.0,
+      "reference_first_derivative": 0.0,
+      "reference_second_derivative": 0.0,
+      "off_reference_value": 0.005062500000000003,
+      "off_reference_first_derivative": 0.10125000000000003,
+      "off_reference_second_derivative": 1.35,
+      "coefficient_origin": "underdetermined_finite_local_counterterm"
+    }
+  ],
+  "checks": {
+    "two_scheme_witnesses_are_present": true,
+    "reference_mass_and_scale_are_positive": true,
+    "scheme_A_reference_value_zero": true,
+    "scheme_A_reference_first_derivative_zero": true,
+    "scheme_A_reference_second_derivative_zero": true,
+    "scheme_B_reference_value_zero": true,
+    "scheme_B_reference_first_derivative_zero": true,
+    "scheme_B_reference_second_derivative_zero": true,
+    "off_reference_potentials_are_distinct": true,
+    "off_reference_first_derivatives_are_distinct": true,
+    "off_reference_second_derivatives_are_distinct": true,
+    "reference_conditions_are_second_order": true,
+    "natural_units_are_declared": true,
+    "finite_coefficient_is_dimensionless": true,
+    "named_hartree_branch_is_separate": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "all_witness_values_finite": true,
+    "no_source_or_holdout": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_scheme_identifiability.py": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358",
+    "docs/core/uet_o2_renormalized_normal_branch.py": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c",
+    "docs/core/uet_o2_finite_temperature_self_energy.py": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+  },
+  "controlling_blocker": "source_backed_or_declared_physical_finite_temperature_renormalization_scheme_missing",
+  "next_controller": "Either declare and justify a physical finite-temperature renormalization scheme with microscopic matching, or retain the named Hartree lane as approximation-only while closing physical Kubo/SK/KMS and SI observables without fitting alpha or reading Xie 2026.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

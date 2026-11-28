@@ -1,0 +1,316 @@
+{
+  "schema_version": "t13-uet-o2-finite-t-signed-cut-coverage-v1",
+  "artifact": "t13_uet_o2_finite_temperature_signed_cut_coverage_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+  "major_result_id": "T13_UET_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "state": {
+    "external_energy": 2.23606797749979,
+    "mass": 0.7071067811865476,
+    "mass_squared": 0.5,
+    "assignments": [
+      {
+        "signs": [
+          -1,
+          -1,
+          -1
+        ],
+        "sign_label": "---",
+        "process_class": "all_negative_forbidden_for_positive_P0",
+        "kinematically_allowed": false,
+        "energy_relation": "P0=-(E1+E2+E3)",
+        "kinematic_reason": "the right-hand side is strictly negative",
+        "lower_bound_energy": 0.0
+      },
+      {
+        "signs": [
+          -1,
+          -1,
+          1
+        ],
+        "sign_label": "--+",
+        "process_class": "3<->1_forbidden_for_positive_P0",
+        "kinematically_allowed": false,
+        "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+        "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+        "lower_bound_energy": 3.6502815398728847
+      },
+      {
+        "signs": [
+          -1,
+          1,
+          -1
+        ],
+        "sign_label": "-+-",
+        "process_class": "3<->1_forbidden_for_positive_P0",
+        "kinematically_allowed": false,
+        "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+        "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+        "lower_bound_energy": 3.6502815398728847
+      },
+      {
+        "signs": [
+          -1,
+          1,
+          1
+        ],
+        "sign_label": "-++",
+        "process_class": "2<->2",
+        "kinematically_allowed": true,
+        "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+        "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+        "lower_bound_energy": 0.0
+      },
+      {
+        "signs": [
+          1,
+          -1,
+          -1
+        ],
+        "sign_label": "+--",
+        "process_class": "3<->1_forbidden_for_positive_P0",
+        "kinematically_allowed": false,
+        "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+        "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+        "lower_bound_energy": 3.6502815398728847
+      },
+      {
+        "signs": [
+          1,
+          -1,
+          1
+        ],
+        "sign_label": "+-+",
+        "process_class": "2<->2",
+        "kinematically_allowed": true,
+        "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+        "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+        "lower_bound_energy": 0.0
+      },
+      {
+        "signs": [
+          1,
+          1,
+          -1
+        ],
+        "sign_label": "++-",
+        "process_class": "2<->2",
+        "kinematically_allowed": true,
+        "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+        "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+        "lower_bound_energy": 0.0
+      },
+      {
+        "signs": [
+          1,
+          1,
+          1
+        ],
+        "sign_label": "+++",
+        "process_class": "1<->3",
+        "kinematically_allowed": true,
+        "energy_relation": "P=k1+k2+k3",
+        "kinematic_reason": "three-body threshold sqrt(s)>=3m",
+        "lower_bound_energy": 2.121320343559643
+      }
+    ],
+    "allowed_signs": [
+      [
+        -1,
+        1,
+        1
+      ],
+      [
+        1,
+        -1,
+        1
+      ],
+      [
+        1,
+        1,
+        -1
+      ],
+      [
+        1,
+        1,
+        1
+      ]
+    ],
+    "allowed_assignment_count": 4,
+    "one_to_three_allowed_assignment_count": 1,
+    "two_to_two_allowed_assignment_count": 3,
+    "current_labeled_scattering_signs": [
+      1,
+      1,
+      -1
+    ],
+    "current_labeled_scattering_assignment_count": 1,
+    "missing_scattering_permutation_count": 2,
+    "forbidden_one_plus_two_minus_count": 3,
+    "all_sign_assignments_enumerated": true,
+    "one_to_three_threshold_checked": true,
+    "two_to_two_permutations_enumerated": true,
+    "equal_mass_permutation_identity_declared": true,
+    "signed_cut_kinematic_taxonomy_completed": true,
+    "action_level_cut_multiplicity_completed": false,
+    "full_finite_temperature_1pi_self_energy_completed": false,
+    "all_finite_temperature_sunset_channels_completed": false,
+    "unique_physical_renormalization_scheme_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "covariant_entropy_current_completed": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT"
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+    "equations": {
+      "signed_cut_energy": "P0=sigma_1*E1+sigma_2*E2+sigma_3*E3, sigma_i in {+1,-1}",
+      "positive_external_assignments": "{---,--+,-+-, -++, +--,+-+ ,++-,+++}",
+      "one_to_three": "+++ : P=k1+k2+k3, sqrt(s)>=3m",
+      "two_to_two_permutations": "++-, +-+, -++ : P+k_minus=k_plus,1+k_plus,2",
+      "forbidden_one_plus_two_minus": "+--, -+-, --+ : P+k_minus,1+k_minus,2=k_plus is impossible for future-timelike equal-mass lines",
+      "labeled_scattering_coverage": "current module evaluates only ++-; equal-mass relabeling gives three kinematic patterns, so action-level multiplicity remains open"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature or metric",
+      "R_gen": "derived physical/history trace; no independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "unit_contract": {
+      "unit_lane": "natural vacuum 3+1",
+      "external_energy_and_mass": "energy",
+      "mass_squared": "energy squared",
+      "signed_cut_relation": "energy"
+    },
+    "derivation_class": "action-compatible future-timelike kinematic classification of all three-line signed cuts; no fitted coefficient or external data",
+    "observable": "complete positive-energy sign-assignment inventory, allowed process classes, threshold witness, and labeled 2<->2 permutation gap",
+    "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT",
+    "included": {
+      "all_eight_positive_external_sign_assignments": true,
+      "one_to_three_threshold": true,
+      "three_two_to_two_permutations": true,
+      "forbidden_one_plus_two_minus_kinematics": true,
+      "labeled_scattering_gap": true
+    },
+    "excluded": {
+      "action_level_cut_multiplicity": true,
+      "complete_finite_temperature_1pi_self_energy": true,
+      "unique_physical_renormalization": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes the positive-energy equal-mass signed-cut kinematic taxonomy and identifies that the current labeled 2<->2 module covers one of three allowed permutations. It does not close the action-level cut multiplicity, complete finite-temperature 1PI self-energy, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "checks": {
+    "all_eight_sign_assignments_enumerated": true,
+    "allowed_sign_assignments_match_taxonomy": true,
+    "one_to_three_threshold_is_checked": true,
+    "all_three_two_to_two_permutations_are_enumerated": true,
+    "current_module_is_one_labeled_scattering_pattern": true,
+    "missing_scattering_permutations_are_explicit": true,
+    "forbidden_one_plus_two_minus_assignments_are_explicit": true,
+    "kinematic_taxonomy_completed": true,
+    "action_level_multiplicity_remains_open": true,
+    "full_finite_temperature_1pi_remains_open": true,
+    "all_finite_temperature_sunset_channels_remain_open": true,
+    "physical_kubo_not_emitted": true,
+    "alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_2026_not_accessed": true,
+    "contract_excludes_action_multiplicity": true,
+    "contract_excludes_full_1pi": true,
+    "contract_excludes_holdout": true
+  },
+  "failed_checks": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+      "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+      "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+      "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+      "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+    }
+  ],
+  "derivation_class": "action-compatible future-timelike kinematic classification of all three-line signed cuts; no fitted coefficient or external data",
+  "observable": "complete positive-energy sign-assignment inventory, allowed process classes, threshold witness, and labeled 2<->2 permutation gap",
+  "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT",
+  "controlling_blocker": "action_level_signed_cut_multiplicity_and_complete_finite_temperature_1pi_missing",
+  "next_action": "Derive the action-level cut multiplicity for the three 2<->2 sign permutations and connect it to the complete retarded/advanced/Keldysh 1PI object before physical renormalization or transport admission.",
+  "claim_boundary": "This closes the positive-energy equal-mass signed-cut kinematic taxonomy and identifies that the current labeled 2<->2 module covers one of three allowed permutations. It does not close the action-level cut multiplicity, complete finite-temperature 1PI self-energy, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+    "topic": "Topic 13 Thermodynamic Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "all eight positive-external-energy equal-mass signed-cut assignments",
+      "one-to-three threshold classification",
+      "three kinematically allowed two-to-two sign permutations",
+      "three forbidden one-plus/two-minus assignments and the all-negative assignment",
+      "explicit identification that the current scattering module is labeled to one of three 2-to-2 patterns"
+    ],
+    "equation_or_mapping": {
+      "signed_cut_energy": "P0=sigma_1*E1+sigma_2*E2+sigma_3*E3, sigma_i in {+1,-1}",
+      "positive_external_assignments": "{---,--+,-+-, -++, +--,+-+ ,++-,+++}",
+      "one_to_three": "+++ : P=k1+k2+k3, sqrt(s)>=3m",
+      "two_to_two_permutations": "++-, +-+, -++ : P+k_minus=k_plus,1+k_plus,2",
+      "forbidden_one_plus_two_minus": "+--, -+-, --+ : P+k_minus,1+k_minus,2=k_plus is impossible for future-timelike equal-mass lines",
+      "labeled_scattering_coverage": "current module evaluates only ++-; equal-mass relabeling gives three kinematic patterns, so action-level multiplicity remains open"
+    },
+    "units": {
+      "unit_lane": "natural vacuum 3+1",
+      "external_energy_and_mass": "energy",
+      "mass_squared": "energy squared",
+      "signed_cut_relation": "energy"
+    },
+    "derivation_class": "action-compatible future-timelike kinematic classification of all three-line signed cuts; no fitted coefficient or external data",
+    "observable": "complete positive-energy sign-assignment inventory, allowed process classes, threshold witness, and labeled 2<->2 permutation gap",
+    "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT",
+    "verification_status": "PASS_ACTION_DERIVED_O2_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_LANE",
+    "open_blockers": [
+      "action_level_signed_cut_multiplicity_missing",
+      "complete_finite_temperature_1pi_self_energy_missing",
+      "physical_renormalization_anchor_missing"
+    ],
+    "dependency_unlocked": "signed-cut kinematic taxonomy only; no action-level multiplicity, physical Kubo, SI, alpha, Core, Gravity, Galaxy, or external-validation unlock",
+    "claim_boundary": "This closes the positive-energy equal-mass signed-cut kinematic taxonomy and identifies that the current labeled 2<->2 module covers one of three allowed permutations. It does not close the action-level cut multiplicity, complete finite-temperature 1PI self-energy, physical renormalization, transport, entropy, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+        "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+        "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+      },
+      {
+        "path": "docs/core/uet_o2_action_1pi_sunset_tensor.py",
+        "sha256": "ccff2807b70d519b0132dde8a0d79f949eeffd42c51c48ac36f396810ad0e21a"
+      }
+    ]
+  }
+}

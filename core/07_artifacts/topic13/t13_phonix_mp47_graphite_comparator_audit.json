@@ -1,0 +1,110 @@
+{
+  "schema_version": "t13-phonix-mp47-graphite-comparator-v1",
+  "artifact": "t13_phonix_mp47_graphite_comparator_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_PHONIX_GRAPHITE_HARMONIC_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_PHONIX_MP47_GRAPHITE_HARMONIC_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "an immutable Phonix summary snapshot identifies mp-47 as a P6_3/mmc graphite row with declared primitive volume, q-mesh, phonon frequency bins, DOS bins, and force-constant diagnostics",
+      "the source row passes identity, array-shape, grid, sign, hash, and provenance checks",
+      "the source boundary explicitly separates arbitrary-unit DOS and fit diagnostics from standard c_v uncertainty"
+    ],
+    "equation_or_mapping": {
+      "harmonic_kernel_boundary": "c_mu(T) = k_B*x_mu^2*exp(x_mu)/(exp(x_mu)-1)^2; x_mu=h*nu_mu/(k_B*T)",
+      "source_dos_integral": "I_DOS = integral[phdos_source(nu) dnu] (source units only)",
+      "Ding_boundary": "No C_src(T) = sum_mu c_mu(T) is emitted because phdos is reported in a.u. and no Ding PBTE mode/scattering payload is present."
+    },
+    "units": {
+      "frequency": "cm^-1",
+      "DOS": "a.u. (source-declared; no mode-per-frequency normalization asserted)",
+      "volume": "A^3",
+      "reported_source_integral": "a.u.*cm^-1",
+      "c_v": "not emitted"
+    },
+    "derivation_class": "source-locked first-principles summary comparator with standard-kernel boundary audit",
+    "observable": "graphite harmonic phonon DOS/source metadata",
+    "data_role": "TRAINING/COMPARISON",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/phonix_mp47_graphite_summary_row.json",
+        "sha256": "cea9711b09f455375a5f9182c295588b98d498fb09af4660af6fb7dce4fdaff1"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/phonix_mp47_graphite_source_package.json",
+        "sha256": "f08bc1d0ac5142abb4f1916c0caaf79c89d3ef414979edfeef9365f4690c1b76"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_PHONIX_GRAPHITE_HARMONIC_COMPARATOR",
+    "open_blockers": [
+      "phonix_summary_dos_units_a_u_not_unitful_c_v",
+      "phonix_summary_standard_uncertainty_not_available",
+      "ding_material_morphology_and_pbte_C_src_equivalence_missing",
+      "base_Phi_SI_anchor_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "Source-locked Phonix mp-47 graphite harmonic comparator only; no Ding, alpha, transport, Core, Gravity, or Galaxy unlock.",
+    "claim_boundary": "This closes a provenance and standard-harmonic-comparator lane. It is not Ding PBTE C_src, not a volumetric c_v uncertainty source, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "dataset": "phonix-db/phonix-summary",
+    "dataset_revision": "284bddebbd144ae3e3f93474dc05e4658417d09f",
+    "row_locator": {
+      "split": "train",
+      "row_key": "mp-47",
+      "mp_id": "mp-47"
+    },
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/phonix_mp47_graphite_summary_row.json",
+    "local_raw_sha256": "cea9711b09f455375a5f9182c295588b98d498fb09af4660af6fb7dce4fdaff1",
+    "row_payload_sha256": "ddf97a7225754dcee2d05d16e11d5b45da9b892a816cc7aa662f5443ad8d813b",
+    "source_volume_A3": 22.553831,
+    "primitive_atoms": 4.0,
+    "space_group_number": 194,
+    "qmesh": "30x30x18",
+    "fc2_error_percent": 1.5385,
+    "fc3_error_percent": 0.363545,
+    "standard_uncertainty_available": false,
+    "ding_material_equivalence": "NOT_ESTABLISHED"
+  },
+  "derived_summary": {
+    "frequency_bin_count": 51,
+    "frequency_min_cm1": 1.097373e-10,
+    "frequency_max_cm1": 1316.125,
+    "frequency_spacing_cm1": 26.322499999997802,
+    "dos_integral_source_units": 11.778620558657094,
+    "dos_normalization_to_modes_per_cm1": "NOT_ASSERTED"
+  },
+  "checks": {
+    "raw_snapshot_present": true,
+    "package_present": true,
+    "dataset_revision_locked": true,
+    "package_revision_locked": true,
+    "raw_hash_matches_package": true,
+    "row_identity_is_mp47": true,
+    "graphite_formula_and_space_group": true,
+    "primitive_cell_contract": true,
+    "frequency_dos_lengths_match": true,
+    "frequency_grid_is_uniform": true,
+    "dos_values_are_nonnegative": true,
+    "dos_integral_is_finite_positive": true,
+    "source_dos_units_remain_arbitrary": true,
+    "standard_uncertainty_not_invented": true,
+    "ding_equivalence_not_asserted": true,
+    "numeric_c_v_not_emitted": true,
+    "numeric_c_src_not_emitted": true,
+    "numeric_alpha_Phi_K_not_emitted": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "alpha_fit_performed": false,
+  "numeric_c_v_emitted": false,
+  "numeric_C_src_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "phonix_summary_dos_units_and_uncertainty_not_sufficient_for_volumetric_cv",
+  "next_controller": "Use the locked row as a phase-matched harmonic comparator only; obtain a unitful uncertainty-grade c_v or Ding-compatible PBTE C_src payload/reproduction with material-state mapping.",
+  "claim_boundary": "Comparator provenance closure only; Full Topic 13 remains blocked."
+}

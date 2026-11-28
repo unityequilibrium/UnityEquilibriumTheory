@@ -1,0 +1,136 @@
+{
+  "schema_version": "t13-nims-graphite-ltc-route-no-go-v1",
+  "artifact": "t13_nims_graphite_ltc_route_no_go",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_NIMS_GRAPHITE_ROUTE_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_NIMS_GRAPHITE_LTC_ROUTE_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the public NIMS lattice-thermal-conductivity collection was source-located and searched with exact graphite/carbon terms",
+      "the collection search returned no graphite or elemental-carbon record suitable for a Ding-compatible PBTE C_src package",
+      "the two public API records returned by specimen:graphite belong to the unrelated MDR XAFS DB collection, not the lattice-thermal-conductivity collection",
+      "the NIMS route is therefore closed as a source-route no-go and cannot silently substitute for Ding C_src"
+    ],
+    "what_is_remains_open": [
+      "Ding author numeric C_src payload or another permitted same-regime PBTE reproduction",
+      "mode-resolved C_src(T) in J m^-3 K^-1 with uncertainty and convergence",
+      "independent base-Phi SI anchor and alpha_Phi_K calibration",
+      "full EOS, physical transport, and entropy closure"
+    ],
+    "dependency_unlocked": "NIMS graphite-source route exclusion only; no C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "equation_or_mapping": {
+      "required_source_quantity": "C_src(T) = sum_mu c_mu(T)",
+      "required_temperature_mapping": "Delta_Tq = Delta_u_ph / C_src",
+      "route_decision": "NIMS graphite LTC record present -> false"
+    },
+    "units": {
+      "required_C_src": "J m^-3 K^-1",
+      "observed_route_metadata": "not applicable; no accepted numeric C_src payload was consumed"
+    },
+    "derivation_class": "public repository provenance search and source-route no-go; no UET derivation",
+    "observable": "availability of a graphite PBTE source package with a mode-resolved thermal response",
+    "data_role": "SOURCE_ROUTE_NO_GO_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_nims_graphite_ltc_route_no_go.json",
+        "hash_scope": "file hash is recorded by the Topic 13 full gate and central major-result register; the artifact does not self-embed its own hash"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NIMS_GRAPHITE_ROUTE_NO_GO",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "claim_boundary": "This closes only the NIMS graphite-source route as a documented no-go. It does not emit C_src, calibrate alpha_Phi_K, validate UET transport, use the Xie 2026 holdout, or close Full Topic 13."
+  },
+  "source": {
+    "collection_name": "MDR lattice thermal conductivity calculation database",
+    "collection_locator": "https://mdr.nims.go.jp/collections/0113dccc-ec45-42ed-86db-f455f9b63fb1?locale=en",
+    "collection_doi": "https://doi.org/10.48505/nims.6163",
+    "publisher": "National Institute for Materials Science",
+    "license": "Creative Commons BY Attribution 4.0 International",
+    "collection_updated_at": "2026-01-24T09:41:03Z",
+    "collection_description": "Input files for the phono3py code are available for calculating lattice thermal conductivity values.",
+    "query_results": [
+      {
+        "query_type": "collection_subject_exact",
+        "term": "C",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&subject=C",
+        "response_sha256": "04bece89e3e894b4869f7a56777c1598da6276584a8b66000a300d5bbc20a528",
+        "records_found": 0
+      },
+      {
+        "query_type": "collection_subject_exact",
+        "term": "Graphite",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&subject=Graphite",
+        "response_sha256": "3d5cb71ea6db0f7166f7378ea0ee50e3428f162b66f4ce7f39b9422468c013e4",
+        "records_found": 0
+      },
+      {
+        "query_type": "collection_subject_exact",
+        "term": "Carbon",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&subject=Carbon",
+        "response_sha256": "51b25c1444bd5152fa3d3cf4d30e751b2610302db457bb2adf04fbb7d29420ea",
+        "records_found": 0
+      },
+      {
+        "query_type": "collection_full_text",
+        "term": "graphite",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&q=graphite",
+        "response_sha256": "f9b60e62f6b9d89ffb06d2b2da7ee9d61731618108d92364299ca5079033ec31",
+        "records_found": 0
+      },
+      {
+        "query_type": "collection_full_text",
+        "term": "specimen:graphite",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&q=specimen%3Agraphite",
+        "response_sha256": "eb5f62fd99ae4d3a5ef44bdf49e275fa2c2ff1cefc1f8ed9c9ae39a8a932d2d5",
+        "records_found": 0
+      },
+      {
+        "query_type": "collection_full_text",
+        "term": "carbon",
+        "locator": "https://mdr.nims.go.jp/datasets?collection=0113dccc-ec45-42ed-86db-f455f9b63fb1&locale=en&q=carbon",
+        "response_sha256": "257bd83cdfa8ffa74c5d0f7e7a8b885d3e2443e303e172ffbc109c5f3edbb0c5",
+        "records_found": 349,
+        "pages_scanned": 35,
+        "title_rows_scanned": 349,
+        "exact_elemental_carbon_formula_matches": 0,
+        "note": "The returned rows were compounds or other carbon-text matches; no title had elemental-carbon formula C as the material record."
+      },
+      {
+        "query_type": "public_api_cross_collection_check",
+        "term": "specimen:\"graphite\"",
+        "locator": "https://mdr.nims.go.jp/api/v1/datasets?q=specimen%3A%22graphite%22",
+        "response_sha256": "c10829b7df26920aa183325eb236afad1462ce471c21994b5af67ba29eed5378",
+        "records_found": 2,
+        "returned_collection_titles": [
+          "MDR XAFS DB"
+        ],
+        "not_the_lattice_thermal_conductivity_collection": true
+      }
+    ],
+    "numeric_payload_consumed": false,
+    "mode_resolved_csrc_rows_consumed": false,
+    "holdout_accessed": false,
+    "target_fit_performed": false,
+    "alpha_fit_performed": false
+  },
+  "acceptance": {
+    "accepted_for_full_topic13": false,
+    "accepted_as_independent_csrc_reproduction": false,
+    "route_closed_as_no_go": true,
+    "ding_material_regime_established": false,
+    "mode_resolved_csrc_rows_present": false,
+    "source_grade_uncertainty_present": false,
+    "mesh_or_numerical_convergence_present": false,
+    "base_phi_si_anchor_present": false,
+    "numeric_alpha_phi_k_emitted": false,
+    "target_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_controller": "Pursue the Ding author route or a permitted same-regime PBTE source with mode-resolved C_src, SI units, uncertainty, convergence, and material-state mapping; do not reopen the NIMS route unless its collection metadata changes.",
+  "claim_boundary": "Source-route no-go only; no numeric C_src, no temperature prediction, no alpha_Phi_K calibration, no holdout use, and no Full Topic 13 closure."
+}

@@ -1,0 +1,63 @@
+{
+  "schema_version": "1.0",
+  "artifact": "thermal_dimensional_calibration_contract",
+  "audit_status": "PASS_WITH_BLOCKED_INDEPENDENT_CALIBRATION",
+  "claim_status": "CONTRACT_DEFINED_CALIBRATION_OPEN",
+  "evidence_class": "INTERNAL_INTERFACE_AND_ANTI_FITTING_DIAGNOSTIC",
+  "structural_identifiability": {
+    "status": "NON_IDENTIFIABLE_FROM_NORMALIZED_PHI",
+    "transformation": "Delta_Phi' = s * Delta_Phi; alpha_Phi_K' = alpha_Phi_K / s",
+    "witness_scale": 7.0,
+    "normalized_signal_residual": 0.0,
+    "dimensional_response_residual": 0.0,
+    "interpretation": "normalized dynamics alone cannot fix an absolute K per Phi scale; a dimensional action/energy anchor or independent calibration is required"
+  },
+  "formula_audit": {
+    "formula_id": "THERMAL-MAP-DIM-004",
+    "relation": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+    "variables_and_units": "Delta_Phi normalized; Delta_Tq K; alpha_Phi_K K per normalized Phi",
+    "constant_origin": "calibration_dependent_relation",
+    "proof_status": "open",
+    "verification_role": "prevent normalized Phi from being reported as kelvin without an independent record",
+    "failure_mode": "a fitted or default gain is presented as a UET derivation",
+    "next_hardening_step": "derive a dimensional Phi/energy anchor or independently calibrate alpha_Phi_K with uncertainty and a holdout protocol"
+  },
+  "source_review": {
+    "path": "topics/0.13_Thermodynamic_Bridge/Data/03_Research/matter_space_thermal_source_review.json",
+    "sha256": "081dfda8f49939a4376d8cb27b05ed1500f39d8ead0b61e407d01c68049a3157",
+    "numeric_fitting_allowed": false,
+    "holdout_consumed": false
+  },
+  "open_calibration_record": {
+    "status": "EXTERNAL_CALIBRATION_REQUIRED",
+    "temperature_scale_K_per_phi": null,
+    "uncertainty_K_per_phi": null,
+    "source_id": "open:phi-to-kelvin-calibration",
+    "source_locator": "not-yet-sourced",
+    "source_hash": "NOT_AVAILABLE",
+    "holdout_policy": "LOCK_BEFORE_EXTERNAL_COMPARISON",
+    "physical_mapping_ready": false
+  },
+  "gates": {
+    "calibration_record_schema_defined": true,
+    "open_record_has_explicit_status_and_units": true,
+    "open_record_does_not_emit_kelvin": true,
+    "physical_mapping_requires_independent_record": true,
+    "fitted_calibration_is_rejected": true,
+    "normalized_observable_is_scale_invariant": true,
+    "absolute_scale_and_calibration_are_degenerate": true,
+    "identifiability_blocker_is_explicit": true,
+    "source_review_disallows_numeric_fitting": true,
+    "holdout_is_not_consumed": true,
+    "dimensional_map_remains_blocked": true
+  },
+  "blockers": [
+    "normalized Phi has no absolute Kelvin scale in the current lane",
+    "no independently calibrated alpha_Phi_K",
+    "no source-normalized local TTG numeric table with row-level uncertainty",
+    "no holdout comparison after parameter/calibration lock",
+    "heat flux and entropy production maps remain downstream of Tq closure"
+  ],
+  "claim_boundary": "The calibration interface is explicit and anti-fitting, but Phi is not temperature and no dimensional thermal claim is promoted.",
+  "next_controller": "derive a dimensional Phi/energy anchor or source-lock an independent alpha_Phi_K with uncertainty; only then package TTG rows before Kelvin, heat-flux, or entropy-production claims"
+}

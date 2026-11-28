@@ -1,0 +1,132 @@
+{
+  "schema_version": "t13-iaea-graphite-cv-source-audit-v1",
+  "artifact": "t13_iaea_graphite_constant_volume_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_IAEA_TABLE_CV_COMPARATOR_UNCERTAINTY_OPEN",
+  "major_result": {
+    "major_result_id": "T13_IAEA_GRAPHITE_TABLE_CV_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "IAEA-hosted Graphite Engineering Handbook identity and archived raw PDF hash",
+      "Table 4.11 manufactured-graphite 300 K cp, delta-cp, cw, and ce row",
+      "the table-derived mass-specific lattice cv relation",
+      "the boundary between probable error in cp and standard uncertainty for cv",
+      "the non-equivalence of this manufactured-graphite average curve to Ding TTG material"
+    ],
+    "equation_or_mapping": "c_p = c_v + c_w + c_e; c_v = c_p - c_w - c_e",
+    "units": {
+      "cp": "cal g^-1 K^-1 in source; J kg^-1 K^-1 after declared 4.184 conversion",
+      "cw": "cal g^-1 K^-1",
+      "ce": "cal g^-1 K^-1",
+      "cv": "cal g^-1 K^-1 in source; J kg^-1 K^-1 after declared 4.184 conversion"
+    },
+    "derivation_class": "source table transcription plus declared algebraic separation of lattice, thermoelastic, and electronic terms; no UET derivation",
+    "observable": "manufactured-graphite mass-specific lattice c_v comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_iaea_graphite_constant_volume_source_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+        "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+        "sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_IAEA_TABLE_CV_COMPARATOR_UNCERTAINTY_OPEN",
+    "open_blockers": [
+      "c_v_standard_uncertainty_not_reported",
+      "same-grade density and volumetric conversion not source_locked",
+      "material_regime_mapping_to_Ding_TTG_not_closed",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "Table-derived manufactured-graphite mass-specific c_v comparator only; no volumetric c_v, Ding C_src, alpha calibration, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes a source-traceable table-derived mass-specific lattice c_v comparator lane. It does not provide a source-grade c_v uncertainty, volumetric c_v, Ding TTG material match, alpha_Phi_K, or Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "iaea_graphite_engineering_handbook_table_4_11",
+    "title": "The Industrial Graphite Engineering Handbook",
+    "publisher": "International Atomic Energy Agency Graphite Knowledge Base",
+    "official_url": "https://nucleus.iaea.org/sites/graphiteknowledgebase/Meetings2/Old%20Meetings/2017/Background%20Info/GraphiteHandbook.pdf",
+    "source_locators": [
+      "Chapter 4, section 4-14: cp = cv + cw + ce definition",
+      "Chapter 4, section 4-15, Table 4.11: manufactured-graphite values at 300 K",
+      "Chapter 4, section 4-15: cv = cp - cw - ce and cw source-dependency discussion"
+    ],
+    "retrieved_on": "2026-08-13",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/iaea_graphite_handbook_2017.pdf",
+    "local_raw_size_bytes": 34100266,
+    "local_raw_sha256": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a",
+    "material": "manufactured graphite average curve; handbook does not identify Ding's TTG specimen",
+    "temperature_scope": "table row at 300 K",
+    "license_or_terms": "Official IAEA-hosted handbook archived for research provenance; publication terms remain subject to source owner",
+    "local_hash_observed": "91e9d84e5d1828ab1028bf0e5fec0743fe1fb49e416b9e6305edf2f71a30a28a",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+    "package_sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09"
+  },
+  "source_row": {
+    "source_row_id": "iaea_graphite_handbook_table_4_11_300K",
+    "temperature_K": 300.0,
+    "quantity": "manufactured-graphite lattice specific heat at constant volume",
+    "cp_cal_per_g_K": 0.1723,
+    "delta_cp_cal_per_g_K": 0.0017,
+    "cw_cal_per_g_K": 0.00069,
+    "ce_cal_per_g_K": 9e-05,
+    "cv_formula": "c_v = c_p - c_w - c_e",
+    "cv_cal_per_g_K": 0.17152,
+    "source_uncertainty_boundary": {
+      "delta_cp_meaning": "probable error for c_p such that most reliable individual measurements fall within c_p +/- delta_cp",
+      "cv_standard_uncertainty": null,
+      "cw_uncertainty": null,
+      "ce_uncertainty": null,
+      "status": "NOT_A_STANDARD_UNCERTAINTY_FOR_CV"
+    },
+    "source_locator": "Chapter 4, section 4-15, Table 4.11, 300 K row",
+    "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+    "status": "SOURCE_LOCKED_TABLE_DERIVED_CV"
+  },
+  "derived_comparator": {
+    "calorie_to_joule_J_per_cal": 4.184,
+    "cv_mass_J_per_kg_K": 717.63968,
+    "cp_mass_J_per_kg_K": 720.9032,
+    "cp_minus_cv_mass_J_per_kg_K": 3.26352,
+    "cv_volumetric_emitted": false,
+    "cv_standard_uncertainty_J_per_kg_K": null,
+    "density_emitted": false,
+    "material_match_to_Ding_TTG": false,
+    "cv_reconstructed_cal_per_g_K": 0.17152,
+    "cv_mass_reconstructed_J_per_kg_K": 717.63968,
+    "cp_mass_reconstructed_J_per_kg_K": 720.9032000000001,
+    "cp_minus_cv_mass_reconstructed_J_per_kg_K": 3.26352
+  },
+  "checks": {
+    "raw_pdf_present": true,
+    "raw_pdf_hash_matches": true,
+    "raw_size_matches_package": true,
+    "source_identity_and_locators_present": true,
+    "table_row_is_at_300K": true,
+    "formula_is_explicit": true,
+    "cv_reconstruction_matches_package": true,
+    "cp_to_cv_correction_matches_package": true,
+    "cv_mass_conversion_matches_package": true,
+    "cp_mass_conversion_matches_package": true,
+    "correction_conversion_matches_package": true,
+    "probable_error_not_promoted_to_standard_uncertainty": true,
+    "cv_volumetric_not_emitted": true,
+    "density_not_emitted": true,
+    "material_match_not_claimed": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true,
+    "no_fit_or_alpha_calibration": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "cv_uncertainty_density_volumetric_conversion_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Acquire a source-grade cv uncertainty and same-grade density or direct volumetric cv record; keep the table-derived comparator out of calibration and holdout paths.",
+  "claim_boundary": "Source-locked IAEA table-derived manufactured-graphite mass-specific lattice c_v comparator only; it does not close volumetric c_v, Ding C_src, base-Phi SI mapping, alpha_Phi_K, or Full Topic 13."
+}

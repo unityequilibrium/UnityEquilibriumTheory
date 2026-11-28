@@ -1,0 +1,104 @@
+{
+  "schema_version": "t13-calorine-state-uncertainty-decomposition-audit-v1",
+  "artifact": "t13_calorine_state_uncertainty_decomposition_audit",
+  "status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "q-mesh numerical envelope is separated from material-state sensitivity",
+      "NIST natural-carbon composition bounds are propagated through the mass-only C_src lane",
+      "pure-isotope runs are retained as stress bounds, not Ding specimen uncertainty",
+      "no fit, target tuning, alpha_Phi_K calibration, or holdout access is used"
+    ],
+    "equation_or_mapping": {
+      "mesh": "epsilon_mesh = max_T |C_src(mesh_hi,T)-C_src(mesh_prev,T)| / |C_src(mesh_hi,T)|",
+      "composition": "epsilon_isotope = max_T,state |C_src(state,T)-C_src(natural,T)| / |C_src(natural,T)|",
+      "boundary": "epsilon_source_grade is not inferred from mesh plus mass-only sensitivity"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "temperature": "K",
+      "envelopes": "dimensionless"
+    },
+    "derivation_class": "numerical convergence plus external isotope-state sensitivity; no UET derivation",
+    "observable": "Calorine candidate C_src uncertainty decomposition",
+    "data_role": "STATE_SENSITIVITY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json"
+      },
+      {
+        "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CALORINE_STATE_UNCERTAINTY_DECOMPOSITION",
+    "open_blockers": [
+      "material_regime_mapping_to_TTG_not_closed",
+      "calorine_route_source_grade_model_and_state_uncertainty_missing"
+    ],
+    "dependency_unlocked": "uncertainty decomposition lane only; no Ding C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "Numerical and mass-only sensitivity decomposition only; not source-grade uncertainty, Ding equivalence, Phi mapping, alpha_Phi_K, or TTG prediction."
+  },
+  "source": {
+    "nist_locator": "https://physics.nist.gov/cgi-bin/Compositions/stand_alone.pl?ascii=ascii&ele=C",
+    "representative_fraction_13C": {
+      "value": 0.0107,
+      "uncertainty": 0.0008
+    },
+    "source_role": "external isotope-composition reference, not a Ding specimen measurement"
+  },
+  "components": {
+    "mesh_numerical_envelope": {
+      "value": 0.0023908135252728663,
+      "scope": "8x8x4 to 10x10x5 at fixed 4x4x2 force constants and RTA",
+      "source_grade": false
+    },
+    "natural_composition_mass_envelope": {
+      "value": 5.1197301212210954e-05,
+      "per_state_max": {
+        "natural_lower_13C": 5.1197301212210954e-05,
+        "natural_upper_13C": 5.119573916118123e-05
+      },
+      "source_grade": false
+    },
+    "pure_isotope_stress_envelope": {
+      "value": 0.06214259232043032,
+      "per_state_max": {
+        "pure_12C_stress": 0.0006848932088695135,
+        "pure_13C_stress": 0.06214259232043032
+      },
+      "interpretation": "stress bound only; not the Ding specimen state and not added to source uncertainty",
+      "source_grade": false
+    }
+  },
+  "checks": {
+    "mesh_audit_present": true,
+    "isotope_audit_present": true,
+    "source_grade_uncertainty_present": false,
+    "material_state_mapping_to_ding": false,
+    "target_fit_performed": false,
+    "alpha_Phi_K_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "controlling_blocker": "material_regime_mapping_to_TTG_not_closed",
+  "next_controller": "Source-lock defect and morphology, or retain Calorine as a non-Ding comparator; do not turn this decomposition into source-grade uncertainty.",
+  "claim_boundary": "Candidate numerical/state sensitivity decomposition only; not Ding C_src acceptance, alpha_Phi_K calibration, or Full Topic 13 closure.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/isotope_mass_sensitivity/t13_calorine_isotope_mass_sensitivity_audit.json",
+      "sha256": "5db4a9487f728e5275906a1d4514c154b02cee4854fadcc0ea45f3ac6d5a0221",
+      "summary": {
+        "role": "mass-only isotope sensitivity audit"
+      }
+    },
+    {
+      "path": "docs/core/artifacts/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+      "sha256": "afc8fb0d9daea81c30a09b24f0aabd824cde1a85e662ea52880fadd42863de89",
+      "summary": {
+        "role": "q-mesh numerical convergence audit"
+      }
+    }
+  ]
+}

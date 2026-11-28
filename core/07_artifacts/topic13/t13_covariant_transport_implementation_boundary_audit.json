@@ -1,0 +1,104 @@
+{
+  "schema_version": "t13-covariant-transport-implementation-boundary-v1",
+  "artifact": "t13_covariant_transport_implementation_boundary_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_CLOSED_TRANSPORT_IMPLEMENTATION_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_COVARIANT_TRANSPORT_IMPLEMENTATION_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the implemented covariant transport lane is bounded to a natural-unit Landau-frame T=0 pure-superfluid ideal sector",
+      "the dissipative sector is a minimal longitudinal Kubo interface with no default physical coefficients",
+      "Onsager positive-semidefinite entropy and causal Maxwell-Cattaneo controls are verified internally",
+      "finite-temperature normal response, SI transport, full tensor, and curved 3+1 solver are explicit non-implemented boundaries",
+      "R_gen is not consumed as transport state or feedback"
+    ],
+    "equation_or_mapping": {
+      "ideal_eos": "P = P(X, Phi) from tree-level finite-density O(2) action",
+      "ideal_current": "N^mu = (Z*q/lambda) xi^mu",
+      "ideal_stress": "T^mu_nu = f_s xi^mu xi^nu + p g^mu_nu",
+      "dissipative_admission": "KuboCoefficientRecord -> constitutive coefficient only when matched evidence passes",
+      "entropy_control": "sigma = X_A L^(AB) X_B >= 0 with symmetric positive-semidefinite L",
+      "causal_control": "tau_J dJ/dt + J = -sigma_reg grad(mu)"
+    },
+    "units": {
+      "implementation_lane": "natural units",
+      "hydrodynamic_frame": "Landau",
+      "temperature_scope": "T=0 only",
+      "SI_transport": "not implemented",
+      "coefficient_value": "source-specific units required; no physical value supplied"
+    },
+    "derivation_class": "source-backed implementation-scope audit plus internal ideal/positivity verification; not physical transport derivation",
+    "observable": "covariant ideal superfluid response and bounded dissipative interface",
+    "data_role": "INTERNAL_IMPLEMENTATION_SCOPE_NOT_PHYSICAL_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_covariant_superfluid_transport.py",
+        "sha256": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f"
+      },
+      {
+        "path": "docs/core/artifacts/covariant_superfluid_transport_contract.json",
+        "sha256": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c"
+      },
+      {
+        "path": "docs/core/artifacts/covariant_superfluid_transport_verification.json",
+        "sha256": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1"
+      },
+      {
+        "path": "docs/core/test/test_covariant_superfluid_transport.py",
+        "sha256": "f72b96cf162ceb8fb87fdecdcbce81638234ee95db02dba41c2c59b0e8af479e"
+      }
+    ],
+    "verification_status": "PASS_CLOSED_TRANSPORT_IMPLEMENTATION_BOUNDARY",
+    "open_blockers": [
+      "physical_Kubo_coefficient_record_missing",
+      "finite_temperature_normal_component_not_derived",
+      "full_superfluid_transport_tensor_deferred",
+      "SI_transport_unit_map_missing",
+      "curved_3p1_transport_solver_missing",
+      "base_Phi_SI_anchor_and_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "implementation boundary only; no physical transport, Full Topic 13, Core curved 3+1, or Gravity unlock",
+    "claim_boundary": "This result closes the implementation scope and admission boundary only. It is not a microscopic Kubo match, finite-temperature two-fluid derivation, SI transport result, external validation, or global UET closure."
+  },
+  "source_hashes": {
+    "docs/core/uet_covariant_superfluid_transport.py": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f",
+    "docs/core/artifacts/covariant_superfluid_transport_contract.json": "a24d96ce15bbda1bdc8b473b7dc2c9690a9482af29b98310bc20566506ef748c",
+    "docs/core/artifacts/covariant_superfluid_transport_verification.json": "49fc1a047cfa84e8155940a491eb9c3fb3c3536ac707b010ba15b32298632ad1",
+    "docs/core/test/test_covariant_superfluid_transport.py": "f72b96cf162ceb8fb87fdecdcbce81638234ee95db02dba41c2c59b0e8af479e"
+  },
+  "checks": {
+    "contract_is_explicitly_blocked": true,
+    "interface_gate_passes": true,
+    "t0_pure_superfluid_scope_is_declared": true,
+    "normal_component_is_not_derived": true,
+    "dissipative_values_require_external_or_microscopic_match": true,
+    "synthetic_controls_are_opt_in_only": true,
+    "natural_unit_lane_is_declared": true,
+    "si_lane_is_blocked": true,
+    "curved_solver_is_not_implemented": true,
+    "full_tensor_is_deferred": true,
+    "finite_temperature_code_path_is_rejected": true,
+    "missing_coefficient_has_no_default": true,
+    "synthetic_control_requires_explicit_opt_in": true,
+    "trace_is_not_state_or_feedback": true,
+    "eos_is_tree_level_finite_density_mean_field": true,
+    "finite_temperature_eos_is_not_derived": true,
+    "transport_not_derived_from_conservative_action": true,
+    "ideal_and_entropy_verification_gates_pass": true,
+    "missing_provenance_blocks": true,
+    "finite_temperature_two_fluid_is_blocked": true,
+    "full_sk_kms_is_blocked": true,
+    "physical_coefficient_is_not_emitted": true,
+    "tests_encode_the_same_boundary": true
+  },
+  "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+  "next_controller": "Acquire one state-matched physical Kubo coefficient record and independently derive the finite-temperature normal sector and SI Phi observable map; do not substitute synthetic controls.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

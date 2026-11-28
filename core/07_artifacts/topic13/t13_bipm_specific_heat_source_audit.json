@@ -1,0 +1,144 @@
+{
+  "schema_version": "t13-bipm-specific-heat-source-audit-v1",
+  "artifact": "t13_bipm_specific_heat_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_BIPM_CP_COMPARATOR_CV_OPEN",
+  "major_result": {
+    "major_result_id": "T13_BIPM_SPECIFIC_HEAT_CP_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "BIPM-2006/01 primary report identity and archived raw PDF hash",
+      "source-reported sample-H mass-specific cp at 22 deg C with standard uncertainty",
+      "same-report density mean and standard uncertainty",
+      "volumetric cp comparator and first-order uncertainty propagation",
+      "explicit boundary that this source does not provide cv without alpha_V and K_T"
+    ],
+    "equation_or_mapping": "c_p^V = rho*c_p; c_v^V = c_p^V - T*alpha_V^2*K_T",
+    "units": {
+      "c_p": "J kg^-1 K^-1",
+      "rho": "kg m^-3",
+      "c_p^V": "J m^-3 K^-1",
+      "alpha_V": "K^-1",
+      "K_T": "Pa = J m^-3"
+    },
+    "derivation_class": "source transcription plus standard mass-to-volume conversion and independent first-order uncertainty propagation",
+    "observable": "ultra-pure graphite volumetric c_p comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_bipm_specific_heat_source_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json",
+        "sha256": "ab120653076ac3d44e45235705ca505e923096be78078c1ee261dbe72bdea2c7"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bipm_2006_01_graphite_specific_heat.pdf",
+        "sha256": "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_BIPM_CP_COMPARATOR_CV_OPEN",
+    "open_blockers": [
+      "alpha_V_and_K_T_not_source_locked_for_this_specimen",
+      "c_v_source_uncertainty_not_closed",
+      "material_regime_mapping_to_Ding_TTG_not_closed",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "BIPM source-locked graphite volumetric c_p comparator only; no c_v, Ding C_src, alpha calibration, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes a source-traceable standard graphite c_p comparator lane. It is not a same-state Ding/HOPG source, not c_v, not an alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "source_id": "bipm_2006_01_graphite_specific_heat",
+    "title": "Measurement of the Specific Heat Capacity of Graphite",
+    "report": "Rapport BIPM-2006/01",
+    "authors": [
+      "S. Picard",
+      "D. T. Burns",
+      "P. Roger"
+    ],
+    "publisher": "Bureau International des Poids et Mesures",
+    "official_url": "https://www.bipm.org/documents/20126/28125415/bipm%20publication-ID-1661/ecac54bb-1086-ac6c-46a3-6f986951a033",
+    "archived_mirror_url": "https://www.osti.gov/etdeweb/servlets/purl/20951777",
+    "source_locators": [
+      "Eq. (17), PDF pp. 25-26: graphite sample H specific-heat relation",
+      "Table 4, PDF p. 26: uncertainty budget and combined relative standard uncertainty",
+      "Sections 2.1.3 and Table 2, PDF pp. 6-7: bulk density mean and standard uncertainty",
+      "Section 4, PDF pp. 25-26: sample-H result and impurity correction"
+    ],
+    "retrieved_on": "2026-08-13",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bipm_2006_01_graphite_specific_heat.pdf",
+    "local_raw_size_bytes": 931058,
+    "local_raw_sha256": "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42",
+    "material": "ultra-pure graphite block manufactured by Carbone Lorraine; sample H / cylinder B1 measurement context",
+    "temperature_scope": "19-25 deg C reported fit; reference evaluation at 22 deg C",
+    "license_or_terms": "Official BIPM report archived from OSTI mirror for research provenance; publication terms remain subject to source owner",
+    "local_hash_observed": "2c491c94adb3f70f4b1ba915259f0a1d2f4788e072e99c8d34a87f964f69ce42",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bipm_2006_01_graphite_specific_heat_source_package.json",
+    "package_sha256": "ab120653076ac3d44e45235705ca505e923096be78078c1ee261dbe72bdea2c7"
+  },
+  "source_rows": [
+    {
+      "source_row_id": "bipm_2006_01_sample_h_cp_22C",
+      "temperature_K": 295.15,
+      "temperature_C": 22.0,
+      "quantity": "mass-specific constant-pressure heat capacity",
+      "value_J_per_kg_K": 710.6,
+      "standard_uncertainty_J_per_kg_K": 0.7,
+      "reported_formula": "c_p,g(T_C) = 710.6 + 3.0*(T_C - 22) J kg^-1 K^-1",
+      "source_locator": "Eq. (17), PDF p. 25",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+      "status": "SOURCE_LOCKED"
+    },
+    {
+      "source_row_id": "bipm_2006_01_graphite_density_mean",
+      "temperature_K": 295.15,
+      "temperature_C": 22.0,
+      "quantity": "bulk density mean",
+      "value_kg_per_m3": 1780.0,
+      "standard_uncertainty_kg_per_m3": 2.0,
+      "source_locator": "Section 2.1.3, PDF p. 6 and Table 2, PDF p. 7",
+      "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+      "status": "SOURCE_LOCKED"
+    }
+  ],
+  "derived_comparator": {
+    "evaluation_temperature_K": 295.15,
+    "mass_specific_cp_J_per_kg_K": 710.6,
+    "mass_specific_cp_standard_uncertainty_J_per_kg_K": 0.7,
+    "density_kg_per_m3": 1780.0,
+    "density_standard_uncertainty_kg_per_m3": 2.0,
+    "volumetric_cp_J_per_m3_K": 1264868.0,
+    "volumetric_cp_standard_uncertainty_J_per_m3_K": 1890.0596392706766,
+    "uncertainty_method": "independent first-order propagation; covariance not reported",
+    "cv_emitted": false,
+    "K_T_emitted": false,
+    "alpha_V_emitted": false,
+    "material_match_to_Ding_TTG": false,
+    "volumetric_cp_reconstructed_J_per_m3_K": 1264868.0,
+    "volumetric_cp_standard_uncertainty_reconstructed_J_per_m3_K": 1890.0596392706766
+  },
+  "checks": {
+    "raw_pdf_present": true,
+    "raw_pdf_hash_matches": true,
+    "raw_size_matches_package": true,
+    "report_identity_and_locators_present": true,
+    "cp_row_units_and_uncertainty_present": true,
+    "density_row_units_and_uncertainty_present": true,
+    "reported_temperature_is_inside_fit_scope": true,
+    "volumetric_cp_reconstruction_matches_package": true,
+    "volumetric_cp_uncertainty_reconstruction_matches_package": true,
+    "cv_not_emitted": true,
+    "alpha_and_KT_not_emitted": true,
+    "material_match_not_claimed": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true,
+    "no_fit_or_alpha_calibration": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "alpha_V_K_T_c_v_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Source-lock same-regime alpha_V and K_T or acquire a direct volumetric c_v source; keep this c_p comparator out of calibration and holdout paths.",
+  "claim_boundary": "Source-locked BIPM ultra-pure graphite volumetric c_p comparator only; it does not close c_v, Ding C_src, base-Phi SI mapping, alpha_Phi_K, or Full Topic 13."
+}

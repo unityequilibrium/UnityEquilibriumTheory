@@ -1,0 +1,274 @@
+{
+  "schema_version": "t13-uet-o2-finite-density-charged-vertex-v1",
+  "artifact": "t13_uet_o2_finite_density_charged_vertex_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_FINITE_DENSITY_CHARGED_O2_VERTEX_SCHEME",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the finite-density O(2) Euclidean charged propagator is defined on the stable normal branch",
+      "particle and antiparticle thermal weights and the associated charged one-loop bubble are evaluated without clipping",
+      "the existing mass-squared reference subtraction is extended to the finite-density charged vertex",
+      "particle/antiparticle KMS-FDT, charge-conjugation, and the neutral-limit compatibility witnesses are verified"
+    ],
+    "equation_or_mapping": {
+      "charged_euclidean_propagator": "D_E^{-1}(omega_n,k)=(omega_n+i*mu_eff)^2+k^2+m_eff(Phi)^2",
+      "particle_antiparticle_energies": "E_particle=sqrt(k^2+m_eff^2)-mu_eff; E_antiparticle=sqrt(k^2+m_eff^2)+mu_eff",
+      "normal_branch": "|mu_eff|<m_eff(Phi)",
+      "renormalized_charged_bubble": "B_ch^R(mu)=B_vac(m)-B_vac(m_ref)+B_thermal(m,mu_eff)",
+      "renormalized_vertex": "Gamma_R^(4)=V-(B_s^R*(V.V)+B_t^R*(V.V)+B_u^R*(V.V))/2",
+      "charge_density_witness": "n_ch=sqrt(Z)*integral[(n_B(E-mu_eff)-n_B(E+mu_eff)) d^3k/(2*pi)^3]",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "natural energy",
+      "bubble_vertex": "dimensionless",
+      "charge_density": "natural charge density",
+      "Phi": "effective action response variable; not temperature"
+    },
+    "derivation_class": "action-derived finite-density normal charged propagator and one-loop reference-subtraction scheme; not physical scheme matching",
+    "observable": "finite natural-unit charged one-loop vertex and mode-level KMS witness",
+    "data_role": "ACTION_DERIVED_FINITE_DENSITY_CHARGED_VERTEX_SCHEME_NOT_PHYSICAL",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+        "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_vertex_scheme.py",
+        "sha256": "410f77c9418d0d946f0b27dbae31586a9436070771d0de13c7debc384dce71d6"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+        "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+        "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+      },
+      {
+        "path": "docs/core/uet_o2_equilibrium_kms.py",
+        "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_FINITE_DENSITY_CHARGED_O2_VERTEX_SCHEME",
+    "open_blockers": [
+      "unique_physical_renormalization_scheme_match_missing",
+      "condensed_two_fluid_charged_completion_missing",
+      "full_interacting_SK_action_and_KMS_match_missing",
+      "continuum_limit_not_converged",
+      "physical_Kubo_coefficient_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "one declared finite-density charged normal-branch natural-unit vertex scheme only; no physical renormalization, full SK/KMS, transport, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes one declared natural-unit finite-density charged normal-branch scheme. It does not select a unique physical renormalization, close the condensed/two-fluid sector, match a full interacting SK/KMS action, establish a continuum limit, provide physical Kubo transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_FINITE_DENSITY_CHARGED_O2_VERTEX_SCHEME",
+    "equations": {
+      "charged_euclidean_propagator": "D_E^{-1}(omega_n,k)=(omega_n+i*mu_eff)^2+k^2+m_eff(Phi)^2",
+      "particle_antiparticle_energies": "E_particle=sqrt(k^2+m_eff^2)-mu_eff; E_antiparticle=sqrt(k^2+m_eff^2)+mu_eff",
+      "normal_branch": "|mu_eff|<m_eff(Phi)",
+      "renormalized_charged_bubble": "B_ch^R(mu)=B_vac(m)-B_vac(m_ref)+B_thermal(m,mu_eff)",
+      "renormalized_vertex": "Gamma_R^(4)=V-(B_s^R*(V.V)+B_t^R*(V.V)+B_u^R*(V.V))/2",
+      "charge_density_witness": "n_ch=sqrt(Z)*integral[(n_B(E-mu_eff)-n_B(E+mu_eff)) d^3k/(2*pi)^3]",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "natural energy",
+      "bubble_vertex": "dimensionless",
+      "charge_density": "natural charge density",
+      "Phi": "effective action response variable; not temperature"
+    },
+    "scheme": {
+      "name": "mass-squared reference subtraction at Phi_* with charged thermal sector",
+      "vacuum_counterterm_origin": "declared reference condition, not external measurement",
+      "cutoff_role": "numerical regulator with finite-cutoff convergence witness",
+      "domain": "homogeneous normal branch, zero external Euclidean momentum, finite mu"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace only; no backreaction",
+      "R_obs": "separate observer record; not included"
+    },
+    "included": {
+      "charged_propagator": true,
+      "particle_antiparticle_thermal_weights": true,
+      "finite_density_vertex_scheme": true,
+      "charged_mode_kms_fdt_witness": true,
+      "charge_conjugation_witness": true
+    },
+    "excluded": {
+      "unique_physical_renormalization": true,
+      "condensed_or_two_fluid_branch": true,
+      "full_interacting_sk_kms_action": true,
+      "continuum_limit": true,
+      "physical_kubo_coefficient": true,
+      "entropy_current_heat_flux_dissipative_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "derivation_class": "action-derived finite-density normal charged propagator and one-loop reference-subtraction scheme; not physical scheme matching",
+    "observable": "finite natural-unit charged one-loop vertex and mode-level KMS witness",
+    "data_role": "ACTION_DERIVED_FINITE_DENSITY_CHARGED_VERTEX_SCHEME_NOT_PHYSICAL",
+    "claim_boundary": "This closes one declared natural-unit finite-density charged normal-branch scheme. It does not select a unique physical renormalization, close the condensed/two-fluid sector, match a full interacting SK/KMS action, establish a continuum limit, provide physical Kubo transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.25,
+    "effective_chemical_potential": 0.25,
+    "space_response": 0.15,
+    "reference_space_response": 0.0,
+    "effective_mass": 0.7039176088151227,
+    "reference_mass": 0.7071067811865476,
+    "quartic_coupling": 0.8,
+    "static_gap": 0.433,
+    "sample_momentum": 0.2604495152615954,
+    "sample_mode_energy": 0.7505557607533234,
+    "particle_mode_energy": 0.5005557607533234,
+    "antiparticle_mode_energy": 1.0005557607533233,
+    "raw_vacuum_values": [
+      0.0226530270235778,
+      0.03132284349531725,
+      0.040074159997744885,
+      0.048846082244006175,
+      0.05762317052657713
+    ],
+    "reference_vacuum_values": [
+      0.02259708610779153,
+      0.031265924639407756,
+      0.04001699219816668,
+      0.04878885192486508,
+      0.05756592455973829
+    ],
+    "subtracted_vacuum_values": [
+      5.5940915786267115e-05,
+      5.691885590949214e-05,
+      5.716779957820606e-05,
+      5.723031914109389e-05,
+      5.724596683884253e-05
+    ],
+    "charged_thermal_values": [
+      0.0013136971503515647,
+      0.0013136971506018027,
+      0.0013136971506018018,
+      0.001313697150601811,
+      0.0013136971506017693
+    ],
+    "renormalized_bubble_values": [
+      0.0013696380661378318,
+      0.0013706160065112948,
+      0.0013708649501800079,
+      0.0013709274697429048,
+      0.0013709431174406118
+    ],
+    "renormalized_vertex_norms": [
+      3.9084490419469073,
+      3.908441378178538,
+      3.9084394272963823,
+      3.9084389373530253,
+      3.90843881472764
+    ],
+    "renormalized_correction_norms": [
+      0.011156893797165585,
+      0.011164859972432203,
+      0.011166887835224555,
+      0.011167397111463825,
+      0.011167524575577011
+    ],
+    "thermal_charge_density": 0.000762065421043787,
+    "raw_vacuum_growth_ratio": 2.543729386214107,
+    "charged_thermal_cutoff_relative_change": 3.1691751332771736e-14,
+    "renormalized_bubble_last_relative_change": 1.1413950082964835e-05,
+    "renormalized_vertex_last_relative_change": 3.137451738838419e-08,
+    "static_propagator_residual": 1.2820127305140375e-16,
+    "propagator_factorization_residual": 0.0,
+    "particle_kms_residual": 0.0,
+    "antiparticle_kms_residual": 0.0,
+    "charge_conjugation_bubble_residual": 0.0,
+    "charge_density_odd_residual": 0.0,
+    "finite_density_charged_vertex_completed": true,
+    "unique_physical_renormalization_scheme_matched": false,
+    "full_interacting_sk_kms_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FINITE_DENSITY_CHARGED_VERTEX_SCHEME_NOT_PHYSICAL",
+    "neutral_limit_bubble_residual": 0.0,
+    "neutral_limit_vertex_residual": 0.0
+  },
+  "checks": {
+    "finite_density_completion_flag": true,
+    "nonzero_chemical_potential_sample": true,
+    "stable_normal_static_gap": true,
+    "particle_mode_energy_positive": true,
+    "antiparticle_mode_energy_positive": true,
+    "static_propagator_identity": true,
+    "propagator_factorization_identity": true,
+    "raw_vacuum_growth_visible": true,
+    "charged_thermal_cutoff_converges": true,
+    "renormalized_bubble_cutoff_change_bounded": true,
+    "renormalized_vertex_cutoff_change_bounded": true,
+    "particle_kms_holds": true,
+    "antiparticle_kms_holds": true,
+    "charge_conjugation_bubble_holds": true,
+    "charge_density_is_odd": true,
+    "neutral_limit_matches_previous_lane": true,
+    "declared_physical_scheme_remains_open": true,
+    "full_interacting_sk_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "failed_checks": [],
+  "finite_density_charged_vertex_completed": true,
+  "unique_physical_renormalization_scheme_matched": false,
+  "full_interacting_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "unique_physical_renormalization_and_full_interacting_sk_kms_match_missing",
+  "next_controller": "match the finite-density charged scheme to a full interacting SK/KMS construction and a declared physical renormalization; keep condensed/two-fluid, physical Kubo, alpha, source, and holdout gates independent",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_FINITE_DENSITY_CHARGED_VERTEX_SCHEME_NOT_PHYSICAL",
+  "audit": {
+    "path": "docs/core/artifacts/t13_uet_o2_finite_density_charged_vertex_audit.json",
+    "summary": {
+      "status": "PASS_ACTION_DERIVED_FINITE_DENSITY_CHARGED_O2_VERTEX_SCHEME",
+      "major_result_id": "T13_UET_O2_FINITE_DENSITY_CHARGED_VERTEX_SCHEME",
+      "closure_level": "CLOSED_FOR_LANE"
+    }
+  },
+  "open_blockers": [
+    "unique_physical_renormalization_scheme_match_missing",
+    "condensed_two_fluid_charged_completion_missing",
+    "full_interacting_SK_action_and_KMS_match_missing",
+    "continuum_limit_not_converged",
+    "physical_Kubo_coefficient_missing",
+    "entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes one declared natural-unit finite-density charged normal-branch scheme. It does not select a unique physical renormalization, close the condensed/two-fluid sector, match a full interacting SK/KMS action, establish a continuum limit, provide physical Kubo transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+}

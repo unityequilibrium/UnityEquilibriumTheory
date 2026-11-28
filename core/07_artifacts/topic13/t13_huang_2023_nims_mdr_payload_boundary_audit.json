@@ -1,0 +1,139 @@
+{
+  "schema_version": "t13-huang-2023-nims-mdr-payload-boundary-v1",
+  "artifact": "t13_huang_2023_nims_mdr_payload_boundary_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the public NIMS MDR dataset identity, locator, license, archive hash, and member identity are locked",
+      "the downloadable archive is confirmed to contain the article PDF only",
+      "the public package is classified as a source-availability boundary rather than a machine-readable PBTE payload"
+    ],
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not a phonon heat capacity or source label",
+      "Phi": "effective response variable; no Phi values are present in this archive",
+      "R_gen": "derived history trace; not present as an independent payload",
+      "R_obs": "observer record kept separate; no observer record is consumed"
+    },
+    "equation_or_mapping": {
+      "required_source_contract": "C_src(T) = sum_mu c_mu(T) in J m^-3 K^-1 remains uninstantiated",
+      "thermal_measurement_contract": "Delta_Tq = Delta_u_ph/C_src(T); not instantiated by this route",
+      "uet_bridge_contract": "Delta_Tq = alpha_Phi_K * Delta_Phi; no alpha or base-Phi scale is present",
+      "normalized_observable": "y_TTG = Delta_Tq(t)/Delta_Tq(0); this archive does not provide target rows"
+    },
+    "units": {
+      "required_c_src": "J m^-3 K^-1",
+      "archive_payload_units": "not applicable to an article-only package",
+      "temperature_or_time_rows": "not deposited as machine-readable source rows",
+      "unit_status": "OPEN_C_SRC_UNIT_AND_SOURCE_PROVENANCE"
+    },
+    "derivation_class": "EXTERNAL_SOURCE_AVAILABILITY_BOUNDARY_NO_UET_DERIVATION",
+    "observable": "availability of a public numeric PBTE input/output package associated with Huang 2023",
+    "data_role": "SOURCE_AVAILABILITY_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2023_nims_mdr_dataset.zip",
+        "sha256": "8ed58adc28eddcec45de73a1fdd9ee5394c5d75777be60015b4d59334b32608e",
+        "role": "public NIMS MDR archive bytes"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_HUANG_2023_NIMS_MDR_PAYLOAD_BOUNDARY",
+    "open_blockers": [
+      "huang_2023_public_zip_contains_article_pdf_only",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "NIMS source-availability boundary only; no C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This result closes only the public NIMS MDR payload boundary. It is not a numeric PBTE C_src value, not a Ding-regime reproduction, not an independent alpha_Phi_K calibration, not a Phi-to-temperature map, and not Full Topic 13 closure."
+  },
+  "source": {
+    "title": "Observation of phonon Poiseuille flow in isotopically purified graphite ribbons",
+    "authors": [
+      "Huang et al."
+    ],
+    "nims_mdr_dataset_locator": "https://mdr.nims.go.jp/datasets/bf141c90-3911-4b2c-9fbc-274dad05d5d0",
+    "nims_mdr_zip_locator": "https://mdr.nims.go.jp/datasets/bf141c90-3911-4b2c-9fbc-274dad05d5d0.zip",
+    "article_locator": "https://www.nature.com/articles/s41467-023-37380-5",
+    "doi": "https://doi.org/10.1038/s41467-023-37380-5",
+    "license": "CC BY 4.0",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2023_nims_mdr_dataset.zip",
+    "archive_sha256": "8ed58adc28eddcec45de73a1fdd9ee5394c5d75777be60015b4d59334b32608e",
+    "archive_md5": "7927b217b25f06480a5a5fd2096984a1",
+    "archive_size_bytes": 989576,
+    "data_availability_note": "The article reports data availability from the corresponding authors on reasonable request; the public NIMS downloadable archive inspected here contains the article PDF only."
+  },
+  "inventory": {
+    "archive_sha256": "8ed58adc28eddcec45de73a1fdd9ee5394c5d75777be60015b4d59334b32608e",
+    "archive_md5": "7927b217b25f06480a5a5fd2096984a1",
+    "archive_size_bytes": 989576,
+    "member_count": 1,
+    "members": [
+      {
+        "path": "s41467-023-37380-5.pdf",
+        "size_bytes": 1441389,
+        "crc32": "3581d56c",
+        "sha256": "a3570bbec50bb41edfc9da13a75d1fab5d36df35958a4ca328ee49ca7c8d995f",
+        "media_type": "application/pdf"
+      }
+    ],
+    "non_pdf_members": [],
+    "payload_capabilities": {
+      "has_force_constant_files": false,
+      "has_shengbte_payload": false,
+      "has_numeric_csrc_rows": false,
+      "article_pdf_only": true
+    }
+  },
+  "row_identity_contract": {
+    "identity_key": "archive_sha256 + zip member path + member CRC32 + member size",
+    "machine_readable_numeric_rows": [],
+    "preprocessing": "read-only ZIP member inventory; no PDF digitization, curve extraction, fitting, unit conversion, or target-curve access"
+  },
+  "unit_and_uncertainty_boundary": {
+    "required_c_src_unit": "J m^-3 K^-1",
+    "numeric_source_units": "not deposited in the public archive",
+    "source_uncertainty": "not deposited as machine-readable rows",
+    "derived_uncertainty": "none computed; no PBTE estimator or thermodynamic conversion run"
+  },
+  "payload_capabilities": {
+    "has_force_constant_files": false,
+    "has_shengbte_payload": false,
+    "has_numeric_csrc_rows": false,
+    "article_pdf_only": true
+  },
+  "checks": {
+    "archive_exists": true,
+    "archive_hash_matches_locked_download": true,
+    "single_pdf_member": true,
+    "expected_pdf_identity": true,
+    "no_force_constant_files": true,
+    "no_shengbte_payload": true,
+    "no_numeric_csrc_rows": true,
+    "license_present": true,
+    "no_holdout_access": true,
+    "claim_promotion": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/huang_2023_nims_mdr_payload_source_package.json",
+      "sha256": "e7224f04f632e430782d8bbde4477e87d7f3d973bc62e176ceb48cccb31c6f36",
+      "role": "machine-readable NIMS source package"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/huang_2023_nims_mdr_dataset.zip",
+      "sha256": "8ed58adc28eddcec45de73a1fdd9ee5394c5d75777be60015b4d59334b32608e",
+      "role": "public NIMS MDR archive bytes"
+    }
+  ],
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "controlling_blocker": "huang_2023_public_zip_contains_article_pdf_only",
+  "next_action": "Keep the NIMS record as a source boundary; obtain an authorized numeric PBTE/force-constant package or an accepted same-regime reproduction with mode-resolved C_src(T), SI units, uncertainty, convergence, and material/state mapping before revisiting alpha_Phi_K.",
+  "claim_promotion": false
+}

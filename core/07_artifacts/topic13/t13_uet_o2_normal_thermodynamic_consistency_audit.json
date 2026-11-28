@@ -1,0 +1,209 @@
+{
+  "schema_version": "t13-uet-o2-normal-thermodynamic-consistency-v1",
+  "artifact": "t13_uet_o2_normal_thermodynamic_consistency_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_NORMAL_THERMODYNAMIC_CONSISTENCY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_NORMAL_THERMODYNAMIC_CONSISTENCY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "action-derived one-loop normal branch thermodynamic identities hold across the declared deterministic state grid",
+      "pressure derivatives with respect to chemical potential, temperature, and Phi are mutually consistent",
+      "Maxwell reciprocity between charge/response and entropy/response derivatives passes on the normal lane",
+      "Gibbs-Duhem energy derivative identities pass on the normal lane",
+      "positivity and normal-branch domain checks pass without fitting or target data"
+    ],
+    "equation_or_mapping": {
+      "grand_potential": "Omega_N^(1,T) = T integral log[(1-exp(-(E_k-mu)/T))(1-exp(-(E_k+mu)/T))] d^3k/(2 pi)^3",
+      "thermodynamic_derivatives": "n=partial_mu p; s=partial_T p; epsilon=-p+T*s+mu*n",
+      "response_derivative": "partial_Phi p=-(partial_Phi m_eff^2) * 1/2 integral[(n_-+n_+)/E_k] d^3k/(2 pi)^3",
+      "maxwell_relations": "partial_Phi n=partial_mu(partial_Phi p); partial_Phi s=partial_T(partial_Phi p)",
+      "gibbs_duhem_checks": "partial_T epsilon=T partial_T s+mu partial_T n; partial_mu epsilon=T partial_mu s+mu partial_mu n"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass": "natural energy",
+      "pressure_energy_entropy": "natural thermodynamic densities",
+      "response_derivative": "natural energy density per natural Phi field unit"
+    },
+    "derivation_class": "action-derived thermal normal determinant with grid-level derivative, reciprocity, and stability verification",
+    "observable": "normal-background pressure, charge, entropy, energy, susceptibility, and Phi response consistency",
+    "data_role": "ACTION_DERIVED_INTERNAL_CONSISTENCY_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      },
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json",
+        "sha256": "dc1143ef4b7837eb93e47d3a0136bf790b1b6ca589756a54bd2aea679c536801"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_NORMAL_THERMODYNAMIC_CONSISTENCY",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "condensate_goldstone_and_normal_two_fluid_completion_not_derived",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "normal-branch thermodynamic consistency only; no finite-temperature UET EOS, physical transport, SI, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This closes internal consistency of the declared natural-unit one-loop normal lane only. It is not a renormalized finite-temperature UET theory, condensate/two-fluid derivation, physical Kubo match, SI calibration, external validation, or Full Topic 13 closure."
+  },
+  "grid": {
+    "temperatures": [
+      0.28,
+      0.42
+    ],
+    "chemical_potentials": [
+      0.08,
+      0.2
+    ],
+    "space_responses": [
+      0.1,
+      0.25
+    ],
+    "point_count": 8,
+    "quadrature_order": 192,
+    "cutoff_factor": 70.0,
+    "derivative_step": 0.0001
+  },
+  "metrics": {
+    "dp_dmu": 7.024187481663446e-11,
+    "dp_dT": 3.632147603516156e-09,
+    "dp_dPhi": 1.1301182971205914e-12,
+    "maxwell_mu_phi": 3.5599100707203735e-12,
+    "maxwell_T_phi": 1.5885001755817918e-11,
+    "gibbs_duhem_T": 7.258579681757027e-09,
+    "gibbs_duhem_mu": 1.3750597882555837e-10
+  },
+  "checks": {
+    "all_grid_points_are_normal_branch": true,
+    "pressure_positive": true,
+    "entropy_positive": true,
+    "energy_positive": true,
+    "susceptibility_positive": true,
+    "pressure_mu_derivative_matches_charge": true,
+    "pressure_temperature_derivative_matches_entropy": true,
+    "pressure_phi_derivative_matches_action_response": true,
+    "mu_phi_maxwell_reciprocity": true,
+    "temperature_phi_maxwell_reciprocity": true,
+    "gibbs_duhem_temperature_identity": true,
+    "gibbs_duhem_chemical_potential_identity": true,
+    "natural_unit_lane_is_explicit": true,
+    "phi_is_not_temperature": true,
+    "c_is_not_charge_density": true,
+    "trace_is_not_state_or_feedback": true,
+    "no_target_or_holdout_data_used": true,
+    "no_parameter_fit_or_alpha_emitted": true
+  },
+  "contract_checks": {
+    "unit_lane": "natural",
+    "phi_meaning": "action response input; not temperature",
+    "c_meaning": "not identified with charge density",
+    "trace_meaning": "not used as state or feedback"
+  },
+  "state_points": [
+    {
+      "temperature": 0.28,
+      "chemical_potential": 0.08,
+      "space_response": 0.1,
+      "effective_mass_sq": 0.497,
+      "pressure": 0.0004929517309207704,
+      "entropy_density": 0.009653571727072475,
+      "energy_density": 0.002250597660877711,
+      "charge_susceptibility": 0.0065328827435989605
+    },
+    {
+      "temperature": 0.28,
+      "chemical_potential": 0.08,
+      "space_response": 0.25,
+      "effective_mass_sq": 0.4925,
+      "pressure": 0.000496463073927127,
+      "entropy_density": 0.00970517885758957,
+      "energy_density": 0.0022618407234659163,
+      "charge_susceptibility": 0.006582236401008936
+    },
+    {
+      "temperature": 0.28,
+      "chemical_potential": 0.2,
+      "space_response": 0.1,
+      "effective_mass_sq": 0.497,
+      "pressure": 0.0006038429044857277,
+      "entropy_density": 0.011059839234465468,
+      "energy_density": 0.0027677869793655283,
+      "charge_susceptibility": 0.008194508655445376
+    },
+    {
+      "temperature": 0.28,
+      "chemical_potential": 0.2,
+      "space_response": 0.25,
+      "effective_mass_sq": 0.4925,
+      "pressure": 0.0006081942882650894,
+      "entropy_density": 0.01111844390015823,
+      "energy_density": 0.002781946279716777,
+      "charge_susceptibility": 0.008259565742126848
+    },
+    {
+      "temperature": 0.42,
+      "chemical_potential": 0.08,
+      "space_response": 0.1,
+      "effective_mass_sq": 0.497,
+      "pressure": 0.003961078712619247,
+      "entropy_density": 0.04571824270359023,
+      "energy_density": 0.015393881349512206,
+      "charge_susceptibility": 0.02434890679393798
+    },
+    {
+      "temperature": 0.42,
+      "chemical_potential": 0.08,
+      "space_response": 0.25,
+      "effective_mass_sq": 0.4925,
+      "pressure": 0.003977024226412336,
+      "entropy_density": 0.04584730709733204,
+      "energy_density": 0.015432847744608803,
+      "charge_susceptibility": 0.024461838333844937
+    },
+    {
+      "temperature": 0.42,
+      "chemical_potential": 0.2,
+      "space_response": 0.1,
+      "effective_mass_sq": 0.497,
+      "pressure": 0.0043723774278115884,
+      "entropy_density": 0.04861985076437722,
+      "energy_density": 0.01704879745080532,
+      "charge_susceptibility": 0.027634140308195443
+    },
+    {
+      "temperature": 0.42,
+      "chemical_potential": 0.2,
+      "space_response": 0.25,
+      "effective_mass_sq": 0.4925,
+      "pressure": 0.0043902371119541456,
+      "entropy_density": 0.04875703128233166,
+      "energy_density": 0.017093268855198386,
+      "charge_susceptibility": 0.027771492073883075
+    }
+  ],
+  "numeric_beta_T13_emitted": false,
+  "numeric_e0_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "physical_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+  "next_controller": "Keep the normal thermodynamic-consistency lane bounded while closing vacuum/interaction and condensate/two-fluid sectors; independently source physical Kubo and SI Phi evidence.",
+  "claim_promotion": false
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": "t13-ding-pbte-author-request-audit-v1",
+  "artifact": "t13_ding_pbte_author_request_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE",
+  "major_result": {
+    "major_result_id": "T13_DING_PBTE_AUTHOR_REQUEST_PACKAGE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the corresponding-author request route is specified as a bounded, auditable acquisition package",
+      "each requested payload has a declared role, required units, provenance fields, and minimum acceptance test",
+      "the request distinguishes Ding source data from an independent reproduction and does not request or consume the Xie 2026 holdout",
+      "the request does not ask for or infer a fitted alpha_Phi_K value"
+    ],
+    "equation_or_mapping": "C_src(T) = sum_mu c_mu(T); Delta_Tq = Delta_u_ph / C_src; Phi_E = Delta_u_ph/e0",
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "c_mu": "J m^-3 K^-1 per mode or declared equivalent",
+      "Delta_u_ph": "J m^-3",
+      "e0": "J m^-3 if supplied as a declared UET-independent energy scale",
+      "Phi_E": "dimensionless named energy-response coordinate"
+    },
+    "derivation_class": "source-acquisition specification; no physical result or calibration emitted",
+    "observable": "Ding PBTE temperature-response input provenance and reproducibility readiness",
+    "data_role": "REQUEST_SPECIFICATION_NOT_SOURCE_DATA",
+    "evidence_artifacts": [
+      "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_pbte_author_request_manifest.json",
+      "docs/topics/0.13_Thermodynamic_Bridge/RESEARCH_WAVE_2026-08-12_DING_PBTE_AUTHOR_REQUEST.md"
+    ],
+    "verification_status": "PASS_REQUEST_SCHEMA_OPEN_EXTERNAL_RESPONSE",
+    "open_blockers": [
+      "author_data_or_independent_reproduction_payload_not_received",
+      "numeric_C_src_T_and_mode_resolved_c_mu_not_source_locked",
+      "C_src_uncertainty_or_convergence_contract_not available from current Ding OA package",
+      "base_Phi_to_Delta_u_ph_mapping_not_derived",
+      "e0_energy_density_scale_not_source_locked",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "source-acquisition readiness only; no numeric C_src, alpha_Phi_K, Full Topic 13, or downstream Core unlock",
+    "claim_boundary": "This result makes the author-request route reproducible and bounded. It does not claim that the request was sent, that authors responded, that the requested data exist, or that Topic 13 is closed."
+  },
+  "request_state": "REQUEST_PACKAGE_READY_NOT_SENT",
+  "source_identity": {
+    "title": "Observation of Second Sound in Graphite over 200 K",
+    "doi": "10.1038/s41467-021-27907-z",
+    "pmcid": "PMC8755757",
+    "data_availability_locator": "PMC full text, Data availability paragraph",
+    "reported_route": "supporting data available from the corresponding author on reasonable request",
+    "corresponding_author_contact": [
+      "kanelson@mit.edu",
+      "gchen2@mit.edu"
+    ],
+    "captured_oa_route_status": "CLOSED_AS_SCOPED_NO_GO",
+    "captured_oa_audit": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json"
+  },
+  "requested_payload_groups": {
+    "material_state_geometry": 3,
+    "first_principles_inputs": 5,
+    "numeric_mode_outputs": 4,
+    "response_outputs": 3
+  },
+  "required_record_fields": [
+    "source_identity",
+    "source_locator_or_author_file_name",
+    "material_state_and_geometry",
+    "quantity_definition",
+    "units",
+    "temperature_grid",
+    "mode_index_or_row_identity",
+    "preprocessing",
+    "uncertainty_or_convergence",
+    "source_hash",
+    "permission_or_terms",
+    "independence_statement",
+    "holdout_non_access_statement"
+  ],
+  "acceptance_tests": [
+    "delivered files open with a deterministic reader",
+    "all rows have stable identity and declared units",
+    "C_src(T) recomputes from the delivered c_mu(T) rows using the declared weights",
+    "unit-cell volume and source geometry match the declared material state",
+    "reported uncertainty or convergence can be recomputed from delivered runs or comparison meshes",
+    "all file hashes and permission terms are recorded",
+    "no calibration path reads Xie 2026 or any target residual",
+    "numeric alpha_Phi_K is not emitted unless a separate independent base-Phi amplitude record also passes its own acceptance contract"
+  ],
+  "checks": {
+    "manifest_not_sent": true,
+    "major_result_lane_closed": true,
+    "source_identity_matches_ding": true,
+    "oa_route_is_scoped_no_go": true,
+    "author_route_is_open_not_executed": true,
+    "mode_outputs_requested": true,
+    "c_src_requested": true,
+    "force_constants_requested": true,
+    "shengbte_requested": true,
+    "units_required": true,
+    "row_identity_required": true,
+    "uncertainty_required": true,
+    "hash_required": true,
+    "permission_required": true,
+    "holdout_statement_required": true,
+    "acceptance_tests_present": true,
+    "no_target_curve": true,
+    "no_alpha_fit": true,
+    "no_xie_access": true,
+    "no_numeric_alpha_claim": true
+  },
+  "controlling_blocker": "author_data_or_independent_reproduction_payload_not_received",
+  "next_controller": "Send the bounded request only after project authorization; on response, hash and audit each payload before changing the response state.",
+  "claim_boundary": "The manifest is a request specification and provenance controller only. It contains no Ding numeric C_src rows, no independent base-Phi amplitude, no e0, no alpha_Phi_K, no prediction, and no external validation."
+}

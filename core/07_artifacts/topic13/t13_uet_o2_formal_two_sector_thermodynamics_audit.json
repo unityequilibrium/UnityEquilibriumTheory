@@ -1,0 +1,162 @@
+{
+  "schema_version": "t13-uet-o2-formal-two-sector-thermodynamics-v1",
+  "artifact": "t13_uet_o2_formal_two_sector_thermodynamics_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_FORMAL_TWO_SECTOR_THERMODYNAMIC_CONSISTENCY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FORMAL_TWO_SECTOR_THERMODYNAMIC_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "pressure split into explicit tree-condensate and thermal-quasiparticle sectors",
+      "sector-wise charge, entropy, energy, and susceptibility identities",
+      "normal-branch zero-condensate boundary and condensed-branch positive tree pressure",
+      "explicit distinction between thermodynamic quasiparticle charge and Landau normal density"
+    ],
+    "equation_or_mapping": {
+      "pressure_split": "p_2sector = p_condensate + p_normal",
+      "charge_split": "n_i = partial_mu p_i; n = n_condensate + n_normal",
+      "entropy_split": "s_condensate = partial_T p_condensate = 0; s = s_normal",
+      "energy_split": "epsilon_i = -p_i + T*s_i + mu*n_i; epsilon = sum_i epsilon_i",
+      "susceptibility_split": "chi_i = partial_mu n_i; chi = chi_condensate + chi_normal"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "pressure_energy_density": "natural energy density",
+      "charge_entropy_density": "natural density",
+      "normal_density_label": "thermodynamic quasiparticle charge derivative, not Landau mass density",
+      "Phi": "effective response input; not temperature",
+      "C": "not relabeled as charge density",
+      "R_gen": "derived history trace only; not a state or feedback term"
+    },
+    "derivation_class": "action-derived formal sector decomposition of the declared natural-unit quasiparticle EOS",
+    "observable": "natural-unit sector pressure, charge, entropy, energy, and susceptibility",
+    "data_role": "ACTION_DERIVED_FORMAL_TWO_SECTOR_THERMODYNAMICS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_formal_two_sector_thermodynamics.py",
+        "sha256": "a260f9c50a8685a6c5506f6e5ff1602cfcd2c2bcf1b5f79d3faf81803a4915c9"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      }
+    ],
+    "verification_status": "PASS_FORMAL_TWO_SECTOR_THERMODYNAMIC_CONSISTENCY",
+    "open_blockers": [
+      "transverse_normal_current_response_or_Landau_normal_density_missing",
+      "interacting_finite_temperature_self_energy_and_renormalization_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "microscopic_SK_KMS_matching_missing",
+      "heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "formal finite-temperature thermodynamic sector consistency only; no physical two-fluid transport, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This lane closes only sector-wise thermodynamic identities in natural units. It is not a complete finite-temperature two-fluid transport theory or external validation."
+  },
+  "contract": {
+    "status": "PASS_FORMAL_TWO_SECTOR_THERMODYNAMIC_CONSISTENCY",
+    "equations": {
+      "pressure_split": "p_2sector = p_condensate + p_normal",
+      "charge_split": "n_i = partial_mu p_i; n = n_condensate + n_normal",
+      "entropy_split": "s_condensate = partial_T p_condensate = 0; s = s_normal",
+      "energy_split": "epsilon_i = -p_i + T*s_i + mu*n_i; epsilon = sum_i epsilon_i",
+      "susceptibility_split": "chi_i = partial_mu n_i; chi = chi_condensate + chi_normal"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "pressure_energy_density": "natural energy density",
+      "charge_entropy_density": "natural density",
+      "normal_density_label": "thermodynamic quasiparticle charge derivative, not Landau mass density",
+      "Phi": "effective response input; not temperature",
+      "C": "not relabeled as charge density",
+      "R_gen": "derived history trace only; not a state or feedback term"
+    },
+    "closed_scope": "formal thermodynamic decomposition of the declared tree-condensate plus thermal-quasiparticle EOS",
+    "excluded_scope": "transverse normal current response, Landau normal density, interacting self-energy, physical Kubo coefficients, microscopic SK/KMS matching, heat-flux closure, SI Phi map, alpha_Phi_K, and TTG validation",
+    "data_role": "ACTION_DERIVED_FORMAL_TWO_SECTOR_THERMODYNAMICS",
+    "claim_boundary": "This lane closes only sector-wise thermodynamic identities in natural units. It is not a complete finite-temperature two-fluid transport theory or external validation."
+  },
+  "state_grid": {
+    "normal": {
+      "branch": "normal",
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "total_pressure": 0.00011423395970050842,
+      "condensate_pressure": 0.0,
+      "normal_pressure": 0.00011423395970050842,
+      "total_charge_density": 0.00048211016850379534,
+      "condensate_charge_density": 0.0,
+      "normal_charge_density": 0.00048211016850379534,
+      "total_entropy_density": 0.0030822377028708096,
+      "condensate_entropy_density": 0.0,
+      "normal_entropy_density": 0.0030822377028708096,
+      "total_energy_density": 0.000732596893907398,
+      "condensate_energy_density": 0.0,
+      "normal_energy_density": 0.000732596893907398,
+      "total_susceptibility": 0.0024150102832912234,
+      "condensate_susceptibility": 0.0,
+      "normal_susceptibility": 0.0024150102832912234,
+      "data_role": "ACTION_DERIVED_FORMAL_TWO_SECTOR_THERMODYNAMICS"
+    },
+    "condensed": {
+      "branch": "condensed",
+      "temperature": 0.12,
+      "chemical_potential": 1.18,
+      "space_response": 0.15,
+      "total_pressure": 0.03865589345028994,
+      "condensate_pressure": 0.03849443999999997,
+      "normal_pressure": 0.00016145345028997088,
+      "total_charge_density": 0.46257012286817983,
+      "condensate_charge_density": 0.4630320164306549,
+      "normal_charge_density": -0.00046189356247504815,
+      "total_entropy_density": 0.004894208500659525,
+      "condensate_entropy_density": 0.0,
+      "normal_entropy_density": 0.004894208500659525,
+      "total_energy_density": 0.5077641565542415,
+      "condensate_energy_density": 0.5078833393881728,
+      "normal_energy_density": -0.00011918283393138468,
+      "total_susceptibility": 3.1810527228646155,
+      "condensate_susceptibility": 3.1772000545613523,
+      "normal_susceptibility": 0.0038526683032632874,
+      "data_role": "ACTION_DERIVED_FORMAL_TWO_SECTOR_THERMODYNAMICS"
+    }
+  },
+  "checks": {
+    "normal_pressure_additivity": true,
+    "normal_charge_additivity": true,
+    "normal_entropy_additivity": true,
+    "normal_energy_additivity": true,
+    "normal_susceptibility_additivity": true,
+    "normal_sector_values_finite": true,
+    "condensed_pressure_additivity": true,
+    "condensed_charge_additivity": true,
+    "condensed_entropy_additivity": true,
+    "condensed_energy_additivity": true,
+    "condensed_susceptibility_additivity": true,
+    "condensed_sector_values_finite": true,
+    "normal_branch_has_no_tree_condensate_pressure": true,
+    "normal_branch_has_no_tree_condensate_charge": true,
+    "condensed_branch_has_tree_condensate_pressure": true,
+    "condensate_entropy_is_zero": true,
+    "normal_density_is_explicitly_thermodynamic_only": true,
+    "no_physical_transport_emitted": true,
+    "no_si_alpha_emitted": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "no_holdout_or_fit": true
+  },
+  "failed_checks": [],
+  "numeric_alpha_Phi_K_emitted": false,
+  "physical_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "transverse_normal_current_response_or_Landau_normal_density_missing",
+  "next_controller": "derive a state-matched transverse normal-current response from a declared interacting finite-temperature action or keep this lane as thermodynamic-only; do not promote it to physical transport without Kubo provenance",
+  "claim_promotion": false
+}

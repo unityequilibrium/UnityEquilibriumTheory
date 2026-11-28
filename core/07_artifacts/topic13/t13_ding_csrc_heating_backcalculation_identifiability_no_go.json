@@ -1,0 +1,92 @@
+{
+  "schema_version": "t13-ding-csrc-heating-backcalculation-identifiability-v1",
+  "artifact": "t13_ding_csrc_heating_backcalculation_identifiability_no_go",
+  "generated_at": "2026-08-26",
+  "status": "PASS_SCOPED_NO_GO_DING_C_SRC_HEATING_BACKCALCULATION",
+  "major_result": {
+    "major_result_id": "T13_DING_C_SRC_HEATING_BACKCALCULATION_IDENTIFIABILITY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "The incident-pump setup does not identify absorbed energy density because absorption fraction, thermalized depth, and thermalized volume are not source-locked.",
+      "The captured Ding temperature statement is an upper bound (<3 K), not an uncertainty-bounded absolute Delta_Tq point record.",
+      "The published figure-derived TTG lane is normalized and therefore cannot identify an absolute C_src or alpha_Phi_K scale.",
+      "The back-calculation route is separated from the authorized numeric C_src or accepted same-regime PBTE reproduction route."
+    ],
+    "equation_or_mapping": {
+      "incident_fluence": "F_incident = E_pump / A_1e2",
+      "absorbed_energy_density": "Delta_u_abs = eta_abs * F_incident / l_th",
+      "source_temperature": "Delta_Tq = Delta_u_abs / C_src = eta_abs * F_incident / (l_th * C_src)",
+      "normalized_observable": "y_TTG = Delta_Tq(t) / Delta_Tq(0)",
+      "identifiability_witness": "(C_src, eta_abs/l_th) -> (s*C_src, s*eta_abs/l_th) leaves Delta_Tq unchanged; normalized y_TTG also removes the overall amplitude"
+    },
+    "units": {
+      "E_pump": "J",
+      "F_incident": "J m^-2",
+      "Delta_u_abs": "J m^-3",
+      "C_src": "J m^-3 K^-1",
+      "Delta_Tq": "K",
+      "y_TTG": "dimensionless"
+    },
+    "derivation_class": "source-backed dimensional identifiability no-go; no UET calibration",
+    "observable": "Ding incident-heating setup, bounded surface response, and normalized TTG trace",
+    "data_role": "EXTERNAL_SOURCE_BOUNDARY_NO_GO_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ding_2022_experimental_heating_input_source_package.json",
+        "sha256": "62e6f6ce403c74e0601b2e05f6be2d2a5728d0237fb5392774713f9ee0a8eccd"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ding_2022_pmc_full_text.txt",
+        "sha256": "b1b029f2812586647077a7b8506c2f52aeb7261714395907f8f8d20868fe2874"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_experimental_heating_input_boundary_audit.json",
+        "sha256": "6e39bbf42037971dc2b5a1068df14835dd0b4689f26a60fff95bc26810b8b008"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_fig1d_normalized_source_lane_audit.json",
+        "sha256": "332ecc42bc0d1aeb35817a3d553850a59fa19b817cfe86203d906b2f5dd03dfa"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_DING_C_SRC_HEATING_BACKCALCULATION",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "absorbed_energy_density_and_thermalized_volume_not_source_locked",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "Back-calculation route is closed as a no-go only; no Ding C_src, alpha, dimensional Phi, transport, Core, Gravity, or Galaxy dependency is unlocked.",
+    "claim_boundary": "This no-go is scoped to the captured incident-heating and normalized-TTG routes. It does not prove that an authorized raw Ding package or accepted same-regime PBTE reproduction cannot supply C_src."
+  },
+  "numeric_witness": {
+    "incident_fluence_J_m2": 6.189358898018152,
+    "surface_temperature_upper_bound_K": 3.0,
+    "absolute_delta_Tq_point_available": false,
+    "absorbed_energy_density_available": false,
+    "numeric_C_src_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false
+  },
+  "checks": {
+    "source_package_present": true,
+    "source_text_present": true,
+    "source_hash_matches_package": true,
+    "heating_boundary_audit_passes": true,
+    "reported_pump_energy_is_present": true,
+    "incident_fluence_is_derived_not_absorbed": true,
+    "surface_temperature_is_upper_bound_only": true,
+    "absorbed_energy_density_is_open": true,
+    "normalized_ttg_audit_passes": true,
+    "normalized_ttg_is_dimensionless": true,
+    "normalized_lane_has_no_raw_author_numeric_source": true,
+    "normalized_lane_has_no_numeric_fit": true,
+    "holdout_is_not_accessed": true,
+    "no_landauer_inference": true,
+    "source_reports_no_absolute_delta_t_pair": true
+  },
+  "what_changed": "Closed the incident-heating/normalized-TTG back-calculation route as a scoped identifiability no-go without fabricating C_src or alpha_Phi_K.",
+  "verification": "Source/package hashes, incident-fluence role, <3 K bound semantics, normalized-source role, no-fit policy, no-Landauer policy, and holdout exclusion are checked.",
+  "controlling_blocker": "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+  "next_action": "Obtain an authorized Ding mode-resolved C_src payload or an accepted same-regime PBTE reproduction with material mapping, convergence, uncertainty, and permission; do not infer C_src from incident fluence, the <3 K bound, or normalized TTG rows.",
+  "claim_boundary": "Scoped route no-go only; not numeric C_src, alpha calibration, TTG prediction, external validation, Core closure, or global UET closure.",
+  "claim_promotion": false
+}

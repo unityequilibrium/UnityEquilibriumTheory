@@ -1,0 +1,497 @@
+{
+  "schema_version": "t13-microscopic-current-ladder-boundary-v1",
+  "major_result_id": "T13_MICROSCOPIC_CURRENT_LADDER_MATCHING_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "CLOSED_AS_TRANSVERSE_NONUNIQUENESS_NO_GO_WITH_TREE_HANDOFF",
+  "verification_status": "PASS_SCOPED_TREE_SOURCE_MATCH_AND_TRANSVERSE_NO_GO",
+  "what_is_closed": [
+    "The canonical tree spatial current vertex reduces on shell to the kinetic source q*p/E after the 1/(2E) external-leg normalization.",
+    "Ward contraction plus the P=Q=0 static vertex is insufficient to determine a finite-transfer transverse correction.",
+    "The one-loop and legacy kinetic default action parameters are not identical; an exact explicit configuration bridge is available and required."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.microscopic_current_ladder_matching_boundary"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "tree_handoff": "Gamma_tree^i=2*q*p^i; Gamma_tree^i/(2E)=q*p^i/E=b_kin^i/sqrt(w)",
+    "transverse_family": "Gamma_F^mu=Gamma^mu+F(P,Q)*(Q_z,-Q_0); Q_mu*(Gamma_F-Gamma)^mu=0",
+    "static_boundary": "bounded F implies transverse addition vanishes at Q=0",
+    "required_ladder_handoff": "Gamma_R,on-shell with LSZ/residue and K_4,R -> Bethe-Salpeter resolvent on the same action/state"
+  },
+  "ontology": {
+    "C": "collective coordinate, not q",
+    "Phi": "effective response, not a kinetic particle identity",
+    "R_gen": "derived trace excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "Gamma_spatial": 1,
+    "energy": 1,
+    "kinetic_velocity_source_without_weight": 0,
+    "transverse_F": 0
+  },
+  "derivation_class": "exact_tree_mapping_and_structural_no_go",
+  "observable": "Microscopic-to-kinetic current-source interface boundary, not a transport coefficient",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "source_rows": [
+    {
+      "momentum": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "charge": -1,
+      "mass": 1.0,
+      "energy": 1.004987562112089,
+      "tree_spatial_vertex": [
+        -0.2,
+        -0.0,
+        -0.0
+      ],
+      "lsz_normalized_source": [
+        -0.09950371902099893,
+        -0.0,
+        -0.0
+      ],
+      "kinetic_source": [
+        -0.09950371902099893,
+        -0.0,
+        -0.0
+      ],
+      "relative_residual": 0.0
+    },
+    {
+      "momentum": [
+        0.1,
+        0.0,
+        0.0
+      ],
+      "charge": 1,
+      "mass": 1.0,
+      "energy": 1.004987562112089,
+      "tree_spatial_vertex": [
+        0.2,
+        0.0,
+        0.0
+      ],
+      "lsz_normalized_source": [
+        0.09950371902099893,
+        0.0,
+        0.0
+      ],
+      "kinetic_source": [
+        0.09950371902099893,
+        0.0,
+        0.0
+      ],
+      "relative_residual": 0.0
+    },
+    {
+      "momentum": [
+        0.3,
+        -0.2,
+        0.4
+      ],
+      "charge": -1,
+      "mass": 1.0,
+      "energy": 1.1357816691600546,
+      "tree_spatial_vertex": [
+        -0.6,
+        0.4,
+        -0.8
+      ],
+      "lsz_normalized_source": [
+        -0.26413527189768715,
+        0.1760901812651248,
+        -0.3521803625302496
+      ],
+      "kinetic_source": [
+        -0.26413527189768715,
+        0.1760901812651248,
+        -0.3521803625302496
+      ],
+      "relative_residual": 0.0
+    },
+    {
+      "momentum": [
+        0.3,
+        -0.2,
+        0.4
+      ],
+      "charge": 1,
+      "mass": 1.0,
+      "energy": 1.1357816691600546,
+      "tree_spatial_vertex": [
+        0.6,
+        -0.4,
+        0.8
+      ],
+      "lsz_normalized_source": [
+        0.26413527189768715,
+        -0.1760901812651248,
+        0.3521803625302496
+      ],
+      "kinetic_source": [
+        0.26413527189768715,
+        -0.1760901812651248,
+        0.3521803625302496
+      ],
+      "relative_residual": 0.0
+    },
+    {
+      "momentum": [
+        1.0,
+        0.5,
+        -0.25
+      ],
+      "charge": -1,
+      "mass": 1.0,
+      "energy": 1.5206906325745548,
+      "tree_spatial_vertex": [
+        -2.0,
+        -1.0,
+        0.5
+      ],
+      "lsz_normalized_source": [
+        -0.6575959492214292,
+        -0.3287979746107146,
+        0.1643989873053573
+      ],
+      "kinetic_source": [
+        -0.6575959492214292,
+        -0.3287979746107146,
+        0.1643989873053573
+      ],
+      "relative_residual": 0.0
+    },
+    {
+      "momentum": [
+        1.0,
+        0.5,
+        -0.25
+      ],
+      "charge": 1,
+      "mass": 1.0,
+      "energy": 1.5206906325745548,
+      "tree_spatial_vertex": [
+        2.0,
+        1.0,
+        -0.5
+      ],
+      "lsz_normalized_source": [
+        0.6575959492214292,
+        0.3287979746107146,
+        -0.1643989873053573
+      ],
+      "kinetic_source": [
+        0.6575959492214292,
+        0.3287979746107146,
+        -0.1643989873053573
+      ],
+      "relative_residual": 0.0
+    }
+  ],
+  "transverse_nonuniqueness_rows": [
+    {
+      "vertex": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.9253380146687244e-06
+        ]
+      ],
+      "addition": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0
+        ]
+      ],
+      "longitudinal_change": [
+        0.0,
+        0.0
+      ],
+      "static_addition_norm": null,
+      "coefficient": 0.0,
+      "ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "vertex_change_norm": 0.0
+    },
+    {
+      "vertex": [
+        [
+          4.7522263243306915,
+          0.3999752858492469
+        ],
+        [
+          0.8428859288247034,
+          3.9253380146687244e-06
+        ]
+      ],
+      "addition": [
+        [
+          0.04000000000000001,
+          0.0
+        ],
+        [
+          -0.15707963267948966,
+          0.0
+        ]
+      ],
+      "longitudinal_change": [
+        0.0,
+        0.0
+      ],
+      "static_addition_norm": null,
+      "coefficient": 0.1,
+      "ward_lhs": [
+        7.801934025886545,
+        0.6282812799559416
+      ],
+      "vertex_change_norm": 0.16209260008625748
+    },
+    {
+      "vertex": [
+        [
+          5.112226324330692,
+          0.3999752858492469
+        ],
+        [
+          -0.5708307652907035,
+          3.9253380146687244e-06
+        ]
+      ],
+      "addition": [
+        [
+          0.4,
+          0.0
+        ],
+        [
+          -1.5707963267948966,
+          0.0
+        ]
+      ],
+      "longitudinal_change": [
+        0.0,
+        0.0
+      ],
+      "static_addition_norm": null,
+      "coefficient": 1.0,
+      "ward_lhs": [
+        7.801934025886545,
+        0.6282812799559416
+      ],
+      "vertex_change_norm": 1.6209260008625748
+    }
+  ],
+  "static_rows": [
+    {
+      "vertex": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "addition": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0
+        ]
+      ],
+      "longitudinal_change": [
+        0.0,
+        0.0
+      ],
+      "static_addition_norm": 0.0
+    },
+    {
+      "vertex": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "addition": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -0.0,
+          0.0
+        ]
+      ],
+      "longitudinal_change": [
+        0.0,
+        0.0
+      ],
+      "static_addition_norm": 0.0
+    }
+  ],
+  "action_parameter_match": {
+    "one_loop": {
+      "matter_kinetic": 1.0,
+      "matter_mass_sq": 1.0,
+      "matter_quartic": 0.1,
+      "response_coupling": 0.2,
+      "epsilon_nc": 1.0,
+      "response_kinetic": 1.0,
+      "response_mass_sq": 0.5,
+      "response_quartic": 1.0
+    },
+    "kinetic_default": {
+      "matter_kinetic": 1.0,
+      "matter_mass_sq": 1.0,
+      "matter_quartic": 1.0,
+      "response_coupling": 0.0,
+      "epsilon_nc": 0.0,
+      "response_kinetic": 1.0,
+      "response_mass_sq": 1.0,
+      "response_quartic": 1.0
+    },
+    "default_residuals": {
+      "matter_kinetic": 0.0,
+      "matter_mass_sq": 0.0,
+      "matter_quartic": 0.9,
+      "response_coupling": -0.2,
+      "epsilon_nc": -1.0,
+      "response_kinetic": 0.0,
+      "response_mass_sq": 0.5,
+      "response_quartic": 0.0
+    },
+    "matched_kinetic": {
+      "matter_kinetic": 1.0,
+      "matter_mass_sq": 1.0,
+      "matter_quartic": 0.1,
+      "response_coupling": 0.2,
+      "epsilon_nc": 1.0,
+      "response_kinetic": 1.0,
+      "response_mass_sq": 0.5,
+      "response_quartic": 1.0
+    },
+    "matched_residuals": {
+      "matter_kinetic": 0.0,
+      "matter_mass_sq": 0.0,
+      "matter_quartic": 0.0,
+      "response_coupling": 0.0,
+      "epsilon_nc": 0.0,
+      "response_kinetic": 0.0,
+      "response_mass_sq": 0.0,
+      "response_quartic": 0.0
+    },
+    "default_matches": false,
+    "explicit_bridge_matches": true
+  },
+  "legacy_contract_boundaries": {
+    "current_correlator_excludes_microscopic_vertex": true,
+    "continuum_excludes_microscopic_bs": true,
+    "energy_momentum_bs_excludes_microscopic_bs": true,
+    "heat_lane_excludes_continuum_limit": true,
+    "heat_lane_excludes_physical_SI_Kubo": true
+  },
+  "checks": {
+    "tree_vertex_matches_kinetic_source": true,
+    "transverse_family_preserves_ward": true,
+    "transverse_family_is_nontrivial_at_finite_transfer": true,
+    "transverse_family_vanishes_at_static_point": true,
+    "default_action_mismatch_is_exposed": true,
+    "explicit_action_bridge_is_exact": true,
+    "legacy_contracts_disclose_microscopic_boundary": true,
+    "prior_explicit_vertex_passes": true
+  },
+  "open_blockers": [
+    "retarded_finite_k_three_point_spectral_continuation",
+    "same_state_on_shell_residue_and_LSZ_matching",
+    "microscopic_retarded_four_point_kernel",
+    "collision_ladder_continuum_and_heat_current_matching"
+  ],
+  "controlling_blocker": "state_matched_retarded_three_and_four_point_spectral_kernel_missing",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py": "3707562036fd7063e1eeb0e7631735b660a46a20734e62334e4b1448544f9d8c",
+    "docs/core/test/test_topic13_microscopic_current_ladder_matching_boundary.py": "4a70f11510375a1f2d12b3b628ee619d952adeb505aefd8dd586ecec0f5a8bcc",
+    "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py": "261ac5a2762e3a73125a266316c68f09186aad696d257dae0b23917ec10b1b8c",
+    "docs/core/uet_o2_charged_current_correlator.py": "991e38719578b9caf5b19be98bc3987db6a6a1ffae62d9b17e43203075077c59",
+    "docs/core/uet_o2_continuum_collision_operator.py": "010c1322063b806a1d87d3708cf5509e696f7370170dc2b859f61fd8f884e9e2",
+    "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py": "eb69cc8ab6c35d782fbc687bc6fa503a22ae76c78e28d65c466eaf0e7e4719a9",
+    "docs/core/uet_o2_heat_current_kubo_match.py": "0ebaae4f54459dbf2acbedbab8dfce2c874c7221cd789d813f4f4c02c5bc501e"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
+      "sha256": "7fdf5d1ab04d88657750d567d0cd52a9b770d395210c30180944f547b3772c63"
+    },
+    {
+      "path": "docs/core/artifacts/t13_charged_static_confluent_vertex_audit.json",
+      "sha256": "74337e8dba766503a1f868014cfeadd4c85bca122f550014f5c4f53278566fc2"
+    }
+  ],
+  "dependency_unlocked": [
+    "explicit_action_configured_tree_current_source_handoff"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Tree on-shell source match and transverse non-uniqueness no-go only; not a retarded microscopic vertex, Bethe-Salpeter kernel, continuum Kubo coefficient, SI transport, external validation, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The canonical tree spatial current vertex reduces on shell to the kinetic source q*p/E after the 1/(2E) external-leg normalization.",
+      "Ward contraction plus the P=Q=0 static vertex is insufficient to determine a finite-transfer transverse correction.",
+      "The one-loop and legacy kinetic default action parameters are not identical; an exact explicit configuration bridge is available and required."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "retarded_finite_k_three_point_spectral_continuation",
+      "same_state_on_shell_residue_and_LSZ_matching",
+      "microscopic_retarded_four_point_kernel",
+      "collision_ladder_continuum_and_heat_current_matching"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "explicit_action_configured_tree_current_source_handoff"
+    ],
+    "STATUS": "PASS_SCOPED_TREE_SOURCE_MATCH_AND_TRANSVERSE_NO_GO",
+    "WHAT_CHANGED": "Matched the tree on-shell current source, exposed default action drift, and proved the remaining transverse vertex is not identified by Ward/static evidence.",
+    "EQUATION_OR_MAPPING": {
+      "tree_handoff": "Gamma_tree^i=2*q*p^i; Gamma_tree^i/(2E)=q*p^i/E=b_kin^i/sqrt(w)",
+      "transverse_family": "Gamma_F^mu=Gamma^mu+F(P,Q)*(Q_z,-Q_0); Q_mu*(Gamma_F-Gamma)^mu=0",
+      "static_boundary": "bounded F implies transverse addition vanishes at Q=0",
+      "required_ladder_handoff": "Gamma_R,on-shell with LSZ/residue and K_4,R -> Bethe-Salpeter resolvent on the same action/state"
+    },
+    "VERIFICATION": {
+      "tree_vertex_matches_kinetic_source": true,
+      "transverse_family_preserves_ward": true,
+      "transverse_family_is_nontrivial_at_finite_transfer": true,
+      "transverse_family_vanishes_at_static_point": true,
+      "default_action_mismatch_is_exposed": true,
+      "explicit_action_bridge_is_exact": true,
+      "legacy_contracts_disclose_microscopic_boundary": true,
+      "prior_explicit_vertex_passes": true
+    },
+    "CONTROLLING_BLOCKER": "state_matched_retarded_three_and_four_point_spectral_kernel_missing",
+    "NEXT_ACTION": "Derive a state-matched retarded finite-k three-point spectral kernel and microscopic four-point ladder kernel using the explicit bridged action parameters.",
+    "CLAIM_BOUNDARY": "Tree on-shell source match and transverse non-uniqueness no-go only; not a retarded microscopic vertex, Bethe-Salpeter kernel, continuum Kubo coefficient, SI transport, external validation, or Full Topic 13 closure."
+  }
+}

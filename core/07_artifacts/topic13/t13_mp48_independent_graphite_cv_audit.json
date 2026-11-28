@@ -1,0 +1,272 @@
+{
+  "schema_version": "t13-mp48-independent-graphite-cv-audit-v1",
+  "artifact": "t13_mp48_independent_graphite_cv_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
+  "input_mode": "PACKAGE_DECLARATION_METADATA_ONLY",
+  "raw_payload_available": false,
+  "numeric_payload_verified": false,
+  "major_result": {
+    "major_result_id": "T13_MP48_INDEPENDENT_GRAPHITE_CV_REPRODUCTION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": "The mp-48 source package identity, archive member locators, declared representative rows, unit conversion contract, and holdout boundary are preserved. Raw archive members are absent from the public checkout, so this CI run is metadata-only and does not re-verify numeric payload bytes.",
+    "equation_or_mapping": "C_v^vol(T) = C_v^mol,cell(T) / V_mol,cell; Delta_Tq = Delta_u / C_v^vol",
+    "units": {
+      "source": "J K^-1 mol^-1 primitive cell",
+      "derived": "J m^-3 K^-1",
+      "volume": "m^3 mol^-1 primitive cell"
+    },
+    "derivation_class": "source extraction and standard unit conversion; no UET derivation",
+    "observable": "independent harmonic graphite heat-capacity comparator",
+    "data_role": "INDEPENDENT_REPRODUCTION_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_mp48_independent_graphite_cv_audit.json"
+      }
+    ],
+    "verification_status": "PASS_INDEPENDENT_NUMERIC_CV_WITH_EPISTEMIC_ENVELOPE",
+    "open_blockers": [
+      "Ding-specific PBTE mode-resolved C_src(T) and convergence contract remain open",
+      "base Phi-to-Delta_u_ph energy mapping and e0 remain open",
+      "independent alpha_Phi_K remains open",
+      "temperature-resolved graphite volume and material-grade mapping to Ding TTG remain open",
+      "EOS, covariant transport, SK/KMS, entropy current, and dissipative balance remain open"
+    ],
+    "dependency_unlocked": "independent harmonic c_v comparator route only; no alpha_Phi_K or Gravity unlock",
+    "claim_boundary": "The package closes an independent harmonic graphite c_v comparator lane with auditable provenance and explicit non-statistical uncertainty bounds. It does not close Ding-specific PBTE C_src(T), e0, base Phi-to-energy correspondence, alpha_Phi_K, EOS, transport, SK/KMS, entropy, external validation, or global UET closure. Public CI does not contain the raw archive members; numeric payload verification requires the separately controlled source package."
+  },
+  "source_identity": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "input_mode": "PACKAGE_DECLARATION_METADATA_ONLY",
+    "raw_payload_available": false,
+    "doi": "10.5281/zenodo.20196565",
+    "archive": {
+      "file_name": "mp_0000001-0020000.tar",
+      "size_bytes": 14454630400,
+      "manifest_range_start": 1,
+      "manifest_range_end": 20000,
+      "manifest_mp_id_count": 4252,
+      "manifest_reported_sha256": "40bfa3aa39cb54298e09825d19d07a8d1009a12952e58d2977e1533588ef129e",
+      "archive_hash_verification": "NOT_LOCALLY_VERIFIED_ARCHIVE_NOT_DOWNLOADED",
+      "retrieval_method": "HTTP byte-range requests; archive member data begins at tar header offset plus 512 bytes"
+    },
+    "member_records": [
+      {
+        "member": "mp-48/FORCE_CONSTANTS.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+        "tar_header_offset": 9415499776,
+        "data_offset": 9415500288,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/SPOSCAR.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_SPOSCAR.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "2a1fc64e22bdd091bfa662cfe39031494bad54721593394ee6d404ed91d99bd5",
+        "tar_header_offset": 9416652288,
+        "data_offset": 9416652800,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/phonopy.yaml.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+        "tar_header_offset": 9416654848,
+        "data_offset": 9416655360,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/summary.json.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_summary.json.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "ca8bb269f1ba6140872141bda607be840479058cba2709419d922fce052d95c5",
+        "tar_header_offset": 9416958464,
+        "data_offset": 9416958976,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/total_dos.dat.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_total_dos.dat.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "f8c0fe9013c36dc4861bfbfb27bdc64daf9739456d9523f5ace1b6d668fafeab",
+        "tar_header_offset": 9416965632,
+        "data_offset": 9416966144,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/POSCAR.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_POSCAR.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "dc42649aada5817cb6b94c561cf4bee632bb5cb6a208a762fd7ac36d8320da8a",
+        "tar_header_offset": 9416996352,
+        "data_offset": 9416996864,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      },
+      {
+        "member": "mp-48/thermal_properties.yaml.gz",
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+        "bytes": null,
+        "sha256": null,
+        "expected_sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902",
+        "tar_header_offset": 9416998400,
+        "data_offset": 9416998912,
+        "payload_available": false,
+        "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+      }
+    ]
+  },
+  "summary_identity": {
+    "mp_id": "mp-48",
+    "formula": "C",
+    "primitive_cell_atoms": 4,
+    "supercell_atoms": 200,
+    "space_group": "P6_3/mmc",
+    "has_imaginary_modes": false,
+    "debye_temperature_K": 1269.4565861125113
+  },
+  "derived_records": [
+    {
+      "temperature_K": 100.0,
+      "row_identity": "source_grid",
+      "source_heat_capacity_J_per_mol_cell_K": 7.33043875459715,
+      "derived_volumetric_cv_J_per_m3_K": 345142.3367226314,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 125.0,
+      "row_identity": "linear_interpolation_120_to_130_K",
+      "source_heat_capacity_J_per_mol_cell_K": 10.246335037051303,
+      "derived_volumetric_cv_J_per_m3_K": 482432.78962163633,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 150.0,
+      "row_identity": "source_grid",
+      "source_heat_capacity_J_per_mol_cell_K": 13.49009543502857,
+      "derived_volumetric_cv_J_per_m3_K": 635160.2157697773,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 200.0,
+      "row_identity": "source_grid",
+      "source_heat_capacity_J_per_mol_cell_K": 20.562698832644053,
+      "derived_volumetric_cv_J_per_m3_K": 968162.7747004508,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 225.0,
+      "row_identity": "linear_interpolation_220_to_230_K",
+      "source_heat_capacity_J_per_mol_cell_K": 24.186962415718064,
+      "derived_volumetric_cv_J_per_m3_K": 1138805.6030272588,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 250.0,
+      "row_identity": "source_grid",
+      "source_heat_capacity_J_per_mol_cell_K": 27.78828145778704,
+      "derived_volumetric_cv_J_per_m3_K": 1308368.1232357374,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 300.0,
+      "row_identity": "source_grid",
+      "source_heat_capacity_J_per_mol_cell_K": 34.791236430507276,
+      "derived_volumetric_cv_J_per_m3_K": 1638091.3941289356,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    }
+  ],
+  "comparator_records": [
+    {
+      "temperature_K": 100.0,
+      "mp48_cv_J_per_mol_atom_K": 1.8326096886492875,
+      "nist_cp_J_per_mol_atom_K": 1.674,
+      "relative_difference": 0.09474891795,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 200.0,
+      "mp48_cv_J_per_mol_atom_K": 5.140674708161013,
+      "nist_cp_J_per_mol_atom_K": 5.006,
+      "relative_difference": 0.02690265844,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 250.0,
+      "mp48_cv_J_per_mol_atom_K": 6.94707036444676,
+      "nist_cp_J_per_mol_atom_K": 6.816,
+      "relative_difference": 0.01922980699,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    },
+    {
+      "temperature_K": 300.0,
+      "mp48_cv_J_per_mol_atom_K": 8.697809107626819,
+      "nist_cp_J_per_mol_atom_K": 8.581,
+      "relative_difference": 0.01361252857,
+      "verification_basis": "PACKAGE_DECLARATION_METADATA_ONLY"
+    }
+  ],
+  "checks": {
+    "mp-48/FORCE_CONSTANTS.gz_metadata_declared": true,
+    "mp-48/SPOSCAR.gz_metadata_declared": true,
+    "mp-48/phonopy.yaml.gz_metadata_declared": true,
+    "mp-48/summary.json.gz_metadata_declared": true,
+    "mp-48/total_dos.dat.gz_metadata_declared": true,
+    "mp-48/POSCAR.gz_metadata_declared": true,
+    "mp-48/thermal_properties.yaml.gz_metadata_declared": true,
+    "row_100_package_declaration": true,
+    "row_125_package_declaration": true,
+    "row_150_package_declaration": true,
+    "row_200_package_declaration": true,
+    "row_225_package_declaration": true,
+    "row_250_package_declaration": true,
+    "row_300_package_declaration": true,
+    "janaf_100K_package_declaration": true,
+    "janaf_200K_package_declaration": true,
+    "janaf_250K_package_declaration": true,
+    "janaf_300K_package_declaration": true,
+    "package_status_is_lane_source": true,
+    "summary_mp_id": true,
+    "summary_formula": true,
+    "summary_primitive_atoms": true,
+    "summary_supercell_atoms": true,
+    "summary_space_group": true,
+    "summary_stable": true,
+    "summary_grid_is_10K": true,
+    "thermal_arrays_same_length": true,
+    "source_payload_boundary_declared": true,
+    "thermal_unit_contract_explicit": true,
+    "volume_conversion_matches": true,
+    "volume_relative_uncertainty_matches": true,
+    "janaf_envelope_matches": true,
+    "uncertainty_not_mislabeled_statistical": true,
+    "source_volume_not_used": true,
+    "not_cp_to_cv_correction": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true,
+    "target_curve_not_used": true,
+    "alpha_fit_not_used": true
+  },
+  "controlling_blocker": "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing",
+  "next_controller": "Derive or independently source-lock e0 and the base Phi-to-Delta_u_ph correspondence without reading Xie 2026; then report alpha_Phi_K uncertainty. Keep this mp-48 route as an independent comparator, not as a fitted calibration.",
+  "claim_boundary": "The package closes an independent harmonic graphite c_v comparator lane with auditable provenance and explicit non-statistical uncertainty bounds. It does not close Ding-specific PBTE C_src(T), e0, base Phi-to-energy correspondence, alpha_Phi_K, EOS, transport, SK/KMS, entropy, external validation, or global UET closure. Public CI does not contain the raw archive members; numeric payload verification requires the separately controlled source package."
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": "t13-uet-o2-one-loop-normal-branch-v1",
+  "artifact": "t13_uet_o2_one_loop_normal_branch_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_ONE_LOOP_NORMAL_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ONE_LOOP_NORMAL_BRANCH",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "thermal one-loop normal-background determinant derived from the declared O(2) action effective mass map",
+      "normal-branch pressure, charge, entropy, energy, and susceptibility identities",
+      "action response derivative of the thermal pressure with respect to Phi through m_eff(Phi)",
+      "explicit exclusion of vacuum renormalization, condensate branch, and two-fluid completion"
+    ],
+    "equation_or_mapping": {
+      "normal_condition": "Z*mu^2 < m_eff(Phi)^2",
+      "dispersion": "E_k = sqrt(k^2 + m_eff(Phi)^2)",
+      "grand_potential": "Omega_N^(1,T) = T integral log[(1-exp(-(E_k-mu)/T))(1-exp(-(E_k+mu)/T))] d^3k/(2 pi)^3",
+      "pressure": "p_N^(1,T) = -Omega_N^(1,T)",
+      "charge_density": "n_N = partial p_N/partial mu",
+      "entropy_density": "s_N = partial p_N/partial T",
+      "energy_density": "epsilon_N = -p_N + T*s_N + mu*n_N",
+      "response_derivative": "partial p_N/partial Phi = -(partial m_eff^2/partial Phi) * 1/2 integral[(n_-+n_+)/E_k] d^3k/(2 pi)^3",
+      "action_mass_map": "partial m_eff^2/partial Phi = -epsilon_nc * response_coupling"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "T_mu_m_eff": "natural energy",
+      "Omega_pressure_energy": "natural energy density",
+      "n": "natural charge density",
+      "s": "natural entropy density",
+      "dpressure_dPhi": "natural energy density per natural Phi field unit"
+    },
+    "derivation_class": "action-derived natural-unit thermal one-loop determinant on the homogeneous normal background; vacuum-renormalized and finite-temperature two-fluid completion not included",
+    "observable": "normal-background thermal pressure, charge, entropy, energy, susceptibility, and Phi response derivative",
+    "data_role": "ACTION_DERIVED_ONE_LOOP_NORMAL_LANE_NOT_FULL_UET_THERMAL_CLOSURE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      },
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_ONE_LOOP_NORMAL_LANE",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "condensate_goldstone_and_normal_two_fluid_completion_not_derived",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "action-derived normal-background thermodynamic lane only; no full finite-temperature UET EOS, transport, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This result derives only the thermal one-loop normal-background determinant from the declared natural-unit action mass map. It is not a renormalized full finite-temperature UET effective action, condensate/two-fluid derivation, physical Kubo transport, SI Phi calibration, external validation, or global UET closure."
+  },
+  "state": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "effective_mass_sq": 0.494,
+    "dm_eff_sq_dphi": -0.03,
+    "thermal_scalar_density": 0.002164069945735025,
+    "pressure": 0.0018429129850450034,
+    "pressure_phi_derivative": 6.492209837205074e-05,
+    "charge_density": 0.002888011495050179,
+    "entropy_density": 0.02552043070730546,
+    "energy_density": 0.007666840061521942,
+    "charge_susceptibility": 0.016412987290065746,
+    "matter_grand_potential": 0.0,
+    "one_loop_thermal_grand_potential": -0.0018429129850450034,
+    "vacuum_counterterm_included": false,
+    "condensate_contribution_included": false,
+    "normal_two_fluid_completion": false
+  },
+  "finite_difference_checks": {
+    "dp_dPhi": 6.492209838520127e-05,
+    "dp_dmu": 0.0028880115466353284,
+    "dp_dT": 0.025520433692329675,
+    "dm_eff_sq_dPhi_numeric": -0.030000000000030003,
+    "abs_dp_dPhi_minus_analytic": 1.3150532095565493e-14,
+    "abs_dp_dmu_minus_n": 5.158514934655578e-11,
+    "abs_dp_dT_minus_s": 2.9850242139195515e-09
+  },
+  "checks": {
+    "normal_condition_passes": true,
+    "thermal_pressure_is_positive": true,
+    "thermal_entropy_is_positive": true,
+    "thermal_energy_is_positive": true,
+    "thermal_susceptibility_is_positive": true,
+    "thermal_scalar_density_is_positive": true,
+    "grand_potential_is_negative_pressure": true,
+    "matter_normal_grand_potential_is_zero": true,
+    "mass_derivative_matches_action": true,
+    "mass_derivative_is_emitted": true,
+    "pressure_phi_derivative_matches_integral": true,
+    "charge_is_pressure_derivative": true,
+    "entropy_is_pressure_temperature_derivative": true,
+    "energy_identity_closes": true,
+    "vacuum_counterterm_is_explicitly_excluded": true,
+    "condensate_is_explicitly_excluded": true,
+    "two_fluid_is_explicitly_open": true,
+    "natural_unit_lane_is_declared": true,
+    "phi_is_not_temperature": true,
+    "c_is_not_charge_density": true,
+    "trace_is_not_state": true,
+    "alpha_is_not_emitted": true,
+    "kubo_is_not_emitted": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_one_loop_normal_branch.py": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+  },
+  "controlling_blocker": "vacuum_counterterm_and_interacting_finite_temperature_UET_completion_not_closed",
+  "next_controller": "Close the thermal one-loop vacuum/renormalization contract or explicitly retain the thermal-only scope, then derive the condensate/two-fluid sector and match physical Kubo/SI Phi observables.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

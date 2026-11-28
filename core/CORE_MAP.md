@@ -120,7 +120,7 @@
 |---|---|---|
 | `02_equations/matter_space/uet_master_equation.py` (Master Equation 7 เทอม) | **ไม่ใช่สมการหลักปัจจุบัน** AUTHOR_PROPOSITION §5 ระบุว่าเทอม Natural Will / Game ไม่ได้ implement ตรรกะของผู้เขียน | contract และ test เก่าอ้างถึง |
 | `topics/For Work/` (30 ไฟล์ ย้ายจาก `docs/topics/For Work/` 2026-11-19) | แทนที่แล้วบางส่วนโดย `docs/STANDARD.md` ดู `SUPERSEDED_BY_STANDARD_V2.md` ในโฟลเดอร์นั้น: ไฟล์โครงสร้าง topic, README โค้ด, ข้อมูล, template **ยังใช้** (§15 ของ STANDARD); คำสถานะและลำดับขั้นงานเดิม**ถูกแทนที่** | contract 6 ฉบับล็อก hash ของไฟล์เหล่านี้ ถ้าแก้เนื้อหาจะพัง (การย้ายไม่กระทบ เพราะ hash คิดจากเนื้อหาและ audit แปล path เดิมให้) |
-| `00_governance/` (ยกเว้น calculation contract), audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ; `07_artifacts/` และ `08_history/` ลบแล้ว 2026-11-27 (เก็บที่ tag `archive/legacy-2026-11`) เหลือเฉพาะ 14 ไฟล์ที่ contract lock หรือ checker ใน CI อ่าน |
+| `00_governance/` (ยกเว้น calculation contract), audit script จำนวนมาก | ผลิตภัณฑ์ของระบบ gate เดิม (`LEGACY_UNREVIEWED`) | ใช้เป็นเครื่องมือวินิจฉัยได้ ไม่ควบคุมสถานะ; `07_artifacts/` และ `08_history/` ลบแล้ว 2026-11-27 (เก็บที่ tag `archive/legacy-2026-11`) เหลือเฉพาะไฟล์ที่ contract lock, checker ใน CI อ่าน หรือโค้ดของ topic 0.13 ใช้ |
 
 ## 5. กฎการแก้ไฟล์
 

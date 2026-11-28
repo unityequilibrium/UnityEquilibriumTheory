@@ -1,0 +1,532 @@
+{
+  "schema_version": "t13-uet-o2-gaussian-thermal-stationarity-no-go-v1",
+  "artifact": "t13_uet_o2_gaussian_thermal_stationarity_no_go",
+  "generated_at": "2026-08-12",
+  "status": "PASS_SCOPED_NO_GO_THERMAL_GAUSSIAN_CONDENSATE_STATIONARITY",
+  "formal_no_go_closure": "CLOSED_AS_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_GAUSSIAN_THERMAL_STATIONARITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "within the declared tree plus stable thermal Gaussian domain x=A^2>=q/lambda, the tree derivative is nonnegative",
+      "the analytic discriminant margin is positive and both quadratic mode roots increase with x",
+      "each stable thermal Bose contribution increases with x, so the combined thermal-only potential has no stationary point in this domain",
+      "finite-difference thermal and combined-potential derivative witnesses and cutoff convergence support the analytic no-go"
+    ],
+    "equation_or_mapping": {
+      "x_definition": "x=A^2",
+      "condensed_control": "q=Z*mu^2-m_eff(Phi)^2 > 0",
+      "stable_domain": "x >= q/lambda from r_pi=-q+lambda*x >= 0",
+      "tree_derivative": "partial_x Omega_tree=0.5*(-q+lambda*x) >= 0",
+      "mode_roots": "omega_+-^2=k^2+0.5*(a_sigma+a_pi+4*mu^2) +- 0.5*sqrt(D)",
+      "curvature_entries": "a_sigma=(-q+3*lambda*x)/Z; a_pi=(-q+lambda*x)/Z",
+      "discriminant": "D=(a_sigma-a_pi)^2+8*mu^2*(a_sigma+a_pi)+16*mu^4+16*mu^2*k^2",
+      "mode_derivatives": "partial_x omega_+-^2=2*lambda/Z +- partial_x(sqrt(D))/2",
+      "thermal_derivative": "partial_(omega^2)[T*log(1-exp(-omega/T))]=n_B(omega/T)/(2*omega) > 0",
+      "no_go": "partial_x(Omega_tree+Omega_G)>0 for T>0, x>=q/lambda, and stable modes; no stationary point exists in this scoped domain"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x": "natural amplitude squared",
+      "Omega": "natural thermodynamic density",
+      "Phi": "fixed action response input; no SI map"
+    },
+    "derivation_class": "scoped analytic no-go from tree derivative, mode-root derivative, and positive Bose determinant derivative; finite-difference witness is verification only",
+    "observable": "absence of thermal-only Gaussian stationary condensate in the declared stable domain",
+    "data_role": "ACTION_DERIVED_THERMAL_GAUSSIAN_STATIONARITY_NO_GO",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py",
+        "sha256": "b0ccd80d9be93cf068599bb285d32e227636c18d8f81149d31f1bbe13b702312"
+      },
+      {
+        "path": "docs/core/uet_o2_gaussian_offshell_background.py",
+        "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_THERMAL_GAUSSIAN_CONDENSATE_STATIONARITY",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_finite_temperature_action_can_change_the_scoped_conclusion",
+      "interacting_finite_temperature_self_energy_and_self_consistent_phase_boundary_missing",
+      "condensate_and_normal_two_fluid_eos_completion_missing",
+      "physical_kubo_coefficients_and_microscopic_sk_kms_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "scoped no-go for the current thermal-only Gaussian stationary domain; named renormalized/interacting branch required, with no Full Topic 13, Core, Gravity, transport, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This is a scoped algebraic no-go for a stationary condensate within the declared tree plus stable thermal Gaussian domain. It does not rule out a stationary solution after vacuum renormalization, finite-temperature self-energy, interactions, or a different branch, and it does not close a physical finite-temperature phase transition, EOS, transport, SI map, or Full Topic 13."
+  },
+  "reference": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "effective_mass_sq": 0.494,
+    "condensate_control": 1.534,
+    "kinetic_coefficient": 1.2,
+    "quartic_coupling": 0.8,
+    "x_boundary": 1.9175,
+    "analytic_discriminant_margin_lower_bound": 88.74190000000002,
+    "thermal_only": true,
+    "vacuum_counterterm_included": false,
+    "interacting_self_energy_included": false
+  },
+  "representative_records": [
+    {
+      "x_factor": 1.0,
+      "x": 1.9175,
+      "tree_x_derivative": 0.0,
+      "minimum_low_x_derivative": 0.18296365443775087,
+      "minimum_high_x_derivative": 1.3539411370857874,
+      "minimum_discriminant_margin": 88.75271600000002,
+      "thermal_x_derivative_finite_difference": 0.003274128756283846,
+      "total_x_derivative_finite_difference": 0.007109128756284426,
+      "finite_difference_step": 0.019175
+    },
+    {
+      "x_factor": 1.01,
+      "x": 1.936675,
+      "tree_x_derivative": 0.007669999999999955,
+      "minimum_low_x_derivative": 0.18655591191441312,
+      "minimum_high_x_derivative": 1.3539738782139752,
+      "minimum_discriminant_margin": 91.22083763000006,
+      "thermal_x_derivative_finite_difference": 0.003064433619396696,
+      "total_x_derivative_finite_difference": 0.010734433619395821,
+      "finite_difference_step": 0.0047937499999999855
+    },
+    {
+      "x_factor": 1.1,
+      "x": 2.1092500000000003,
+      "tree_x_derivative": 0.0767000000000001,
+      "minimum_low_x_derivative": 0.21674752535580177,
+      "minimum_high_x_derivative": 1.354268541612043,
+      "minimum_discriminant_margin": 113.61041900000009,
+      "thermal_x_derivative_finite_difference": 0.0019187549096657231,
+      "total_x_derivative_finite_difference": 0.07861875490966314,
+      "finite_difference_step": 0.021092500000000004
+    },
+    {
+      "x_factor": 1.5,
+      "x": 2.8762499999999998,
+      "tree_x_derivative": 0.38349999999999984,
+      "minimum_low_x_derivative": 0.31677628683956094,
+      "minimum_high_x_derivative": 1.355578005735056,
+      "minimum_discriminant_margin": 216.96315766666675,
+      "thermal_x_derivative_finite_difference": 0.0006358969803894678,
+      "total_x_derivative_finite_difference": 0.3841358969803856,
+      "finite_difference_step": 0.028762499999999996
+    },
+    {
+      "x_factor": 2.0,
+      "x": 3.835,
+      "tree_x_derivative": 0.767,
+      "minimum_low_x_derivative": 0.39576008256164674,
+      "minimum_high_x_derivative": 1.357214471728726,
+      "minimum_discriminant_margin": 354.9784159999999,
+      "thermal_x_derivative_finite_difference": 0.0002267971511287526,
+      "total_x_derivative_finite_difference": 0.7672267971511166,
+      "finite_difference_step": 0.03835
+    },
+    {
+      "x_factor": 5.0,
+      "x": 9.5875,
+      "tree_x_derivative": 3.0680000000000005,
+      "minimum_low_x_derivative": 0.5645029270826365,
+      "minimum_high_x_derivative": 1.367023164200232,
+      "minimum_discriminant_margin": 1388.9711160000006,
+      "thermal_x_derivative_finite_difference": 3.2526781350840517e-06,
+      "total_x_derivative_finite_difference": 3.068003252678113,
+      "finite_difference_step": 0.095875
+    }
+  ],
+  "mode_records": [
+    {
+      "x_factor": 1.0,
+      "x": 1.9175,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 2.7442425539092596e-05,
+          "high_omega_sq": 9.316839224241129,
+          "low_x_derivative": 0.18296365443775087,
+          "high_x_derivative": 2.483703012228916,
+          "discriminant_margin": 88.75271600000002
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 0.0027498280850943857,
+          "high_omega_sq": 9.333916838581573,
+          "low_x_derivative": 0.18473340304363606,
+          "high_x_derivative": 2.4819332636230307,
+          "discriminant_margin": 89.82350000000002
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 0.32353535736044314,
+          "high_omega_sq": 10.993131309306225,
+          "low_x_derivative": 0.3288175272944731,
+          "high_x_derivative": 2.337849139372194,
+          "discriminant_margin": 196.90190000000007
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 78.24432058546701,
+          "high_omega_sq": 131.07234608119967,
+          "low_x_derivative": 1.1304528039703055,
+          "high_x_derivative": 1.5362138626963615,
+          "discriminant_margin": 10904.741900000003
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9744.616605778994,
+          "high_omega_sq": 10264.700060887671,
+          "low_x_derivative": 1.3127255295808795,
+          "high_x_derivative": 1.3539411370857874,
+          "discriminant_margin": 1081688.7419000003
+        }
+      ]
+    },
+    {
+      "x_factor": 1.01,
+      "x": 1.936675,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 0.0035702924897540456,
+          "high_omega_sq": 9.364429707510247,
+          "low_x_derivative": 0.18655591191441312,
+          "high_x_derivative": 2.480110754752254,
+          "discriminant_margin": 91.22083763000006
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 0.006326400903720497,
+          "high_omega_sq": 9.38147359909628,
+          "low_x_derivative": 0.18830360790227063,
+          "high_x_derivative": 2.4783630587643963,
+          "discriminant_margin": 92.29162163000007
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 0.3298598201970462,
+          "high_omega_sq": 11.037940179802955,
+          "low_x_derivative": 0.3308359797724474,
+          "high_x_derivative": 2.3358306868942194,
+          "discriminant_margin": 199.3700216300001
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 78.26599421155899,
+          "high_omega_sq": 131.101805788441,
+          "low_x_derivative": 1.1301601085480595,
+          "high_x_derivative": 1.5365065581186075,
+          "discriminant_margin": 10907.210021630002
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9744.64177697712,
+          "high_omega_sq": 10264.72602302288,
+          "low_x_derivative": 1.3126927884526918,
+          "high_x_derivative": 1.3539738782139752,
+          "discriminant_margin": 1081691.2100216304
+        }
+      ]
+    },
+    {
+      "x_factor": 1.1,
+      "x": 2.1092500000000003,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 0.03842356544812908,
+          "high_omega_sq": 9.789776434551873,
+          "low_x_derivative": 0.21674752535580177,
+          "high_x_derivative": 2.449919141310865,
+          "discriminant_margin": 113.61041900000009
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 0.041465341193731575,
+          "high_omega_sq": 9.806534658806271,
+          "low_x_derivative": 0.2183159311952927,
+          "high_x_derivative": 2.448350735471374,
+          "discriminant_margin": 114.6812030000001
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 0.38846430701561374,
+          "high_omega_sq": 11.43953569298439,
+          "low_x_derivative": 0.3480693854371426,
+          "high_x_derivative": 2.3185972812295246,
+          "discriminant_margin": 221.75960300000014
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 78.46080464113183,
+          "high_omega_sq": 131.36719535886817,
+          "low_x_derivative": 1.1275316886830198,
+          "high_x_derivative": 1.5391349779836472,
+          "discriminant_margin": 10929.599603
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9744.868289509144,
+          "high_omega_sq": 10264.959710490857,
+          "low_x_derivative": 1.312398125054624,
+          "high_x_derivative": 1.354268541612043,
+          "discriminant_margin": 1081713.5996030003
+        }
+      ]
+    },
+    {
+      "x_factor": 1.5,
+      "x": 2.8762499999999998,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 0.2459891348467247,
+          "high_omega_sq": 11.62754419848661,
+          "low_x_derivative": 0.31677628683956094,
+          "high_x_derivative": 2.349890379827106,
+          "discriminant_margin": 216.96315766666675
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 0.2500121294258255,
+          "high_omega_sq": 11.643321203907508,
+          "low_x_derivative": 0.317825027154397,
+          "high_x_derivative": 2.34884163951227,
+          "discriminant_margin": 218.03394166666675
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 0.6801282534011763,
+          "high_omega_sq": 13.19320507993216,
+          "low_x_derivative": 0.4087006342462002,
+          "high_x_derivative": 2.257966032420467,
+          "discriminant_margin": 325.11234166666674
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 79.32117732461874,
+          "high_omega_sq": 132.5521560087146,
+          "low_x_derivative": 1.1159786972545338,
+          "high_x_derivative": 1.5506879694121332,
+          "discriminant_margin": 11032.952341666669
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9745.874396675581,
+          "high_omega_sq": 10265.998936657752,
+          "low_x_derivative": 1.311088660931611,
+          "high_x_derivative": 1.355578005735056,
+          "discriminant_margin": 1081816.952341667
+        }
+      ]
+    },
+    {
+      "x_factor": 2.0,
+      "x": 3.835,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 0.590432427627448,
+          "high_omega_sq": 13.839767572372553,
+          "low_x_derivative": 0.39576008256164674,
+          "high_x_derivative": 2.2709065841050204,
+          "discriminant_margin": 354.9784159999999
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 0.5952832304506073,
+          "high_omega_sq": 13.854716769549395,
+          "low_x_derivative": 0.3964741390402917,
+          "high_x_derivative": 2.2701925276263752,
+          "discriminant_margin": 356.0491999999999
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 1.0984316946688102,
+          "high_omega_sq": 15.331568305331189,
+          "low_x_derivative": 0.460565610938507,
+          "high_x_derivative": 2.20610105572816,
+          "discriminant_margin": 463.1275999999999
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 80.38431710812331,
+          "high_omega_sq": 134.0456828918767,
+          "low_x_derivative": 1.1018404885130624,
+          "high_x_derivative": 1.5648261781536046,
+          "discriminant_margin": 11170.967600000002
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9747.130618415014,
+          "high_omega_sq": 10267.299381584986,
+          "low_x_derivative": 1.309452194937941,
+          "high_x_derivative": 1.357214471728726,
+          "discriminant_margin": 1081954.9676000003
+        }
+      ]
+    },
+    {
+      "x_factor": 5.0,
+      "x": 9.5875,
+      "records": [
+        {
+          "wavenumber": 0.01,
+          "low_omega_sq": 3.481053403384493,
+          "high_omega_sq": 26.289146596615513,
+          "low_x_derivative": 0.5645029270826365,
+          "high_x_derivative": 2.1021637395840305,
+          "discriminant_margin": 1388.9711160000006
+        },
+        {
+          "wavenumber": 0.1,
+          "low_omega_sq": 3.4880195591568697,
+          "high_omega_sq": 26.30198044084314,
+          "low_x_derivative": 0.5647006681641696,
+          "high_x_derivative": 2.1019659985024974,
+          "discriminant_margin": 1390.0419000000006
+        },
+        {
+          "wavenumber": 1.0,
+          "low_omega_sq": 4.188350788461777,
+          "high_omega_sq": 27.581649211538227,
+          "low_x_derivative": 0.5837359384547424,
+          "high_x_derivative": 2.0829307282119247,
+          "discriminant_margin": 1497.1203000000005
+        },
+        {
+          "wavenumber": 10.0,
+          "low_omega_sq": 86.49395206622732,
+          "high_omega_sq": 143.27604793377267,
+          "low_x_derivative": 1.0245114188259778,
+          "high_x_derivative": 1.6421552478406891,
+          "discriminant_margin": 12204.960300000002
+        },
+        {
+          "wavenumber": 100.0,
+          "low_omega_sq": 9754.635020936066,
+          "high_omega_sq": 10275.134979063934,
+          "low_x_derivative": 1.299643502466435,
+          "high_x_derivative": 1.367023164200232,
+          "discriminant_margin": 1082988.9603000002
+        }
+      ]
+    }
+  ],
+  "finite_difference_records": [
+    {
+      "x_factor": 1.0,
+      "x": 1.9175,
+      "step": 0.019175,
+      "thermal_derivative": 0.003274128756283846,
+      "total_derivative": 0.007109128756284426
+    },
+    {
+      "x_factor": 1.01,
+      "x": 1.936675,
+      "step": 0.0047937499999999855,
+      "thermal_derivative": 0.003064433619396696,
+      "total_derivative": 0.010734433619395821
+    },
+    {
+      "x_factor": 1.1,
+      "x": 2.1092500000000003,
+      "step": 0.021092500000000004,
+      "thermal_derivative": 0.0019187549096657231,
+      "total_derivative": 0.07861875490966314
+    },
+    {
+      "x_factor": 1.5,
+      "x": 2.8762499999999998,
+      "step": 0.028762499999999996,
+      "thermal_derivative": 0.0006358969803894678,
+      "total_derivative": 0.3841358969803856
+    },
+    {
+      "x_factor": 2.0,
+      "x": 3.835,
+      "step": 0.03835,
+      "thermal_derivative": 0.0002267971511287526,
+      "total_derivative": 0.7672267971511166
+    },
+    {
+      "x_factor": 5.0,
+      "x": 9.5875,
+      "step": 0.095875,
+      "thermal_derivative": 3.2526781350840517e-06,
+      "total_derivative": 3.068003252678113
+    }
+  ],
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 50.0,
+      "grand_potential": -0.7373268119566551,
+      "thermal_grand_potential": -0.0019655619566551243,
+      "tree_grand_potential": -0.73536125
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 70.0,
+      "grand_potential": -0.7373268144947932,
+      "thermal_grand_potential": -0.001965564494793282,
+      "tree_grand_potential": -0.73536125
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 90.0,
+      "grand_potential": -0.7373268145664527,
+      "thermal_grand_potential": -0.001965564566452671,
+      "tree_grand_potential": -0.73536125
+    }
+  ],
+  "convergence_relative_errors": {
+    "grand_potential": 9.718818674574974e-11,
+    "thermal_grand_potential": 3.645740800527646e-08
+  },
+  "checks": {
+    "condensed_control_positive": true,
+    "positive_Z_and_quartic": true,
+    "stable_domain_boundary_is_q_over_lambda": true,
+    "tree_derivative_nonnegative_on_witness": true,
+    "analytic_margin_lower_bound_positive": true,
+    "analytic_margin_witness_positive": true,
+    "low_mode_x_derivative_positive": true,
+    "high_mode_x_derivative_positive": true,
+    "thermal_x_derivative_positive_on_witness": true,
+    "total_x_derivative_positive_on_witness": true,
+    "thermal_derivative_sign_matches_analytic_witness": true,
+    "total_derivative_is_resolved": true,
+    "boundary_potential_converges": true,
+    "boundary_thermal_potential_converges": true,
+    "finite_temperature_self_energy_is_not_assumed": true,
+    "vacuum_counterterm_is_not_assumed": true,
+    "no_physical_phase_transition_claim": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_gaussian_thermal_stationarity_no_go.py": "b0ccd80d9be93cf068599bb285d32e227636c18d8f81149d31f1bbe13b702312",
+    "docs/core/uet_o2_gaussian_offshell_background.py": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "thermal_gaussian_stationarity_no_go_requires_named_renormalized_interacting_branch_for_any_finite_temperature_stationary_solution",
+  "next_controller": "Keep the current thermal-only Gaussian branch marked no-go and derive/source-lock the named renormalized interacting self-energy branch before claiming a finite-temperature phase boundary.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

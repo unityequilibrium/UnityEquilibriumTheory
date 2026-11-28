@@ -1,0 +1,1021 @@
+{
+  "schema_version": "t13-charged-one-loop-current-vertex-v1",
+  "major_result_id": "T13_CHARGED_ONE_LOOP_CURRENT_VERTEX_MATCH",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS_SCOPED_CHARGED_ONE_LOOP_VERTEX",
+  "what_is_closed": [
+    "Explicit mixed response triangle matches the charged self-energy Ward difference at generic nonzero Euclidean transfer.",
+    "Quartic bath-current insertion plus response-relaxed mean contribution is transverse on the declared continuum thermal integral.",
+    "Legacy plus-i-mu charged propagator and P-K routing are reconciled without relabeling charge."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.charged_one_loop_current_vertex"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "propagator": "D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2",
+    "mixed_triangle": "deltaGamma_mix=G^2 T sum_l integral D_response(K)D_q(P-K)D_q(P+Q-K) gamma_q(P-K+Q,P-K)",
+    "bath_triangle": "deltaGamma_bath=[-4*lambda_chi+G^2 D_response(Q)] T sum_l integral D_+(K)gamma_+(K+Q,K)D_+(K+Q)",
+    "bare_vertex": "gamma_q=[q*(2*(P0+i*q*mu)+Q0), q*(2*p+Q)]",
+    "Ward": "Q_mu Gamma_q^mu=q*[D_q,full^-1(P+Q)-D_q,full^-1(P)]"
+  },
+  "ontology": {
+    "C": "collective lane coordinate, not universal charge",
+    "Phi": "effective response; response propagator is lane-specific, not a particle claim",
+    "R_gen": "derived trace excluded from loops",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "P0": 1,
+    "Q0": 1,
+    "momentum": 1,
+    "mu": 1,
+    "G": 1,
+    "Gamma": 1,
+    "self_energy": 2
+  },
+  "derivation_class": "numerical_approximation",
+  "derivation_origin": "Functional current insertion into the same canonical charged/response action and one-loop self-energy.",
+  "constant_origin": "synthetic action parameters; no fit or calibration",
+  "observable": "Internal Euclidean charged three-point vertex, not physical Kubo or heat current",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2,
+    "response_quartic": 1.0
+  },
+  "samples": [
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 1,
+      "P0": 1.5707963267948966,
+      "Q0": 1.5707963267948966,
+      "pz": 0.3,
+      "Qz": 0.4,
+      "bare": [
+        [
+          4.71238898038469,
+          0.4
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          1.2105075693717038e-06,
+          3.6383235873253445e-07
+        ],
+        [
+          2.2691652738933197e-07,
+          -2.2220864201233085e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.0943805550500111e-19,
+          -1.500671709470852e-06
+        ],
+        [
+          7.114068899639857e-20,
+          5.893124022404577e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -2.8263243278799187e-19,
+          3.875603363991414e-06
+        ],
+        [
+          -1.837264551940729e-19,
+          -1.5219458820679134e-05
+        ]
+      ],
+      "bath_coefficient": -0.38720982735584614,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0001638665615680382,
+          -2.3577311402417542e-05
+        ],
+        [
+          -3.4665412334301964e-05,
+          -1.94556514353462e-06
+        ]
+      ],
+      "total": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.9253380146687244e-06
+        ]
+      ],
+      "self_energy_before": [
+        -3.678612909095898e-05,
+        -1.5230455435014403e-05
+      ],
+      "self_energy_after": [
+        -0.00030606105956578253,
+        -5.248121745205955e-05
+      ],
+      "Ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "Ward_target": [
+        7.8019340258865455,
+        0.6282812799559416
+      ],
+      "Ward_relative_error": 2.269469266118063e-16,
+      "bath_transversality_relative": 2.0327128204165775e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 1,
+      "P0": 1.5707963267948966,
+      "Q0": 1.5707963267948966,
+      "pz": 0.3,
+      "Qz": 0.4,
+      "bare": [
+        [
+          4.71238898038469,
+          0.4
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          1.2105075693717038e-06,
+          3.6383235873253445e-07
+        ],
+        [
+          2.2691652738933197e-07,
+          -2.2220864201233085e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.0943805550500111e-19,
+          -1.500671709470852e-06
+        ],
+        [
+          7.114068899639857e-20,
+          5.893124022404577e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -2.8263243278799187e-19,
+          3.875603363991414e-06
+        ],
+        [
+          -1.837264551940729e-19,
+          -1.5219458820679134e-05
+        ]
+      ],
+      "bath_coefficient": -0.38720982735584614,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0001638665615680382,
+          -2.3577311402417542e-05
+        ],
+        [
+          -3.4665412334301964e-05,
+          -1.94556514353462e-06
+        ]
+      ],
+      "total": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.9253380146687244e-06
+        ]
+      ],
+      "self_energy_before": [
+        -3.678612909095898e-05,
+        -1.5230455435014403e-05
+      ],
+      "self_energy_after": [
+        -0.00030606105956578253,
+        -5.248121745205955e-05
+      ],
+      "Ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "Ward_target": [
+        7.8019340258865455,
+        0.6282812799559416
+      ],
+      "Ward_relative_error": 2.269469266118063e-16,
+      "bath_transversality_relative": 2.0327128204165775e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 2,
+      "nQ": 1,
+      "P0": 3.141592653589793,
+      "Q0": 1.5707963267948966,
+      "pz": -0.2,
+      "Qz": 0.5,
+      "bare": [
+        [
+          7.853981633974483,
+          0.4
+        ],
+        [
+          0.09999999999999998,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          4.862963653655269e-07,
+          7.410342053376694e-08
+        ],
+        [
+          5.2867541353101106e-08,
+          -3.0515752083571705e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.7153933885575419e-19,
+          -2.2948595011278e-06
+        ],
+        [
+          9.437836393072707e-20,
+          7.2095137497638196e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -4.426049454514192e-19,
+          5.92118502432522e-06
+        ],
+        [
+          -2.435145832903064e-19,
+          -1.8601951372965973e-05
+        ]
+      ],
+      "bath_coefficient": -0.3875676054202213,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0003592873470911603,
+          -2.5457749212498665e-05
+        ],
+        [
+          -3.585029382276577e-06,
+          -1.6843682973246693e-07
+        ]
+      ],
+      "total": [
+        [
+          7.853622832923756,
+          0.3999723214947069
+        ],
+        [
+          0.09999646783815906,
+          7.0105611679477804e-06
+        ]
+      ],
+      "self_energy_before": [
+        -0.0002874225151956356,
+        -5.1868065212173706e-05
+      ],
+      "self_energy_after": [
+        -0.0008527919686463263,
+        -9.184007907376301e-05
+      ],
+      "Ward_lhs": [
+        12.386440131908246,
+        0.6282785587040971
+      ],
+      "Ward_target": [
+        12.386440131908248,
+        0.628278558704097
+      ],
+      "Ward_relative_error": 1.4350674622072676e-16,
+      "bath_transversality_relative": 2.5395912594423705e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 2,
+      "nQ": 1,
+      "P0": 3.141592653589793,
+      "Q0": 1.5707963267948966,
+      "pz": -0.2,
+      "Qz": 0.5,
+      "bare": [
+        [
+          7.853981633974483,
+          0.4
+        ],
+        [
+          0.09999999999999998,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          4.862963653655269e-07,
+          7.410342053376694e-08
+        ],
+        [
+          5.2867541353101106e-08,
+          -3.0515752083571705e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.7153933885575419e-19,
+          -2.2948595011278e-06
+        ],
+        [
+          9.437836393072707e-20,
+          7.2095137497638196e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -4.426049454514192e-19,
+          5.92118502432522e-06
+        ],
+        [
+          -2.435145832903064e-19,
+          -1.8601951372965973e-05
+        ]
+      ],
+      "bath_coefficient": -0.3875676054202213,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0003592873470911603,
+          -2.5457749212498665e-05
+        ],
+        [
+          -3.585029382276577e-06,
+          -1.6843682973246693e-07
+        ]
+      ],
+      "total": [
+        [
+          7.853622832923756,
+          0.3999723214947069
+        ],
+        [
+          0.09999646783815906,
+          7.0105611679477804e-06
+        ]
+      ],
+      "self_energy_before": [
+        -0.0002874225151956356,
+        -5.1868065212173706e-05
+      ],
+      "self_energy_after": [
+        -0.0008527919686463263,
+        -9.184007907376301e-05
+      ],
+      "Ward_lhs": [
+        12.386440131908246,
+        0.6282785587040971
+      ],
+      "Ward_target": [
+        12.386440131908248,
+        0.628278558704097
+      ],
+      "Ward_relative_error": 1.4350674622072676e-16,
+      "bath_transversality_relative": 2.5395912594423705e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 2,
+      "P0": 3.141592653589793,
+      "Q0": 6.283185307179586,
+      "pz": 0.4,
+      "Qz": -0.3,
+      "bare": [
+        [
+          12.566370614359172,
+          0.4
+        ],
+        [
+          0.5,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          2.8010731883068973e-06,
+          2.4878972619584466e-07
+        ],
+        [
+          1.912796999570483e-09,
+          -2.3087061401465253e-09
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.8228690509114498e-19,
+          -1.6609179867000048e-07
+        ],
+        [
+          -1.5657395833233943e-19,
+          -3.4786184968212164e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -4.56857456135665e-19,
+          4.1626839068573065e-07
+        ],
+        [
+          3.9241425633419803e-19,
+          8.718304787332815e-06
+        ]
+      ],
+      "bath_coefficient": -0.3990017075194991,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.000652608340197719,
+          -2.473202824129596e-05
+        ],
+        [
+          -2.707966789844161e-05,
+          -8.230714596942581e-08
+        ]
+      ],
+      "total": [
+        [
+          12.565720807092163,
+          0.3999753506696863
+        ],
+        [
+          0.4999729222448986,
+          -3.563234348930789e-06
+        ]
+      ],
+      "self_energy_before": [
+        -0.00031232099768943865,
+        -5.352996090759793e-05
+      ],
+      "self_energy_after": [
+        -0.00438705714373502,
+        -0.0002073373006638013
+      ],
+      "Ward_lhs": [
+        78.80276047256882,
+        2.5131203155320803
+      ],
+      "Ward_target": [
+        78.80276047256883,
+        2.513120315532078
+      ],
+      "Ward_relative_error": 1.8242980587558275e-16,
+      "bath_transversality_relative": 5.442986149980886e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.5,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 2,
+      "P0": 3.141592653589793,
+      "Q0": 6.283185307179586,
+      "pz": 0.4,
+      "Qz": -0.3,
+      "bare": [
+        [
+          12.566370614359172,
+          0.4
+        ],
+        [
+          0.5,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          2.8010731883068973e-06,
+          2.4878972619584466e-07
+        ],
+        [
+          1.912796999570483e-09,
+          -2.3087061401465253e-09
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.8228690509114498e-19,
+          -1.6609179867000048e-07
+        ],
+        [
+          -1.5657395833233943e-19,
+          -3.4786184968212164e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -4.56857456135665e-19,
+          4.1626839068573065e-07
+        ],
+        [
+          3.9241425633419803e-19,
+          8.718304787332815e-06
+        ]
+      ],
+      "bath_coefficient": -0.3990017075194991,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.000652608340197719,
+          -2.473202824129596e-05
+        ],
+        [
+          -2.707966789844161e-05,
+          -8.230714596942581e-08
+        ]
+      ],
+      "total": [
+        [
+          12.565720807092163,
+          0.3999753506696863
+        ],
+        [
+          0.4999729222448986,
+          -3.563234348930789e-06
+        ]
+      ],
+      "self_energy_before": [
+        -0.00031232099768943865,
+        -5.352996090759793e-05
+      ],
+      "self_energy_after": [
+        -0.00438705714373502,
+        -0.0002073373006638013
+      ],
+      "Ward_lhs": [
+        78.80276047256882,
+        2.5131203155320803
+      ],
+      "Ward_target": [
+        78.80276047256883,
+        2.513120315532078
+      ],
+      "Ward_relative_error": 1.8242980587558275e-16,
+      "bath_transversality_relative": 5.442986149980886e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    }
+  ],
+  "direct_sum_witnesses": [
+    {
+      "numeric": [
+        [
+          -0.04020067810964287,
+          -0.002821384315474146
+        ],
+        [
+          -0.014150889878463331,
+          -0.0018028510709038655
+        ]
+      ],
+      "residue": [
+        [
+          -0.04020067810964287,
+          -0.0028213843154741743
+        ],
+        [
+          -0.014150889878463328,
+          -0.0018028510709038673
+        ]
+      ],
+      "relative_error": 6.656131438599084e-16
+    },
+    {
+      "numeric": [
+        [
+          0.04020067810964287,
+          -0.002821384315474146
+        ],
+        [
+          0.014150889878463331,
+          -0.0018028510709038655
+        ]
+      ],
+      "residue": [
+        [
+          0.040200678109642875,
+          -0.0028213843154741257
+        ],
+        [
+          0.01415088987846333,
+          -0.001802851070903863
+        ]
+      ],
+      "relative_error": 5.089521100785498e-16
+    }
+  ],
+  "refinement": [
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 1,
+      "P0": 1.5707963267948966,
+      "Q0": 1.5707963267948966,
+      "pz": 0.3,
+      "Qz": 0.4,
+      "bare": [
+        [
+          4.71238898038469,
+          0.4
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          1.2105075693717025e-06,
+          3.638323587325358e-07
+        ],
+        [
+          2.2691652738933303e-07,
+          -2.2220864201232324e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          2.5408630350850938e-20,
+          -1.5006717094708388e-06
+        ],
+        [
+          1.5522834144320252e-20,
+          5.893124022404528e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -6.561979721527157e-20,
+          3.87560336399138e-06
+        ],
+        [
+          -4.0088946735473104e-20,
+          -1.5219458820679007e-05
+        ]
+      ],
+      "bath_coefficient": -0.38720982735584614,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0001638665615680382,
+          -2.3577311402417542e-05
+        ],
+        [
+          -3.4665412334301964e-05,
+          -1.94556514353462e-06
+        ]
+      ],
+      "total": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.925338014668676e-06
+        ]
+      ],
+      "self_energy_before": [
+        -3.6786129090958975e-05,
+        -1.52304554350144e-05
+      ],
+      "self_energy_after": [
+        -0.00030606105956578253,
+        -5.248121745205955e-05
+      ],
+      "Ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "Ward_target": [
+        7.8019340258865455,
+        0.6282812799559416
+      ],
+      "Ward_relative_error": 2.269469266118063e-16,
+      "bath_transversality_relative": 4.6793956992363356e-15,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 1,
+      "P0": 1.5707963267948966,
+      "Q0": 1.5707963267948966,
+      "pz": 0.3,
+      "Qz": 0.4,
+      "bare": [
+        [
+          4.71238898038469,
+          0.4
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          1.2105075693717053e-06,
+          3.6383235873253556e-07
+        ],
+        [
+          2.2691652738933234e-07,
+          -2.222086420123298e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          8.620227832677451e-20,
+          -1.50067170947085e-06
+        ],
+        [
+          5.972639470504558e-20,
+          5.8931240224045765e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -2.226242007219371e-19,
+          3.875603363991409e-06
+        ],
+        [
+          -1.5424813753540653e-19,
+          -1.5219458820679132e-05
+        ]
+      ],
+      "bath_coefficient": -0.38720982735584614,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0001638665615680382,
+          -2.3577311402417542e-05
+        ],
+        [
+          -3.4665412334301964e-05,
+          -1.94556514353462e-06
+        ]
+      ],
+      "total": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.925338014668724e-06
+        ]
+      ],
+      "self_energy_before": [
+        -3.6786129090958975e-05,
+        -1.5230455435014402e-05
+      ],
+      "self_energy_after": [
+        -0.00030606105956578253,
+        -5.248121745205955e-05
+      ],
+      "Ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "Ward_target": [
+        7.8019340258865455,
+        0.6282812799559416
+      ],
+      "Ward_relative_error": 2.269469266118063e-16,
+      "bath_transversality_relative": 1.616105259393677e-14,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "nP": 1,
+      "nQ": 1,
+      "P0": 1.5707963267948966,
+      "Q0": 1.5707963267948966,
+      "pz": 0.3,
+      "Qz": 0.4,
+      "bare": [
+        [
+          4.71238898038469,
+          0.4
+        ],
+        [
+          1.0,
+          0.0
+        ]
+      ],
+      "mixed_thermal_triangle": [
+        [
+          1.210507569371706e-06,
+          3.638323587325344e-07
+        ],
+        [
+          2.2691652738933335e-07,
+          -2.2220864201232444e-08
+        ]
+      ],
+      "response_relaxed_bath_triangle": [
+        [
+          1.6407478651678956e-20,
+          -1.5006717094708386e-06
+        ],
+        [
+          8.834302566957829e-21,
+          5.893124022404525e-06
+        ]
+      ],
+      "bath_triangle_unweighted": [
+        [
+          -4.2373611134100864e-20,
+          3.8756033639913795e-06
+        ],
+        [
+          -2.2815285002668844e-20,
+          -1.5219458820678998e-05
+        ]
+      ],
+      "bath_coefficient": -0.38720982735584614,
+      "mixed_vacuum_and_counterterm_vertex": [
+        [
+          -0.0001638665615680382,
+          -2.3577311402417542e-05
+        ],
+        [
+          -3.4665412334301964e-05,
+          -1.94556514353462e-06
+        ]
+      ],
+      "total": [
+        [
+          4.712226324330691,
+          0.3999752858492469
+        ],
+        [
+          0.999965561504193,
+          3.925338014668672e-06
+        ]
+      ],
+      "self_energy_before": [
+        -3.6786129090958975e-05,
+        -1.5230455435014397e-05
+      ],
+      "self_energy_after": [
+        -0.00030606105956578253,
+        -5.248121745205955e-05
+      ],
+      "Ward_lhs": [
+        7.801934025886544,
+        0.6282812799559416
+      ],
+      "Ward_target": [
+        7.8019340258865455,
+        0.6282812799559416
+      ],
+      "Ward_relative_error": 2.269469266118063e-16,
+      "bath_transversality_relative": 2.9777700063314574e-15,
+      "routing": "response loop K; charged lines P-K and P+Q-K use (R0+i*q*mu)^2; no sign change from legacy convention",
+      "boundary": "Generic nonzero Euclidean Matsubara transfer. Static/confluent limit, real-time transverse continuation and collision ladders remain open."
+    }
+  ],
+  "refinement_relative_changes": [
+    {
+      "mixed_thermal_triangle": 2.2767251205044867e-15,
+      "response_relaxed_bath_triangle": 1.4805958223073274e-14
+    },
+    {
+      "mixed_thermal_triangle": 1.3617408497018407e-15,
+      "response_relaxed_bath_triangle": 1.6657971352705694e-14
+    }
+  ],
+  "checks": {
+    "explicit_diagram_Ward": true,
+    "bath_insertion_transverse": true,
+    "direct_Matsubara_residue": true,
+    "vertex_refinement": true,
+    "finite_nonzero_vertices": true,
+    "routing_alignment": true
+  },
+  "approximation_contract": {
+    "order": "strict one loop in normal zero-field propagators",
+    "transfer": "generic nonzero bosonic Matsubara Q; collinear external spatial momenta with full internal angle",
+    "bath_role": "response-relaxed thermodynamic background insertion, separately labelled from proper mixed triangle",
+    "vacuum": "mixed triangle and fixed charged kinetic counterterm; thermal bath insertion is vacuum-free by conserved-current shift"
+  },
+  "open_blockers": [
+    "static_confluent_vertex_limit",
+    "real_time_finite_k_transverse_continuation",
+    "collision_ladder_and_heat_current_vertex_matching",
+    "complete_counterterm_four_point_and_material_SI_mapping"
+  ],
+  "controlling_blocker": "real_time_transverse_vertex_and_collision_ladder_matching",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py": "261ac5a2762e3a73125a266316c68f09186aad696d257dae0b23917ec10b1b8c",
+    "docs/core/test/test_topic13_charged_one_loop_current_vertex.py": "d67e175cdc7ac0005e09712262178b5017556b4a0d67f4e8320831435cbd615b",
+    "docs/scripts/audit/audit_topic13_charged_one_loop_match.py": "f45703398824555a81f90dd04ee6a1dd259d56c0d1623efbe878d5bc5fb6f91b",
+    "docs/core/uet_o2_tree_level_charged_ward_vertex.py": "ae592064486a75214c6fb4c1bd90627ef8951990c39eff2ad06e08406bff50b3",
+    "docs/core/uet_o2_finite_density_charged_vertex.py": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f",
+    "docs/core/uet_o2_charged_current_correlator.py": "991e38719578b9caf5b19be98bc3987db6a6a1ffae62d9b17e43203075077c59"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_charged_one_loop_match_audit.json",
+      "sha256": "4f29335b1b2423fb50941793e7ecccde8b3945afdb843fb6420976596693c6c9"
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "collision_artifact_rerun": false,
+  "claim_boundary": "Explicit generic Euclidean one-loop current vertex only; not static limit, retarded transverse vertex, physical current correlator, Kubo/heat transport, SI or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Explicit mixed response triangle matches the charged self-energy Ward difference at generic nonzero Euclidean transfer.",
+      "Quartic bath-current insertion plus response-relaxed mean contribution is transverse on the declared continuum thermal integral.",
+      "Legacy plus-i-mu charged propagator and P-K routing are reconciled without relabeling charge."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "static_confluent_vertex_limit",
+      "real_time_finite_k_transverse_continuation",
+      "collision_ladder_and_heat_current_vertex_matching",
+      "complete_counterterm_four_point_and_material_SI_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_SCOPED_CHARGED_ONE_LOOP_VERTEX",
+    "WHAT_CHANGED": "Replaced a Ward-reconstructed placeholder by explicit mixed and bath current diagrams at generic Euclidean transfer.",
+    "EQUATION_OR_MAPPING": {
+      "propagator": "D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2",
+      "mixed_triangle": "deltaGamma_mix=G^2 T sum_l integral D_response(K)D_q(P-K)D_q(P+Q-K) gamma_q(P-K+Q,P-K)",
+      "bath_triangle": "deltaGamma_bath=[-4*lambda_chi+G^2 D_response(Q)] T sum_l integral D_+(K)gamma_+(K+Q,K)D_+(K+Q)",
+      "bare_vertex": "gamma_q=[q*(2*(P0+i*q*mu)+Q0), q*(2*p+Q)]",
+      "Ward": "Q_mu Gamma_q^mu=q*[D_q,full^-1(P+Q)-D_q,full^-1(P)]"
+    },
+    "VERIFICATION": {
+      "explicit_diagram_Ward": true,
+      "bath_insertion_transverse": true,
+      "direct_Matsubara_residue": true,
+      "vertex_refinement": true,
+      "finite_nonzero_vertices": true,
+      "routing_alignment": true
+    },
+    "CONTROLLING_BLOCKER": "real_time_transverse_vertex_and_collision_ladder_matching",
+    "NEXT_ACTION": "Take the controlled static/confluent and real-time transverse limits, then match the collision ladder and heat-current vertex.",
+    "CLAIM_BOUNDARY": "Explicit generic Euclidean one-loop current vertex only; not static limit, retarded transverse vertex, physical current correlator, Kubo/heat transport, SI or Full Topic 13 closure."
+  }
+}

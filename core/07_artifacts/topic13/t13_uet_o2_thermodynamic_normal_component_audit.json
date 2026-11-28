@@ -1,0 +1,186 @@
+{
+  "schema_version": "t13-uet-o2-thermodynamic-normal-component-v1",
+  "artifact": "t13_uet_o2_thermodynamic_normal_component_audit",
+  "generated_at": "2026-08-18",
+  "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "finite-temperature thermodynamic normal pressure, charge, entropy, energy, and susceptibility are named as one component",
+      "normal-component low-temperature suppression is checked on normal and condensed branches",
+      "total entropy and susceptibility stability boundaries are checked without clipping residual sector values"
+    ],
+    "equation_or_mapping": {
+      "normal_pressure": "p_n(T,mu,Phi)=p_qp(T,mu,Phi)",
+      "normal_charge": "n_n=partial_mu p_n",
+      "normal_entropy": "s_n=partial_T p_n",
+      "normal_energy": "epsilon_n=-p_n+T*s_n+mu*n_n",
+      "normal_susceptibility": "chi_n=partial_mu n_n",
+      "normal_static_response": "Pi_n=(1/3) sum_a integral[d^3k/(2*pi)^3] k^2[-partial_E n_B(E_a)]"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "normal_pressure_energy": "natural energy density",
+      "normal_charge_entropy": "natural density",
+      "normal_susceptibility": "natural static response",
+      "normal_momentum_susceptibility": "natural static momentum response; not Landau mass density",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived tree-condensate plus thermal-quasiparticle EOS and static Doppler-response composition",
+    "observable": "finite-temperature thermodynamic normal component and its static momentum response",
+    "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_THERMODYNAMIC_LANE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_normal_component.py",
+        "sha256": "0a4010c0e390b7e910473698c4e5cc7dc6738df626e0de9c364b4258167a9335"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "sha256": "a68531bc34596aa115797e2353e1871913d4e9a158aeeb7f1ea5125c86aa236b"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "sha256": "3ec0f5a942d548b2f3722d4263eb0e311df3c56cb707f596efc11436c6fcfdcf"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+    "open_blockers": [
+      "physical_normal_flow_component_or_retarded_kubo_match_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "thermodynamic finite-temperature normal-component lane only; no physical normal flow, Kubo, SI, alpha, Core, or Gravity unlock",
+    "claim_boundary": "This closes the thermodynamic normal component for the declared natural-unit O(2) lane.  It does not close physical normal flow, retarded transport, SI mapping, alpha_Phi_K, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_LANE",
+    "equations": {
+      "normal_pressure": "p_n(T,mu,Phi)=p_qp(T,mu,Phi)",
+      "normal_charge": "n_n=partial_mu p_n",
+      "normal_entropy": "s_n=partial_T p_n",
+      "normal_energy": "epsilon_n=-p_n+T*s_n+mu*n_n",
+      "normal_susceptibility": "chi_n=partial_mu n_n",
+      "normal_static_response": "Pi_n=(1/3) sum_a integral[d^3k/(2*pi)^3] k^2[-partial_E n_B(E_a)]"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "normal_pressure_energy": "natural energy density",
+      "normal_charge_entropy": "natural density",
+      "normal_susceptibility": "natural static response",
+      "normal_momentum_susceptibility": "natural static momentum response; not Landau mass density",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived tree-condensate plus thermal-quasiparticle EOS and static Doppler-response composition",
+    "observable": "finite-temperature thermodynamic normal component and its static momentum response",
+    "data_role": "ACTION_DERIVED_INTERNAL_NATURAL_THERMODYNAMIC_LANE",
+    "closed_scope": [
+      "normal pressure, charge, entropy, energy, and susceptibility definitions",
+      "branch-resolved finite-temperature normal component",
+      "low-temperature suppression and total-state stability checks"
+    ],
+    "excluded_scope": [
+      "physical normal-fluid mass density",
+      "retarded physical Kubo coefficient",
+      "condensed dissipative two-fluid transport",
+      "SI Phi normalization and alpha_Phi_K",
+      "Ding C_src acceptance and TTG prediction"
+    ],
+    "claim_boundary": "This closes the thermodynamic normal component for the declared natural-unit O(2) lane.  It does not close physical normal flow, retarded transport, SI mapping, alpha_Phi_K, or Full Topic 13."
+  },
+  "state_grid": {
+    "normal_high_temperature": {
+      "branch": "normal",
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "normal_pressure": 0.00011423395970050842,
+      "normal_charge_density": 0.00048211016850379534,
+      "normal_entropy_density": 0.0030822377028708096,
+      "normal_energy_density": 0.000732596893907398,
+      "normal_susceptibility": 0.0024150102832912234,
+      "normal_momentum_susceptibility": 0.0008468305206465916,
+      "total_entropy_density": 0.0030822377028708096,
+      "total_susceptibility": 0.0024150102832912234,
+      "data_role": "ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_NOT_PHYSICAL_FLOW"
+    },
+    "normal_low_temperature": {
+      "branch": "normal",
+      "temperature": 0.06,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "normal_pressure": 1.2322065460571896e-09,
+      "normal_charge_density": 2.053650126859245e-08,
+      "normal_entropy_density": 2.760176643344206e-07,
+      "normal_energy_density": 2.2516628758015402e-08,
+      "normal_susceptibility": 3.4227955578834817e-07,
+      "normal_momentum_susceptibility": 2.374796291384485e-08,
+      "total_entropy_density": 2.760176643344206e-07,
+      "total_susceptibility": 3.4227955578834817e-07,
+      "data_role": "ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_NOT_PHYSICAL_FLOW"
+    },
+    "condensed_high_temperature": {
+      "branch": "condensed",
+      "temperature": 0.2,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "normal_pressure": 0.000856401677086005,
+      "normal_charge_density": -0.0010777584136018208,
+      "normal_entropy_density": 0.015612863717498482,
+      "normal_energy_density": 0.0008866402970033607,
+      "normal_susceptibility": 0.005566462725101806,
+      "normal_momentum_susceptibility": 0.007504229800875244,
+      "total_entropy_density": 0.015612863717498482,
+      "total_susceptibility": 3.9207665319960014,
+      "data_role": "ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_NOT_PHYSICAL_FLOW"
+    },
+    "condensed_low_temperature": {
+      "branch": "condensed",
+      "temperature": 0.04,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "normal_pressure": 1.8361667253052882e-06,
+      "normal_charge_density": -4.4983410442747665e-06,
+      "normal_entropy_density": 0.00018117578888532382,
+      "normal_energy_density": -3.4701170656403683e-07,
+      "normal_susceptibility": 3.41121259849755e-05,
+      "normal_momentum_susceptibility": 2.4516198190538478e-05,
+      "total_entropy_density": 0.00018117578888532382,
+      "total_susceptibility": 3.9152341813966647,
+      "data_role": "ACTION_DERIVED_THERMODYNAMIC_NORMAL_COMPONENT_NOT_PHYSICAL_FLOW"
+    }
+  },
+  "checks": {
+    "normal_component_is_explicit_on_both_branches": true,
+    "thermodynamic_fields_are_finite": true,
+    "normal_entropy_is_nonnegative": true,
+    "normal_static_response_is_nonnegative": true,
+    "total_state_stability_is_nonnegative": true,
+    "normal_component_is_suppressed_at_lower_temperature": true,
+    "signed_residual_sector_is_not_clipped": true,
+    "normal_equations_are_declared": true,
+    "physical_flow_boundary_is_explicit": true,
+    "natural_unit_boundary_is_explicit": true,
+    "no_fit_target_or_holdout": true
+  },
+  "failed_checks": [],
+  "physical_normal_flow_component_emitted": false,
+  "physical_kubo_coefficient_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "claim_promotion": false,
+  "controlling_blocker": "physical_normal_flow_component_or_retarded_kubo_match_missing",
+  "next_controller": "Derive or source-lock a state-matched physical normal-flow/retarded Kubo response with units and uncertainty; keep this thermodynamic normal component as a natural-unit lane.",
+  "claim_boundary": "This closes the thermodynamic normal component for the declared natural-unit O(2) lane.  It does not close physical normal flow, retarded transport, SI mapping, alpha_Phi_K, or Full Topic 13."
+}

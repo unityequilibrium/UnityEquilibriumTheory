@@ -1,0 +1,143 @@
+{
+  "schema_version": "t13-tpg-anisotropic-alpha-v-source-audit-v1",
+  "artifact": "t13_tpg_anisotropic_alpha_v_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the IHEP 2001-32 primary report is archived with a reproducible local hash",
+      "the ATOMGRAPH TPG in-plane and averaged TPG out-of-plane rows are source-locked with ranges and uncertainty",
+      "the hexagonal alpha_V relation and zero-covariance comparator propagation are deterministic",
+      "the mixed-row and non-Ding material boundary is retained instead of being promoted"
+    ],
+    "equation_or_mapping": {
+      "anisotropic_volumetric_expansion": "alpha_V = 2*alpha_a + alpha_c",
+      "uncertainty_propagation": "u(alpha_V) = sqrt((2*u(alpha_a))^2 + u(alpha_c)^2), zero covariance assumed only for comparator output",
+      "temperature_scope": "source slopes over 25-60 deg C; not an exact 300 K point"
+    },
+    "units": {
+      "temperature": "deg C source range and K mirror",
+      "alpha_a": "K^-1",
+      "alpha_c": "K^-1",
+      "alpha_V": "K^-1"
+    },
+    "derivation_class": "source transcription plus anisotropic thermodynamic geometry conversion; no UET derivation",
+    "observable": "TPG alpha_a, alpha_c, and family-level alpha_V comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
+        "sha256": "601721924bdf89b0299b57f8220c9bb54633f895a024e3b500673dc4905f3ba7"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ihep_2001_32_tpg_thermal_expansion.pdf",
+        "sha256": "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_TPG_ANISOTROPIC_ALPHA_V_COMPARATOR",
+    "open_blockers": [
+      "in_plane_and_out_of_plane_rows_are_not_a_same_specimen_pair",
+      "same_state_density_uncertainty_and_Cp_Cv_are_not_source_locked",
+      "TPG_to_Ding_TTG_material_regime_mapping_is_not_closed",
+      "base_Phi_to_thermal_observable_map_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "declared TPG anisotropic alpha_V comparator lane only; no same-grade K_T, Ding C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This closes only a source-traceable TPG family-level alpha_V comparator. It is not a same-specimen volumetric measurement, not a Ding TTG match, not a complete Cp-to-Cv correction, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "ihep_2001_32_tpg_thermal_expansion",
+    "title": "Quasi Mono-Crystal Pyrolitic Graphite Samples",
+    "authors": [
+      "A. G. Kholodenko",
+      "K. Hajzinger",
+      "G.-G. Mozer"
+    ],
+    "publisher": "State Research Center of Russia, Institute for High Energy Physics",
+    "report": "IHEP 2001-32, Protvino, 2001",
+    "url": "https://cds.cern.ch/record/590112/files/sis-2002-508.pdf",
+    "record_url": "https://cds.cern.ch/record/590112",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ihep_2001_32_tpg_thermal_expansion.pdf",
+    "sha256": "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e",
+    "source_locators": [
+      "PDF printed p. 1: TPG and HOPG sample identities and measured directions",
+      "PDF printed pp. 4-5: ATOMGRAPH TPG in-plane alpha value and uncertainty",
+      "PDF printed pp. 6-7: averaged TPG out-of-plane alpha value, uncertainty, and 25-60 deg C scope",
+      "PDF printed pp. 7-9: material-form comparison and conclusion boundary"
+    ],
+    "measurement_method": "optical-lever displacement measurement with Pt100 temperature sensors and copper reference calibration",
+    "material_scope": "thermal pyrolytic graphite (TPG) from Advanced Ceramics and ATOMGRAPH; the out-of-plane row is an averaged TPG result",
+    "preprocessing": "byte-preserving PDF archive; scalar row transcription; deg C range retained and mirrored in K metadata; anisotropic alpha_V propagation with no covariance supplied; no figure digitization, interpolation, fitting, target-curve access, or holdout access",
+    "material_regime_boundary": {
+      "same_specimen_for_both_axes": false,
+      "same_product_family": true,
+      "same_temperature_point": false,
+      "ding_ttg_material_regime_mapping_closed": false,
+      "density_uncertainty_available": false,
+      "same_state_Cp_Cv_available": false
+    },
+    "local_hash_observed": "e9527b8dba9d3944a1a9298e9d516e501279b500586cf0179ec076b94fdd6f2e",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/ihep_2001_32_tpg_anisotropic_alpha_v_source_package.json",
+    "package_sha256": "601721924bdf89b0299b57f8220c9bb54633f895a024e3b500673dc4905f3ba7"
+  },
+  "source_row": {
+    "row_id": "ihep_tpg_25_60c_atomgraph_inplane_plus_tpg_average_outofplane",
+    "row_identity": "ATOMGRAPH TPG in-plane slope paired with the report's averaged TPG out-of-plane slope",
+    "temperature_range_C": [
+      25.0,
+      60.0
+    ],
+    "temperature_range_K": [
+      298.15,
+      333.15
+    ],
+    "temperature_scope": "source-reported slope range; not an exact 300 K point",
+    "alpha_a_per_K": -1.04e-06,
+    "alpha_a_uncertainty_per_K": 1.1e-07,
+    "alpha_a_source_label": "ATOMGRAPH TPG in-plane",
+    "alpha_c_per_K": 2.684e-05,
+    "alpha_c_uncertainty_per_K": 4e-07,
+    "alpha_c_source_label": "averaged TPG out-of-plane",
+    "uncertainty_interpretation": "source-reported uncertainties for the two linear rows; covariance and same-specimen covariance are not supplied"
+  },
+  "derived_comparator": {
+    "alpha_V_per_K": 2.476e-05,
+    "alpha_V_uncertainty_per_K": 4.565084884205331e-07,
+    "alpha_V_uncertainty_method": "sqrt((2*0.11e-6)^2 + (0.4e-6)^2), zero covariance assumed only for this comparator",
+    "same_specimen_alpha_V": false,
+    "same_state_K_T": false,
+    "K_T_emitted": false,
+    "alpha_Phi_K_emitted": false,
+    "alpha_V_reconstructed_per_K": 2.476e-05,
+    "alpha_V_uncertainty_reconstructed_per_K": 4.565084884205331e-07
+  },
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "package_source_identity_present": true,
+    "measurement_method_declared": true,
+    "temperature_range_declared": true,
+    "linear_rows_have_units": true,
+    "source_rows_have_expected_signs": true,
+    "anisotropic_alpha_volume_relation_explicit": true,
+    "alpha_v_reconstruction_matches_package": true,
+    "uncertainty_reconstruction_matches_package": true,
+    "mixed_row_boundary_is_explicit": true,
+    "uncertainty_covariance_boundary_is_explicit": true,
+    "K_T_not_emitted": true,
+    "density_uncertainty_not_claimed": true,
+    "same_state_Cp_Cv_not_claimed": true,
+    "Ding_material_mapping_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "same_specimen_alpha_V_K_T_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Obtain a same-state, same-specimen alpha_V/K_T pair or a permitted direct volumetric heat-capacity route; keep this TPG family comparator separate from Ding C_src and base-Phi calibration.",
+  "claim_boundary": "This closes only a source-traceable TPG anisotropic alpha_V comparator lane. It does not close same-grade K_T, Ding C_src, e0, base Phi, alpha_Phi_K, transport, SK/KMS, entropy, or Full Topic 13."
+}

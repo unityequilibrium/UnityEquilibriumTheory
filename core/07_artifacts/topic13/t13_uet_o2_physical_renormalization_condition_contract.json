@@ -1,0 +1,192 @@
+{
+  "schema_version": "t13-uet-o2-physical-renormalization-condition-contract-v1",
+  "artifact": "t13_uet_o2_physical_renormalization_condition_contract",
+  "generated_at": "2026-08-15",
+  "status": "PASS_ON_SHELL_PHYSICAL_RENORMALIZATION_CONDITION_CONTRACT_OPEN_EXTERNAL_ANCHOR",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_PHYSICAL_RENORMALIZATION_CONDITION_CONTRACT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "below-threshold on-shell pole condition contract",
+      "unit-residue condition contract",
+      "mass-counterterm and wavefunction-counterterm unit separation",
+      "external physical-anchor acceptance schema"
+    ],
+    "equation_or_mapping": {
+      "inverse_propagator": "Gamma_R^(2)(s)=s-s_* - Sigma_R,sub(s;s_*)",
+      "subtracted_self_energy": "Sigma_R,sub(s;s_*)=Sigma_R(s)-Sigma_R(s_*)-(s-s_*) dSigma_R/ds|s_*",
+      "pole_condition": "Re Gamma_R^(2)(s_*)=0",
+      "residue_condition": "d Re Gamma_R^(2)/ds|s_* = 1",
+      "counterterms": "delta_m^2=Re Sigma_R(s_*); delta_Z=-d Re Sigma_R/ds|s_*",
+      "real_domain": "0 < s_* < 9 m_internal^2; above-threshold matching requires a complex-pole contract"
+    },
+    "units": {
+      "internal_mass_squared": "natural energy squared",
+      "pole_mass_squared": "physical pole energy squared; external input required",
+      "self_energy_at_pole": "natural energy squared",
+      "self_energy_derivative_at_pole": "dimensionless",
+      "mass_counterterm": "natural energy squared",
+      "wavefunction_counterterm": "dimensionless",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "on-shell Taylor-condition contract with an action-derived self-energy interface; formal witness only until external physical anchor is source-locked",
+    "observable": "pole location and unit-residue inverse-propagator conditions",
+    "data_role": "FORMULA_CONTRACT_INTERNAL_WITNESS_NO_EXTERNAL_ANCHOR",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_physical_renormalization_condition_contract.py",
+        "sha256": "de91bd610cd348bcfb345df191a4027416f8f1362db2508d9251ee3d98938a71"
+      }
+    ],
+    "verification_status": "PASS_ON_SHELL_PHYSICAL_RENORMALIZATION_CONDITION_CONTRACT_OPEN_EXTERNAL_ANCHOR",
+    "open_blockers": [
+      "external_physical_pole_or_residue_anchor_missing",
+      "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "renormalization-condition acceptance protocol only; physical scheme, complete 1PI, Topic 13, Core, Gravity, and external-validation dependencies remain blocked",
+    "claim_boundary": "This closes the acceptance contract for an on-shell physical renormalization condition and verifies its below-threshold algebraic witness. It does not claim that a physical mass/residue or microscopic finite-temperature self-energy has been supplied, and it does not close Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ON_SHELL_PHYSICAL_RENORMALIZATION_CONDITION_CONTRACT_OPEN_EXTERNAL_ANCHOR",
+    "equations": {
+      "inverse_propagator": "Gamma_R^(2)(s)=s-s_* - Sigma_R,sub(s;s_*)",
+      "subtracted_self_energy": "Sigma_R,sub(s;s_*)=Sigma_R(s)-Sigma_R(s_*)-(s-s_*) dSigma_R/ds|s_*",
+      "pole_condition": "Re Gamma_R^(2)(s_*)=0",
+      "residue_condition": "d Re Gamma_R^(2)/ds|s_* = 1",
+      "counterterms": "delta_m^2=Re Sigma_R(s_*); delta_Z=-d Re Sigma_R/ds|s_*",
+      "real_domain": "0 < s_* < 9 m_internal^2; above-threshold matching requires a complex-pole contract"
+    },
+    "unit_contract": {
+      "internal_mass_squared": "natural energy squared",
+      "pole_mass_squared": "physical pole energy squared; external input required",
+      "self_energy_at_pole": "natural energy squared",
+      "self_energy_derivative_at_pole": "dimensionless",
+      "mass_counterterm": "natural energy squared",
+      "wavefunction_counterterm": "dimensionless",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "on-shell Taylor-condition contract with an action-derived self-energy interface; formal witness only until external physical anchor is source-locked",
+    "observable": "pole location and unit-residue inverse-propagator conditions",
+    "data_role": "FORMULA_CONTRACT_INTERNAL_WITNESS_NO_EXTERNAL_ANCHOR",
+    "required_external_anchor_fields": [
+      "source_identity",
+      "locator",
+      "physical_pole_mass_squared",
+      "pole_or_residue_definition",
+      "units",
+      "uncertainty",
+      "state_matching",
+      "independence_statement",
+      "source_hash"
+    ],
+    "forbidden_inputs": [
+      "TTG target residuals",
+      "Xie 2026 numeric holdout",
+      "post-inspection parameter tuning",
+      "synthetic replacement data"
+    ],
+    "included": {
+      "below_threshold_real_domain": true,
+      "pole_condition": true,
+      "unit_residue_condition": true,
+      "external_anchor_acceptance_schema": true
+    },
+    "excluded": {
+      "physical_anchor_match": true,
+      "complete_finite_temperature_1pi_self_energy": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes the acceptance contract for an on-shell physical renormalization condition and verifies its below-threshold algebraic witness. It does not claim that a physical mass/residue or microscopic finite-temperature self-energy has been supplied, and it does not close Topic 13."
+  },
+  "state": {
+    "formal_witness": {
+      "internal_mass_squared": 0.5,
+      "pole_mass_squared": 0.75,
+      "three_body_threshold_s": 4.5,
+      "self_energy_at_pole": 0.12,
+      "self_energy_derivative_at_pole": 0.08,
+      "mass_counterterm": 0.12,
+      "wavefunction_counterterm": -0.08,
+      "subtracted_self_energy_at_pole": 0.0,
+      "subtracted_self_energy_derivative_at_pole": 0.0,
+      "inverse_propagator_pole_residual": 0.0,
+      "inverse_propagator_residue_residual": 0.0,
+      "below_threshold_domain": true,
+      "physical_anchor_supplied": false,
+      "physical_renormalization_scheme_match_completed": false,
+      "full_finite_temperature_1pi_self_energy_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "covariant_entropy_current_completed": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "FORMULA_CONTRACT_INTERNAL_WITNESS_NO_EXTERNAL_ANCHOR"
+    }
+  },
+  "checks": {
+    "below_threshold_domain_is_explicit": true,
+    "threshold_is_three_body_equal_mass_threshold": true,
+    "pole_condition_passes": true,
+    "unit_residue_condition_passes": true,
+    "counterterm_units_are_separated": true,
+    "state_is_finite": true,
+    "physical_anchor_remains_open": true,
+    "physical_scheme_match_remains_open": true,
+    "full_finite_temperature_1pi_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "covariant_entropy_remains_open": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "required_anchor_fields_are_declared": true,
+    "forbidden_holdout_inputs_are_declared": true
+  },
+  "failed_checks": [],
+  "physical_anchor_supplied": false,
+  "physical_renormalization_scheme_match_completed": false,
+  "full_finite_temperature_1pi_self_energy_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "covariant_entropy_current_completed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "external_physical_pole_or_residue_anchor_missing",
+  "next_controller": "source-lock an independent physical pole/residue or microscopic renormalization-condition record, then evaluate the complete finite-temperature 1PI object without using TTG target residuals or Xie 2026",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_PHYSICAL_RENORMALIZATION_CONDITION_CONTRACT",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "FORMULA_CONTRACT_INTERNAL_WITNESS_NO_EXTERNAL_ANCHOR",
+  "open_blockers": [
+    "external_physical_pole_or_residue_anchor_missing",
+    "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+    "physical_Kubo_coefficient_missing",
+    "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes the acceptance contract for an on-shell physical renormalization condition and verifies its below-threshold algebraic witness. It does not claim that a physical mass/residue or microscopic finite-temperature self-energy has been supplied, and it does not close Topic 13."
+}

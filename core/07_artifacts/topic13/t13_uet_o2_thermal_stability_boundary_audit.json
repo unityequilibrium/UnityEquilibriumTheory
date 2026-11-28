@@ -1,0 +1,252 @@
+{
+  "schema_version": "t13-uet-o2-thermal-quadratic-stability-boundary-v1",
+  "artifact": "t13_uet_o2_thermal_stability_boundary_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_THERMAL_QUADRATIC_STABILITY_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_THERMAL_STABILITY_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "analytic lower boundary A_boundary^2=q/lambda from the declared phase Hessian",
+      "radial and phase curvature identities at the boundary",
+      "nonnegative quadratic mode witness at and above the boundary",
+      "negative zero-mode witness below the boundary without clipping",
+      "thermal-only one-sided slope and grand-potential convergence at the declared boundary"
+    ],
+    "equation_or_mapping": {
+      "condensed_control": "q=Z*mu^2-m_eff(Phi)^2 > 0",
+      "phase_curvature": "r_pi(A)=-q+lambda*A^2",
+      "stable_boundary": "A_boundary^2=q/lambda from r_pi(A_boundary)=0",
+      "radial_curvature_at_boundary": "r_sigma(A_boundary)=2*q",
+      "stable_domain": "A^2 >= q/lambda for the quadratic condensed witness",
+      "thermal_potential_boundary": "Omega_thermal(A,T) is evaluated only where both quadratic roots are positive"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "A_squared_q_lambda": "natural amplitude squared",
+      "r_sigma_r_pi": "natural mass squared",
+      "Phi": "fixed action response input; no SI map"
+    },
+    "derivation_class": "action-derived quadratic O(2) stability boundary with thermal-only Gaussian witness; no self-consistent finite-temperature effective action",
+    "observable": "natural-unit homogeneous condensate amplitude stability and thermal-only grand-potential boundary diagnostic",
+    "data_role": "ACTION_DERIVED_THERMAL_QUADRATIC_STABILITY_BOUNDARY",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_thermal_stability_boundary.py",
+        "sha256": "0c5c71b9e2e2c085be8bdc93c2a02fe67dae1aecc0bfb32aae42bbd8afbb5397"
+      },
+      {
+        "path": "docs/core/uet_o2_gaussian_offshell_background.py",
+        "sha256": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_THERMAL_QUADRATIC_STABILITY_BOUNDARY",
+    "open_blockers": [
+      "self_consistent_finite_temperature_stationary_boundary_requires_thermal_self_energy",
+      "vacuum_counterterm_and_microscopic_renormalization_matching_missing",
+      "condensate_and_normal_two_fluid_eos_completion_missing",
+      "physical_kubo_coefficients_and_microscopic_sk_kms_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "dependency_unlocked": "thermal-only quadratic stability boundary lane; no self-consistent finite-T phase transition, Full Topic 13, Core, Gravity, transport, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes the analytic lower boundary of the declared quadratic condensed stability domain and records a thermal-only one-sided witness. It does not close a renormalized finite-temperature effective action, an interior stationary phase boundary, interacting self-energy, transport, microscopic SK/KMS matching, SI Phi calibration, external validation, or Full Topic 13."
+  },
+  "reference": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "effective_mass_sq": 0.494,
+    "condensate_control": 1.534,
+    "amplitude_boundary": 1.3847382424126229,
+    "amplitude_squared_boundary": 1.9175,
+    "radial_curvature_at_boundary": 3.0680000000000005,
+    "phase_curvature_at_boundary": 0.0,
+    "boundary_low_omega_sq_at_zero": 0.0,
+    "boundary_high_omega_sq_at_zero": 9.316666666666668,
+    "below_amplitude": 1.3833535041702103,
+    "below_low_omega_sq_at_zero": -0.0006998586745137203,
+    "below_high_omega_sq_at_zero": 9.30714497200785,
+    "above_amplitude": 1.3861229806550353,
+    "boundary_grand_potential": -0.7373268145664527,
+    "one_sided_step": 0.013847382424126229,
+    "one_sided_thermal_slope": 0.030087606553435776,
+    "tadpole_threshold": 0.001,
+    "self_consistent_finite_temperature_boundary": false,
+    "interacting_self_energy_included": false
+  },
+  "boundary_mode_witness": {
+    "amplitude": 1.3847382424126229,
+    "records": [
+      {
+        "wavenumber": 0.0,
+        "low_omega_sq": 0.0,
+        "high_omega_sq": 9.316666666666668
+      },
+      {
+        "wavenumber": 0.01,
+        "low_omega_sq": 2.7442425539092596e-05,
+        "high_omega_sq": 9.316839224241129
+      },
+      {
+        "wavenumber": 0.1,
+        "low_omega_sq": 0.0027498280850943857,
+        "high_omega_sq": 9.333916838581573
+      },
+      {
+        "wavenumber": 0.5,
+        "low_omega_sq": 0.07200523813089532,
+        "high_omega_sq": 9.744661428535773
+      },
+      {
+        "wavenumber": 1.0,
+        "low_omega_sq": 0.32353535736044314,
+        "high_omega_sq": 10.993131309306225
+      }
+    ],
+    "minimum_low_omega_sq": 0.0,
+    "minimum_high_omega_sq": 9.316666666666668,
+    "all_low_nonnegative": true,
+    "all_high_nonnegative": true
+  },
+  "above_boundary_mode_witness": {
+    "amplitude": 1.3861229806550353,
+    "records": [
+      {
+        "wavenumber": 0.0,
+        "low_omega_sq": 0.0007033352708347707,
+        "high_omega_sq": 9.326195111395831
+      },
+      {
+        "wavenumber": 0.01,
+        "low_omega_sq": 0.00073084635962406,
+        "high_omega_sq": 9.32636760030704
+      },
+      {
+        "wavenumber": 0.1,
+        "low_omega_sq": 0.003460013855035804,
+        "high_omega_sq": 9.343438432811631
+      },
+      {
+        "wavenumber": 0.5,
+        "low_omega_sq": 0.07287082642209874,
+        "high_omega_sq": 9.754027620244567
+      },
+      {
+        "wavenumber": 1.0,
+        "low_omega_sq": 0.3247977815698109,
+        "high_omega_sq": 11.002100665096854
+      }
+    ],
+    "minimum_low_omega_sq": 0.0007033352708347707,
+    "minimum_high_omega_sq": 9.326195111395831,
+    "all_low_nonnegative": true,
+    "all_high_nonnegative": true
+  },
+  "below_boundary_mode_witness": {
+    "amplitude": 1.3833535041702103,
+    "records": [
+      {
+        "wavenumber": 0.0,
+        "low_omega_sq": -0.0006998586745137203,
+        "high_omega_sq": 9.30714497200785
+      },
+      {
+        "wavenumber": 0.01,
+        "low_omega_sq": -0.0006724850168851049,
+        "high_omega_sq": 9.30731759835022
+      },
+      {
+        "wavenumber": 0.1,
+        "low_omega_sq": 0.0020431084995955473,
+        "high_omega_sq": 9.32440200483374
+      },
+      {
+        "wavenumber": 0.5,
+        "low_omega_sq": 0.07114289589791234,
+        "high_omega_sq": 9.735302217435423
+      },
+      {
+        "wavenumber": 1.0,
+        "low_omega_sq": 0.3222757507029188,
+        "high_omega_sq": 10.984169362630418
+      }
+    ],
+    "minimum_low_omega_sq": -0.0006998586745137203,
+    "minimum_high_omega_sq": 9.30714497200785,
+    "all_low_nonnegative": false,
+    "all_high_nonnegative": true
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 50.0,
+      "grand_potential": -0.7373268119566551,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.0019655619566551243
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 70.0,
+      "grand_potential": -0.7373268144947932,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.001965564494793282
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 90.0,
+      "grand_potential": -0.7373268145664527,
+      "tree_grand_potential": -0.73536125,
+      "thermal_grand_potential": -0.001965564566452671
+    }
+  ],
+  "convergence_relative_errors": {
+    "grand_potential": 9.718818674574974e-11,
+    "thermal_grand_potential": 3.645740800527646e-08
+  },
+  "checks": {
+    "condensed_control_positive": true,
+    "boundary_amplitude_positive": true,
+    "boundary_formula_is_finite": true,
+    "phase_curvature_boundary_is_zero": true,
+    "radial_curvature_boundary_is_two_q": true,
+    "boundary_modes_are_nonnegative": true,
+    "above_boundary_modes_are_nonnegative": true,
+    "below_boundary_has_negative_zero_mode": true,
+    "boundary_zero_mode_is_zero": true,
+    "boundary_high_zero_mode_is_positive": true,
+    "phase_curvature_matches_boundary_formula": true,
+    "thermal_boundary_state_is_finite": true,
+    "thermal_one_sided_slope_is_resolved": true,
+    "thermal_potential_converges": true,
+    "thermal_component_converges": true,
+    "quadratic_boundary_is_not_claimed_as_stationary": true,
+    "interacting_self_energy_is_excluded": true,
+    "vacuum_counterterm_is_excluded": true,
+    "normal_two_fluid_is_open": true,
+    "physical_kubo_is_excluded": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_thermal_stability_boundary.py": "0c5c71b9e2e2c085be8bdc93c2a02fe67dae1aecc0bfb32aae42bbd8afbb5397",
+    "docs/core/uet_o2_gaussian_offshell_background.py": "a2e9162034b192af006134d98096f6f5588092e67f3047f991f91cc73d9fce09",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "thermal_background_backreaction_requires_self_consistent_renormalized_phase_boundary",
+  "next_controller": "Derive or source-lock the finite-temperature self-energy needed for an interior stationary phase boundary; keep the current quadratic boundary as the stability contract and do not call it a phase transition.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

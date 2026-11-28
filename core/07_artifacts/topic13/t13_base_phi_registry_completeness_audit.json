@@ -1,0 +1,100 @@
+{
+  "artifact": "t13_base_phi_registry_completeness_audit",
+  "checks": {
+    "alpha_declared_open": true,
+    "base_phi_identity_not_asserted": true,
+    "base_phi_to_energy_map_open": true,
+    "canonical_thermal_lane_loaded": true,
+    "conditional_e0_not_a_source": true,
+    "holdout_not_used": true,
+    "independent_calibration_remains_open": true,
+    "no_eligible_numeric_alpha_record": true,
+    "phi_declared_normalized": true,
+    "public_anchor_boundary_has_no_pair": true,
+    "si_conversion_requires_external_scale": true,
+    "thermal_lane_blocks_si_units": true
+  },
+  "claim_boundary": "Scoped negative audit only; no numeric alpha_Phi_K, e0, or SI Phi map is emitted.",
+  "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+  "generated_at": "2026-08-24",
+  "major_result": {
+    "claim_boundary": "This result rules out a hidden canonical SI anchor in the audited inputs. It does not prove that a future action-derived or independently calibrated anchor is impossible and does not close Full Topic 13.",
+    "closure_level": "CLOSED_FOR_LANE",
+    "data_role": "INTERNAL_AUDIT_NO_TARGET_OR_HOLDOUT",
+    "dependency_unlocked": "None; this audit closes only registry completeness, not the physical dimensional lane.",
+    "derivation_class": "canonical registry completeness and provenance boundary audit",
+    "equation_or_mapping": {
+      "dimensional_observable": "Delta_Tq = alpha_Phi_K * Delta_Phi",
+      "named_energy_branch": "Phi_E = Delta_u/e0; base Phi to Phi_E map remains open",
+      "normalized_observable": "y_TTG^UET = Delta_Phi(t) / Delta_Phi(0)",
+      "si_conversion": "alpha_Phi_K = (E_ref/k_B) * alpha_Phi_theta"
+    },
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/uet_active_lane_units_observable_register.json",
+        "sha256": "cc4058ef75c2cdebf2ed99d7da34f57aa58b235c17dd469ca11332f026fab781"
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "4d5f2e0d96d5d30d126243c9754d38a591680c9f3e0bbb62f0a3ece35cb2e3bc"
+      },
+      {
+        "path": "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+        "sha256": "0c4aaa38c138f9818c1a1e81a93dc7512f859c0d9095e238d2c12e7a3cf31c05"
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+        "sha256": "605245fa937cf5d2701a0afa0cc90a4f543052c4dd977066e1f3496bc12c50c5"
+      },
+      {
+        "path": "docs/core/thermal_covariant_action_si_conversion.py",
+        "sha256": "24639807ce714cfb2f05adc5063e55392f33280bb9ddd42eaf16813e314ee9fe"
+      },
+      {
+        "path": "docs/core/thermal_energy_response_bridge.py",
+        "sha256": "ce64f2fc25fe6a96d60c63a5d581686dfa3af0ab751e70160482845ee889f1d2"
+      },
+      {
+        "path": "docs/core/thermal_dimensional_bridge.py",
+        "sha256": "17328e9866fe594434828e3e82b1f61c31c613018b700b81a3b42b925592913b"
+      }
+    ],
+    "major_result_id": "T13_BASE_PHI_REGISTRY_COMPLETENESS_AUDIT",
+    "observable": "normalized TTG response and conditional thermal response operator",
+    "open_blockers": [
+      "base_phi_si_anchor",
+      "independent_alpha_record",
+      "normalized_beta_si_map",
+      "physical_source_backed_eos",
+      "physical_heat_flux_entropy_map"
+    ],
+    "topic": "0.13_Thermodynamic_Bridge",
+    "units": {
+      "Delta_Tq": "K only after independent mapping",
+      "E_ref": "J; external/provenance input",
+      "Phi": "dimensionless normalized response",
+      "Phi_scale": "explicit field normalization input; not supplied",
+      "alpha_Phi_K": "K per normalized Phi; no numeric value emitted",
+      "e0": "J m^-3; open input"
+    },
+    "verification_status": "PASS_SCOPED_NO_HIDDEN_SI_ANCHOR",
+    "what_is_closed": [
+      "The canonical thermal lane explicitly declares Phi as normalized and alpha_Phi_K as open.",
+      "The canonical SI conversion route exposes E_ref and Phi_scale as external inputs rather than hidden constants.",
+      "The canonical bridge code does not assert base Phi equals the named energy-response coordinate Phi_E.",
+      "No eligible non-holdout numeric alpha record or public paired base-Phi SI anchor is present in the audited inputs."
+    ]
+  },
+  "next_controller": "Obtain a declared dimensionful action/free-energy anchor or an independent paired base-Phi/SI response record; do not fit the anchor to TTG residuals or read Xie 2026.",
+  "schema_version": "t13-base-phi-registry-completeness-v1",
+  "searched_canonical_inputs": [
+    "docs/core/artifacts/uet_active_lane_units_observable_register.json",
+    "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+    "docs/core/artifacts/t13_base_phi_independent_calibration_requirement.json",
+    "docs/core/artifacts/t13_phi_si_anchor_public_source_boundary_audit.json",
+    "docs/core/thermal_covariant_action_si_conversion.py",
+    "docs/core/thermal_energy_response_bridge.py",
+    "docs/core/thermal_dimensional_bridge.py"
+  ],
+  "status": "PASS_SCOPED_NO_HIDDEN_SI_ANCHOR"
+}

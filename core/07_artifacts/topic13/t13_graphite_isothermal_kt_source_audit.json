@@ -1,0 +1,131 @@
+{
+  "schema_version": "t13-graphite-isothermal-kt-source-audit-v1",
+  "artifact": "t13_graphite_isothermal_kt_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_ISOTHERMAL_GRAPHITE_K_T_SOURCE",
+  "major_result": {
+    "major_result_id": "T13_GRAPHITE_ISOTHERMAL_KT_SOURCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the Hanfland et al. primary graphite EOS PDF is archived with a reproducible local hash",
+      "the fixed-temperature 300 K ambient-pressure K_T row is source-locked with volume, uncertainty, locator, and material identity",
+      "the isothermal derivative definition is explicit and is not inferred from C33 or the Bosak dynamic elastic row",
+      "the scalar input is admissible as a declared standard-thermodynamic comparator for the Cp-to-Cv contract"
+    ],
+    "equation_or_mapping": {
+      "isothermal_bulk_modulus": "K_T(T0,P0) = -V*(partial P/partial V)_T = dP/d(-ln V)",
+      "source_fit": "Murnaghan EOS at T0=300 K and P0=0: K_T=33.8 +/- 3.0 GPa"
+    },
+    "units": {
+      "temperature": "K",
+      "pressure": "GPa",
+      "volume": "Angstrom^3 per unit cell",
+      "K_T": "GPa = 10^9 Pa = 10^9 J m^-3"
+    },
+    "derivation_class": "source transcription of fixed-temperature XRD EOS fit; no local refit and no UET derivation",
+    "observable": "ambient-pressure room-temperature graphite isothermal bulk modulus",
+    "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
+        "sha256": "5a5c380c972b4e83af14b2c3f361a27842e21bfaeced29f74ff75b1088b1bc53"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hanfland_1989_graphite_equation_of_state.pdf",
+        "sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_ISOTHERMAL_GRAPHITE_K_T_SOURCE",
+    "open_blockers": [
+      "natural_graphite_powder_to_Ding_TTG_material_regime_mapping_not_closed",
+      "same_state_alpha_V_and_density_uncertainty_not_source_locked",
+      "temperature_resolved_K_T_and_matched_Cp_Cv_not_available",
+      "base_Phi_to_thermal_observable_map_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "declared 300 K natural-graphite isothermal K_T source lane only; no same-grade Cp-to-Cv, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This is a source-traceable 300 K natural-graphite isothermal bulk-modulus input. It is not a Ding TTG material match, not a full Cp-to-Cv closure, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "hanfland_beister_syassen_1989_graphite_eos",
+    "title": "Graphite under pressure: Equation of state and first-order Raman modes",
+    "authors": [
+      "Michael Hanfland",
+      "H. J. Beister",
+      "K. Syassen"
+    ],
+    "publisher": "American Physical Society",
+    "journal": "Physical Review B 39, 12598-12603 (1989)",
+    "doi": "10.1103/PhysRevB.39.12598",
+    "url": "https://doi.org/10.1103/PhysRevB.39.12598",
+    "archive_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.39.12598/fulltext",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/hanfland_1989_graphite_equation_of_state.pdf",
+    "sha256": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e",
+    "source_locators": [
+      "PDF p. 1 / printed p. 12598: measurements at T=300 K and powder X-ray diffraction method",
+      "PDF p. 2 / printed p. 12599: powder sample preparation and fixed-temperature lattice-parameter EOS fit",
+      "PDF p. 3 / printed p. 12600 / Fig. 2 paragraph: V0=35.12(2) Angstrom^3 per unit cell and B0=33.8(30) GPa"
+    ],
+    "material": "natural graphite powder prepared by grinding natural graphite flakes",
+    "temperature_K": 300.0,
+    "pressure_scope": "ambient-pressure intercept of a 300 K pressure-volume EOS",
+    "measurement_method": "diamond-anvil-cell powder X-ray diffraction with a methanol-ethanol pressure medium; Murnaghan least-squares EOS fit",
+    "source_limitations": [
+      "the source provides a scalar EOS fit rather than a machine-readable pressure-volume table in this archive",
+      "the sample is natural graphite powder and is not demonstrated to be the Ding TTG HOPG sample",
+      "the source is a 300 K scalar anchor, not a temperature-resolved K_T series"
+    ],
+    "local_hash_observed": "300a6b03af667f71a27fc7c269e7a928af57d4b846bded25feaefa0e37b1089e",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/hanfland_1989_graphite_isothermal_kt_source_package.json",
+    "package_sha256": "5a5c380c972b4e83af14b2c3f361a27842e21bfaeced29f74ff75b1088b1bc53"
+  },
+  "source_row": {
+    "row_id": "hanfland_1989_fig2_murnaghan_ambient_300K",
+    "temperature_K": 300.0,
+    "pressure_at_reference_GPa": 0.0,
+    "volume_at_reference_A3_per_unit_cell": 35.12,
+    "volume_uncertainty_A3_per_unit_cell": 0.02,
+    "K_T_GPa": 33.8,
+    "K_T_uncertainty_GPa": 3.0,
+    "pressure_derivative_K_prime": 8.9,
+    "pressure_derivative_uncertainty": 1.0,
+    "row_identity": "reported Murnaghan EOS fit at ambient pressure, fixed T=300 K",
+    "preprocessing": "byte-preserving PDF archive; scalar transcription from the EOS paragraph; no figure digitization, interpolation, refit, target access, or uncertainty rescaling"
+  },
+  "thermodynamic_contract": {
+    "quantity": "K_T",
+    "definition": "K_T = -V*(partial P/partial V)_T = dP/d(-ln V)",
+    "isothermal_status": "DECLARED_BY_FIXED_T_PRESSURE_VOLUME_EOS",
+    "input_for_cp_cv_correction": true,
+    "same_state_alpha_V_available": false,
+    "same_state_density_uncertainty_available": false,
+    "same_state_Cp_Cv_available": false,
+    "Ding_material_regime_mapping_closed": false
+  },
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "package_source_identity_present": true,
+    "fixed_temperature_declared": true,
+    "pressure_volume_method_declared": true,
+    "isothermal_definition_explicit": true,
+    "source_row_identity_present": true,
+    "K_T_value_positive": true,
+    "K_T_uncertainty_positive": true,
+    "reference_volume_positive": true,
+    "no_figure_refit_performed": true,
+    "same_state_alpha_not_claimed": true,
+    "same_state_density_uncertainty_not_claimed": true,
+    "same_state_Cp_Cv_not_claimed": true,
+    "Ding_material_mapping_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "same_grade_alpha_V_K_T_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Map the 300 K natural-graphite K_T to the Ding TTG material and source-lock same-state alpha_V, density, and Cp/Cv uncertainty before using the correction numerically.",
+  "claim_boundary": "This closes only a source-traceable 300 K graphite K_T lane. It does not close same-grade Cp-to-Cv, C_src, e0, base Phi, alpha_Phi_K, transport, SK/KMS, entropy, or Full Topic 13."
+}

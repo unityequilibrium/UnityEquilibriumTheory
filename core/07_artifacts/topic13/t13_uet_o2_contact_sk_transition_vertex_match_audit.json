@@ -1,0 +1,164 @@
+{
+  "schema_version": "t13-contact-sk-transition-vertex-match-audit-v1",
+  "artifact": "t13_uet_o2_contact_sk_transition_vertex_match_audit",
+  "generated_at": "2026-08-16",
+  "status": "PASS_ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONTACT_SK_TRANSITION_VERTEX_MATCH_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "local O(2) SK r/a quartic vertex content for the declared contact channel",
+      "contact amplitude M_22=lambda to the exact-kinematic kernel cross-section normalization",
+      "charged exact-kinematic channel detailed balance and particle/antiparticle KMS interface"
+    ],
+    "what_remains_open": [
+      "loop_renormalized_microscopic_vertex_missing",
+      "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+      "physical_current_correlator_kubo_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "equation_or_mapping": {
+      "local_sk_quartic": "V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)",
+      "contact_scattering_amplitude": "M_22=lambda for the declared contact channel",
+      "action_cross_section": "sigma_22=|M_22|^2/(16*pi*s)=lambda^2/(16*pi*s)",
+      "charged_detailed_balance": "W_forward/W_reverse=exp[-beta*(Delta E-mu_eff*Delta Q)]=1 on conserved channels",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "energy",
+      "quartic_coupling_and_contact_vertex": "dimensionless declared coupling",
+      "cross_section": "inverse energy squared",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "local O(2) SK contour polynomial plus action-derived charged exact-kinematic two-to-two kernel normalization and detailed balance",
+    "observable": "contact vertex/cross-section normalization residual, charged detailed balance, and mode KMS residuals",
+    "data_role": "ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
+        "sha256": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa"
+      },
+      {
+        "path": "docs/core/uet_o2_interacting_sk_kms_action.py",
+        "sha256": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5"
+      },
+      {
+        "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+        "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+      }
+    ],
+    "verification_status": "PASS_ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE",
+    "open_blockers": [
+      "loop_renormalized_microscopic_vertex_missing",
+      "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+      "physical_current_correlator_kubo_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "declared local contact SK-to-transition-kernel normalization and charged detailed-balance interface only; no physical retarded self-energy or Kubo unlock",
+    "claim_boundary": "This closes only the declared local contact SK-to-transition-kernel normalization and charged detailed-balance interface. It does not close a loop-renormalized off-shell self-energy, a physical Kubo coefficient, SI mapping, alpha_Phi_K, TTG, or Full Topic 13."
+  },
+  "checks": {
+    "state_is_finite": true,
+    "same_declared_quartic_coupling": true,
+    "r3a_coefficient_is_action_value": true,
+    "ra3_coefficient_is_action_value": true,
+    "contact_cross_section_match": true,
+    "charged_detailed_balance": true,
+    "channel_invariants_close": true,
+    "local_contour_expansion_close": true,
+    "charged_particle_kms_close": true,
+    "charged_antiparticle_kms_close": true,
+    "off_shell_self_energy_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "contract": {
+    "status": "PASS_ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE",
+    "equations": {
+      "local_sk_quartic": "V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)",
+      "contact_scattering_amplitude": "M_22=lambda for the declared contact channel",
+      "action_cross_section": "sigma_22=|M_22|^2/(16*pi*s)=lambda^2/(16*pi*s)",
+      "charged_detailed_balance": "W_forward/W_reverse=exp[-beta*(Delta E-mu_eff*Delta Q)]=1 on conserved channels",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "energy",
+      "quartic_coupling_and_contact_vertex": "dimensionless declared coupling",
+      "cross_section": "inverse energy squared",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "local O(2) SK contour polynomial plus action-derived charged exact-kinematic two-to-two kernel normalization and detailed balance",
+    "observable": "contact vertex/cross-section normalization residual, charged detailed balance, and mode KMS residuals",
+    "data_role": "ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE_NO_HOLDOUT",
+    "included": {
+      "local_sk_r_a_vertex_content": true,
+      "declared_contact_amplitude_match": true,
+      "charged_exact_kinematic_kernel_match": true,
+      "charged_detailed_balance": true,
+      "charged_mode_kms": true
+    },
+    "excluded": {
+      "loop_renormalized_microscopic_vertex": true,
+      "complete_off_shell_finite_temperature_1pi_self_energy": true,
+      "physical_current_correlator_kubo": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the declared local contact SK-to-transition-kernel normalization and charged detailed-balance interface. It does not close a loop-renormalized off-shell self-energy, a physical Kubo coefficient, SI mapping, alpha_Phi_K, TTG, or Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.35,
+      "chemical_potential": 0.1,
+      "space_response": 0.8,
+      "effective_chemical_potential": 0.1,
+      "effective_mass": 1.0,
+      "quartic_coupling": 1.0,
+      "first_channel_invariant_s": 120.34009345880949,
+      "contact_vertex_amplitude": 1.0,
+      "r3a_vertex_coefficient": 1.0,
+      "ra3_vertex_coefficient": 0.25,
+      "action_cross_section": 0.00016531786966989887,
+      "kernel_cross_section": 0.00016531786966989887,
+      "cross_section_match_residual": 0.0,
+      "max_channel_detailed_balance_residual": 2.857192190968664e-14,
+      "max_channel_invariant_residual": 7.105427357601002e-15,
+      "contour_ra_expansion_residual": 1.4835486718748585e-16,
+      "charged_particle_kms_residual": 0.0,
+      "charged_antiparticle_kms_residual": 0.0,
+      "contact_vertex_match_completed": true,
+      "microscopic_offshell_self_energy_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_MATCHED_CONTACT_SK_TRANSITION_VERTEX_LANE_NO_HOLDOUT"
+    }
+  },
+  "controlling_blocker": "loop_renormalized_off_shell_self_energy_and_physical_current_kubo_match_missing",
+  "next_controller": "match the loop-renormalized charged off-shell retarded self-energy and current correlator to the SK/KMS construction",
+  "claim_boundary": "This closes only the declared local contact SK-to-transition-kernel normalization and charged detailed-balance interface. It does not close a loop-renormalized off-shell self-energy, a physical Kubo coefficient, SI mapping, alpha_Phi_K, TTG, or Full Topic 13."
+}

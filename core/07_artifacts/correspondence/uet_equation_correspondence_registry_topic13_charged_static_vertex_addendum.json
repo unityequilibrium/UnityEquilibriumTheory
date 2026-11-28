@@ -1,0 +1,91 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective lane coordinate, not O(2) charge",
+        "Phi": "effective response; internal exchanged response remains lane-specific",
+        "R_gen": "derived trace excluded",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "mu": 1,
+        "T": 1,
+        "Gamma0": 1,
+        "self_energy": 2
+      },
+      "derivation_class": "derived_relation_with_numerical_quadrature",
+      "observable": "Internal static Euclidean density-source vertex, not physical heat/current conductivity",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_STATIC_CONFLUENT_VERTEX",
+      "controlling_blocker": "real_time_finite_k_transverse_vertex_and_collision_heat_ladder_matching",
+      "claim_boundary": "Static natural-unit Euclidean one-loop density-current lane only; not a finite-k retarded vertex, Kubo coefficient, heat current, SI mapping, external validation, or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.charged_static_confluent_vertex",
+      "version": "1",
+      "classification": "derived_relation",
+      "relation_or_code_path": {
+        "source_identity": "partial_mu D_static^-1 = i Gamma_static^0",
+        "full_vertex": "Gamma_static^0=-i partial_mu[m^2-mu^2+Sigma_mean+Sigma_quartic+Sigma_mix+Sigma_vac]",
+        "confluent_derivative": "partial_a[(n(a)-n(W))/(a-W)]=integral_0^1 t*n''(W+t(a-W)) dt",
+        "bath_mean": "Gamma_bath^0=i[-4 lambda_chi+G^2/M0^2] partial_mu I_chi",
+        "mixed": "Gamma_mix^0=i G^2 q partial_r B_T(r)|r=q*mu",
+        "vacuum": "Gamma_vac^0=-2 i mu partial_s Sigma_vac(s)|s=mu^2"
+      },
+      "standard_physics_counterpart": "Static Ward/thermodynamic density vertex with confluent thermal bubble",
+      "variables": {
+        "Gamma0": "temporal density-source vertex",
+        "q": "O(2) charge sign, not core C"
+      },
+      "mathematical_role": "Static one-loop current insertion",
+      "observable_mapping": "Internal static Euclidean density-source vertex, not physical heat/current conductivity",
+      "parameter_dimensions": {
+        "mu": 1,
+        "T": 1,
+        "Gamma0": 1,
+        "self_energy": 2
+      },
+      "source_or_origin": "Canonical action and differentiated one-loop diagrams",
+      "assumptions": {
+        "order": "strict one loop in normal zero-field propagators",
+        "limit": "P=Q=0 thermodynamic Euclidean limit",
+        "confluent_policy": "analytic divided-difference derivative; no epsilon splitting",
+        "retarded_limit": "not evaluated"
+      },
+      "symmetry_and_conservation": "Static O(2) Ward identity and charge conjugation",
+      "limiting_cases": [
+        "T=0",
+        "mu=0",
+        "G=0",
+        "P=Q=0"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_charged_static_confluent_vertex.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_charged_static_confluent_vertex.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_DIAGNOSTIC",
+      "proof_status": "CHECKED_STATIC_EUCLIDEAN_ONE_LOOP_ONLY",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_charged_static_confluent_vertex_audit.json",
+          "sha256": "74337e8dba766503a1f868014cfeadd4c85bca122f550014f5c4f53278566fc2"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "static_internal_handoff_only",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "real_time_finite_k_transverse_vertex",
+        "collision_and_heat_current_ladder_matching",
+        "material_SI_calibration_and_full_T13_acceptance"
+      ],
+      "next_hardening_step": "Derive the real-time finite-k transverse/current vertex and then match collision and heat-current ladders."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

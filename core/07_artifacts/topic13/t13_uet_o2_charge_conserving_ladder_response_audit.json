@@ -1,0 +1,309 @@
+{
+  "schema_version": "t13-uet-o2-charge-conserving-ladder-response-v1",
+  "artifact": "t13_uet_o2_charge_conserving_ladder_response_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CHARGE_CONSERVING_LADDER_RESPONSE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the corrected quantum collision width feeds an explicit two-channel conserving collision operator",
+      "the conserved sum mode is an exact zero mode and the relative mode is positive dissipative",
+      "the projected retarded response is finite, sign-consistent, and stable under quadrature refinement",
+      "the lane records a matrix-resolvent ladder comparator without emitting a physical Kubo coefficient"
+    ],
+    "equation_or_mapping": {
+      "conserved_projector": "P_perp=I-n*n^T/(n^T*n), n=(1,1)",
+      "relative_collision_rate": "Gamma_rel=(Gamma_+ + Gamma_-)/2",
+      "collision_operator": "L=Gamma_rel*P_perp, L*n=0, L>=0",
+      "projected_source": "b_perp=P_perp*q*sqrt(D), q=(-1,+1)",
+      "retarded_response": "K_R(omega)=b_perp^T*(L-i*omega*I)^(-1)*b_perp",
+      "dc_response": "K_R(0)=b_perp^T*b_perp/Gamma_rel"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_rate": "energy",
+      "omega": "energy/inverse time",
+      "response": "formal finite-dimensional response quantity",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived quantum collision width plus explicit conserving two-channel matrix-resolvent ladder comparator",
+    "observable": "retarded relative-channel response in the declared normal O(2) lane",
+    "data_role": "ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE_NOT_PHYSICAL_KUBO",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_charge_conserving_ladder_response.py",
+        "sha256": "d01d7d04bbdb2e86ac660c0e7fb18052e33b0efd75ccb6b8bc61c8649d452eea"
+      },
+      {
+        "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+        "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE",
+    "open_blockers": [
+      "microscopic_bethe_salpeter_ladder_and_vertex_matching_missing",
+      "microscopic_SK_KMS_and_fluctuation_dissipation_matching_missing",
+      "condensed_collision_and_full_finite_temperature_transport_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "named conserving response lane only; no physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only a named action-derived conserving two-channel response lane. It does not close microscopic ladder vertices, SK/KMS matching, physical transport, SI calibration, alpha_Phi_K, TTG prediction, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE",
+    "equations": {
+      "conserved_projector": "P_perp=I-n*n^T/(n^T*n), n=(1,1)",
+      "relative_collision_rate": "Gamma_rel=(Gamma_+ + Gamma_-)/2",
+      "collision_operator": "L=Gamma_rel*P_perp, L*n=0, L>=0",
+      "projected_source": "b_perp=P_perp*q*sqrt(D), q=(-1,+1)",
+      "retarded_response": "K_R(omega)=b_perp^T*(L-i*omega*I)^(-1)*b_perp",
+      "dc_response": "K_R(0)=b_perp^T*b_perp/Gamma_rel"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_rate": "energy",
+      "omega": "energy/inverse time",
+      "response": "formal finite-dimensional response quantity",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived quantum collision width plus explicit conserving two-channel matrix-resolvent ladder comparator",
+    "observable": "retarded relative-channel response in the declared normal O(2) lane",
+    "data_role": "ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE_NOT_PHYSICAL_KUBO",
+    "included": {
+      "quantum_final_state_bose_enhancement": true,
+      "conserved_zero_mode": true,
+      "positive_dissipative_relative_mode": true,
+      "finite_frequency_retarded_response": true,
+      "deterministic_quadrature_refinement": true
+    },
+    "excluded": {
+      "microscopic_bethe_salpeter_ladder": true,
+      "condensed_scattering": true,
+      "microscopic_SK_KMS_match": true,
+      "physical_Kubo_coefficient": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only a named action-derived conserving two-channel response lane. It does not close microscopic ladder vertices, SK/KMS matching, physical transport, SI calibration, alpha_Phi_K, TTG prediction, or Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "conserved_vector": [
+        1.0,
+        1.0
+      ],
+      "charge_vector": [
+        -1.0,
+        1.0
+      ],
+      "projector": [
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ]
+      ],
+      "collision_operator": [
+        [
+          7.105204974265068e-07,
+          -7.105204974265068e-07
+        ],
+        [
+          -7.105204974265068e-07,
+          7.105204974265068e-07
+        ]
+      ],
+      "collision_operator_eigenvalues": [
+        0.0,
+        1.4210409948530135e-06
+      ],
+      "relative_collision_rate": 1.4210409948530135e-06,
+      "drude_weight_by_species": [
+        3.3362717991150926e-05,
+        0.0008134678026554699
+      ],
+      "quantum_collision_width_by_species": [
+        1.411567842046724e-06,
+        1.430514147659303e-06
+      ],
+      "source_vector": [
+        -0.005776046917325977,
+        0.028521356956769602
+      ],
+      "projected_source_vector": [
+        -0.01714870193704779,
+        0.01714870193704779
+      ],
+      "source_norm_squared": 0.0005881559562514132,
+      "conservation_residual": 0.0,
+      "symmetry_residual": 0.0,
+      "positive_semidefinite_min_eigenvalue": 0.0,
+      "frequency_over_gamma": [
+        0.0,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "retarded_response_real": [
+        413.8909140423845,
+        331.11273123390765,
+        206.94545702119223,
+        82.77818280847691
+      ],
+      "retarded_response_imag": [
+        0.0,
+        165.55636561695383,
+        206.94545702119223,
+        165.55636561695383
+      ],
+      "dc_response": 413.8909140423845,
+      "dc_closed_form": 413.8909140423845,
+      "quadrature_order": 64,
+      "angular_order": 48,
+      "final_state_bose_enhancement_included": true,
+      "ladder_vertex_resummation_included": true,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE_NOT_PHYSICAL_KUBO"
+    },
+    "refined": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "conserved_vector": [
+        1.0,
+        1.0
+      ],
+      "charge_vector": [
+        -1.0,
+        1.0
+      ],
+      "projector": [
+        [
+          0.5,
+          -0.5
+        ],
+        [
+          -0.5,
+          0.5
+        ]
+      ],
+      "collision_operator": [
+        [
+          7.105186973457211e-07,
+          -7.105186973457211e-07
+        ],
+        [
+          -7.105186973457211e-07,
+          7.105186973457211e-07
+        ]
+      ],
+      "collision_operator_eigenvalues": [
+        0.0,
+        1.4210373946914423e-06
+      ],
+      "relative_collision_rate": 1.4210373946914423e-06,
+      "drude_weight_by_species": [
+        3.336271799115082e-05,
+        0.0008134678026554523
+      ],
+      "quantum_collision_width_by_species": [
+        1.4115642565473352e-06,
+        1.4305105328355493e-06
+      ],
+      "source_vector": [
+        -0.005776046917325968,
+        0.028521356956769297
+      ],
+      "projected_source_vector": [
+        -0.017148701937047633,
+        0.017148701937047633
+      ],
+      "source_norm_squared": 0.0005881559562514024,
+      "conservation_residual": 0.0,
+      "symmetry_residual": 0.0,
+      "positive_semidefinite_min_eigenvalue": 0.0,
+      "frequency_over_gamma": [
+        0.0,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "retarded_response_real": [
+        413.8919626243277,
+        331.11357009946215,
+        206.94598131216384,
+        82.77839252486554
+      ],
+      "retarded_response_imag": [
+        0.0,
+        165.55678504973105,
+        206.94598131216384,
+        165.55678504973108
+      ],
+      "dc_response": 413.8919626243277,
+      "dc_closed_form": 413.8919626243277,
+      "quadrature_order": 80,
+      "angular_order": 56,
+      "final_state_bose_enhancement_included": true,
+      "ladder_vertex_resummation_included": true,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_CONSERVING_LADDER_RESPONSE_LANE_NOT_PHYSICAL_KUBO"
+    },
+    "relative_response_change_refined_vs_reference": 2.5334741779713136e-06
+  },
+  "checks": {
+    "quantum_collision_width_is_explicit": true,
+    "ladder_resolvent_is_explicit": true,
+    "conserved_zero_mode_is_present": true,
+    "collision_operator_is_symmetric": true,
+    "collision_operator_preserves_conserved_vector": true,
+    "collision_operator_is_positive_semidefinite": true,
+    "projected_source_is_finite_and_conserved": true,
+    "dc_response_matches_closed_form": true,
+    "retarded_real_response_is_positive": true,
+    "retarded_real_response_is_nonincreasing": true,
+    "retarded_imaginary_response_has_declared_sign": true,
+    "retarded_response_is_finite": true,
+    "quadrature_response_converges": true,
+    "refined_operator_remains_conserving": true,
+    "physical_kubo_coefficient_not_emitted": true,
+    "no_source_rows_consumed": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "failed_checks": [],
+  "numeric_alpha_Phi_K_emitted": false,
+  "physical_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "microscopic_ladder_vertex_and_SK_KMS_matching_missing",
+  "next_controller": "match the conserving response to a microscopic momentum-dependent ladder and SK/KMS interface before calling it physical transport",
+  "claim_promotion": false
+}

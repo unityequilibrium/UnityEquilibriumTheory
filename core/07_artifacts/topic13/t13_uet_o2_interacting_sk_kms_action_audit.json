@@ -1,0 +1,208 @@
+{
+  "schema_version": "t13-uet-o2-interacting-sk-kms-local-action-v1",
+  "artifact": "t13_uet_o2_interacting_sk_kms_action_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the exact local O(2) contour action difference S[plus]-S[minus] in r/a variables",
+      "the absence of pure-r interactions and the explicit r^3 a and r a^3 interaction content",
+      "the charged particle/antiparticle equilibrium KMS-FDT interface",
+      "the action-derived charged two-to-two detailed-balance interface and formal nonnegative entropy witness"
+    ],
+    "equation_or_mapping": {
+      "contour_action": "S_SK=S_E[Phi_r+Phi_a/2]-S_E[Phi_r-Phi_a/2]",
+      "covariant_time_derivative": "D_tau Phi=partial_tau Phi+mu_eff*J*Phi; J^2=-I",
+      "quartic_ra_expansion": "V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)",
+      "interaction_vertices": "S_int,SK contains r^3*a and r*a^3 only; no pure-r interaction",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))",
+      "collision_detailed_balance": "W_forward/W_reverse=exp[-beta*(Delta E-mu_eff*Delta Q)] = 1 on conserved channels",
+      "fluctuation_dissipation": "N(omega)=coth(beta*omega/2)*rho(omega) for the declared equilibrium mode interface"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "natural energy",
+      "action_density": "natural energy density",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "exact local O(2) contour action difference plus action-derived charged detailed-balance and equilibrium KMS/FDT identities",
+    "observable": "local interacting contour algebra and charged equilibrium KMS/detailed-balance interface",
+    "data_role": "ACTION_DERIVED_LOCAL_INTERACTING_SK_KMS_INTERFACE_NOT_PHYSICAL_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_interacting_sk_kms_action.py",
+        "sha256": "91b432c04e11aebf4aa1c293a05ae611be4eca3243daa91546d671f63fd68da5"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+        "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+      },
+      {
+        "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+        "sha256": "d1cae79dbbcd289c33b04c209ad4d0140ab3c22ce16bb568c267f041d2b3ece7"
+      },
+      {
+        "path": "docs/core/uet_o2_equilibrium_kms.py",
+        "sha256": "d1a3777c87864271a75d242b2af57096ffe167ddef99a11d891f7aea95c1904d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE",
+    "open_blockers": [
+      "nonlocal_interacting_SK_influence_functional_missing",
+      "microscopic_retarded_self_energy_and_physical_dissipation_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "condensed_two_fluid_completion_missing",
+      "physical_Kubo_coefficient_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "local interacting SK contour and charged equilibrium KMS/detailed-balance interface only; no nonlocal influence-functional, physical dissipation, Kubo, SI, alpha, Core, Gravity, transport, or external-validation unlock",
+    "claim_boundary": "This closes the local action-level interacting SK contour and charged equilibrium KMS/detailed-balance interface. It does not derive a nonlocal influence functional or microscopic retarded self-energy, select a unique physical renormalization, close the condensed/two-fluid sector, provide physical Kubo transport or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE",
+    "equations": {
+      "contour_action": "S_SK=S_E[Phi_r+Phi_a/2]-S_E[Phi_r-Phi_a/2]",
+      "covariant_time_derivative": "D_tau Phi=partial_tau Phi+mu_eff*J*Phi; J^2=-I",
+      "quartic_ra_expansion": "V(r+a/2)-V(r-a/2)=lambda*(r.r)*(r.a)+(lambda/4)*(a.a)*(r.a)",
+      "interaction_vertices": "S_int,SK contains r^3*a and r*a^3 only; no pure-r interaction",
+      "charged_kms": "G_particle^>/G_particle^<=exp(beta*(E-mu_eff)); G_antiparticle^>/G_antiparticle^<=exp(beta*(E+mu_eff))",
+      "collision_detailed_balance": "W_forward/W_reverse=exp[-beta*(Delta E-mu_eff*Delta Q)] = 1 on conserved channels",
+      "fluctuation_dissipation": "N(omega)=coth(beta*omega/2)*rho(omega) for the declared equilibrium mode interface"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_mass_momentum_chemical_potential": "natural energy",
+      "action_density": "natural energy density",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "exact local O(2) contour action difference plus action-derived charged detailed-balance and equilibrium KMS/FDT identities",
+    "observable": "local interacting contour algebra and charged equilibrium KMS/detailed-balance interface",
+    "data_role": "ACTION_DERIVED_LOCAL_INTERACTING_SK_KMS_INTERFACE_NOT_PHYSICAL_TRANSPORT",
+    "included": {
+      "local_interacting_contour_action": true,
+      "unitarity_contour_identity": true,
+      "ra_vertex_content": true,
+      "charged_kms_fdt": true,
+      "charged_collision_detailed_balance": true,
+      "formal_entropy_witness": true
+    },
+    "excluded": {
+      "nonlocal_influence_functional": true,
+      "microscopic_retarded_self_energy": true,
+      "unique_physical_renormalization": true,
+      "condensed_two_fluid_completion": true,
+      "physical_kubo_coefficient": true,
+      "entropy_current_heat_flux_dissipative_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes the local action-level interacting SK contour and charged equilibrium KMS/detailed-balance interface. It does not derive a nonlocal influence functional or microscopic retarded self-energy, select a unique physical renormalization, close the condensed/two-fluid sector, provide physical Kubo transport or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.25,
+    "effective_chemical_potential": 0.25,
+    "space_response": 0.15,
+    "effective_mass": 0.7039176088151227,
+    "quartic_coupling": 0.8,
+    "contour_action_difference": -0.032633908,
+    "contour_ra_expansion_residual": 0.0,
+    "contour_unitarity_residual": 0.0,
+    "contour_reality_residual": 0.0,
+    "no_pure_r_interaction_residual": 0.0,
+    "ra_interaction_r3a_weight": 0.0009339120000000001,
+    "ra_interaction_ra3_weight": 6.678000000000001e-05,
+    "charged_particle_kms_residual": 0.0,
+    "charged_antiparticle_kms_residual": 0.0,
+    "charged_collision_detailed_balance_residual": 2.846322100878654e-14,
+    "charged_collision_kms_residual": 1.729285121923951e-16,
+    "charged_collision_fdt_residual": 1.5019325358485805e-16,
+    "formal_entropy_witness": 1.3611620264866121e-27,
+    "local_interacting_sk_action_completed": true,
+    "formal_charged_kms_match_completed": true,
+    "nonlocal_influence_functional_completed": false,
+    "microscopic_retarded_self_energy_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_LOCAL_INTERACTING_SK_KMS_INTERFACE_NOT_PHYSICAL_TRANSPORT"
+  },
+  "checks": {
+    "local_interacting_action_completed": true,
+    "contour_action_is_finite": true,
+    "ra_expansion_is_exact": true,
+    "contour_unitarity_holds": true,
+    "contour_reality_holds": true,
+    "no_pure_r_interaction": true,
+    "r3a_vertex_is_present": true,
+    "ra3_vertex_is_present": true,
+    "charged_particle_kms_holds": true,
+    "charged_antiparticle_kms_holds": true,
+    "charged_collision_detailed_balance_holds": true,
+    "charged_collision_kms_holds": true,
+    "charged_collision_fdt_holds": true,
+    "formal_entropy_witness_is_nonnegative": true,
+    "nonlocal_influence_functional_remains_open": true,
+    "microscopic_retarded_self_energy_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "external_boundaries_are_explicit": true
+  },
+  "failed_checks": [],
+  "local_interacting_sk_action_completed": true,
+  "formal_charged_kms_match_completed": true,
+  "nonlocal_influence_functional_completed": false,
+  "microscopic_retarded_self_energy_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "nonlocal_interacting_sk_influence_functional_and_physical_retarded_kernel_missing",
+  "next_controller": "derive the nonlocal interacting SK influence functional and physical retarded self-energy/entropy kernel; keep physical Kubo, condensed/two-fluid, alpha, source, and holdout gates independent",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_LOCAL_INTERACTING_SK_KMS_INTERFACE_NOT_PHYSICAL_TRANSPORT",
+  "audit": {
+    "path": "docs/core/artifacts/t13_uet_o2_interacting_sk_kms_action_audit.json",
+    "summary": {
+      "status": "PASS_ACTION_DERIVED_INTERACTING_SK_KMS_LOCAL_ACTION_INTERFACE",
+      "major_result_id": "T13_UET_O2_INTERACTING_SK_KMS_ACTION_INTERFACE",
+      "closure_level": "CLOSED_FOR_LANE"
+    }
+  },
+  "open_blockers": [
+    "nonlocal_interacting_SK_influence_functional_missing",
+    "microscopic_retarded_self_energy_and_physical_dissipation_missing",
+    "unique_physical_renormalization_scheme_match_missing",
+    "condensed_two_fluid_completion_missing",
+    "physical_Kubo_coefficient_missing",
+    "entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes the local action-level interacting SK contour and charged equilibrium KMS/detailed-balance interface. It does not derive a nonlocal influence functional or microscopic retarded self-energy, select a unique physical renormalization, close the condensed/two-fluid sector, provide physical Kubo transport or entropy-current balance, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+}

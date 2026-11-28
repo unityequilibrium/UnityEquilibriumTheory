@@ -1,0 +1,229 @@
+{
+  "schema_version": "t13-uet-o2-condensed-sk-kms-kubo-match-v1",
+  "artifact": "t13_uet_o2_condensed_sk_kms_kubo_match_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_ACTION_DERIVED_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "state-matched relative-projector retarded response tied to the admitted Kubo coefficient",
+      "retarded lower-half-plane pole and causal time-domain sign",
+      "spectral positive semidefiniteness, KMS ratio, FDT noise identity, and retarded reality",
+      "zero-frequency Kubo match and nonnegative declared-channel entropy witness"
+    ],
+    "equation_or_mapping": {
+      "relative_projector": "P_rel=((1,-1),(-1,1))",
+      "retarded_correlator": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)*P_rel",
+      "spectral_function": "rho(omega)=2*Im G_R^rel(omega)",
+      "greater_lesser": "G^>=rho*(1+n_B(omega)); G^<=rho*n_B(omega)",
+      "kms": "G^>/G^<=exp(omega/T)",
+      "fdt": "G^K=G^>+G^<=rho*coth(omega/(2*T))",
+      "entropy": "sigma_rel=K_rel^natural/T>=0 for unit relative force"
+    },
+    "units": {
+      "unit_lane": "natural continuum 3+1",
+      "temperature_chemical_potential_frequency_rate": "energy",
+      "retarded_and_keldysh_response": "natural-unit relative-flow response",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived loop-renormalized condensed contact response lifted to a relative-projector SK/KMS/FDT interface",
+    "observable": "state-matched retarded, spectral, greater, lesser, noise, and entropy response in the declared channel",
+    "data_role": "DERIVED_ACTION_CONDENSED_SK_KMS_KUBO_CHANNEL_NOT_FULL_1PI",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensed_sk_kms_kubo_match.py",
+        "sha256": "ab6fabaca6d2a19f8185535928638ecf4f1581cd2ad89ada78ed89e5341aff72"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+        "sha256": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "sha256": "5e909ff97aa0476619235460c012313f36b6065e642bbe4f7fba63f36bd8c7f6"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
+    "open_blockers": [
+      "full_finite_temperature_retarded_1PI_self_energy_missing",
+      "unique_physical_renormalization_all_channel_match_missing",
+      "complete_condensed_two_fluid_constitutive_tensor_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "state-matched condensed SK/KMS/FDT/Kubo channel only; full retarded self-energy, all-channel transport, SI, alpha, Core, Gravity, and external-validation dependencies remain blocked",
+    "claim_boundary": "This closes the state-matched SK/KMS/FDT interface for the declared condensed relative-flow contact channel only. It does not close the full interacting finite-temperature 1PI self-energy, all-channel renormalization, SI transport, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_CONDENSED_SK_KMS_KUBO_MATCH_LANE",
+    "equations": {
+      "relative_projector": "P_rel=((1,-1),(-1,1))",
+      "retarded_correlator": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)*P_rel",
+      "spectral_function": "rho(omega)=2*Im G_R^rel(omega)",
+      "greater_lesser": "G^>=rho*(1+n_B(omega)); G^<=rho*n_B(omega)",
+      "kms": "G^>/G^<=exp(omega/T)",
+      "fdt": "G^K=G^>+G^<=rho*coth(omega/(2*T))",
+      "entropy": "sigma_rel=K_rel^natural/T>=0 for unit relative force"
+    },
+    "unit_contract": {
+      "unit_lane": "natural continuum 3+1",
+      "temperature_chemical_potential_frequency_rate": "energy",
+      "retarded_and_keldysh_response": "natural-unit relative-flow response",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived loop-renormalized condensed contact response lifted to a relative-projector SK/KMS/FDT interface",
+    "observable": "state-matched retarded, spectral, greater, lesser, noise, and entropy response in the declared channel",
+    "data_role": "DERIVED_ACTION_CONDENSED_SK_KMS_KUBO_CHANNEL_NOT_FULL_1PI",
+    "closed_scope": [
+      "state-matched relative-projector retarded response",
+      "retarded pole and causal time-domain sign",
+      "spectral PSD, KMS ratio, and FDT noise identity",
+      "zero-frequency match to the admitted natural Kubo coefficient",
+      "nonnegative declared-channel entropy witness"
+    ],
+    "excluded_scope": [
+      "full finite-temperature retarded 1PI self-energy",
+      "unique physical renormalization across all channels",
+      "complete condensed two-fluid constitutive tensor",
+      "SI transport coefficient",
+      "alpha_Phi_K calibration",
+      "TTG validation",
+      "Full Topic 13 closure"
+    ],
+    "claim_boundary": "This closes the state-matched SK/KMS/FDT interface for the declared condensed relative-flow contact channel only. It does not close the full interacting finite-temperature 1PI self-energy, all-channel renormalization, SI transport, or Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.2,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "branch": "condensed",
+      "relative_susceptibility": 1.0891845793059161e-09,
+      "relative_collision_rate": 4.014266993950244e-05,
+      "zero_frequency_kubo_coefficient": 2.713283847206443e-05,
+      "frequency_over_rate": [
+        0.25,
+        0.5,
+        1.0,
+        2.0
+      ],
+      "frequencies": [
+        1.003566748487561e-05,
+        2.007133496975122e-05,
+        4.014266993950244e-05,
+        8.028533987900489e-05
+      ],
+      "retarded_real": [
+        2.6715410187878825e-05,
+        2.5536789150178283e-05,
+        2.1706270777651544e-05,
+        1.3566419236032215e-05
+      ],
+      "retarded_imag": [
+        3.339426273484853e-06,
+        6.384197287544571e-06,
+        1.0853135388825772e-05,
+        1.3566419236032215e-05
+      ],
+      "spectral_scalar": [
+        6.678852546969706e-06,
+        1.2768394575089142e-05,
+        2.1706270777651544e-05,
+        2.713283847206443e-05
+      ],
+      "greater_scalar": [
+        0.13310564793612667,
+        0.1272365321176754,
+        0.10815647914001467,
+        0.06760458335286755
+      ],
+      "lesser_scalar": [
+        0.13309896908357968,
+        0.12722376372310032,
+        0.10813477286923702,
+        0.06757745051439548
+      ],
+      "noise_scalar": [
+        0.2662046170197063,
+        0.25446029584077573,
+        0.2162912520092517,
+        0.13518203386726302
+      ],
+      "kms_residual": 0.0,
+      "fdt_residual": 2.1815250606323664e-16,
+      "retarded_reality_residual": 0.0,
+      "spectral_psd_minimum": 0.0,
+      "retarded_pole_imaginary_part": -8.028533987900489e-05,
+      "negative_time_support_residual": 0.0,
+      "positive_time_kernel_value": 2.1783691586118323e-09,
+      "zero_frequency_kubo_match_residual": 0.0,
+      "entropy_production_at_unit_force": 0.00013566419236032214,
+      "state_matched_kubo_admission_completed": true,
+      "declared_channel_sk_kms_match_completed": true,
+      "physical_retarded_self_energy_completed": false,
+      "full_interacting_sk_kms_match_completed": false,
+      "physical_kubo_coefficient_emitted": true,
+      "numeric_alpha_phi_k_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "DERIVED_ACTION_CONDENSED_SK_KMS_KUBO_CHANNEL_NOT_FULL_1PI"
+    }
+  },
+  "checks": {
+    "branch_is_condensed": true,
+    "state_matched_kubo_admission_is_pass": true,
+    "zero_frequency_matches_admission_record": true,
+    "retarded_pole_is_lower_half_plane": true,
+    "negative_time_support_is_zero": true,
+    "positive_time_kernel_is_visible": true,
+    "spectral_psd_is_nonnegative": true,
+    "retarded_reality_condition_holds": true,
+    "kms_ratio_holds": true,
+    "fdt_noise_holds": true,
+    "zero_frequency_kubo_match_holds": true,
+    "entropy_is_nonnegative": true,
+    "numeric_state_is_finite": true,
+    "declared_channel_match_completed": true,
+    "full_retarded_self_energy_remains_open": true,
+    "full_interacting_match_remains_outside_scope": true,
+    "physical_kubo_scope_is_declared": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_is_derived": true,
+    "R_obs_is_separate": true
+  },
+  "failed_checks": [],
+  "declared_channel_sk_kms_match_completed": true,
+  "physical_retarded_self_energy_completed": false,
+  "full_interacting_sk_kms_match_completed": false,
+  "physical_transport_coefficients_emitted": true,
+  "physical_kubo_scope": "declared condensed relative-flow natural-unit channel only",
+  "numeric_alpha_phi_k_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "full_finite_temperature_retarded_1PI_self_energy_missing",
+  "next_controller": "derive the finite-temperature condensed retarded self-energy and all-channel SK/KMS influence kernel; keep the admitted natural-unit Kubo lane separate from SI, alpha, source, and holdout gates",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false,
+    "used_for_threshold_adjustment": false
+  }
+}

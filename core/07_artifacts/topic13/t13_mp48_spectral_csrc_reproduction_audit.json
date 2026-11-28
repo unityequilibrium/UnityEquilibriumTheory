@@ -1,0 +1,137 @@
+{
+  "schema_version": "t13-mp48-spectral-csrc-reproduction-v1",
+  "artifact": "t13_mp48_spectral_csrc_reproduction_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_HARMONIC_DOS_CROSS_FILE_REPRODUCTION",
+  "major_result": {
+    "major_result_id": "T13_MP48_SPECTRAL_C_SRC_REPRODUCTION",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the archived MP48 total DOS can be integrated with the exact Bose-mode heat-capacity kernel",
+      "the DOS-derived harmonic heat-capacity rows cross-check the deposited thermal_properties rows at 200, 250, and 300 K",
+      "a spectral-bin C_src-like quantity and its quadrature envelope are emitted with source hashes and units",
+      "the result is explicitly separated from Ding PBTE source equivalence and UET Phi calibration"
+    ],
+    "equation_or_mapping": {
+      "mode_kernel": "c_mu(T) = k_B*x_mu^2*exp(x_mu)/(exp(x_mu)-1)^2; x_mu=h*nu_mu/(k_B*T)",
+      "spectral_sum": "C_src^DOS(T) = N_A * integral[g(nu)*c(nu,T) dnu]",
+      "Ding_boundary": "Delta_Tq = Delta_u_ph / C_src"
+    },
+    "units": {
+      "frequency": "THz",
+      "DOS": "modes THz^-1 per primitive cell under deposited Phonopy convention",
+      "mode_heat_capacity": "J K^-1 per mode",
+      "spectral_result": "J K^-1 mol^-1 primitive cell"
+    },
+    "derivation_class": "standard harmonic phonon statistical-mechanics kernel plus cross-file source reproduction; no UET derivation",
+    "observable": "MP48 harmonic graphite spectral heat capacity",
+    "data_role": "INTERNAL_CROSS_FILE_REPRODUCTION_NOT_DING_SOURCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_mp48_spectral_csrc_reproduction_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_total_dos.dat.gz",
+        "sha256": "f8c0fe9013c36dc4861bfbfb27bdc64daf9739456d9523f5ace1b6d668fafeab"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+        "sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+        "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_HARMONIC_DOS_CROSS_FILE_REPRODUCTION",
+    "open_blockers": [
+      "Ding_DFT_and_material_regime_match_to_MP48_not_established",
+      "Ding_mode_resolved_C_src_uncertainty_and_PBTE_convergence_not_source_locked",
+      "third_order_PBTE_response_and_transport_not_reproduced",
+      "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "MP48 harmonic spectral C_src-like lane only; no Ding full-source, alpha, transport, Core, or Gravity unlock",
+    "claim_boundary": "This is a source-traceable harmonic DOS cross-file reproduction for MP48 graphite. It is not Ding's PBTE C_src, not an accepted Ding-regime reproduction, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "dos_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_total_dos.dat.gz",
+    "dos_sha256": "f8c0fe9013c36dc4861bfbfb27bdc64daf9739456d9523f5ace1b6d668fafeab",
+    "thermal_properties_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_thermal_properties.yaml.gz",
+    "thermal_properties_sha256": "5bb7ce9448f310a2133a648f40a92a63b8397d6ea7c3b571935146dade876902",
+    "phonopy_metadata_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+    "phonopy_metadata_sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "primitive_cell_atoms": 4,
+    "space_group": "P6_3/mmc",
+    "frequency_grid": {
+      "row_count": 201,
+      "min_THz": -4.6622527147,
+      "max_THz": 53.2574663134,
+      "spacing_THz": 0.2895985951000002,
+      "raw_trapezoid_mode_count": 12.456400840648433,
+      "simpson_mode_count": 12.6332947430187,
+      "coarse_trapezoid_mode_count": 11.925719128305044
+    },
+    "temperature_rows": [
+      {
+        "temperature_K": 200.0,
+        "deposited_heat_capacity_J_per_mol_cell_K": 20.562698832644053,
+        "spectral_trapezoid_J_per_mol_cell_K": 20.663975223005398,
+        "spectral_simpson_J_per_mol_cell_K": 20.56211704479623,
+        "spectral_coarse_trapezoid_J_per_mol_cell_K": 20.969549748997526,
+        "relative_residual_trapezoid": 0.004925247954347567,
+        "relative_residual_simpson": -2.8293360349040952e-05,
+        "relative_quadrature_difference_coarse": 0.014787789991730582
+      },
+      {
+        "temperature_K": 250.0,
+        "deposited_heat_capacity_J_per_mol_cell_K": 27.78828145778704,
+        "spectral_trapezoid_J_per_mol_cell_K": 27.99409356234019,
+        "spectral_simpson_J_per_mol_cell_K": 27.869190086710862,
+        "spectral_coarse_trapezoid_J_per_mol_cell_K": 28.36880397754178,
+        "relative_residual_trapezoid": 0.007406435150219659,
+        "relative_residual_simpson": 0.00291160966707249,
+        "relative_quadrature_difference_coarse": 0.01338533838815481
+      },
+      {
+        "temperature_K": 300.0,
+        "deposited_heat_capacity_J_per_mol_cell_K": 34.791236430507276,
+        "spectral_trapezoid_J_per_mol_cell_K": 35.13890049808486,
+        "spectral_simpson_J_per_mol_cell_K": 35.01995127391222,
+        "spectral_coarse_trapezoid_J_per_mol_cell_K": 35.49574815595091,
+        "relative_residual_trapezoid": 0.009992863239339345,
+        "relative_residual_simpson": 0.0065739211040052314,
+        "relative_quadrature_difference_coarse": 0.010155345011022776
+      }
+    ]
+  },
+  "convergence": {
+    "max_abs_relative_reproduction_residual": 0.009992863239339345,
+    "max_abs_relative_quadrature_difference_coarse": 0.014787789991730582,
+    "method": "trapezoid versus composite Simpson and every-second-bin trapezoid on the deposited uniform DOS grid",
+    "threshold_policy": "reported envelope only; no post-hoc threshold is promoted to physical acceptance"
+  },
+  "checks": {
+    "dos_file_present": true,
+    "thermal_properties_file_present": true,
+    "phonopy_metadata_present": true,
+    "dos_row_count_is_201": true,
+    "dos_grid_is_uniform": true,
+    "dos_frequency_unit_is_declared_thz": true,
+    "thermal_reference_rows_present": true,
+    "mode_heat_capacity_formula_is_finite": true,
+    "cross_file_reproduction_rows_present": true,
+    "cross_file_residual_is_reported": true,
+    "quadrature_envelope_is_reported": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "Ding_material_regime_and_mode_resolved_C_src_acceptance_missing",
+  "next_controller": "Use this harmonic cross-file reproduction as a comparator only; obtain Ding-compatible mode-resolved C_src or an accepted same-regime PBTE reproduction with convergence, uncertainty, and material-state contracts.",
+  "claim_boundary": "This closes a harmonic spectral consistency lane, not Ding source closure, the Phi-to-thermal bridge, alpha_Phi_K, physical transport, or Full Topic 13."
+}

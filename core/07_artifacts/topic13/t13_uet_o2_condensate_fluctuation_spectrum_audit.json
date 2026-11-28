@@ -1,0 +1,128 @@
+{
+  "schema_version": "t13-uet-o2-condensate-fluctuation-spectrum-v1",
+  "artifact": "t13_uet_o2_condensate_fluctuation_spectrum_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_T0_QUADRATIC_FLUCTUATION_SPECTRUM",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSATE_FLUCTUATION_SPECTRUM",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "fixed-Phi tree-level quadratic radial/Goldstone determinant around the homogeneous O(2) condensate",
+      "both non-negative mode roots and determinant residual verification across the declared wavenumber sweep",
+      "zero-momentum Goldstone mode and mixed high-mode gap",
+      "low-wavenumber Goldstone slope agreement with the independently implemented tree-level EOS sound speed",
+      "explicit exclusion of response fluctuations, vacuum loop, finite-temperature self-energy, normal component, and dissipation"
+    ],
+    "equation_or_mapping": {
+      "rotating_basis": "chi=exp(-i*mu*t)*(A+sigma+i*pi)",
+      "background": "A^2=q/lambda, q=Z*mu^2-m_eff(Phi)^2",
+      "linear_system": "[(omega^2-k^2-2*q/Z), 2*i*mu*omega; -2*i*mu*omega, (omega^2-k^2)]*(sigma,pi)=0",
+      "determinant": "(omega^2-k^2)*(omega^2-k^2-2*q/Z)-4*mu^2*omega^2=0",
+      "modes": "omega_+-^2=k^2+q/Z+2*mu^2 +- sqrt((q/Z+2*mu^2)^2+4*mu^2*k^2)",
+      "hydrodynamic_limit": "lim_{k->0} omega_-^2/k^2=q/(3*Z*mu^2-m_eff^2)=c_s^2"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "omega_k_mu": "natural energy",
+      "wavenumber": "natural inverse length",
+      "Phi": "fixed action response input; no SI map"
+    },
+    "derivation_class": "tree-level quadratic fluctuation determinant from the declared O(2) action at fixed Phi; no finite-temperature loop or transport matching",
+    "observable": "T=0 radial and Goldstone mode frequencies of the condensed action branch",
+    "data_role": "ACTION_DERIVED_T0_SPECTRUM_NOT_FINITE_TEMPERATURE_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensate_fluctuations.py",
+        "sha256": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_T0_QUADRATIC_FLUCTUATION_SPECTRUM",
+    "open_blockers": [
+      "finite_temperature_normal_component_not_derived",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "physical_Kubo_coefficient_record_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "T=0 quadratic spectrum lane only; no finite-temperature normal, physical transport, SI, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This closes only the fixed-Phi natural-unit tree-level quadratic spectrum of the O(2) condensate. It does not derive finite-temperature self-energy, a normal component, dissipative transport, vacuum renormalization, SI Phi calibration, external validation, or global UET closure."
+  },
+  "reference": {
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "condensate_control": 1.534,
+    "amplitude_sq": 1.9175,
+    "radial_curvature_sq": 2.5566666666666666,
+    "zero_momentum_high_mode_sq": 9.316666666666666,
+    "eos_sound_speed_sq": 0.2744186046511628,
+    "low_k_goldstone_slope": 0.2745598202473331,
+    "parameter_a_q_over_Z": 1.2783333333333333
+  },
+  "mode_records": [
+    {
+      "wavenumber": 0.0,
+      "goldstone_omega_sq": 0.0,
+      "high_mode_omega_sq": 9.316666666666666,
+      "goldstone_frequency": 0.0,
+      "high_mode_frequency": 3.052321520853704
+    },
+    {
+      "wavenumber": 0.05,
+      "goldstone_omega_sq": 0.0006863995506183329,
+      "high_mode_omega_sq": 9.320980267116049,
+      "goldstone_frequency": 0.026199228053863207,
+      "high_mode_frequency": 3.053028048858387
+    },
+    {
+      "wavenumber": 0.23,
+      "goldstone_omega_sq": 0.014673587684988831,
+      "high_mode_omega_sq": 9.407793078981678,
+      "goldstone_frequency": 0.12113458500770467,
+      "high_mode_frequency": 3.067212591096626
+    },
+    {
+      "wavenumber": 0.7,
+      "goldstone_omega_sq": 0.14708654433716895,
+      "high_mode_omega_sq": 10.149580122329498,
+      "goldstone_frequency": 0.38351863623189025,
+      "high_mode_frequency": 3.1858405676256774
+    }
+  ],
+  "determinant_residual_max_abs": 7.105427357601002e-15,
+  "checks": {
+    "contract_status_is_declared": true,
+    "condensed_background_is_selected": true,
+    "positive_condensate_control": true,
+    "positive_amplitude": true,
+    "radial_curvature_matches_action": true,
+    "zero_momentum_goldstone_is_zero": true,
+    "zero_momentum_high_mode_matches_mixed_gap": true,
+    "determinant_roots_close": true,
+    "nonnegative_spectrum": true,
+    "goldstone_low_k_slope_matches_eos_sound_speed": true,
+    "high_mode_above_goldstone": true,
+    "Phi_is_held_fixed": true,
+    "finite_temperature_is_excluded": true,
+    "normal_component_is_excluded": true,
+    "trace_is_not_state": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_condensate_fluctuations.py": "d7085c664ca116c3b3fb57ed5dd19a9005e04d427d5a65407c846b043bde824d",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "finite_temperature_normal_component_and_interacting_self_energy_not_derived",
+  "next_controller": "Match the tree-level spectrum to a declared finite-temperature effective action or retain this as a T=0 boundary; do not infer normal transport from the two roots.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

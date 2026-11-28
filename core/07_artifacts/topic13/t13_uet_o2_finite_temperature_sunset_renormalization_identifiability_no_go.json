@@ -1,0 +1,205 @@
+{
+  "schema_version": "t13-uet-o2-finite-t-sunset-renormalization-identifiability-no-go-v1",
+  "artifact": "t13_uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SUNSET_RENORMALIZATION_IDENTIFIABILITY_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_SUNSET_RENORMALIZATION_IDENTIFIABILITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "scoped no-go for selecting a unique physical PV renormalization reference from the current thermal cut and natural-unit contract",
+      "reference-dependent summed PV real part under fixed spectral/KMS/FDT observables",
+      "explicit separation of cut invariants from local real-part subtraction data"
+    ],
+    "equation_or_mapping": {
+      "subtracted_real_part": "Re Sigma_R,T^sub(s;r)=PV integral rho_T(S) K_sub(S;r,s)dS",
+      "reference_change": "Delta_r1_r2(s)=Re Sigma_R,T^sub(s;r1)-Re Sigma_R,T^sub(s;r2) != 0",
+      "cut_invariance": "rho_T(s), KMS, and FDT are independent of the real-part subtraction reference",
+      "identifiability_conclusion": "cut plus current natural-unit contract does not select a unique physical r"
+    },
+    "units": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; identifiability no-go only",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature 1<->3 and labeled 2<->2 cut composition evaluated under multiple declared subtraction references",
+    "observable": "reference-dependent summed PV real part versus reference-invariant spectral, KMS, and FDT quantities",
+    "data_role": "ACTION_DERIVED_FINITE_T_RENORMALIZATION_IDENTIFIABILITY_NO_GO_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_renormalization_identifiability_no_go.py",
+        "sha256": "dc43fe6e2ebd1fc3bde7bb180f885cd30029ca587b496d4851a63c50c04974f3"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_sk_kms.py",
+        "sha256": "e9e2f057cbd16f37b8cc68013f7805ee3c9dba7f31ae4fecaa4741554e053aa2"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "sha256": "dbcd9212bf6738a71d6e1b550531adc98cdeaa966cc9875f9045709733dcea3a"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_O2_FINITE_T_SUNSET_RENORMALIZATION_IDENTIFIABILITY_NO_GO",
+    "open_blockers": [
+      "physical_renormalization_scheme_selection_missing",
+      "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "scoped renormalization identifiability no-go only; physical scheme selection, complete 1PI, transport, entropy, SI, alpha, Core, Gravity, and external-validation dependencies remain blocked",
+    "claim_boundary": "This closes the scoped identifiability no-go: the current action-derived cut and natural-unit subtraction contract leave the PV real part reference dependent while leaving cut/KMS/FDT observables invariant. It does not select a physical renormalization condition, close the complete 1PI object, derive transport or entropy, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_FINITE_T_SUNSET_RENORMALIZATION_IDENTIFIABILITY_NO_GO",
+    "equations": {
+      "subtracted_real_part": "Re Sigma_R,T^sub(s;r)=PV integral rho_T(S) K_sub(S;r,s)dS",
+      "reference_change": "Delta_r1_r2(s)=Re Sigma_R,T^sub(s;r1)-Re Sigma_R,T^sub(s;r2) != 0",
+      "cut_invariance": "rho_T(s), KMS, and FDT are independent of the real-part subtraction reference",
+      "identifiability_conclusion": "cut plus current natural-unit contract does not select a unique physical r"
+    },
+    "unit_contract": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; identifiability no-go only",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature 1<->3 and labeled 2<->2 cut composition evaluated under multiple declared subtraction references",
+    "observable": "reference-dependent summed PV real part versus reference-invariant spectral, KMS, and FDT quantities",
+    "data_role": "ACTION_DERIVED_FINITE_T_RENORMALIZATION_IDENTIFIABILITY_NO_GO_NO_HOLDOUT",
+    "included": {
+      "reference_dependence_witness": true,
+      "cut_invariance_witness": true,
+      "scoped_physical_scheme_identifiability_no_go": true
+    },
+    "excluded": {
+      "physical_renormalization_scheme_selection": true,
+      "complete_off_shell_finite_temperature_1pi_self_energy": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes the scoped identifiability no-go: the current action-derived cut and natural-unit subtraction contract leave the PV real part reference dependent while leaving cut/KMS/FDT observables invariant. It does not select a physical renormalization condition, close the complete 1PI object, derive transport or entropy, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.35,
+      "mass_squared": 0.5,
+      "quartic_coupling": 0.8,
+      "species_count": 2,
+      "invariant_s": 5.0,
+      "reference_euclidean_s_points": [
+        0.25,
+        0.5,
+        0.8
+      ],
+      "combined_principal_value_real_parts": [
+        0.00018225163427454237,
+        0.00022627589857782837,
+        0.0002645204822069354
+      ],
+      "combined_spectral_measures": [
+        1.79741804457125e-05,
+        1.79741804457125e-05,
+        1.79741804457125e-05
+      ],
+      "combined_kms_residuals": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "combined_fdt_residuals": [
+        1.8151642882300236e-16,
+        1.8151642882300236e-16,
+        1.8151642882300236e-16
+      ],
+      "principal_value_span": 8.226884793239301e-05,
+      "principal_value_relative_span": 0.36357759907026227,
+      "spectral_invariance_residual": 0.0,
+      "kms_invariance_residual": 0.0,
+      "fdt_invariance_residual": 1.8151642882300236e-16,
+      "reference_dependence_witness": true,
+      "cut_invariance_witness": true,
+      "renormalization_identifiability_no_go_completed": true,
+      "physical_renormalization_scheme_match_completed": false,
+      "full_finite_temperature_1pi_self_energy_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "covariant_entropy_current_completed": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_T_RENORMALIZATION_IDENTIFIABILITY_NO_GO_NO_HOLDOUT"
+    }
+  },
+  "checks": {
+    "reference_points_are_distinct": true,
+    "reference_dependence_is_witnessed": true,
+    "cut_is_invariant_under_reference_change": true,
+    "renormalization_identifiability_no_go_is_completed": true,
+    "pv_relative_span_is_above_no_go_threshold": true,
+    "spectral_invariance_is_within_numeric_control": true,
+    "kms_invariance_is_within_numeric_control": true,
+    "fdt_invariance_is_within_numeric_control": true,
+    "state_is_finite": true,
+    "physical_scheme_selection_remains_open": true,
+    "full_finite_temperature_1pi_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "covariant_entropy_remains_open": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "no_go_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "renormalization_identifiability_no_go_completed": true,
+  "reference_dependence_witness": true,
+  "cut_invariance_witness": true,
+  "principal_value_relative_span": 0.36357759907026227,
+  "spectral_invariance_residual": 0.0,
+  "kms_invariance_residual": 0.0,
+  "fdt_invariance_residual": 1.8151642882300236e-16,
+  "physical_renormalization_scheme_match_completed": false,
+  "full_finite_temperature_1pi_self_energy_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "covariant_entropy_current_completed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "physical_renormalization_scheme_selection_missing",
+  "next_controller": "introduce an independent physical renormalization condition set and re-evaluate the complete finite-temperature 1PI object",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_FINITE_T_SUNSET_RENORMALIZATION_IDENTIFIABILITY_NO_GO",
+  "closure_level": "CLOSED_AS_NO_GO",
+  "data_role": "ACTION_DERIVED_FINITE_T_RENORMALIZATION_IDENTIFIABILITY_NO_GO_NO_HOLDOUT",
+  "open_blockers": [
+    "physical_renormalization_scheme_selection_missing",
+    "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+    "physical_Kubo_coefficient_missing",
+    "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes the scoped identifiability no-go: the current action-derived cut and natural-unit subtraction contract leave the PV real part reference dependent while leaving cut/KMS/FDT observables invariant. It does not select a physical renormalization condition, close the complete 1PI object, derive transport or entropy, map Phi to SI, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+}

@@ -1,0 +1,74 @@
+{
+  "major_result_id": "T13_RAW_SORTED_SOURCE_ACQUIRED",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Published raw-sorted archive and README acquired with size/MD5/SHA256 checks"
+  ],
+  "equation_or_mapping": "Raw-sorted image archive before published rotation/averaging pipeline; payload meaning still unverified",
+  "units": {
+    "payload": "UNVERIFIED"
+  },
+  "derivation_class": "SOURCE_ACQUISITION",
+  "observable": "candidate pre-processing detector records",
+  "data_role": "EXTERNAL_SOURCE_NOT_CALIBRATION",
+  "verification_status": "ARCHIVE_VERIFIED_REPEAT_STRUCTURE_OPEN",
+  "source": {
+    "doi": "10.5281/zenodo.14760926",
+    "license": "CC-BY-4.0",
+    "url": "https://zenodo.org/api/records/14760926/files/UED_RAW_sorted.zip/content"
+  },
+  "archive_members": [
+    {
+      "name": "RAW_sorted/",
+      "compressed_bytes": 0,
+      "uncompressed_bytes": 0,
+      "crc32": "00000000",
+      "is_directory": true
+    },
+    {
+      "name": "RAW_sorted/RAW_400nm_cut1.pickle",
+      "compressed_bytes": 49179335,
+      "uncompressed_bytes": 49740955,
+      "crc32": "2c63da8d",
+      "is_directory": false
+    },
+    {
+      "name": "RAW_sorted/RAW_400nm_cut2.pickle",
+      "compressed_bytes": 48363498,
+      "uncompressed_bytes": 48965857,
+      "crc32": "51f8063d",
+      "is_directory": false
+    },
+    {
+      "name": "RAW_sorted/RAW_800nm.pickle",
+      "compressed_bytes": 41742730,
+      "uncompressed_bytes": 42195737,
+      "crc32": "2afc51c5",
+      "is_directory": false
+    }
+  ],
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_14760926_raw_sorted.zip": "2328b1c33208d1e9ab0d200aa8e04f92419bc4a24be768e4109129b5fddd2cb8",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_14760926_readme.txt": "7ca681536e605feaa8c6dbd7aa8517bb9b4406fb87a5b158ff3bd09910ac6415",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_14760926_metadata.json": "21df2454477daf9c72113bdd7c06f1cb3c842fdf7f775b9284ec7260ab7895df",
+    "docs/scripts/audit/audit_topic13_ued_raw_archive.py": "2dd42b2431e2ed4e7a71520b68b13f282509c531130534cf185f6b8f57dac145",
+    "docs/scripts/audit/audit_topic13_ued_source_acquisition.py": "fe5e92df15ccde1d949192ce9e8113d6225ca19642ad95d4cbd5a0d268330dbd",
+    "docs/core/test/test_topic13_ued_raw_archive.py": "fdd7c8d1b8a571d65e0421d1063112e42c12afd133e72f984a59261c73496a00"
+  },
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "numeric_payload_decoded": false,
+  "member_crc_verified": false,
+  "open_blockers": [
+    "repeat/exposure structure",
+    "count units",
+    "safe numeric decoding",
+    "processed covariance propagation",
+    "Phi coupling"
+  ],
+  "dependency_unlocked": [
+    "safe pre-processing payload inspection only"
+  ],
+  "claim_boundary": "Raw-sorted label does not prove shot-level or independent repeat availability. No pickle execution, fitted covariance, holdout or physical calibration."
+}

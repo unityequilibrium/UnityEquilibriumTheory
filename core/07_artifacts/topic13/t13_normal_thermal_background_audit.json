@@ -1,0 +1,1203 @@
+{
+  "schema_version": "t13-normal-thermal-background-v1",
+  "major_result_id": "T13_NORMAL_THERMAL_BACKGROUND_STATIONARITY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS_THERMAL_ONLY_STATIONARITY_FULL_MATCH_OPEN",
+  "what_is_closed": [
+    "Thermal-only Gaussian normal-response stationary point, force/Hessian and envelope derivative checks.",
+    "Old zero-displacement collision background has a nonzero thermal force; shifted tree response has an induced cubic vertex.",
+    "Mass-only collision update omits a tree exchange term; its effect is quantified at declared kinematic points, not as a thermal rate."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.normal_response_stationarity"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "canonical": "x=sqrt(epsilon*K)*Delta_Phi_natural; m_chi^2(x)=m_chi0^2-G*x; M_response^2(x)=M0^2+3*lambda_response*x^2",
+    "potential": "Omega_T(x)=V_tree(x)+sum_species T integral log(1-exp(-(E_i(x)-q_i*mu)/T))",
+    "force": "Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response",
+    "tadpole": "I_i=integral f_i/(2*E_i); J_i=partial I_i/partial m_i^2",
+    "curvature": "Omega_xx=M0^2+3*lambda_response*x^2+G^2*J_chi+(6*lambda_response*x)^2*J_response+6*lambda_response*I_response",
+    "envelope": "p=-Omega_T(x_star); n=partial_mu p; s=partial_T p; chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx",
+    "shifted_tree_vertex": "V_response_cubic=6*lambda_response*x_star, not a dressed thermal vertex",
+    "weak_source_response": "x_star approx G*I_chi(0)/[M0^2+6*lambda_response*I_response(0)+G^2*J_chi(0)] when the small-displacement expansion is controlled"
+  },
+  "ontology": {
+    "C": "not charge or particle count",
+    "Phi": "effective response; x is its canonical natural-unit displacement",
+    "R_gen": "derived, not a state or source",
+    "R_obs": "excluded"
+  },
+  "variable_meanings": {
+    "x": "canonical natural-unit response displacement, not a temperature",
+    "I_chi": "sum of the two charged thermal integrals f/(2E)",
+    "I_response": "one neutral thermal integral f/(2E)",
+    "J_i": "partial I_i / partial mass_squared at fixed T and mu",
+    "H_cubic": "third derivative of shifted tree response potential, not the effective static Hessian",
+    "static_response_curvature": "Omega_xx at zero external frequency/momentum; not identified with a pole mass"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "x": 1,
+    "T": 1,
+    "mu": 1,
+    "potential_pressure_energy": 4,
+    "force_entropy_charge": 3,
+    "curvature_susceptibility": 2,
+    "cubic_vertex": 1,
+    "I_i": 2,
+    "J_i": 0,
+    "G": 1,
+    "quartic": 0
+  },
+  "derivation_class": "numerical_approximation",
+  "derivation_origin": "Tree polynomial plus thermal part of one-loop Bose determinant; independent action Hessian and thermal integral checks.",
+  "constant_origin": "Declared synthetic action coefficients, no fit or experimental calibration.",
+  "observable": "Stationary natural-unit response and thermodynamic derivatives; not SI temperature or heat conductivity.",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "vacuum_policy": "Field-dependent vacuum determinant and counterterms omitted; input zero-T polynomial held fixed. Not a complete renormalization prescription.",
+  "matter_quartic_boundary": "Matter quartic does not enter the chi=0 one-loop response determinant directly; its interacting Hartree/two-loop effects are not set to zero physically, but are omitted here.",
+  "normal_domain_policy": "Reject nonpositive Bose gaps; bracketing stays strictly within normal domain. No clipped solution, phase transition or global-minimum claim.",
+  "old_background_disposition": "The old zero-displacement result remains a fixed tree/background control. Holding it stationary under this thermal functional would require a declared external holding-source contract.",
+  "states": [
+    {
+      "phi_c": 1.4218957791940183e-07,
+      "Phi_natural_displacement": 1.4218957791940183e-07,
+      "T": 0.1,
+      "mu": 0.2,
+      "omega": -2.1188688260245458e-07,
+      "pressure": 2.1188688260245458e-07,
+      "force": -4.285045638882218e-17,
+      "static_response_curvature": 0.5000044546271568,
+      "matter_thermal_force": -7.109543204337986e-08,
+      "response_thermal_force": 6.430408256155026e-13,
+      "omega_phi_mu": -6.854638110027799e-07,
+      "charge_density": 7.905256208722294e-07,
+      "entropy_density": 2.154133199514908e-05,
+      "energy_density": 2.1003514410868994e-06,
+      "fixed_phi_charge_susceptibility": 8.201082536866205e-06,
+      "matter": {
+        "omega": -8.199768630581148e-08,
+        "tadpole": 3.554771602168993e-07,
+        "mass_second": -1.6947935221960425e-06,
+        "charge": 7.905256208722294e-07,
+        "entropy": 8.808399212617404e-06,
+        "energy": 9.56947359130375e-07,
+        "charge_susceptibility_fixed_mass": 8.201082536866205e-06,
+        "tadpole_mu": 3.4273190550138994e-06
+      },
+      "response": {
+        "omega": -1.2988920135111212e-07,
+        "tadpole": 7.537364728423829e-07,
+        "mass_second": -4.989584684160935e-06,
+        "charge": 0.0,
+        "entropy": 1.2732932782531679e-05,
+        "energy": 1.1434040769020555e-06,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 5.054469017224514e-15,
+        "tree_force": 7.109478895970379e-08,
+        "matter_mass_squared": 0.9999999715620844,
+        "response_tree_mass_squared": 0.5000000000000606,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 8.53137467516411e-07,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 8.53137467516411e-07
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 160,
+        "cutoff_factor": 64.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -7.10954224041016e-08,
+      "unshifted_pressure": 2.1188687754690983e-07,
+      "pressure_shift": 5.055544759519041e-15,
+      "normal_gap": 0.799999985781042,
+      "dphi_dmu": 1.370915408171546e-06,
+      "stationary_charge_susceptibility": 8.201083476579105e-06,
+      "susceptibility_backreaction": 9.397129002476995e-13,
+      "relative_matter_tree_mass_squared_change": -2.8437915577939066e-08,
+      "relative_response_tree_mass_squared_change": 1.212363542890671e-13,
+      "linearized_background_estimate": 1.4218957800510637e-07,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    },
+    {
+      "phi_c": 8.539014243652969e-05,
+      "Phi_natural_displacement": 8.539014243652969e-05,
+      "T": 0.25,
+      "mu": 0.2,
+      "omega": -0.0002715462194711907,
+      "pressure": 0.0002715462194711907,
+      "force": -5.031322767131341e-18,
+      "static_response_curvature": 0.5013383374496863,
+      "matter_thermal_force": -4.281067593740927e-05,
+      "response_thermal_force": 1.1560409651918449e-07,
+      "omega_phi_mu": -0.00011620631884469661,
+      "charge_density": 0.00039717001964131583,
+      "entropy_density": 0.006641986637676618,
+      "energy_density": 0.0014683844438762269,
+      "fixed_phi_charge_susceptibility": 0.00240803634296327,
+      "matter": {
+        "omega": -0.00014814985235247498,
+        "tadpole": 0.0002140533796870463,
+        "mass_second": -0.00038796233168552057,
+        "charge": 0.00039717001964131583,
+        "entropy": 0.003765059414545946,
+        "energy": 0.0008725490052122744,
+        "charge_susceptibility_fixed_mass": 0.00240803634296327,
+        "tadpole_mu": 0.000581031594223483
+      },
+      "response": {
+        "omega": -0.0001233981899878353,
+        "tadpole": 0.00022563903595998168,
+        "mass_second": -0.0005609116912483719,
+        "charge": 0.0,
+        "entropy": 0.002876927223130672,
+        "energy": 0.0005958336157948328,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 1.8228691196241142e-09,
+        "tree_force": 4.269507184088505e-05,
+        "matter_mass_squared": 0.9999829219715127,
+        "response_tree_mass_squared": 0.5000000218744293,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.0005123408546191782,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.0005123408546191782
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 160,
+        "cutoff_factor": 64.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -4.2809350836971335e-05,
+      "unshifted_pressure": 0.00027154439172287904,
+      "pressure_shift": 1.827748311641203e-09,
+      "normal_gap": 0.7999914609492986,
+      "dphi_dmu": 0.00023179220531156555,
+      "stationary_charge_susceptibility": 0.002408063278682186,
+      "susceptibility_backreaction": 2.6935718916151167e-08,
+      "relative_matter_tree_mass_squared_change": -1.70780284872718e-05,
+      "relative_response_tree_mass_squared_change": 4.374885853586363e-08,
+      "linearized_background_estimate": 8.539014361423099e-05,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    },
+    {
+      "phi_c": 0.0015686889549350823,
+      "Phi_natural_displacement": 0.0015686889549350823,
+      "T": 0.5,
+      "mu": 0.2,
+      "omega": -0.01156729698391636,
+      "pressure": 0.01156729698391636,
+      "force": 3.721686587382367e-15,
+      "static_response_curvature": 0.518275307798059,
+      "matter_thermal_force": -0.0008132293753534951,
+      "response_thermal_force": 2.888103768336703e-05,
+      "omega_phi_mu": -0.0007197945381260352,
+      "charge_density": 0.0057227027198417536,
+      "entropy_density": 0.11265077155190503,
+      "energy_density": 0.04590262933600449,
+      "fixed_phi_charge_susceptibility": 0.030528730293940966,
+      "matter": {
+        "omega": -0.007107054898972799,
+        "tadpole": 0.004066146876767475,
+        "mass_second": -0.003567154847999869,
+        "charge": 0.0057227027198417536,
+        "entropy": 0.0708268427951631,
+        "energy": 0.0294509070425771,
+        "charge_susceptibility_fixed_mass": 0.030528730293940966,
+        "tadpole_mu": 0.0035989726906301756
+      },
+      "response": {
+        "omega": -0.004460857282716759,
+        "tadpole": 0.0030684899421379373,
+        "mass_second": -0.003702702318165793,
+        "charge": 0.0,
+        "entropy": 0.041823928756741936,
+        "energy": 0.01645110709565419,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 6.151977731995803e-07,
+        "tree_force": 0.0007843483376738497,
+        "matter_mass_squared": 0.999686262209013,
+        "response_tree_mass_squared": 0.500007382355112,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.009412133729610493,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.009412133729610493
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 160,
+        "cutoff_factor": 64.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -0.0008130055934749644,
+      "unshifted_pressure": 0.011566659306068554,
+      "pressure_shift": 6.376778478051764e-07,
+      "normal_gap": 0.7998431187986508,
+      "dphi_dmu": 0.0013888266087461304,
+      "stationary_charge_susceptibility": 0.030529729963748347,
+      "susceptibility_backreaction": 9.996698073795688e-07,
+      "relative_matter_tree_mass_squared_change": -0.00031373779098697874,
+      "relative_response_tree_mass_squared_change": 1.4764710223991173e-05,
+      "linearized_background_estimate": 0.0015686958134569252,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    },
+    {
+      "phi_c": 0.01137190129148754,
+      "Phi_natural_displacement": 0.01137190129148754,
+      "T": 1.0,
+      "mu": 0.2,
+      "omega": -0.2717284659388023,
+      "pressure": 0.2717284659388023,
+      "force": -8.890457814381136e-18,
+      "static_response_curvature": 0.6341293262896386,
+      "matter_thermal_force": -0.007216168993283094,
+      "response_thermal_force": 0.0015287477316837954,
+      "omega_phi_mu": -0.002269135039492389,
+      "charge_density": 0.0403601888039664,
+      "entropy_density": 1.1733914521253443,
+      "energy_density": 0.9097350239473357,
+      "fixed_phi_charge_susceptibility": 0.206956438278928,
+      "matter": {
+        "omega": -0.17597885748459074,
+        "tadpole": 0.03608084496641547,
+        "mass_second": -0.015693958633005767,
+        "charge": 0.0403601888039664,
+        "entropy": 0.7678409589874335,
+        "energy": 0.5999341392636364,
+        "charge_susceptibility_fixed_mass": 0.206956438278928,
+        "tadpole_mu": 0.011345675197461946
+      },
+      "response": {
+        "omega": -0.09578194266988196,
+        "tadpole": 0.022405337690073905,
+        "mass_second": -0.013511241457991947,
+        "charge": 0.0,
+        "entropy": 0.4055504931379108,
+        "energy": 0.309768550468029,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 3.2334215670420656e-05,
+        "tree_force": 0.00568742126159929,
+        "matter_mass_squared": 0.9977256197417025,
+        "response_tree_mass_squared": 0.50038796041695,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.06823140774892524,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.06823140774892524
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 160,
+        "cutoff_factor": 64.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -0.007209037969537373,
+      "unshifted_pressure": 0.2716874725555469,
+      "pressure_shift": 4.099338325536106e-05,
+      "normal_gap": 0.7988621625338015,
+      "dphi_dmu": 0.0035783474212892053,
+      "stationary_charge_susceptibility": 0.20696455803244512,
+      "susceptibility_backreaction": 8.11975351712457e-06,
+      "relative_matter_tree_mass_squared_change": -0.0022743802582975148,
+      "relative_response_tree_mass_squared_change": 0.0007759208338999901,
+      "linearized_background_estimate": 0.011373644759345884,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    }
+  ],
+  "derivative_witnesses": [
+    {
+      "step": 0.0001,
+      "force_finite_difference": -7.115076756936123e-15,
+      "analytic_force": -4.285045638882218e-17,
+      "hessian_relative_error": 1.9998025457823587e-08,
+      "charge_envelope_relative_error": 1.5433712308166037e-07,
+      "entropy_envelope_relative_error": 9.460046840770175e-06,
+      "susceptibility_relative_error": 1.6677383940510992e-07,
+      "dphi_dmu_relative_error": 1.6550790538083504e-07,
+      "independent_minimum_success": true,
+      "independent_minimum_relative_error": 1.6284374714459204e-05,
+      "energy_identity_residual": -1.0587911840678754e-22
+    },
+    {
+      "step": 0.0001,
+      "force_finite_difference": 8.30227813580775e-13,
+      "analytic_force": -5.031322767131341e-18,
+      "hessian_relative_error": 1.974520658087897e-08,
+      "charge_envelope_relative_error": 2.785663366644542e-08,
+      "entropy_envelope_relative_error": 4.012989782697929e-07,
+      "susceptibility_relative_error": 2.8414913311181067e-08,
+      "dphi_dmu_relative_error": 2.949540944818807e-08,
+      "independent_minimum_success": true,
+      "independent_minimum_relative_error": 1.458174664237255e-06,
+      "energy_identity_residual": -1.0842021724855044e-19
+    },
+    {
+      "step": 0.0001,
+      "force_finite_difference": 1.012211148232467e-11,
+      "analytic_force": 3.721686587382367e-15,
+      "hessian_relative_error": 1.8008829316684682e-08,
+      "charge_envelope_relative_error": 8.568328491165289e-09,
+      "entropy_envelope_relative_error": 5.7094613259423e-08,
+      "susceptibility_relative_error": 8.97610896721801e-09,
+      "dphi_dmu_relative_error": 1.2079246269891541e-08,
+      "independent_minimum_success": true,
+      "independent_minimum_relative_error": 2.68937128566904e-07,
+      "energy_identity_residual": -2.2551405187698492e-17
+    },
+    {
+      "step": 0.0001,
+      "force_finite_difference": 8.1601392309949e-11,
+      "analytic_force": -8.890457814381136e-18,
+      "hessian_relative_error": 1.1943928734936549e-08,
+      "charge_envelope_relative_error": 2.527170916977184e-09,
+      "entropy_envelope_relative_error": 1.1196894522669254e-08,
+      "susceptibility_relative_error": 3.4548797156475075e-09,
+      "dphi_dmu_relative_error": 7.812580138377712e-09,
+      "independent_minimum_success": true,
+      "independent_minimum_relative_error": 4.295232423956463e-06,
+      "energy_identity_residual": 4.0245584642661925e-16
+    }
+  ],
+  "refinement": [
+    {
+      "phi_c": 8.539014243653031e-05,
+      "Phi_natural_displacement": 8.539014243653031e-05,
+      "T": 0.25,
+      "mu": 0.2,
+      "omega": -0.0002715462194712197,
+      "pressure": 0.0002715462194712197,
+      "force": -5.016301167207378e-18,
+      "static_response_curvature": 0.5013383374496863,
+      "matter_thermal_force": -4.2810675937409565e-05,
+      "response_thermal_force": 1.1560409651918596e-07,
+      "omega_phi_mu": -0.00011620631884469752,
+      "charge_density": 0.0003971700196413173,
+      "entropy_density": 0.006641986637676765,
+      "energy_density": 0.001468384443876235,
+      "fixed_phi_charge_susceptibility": 0.002408036342963281,
+      "matter": {
+        "omega": -0.00014814985235252437,
+        "tadpole": 0.0002140533796870478,
+        "mass_second": -0.0003879623316855257,
+        "charge": 0.0003971700196413173,
+        "entropy": 0.003765059414546151,
+        "energy": 0.0008725490052122768,
+        "charge_susceptibility_fixed_mass": 0.002408036342963281,
+        "tadpole_mu": 0.0005810315942234876
+      },
+      "response": {
+        "omega": -0.00012339818998781494,
+        "tadpole": 0.00022563903595998293,
+        "mass_second": -0.0005609116912483776,
+        "charge": 0.0,
+        "entropy": 0.0028769272231306134,
+        "energy": 0.0005958336157948384,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 1.8228691196241409e-09,
+        "tree_force": 4.269507184088536e-05,
+        "matter_mass_squared": 0.9999829219715127,
+        "response_tree_mass_squared": 0.5000000218744293,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.0005123408546191819,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.0005123408546191819
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 96,
+        "cutoff_factor": 48.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -4.280935083697165e-05,
+      "unshifted_pressure": 0.00027154439172292317,
+      "pressure_shift": 1.8277482965165827e-09,
+      "normal_gap": 0.7999914609492986,
+      "dphi_dmu": 0.00023179220531156737,
+      "stationary_charge_susceptibility": 0.0024080632786821973,
+      "susceptibility_backreaction": 2.6935718916151587e-08,
+      "relative_matter_tree_mass_squared_change": -1.70780284872718e-05,
+      "relative_response_tree_mass_squared_change": 4.374885853586363e-08,
+      "linearized_background_estimate": 8.539014361423163e-05,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    },
+    {
+      "phi_c": 8.539014243652969e-05,
+      "Phi_natural_displacement": 8.539014243652969e-05,
+      "T": 0.25,
+      "mu": 0.2,
+      "omega": -0.0002715462194711907,
+      "pressure": 0.0002715462194711907,
+      "force": -5.031322767131341e-18,
+      "static_response_curvature": 0.5013383374496863,
+      "matter_thermal_force": -4.281067593740927e-05,
+      "response_thermal_force": 1.1560409651918449e-07,
+      "omega_phi_mu": -0.00011620631884469661,
+      "charge_density": 0.00039717001964131583,
+      "entropy_density": 0.006641986637676618,
+      "energy_density": 0.0014683844438762269,
+      "fixed_phi_charge_susceptibility": 0.00240803634296327,
+      "matter": {
+        "omega": -0.00014814985235247498,
+        "tadpole": 0.0002140533796870463,
+        "mass_second": -0.00038796233168552057,
+        "charge": 0.00039717001964131583,
+        "entropy": 0.003765059414545946,
+        "energy": 0.0008725490052122744,
+        "charge_susceptibility_fixed_mass": 0.00240803634296327,
+        "tadpole_mu": 0.000581031594223483
+      },
+      "response": {
+        "omega": -0.0001233981899878353,
+        "tadpole": 0.00022563903595998168,
+        "mass_second": -0.0005609116912483719,
+        "charge": 0.0,
+        "entropy": 0.002876927223130672,
+        "energy": 0.0005958336157948328,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 1.8228691196241142e-09,
+        "tree_force": 4.269507184088505e-05,
+        "matter_mass_squared": 0.9999829219715127,
+        "response_tree_mass_squared": 0.5000000218744293,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.0005123408546191782,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.0005123408546191782
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 160,
+        "cutoff_factor": 64.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -4.2809350836971335e-05,
+      "unshifted_pressure": 0.00027154439172287904,
+      "pressure_shift": 1.827748311641203e-09,
+      "normal_gap": 0.7999914609492986,
+      "dphi_dmu": 0.00023179220531156555,
+      "stationary_charge_susceptibility": 0.002408063278682186,
+      "susceptibility_backreaction": 2.6935718916151167e-08,
+      "relative_matter_tree_mass_squared_change": -1.70780284872718e-05,
+      "relative_response_tree_mass_squared_change": 4.374885853586363e-08,
+      "linearized_background_estimate": 8.539014361423099e-05,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    },
+    {
+      "phi_c": 8.539014243653134e-05,
+      "Phi_natural_displacement": 8.539014243653134e-05,
+      "T": 0.25,
+      "mu": 0.2,
+      "omega": -0.0002715462194712229,
+      "pressure": 0.0002715462194712229,
+      "force": -5.0141306452800385e-18,
+      "static_response_curvature": 0.5013383374496863,
+      "matter_thermal_force": -4.281067593741008e-05,
+      "response_thermal_force": 1.1560409651918813e-07,
+      "omega_phi_mu": -0.00011620631884469903,
+      "charge_density": 0.00039717001964132103,
+      "entropy_density": 0.006641986637676798,
+      "energy_density": 0.0014683844438762405,
+      "fixed_phi_charge_susceptibility": 0.0024080363429633024,
+      "matter": {
+        "omega": -0.00014814985235252578,
+        "tadpole": 0.00021405337968705037,
+        "mass_second": -0.00038796233168553277,
+        "charge": 0.00039717001964132103,
+        "entropy": 0.0037650594145461737,
+        "energy": 0.0008725490052122814,
+        "charge_susceptibility_fixed_mass": 0.0024080363429633024,
+        "tadpole_mu": 0.0005810315942234951
+      },
+      "response": {
+        "omega": -0.00012339818998781675,
+        "tadpole": 0.00022563903595998445,
+        "mass_second": -0.0005609116912483831,
+        "charge": 0.0,
+        "entropy": 0.0028769272231306247,
+        "energy": 0.0005958336157948395,
+        "charge_susceptibility_fixed_mass": 0.0,
+        "tadpole_mu": 0.0
+      },
+      "background": {
+        "tree_potential": 1.8228691196241847e-09,
+        "tree_force": 4.269507184088588e-05,
+        "matter_mass_squared": 0.9999829219715127,
+        "response_tree_mass_squared": 0.5000000218744293,
+        "matter_mass_derivative": -0.2,
+        "response_mass_derivative": 0.000512340854619188,
+        "response_mass_second_derivative": 6.0,
+        "response_tree_cubic": 0.000512340854619188
+      },
+      "config": {
+        "z": 1.0,
+        "mass_squared": 1.0,
+        "quartic": 0.1,
+        "epsilon": 1.0,
+        "response_kinetic": 1.0,
+        "response_mass_squared": 0.5,
+        "response_coupling": 0.2,
+        "response_quartic": 1.0
+      },
+      "grid": {
+        "order": 256,
+        "cutoff_factor": 80.0
+      },
+      "root_bracket": [
+        0.0,
+        4.799999951999999
+      ],
+      "unshifted_force": -4.2809350836972175e-05,
+      "unshifted_pressure": 0.00027154439172288533,
+      "pressure_shift": 1.827748337553635e-09,
+      "normal_gap": 0.7999914609492986,
+      "dphi_dmu": 0.00023179220531157038,
+      "stationary_charge_susceptibility": 0.0024080632786822186,
+      "susceptibility_backreaction": 2.693571891615229e-08,
+      "relative_matter_tree_mass_squared_change": -1.70780284872718e-05,
+      "relative_response_tree_mass_squared_change": 4.374885853586363e-08,
+      "linearized_background_estimate": 8.539014361423267e-05,
+      "status": "LOCAL_THERMAL_ONLY_NORMAL_STATIONARY_POINT"
+    }
+  ],
+  "refinement_relative_changes": [
+    7.327471962526033e-15,
+    1.9317880628477724e-14
+  ],
+  "production_force_witness": [
+    {
+      "phi_c": 0.0,
+      "tree_force_error": 0.0
+    },
+    {
+      "phi_c": 0.01,
+      "tree_force_error": 1.734723475976807e-18
+    },
+    {
+      "phi_c": 0.1,
+      "tree_force_error": 4.85722573273506e-17
+    }
+  ],
+  "checks": {
+    "nonzero_thermal_force_at_old_background": true,
+    "stable_local_stationary_response": true,
+    "production_tree_force": true,
+    "hessian_derivative": true,
+    "thermodynamic_envelope": true,
+    "independent_minimum": true,
+    "energy_identity": true,
+    "quadrature_refinement": true,
+    "induced_response_cubic_nonzero": true,
+    "shifted_vertex_matches_analytic_exchange": true
+  },
+  "shifted_vertex_witnesses": [
+    {
+      "T": 0.1,
+      "phi_c": 1.4218957791940183e-07,
+      "induced_cubic": 8.53137467516411e-07,
+      "rows": [
+        {
+          "s": 4.0,
+          "cosine": -0.8,
+          "t": -0.9562500447895944,
+          "u": -0.04375001208611551,
+          "full_shifted_tree_amplitude": -0.024989903517768742,
+          "mass_only_amplitude": -0.02499002068685939,
+          "missing_exchange_term": 1.171690906474294e-07,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 0.9999906227515827
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.0,
+          "t": -0.531250024883108,
+          "u": -0.4687500319926019,
+          "full_shifted_tree_amplitude": -0.013900543823377331,
+          "mass_only_amplitude": -0.013900709280336735,
+          "missing_exchange_term": 1.654569594047891e-07,
+          "analytic_relative_error": 1.2479536757831187e-16,
+          "squared_amplitude_ratio": 0.9999761945996612
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.8,
+          "t": -0.10625000497662158,
+          "u": -0.8937500518990883,
+          "full_shifted_tree_amplitude": -0.007788497295192556,
+          "mass_only_amplitude": -0.00778877874260221,
+          "missing_exchange_term": 2.814474096537862e-07,
+          "analytic_relative_error": 1.1136445261703845e-16,
+          "squared_amplitude_ratio": 0.9999277313340368
+        },
+        {
+          "s": 8.0,
+          "cosine": -0.8,
+          "t": -4.528125047988867,
+          "u": -0.4718750088868422,
+          "full_shifted_tree_amplitude": -0.021461901542091467,
+          "mass_only_amplitude": -0.021461935476707626,
+          "missing_exchange_term": 3.393461615906453e-08,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 0.9999968376953356
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.0,
+          "t": -2.515625026660482,
+          "u": -2.4843750302152277,
+          "full_shifted_tree_amplitude": -0.005765478349738725,
+          "mass_only_amplitude": -0.005765534930875967,
+          "missing_exchange_term": 5.6581137241798435e-08,
+          "analytic_relative_error": 3.008811014016589e-16,
+          "squared_amplitude_ratio": 0.9999803727285376
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.8,
+          "t": -0.5031250053320963,
+          "u": -4.496875051543613,
+          "full_shifted_tree_amplitude": -0.0015624060357241508,
+          "mass_only_amplitude": -0.001562576131666926,
+          "missing_exchange_term": 1.7009594277513167e-07,
+          "analytic_relative_error": 4.1635867285279395e-16,
+          "squared_amplitude_ratio": 0.9997822996507653
+        },
+        {
+          "s": 16.0,
+          "cosine": -0.8,
+          "t": -11.714062549588503,
+          "u": -1.2859375072872066,
+          "full_shifted_tree_amplitude": -0.014831610713036536,
+          "mass_only_amplitude": -0.014831624682794167,
+          "missing_exchange_term": 1.396975763064435e-08,
+          "analytic_relative_error": 2.339224659466065e-16,
+          "squared_amplitude_ratio": 0.9999981162210682
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.0,
+          "t": -6.507812527549168,
+          "u": -6.492187529326541,
+          "full_shifted_tree_amplitude": -0.002672203671534299,
+          "mass_only_amplitude": -0.0026722280197161077,
+          "missing_exchange_term": 2.4348181808875247e-08,
+          "analytic_relative_error": 3.2458668746996754e-16,
+          "squared_amplitude_ratio": 0.9999817769511402
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.8,
+          "t": -1.3015625055098334,
+          "u": -11.698437551365876,
+          "full_shifted_tree_amplitude": -0.00048323246953229596,
+          "mass_only_amplitude": -0.0004833271803696836,
+          "missing_exchange_term": 9.471083738778729e-08,
+          "analytic_relative_error": 1.1218225604074848e-16,
+          "squared_amplitude_ratio": 0.9996081264962626
+        }
+      ],
+      "relation": "M(chi Phi -> chi Phi)=G^2[(s-m_chi^2)^-1+(u-m_chi^2)^-1]-G*H/(t-M_response^2)",
+      "role": "SHIFTED_TREE_SENSITIVITY_NOT_COMPLETE_THERMAL_PERTURBATION_THEORY"
+    },
+    {
+      "T": 0.25,
+      "phi_c": 8.539014243652969e-05,
+      "induced_cubic": 0.0005123408546191782,
+      "rows": [
+        {
+          "s": 4.0,
+          "cosine": -0.8,
+          "t": -0.9562768536649398,
+          "u": -0.043757258643176256,
+          "full_shifted_tree_amplitude": -0.024920093292968192,
+          "mass_only_amplitude": -0.02499045640361354,
+          "missing_exchange_term": 7.036311064534617e-05,
+          "analytic_relative_error": 1.3922287172707344e-16,
+          "squared_amplitude_ratio": 0.9943767290721485
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.0,
+          "t": -0.5312649187027443,
+          "u": -0.4687691936053717,
+          "full_shifted_tree_amplitude": -0.013801384258812839,
+          "mass_only_amplitude": -0.013900745894113354,
+          "missing_exchange_term": 9.936163530051426e-05,
+          "analytic_relative_error": 1.2569199171953375e-16,
+          "squared_amplitude_ratio": 0.9857552219465566
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.8,
+          "t": -0.10625298374054883,
+          "u": -0.8937811285675672,
+          "full_shifted_tree_amplitude": -0.00761967924157427,
+          "mass_only_amplitude": -0.007788698067006555,
+          "missing_exchange_term": 0.0001690188254322843,
+          "analytic_relative_error": 4.553271656139694e-16,
+          "squared_amplitude_ratio": 0.9570698657214792
+        },
+        {
+          "s": 8.0,
+          "cosine": -0.8,
+          "t": -4.528153777371122,
+          "u": -0.4718803349369942,
+          "full_shifted_tree_amplitude": -0.02144178697049602,
+          "mass_only_amplitude": -0.021462165856070126,
+          "missing_exchange_term": 2.0378885574106837e-05,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 0.998101849499315
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.0,
+          "t": -2.515640987428401,
+          "u": -2.484393124879715,
+          "full_shifted_tree_amplitude": -0.005731566503516499,
+          "mass_only_amplitude": -0.005765545405715977,
+          "missing_exchange_term": 3.397890219947788e-05,
+          "analytic_relative_error": 3.026613186661096e-16,
+          "squared_amplitude_ratio": 0.9882478504681673
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.8,
+          "t": -0.5031281974856802,
+          "u": -4.4969059148224355,
+          "full_shifted_tree_amplitude": -0.0014604231352941931,
+          "mass_only_amplitude": -0.0015625717629035325,
+          "missing_exchange_term": 0.0001021486276093395,
+          "analytic_relative_error": 2.9695562779950046e-16,
+          "squared_amplitude_ratio": 0.8735292754894398
+        },
+        {
+          "s": 16.0,
+          "cosine": -0.8,
+          "t": -11.714092239224213,
+          "u": -1.2859418730839032,
+          "full_shifted_tree_amplitude": -0.014823335465853463,
+          "mass_only_amplitude": -0.014831724805702336,
+          "missing_exchange_term": 8.389339848872138e-06,
+          "analytic_relative_error": 2.3405305505941727e-16,
+          "squared_amplitude_ratio": 0.9988690503218722
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.0,
+          "t": -6.507829021791229,
+          "u": -6.492205090516887,
+          "full_shifted_tree_amplitude": -0.0026576087297606773,
+          "mass_only_amplitude": -0.002672230686187605,
+          "missing_exchange_term": 1.4621956426927409e-05,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 0.9890863074286184
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.8,
+          "t": -1.3015658043582456,
+          "u": -11.69846830794987,
+          "full_shifted_tree_amplitude": -0.00042644952735229526,
+          "mass_only_amplitude": -0.0004833268112304596,
+          "missing_exchange_term": 5.68772838781644e-05,
+          "analytic_relative_error": 1.271196358472959e-16,
+          "squared_amplitude_ratio": 0.7784908287606125
+        }
+      ],
+      "relation": "M(chi Phi -> chi Phi)=G^2[(s-m_chi^2)^-1+(u-m_chi^2)^-1]-G*H/(t-M_response^2)",
+      "role": "SHIFTED_TREE_SENSITIVITY_NOT_COMPLETE_THERMAL_PERTURBATION_THEORY"
+    },
+    {
+      "T": 0.5,
+      "phi_c": 0.0015686889549350823,
+      "induced_cubic": 0.009412133729610493,
+      "rows": [
+        {
+          "s": 4.0,
+          "cosine": -0.8,
+          "t": -0.956729210953286,
+          "u": -0.043883499918464186,
+          "full_shifted_tree_amplitude": -0.023705811363994602,
+          "mass_only_amplitude": -0.02499803313872665,
+          "missing_exchange_term": 0.00129222177473205,
+          "analytic_relative_error": 2.9270855982792113e-16,
+          "squared_amplitude_ratio": 0.8992862840234443
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.0,
+          "t": -0.5315162283073811,
+          "u": -0.4690964825643691,
+          "full_shifted_tree_amplitude": -0.012076596983530153,
+          "mass_only_amplitude": -0.01390149631347677,
+          "missing_exchange_term": 0.0018248993299466174,
+          "analytic_relative_error": 1.4364340205627393e-16,
+          "squared_amplitude_ratio": 0.7546855751184359
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.8,
+          "t": -0.1063032456614762,
+          "u": -0.894309465210274,
+          "full_shifted_tree_amplitude": -0.0046827094148839295,
+          "mass_only_amplitude": -0.0077874327348099615,
+          "missing_exchange_term": 0.0031047233199260316,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 0.3615811654379822
+        },
+        {
+          "s": 8.0,
+          "cosine": -0.8,
+          "t": -4.528640325368931,
+          "u": -0.47197238550281906,
+          "full_shifted_tree_amplitude": -0.021091845889534555,
+          "mass_only_amplitude": -0.02146618643898897,
+          "missing_exchange_term": 0.0003743405494544142,
+          "analytic_relative_error": 3.2898466735669624e-16,
+          "squared_amplitude_ratio": 0.9654268763342907
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.0,
+          "t": -2.515911291871628,
+          "u": -2.484701419000122,
+          "full_shifted_tree_amplitude": -0.005141585604958062,
+          "mass_only_amplitude": -0.005765749234438137,
+          "missing_exchange_term": 0.0006241636294800752,
+          "analytic_relative_error": 1.686953801084244e-16,
+          "squared_amplitude_ratio": 0.7952114816344854
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.8,
+          "t": -0.5031822583743255,
+          "u": -4.497430452497425,
+          "full_shifted_tree_amplitude": 0.0003139293036148508,
+          "mass_only_amplitude": -0.0015625122678445107,
+          "missing_exchange_term": 0.0018764415714593624,
+          "analytic_relative_error": 3.4536507423839332e-15,
+          "squared_amplitude_ratio": 0.040366104635845695
+        },
+        {
+          "s": 16.0,
+          "cosine": -0.8,
+          "t": -11.714595882576752,
+          "u": -1.286016828294997,
+          "full_shifted_tree_amplitude": -0.014679362018585537,
+          "mass_only_amplitude": -0.01483347482152254,
+          "missing_exchange_term": 0.00015411280293700145,
+          "analytic_relative_error": 2.3634861975342983e-16,
+          "squared_amplitude_ratio": 0.9793288861664391
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.0,
+          "t": -6.508108823653751,
+          "u": -6.492503887217998,
+          "full_shifted_tree_amplitude": -0.0024036752333574697,
+          "mass_only_amplitude": -0.002672281901766889,
+          "missing_exchange_term": 0.0002686066684094191,
+          "analytic_relative_error": 1.8042407018041009e-16,
+          "squared_amplitude_ratio": 0.8090717484787954
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.8,
+          "t": -1.30162176473075,
+          "u": -11.698990946140999,
+          "full_shifted_tree_amplitude": 0.00056152347059682,
+          "mass_only_amplitude": -0.0004833234941444679,
+          "missing_exchange_term": 0.0010448469647412883,
+          "analytic_relative_error": 1.1584935226303005e-15,
+          "squared_amplitude_ratio": 1.3497707551740754
+        }
+      ],
+      "relation": "M(chi Phi -> chi Phi)=G^2[(s-m_chi^2)^-1+(u-m_chi^2)^-1]-G*H/(t-M_response^2)",
+      "role": "SHIFTED_TREE_SENSITIVITY_NOT_COMPLETE_THERMAL_PERTURBATION_THEORY"
+    },
+    {
+      "T": 1.0,
+      "phi_c": 0.01137190129148754,
+      "induced_cubic": 0.06823140774892524,
+      "rows": [
+        {
+          "s": 4.0,
+          "cosine": -0.8,
+          "t": -0.9590481238755162,
+          "u": -0.04472471580717885,
+          "full_shifted_tree_amplitude": -0.015697520204274312,
+          "mass_only_amplitude": -0.025047899913708975,
+          "missing_exchange_term": 0.00935037970943466,
+          "analytic_relative_error": 4.420375838737776e-16,
+          "squared_amplitude_ratio": 0.39275295647094555
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.0,
+          "t": -0.5328045132641757,
+          "u": -0.4709683264185194,
+          "full_shifted_tree_amplitude": -0.0007039699655491637,
+          "mass_only_amplitude": -0.013911849327237874,
+          "missing_exchange_term": 0.013207879361688712,
+          "analytic_relative_error": 2.4642009757100264e-15,
+          "squared_amplitude_ratio": 0.002560581070032726
+        },
+        {
+          "s": 4.0,
+          "cosine": 0.8,
+          "t": -0.1065609026528351,
+          "u": -0.8972119370298599,
+          "full_shifted_tree_amplitude": 0.014697769971078778,
+          "mass_only_amplitude": -0.007785642355893555,
+          "missing_exchange_term": 0.02248341232697233,
+          "analytic_relative_error": 3.540789138876726e-16,
+          "squared_amplitude_ratio": 3.5638054889315813
+        },
+        {
+          "s": 8.0,
+          "cosine": -0.8,
+          "t": -4.531221839794971,
+          "u": -0.47255099988772375,
+          "full_shifted_tree_amplitude": -0.01878122472849088,
+          "mass_only_amplitude": -0.02149333518451438,
+          "missing_exchange_term": 0.0027121104560234965,
+          "analytic_relative_error": 1.8472953718989935e-16,
+          "squared_amplitude_ratio": 0.7635547718915519
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.0,
+          "t": -2.5173454665527615,
+          "u": -2.486427373129933,
+          "full_shifted_tree_amplitude": -0.0012460922785990126,
+          "mass_only_amplitude": -0.005768122431371023,
+          "missing_exchange_term": 0.004522030152772011,
+          "analytic_relative_error": 6.96065414163052e-16,
+          "squared_amplitude_ratio": 0.04666931967590273
+        },
+        {
+          "s": 8.0,
+          "cosine": 0.8,
+          "t": -0.5034690933105522,
+          "u": -4.5003037463721425,
+          "full_shifted_tree_amplitude": 0.012030945019308726,
+          "mass_only_amplitude": -0.0015629043231986973,
+          "missing_exchange_term": 0.013593849342507425,
+          "analytic_relative_error": 1.44188463432649e-16,
+          "squared_amplitude_ratio": 59.25632303681116
+        },
+        {
+          "s": 16.0,
+          "cosine": -0.8,
+          "t": -11.717308697754698,
+          "u": -1.286464141927997,
+          "full_shifted_tree_amplitude": -0.013728490020233968,
+          "mass_only_amplitude": -0.01484541753378931,
+          "missing_exchange_term": 0.0011169275135553402,
+          "analytic_relative_error": 2.5271875835143633e-16,
+          "squared_amplitude_ratio": 0.8551862530228331
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.0,
+          "t": -6.509615943197054,
+          "u": -6.494156896485641,
+          "full_shifted_tree_amplitude": -0.0007261629007938733,
+          "mass_only_amplitude": -0.002672849626995226,
+          "missing_exchange_term": 0.0019466867262013525,
+          "analytic_relative_error": 1.1944451266240183e-15,
+          "squared_amplitude_ratio": 0.07381065546901805
+        },
+        {
+          "s": 16.0,
+          "cosine": 0.8,
+          "t": -1.3019231886394105,
+          "u": -11.701849651043284,
+          "full_shifted_tree_amplitude": 0.007088096634947465,
+          "mass_only_amplitude": -0.00048344924209482937,
+          "missing_exchange_term": 0.0075715458770422945,
+          "analytic_relative_error": 0.0,
+          "squared_amplitude_ratio": 214.9599202111492
+        }
+      ],
+      "relation": "M(chi Phi -> chi Phi)=G^2[(s-m_chi^2)^-1+(u-m_chi^2)^-1]-G*H/(t-M_response^2)",
+      "role": "SHIFTED_TREE_SENSITIVITY_NOT_COMPLETE_THERMAL_PERTURBATION_THEORY"
+    }
+  ],
+  "collision_handoff": {
+    "status": "BLOCKED_BACKGROUND_AND_VERTEX_MATCH",
+    "reason": "Do not update only masses in the old kernel: a shifted response cubic adds tree exchange terms; static effective curvature is not a quasiparticle pole mass. The partial higher-order terms induced by a shifted background are not a complete thermal loop expansion.",
+    "old_collision_artifact_preserved": true,
+    "coupled_collision_rerun": false,
+    "sensitivity_boundary": "Pointwise squared-amplitude ratios can be large near cancellations of the mass-only comparator; they are not integrated rate ratios or reliable high-T predictions."
+  },
+  "open_blockers": [
+    "vacuum_renormalization_and_interacting_thermal_self_energy",
+    "charged_or_condensed_phase_stability_not_complete",
+    "shifted_background_collision_vertices_and_current_matching",
+    "full_KMS_entropy_heat_frame_and_material_SI_mapping"
+  ],
+  "controlling_blocker": "consistent_thermal_background_propagator_vertex_current_matching",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_normal_thermal_background.py": "edc4cf486febd9e5c68662a9c6a2567f99821a8a72de66bde7b317bc78ad940f",
+    "docs/core/test/test_topic13_normal_thermal_background.py": "43d4cab696f028ef95797cb606322cf0127a621a9b9211530978c4115f6ecd22",
+    "docs/scripts/audit/audit_topic13_coupled_gain_loss_operator.py": "ecc057e1d343c8c6c295a21eefb9e4bccc24cc11c668f88dd4083f3072b2a81d",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json",
+      "sha256": "b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab"
+    }
+  ],
+  "literature_context": [
+    {
+      "url": "https://www.tpi.uni-jena.de/~floerchinger/qft2/lecture22/",
+      "role": "Thermal determinant and stationary-pressure method; no numeric input."
+    },
+    {
+      "url": "https://arxiv.org/abs/hep-ph/9901312",
+      "role": "Effective potential and finite-temperature approximation context."
+    }
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Thermal-only local normal stationary-background diagnostic; not full finite-T EOS, renormalized action, physical transport, SI alpha, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Thermal-only Gaussian normal-response stationary point, force/Hessian and envelope derivative checks.",
+      "Old zero-displacement collision background has a nonzero thermal force; shifted tree response has an induced cubic vertex.",
+      "Mass-only collision update omits a tree exchange term; its effect is quantified at declared kinematic points, not as a thermal rate."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "vacuum_renormalization_and_interacting_thermal_self_energy",
+      "charged_or_condensed_phase_stability_not_complete",
+      "shifted_background_collision_vertices_and_current_matching",
+      "full_KMS_entropy_heat_frame_and_material_SI_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_THERMAL_ONLY_STATIONARITY_FULL_MATCH_OPEN",
+    "WHAT_CHANGED": "Solved response thermal force and exposed shifted-vertex handoff instead of reusing a zero-T background.",
+    "EQUATION_OR_MAPPING": {
+      "canonical": "x=sqrt(epsilon*K)*Delta_Phi_natural; m_chi^2(x)=m_chi0^2-G*x; M_response^2(x)=M0^2+3*lambda_response*x^2",
+      "potential": "Omega_T(x)=V_tree(x)+sum_species T integral log(1-exp(-(E_i(x)-q_i*mu)/T))",
+      "force": "Omega_x=M0^2*x+lambda_response*x^3-G*I_chi+6*lambda_response*x*I_response",
+      "tadpole": "I_i=integral f_i/(2*E_i); J_i=partial I_i/partial m_i^2",
+      "curvature": "Omega_xx=M0^2+3*lambda_response*x^2+G^2*J_chi+(6*lambda_response*x)^2*J_response+6*lambda_response*I_response",
+      "envelope": "p=-Omega_T(x_star); n=partial_mu p; s=partial_T p; chi_stationary=chi_fixed+Omega_xmu^2/Omega_xx",
+      "shifted_tree_vertex": "V_response_cubic=6*lambda_response*x_star, not a dressed thermal vertex",
+      "weak_source_response": "x_star approx G*I_chi(0)/[M0^2+6*lambda_response*I_response(0)+G^2*J_chi(0)] when the small-displacement expansion is controlled"
+    },
+    "VERIFICATION": {
+      "nonzero_thermal_force_at_old_background": true,
+      "stable_local_stationary_response": true,
+      "production_tree_force": true,
+      "hessian_derivative": true,
+      "thermodynamic_envelope": true,
+      "independent_minimum": true,
+      "energy_identity": true,
+      "quadrature_refinement": true,
+      "induced_response_cubic_nonzero": true,
+      "shifted_vertex_matches_analytic_exchange": true
+    },
+    "CONTROLLING_BLOCKER": "consistent_thermal_background_propagator_vertex_current_matching",
+    "NEXT_ACTION": "Build a consistent background/propagator/vertex approximation and audit current matching before inserting thermal masses into the collision form.",
+    "CLAIM_BOUNDARY": "Thermal-only local normal stationary-background diagnostic; not full finite-T EOS, renormalized action, physical transport, SI alpha, or Full Topic 13 closure."
+  }
+}

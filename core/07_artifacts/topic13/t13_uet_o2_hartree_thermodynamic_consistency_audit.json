@@ -1,0 +1,188 @@
+{
+  "schema_version": "t13-uet-o2-hartree-equilibrium-thermodynamics-v1",
+  "artifact": "t13_uet_o2_hartree_thermodynamic_consistency_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_ACTION_DERIVED_HARTREE_EQUILIBRIUM_THERMODYNAMICS",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_HARTREE_EQUILIBRIUM_THERMODYNAMIC_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "stationary thermal 2PI/Hartree functional on the homogeneous normal branch",
+      "pressure, charge, entropy, and energy identities from one equilibrium functional",
+      "Maxwell relation and stationary pressure derivative checks",
+      "quadrature/cutoff convergence and positive equilibrium finite-difference stability witnesses"
+    ],
+    "equation_or_mapping": {
+      "one_loop_pressure": "p_1(T,mu;M)=T integral[L(E-Mu)+L(E+mu)] d^3k/(2*pi)^3",
+      "hartree_2pi_functional": "Omega_H=Omega_1+(m_eff^2-M^2)I_T+(N+2)*lambda*I_T^2/2",
+      "stationary_pressure": "p_H=p_1+(N+2)*lambda*I_T^2/2 at M^2=m_eff^2+(N+2)*lambda*I_T",
+      "charge": "n_H=(partial p_H/partial mu)_stationary=n_1",
+      "entropy": "s_H=(partial p_H/partial T)_stationary=s_1",
+      "energy": "epsilon_H=-p_H+T*s_H+mu*n_H",
+      "stability_checks": "chi_1=(partial n_1/partial mu)_M>=0 and c_mu,1=T*(partial s_1/partial T)_M>=0; stationary equilibrium susceptibility and heat capacity are checked by finite differences"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "pressure_energy_density": "natural energy density",
+      "charge_density": "natural charge density",
+      "entropy_density": "natural entropy density",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived stationary thermal 2PI/Hartree functional on the homogeneous normal branch; vacuum piece excluded",
+    "observable": "natural-unit equilibrium pressure, charge, entropy, and energy on the Hartree normal branch",
+    "data_role": "ACTION_DERIVED_EQUILIBRIUM_INTERNAL_NO_EXTERNAL_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py",
+        "sha256": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+        "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_eos.py",
+        "sha256": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_HARTREE_EQUILIBRIUM_THERMODYNAMICS",
+    "open_blockers": [
+      "vacuum_counterterm_and_unique_microscopic_finite_temperature_scheme_matching_missing",
+      "condensate_and_normal_two_fluid_completion_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "SK_KMS_physical_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "equilibrium Hartree thermodynamic-consistency lane only; no full EOS/transport/KMS/entropy, Topic 13, Core, Gravity, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only equilibrium thermodynamic consistency of the declared natural-unit O(2) Hartree normal branch. It is not a unique microscopic finite-temperature theory, a condensate/two-fluid EOS, a physical Kubo or SK/KMS match, an entropy-current transport closure, an SI Phi map, an alpha_Phi_K calibration, TTG validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "phi_response": 0.2,
+    "base_mass_sq": 0.494,
+    "dressed_mass_sq": 0.5008399405508752,
+    "thermal_tadpole": 0.002137481422259504,
+    "one_loop_pressure": 0.0018282021037229683,
+    "double_bubble_pressure": 7.310122928807219e-06,
+    "pressure": 0.0018355122266517756,
+    "charge_density": 0.0028625917243938924,
+    "entropy_density": 0.02537532059119812,
+    "energy_density": 0.007618368325146344,
+    "charge_susceptibility_fixed_mass": 0.01626167616627853,
+    "heat_capacity_fixed_mass": 0.09212403348080983,
+    "gap_residual": -3.551898358766792e-13,
+    "pressure_stationarity_residual": 1.3672708407201737e-15
+  },
+  "finite_difference_checks": {
+    "entropy_from_pressure": 0.025375323534751512,
+    "entropy_density": 0.02537532059119812,
+    "entropy_pressure_abs_error": 2.9435533906163602e-09,
+    "charge_from_pressure": 0.0028625917730001373,
+    "charge_density": 0.0028625917243938924,
+    "charge_pressure_abs_error": 4.8606244897053674e-11,
+    "entropy_mu_fd": 0.025555537058481043,
+    "charge_temperature_fd": 0.02555553690258795,
+    "maxwell_abs_error": 1.5589309357300074e-10,
+    "charge_susceptibility_finite_difference": 0.01621865817141334,
+    "heat_capacity_finite_difference": 0.09163039645550956,
+    "energy_identity": 0.007618368325146344,
+    "energy_identity_abs_error": 0.0
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 40.0,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_tadpole": 0.002137481422259501,
+      "one_loop_pressure": 0.0018282021037227302,
+      "double_bubble_pressure": 7.3101229288071985e-06,
+      "pressure": 0.0018355122266515375,
+      "charge_density": 0.002862591724393894,
+      "entropy_density": 0.0253753205911975,
+      "energy_density": 0.007618368325146366,
+      "gap_residual": -3.551802948975613e-13,
+      "pressure_stationarity_residual": 1.3672341135922414e-15
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 55.0,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_tadpole": 0.0021374814222595117,
+      "one_loop_pressure": 0.001828202103722913,
+      "double_bubble_pressure": 7.310122928807272e-06,
+      "pressure": 0.0018355122266517203,
+      "charge_density": 0.002862591724393896,
+      "entropy_density": 0.025375320591197948,
+      "energy_density": 0.00761836832514634,
+      "gap_residual": -3.5521498936708085e-13,
+      "pressure_stationarity_residual": 1.3673676667847112e-15
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 70.0,
+      "dressed_mass_sq": 0.5008399405508752,
+      "thermal_tadpole": 0.002137481422259504,
+      "one_loop_pressure": 0.0018282021037229683,
+      "double_bubble_pressure": 7.310122928807219e-06,
+      "pressure": 0.0018355122266517756,
+      "charge_density": 0.0028625917243938924,
+      "entropy_density": 0.02537532059119812,
+      "energy_density": 0.007618368325146344,
+      "gap_residual": -3.551898358766792e-13,
+      "pressure_stationarity_residual": 1.3672708407201737e-15
+    }
+  ],
+  "convergence_relative_errors": {
+    "dressed_mass_sq": 0.0,
+    "thermal_tadpole": 3.652081164590306e-15,
+    "pressure": 3.012473030355406e-14,
+    "charge_density": 1.2119950331681384e-15,
+    "entropy_density": 6.836262303533326e-15,
+    "energy_density": 5.69256893976534e-16
+  },
+  "checks": {
+    "gap_residual_is_closed": true,
+    "pressure_stationarity_is_closed": true,
+    "pressure_entropy_identity_passes": true,
+    "pressure_charge_identity_passes": true,
+    "maxwell_relation_passes": true,
+    "energy_identity_passes": true,
+    "equilibrium_charge_susceptibility_is_positive": true,
+    "equilibrium_heat_capacity_is_positive": true,
+    "fixed_mass_charge_susceptibility_is_positive": true,
+    "fixed_mass_heat_capacity_is_positive": true,
+    "double_bubble_pressure_is_non_negative": true,
+    "normal_branch_is_selected": true,
+    "dressed_mass_converges": true,
+    "pressure_converges": true,
+    "entropy_converges": true,
+    "all_reference_values_finite": true,
+    "natural_units_are_declared": true,
+    "stationary_functional_is_declared": true,
+    "entropy_is_equilibrium_only": true,
+    "physical_transport_is_excluded": true,
+    "alpha_is_not_emitted": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_derived_only": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471",
+    "docs/core/uet_o2_finite_temperature_self_energy.py": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b",
+    "docs/core/uet_o2_finite_density_eos.py": "ea744a8645f993600300fa9fd99a764e1f07b30fb272b47399c34aa114152c6d"
+  },
+  "controlling_blocker": "vacuum_counterterm_and_unique_microscopic_finite_temperature_scheme_matching_missing",
+  "next_controller": "Close the named finite-temperature renormalization scheme and then match physical SK/KMS/Kubo and dimensional Phi interfaces; keep the equilibrium Hartree lane separate from physical transport and alpha calibration.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

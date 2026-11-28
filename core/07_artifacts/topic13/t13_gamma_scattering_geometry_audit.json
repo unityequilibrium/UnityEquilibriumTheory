@@ -1,0 +1,156 @@
+{
+  "major_result_id": "T13_GAMMA_SCATTERING_GEOMETRY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": [
+    "Pair-resolved ideal Gamma geometry evaluated at six basal reciprocal vectors"
+  ],
+  "equation_registry_ids": [
+    "uet.diagnostic.gamma_one_phonon_geometry"
+  ],
+  "equation_or_mapping": "S_pair(Q)=sum_j_in_pair |sum_s exp(i Q.r_s) Q.e_sj/sqrt(m_s)|^2",
+  "units": {
+    "Q": "angstrom^-1",
+    "r": "angstrom",
+    "mass": "atomic mass unit",
+    "S": "angstrom^-2/atomic mass unit"
+  },
+  "derivation_class": "IMPORTED_KINEMATIC_GEOMETRY_WITH_DECLARED_PHASE_CONVENTION",
+  "observable": "geometric part of one-phonon structure factor, not detector counts",
+  "data_role": "SOURCE_MODEL_DIAGNOSTIC",
+  "verification_status": "GEOMETRY_ONLY_INVERSION_OPEN",
+  "rows": [
+    {
+      "hkl": [
+        1,
+        0,
+        0
+      ],
+      "q_inverse_angstrom": [
+        2.5542292825595205,
+        1.4746849638577637,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        0.5429756196219051,
+        0.5434035635871329
+      ]
+    },
+    {
+      "hkl": [
+        0,
+        1,
+        0
+      ],
+      "q_inverse_angstrom": [
+        -1.5973523859114102e-15,
+        2.94936992771553,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        0.542975619621937,
+        0.5434035635871649
+      ]
+    },
+    {
+      "hkl": [
+        1,
+        1,
+        0
+      ],
+      "q_inverse_angstrom": [
+        2.5542292825595188,
+        4.424054891573293,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        3.5239746040109774e-24,
+        5.377258962690423e-27
+      ]
+    },
+    {
+      "hkl": [
+        2,
+        0,
+        0
+      ],
+      "q_inverse_angstrom": [
+        5.108458565119041,
+        2.9493699277155274,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        2.1719024784877443,
+        2.173614254348656
+      ]
+    },
+    {
+      "hkl": [
+        2,
+        1,
+        0
+      ],
+      "q_inverse_angstrom": [
+        5.108458565119039,
+        5.8987398554310575,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        3.8008293373531212,
+        3.8038249451097133
+      ]
+    },
+    {
+      "hkl": [
+        3,
+        0,
+        0
+      ],
+      "q_inverse_angstrom": [
+        7.662687847678562,
+        4.424054891573292,
+        0.0
+      ],
+      "pair_geometry_weights": [
+        1.5750139004427241e-24,
+        1.6212669366122717e-26
+      ]
+    }
+  ],
+  "column_norms": [
+    4.444446993131203,
+    4.447949865453184
+  ],
+  "column_normalized_singular_values": [
+    1.414213562373095,
+    2.2548736224414674e-16
+  ],
+  "assumptions": [
+    "Gamma eigenvectors in atom basis; explicit position phase",
+    "common carbon form factor factored out",
+    "equal site Debye-Waller factors factored out",
+    "equal occupation within each degenerate pair for scalar use",
+    "kinematic single-phonon approximation",
+    "no finite-q, resolution, elastic peak or detector model"
+  ],
+  "open_blockers": [
+    "actual finite-q gauge and scattering model",
+    "Bragg separation and covariance",
+    "independent Phi coupling"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "dependency_unlocked": [
+    "finite-q forward-model design only"
+  ],
+  "evidence_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8",
+    "docs/scripts/audit/audit_topic13_gamma_scattering_geometry.py": "dd9ce90046958c1ec4e8fe3c4974d7f1628ec15b9b7c03bbd9ba8d7e8a6c5cca",
+    "docs/core/artifacts/t13_mp48_e2g_multiplicity_audit.json": "99d64447f1f333ffb54880ae0236dea3dc5c7bd2e792e4d2cf4601ab6360c2b7",
+    "docs/core/test/test_topic13_gamma_scattering_geometry.py": "e8a4e296246bf8c6c2c0e97aca2a130a7322898caf538473ade7aa0c84377298",
+    "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604",
+    "docs/core/artifacts/uet_equation_correspondence_registry_topic13_gamma_geometry_addendum.json": "d5406dcb44a1891f58991e43e40a60962855ee3280396512028690b48bf9619a"
+  },
+  "claim_boundary": "Gamma ideal geometry only; no population inversion or experimental identifiability proof. Original grouping uncertainty retained upstream."
+}

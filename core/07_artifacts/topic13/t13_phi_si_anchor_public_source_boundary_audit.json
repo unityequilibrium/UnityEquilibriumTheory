@@ -1,0 +1,115 @@
+{
+  "schema_version": "t13-phi-si-anchor-public-source-boundary-v1",
+  "artifact": "t13_phi_si_anchor_public_source_boundary_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
+  "major_result": {
+    "major_result_id": "T13_PHI_SI_ANCHOR_PUBLIC_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the official Ding 2022 public route is bounded to article, supplementary, and figure-derived material; no public paired base-Phi amplitude and SI thermal-response record is present in the captured package",
+      "the corresponding-author route is specified but has not been executed, so author-held numeric payload is not treated as received evidence",
+      "the current normalized candidate and covariant natural-unit action retain a field/energy rescaling freedom, so neither route identifies a numeric e0 or alpha_Phi_K",
+      "named Phi_E and standard c_v mappings remain separate from the base UET Phi lane"
+    ],
+    "equation_or_mapping": {
+      "base_bridge": "Phi_E = s_material * Phi_base; alpha_Phi_K = (e0 / c_v) * s_material",
+      "energy_branch": "Phi_E = Delta_u / e0; Delta_Tq = (e0 / c_v) * Phi_E",
+      "measurement": "Delta_Tq = alpha_Phi_K * Delta_Phi_base",
+      "identifiability_witness": "Delta_Phi' = s * Delta_Phi; alpha_Phi_K' = alpha_Phi_K / s"
+    },
+    "units": {
+      "base_Phi": "dimensionless normalized response coordinate",
+      "Phi_E": "dimensionless named energy-response coordinate",
+      "e0": "J m^-3; not source-locked",
+      "c_v": "J m^-3 K^-1; source-dependent",
+      "Delta_Tq": "K",
+      "alpha_Phi_K": "K per normalized base Phi; no numeric value identified"
+    },
+    "derivation_class": "official-source availability audit plus scoped normalization identifiability boundary; no numeric calibration",
+    "observable": "paired base-Phi amplitude and SI energy/thermal-response amplitude in one declared material state",
+    "data_role": "SOURCE_AVAILABILITY_BOUNDARY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "5afc8eb41d78e6a23d343954cab18e284e8f53b3c7bbc149a0bf9f5bc55038bf"
+      },
+      {
+        "path": "docs/core/artifacts/t13_ding_pbte_author_request_audit.json",
+        "sha256": "66679f962d0725455c73bfbc856f6c5722b039a3c15b16d4620081d89b4b892a"
+      },
+      {
+        "path": "docs/core/artifacts/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "31d4405dc3abaa85f71022cf51ca1b23a299ba99ea03fff8a09a6701dbba1dd2"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_field_normalization_identifiability_no_go.json",
+        "sha256": "5f41afcdb62b7794c35755eecd9e91d3b39ecb432130a74878e2f2b40c1627b9"
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020"
+      },
+      {
+        "path": "docs/core/artifacts/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "a51c9ab63e4e976b04a032037608d59441192cbd8066ccc9bd490f7336527a15"
+      }
+    ],
+    "verification_status": "PASS_PUBLIC_SOURCE_BOUNDARY_NO_PAIRED_BASE_PHI_RECORD",
+    "open_blockers": [
+      "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "base_Phi_to_Phi_E_mapping_not_derived",
+      "e0_and_c_v_source_package_with_uncertainty_not_locked_for_base_calibration",
+      "author_data_or_independent_reproduction_payload_not_received"
+    ],
+    "dependency_unlocked": "public-source and normalization boundary only; no e0, alpha_Phi_K, Full Topic 13, Core, Gravity, or transport unlock",
+    "claim_boundary": "This closes an availability/identifiability lane only. It does not prove that author-held or future independently measured data are impossible, and it emits no e0, alpha_Phi_K, temperature prediction, fit, or external validation."
+  },
+  "source_availability": {
+    "source_identity": "Ding et al., Observation of second sound in graphite over 200 K",
+    "doi": "10.1038/s41467-021-27907-z",
+    "official_article_url": "https://www.nature.com/articles/s41467-021-27907-z",
+    "data_availability_locator": "Nature Communications article, Data availability paragraph",
+    "reported_data_availability": "supporting data are available from the corresponding author on reasonable request",
+    "public_package_boundary": "captured PMC OA objects contain article figures and supplementary/reporting PDFs but no deposited mode-resolved PBTE rows, force-constant/scattering payload, or paired base-Phi/SI calibration record",
+    "figure_route": "permitted figure-derived normalized TTG comparison only; calibration use remains prohibited",
+    "author_request_state": "REQUEST_PACKAGE_READY_NOT_SENT",
+    "public_numeric_paired_record_present": false,
+    "numeric_C_src_present": false,
+    "numeric_e0_present": false,
+    "numeric_alpha_Phi_K_present": false
+  },
+  "normalization_boundary": {
+    "current_action_unit_lane": "natural units only",
+    "field_rescaling_preserves_current_evidence": true,
+    "energy_density_scale_is_source_locked": false,
+    "base_Phi_to_Phi_E_map_is_derived": false,
+    "named_Phi_E_is_base_Phi": false,
+    "material_c_v_alone_identifies_base_Phi_scale": false,
+    "future_admissible_routes": [
+      "authorized paired base-Phi/SI response record with independent provenance",
+      "declared dimensionful UET action/free-energy origin with coefficient provenance and SI contract",
+      "independent measurement protocol that records base-Phi amplitude and SI response in the same state"
+    ]
+  },
+  "checks": {
+    "official_article_locator_present": true,
+    "official_data_availability_statement_captured": true,
+    "oa_numeric_input_no_go_present": true,
+    "author_request_manifest_present": true,
+    "author_request_not_claimed_sent": true,
+    "paired_base_phi_si_record_absent": true,
+    "normalized_candidate_search_has_zero_eligible_records": true,
+    "covariant_action_identifiability_no_go_present": true,
+    "named_phi_e_not_relabelled_as_base_phi": true,
+    "numeric_e0_not_emitted": true,
+    "numeric_alpha_Phi_K_not_emitted": true,
+    "target_fit_performed": false,
+    "xie_2026_accessed": false,
+    "holdout_used_for_calibration": false
+  },
+  "controlling_blocker": "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+  "next_controller": "Obtain an authorized paired base-Phi/SI record or derive a coefficient-provenance-backed action-to-SI map; then rerun the independent alpha audit before any calibration or prediction.",
+  "claim_boundary": "Public-source boundary and scoped identifiability result only. No current package supplies the independent base-Phi amplitude and SI observable pair required for alpha_Phi_K, and no holdout or synthetic replacement is used."
+}

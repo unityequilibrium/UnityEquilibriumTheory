@@ -1,0 +1,199 @@
+{
+  "schema_version": "t13-uet-o2-condensed-relative-flow-kubo-admission-v1",
+  "artifact": "t13_uet_o2_condensed_relative_flow_kubo_admission_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSED_RELATIVE_FLOW_KUBO_ADMISSION_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the declared coefficient record contains the transport-contract fields",
+      "the zero-frequency retarded coefficient is matched to the loop-renormalized relative-flow response",
+      "state, correlator formula, source hash, evidence status, and numerical uncertainty are explicit",
+      "admission remains scoped to one natural-unit condensed contact channel"
+    ],
+    "equation_or_mapping": {
+      "retarded_correlator": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "zero_frequency_coefficient": "K_rel^natural=lim_(omega->0) Re G_R^rel(omega)=D_rel/Gamma_rel",
+      "uncertainty": "u(K_rel)=K_rel*max(r_radial,r_angular,r_scale)"
+    },
+    "units": {
+      "coefficient": "natural-unit relative-flow response coefficient; not SI conductivity",
+      "temperature_chemical_potential": "natural energy",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived loop-renormalized condensed contact channel matched to its declared retarded response at one state",
+    "observable": "state-matched zero-frequency relative-flow Kubo coefficient in natural units",
+    "data_role": "DERIVED_ACTION_KUBO_MATCHED_DECLARED_CHANNEL",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensed_relative_flow_kubo_admission.py",
+        "sha256": "92dea65cf85d2fc2054e4f5c0b293712d2ea0b8b0df65ffa5e4b95de9dd2df67"
+      },
+      {
+        "path": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+        "sha256": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc"
+      },
+      {
+        "path": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+        "sha256": "ae143f9bd06738ae777415b46d39752c8fbb4a96b17f31de94eac3e563a7be44"
+      }
+    ],
+    "verification_status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
+    "open_blockers": [
+      "independent_physical_condensed_vertex_anchor_missing",
+      "complete_condensed_1PI_vertex_and_scattering_channels_missing",
+      "full_interacting_SK_KMS_match_missing",
+      "complete_two_fluid_constitutive_tensor_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "state-matched Kubo admission for one declared condensed relative-flow natural-unit channel only; full physical transport, SI, complete SK/KMS, Core, Gravity, alpha, and external-validation dependencies remain blocked",
+    "claim_boundary": "This closes Kubo admission for one declared action-derived condensed relative-flow contact channel in natural units. It does not claim an external measurement, a complete interacting transport theory, an SI coefficient, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
+    "equations": {
+      "retarded_correlator": "G_R^rel(omega)=2*D_rel/(2*Gamma_rel-i*omega)",
+      "zero_frequency_coefficient": "K_rel^natural=lim_(omega->0) Re G_R^rel(omega)=D_rel/Gamma_rel",
+      "uncertainty": "u(K_rel)=K_rel*max(r_radial,r_angular,r_scale)"
+    },
+    "required_coefficient_fields": [
+      "coefficient_name",
+      "value",
+      "units",
+      "hydrodynamic_frame",
+      "temperature",
+      "chemical_potential",
+      "space_response",
+      "correlator_formula_id",
+      "source_path_or_url",
+      "source_hash",
+      "evidence_status",
+      "uncertainty",
+      "uncertainty_scope"
+    ],
+    "accepted_evidence_statuses": [
+      "KUBO_MATCHED",
+      "SOURCE_LOCKED",
+      "EXTERNALLY_MATCHED"
+    ],
+    "unit_contract": {
+      "coefficient": "natural-unit relative-flow response coefficient; not SI conductivity",
+      "temperature_chemical_potential": "natural energy",
+      "Phi": "effective response variable; not temperature or metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "action-derived loop-renormalized condensed contact channel matched to its declared retarded response at one state",
+    "observable": "state-matched zero-frequency relative-flow Kubo coefficient in natural units",
+    "data_role": "DERIVED_ACTION_KUBO_MATCHED_DECLARED_CHANNEL",
+    "scope": "declared condensed relative-flow contact channel only",
+    "excluded": [
+      "complete condensed 1PI vertex and all scattering channels",
+      "full interacting SK/KMS action matching",
+      "SI transport coefficient",
+      "independent physical vertex anchor",
+      "alpha_Phi_K calibration",
+      "TTG validation",
+      "Full Topic 13 closure"
+    ],
+    "claim_boundary": "This closes Kubo admission for one declared action-derived condensed relative-flow contact channel in natural units. It does not claim an external measurement, a complete interacting transport theory, an SI coefficient, or Full Topic 13 closure."
+  },
+  "state": {
+    "admission": {
+      "coefficient_name": "K_rel^natural(omega->0)",
+      "value": 2.713283847206443e-05,
+      "units": "natural-unit relative-flow response coefficient; not SI conductivity",
+      "hydrodynamic_frame": "declared condensed relative-flow frame",
+      "temperature": 0.2,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "correlator_formula_id": "uet.o2.thermal.condensed_loop_relative_flow_kubo",
+      "source_path_or_url": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+      "source_hash": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc",
+      "evidence_status": "KUBO_MATCHED",
+      "uncertainty": 3.500054507989025e-06,
+      "uncertainty_scope": "numerical quadrature convergence for the declared action-derived channel only; no external or model-systematic uncertainty is claimed",
+      "state_match": true,
+      "independent_of_target_data": true,
+      "holdout_accessed": false,
+      "parameter_fitting_performed": false,
+      "physical_anchor_supplied": false,
+      "physical_kubo_admission_completed": true,
+      "full_core_unlock": false,
+      "data_role": "DERIVED_ACTION_KUBO_MATCHED_DECLARED_CHANNEL"
+    },
+    "coefficient_record": {
+      "coefficient_name": "K_rel^natural(omega->0)",
+      "value": 2.713283847206443e-05,
+      "units": "natural-unit relative-flow response coefficient; not SI conductivity",
+      "hydrodynamic_frame": "declared condensed relative-flow frame",
+      "temperature": 0.2,
+      "chemical_potential": 1.28,
+      "space_response": 0.15,
+      "correlator_formula_id": "uet.o2.thermal.condensed_loop_relative_flow_kubo",
+      "source_path_or_url": "docs/core/uet_o2_condensed_loop_renormalized_vertex.py",
+      "source_hash": "6384e8bc5553b696c17a079b93fd97df95b8f545475732b2a23f7133f03fe0dc",
+      "evidence_status": "KUBO_MATCHED",
+      "uncertainty": 3.500054507989025e-06,
+      "uncertainty_scope": "numerical quadrature convergence for the declared action-derived channel only; no external or model-systematic uncertainty is claimed",
+      "state_match": true,
+      "independent_of_target_data": true,
+      "holdout_accessed": false,
+      "parameter_fitting_performed": false,
+      "physical_anchor_supplied": false,
+      "physical_kubo_admission_completed": true,
+      "full_core_unlock": false,
+      "data_role": "DERIVED_ACTION_KUBO_MATCHED_DECLARED_CHANNEL"
+    }
+  },
+  "checks": {
+    "admission_status_is_kubo_matched": true,
+    "all_required_fields_are_present": true,
+    "accepted_evidence_status_is_declared": true,
+    "coefficient_is_positive_and_finite": true,
+    "units_are_explicitly_natural_not_si": true,
+    "state_match_is_explicit": true,
+    "correlator_formula_is_registry_id": true,
+    "source_hash_matches_loop_module": true,
+    "uncertainty_is_finite_and_within_unchanged_threshold": true,
+    "uncertainty_scope_is_narrow": true,
+    "target_and_holdout_are_independent": true,
+    "holdout_is_unread": true,
+    "no_parameter_fitting": true,
+    "physical_kubo_admission_completed": true,
+    "full_core_unlock_remains_false": true,
+    "registry_contains_correlator_id": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_is_derived": true,
+    "R_obs_is_separate": true
+  },
+  "failed_checks": [],
+  "physical_kubo_coefficient_emitted": true,
+  "physical_kubo_admission_completed": true,
+  "physical_kubo_admission_scope": "declared condensed relative-flow contact channel only",
+  "physical_anchor_supplied": false,
+  "full_core_unlock": false,
+  "numeric_alpha_phi_k_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "independent_physical_condensed_vertex_anchor_missing",
+  "next_controller": "source-lock an independent physical condensed vertex anchor or complete the full interacting SK/KMS and all-channel match; retain the admitted coefficient as natural-unit lane evidence and do not promote it to SI or Full Topic 13",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false,
+    "used_for_threshold_adjustment": false
+  }
+}

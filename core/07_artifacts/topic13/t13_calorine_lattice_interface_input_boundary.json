@@ -1,0 +1,181 @@
+{
+  "schema_version": "t13-calorine-lattice-interface-input-boundary-v1",
+  "major_result_id": "T13_CALORINE_LATTICE_INTERFACE_INPUT_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "SOURCE_INTERFACE_BOUNDARY_READY",
+  "verification_status": "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY",
+  "what_is_closed": [
+    "The public checkout retains the source summary's locked HDF5 path, SHA-256, size, units, and comparator-field declaration.",
+    "The raw Calorine HDF5 is intentionally not committed here; no numeric mode arrays are fabricated or treated as locally verified.",
+    "The full-LBTE stability warning, absent collision decomposition, and no-fit/no-holdout boundary remain explicit from committed metadata."
+  ],
+  "equation_registry_ids": [
+    "standard.graphite.pbte.calorine_lattice_interface_input_boundary"
+  ],
+  "registration_status": "EXTERNAL_COMPARATOR_INPUT_NOT_UET_EQUATION",
+  "equation_or_mapping": {
+    "admitted_source": "S_T may be constructed as a comparator from omega_qnu, v_qnu, c_qnu and q weights",
+    "total_rta_width": "gamma_total(q,nu,T) is an archived total RTA linewidth",
+    "prohibited_substitution": "gamma_total != gamma_R_Umklapp unless Normal/resistive decomposition or a full admissible collision operator is supplied",
+    "required_operator": "C_ph=C_N+C_R with C_N|P_crystal>=0 and positive entropy production"
+  },
+  "ontology": {
+    "phonon_modes": "external material-sector quasiparticles",
+    "C": "unchanged and not mode heat capacity or collision matrix",
+    "Phi": "unchanged and not phonon displacement or temperature",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "source_SI_and_phono3py_internal_comparator",
+  "units": {
+    "frequency": "THz in source output",
+    "group_velocity": "phono3py source output convention",
+    "heat_capacity": "eV K^-1 per mode per primitive cell",
+    "gamma_total": "phono3py linewidth convention; not promoted to SI resistive rate",
+    "mode_kappa": "source contribution to W m^-1 K^-1 aggregate"
+  },
+  "derivation_class": "external_source_schema_and_transport_role_audit",
+  "observable": "Available PBTE comparator fields and missing collision decomposition, not UET conductivity",
+  "data_role": "EXTERNAL_CANDIDATE_REPRODUCTION_NOT_CALIBRATION_NOT_HOLDOUT",
+  "witness": {
+    "input_mode": "METADATA_ONLY_PUBLIC_BOUNDARY",
+    "raw_payload_available": false,
+    "summary_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json",
+    "kappa_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5",
+    "kappa_size_bytes": null,
+    "kappa_sha256": null,
+    "expected_kappa_size_bytes": 242650,
+    "expected_kappa_sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+    "available_keys": [],
+    "required_comparator_keys": [
+      "frequency",
+      "gamma",
+      "group_velocity",
+      "heat_capacity",
+      "mode_kappa",
+      "qpoint",
+      "temperature",
+      "weight"
+    ],
+    "field_rows": {},
+    "hdf5_file_count_scanned": 0,
+    "collision_structure_matches": {},
+    "collision_eigenvalue_files": [],
+    "normal_umklapp_decomposition_available": false,
+    "collision_matrix_available": false,
+    "collision_eigenvectors_available": false,
+    "full_lbte_status": "WARN_FULL_LBTE_NUMERICAL_STABILITY_OPEN",
+    "full_lbte_open_blockers": [
+      "full_lbte_collision_spectrum_positive_semidefinite_missing",
+      "full_lbte_mesh_convergence_missing",
+      "calorine_route_material_regime_mapping_to_ding_missing",
+      "calorine_route_source_grade_uncertainty_missing",
+      "alpha_Phi_K_independent_calibration_missing"
+    ],
+    "material_state": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/calorine_zenodo_21198312/graphite-prim.xyz",
+    "transport_solver": "RTA",
+    "holdout_accessed": false,
+    "fit_performed": false
+  },
+  "checks": {
+    "kappa_binary_identity_or_public_metadata_locked": true,
+    "kappa_binary_size_or_public_metadata_locked": true,
+    "required_comparator_fields_present_or_public_boundary_declared": true,
+    "required_comparator_fields_finite_or_payload_not_public": true,
+    "total_gamma_nonnegative_or_payload_not_public": true,
+    "normal_umklapp_split_absent": true,
+    "collision_matrix_absent": true,
+    "collision_eigenvectors_absent": true,
+    "full_lbte_stability_warning_preserved": true,
+    "no_fit_or_holdout": true,
+    "raw_payload_not_synthesized": true
+  },
+  "open_blockers": [
+    "normal_vs_umklapp_resolved_collision_input_missing",
+    "admissible_positive_full_collision_matrix_and_eigenvectors_missing",
+    "calorine_to_ding_material_state_mapping_missing",
+    "source_grade_transport_uncertainty_missing",
+    "uet_to_phonon_energy_current_coupling_missing",
+    "independent_alpha_Phi_K_missing"
+  ],
+  "controlling_blocker": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+  "source_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m12x12x6_summary.json": "946826b6bc0fc295c8c190b0e15442f758ff78786a1ba49c6815b36eb1d06096",
+    "docs/core/07_artifacts/topic13/t13_calorine_full_lbte_stability_boundary_audit.json": "ef130d620eddd3697ceb93f83de9bddda6313c6def57159a9acbc508ac0ca910",
+    "docs/scripts/audit/audit_topic13_calorine_lattice_interface_inputs.py": "eecfc7a0f9f8fefc17af1670b216c60e299b2893453973694a5f8ac46a1d5dd5",
+    "docs/core/05_tests/regression/root/test_topic13_calorine_lattice_interface_inputs.py": "a15217d3b22ed031193efd4105841a0e7084cf73aa9d6e9804e5512b12257c4c"
+  },
+  "locked_source_declarations": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/reproduction/t13_calorine_pbte/mesh_12x12x6/kappa-m12126.hdf5": {
+      "exists": false,
+      "sha256": "f4d2dace656514abe3abfe53d29679de91f7a9a94edd2b70adb29f8456037909",
+      "size_bytes": 242650,
+      "hash_verified": false,
+      "status": "METADATA_ONLY_PUBLIC_BOUNDARY"
+    }
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_lattice_momentum_relaxing_heat_parent_audit.json",
+      "sha256": "904c32edff8831e2dbeefe57b5d32777d05020ad7269599c207d562439a8d0e1"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_continuum_action_umklapp_direct_route_no_go.json",
+      "sha256": "f91aa3ae8f61f1a667b749c0540ef73c9ae968a33938a1a8a83bda25a4de3f87"
+    }
+  ],
+  "dependency_unlocked": [
+    "source_backed_material_mode_source_interface_comparator",
+    "normal_umklapp_decomposition_acquisition_or_reproduction_gate"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Source-backed Calorine comparator input boundary only. Total RTA gamma is not an accepted resistive Umklapp rate; no UET coupling, physical collision operator, Ding equivalence, TTG prediction, external validation or Full Topic 13 closure is claimed.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "The public checkout retains the source summary's locked HDF5 path, SHA-256, size, units, and comparator-field declaration.",
+      "The raw Calorine HDF5 is intentionally not committed here; no numeric mode arrays are fabricated or treated as locally verified.",
+      "The full-LBTE stability warning, absent collision decomposition, and no-fit/no-holdout boundary remain explicit from committed metadata."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "normal_vs_umklapp_resolved_collision_input_missing",
+      "admissible_positive_full_collision_matrix_and_eigenvectors_missing",
+      "calorine_to_ding_material_state_mapping_missing",
+      "source_grade_transport_uncertainty_missing",
+      "uet_to_phonon_energy_current_coupling_missing",
+      "independent_alpha_Phi_K_missing"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "source_backed_material_mode_source_interface_comparator",
+      "normal_umklapp_decomposition_acquisition_or_reproduction_gate"
+    ],
+    "STATUS": "PASS_METADATA_ONLY_CALORINE_LATTICE_INTERFACE_BOUNDARY",
+    "WHAT_CHANGED": "Audited the actual local PBTE binary schemas against the material-lattice interface instead of assuming that an archived gamma array supplies Umklapp.",
+    "EQUATION_OR_MAPPING": {
+      "admitted_source": "S_T may be constructed as a comparator from omega_qnu, v_qnu, c_qnu and q weights",
+      "total_rta_width": "gamma_total(q,nu,T) is an archived total RTA linewidth",
+      "prohibited_substitution": "gamma_total != gamma_R_Umklapp unless Normal/resistive decomposition or a full admissible collision operator is supplied",
+      "required_operator": "C_ph=C_N+C_R with C_N|P_crystal>=0 and positive entropy production"
+    },
+    "VERIFICATION": {
+      "kappa_binary_identity_or_public_metadata_locked": true,
+      "kappa_binary_size_or_public_metadata_locked": true,
+      "required_comparator_fields_present_or_public_boundary_declared": true,
+      "required_comparator_fields_finite_or_payload_not_public": true,
+      "total_gamma_nonnegative_or_payload_not_public": true,
+      "normal_umklapp_split_absent": true,
+      "collision_matrix_absent": true,
+      "collision_eigenvectors_absent": true,
+      "full_lbte_stability_warning_preserved": true,
+      "no_fit_or_holdout": true,
+      "raw_payload_not_synthesized": true
+    },
+    "CONTROLLING_BLOCKER": "normal_umklapp_split_or_admissible_full_collision_operator_missing",
+    "NEXT_ACTION": "Acquire or reproduce Normal/Umklapp-resolved rates or a positive full collision matrix with eigenvectors; use existing mode arrays only as a comparator source interface.",
+    "CLAIM_BOUNDARY": "Source-backed Calorine comparator input boundary only. Total RTA gamma is not an accepted resistive Umklapp rate; no UET coupling, physical collision operator, Ding equivalence, TTG prediction, external validation or Full Topic 13 closure is claimed."
+  }
+}

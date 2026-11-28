@@ -1,0 +1,559 @@
+{
+  "schema_version": "t13-kinetic-canonical-action-match-v1",
+  "major_result_id": "T13_KINETIC_CANONICAL_REPAIR_AND_ACTION_MATCH_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS_REPAIR_WITH_OPEN_ACTION_MATCH",
+  "what_is_closed": [
+    "Canonical normal kinetic input normalization and fixed charge labels.",
+    "Field-redefinition covariance of the declared dilute/Bose-enhanced comparator.",
+    "Independent fourth derivative of the production quartic potential."
+  ],
+  "equation_or_mapping": {
+    "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2; mu_c=mu",
+    "normal_dispersion": "E_s(k)=sqrt(k^2+m_c^2)-s*mu, s in {-1,+1}",
+    "constant_amplitude_cross_section": "sigma_comparator(s)=lambda_c^2/(16*pi*s); channel normalization is not the full action tensor",
+    "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
+    "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
+    "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_c,abs(mu))",
+    "quartic_tensor": "V_c=m_c^2*(x^2+y^2)/2+lambda_c*(x^2+y^2)^2/4; V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)."
+  },
+  "units": {
+    "unit_lane": "natural",
+    "mass_temperature_mu": "energy",
+    "lambda": "dimensionless canonical lambda_c=lambda_action/Z^2 in returned state",
+    "sigma_22": "inverse energy squared",
+    "collision_width": "energy/inverse time",
+    "D": "formal static response weight",
+    "K_kin": "formal kinetic comparator coefficient",
+    "Phi": "effective response variable; not temperature",
+    "C": "collective system-behaviour coordinate; not mass or charge",
+    "R_gen": "derived history trace; no backreaction",
+    "R_obs": "separate observer record"
+  },
+  "derivation_class": "IMPLEMENTATION_REPAIR_AND_PRODUCTION_POTENTIAL_DERIVATIVE",
+  "observable": "natural-unit labeled collision rates and a diagnostic quartic tensor",
+  "data_role": "SYNTHETIC_INTERNAL_NO_CALIBRATION",
+  "source_hashes": {
+    "docs/core/uet_o2_kinetic_collision_kubo.py": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f",
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_o2_one_loop_vertex_uv_boundary.py": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1",
+    "docs/core/uet_o2_contact_sk_transition_vertex_match.py": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa",
+    "docs/core/uet_o2_tree_level_bs_sk_match.py": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5",
+    "docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py": "3f97fe3cbc179d427d4332981932502c7ad7612863a745c3d5c52b28568eabba",
+    "docs/core/test/test_topic13_kinetic_canonical_normalization.py": "f0298f712d37473a33cd5d5e84f3cf7f7237b8dbc447fba204f00f89eabac8bc"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+      "sha256": "fa4d5cf2f8fc549e47392df39bc468ed3addec37ade25a7969f82652911dce6f"
+    },
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_o2_one_loop_vertex_uv_boundary.py",
+      "sha256": "fb47090eed90d4e37bab34516cc0ad0d60300981de91f9322d1513746e11e8e1"
+    },
+    {
+      "path": "docs/core/uet_o2_contact_sk_transition_vertex_match.py",
+      "sha256": "f13f7f9950f85d5cdd4b9cecf4d48ce85d4c3436dbe5f85bdc516bab59ac71fa"
+    },
+    {
+      "path": "docs/core/uet_o2_tree_level_bs_sk_match.py",
+      "sha256": "ef3522ec6e925eee3fd937035829c801325f9e1ec39d5a809d42246f6c5e90c5"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_kinetic_canonical_action_match.py",
+      "sha256": "3f97fe3cbc179d427d4332981932502c7ad7612863a745c3d5c52b28568eabba"
+    },
+    {
+      "path": "docs/core/test/test_topic13_kinetic_canonical_normalization.py",
+      "sha256": "f0298f712d37473a33cd5d5e84f3cf7f7237b8dbc447fba204f00f89eabac8bc"
+    }
+  ],
+  "kinetic_witnesses": {
+    "canonical_covariance_pass": true,
+    "charge_conjugation_pass": true,
+    "covariance_rows": [
+      {
+        "Z": 0.25,
+        "mu": -0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "mu": 0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "mu": -0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "mu": 0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "mu": -0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "mu": 0.2,
+        "outgoing_bose": false,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.901522248492855e-07,
+          3.901522248492855e-07
+        ],
+        "kinetic_comparator": 2616.102545907264,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "mu": -0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.9872461502276647e-07,
+          3.950331347237434e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "mu": 0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.950331347237434e-07,
+          3.987246150227664e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "mu": -0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.9872461502276647e-07,
+          3.950331347237434e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "mu": 0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.950331347237434e-07,
+          3.987246150227664e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "mu": -0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          -0.2,
+          1.0,
+          -0.2,
+          0.5
+        ],
+        "widths": [
+          3.9872461502276647e-07,
+          3.950331347237434e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "mu": 0.2,
+        "outgoing_bose": true,
+        "canonical_inputs": [
+          0.25,
+          0.2,
+          1.0,
+          0.2,
+          0.5
+        ],
+        "widths": [
+          3.950331347237434e-07,
+          3.987246150227664e-07
+        ],
+        "kinetic_comparator": 2563.8508905202925,
+        "pass": true
+      }
+    ],
+    "conjugation_rows": [
+      {
+        "Z": 0.25,
+        "outgoing_bose": false,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "outgoing_bose": false,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "outgoing_bose": false,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      },
+      {
+        "Z": 0.25,
+        "outgoing_bose": true,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      },
+      {
+        "Z": 1.0,
+        "outgoing_bose": true,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      },
+      {
+        "Z": 4.0,
+        "outgoing_bose": true,
+        "positive_mu_drude": [
+          0.00017038797063199625,
+          0.0008502902580876028
+        ],
+        "negative_mu_drude": [
+          0.0008502902580876028,
+          0.00017038797063199625
+        ],
+        "pass": true
+      }
+    ]
+  },
+  "action_vertex_witnesses": {
+    "derivative_verification_pass": true,
+    "legacy_tensor_matches_potential": false,
+    "rows": [
+      {
+        "Z": 0.25,
+        "step": 0.125,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 0.25,
+        "step": 0.25,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 0.25,
+        "step": 0.5,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 1.0,
+        "step": 0.125,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 1.0,
+        "step": 0.25,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 1.0,
+        "step": 0.5,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 4.0,
+        "step": 0.125,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 4.0,
+        "step": 0.25,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      },
+      {
+        "Z": 4.0,
+        "step": 0.5,
+        "lambda_c": 0.5,
+        "potential_d1111": 3.0,
+        "potential_d1122": 1.0,
+        "legacy_tensor_1111": 1.5,
+        "legacy_tensor_1122": 0.5,
+        "charged_all_incoming_contact_magnitude": 1.9999999999999991,
+        "unit_channel_comparator_amplitude": 0.5,
+        "polynomial_derivative_pass": true,
+        "legacy_tensor_matches_potential": false
+      }
+    ],
+    "derivation": "V_c=m_c^2*(x^2+y^2)/2+lambda_c*(x^2+y^2)^2/4; V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc).",
+    "boundary": "Contact polynomial only. Exchange channels, LSZ/phase-space convention, species symmetry factors and complete retarded collision operator are not matched."
+  },
+  "action_matching_status": "BLOCKED_LEGACY_TENSOR_NOT_POTENTIAL_DERIVATIVE",
+  "open_blockers": [
+    "full_action_tensor_channel_and_symmetry_normalization_not_matched",
+    "mixed_normalization_in_remaining_charged_SK_and_vertex_consumers",
+    "downstream_artifact_refresh",
+    "complete_current_condensate_material_transport_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting_performed": false,
+  "xie_2026_accessed": false,
+  "previous_baseline": {
+    "git_revision": "bd55dc487",
+    "regression_before_repair": "11 failed, 6 passed in the new 17-case suite",
+    "changed_domains": "general Z and negative chemical potential; old Z=1, mu>=0 comparator normalization unchanged"
+  },
+  "supersedes": "The known copied kinetic-input normalization finding in t13_fixed_phi_spectrum_repair_audit.json is repaired here; its broader transport blockers remain.",
+  "controlling_blocker": "full_action_tensor_channel_and_symmetry_normalization_not_matched",
+  "next_action": "Derive a named action-normalized species/channel collision operator and reconcile charged SK/vertex consumers before transporting the new normalization into physical claims.",
+  "claim_boundary": "Comparator covariance is repaired, not full microscopic transport. Do not multiply all historical rates by a single guessed factor or reuse formal action-match PASS as proof.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Canonical normal kinetic input normalization and fixed charge labels.",
+      "Field-redefinition covariance of the declared dilute/Bose-enhanced comparator.",
+      "Independent fourth derivative of the production quartic potential."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "full_action_tensor_channel_and_symmetry_normalization_not_matched",
+      "mixed_normalization_in_remaining_charged_SK_and_vertex_consumers",
+      "downstream_artifact_refresh",
+      "complete_current_condensate_material_transport_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_REPAIR_WITH_OPEN_ACTION_MATCH",
+    "WHAT_CHANGED": "Canonical m and lambda; signed mu; independent quartic derivative exposes unresolved action matching.",
+    "EQUATION_OR_MAPPING": {
+      "canonical_field_map": "chi_c=sqrt(Z)*chi; m_c^2=m_eff^2/Z; lambda_c=lambda/Z^2; mu_c=mu",
+      "normal_dispersion": "E_s(k)=sqrt(k^2+m_c^2)-s*mu, s in {-1,+1}",
+      "constant_amplitude_cross_section": "sigma_comparator(s)=lambda_c^2/(16*pi*s); channel normalization is not the full action tensor",
+      "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
+      "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
+      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_c,abs(mu))",
+      "quartic_tensor": "V_c=m_c^2*(x^2+y^2)/2+lambda_c*(x^2+y^2)^2/4; V_abcd=2*lambda_c*(delta_ab*delta_cd+delta_ac*delta_bd+delta_ad*delta_bc)."
+    },
+    "VERIFICATION": {
+      "kinetic_covariance": true,
+      "charge_labels": true,
+      "potential_derivative": true,
+      "legacy_action_match": false
+    },
+    "CONTROLLING_BLOCKER": "full_action_tensor_channel_and_symmetry_normalization_not_matched",
+    "NEXT_ACTION": "Derive a named action-normalized species/channel collision operator and reconcile charged SK/vertex consumers before transporting the new normalization into physical claims.",
+    "CLAIM_BOUNDARY": "Comparator covariance is repaired, not full microscopic transport. Do not multiply all historical rates by a single guessed factor or reuse formal action-match PASS as proof."
+  }
+}

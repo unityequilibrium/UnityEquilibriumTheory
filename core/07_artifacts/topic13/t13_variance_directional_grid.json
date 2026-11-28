@@ -1,0 +1,256 @@
+{
+  "major_result_id": "T13_VARIANCE_DIRECTIONAL_RESOLUTION",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Directional refinement comparison of source harmonic covariance at300K",
+  "equation_or_mapping": "Existing all-mode covariance trace integrated with separate reciprocal-axis mesh sizes",
+  "units": "trace m^2; RMS angstrom",
+  "derivation_class": "harmonic source-model quadrature diagnostic",
+  "observable": "local relative-layer mass-centroid covariance",
+  "data_role": "SOURCE_MODEL_NOT_EXPERIMENT",
+  "temperature_K": 300,
+  "rows": [
+    {
+      "shape": [
+        8,
+        8,
+        8
+      ],
+      "q_count": 512,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.3064237360566752e-29,
+        1.855678042035781e-28,
+        1.816491129410597e-23,
+        2.801497413717419e-23,
+        9.75247253207737e-24
+      ],
+      "total_trace_m2": 5.59325565953991e-23,
+      "rms_angstrom": 0.07478807163939921
+    },
+    {
+      "shape": [
+        16,
+        16,
+        8
+      ],
+      "q_count": 2048,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        2.1859561585027437e-30,
+        2.5531326602100006e-29,
+        9.053066196560903e-24,
+        1.817486401589209e-23,
+        2.704010518585084e-23,
+        9.254331797780777e-24
+      ],
+      "total_trace_m2": 6.352239491336737e-23,
+      "rms_angstrom": 0.0797009378322284
+    },
+    {
+      "shape": [
+        32,
+        32,
+        8
+      ],
+      "q_count": 8192,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        3.345165846938523e-30,
+        4.5068960845945797e-29,
+        1.6940131020245612e-23,
+        1.471179297873415e-23,
+        2.776723292971681e-23,
+        9.427450908075523e-24
+      ],
+      "total_trace_m2": 6.884665625089878e-23,
+      "rms_angstrom": 0.08297388519944017
+    },
+    {
+      "shape": [
+        48,
+        48,
+        8
+      ],
+      "q_count": 18432,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        4.270606527754599e-30,
+        1.3071832112537238e-24,
+        1.6283385275206192e-23,
+        1.564595354753142e-23,
+        2.7826087672985475e-23,
+        9.393568447086504e-24
+      ],
+      "total_trace_m2": 7.045618242466984e-23,
+      "rms_angstrom": 0.08393818107671255
+    },
+    {
+      "shape": [
+        16,
+        16,
+        16
+      ],
+      "q_count": 4096,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        2.8897739003637043e-31,
+        2.9724155810152366e-29,
+        9.053063849259523e-24,
+        1.817486403367915e-23,
+        2.704010516618493e-23,
+        9.254331797780752e-24
+      ],
+      "total_trace_m2": 6.352239486003755e-23,
+      "rms_angstrom": 0.0797009377987722
+    },
+    {
+      "shape": [
+        16,
+        16,
+        32
+      ],
+      "q_count": 8192,
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        3.5242365070362777e-31,
+        2.9957115860927107e-29,
+        9.053063551128715e-24,
+        1.8174864033515597e-23,
+        2.7040105165965007e-23,
+        9.254331797780736e-24
+      ],
+      "total_trace_m2": 6.352239485792957e-23,
+      "rms_angstrom": 0.07970093779744977
+    }
+  ],
+  "comparisons": [
+    {
+      "from_shape": [
+        8,
+        8,
+        8
+      ],
+      "to_shape": [
+        16,
+        16,
+        8
+      ],
+      "relative_trace_change": 0.1356962524146912
+    },
+    {
+      "from_shape": [
+        16,
+        16,
+        8
+      ],
+      "to_shape": [
+        32,
+        32,
+        8
+      ],
+      "relative_trace_change": 0.083817074982653
+    },
+    {
+      "from_shape": [
+        32,
+        32,
+        8
+      ],
+      "to_shape": [
+        48,
+        48,
+        8
+      ],
+      "relative_trace_change": 0.02337842186417083
+    },
+    {
+      "from_shape": [
+        16,
+        16,
+        8
+      ],
+      "to_shape": [
+        16,
+        16,
+        16
+      ],
+      "relative_trace_change": -8.395437678387907e-10
+    },
+    {
+      "from_shape": [
+        16,
+        16,
+        16
+      ],
+      "to_shape": [
+        16,
+        16,
+        32
+      ],
+      "relative_trace_change": -3.3184788250650854e-11
+    }
+  ],
+  "phonopy_version": "4.4.0",
+  "frequency_edges_cm_inverse": [
+    0,
+    10,
+    30,
+    100,
+    300,
+    1000,
+    "infinity"
+  ],
+  "verification_status": "DIRECTIONAL_SEQUENCE_RECORDED",
+  "controlling_blocker": "directional_convergence_and_independent_phase_mapping",
+  "open_blockers": [
+    "no_continuum_error_bound",
+    "physical_mode_mapping",
+    "anharmonicity"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "No dimensional reduction, continuum convergence or physical calibration follows from weak mesh dependence along one direction.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+      "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_variance_directional_grid.py",
+      "sha256": "17f531cbd77989f5a1fafa66ed52cabfbe721442ce71a3bdff75258f1a464ae1"
+    },
+    {
+      "path": "docs/core/test/test_topic13_variance_directional_grid.py",
+      "sha256": "d03bee64689baf660dfb5fd8fbb3991cc3891a97549c449e9938509e76081595"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_thermal_variance_spectrum.py",
+      "sha256": "f1fcf39311af80bfea8b3d71a1b0fd2ca866a2c8637f1d78a442720619d89821"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py",
+      "sha256": "190d1e27620b7379ff253db6e73ce4cde7c1b25c1f547398897fc68a91d42720"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+    },
+    {
+      "path": "docs/core/uet_interlayer_mode_residue.py",
+      "sha256": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+    }
+  ]
+}

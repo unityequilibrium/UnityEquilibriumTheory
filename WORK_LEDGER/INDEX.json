@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1036,
+    "entries": 1037,
     "by_stream": {
       "book-history": 94,
-      "operations": 145,
+      "operations": 146,
       "research": 796,
       "review": 1
     },
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "c3ff0fca67b8cda0d4c74c0b95ac9d610a6546114abf92e65214c1029b938ed9",
-      "entries": 24
+      "sha256": "5347c4d1f26e7ac57801574935b4e1d96f348633583321435b4d6d015e98516d",
+      "entries": 25
     },
     {
       "path": "2026-08-14.md",
@@ -21146,15 +21146,35 @@
       "source": "2026/2026-11-27.md",
       "anchor": "q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
       "start_line": 233,
-      "end_line": 241,
+      "end_line": 242,
       "title": "Q1 He-Ne check: both rules pick the 3.39 um line (no claim)",
-      "entry_sha256": "2e10ebc883d506d92fe06b6a644894e467331243c19a762d3cfc7768ccc51c9b",
+      "entry_sha256": "d5d04e687ea3e34f2b4c6f5552cd213919ba2d3a7f417cb24f581f6c5c3d844c",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed",
+      "start_line": 243,
+      "end_line": 252,
+      "title": "Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed",
+      "entry_sha256": "7c379e49b844e222204251923c9154cceb360551242656c0c8e6167dc603df38",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

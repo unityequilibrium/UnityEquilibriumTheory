@@ -1,0 +1,90 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective coordinate, not charge",
+        "Phi": "effective response, not a particle identity",
+        "R_gen": "excluded derived trace",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "energy": 1,
+        "momentum": 1,
+        "eta": 1,
+        "Gamma": 1
+      },
+      "derivation_class": "analytic_continuation_with_numerical_quadrature",
+      "observable": "Proper RA charged three-point vertex diagnostic, not a Kubo coefficient",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_RETARDED_RA_MIXED_VERTEX",
+      "controlling_blocker": "same_action_current_current_RA_pinch_and_four_point_ladder_kernel_missing",
+      "claim_boundary": "Proper bare+mixed+vacuum RA one-loop vertex in a declared finite-transfer branch only; response-relaxed bath, dressed RA pair, microscopic ladder, Kubo/heat transport, SI, external validation and Full Topic 13 remain open.",
+      "equation_id": "uet.o2.thermal.retarded_ra_mixed_current_vertex",
+      "version": "1",
+      "classification": "numerical_analytic_continuation",
+      "relation_or_code_path": {
+        "RA_prescription": "Im z_current=+2 eta; Im z_in=Im z_out=-eta; energy sum conserved",
+        "mixed_triangle": "G^2 sum_residues D_response(K)D_q(P-K)D_q(P+Q-K)gamma_q with thermal weights frozen before continuation",
+        "Ward": "Q_mu Gamma_RA^mu=q*[D_RA^-1(P+Q)-D_RA^-1(P)]",
+        "transport_boundary": "proper Gamma_RA remains finite; pinch pair arises only after RA external propagators in the current-current/ladder equation"
+      },
+      "standard_physics_counterpart": "Latest-time retarded thermal three-point analytic continuation",
+      "variables": {
+        "Gamma_RA": "proper RA current vertex",
+        "eta": "declared continuation regulator, not fitted width",
+        "q": "O(2) charge, not C"
+      },
+      "mathematical_role": "Proper retarded/advanced three-point kernel",
+      "observable_mapping": "Proper RA charged three-point vertex diagnostic, not a Kubo coefficient",
+      "parameter_dimensions": {
+        "energy": 1,
+        "momentum": 1,
+        "eta": 1,
+        "Gamma": 1
+      },
+      "source_or_origin": "Canonical one-loop diagrams with thermal weights fixed before continuation",
+      "assumptions": {
+        "current_leg": "latest time",
+        "external_imaginary_parts": "(+2,-1,-1)*eta",
+        "scope": "proper mixed plus vacuum and bare"
+      },
+      "symmetry_and_conservation": "Continued O(2) Ward identity",
+      "limiting_cases": [
+        "Matsubara reduction",
+        "finite eta",
+        "proper zero transfer"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_retarded_ra_mixed_current_vertex.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_retarded_ra_mixed_current_vertex.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_DIAGNOSTIC",
+      "proof_status": "CHECKED_DECLARED_RA_PROPER_VERTEX_ONLY",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_retarded_ra_mixed_current_vertex_audit.json",
+          "sha256": "1c9de62464ed8ce7015e1ee42d107de95d3b5ed1b724aec63e8d78d213a2e640"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "proper_RA_vertex_handoff_only",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "response_relaxed_bath_RA_continuation",
+        "same_action_on_shell_residue_LSZ_match",
+        "current_current_RA_pinch_pair_with_finite_width",
+        "microscopic_retarded_four_point_ladder_kernel",
+        "continuum_heat_current_and_SI_mapping"
+      ],
+      "next_hardening_step": "Construct the same-action dressed RA propagator pair and microscopic four-point rung, then test the ladder/kinetic equivalence with an explicit width ledger."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

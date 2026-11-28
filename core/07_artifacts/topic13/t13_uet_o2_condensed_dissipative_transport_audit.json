@@ -1,0 +1,179 @@
+{
+  "schema_version": "t13-uet-o2-condensed-dissipative-transport-v1",
+  "artifact": "t13_uet_o2_condensed_dissipative_transport_audit",
+  "generated_at": "2026-08-15",
+  "status": "PASS_SCOPED_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the declared condensed static lane has zero condensate entropy in its tree-sector state records",
+      "two positive-semidefinite dissipative witnesses are identical on the current static state",
+      "the witnesses separate under a nonzero probe, proving that the current static lane cannot identify a unique dissipative matrix",
+      "a physical condensed transport coefficient requires a relative-flow/collision kernel or state-matched retarded correlator"
+    ],
+    "equation_or_mapping": {
+      "ideal_entropy_current": "J_S,ideal^mu=s_normal*u_normal^mu because s_condensate=0 in the declared tree sector",
+      "two_force_entropy_production": "sigma=X_i*L_ij*X_j with L=L^T and L>=0",
+      "static_lane_force": "X_static=(0,0) because the current condensed state record has no gradient or relative-flow observable",
+      "identifiability_witness": "sigma_static(L_A)=sigma_static(L_B)=0 but L_A*X_probe != L_B*X_probe"
+    },
+    "units": {
+      "unit_lane": "normalized natural-unit structural diagnostic",
+      "force_vector": "declared normalized thermodynamic/relative-flow forces; no SI conversion",
+      "onsager_matrix": "normalized natural-unit response matrix; not a physical Kubo coefficient",
+      "entropy_production": "normalized natural-unit quadratic witness",
+      "Phi": "effective response variable; not temperature or a metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "structural identifiability no-go from the declared condensed static state variables and the positive-semidefinite entropy contract",
+    "observable": "condensed ideal entropy-current boundary and dissipative transport identifiability",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_condensed_dissipative_transport_identifiability_no_go.py",
+        "sha256": "91d3256f4ca4cb7818d396809eeaf055ae92aab6825c5e0d8ef5c086867e123e"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_two_fluid_response.py",
+        "sha256": "d4eeb37b00861f7ed0ebe1a0ff6065a75691f9e0866ccafa6b7473f84da5034f"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_finite_temperature_two_fluid_response_audit.json",
+        "sha256": "bd0f7b31af0a31254cdbc72e4e7d4c98b21a72d8510573d5f20bbe44c584f9b2"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO",
+    "open_blockers": [
+      "microscopic_condensed_collision_kernel_missing",
+      "retarded_physical_Kubo_match_missing",
+      "complete_two_fluid_constitutive_tensor_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "condensed dissipative transport identifiability boundary only; no physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only the scoped identifiability question for the current condensed static lane. It does not derive a physical dissipative coefficient, complete two-fluid transport, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_SCOPED_CONDENSED_DISSIPATIVE_TRANSPORT_IDENTIFIABILITY_NO_GO",
+    "equations": {
+      "ideal_entropy_current": "J_S,ideal^mu=s_normal*u_normal^mu because s_condensate=0 in the declared tree sector",
+      "two_force_entropy_production": "sigma=X_i*L_ij*X_j with L=L^T and L>=0",
+      "static_lane_force": "X_static=(0,0) because the current condensed state record has no gradient or relative-flow observable",
+      "identifiability_witness": "sigma_static(L_A)=sigma_static(L_B)=0 but L_A*X_probe != L_B*X_probe"
+    },
+    "unit_contract": {
+      "unit_lane": "normalized natural-unit structural diagnostic",
+      "force_vector": "declared normalized thermodynamic/relative-flow forces; no SI conversion",
+      "onsager_matrix": "normalized natural-unit response matrix; not a physical Kubo coefficient",
+      "entropy_production": "normalized natural-unit quadratic witness",
+      "Phi": "effective response variable; not temperature or a metric",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; not an independent state or feedback input",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "derivation_class": "structural identifiability no-go from the declared condensed static state variables and the positive-semidefinite entropy contract",
+    "observable": "condensed ideal entropy-current boundary and dissipative transport identifiability",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS",
+    "closed_scope": [
+      "the declared condensed static lane has zero condensate entropy in its tree-sector state records",
+      "two positive-semidefinite dissipative witnesses are observationally identical on the current static state",
+      "the witnesses produce distinct responses under a nonzero probe, so the current state cannot identify a unique dissipative matrix",
+      "a physical condensed transport coefficient requires a relative-flow/collision kernel or state-matched retarded correlator"
+    ],
+    "excluded_scope": [
+      "a microscopic condensed collision kernel",
+      "a physical Kubo/Onsager coefficient",
+      "a complete finite-temperature two-fluid constitutive tensor",
+      "an SI Phi-to-temperature map or alpha_Phi_K calibration",
+      "TTG prediction, holdout access, or external validation"
+    ],
+    "claim_boundary": "This closes only the scoped identifiability question for the current condensed static lane. It does not derive a physical dissipative coefficient, complete two-fluid transport, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.2,
+    "chemical_potential": 0.35,
+    "static_force": [
+      0.0,
+      0.0
+    ],
+    "probe_force": [
+      1.0,
+      0.0
+    ],
+    "witness_a": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "witness_b": [
+      [
+        2.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.5
+      ]
+    ],
+    "static_entropy_production_a": 0.0,
+    "static_entropy_production_b": 0.0,
+    "probe_response_a": [
+      1.0,
+      0.0
+    ],
+    "probe_response_b": [
+      2.0,
+      0.0
+    ],
+    "witness_a_positive_semidefinite": true,
+    "witness_b_positive_semidefinite": true,
+    "static_state_identical": true,
+    "probe_responses_distinct": true
+  },
+  "checks": {
+    "condensed_state_records_are_available": true,
+    "condensate_entropy_is_zero_on_declared_states": true,
+    "condensed_heat_flux_is_not_emitted": true,
+    "relative_velocity_is_not_in_current_state_record": true,
+    "witness_a_is_positive_semidefinite": true,
+    "witness_b_is_positive_semidefinite": true,
+    "static_force_is_zero": true,
+    "static_entropy_production_is_zero_for_both_witnesses": true,
+    "static_state_is_identical_for_both_witnesses": true,
+    "probe_responses_are_distinct": true,
+    "physical_transport_coefficient_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_remains_separate": true
+  },
+  "failed_checks": [],
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "microscopic_condensed_collision_kernel_missing",
+  "next_controller": "derive a symmetry-compatible condensed collision/relative-flow kernel or obtain a state-matched retarded correlator; do not promote the two structural witnesses to physical transport",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false,
+    "used_for_calibration": false
+  }
+}

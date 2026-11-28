@@ -1,0 +1,264 @@
+{
+  "schema_version": "t13-uet-o2-quantum-collision-enhancement-v1",
+  "artifact": "t13_uet_o2_quantum_collision_enhancement_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_QUANTUM_COLLISION_ENHANCEMENT_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_QUANTUM_COLLISION_ENHANCEMENT_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "an explicit elastic outgoing-state Bose factor is integrated into the declared 2-to-2 collision kernel",
+      "the factor increases the collision width relative to the classical comparator at the same state point",
+      "the quantum-enhanced comparator remains positive and bounded under quadrature and cutoff refinement",
+      "the lane keeps ladder resummation, condensed scattering, microscopic SK/KMS matching, SI mapping, alpha_Phi_K, and TTG validation outside scope"
+    ],
+    "equation_or_mapping": {
+      "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
+      "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
+      "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
+      "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
+      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))",
+      "outgoing_state_factor": "B_34=(1+f_3)(1+f_4), averaged over elastic final-state center-of-mass angle",
+      "quantum_kernel_mapping": "Gamma_s^Q(k)=sum_r integral[d^3p] f_r v_rel sigma_22 B_34"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "mass_temperature_mu": "energy",
+      "lambda": "dimensionless quartic coupling",
+      "sigma_22": "inverse energy squared",
+      "collision_width": "energy/inverse time",
+      "D": "formal static response weight",
+      "K_kin": "formal kinetic comparator coefficient",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived dilute-gas 2-to-2 comparator with explicit elastic final-state Bose enhancement; not full quantum transport",
+    "observable": "finite-temperature normal collision width and quantum-enhanced kinetic comparator",
+    "data_role": "ACTION_DERIVED_QUANTUM_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_kinetic_collision_kubo.py",
+        "sha256": "411314a28d67bbce457f96ad6f147b183a7580fb983e88af7ba9ce0ce7c149be"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_QUANTUM_COLLISION_ENHANCEMENT_LANE",
+    "open_blockers": [
+      "ladder_vertex_resummation_missing",
+      "condensed_collision_kernel_missing",
+      "microscopic_SK_KMS_and_retarded_Kubo_match_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "explicit quantum-enhanced dilute-gas comparator only; no physical Kubo, SI, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only a named action-derived quantum-enhanced dilute-gas collision comparator. It does not emit a physical Kubo coefficient, SI observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_DILUTE_KINETIC_COLLISION_LANE",
+    "equations": {
+      "normal_dispersion": "E_s(k)=sqrt(k^2+m_eff^2)-s*sqrt(Z)*abs(mu), s in {-1,+1}",
+      "constant_amplitude_cross_section": "sigma_22(s)=lambda^2/(16*pi*s)",
+      "collision_kernel": "Gamma_s(k)=sum_r integral[d^3p/(2*pi)^3] f_r(E_p) v_rel sigma_22(s) B_34(s;T,mu)",
+      "static_weight": "D_s=(1/3) integral[d^3k/(2*pi)^3] k^2[-partial_E f_s]",
+      "kinetic_response": "K_kin=sum_s D_s/Gamma_s(k_ref), k_ref=max(T,m_eff,sqrt(Z)*abs(mu))"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "mass_temperature_mu": "energy",
+      "lambda": "dimensionless quartic coupling",
+      "sigma_22": "inverse energy squared",
+      "collision_width": "energy/inverse time",
+      "D": "formal static response weight",
+      "K_kin": "formal kinetic comparator coefficient",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived constant-amplitude dilute-gas 2-to-2 phase-space comparator; not full quantum transport",
+    "observable": "finite-temperature normal collision width and kinetic transport comparator",
+    "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO",
+    "included": {
+      "normal_branch": true,
+      "constant_amplitude_2_to_2_kernel": true,
+      "deterministic_quadrature": true,
+      "positivity_and_cutoff_checks": true
+    },
+    "excluded": {
+      "final_state_bose_enhancement": "optional elastic outgoing-state factor; enabled only by explicit lane parameter",
+      "ladder_vertex_resummation": true,
+      "condensed_scattering": true,
+      "microscopic_SK_KMS_match": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only a named action-derived dilute-gas kinetic comparator. It does not emit a physical Kubo coefficient, SI observable, alpha_Phi_K, TTG prediction, or Full Topic 13 closure."
+  },
+  "state": {
+    "classical": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "effective_mass": 1.0,
+      "quartic_coupling": 1.0,
+      "drude_weight_by_species": [
+        3.3362717991193955e-05,
+        0.0008134678026618623
+      ],
+      "collision_width_by_species": [
+        1.391928462642035e-06,
+        1.391928462642035e-06
+      ],
+      "kinetic_coefficient_by_species": [
+        23.968701615503864,
+        584.4178235408808
+      ],
+      "drude_weight": 0.0008468305206530563,
+      "kinetic_coefficient": 608.3865251563847,
+      "quadrature_order": 48,
+      "angular_order": 32,
+      "momentum_cutoff": 20.0,
+      "reference_momentum": 1.0,
+      "final_state_bose_enhancement_included": false,
+      "ladder_vertex_resummation_included": false,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO"
+    },
+    "quantum": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "effective_mass": 1.0,
+      "quartic_coupling": 1.0,
+      "drude_weight_by_species": [
+        3.3362717991193955e-05,
+        0.0008134678026618623
+      ],
+      "collision_width_by_species": [
+        1.4115625522104018e-06,
+        1.4305088050711306e-06
+      ],
+      "kinetic_coefficient_by_species": [
+        23.635309635375652,
+        568.6562709562725
+      ],
+      "drude_weight": 0.0008468305206530563,
+      "kinetic_coefficient": 592.2915805916481,
+      "quadrature_order": 48,
+      "angular_order": 32,
+      "momentum_cutoff": 20.0,
+      "reference_momentum": 1.0,
+      "final_state_bose_enhancement_included": true,
+      "ladder_vertex_resummation_included": false,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO"
+    },
+    "quantum_reference": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "effective_mass": 1.0,
+      "quartic_coupling": 1.0,
+      "drude_weight_by_species": [
+        3.3362717991150926e-05,
+        0.0008134678026554699
+      ],
+      "collision_width_by_species": [
+        1.411567842046724e-06,
+        1.430514147659303e-06
+      ],
+      "kinetic_coefficient_by_species": [
+        23.635221062259504,
+        568.6541471725511
+      ],
+      "drude_weight": 0.0008468305206466208,
+      "kinetic_coefficient": 592.2893682348106,
+      "quadrature_order": 64,
+      "angular_order": 48,
+      "momentum_cutoff": 24.0,
+      "reference_momentum": 1.0,
+      "final_state_bose_enhancement_included": true,
+      "ladder_vertex_resummation_included": false,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO"
+    },
+    "quantum_refined": {
+      "temperature": 0.22,
+      "chemical_potential": 0.35,
+      "space_response": 0.15,
+      "effective_mass": 1.0,
+      "quartic_coupling": 1.0,
+      "drude_weight_by_species": [
+        3.336271799115082e-05,
+        0.0008134678026554523
+      ],
+      "collision_width_by_species": [
+        1.4115642565473352e-06,
+        1.4305105328355493e-06
+      ],
+      "kinetic_coefficient_by_species": [
+        23.635281097833634,
+        568.6555841312132
+      ],
+      "drude_weight": 0.0008468305206466031,
+      "kinetic_coefficient": 592.2908652290469,
+      "quadrature_order": 80,
+      "angular_order": 56,
+      "momentum_cutoff": 28.0,
+      "reference_momentum": 1.0,
+      "final_state_bose_enhancement_included": true,
+      "ladder_vertex_resummation_included": false,
+      "physical_kubo_coefficient_emitted": false,
+      "data_role": "ACTION_DERIVED_DILUTE_KINETIC_COMPARATOR_NOT_PHYSICAL_KUBO"
+    },
+    "width_ratios_quantum_vs_classical": [
+      1.0141056743182757,
+      1.027717187674908
+    ],
+    "relative_width_change_refined_vs_reference": 2.5400829361465104e-06,
+    "relative_response_change_refined_vs_reference": 2.5274710581725793e-06
+  },
+  "checks": {
+    "classical_lane_is_explicitly_disabled": true,
+    "quantum_lane_is_explicitly_enabled": true,
+    "all_quantum_widths_positive_and_finite": true,
+    "all_quantum_responses_positive_and_finite": true,
+    "outgoing_bose_factor_increases_each_width": true,
+    "quantum_quadrature_width_converges": true,
+    "quantum_quadrature_response_converges": true,
+    "ladder_resummation_is_explicitly_excluded": true,
+    "physical_coefficient_not_emitted": true,
+    "no_source_rows_consumed": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "contract_declares_optional_outgoing_factor": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true
+  },
+  "failed_checks": [],
+  "numeric_alpha_Phi_K_emitted": false,
+  "physical_transport_coefficients_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "ladder_vertex_resummation_missing",
+  "next_controller": "derive a matched retarded response and ladder/vertex closure before calling this a physical Kubo transport result",
+  "claim_promotion": false,
+  "primary_literature_context": [
+    {
+      "locator": "https://arxiv.org/abs/hep-ph/9409250",
+      "role": "weak-coupling scalar transport requires resummed diagrams or an equivalent linearized Boltzmann equation; context only, no numeric input consumed"
+    }
+  ]
+}

@@ -1,0 +1,85 @@
+{
+  "schema_version": "t13-gatech-volumetric-cp-independence-audit-v1",
+  "artifact": "t13_gatech_volumetric_cp_independence_audit",
+  "generated_at": "2026-08-11",
+  "status": "PASS_SCOPED_SOURCE_INDEPENDENCE_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_GATECH_VOLUMETRIC_CP_INDEPENDENCE_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "The Georgia Tech row cannot independently identify density by inverting its reported conductivity.",
+      "The Georgia Tech row cannot independently identify volumetric c_p through k/D because k already imports the assumed density."
+    ],
+    "equation_or_mapping": "k_src := D_src * c_p,src * rho_assumed; rho_inverse := k_src/(D_src*c_p,src) = rho_assumed; C_p,V_inverse := k_src/D_src = rho_assumed*c_p,src",
+    "units": {
+      "D_src": "m^2 s^-1",
+      "c_p_src": "J kg^-1 K^-1",
+      "rho_assumed": "kg m^-3",
+      "k_src": "W m^-1 K^-1",
+      "C_p_V": "J m^-3 K^-1"
+    },
+    "derivation_class": "source-dependency algebra and scoped structural no-go",
+    "observable": "independence of the material-property source inputs",
+    "data_role": "SOURCE_PROVENANCE_AUDIT_ONLY; no calibration values consumed",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_gatech_volumetric_cp_independence_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/gatech_gen3csp_graphite_source_package.json",
+        "sha256": "2635be1d91f35c9be6fd36d14a9e4d04384f158dd90340b59c5d7fa3f277bd51"
+      },
+      {
+        "path": "docs/core/artifacts/t13_gatech_graphite_source_audit.json",
+        "sha256": "56866720546cdf201c5b45ef7262f82679a5676482835d6d476933f114b3d394"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/gen3csp_graphite.xlsx",
+        "sha256": "baa7f6181fa3d5521fc594cb2c832308927bc77dbac89c43b373bc304eaa6900"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_SOURCE_INDEPENDENCE_NO_GO",
+    "open_blockers": [
+      "independent_same_grade_density_or_direct_volumetric_heat_capacity_missing",
+      "same_grade_alpha_V_and_K_T_missing",
+      "material_regime_mapping_to_TTG_not_closed"
+    ],
+    "dependency_unlocked": "Rejects the circular same-workbook inversion route and permits an independent direct-c_v or same-grade density/thermoelastic source-acquisition wave.",
+    "claim_boundary": "CLOSED_FOR_LANE applies only to the information dependency of this Georgia Tech package. It is not a no-go for all graphite sources and does not close c_v, alpha_Phi_K, or Topic 13."
+  },
+  "equation_or_mapping": "k_src := D_src * c_p,src * rho_assumed; rho_inverse := k_src/(D_src*c_p,src) = rho_assumed; C_p,V_inverse := k_src/D_src = rho_assumed*c_p,src",
+  "source_method_locators": {
+    "graphite_page": "https://gen3csp.gatech.edu/graphite/ ; Thermal Conductivity and density notes",
+    "uncertainty_page": "https://gen3csp.gatech.edu/uncertainty/ ; specific-heat interpolation and thermal-conductivity propagation sections"
+  },
+  "numeric_witness": {
+    "diffusivity_m2_per_s": 3.30411666666667e-05,
+    "cp_mass_J_per_kg_K": 1259.8169447352202,
+    "rho_assumed_kg_per_m3": 1780.0,
+    "k_reported_W_per_m_K": 74.0939625200673,
+    "k_reconstructed_W_per_m_K": 74.0939625200673,
+    "rho_recovered_kg_per_m3": 1780.0000000000002,
+    "cp_volumetric_from_k_over_D_J_per_m3_K": 2242474.161628692,
+    "cp_volumetric_from_assumed_rho_J_per_m3_K": 2242474.161628692
+  },
+  "checks": {
+    "upstream_source_audit_passes": true,
+    "raw_hash_remains_locked": true,
+    "diffusivity_is_measured": true,
+    "cp_is_measured_then_publisher_interpolated": true,
+    "density_is_assumed_not_measured": true,
+    "conductivity_is_derived_not_independent": true,
+    "reported_k_matches_declared_dependency": true,
+    "inverse_density_recovers_assumption": true,
+    "k_over_D_recovers_assumed_rho_times_cp": true,
+    "density_uncertainty_is_not_source_locked": true,
+    "holdout_not_accessed": true,
+    "holdout_not_consumed": true
+  },
+  "what_changed": "The source dependency graph is now explicit and the same-workbook inverse-density route is closed as circular.",
+  "verification": "Publisher method roles, archived row identity, exact unit conversions, algebraic reconstruction, source hashes, and holdout non-access are checked.",
+  "controlling_blocker": "independent_same_grade_density_or_direct_volumetric_heat_capacity_missing",
+  "next_action": "Acquire a permitted direct volumetric c_v source or independently measured EMS-5000/same-specimen density with uncertainty, then source-lock same-regime alpha_V and K_T; do not infer these from the reported k/D/c_p identity.",
+  "claim_boundary": "This is a scoped source-independence no-go, not thermodynamic closure or external validation."
+}

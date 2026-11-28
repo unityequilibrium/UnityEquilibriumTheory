@@ -1,0 +1,170 @@
+{
+  "schema_version": "t13-uet-o2-action-thermal-stiffness-beta-v1",
+  "artifact": "t13_uet_o2_action_thermal_stiffness_beta_audit",
+  "generated_at": "2026-08-15",
+  "status": "PASS_ACTION_DERIVED_THERMAL_STIFFNESS_BETA_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ACTION_THERMAL_STIFFNESS_BETA_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the finite-temperature quasiparticle free-energy curvature with respect to the existing Phi response variable",
+      "a non-Landauer natural-unit stiffness slope beta_Phi^nat=T*partial_T a_Phi^nat on one declared normal branch",
+      "symmetric Phi and temperature stencil refinement checks for the action-derived derivative",
+      "explicit separation of natural action beta from normalized beta_T13, SI normalization, and alpha_Phi_K"
+    ],
+    "equation_or_mapping": {
+      "finite_temperature_free_energy": "f_qp(T,mu,Phi)=-p_qp(T,mu,Phi)",
+      "response_stiffness": "a_Phi^nat(T)=partial_Phi^2 f_qp(T,mu,Phi)|_(T,mu,Phi_ref)",
+      "action_beta": "beta_Phi^nat=T*partial_T a_Phi^nat",
+      "temperature_difference": "partial_T a_Phi^nat=(a_Phi^nat(T+h_T)-a_Phi^nat(T-h_T))/(2*h_T)",
+      "response_difference": "partial_Phi^2 f_qp=(f_qp(Phi+h_Phi)-2*f_qp(Phi)+f_qp(Phi-h_Phi))/h_Phi^2"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "T_mu_effective_mass": "natural energy",
+      "Phi": "existing effective response variable with natural action dimension; not temperature",
+      "a_Phi_natural": "natural response free-energy curvature; normalization-dependent",
+      "beta_Phi_natural": "natural stiffness-temperature product T*partial_T a_Phi^nat",
+      "normalized_beta_T13": "not emitted; requires an independent Phi/e0 normalization map",
+      "e0": "not supplied",
+      "alpha_Phi_K": "not emitted",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature quasiparticle pressure, fixed-state response curvature, and symmetric temperature differentiation with a refined stencil",
+    "observable": "natural-unit local response stiffness slope on a declared normal branch",
+    "data_role": "ACTION_DERIVED_INTERNAL_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+        "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+        "sha256": "2789ca3b4ec3f664e3059c76eec717dc5e0c49da59fad923a924b393548ca8e4"
+      },
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      },
+      {
+        "path": "docs/core/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_THERMAL_STIFFNESS_BETA_LANE",
+    "open_blockers": [
+      "normalized_beta_T13_field_and_density_normalization_missing",
+      "physical_beta_source_provenance_missing",
+      "physical_Phi_SI_energy_anchor_missing",
+      "independent_alpha_Phi_K_calibration_missing",
+      "full_finite_temperature_EOS_transport_SK_KMS_entropy_completion_missing"
+    ],
+    "dependency_unlocked": "non-Landauer action-origin stiffness-slope lane only; no normalized beta, SI, alpha, TTG, physical transport, or Full Topic 13 unlock",
+    "claim_boundary": "This closes only the non-Landauer action-origin of a local natural-unit response stiffness slope on the declared normal quasiparticle branch. It does not identify the normalized beta_T13, a physical SI coefficient, alpha_Phi_K, a TTG prediction, or Full Topic 13 closure."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_THERMAL_STIFFNESS_BETA_LANE",
+    "equations": {
+      "finite_temperature_free_energy": "f_qp(T,mu,Phi)=-p_qp(T,mu,Phi)",
+      "response_stiffness": "a_Phi^nat(T)=partial_Phi^2 f_qp(T,mu,Phi)|_(T,mu,Phi_ref)",
+      "action_beta": "beta_Phi^nat=T*partial_T a_Phi^nat",
+      "temperature_difference": "partial_T a_Phi^nat=(a_Phi^nat(T+h_T)-a_Phi^nat(T-h_T))/(2*h_T)",
+      "response_difference": "partial_Phi^2 f_qp=(f_qp(Phi+h_Phi)-2*f_qp(Phi)+f_qp(Phi-h_Phi))/h_Phi^2"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "T_mu_effective_mass": "natural energy",
+      "Phi": "existing effective response variable with natural action dimension; not temperature",
+      "a_Phi_natural": "natural response free-energy curvature; normalization-dependent",
+      "beta_Phi_natural": "natural stiffness-temperature product T*partial_T a_Phi^nat",
+      "normalized_beta_T13": "not emitted; requires an independent Phi/e0 normalization map",
+      "e0": "not supplied",
+      "alpha_Phi_K": "not emitted",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived finite-temperature quasiparticle pressure, fixed-state response curvature, and symmetric temperature differentiation with a refined stencil",
+    "observable": "natural-unit local response stiffness slope on a declared normal branch",
+    "data_role": "ACTION_DERIVED_INTERNAL_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "included": {
+      "non_circular_action_origin": true,
+      "finite_temperature_quasiparticle_determinant": true,
+      "fixed_mu_and_phi_stencil": true,
+      "temperature_stencil_refinement": true,
+      "landauer_identity": false
+    },
+    "excluded": {
+      "normalized_beta_T13": true,
+      "physical_beta_source": true,
+      "SI_Phi_normalization": true,
+      "e0": true,
+      "alpha_Phi_K": true,
+      "physical_Kubo": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only the non-Landauer action-origin of a local natural-unit response stiffness slope on the declared normal quasiparticle branch. It does not identify the normalized beta_T13, a physical SI coefficient, alpha_Phi_K, a TTG prediction, or Full Topic 13 closure."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.35,
+    "space_response": 0.15,
+    "branch": "normal",
+    "effective_mass": 0.9969954864491614,
+    "pressure": 0.00011541104065114354,
+    "entropy_density": 0.0031073474100778336,
+    "response_epsilon_nc": 0.05,
+    "response_coupling": 0.8,
+    "phi_step": 0.005,
+    "temperature_step": 0.002,
+    "refined_phi_step": 0.002,
+    "refined_temperature_step": 0.001,
+    "a_phi_natural": -6.643796596856807e-07,
+    "beta_phi_natural": -2.4271981641363002e-06,
+    "refined_a_phi_natural": -6.643888625292461e-07,
+    "refined_beta_phi_natural": -2.427707354265597e-06,
+    "curvature_relative_change": 1.385159216892113e-05,
+    "beta_relative_change": 0.00020974114874360104,
+    "normalized_beta_T13_emitted": false,
+    "numeric_e0_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "landauer_identity_used": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_NATURAL_RESPONSE_STIFFNESS_NOT_NORMALIZED_BETA"
+  },
+  "checks": {
+    "normal_branch_stencil_is_locked": true,
+    "action_response_coupling_is_nonzero": true,
+    "finite_temperature_pressure_is_positive": true,
+    "finite_temperature_entropy_is_positive": true,
+    "curvature_is_finite": true,
+    "action_beta_is_finite_and_nonzero": true,
+    "curvature_stencil_refinement_is_stable": true,
+    "beta_stencil_refinement_is_stable": true,
+    "normalized_beta_is_not_emitted": true,
+    "e0_is_not_emitted": true,
+    "numeric_alpha_is_not_emitted": true,
+    "landauer_is_not_used": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_holdout_is_unread": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_remains_separate": true,
+    "normalized_and_physical_boundaries_are_explicit": true
+  },
+  "failed_checks": [],
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "used_for_fit": false,
+    "used_for_tuning": false
+  }
+}

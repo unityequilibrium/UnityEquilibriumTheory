@@ -1,0 +1,117 @@
+{
+  "schema_version": "t13-nist-graphite-alpha-v-source-boundary-v1",
+  "artifact": "t13_nist_graphite_alpha_v_source_boundary_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_NIST_ALPHA_V_SOURCE_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_NIST_GRAPHITE_ALPHA_V_SOURCE_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the official NIST SP 260-89 graphite PDF is archived with a reproducible hash and page locators",
+      "the declared NIST length-expansion polynomial is evaluated at the Ding-adjacent 200, 225, 250, and 300 K comparison points",
+      "the conversion from percent length change to dimensionless strain and isotropic alpha_V is explicit",
+      "the source-level program accuracy boundary is disclosed without turning it into a statistical uncertainty"
+    ],
+    "equation_or_mapping": {
+      "nist_length_change_percent": "Delta_L/L [%] = -0.201 + 6.595e-4*T + 9.593e-8*T^2 - 3.427e-12*T^3",
+      "linear_expansion": "alpha_L = d(Delta_L/L)/dT / (1 + Delta_L/L)",
+      "volumetric_expansion_comparator": "alpha_V = 3*alpha_L for the declared isotropic AXM-5Q1 comparator"
+    },
+    "units": {
+      "temperature": "K",
+      "length_change": "percent converted to dimensionless strain",
+      "alpha_L": "K^-1",
+      "alpha_V": "K^-1"
+    },
+    "derivation_class": "source transcription plus explicit thermodynamic geometry conversion; no UET derivation",
+    "observable": "NIST AXM-5Q1 graphite thermal-expansion comparator",
+    "data_role": "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_nist_graphite_alpha_v_source_boundary_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf",
+        "sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NIST_ALPHA_V_SOURCE_BOUNDARY",
+    "open_blockers": [
+      "isothermal_bulk_modulus_K_T_not_source_locked",
+      "AXM_5Q1_to_Ding_HOPG_material_regime_mapping_not_closed",
+      "row_level_statistical_uncertainty_for_alpha_V_not_provided",
+      "base_Phi_to_Delta_u_ph_energy_anchor_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "NIST alpha_V comparator lane only; K_T, volumetric c_v, Ding C_src, alpha_Phi_K, transport, Core, and Gravity remain locked",
+    "claim_boundary": "This is a source-traceable AXM-5Q1 isotropic graphite expansion comparator. It is not a Ding/HOPG material match, not a complete Cp-to-Cv correction, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "nist_srm_260_89_axm_5q1_graphite",
+    "title": "Standard Reference Materials: A fine-grained, isotropic graphite for use as NBS thermophysical property reference material from 5 to 2500 K",
+    "publisher": "National Bureau of Standards / NIST",
+    "url": "https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nbsspecialpublication260-89.pdf",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/nist_sp260_89_graphite.pdf",
+    "sha256": "fbcde491cadf6b8105d8b22bd15145e48709926aaf1d4a24335af2a8984c71b2",
+    "source_locators": [
+      "PDF p. 20: program-level thermal-expansion accuracy boundary",
+      "PDF pp. 91-92 / Table 20: calculated AXM-5Q1 thermophysical values",
+      "PDF pp. 111-112 / Section 5.5 / Eq. (5.5.2): length-expansion polynomial and conversion discussion"
+    ],
+    "material": "AXM-5Q1 fine-grained isotropic graphite",
+    "reference_density_kg_per_m3": 1730.0,
+    "preprocessing": "byte-preserving PDF archive; polynomial transcription; percent-to-strain conversion; no interpolation, fitting, or target-curve access",
+    "program_accuracy_boundary": {
+      "thermal_expansion_relative_bound": 0.03,
+      "interpretation": "source-level program accuracy reported for the 300-2800 K thermal-expansion property; not a row-level standard uncertainty"
+    }
+  },
+  "rows": [
+    {
+      "temperature_K": 200.0,
+      "delta_L_over_L_percent": -0.065290216,
+      "alpha_L_per_K": 6.9791643114539434e-06,
+      "alpha_V_per_K": 2.093749293436183e-05
+    },
+    {
+      "temperature_K": 225.0,
+      "delta_L_over_L_percent": -0.047795079421875004,
+      "alpha_L_per_K": 7.024837770541687e-06,
+      "alpha_V_per_K": 2.1074513311625063e-05
+    },
+    {
+      "temperature_K": 250.0,
+      "delta_L_over_L_percent": -0.03018292187499999,
+      "alpha_L_per_K": 7.070358415756911e-06,
+      "alpha_V_per_K": 2.1211075247270733e-05
+    },
+    {
+      "temperature_K": 300.0,
+      "delta_L_over_L_percent": 0.005391170999999985,
+      "alpha_L_per_K": 7.160941041423248e-06,
+      "alpha_V_per_K": 2.1482823124269745e-05
+    }
+  ],
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "source_locator_declared": true,
+    "polynomial_coefficients_declared": true,
+    "target_temperature_rows_present": true,
+    "derived_rows_are_finite": true,
+    "percent_to_dimensionless_conversion_is_explicit": true,
+    "isotropic_alpha_volume_relation_is_explicit": true,
+    "program_level_accuracy_is_disclosed": true,
+    "bulk_modulus_not_invented": true,
+    "material_regime_mapping_to_ding_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "isothermal_bulk_modulus_K_T_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Source-lock an isothermal bulk modulus with uncertainty and a material-state map; keep this alpha_V comparator separate from the Ding C_src and base-Phi calibration paths.",
+  "claim_boundary": "This closes only a NIST graphite alpha_V source boundary. It does not close K_T, c_v, C_src, e0, base Phi, alpha_Phi_K, transport, SK/KMS, entropy, or Full Topic 13."
+}

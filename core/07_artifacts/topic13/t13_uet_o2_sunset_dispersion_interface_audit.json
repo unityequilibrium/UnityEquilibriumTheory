@@ -1,0 +1,279 @@
+{
+  "schema_version": "t13-uet-o2-sunset-dispersion-interface-v1",
+  "artifact": "t13_uet_o2_sunset_dispersion_interface_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_SUBTRACTED_SUNSET_DISPERSION_INTERFACE_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_SUBTRACTED_SUNSET_DISPERSION_INTERFACE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "formal neutral off-shell rest-energy extension of the declared elastic sunset cut",
+      "finite-regulator retarded dispersion representation with an explicit reference subtraction",
+      "KMS ratio, spectral/noise positivity, retarded sign witness, and composite-quadrature convergence",
+      "on-shell matching of the extended cut to the canonical continuum sunset artifact under identical controls"
+    ],
+    "equation_or_mapping": {
+      "off_shell_cut_extension": "s(omega,k)=omega^2+m_eff^2+2*omega*E_k; Gamma_>^cut(omega)=integral n_k*v_rel*sigma_22 <(1+n_3)(1+n_4)>_CM",
+      "spectral_density": "rho_cut(omega)=2*omega*(Gamma_>^cut(omega)-Gamma_<^cut(omega))",
+      "noise_density": "N_cut(omega)=2*omega*(Gamma_>^cut(omega)+Gamma_<^cut(omega))",
+      "kms": "Gamma_>^cut(omega)/Gamma_<^cut(omega)=exp(beta*omega)",
+      "retarded_dispersion": "Sigma_R^eta(omega)=integral_0^Omega dnu/pi*rho_cut(nu)*[1/(omega-nu+i*eta)-1/(omega+nu+i*eta)]",
+      "once_subtraction": "Sigma_R,sub(omega;omega_*)=Sigma_R^eta(omega)-Sigma_R^eta(omega_*)",
+      "matching_interface": "rho_cut(omega_*=m_eff) matches the continuum on-shell cut artifact under identical controls"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "regulator_eta": "energy; declared numerical retarded smearing",
+      "spectral_density": "formal natural-unit cut normalization",
+      "retarded_response": "formal natural-unit response normalization",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived neutral elastic cut with a declared off-shell rest-energy extension and once-subtracted finite-regulator dispersion interface",
+    "observable": "greater/lesser KMS ratio, positive cut spectral/noise density, retarded sign witness, subtraction residual, on-shell matching residual, and composite-quadrature convergence",
+    "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_DISPERSION_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_sunset_dispersion_interface.py",
+        "sha256": "325ddfded4a6ee8cd9d692082ed451df0d2acc739315b0a1902112e744bbd65e"
+      },
+      {
+        "path": "docs/core/uet_o2_sunset_dispersion_interface_verified.py",
+        "sha256": "91540303f7dfb5baaba8e2eff3be6b48bd35060b71c3016cbdea43b57c183bdf"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_continuum_sunset_cut_audit.json",
+        "sha256": "5944a7a18f8d657671a7c06f11fde6d7fa1c6d79cd94bc21dbf9c57d70bac663"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_SUBTRACTED_SUNSET_DISPERSION_INTERFACE_LANE",
+    "open_blockers": [
+      "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "off_shell_microscopic_action_match_missing",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "formal subtracted dispersion interface only; no physical self-energy, Kubo, entropy, SI mapping, alpha, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only a formal once-subtracted retarded dispersion interface built from the declared neutral continuum cut and its finite regulator. It does not close the full 1PI retarded self-energy, the zero-regulator physical limit, unique renormalization, microscopic off-shell action matching, physical Kubo/transport, covariant entropy-current balance, SI Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_SUBTRACTED_SUNSET_DISPERSION_INTERFACE_LANE",
+    "equations": {
+      "off_shell_cut_extension": "s(omega,k)=omega^2+m_eff^2+2*omega*E_k; Gamma_>^cut(omega)=integral n_k*v_rel*sigma_22 <(1+n_3)(1+n_4)>_CM",
+      "spectral_density": "rho_cut(omega)=2*omega*(Gamma_>^cut(omega)-Gamma_<^cut(omega))",
+      "noise_density": "N_cut(omega)=2*omega*(Gamma_>^cut(omega)+Gamma_<^cut(omega))",
+      "kms": "Gamma_>^cut(omega)/Gamma_<^cut(omega)=exp(beta*omega)",
+      "retarded_dispersion": "Sigma_R^eta(omega)=integral_0^Omega dnu/pi*rho_cut(nu)*[1/(omega-nu+i*eta)-1/(omega+nu+i*eta)]",
+      "once_subtraction": "Sigma_R,sub(omega;omega_*)=Sigma_R^eta(omega)-Sigma_R^eta(omega_*)",
+      "matching_interface": "rho_cut(omega_*=m_eff) matches the continuum on-shell cut artifact under identical controls"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_chemical_potential_mass_momentum_energy": "energy",
+      "regulator_eta": "energy; declared numerical retarded smearing",
+      "spectral_density": "formal natural-unit cut normalization",
+      "retarded_response": "formal natural-unit response normalization",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived neutral elastic cut with a declared off-shell rest-energy extension and once-subtracted finite-regulator dispersion interface",
+    "observable": "greater/lesser KMS ratio, positive cut spectral/noise density, retarded sign witness, subtraction residual, on-shell matching residual, and composite-quadrature convergence",
+    "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_DISPERSION_NO_SOURCE_ROWS_NO_HOLDOUT",
+    "excluded": {
+      "full_1PI_retarded_self_energy": true,
+      "zero_eta_physical_limit": true,
+      "unique_physical_renormalization": true,
+      "off_shell_microscopic_action_match": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only a formal once-subtracted retarded dispersion interface built from the declared neutral continuum cut and its finite regulator. It does not close the full 1PI retarded self-energy, the zero-regulator physical limit, unique renormalization, microscopic off-shell action matching, physical Kubo/transport, covariant entropy-current balance, SI Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "state": {
+    "reference": {
+      "temperature": 0.22,
+      "chemical_potential": 0.0,
+      "space_response": 0.15,
+      "effective_mass": 0.7039176088151227,
+      "reference_energy": 0.7039176088151227,
+      "regulator_eta": 0.025,
+      "frequency_lower": 0.17597940220378067,
+      "frequency_upper": 4.223505652890736,
+      "radial_cutoff": 16.894022611562946,
+      "radial_order": 48,
+      "center_of_mass_order": 40,
+      "frequency_order": 12,
+      "probe_energies": [
+        0.6,
+        0.76,
+        0.9,
+        1.05
+      ],
+      "greater_cut": [
+        7.844161006317654e-07,
+        8.776451415305062e-07,
+        7.268427532744067e-07,
+        6.065073976940446e-07
+      ],
+      "lesser_cut": [
+        5.129877603301015e-08,
+        2.7735048177492315e-08,
+        1.2155734914764318e-08,
+        5.129404922464067e-09
+      ],
+      "spectral_density": [
+        8.797407895185062e-07,
+        1.2918633418965812e-06,
+        1.2864366330473564e-06,
+        1.2628937848203191e-06
+      ],
+      "noise_density": [
+        1.0028578519977305e-06,
+        1.3761778883561578e-06,
+        1.330197278740508e-06,
+        1.2844372854946683e-06
+      ],
+      "kms_ratios": [
+        15.291127026637108,
+        31.643901821044505,
+        59.794225389991496,
+        118.24127883487313
+      ],
+      "kms_target_ratios": [
+        15.291127026637104,
+        31.64390182104453,
+        59.79422538999145,
+        118.24127883487313
+      ],
+      "kms_max_residual": 7.859016846988375e-16,
+      "retarded_raw_real": [
+        -1.9646426549446295e-06,
+        -1.4508279839857351e-06,
+        -1.149811593958621e-06,
+        -9.263835440155739e-07,
+        -1.6309225255775801e-06
+      ],
+      "retarded_raw_imaginary": [
+        -8.356033399969272e-07,
+        -1.221516401921716e-06,
+        -1.2425446998642733e-06,
+        -1.2305995145422314e-06,
+        -1.1799540893178546e-06
+      ],
+      "subtracted_real_response": [
+        -3.337201293151248e-07,
+        1.800962743243842e-07,
+        4.811131531099344e-07,
+        7.045412201671798e-07
+      ],
+      "subtracted_imaginary_response": [
+        3.443507493923701e-07,
+        -4.156089951989134e-08,
+        -6.258885815784932e-08,
+        -5.064366346479523e-08
+      ],
+      "reference_subtraction_residual": 0.0,
+      "retarded_imaginary_sign_witness": true,
+      "spectral_positivity_witness": true,
+      "dispersion_convergence_residual": 1.0332875289171189e-05,
+      "convergence_threshold": 0.01,
+      "convergence_passed": true,
+      "continuum_dispersion_interface_completed": true,
+      "real_part_subtraction_interface_completed": true,
+      "off_shell_matching_interface_completed": true,
+      "continuum_sunset_self_energy_completed": false,
+      "full_1pi_retarded_self_energy_completed": false,
+      "real_part_subtraction_completed": false,
+      "off_shell_matching_completed": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "physical_retarded_self_energy_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_SUBTRACTED_DISPERSION_NO_HOLDOUT"
+    }
+  },
+  "on_shell_match": {
+    "effective_mass": 0.0,
+    "greater_cut": 1.1116017804204263e-16,
+    "lesser_cut": 0.0,
+    "spectral_cut": 1.6462964231247821e-16
+  },
+  "checks": {
+    "formal_dispersion_interface_is_completed": true,
+    "once_subtraction_interface_is_completed": true,
+    "off_shell_matching_interface_is_completed": true,
+    "neutral_lane_is_explicit": true,
+    "kms_ratio_is_small": true,
+    "spectral_density_is_positive": true,
+    "retarded_imaginary_sign_is_consistent": true,
+    "retarded_response_is_finite": true,
+    "reference_subtraction_is_exact": true,
+    "dispersion_convergence_is_within_declared_threshold": true,
+    "on_shell_effective_mass_matches": true,
+    "on_shell_greater_cut_matches": true,
+    "on_shell_lesser_cut_matches": true,
+    "on_shell_spectral_cut_matches": true,
+    "continuum_artifact_is_passed": true,
+    "full_1pi_self_energy_remains_open": true,
+    "zero_eta_physical_limit_remains_open": true,
+    "unique_renormalization_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "full_self_energy_boundary_is_explicit": true,
+    "physical_kubo_boundary_is_explicit": true,
+    "alpha_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "continuum_dispersion_interface_completed": true,
+  "real_part_subtraction_interface_completed": true,
+  "off_shell_matching_interface_completed": true,
+  "continuum_sunset_self_energy_completed": false,
+  "full_1pi_retarded_self_energy_completed": false,
+  "real_part_subtraction_completed": false,
+  "off_shell_matching_completed": false,
+  "unique_physical_renormalization_scheme_match_completed": false,
+  "physical_retarded_self_energy_completed": false,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+  "next_controller": "derive the full 1PI retarded self-energy and its physical regulator/renormalization match before treating the formal dispersion interface as physical transport",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_SUBTRACTED_SUNSET_DISPERSION_INTERFACE_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "data_role": "ACTION_DERIVED_INTERNAL_FORMAL_SUBTRACTED_DISPERSION_NO_HOLDOUT",
+  "open_blockers": [
+    "full_1PI_retarded_self_energy_and_zero_eta_physical_limit_missing",
+    "unique_physical_renormalization_scheme_match_missing",
+    "off_shell_microscopic_action_match_missing",
+    "physical_Kubo_coefficient_missing",
+    "covariant_entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes only a formal once-subtracted retarded dispersion interface built from the declared neutral continuum cut and its finite regulator. It does not close the full 1PI retarded self-energy, the zero-regulator physical limit, unique renormalization, microscopic off-shell action matching, physical Kubo/transport, covariant entropy-current balance, SI Phi mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+}

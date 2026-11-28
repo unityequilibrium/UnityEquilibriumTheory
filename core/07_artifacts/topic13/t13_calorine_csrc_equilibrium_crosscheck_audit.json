@@ -1,0 +1,101 @@
+{
+  "schema_version": "t13-calorine-csrc-equilibrium-crosscheck-v1",
+  "artifact": "t13_calorine_csrc_equilibrium_crosscheck_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
+  "major_result": {
+    "major_result_id": "T13_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the 300 K Calorine C_src row is re-read with its declared volumetric SI unit",
+      "the primitive-cell volume is used to derive the candidate model density explicitly",
+      "the implied mass-specific heat capacity is compared with an independent 300 K c_v comparator without fitting",
+      "the comparator is retained as equilibrium/unit evidence and not promoted to Ding material equivalence"
+    ],
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not the source heat capacity",
+      "Phi": "effective response variable; not used by this cross-check",
+      "R_gen": "derived history trace; not used by this cross-check",
+      "R_obs": "observer record kept separate; no observer data consumed"
+    },
+    "equation_or_mapping": {
+      "model_density": "rho_model = N_C*M_C/(N_A*V_primitive)",
+      "implied_mass_cv": "c_v,implied = C_src/rho_model",
+      "comparison": "r = (c_v,implied - c_v,IAEA)/c_v,IAEA",
+      "result_role": "equilibrium/unit cross-check only; no Phi-to-temperature map"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "primitive_volume": "A^3",
+      "derived_density": "kg m^-3",
+      "implied_c_v": "J kg^-1 K^-1"
+    },
+    "derivation_class": "derived numerical consistency audit; no UET derivation and no calibration",
+    "observable": "equilibrium volumetric heat-capacity scale of the independent candidate lane",
+    "data_role": "COMPARISON_ONLY_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_calorine_zenodo_pbte_run_m884_summary.json",
+        "sha256": "7c7e046239505c9fe1f5a180c234f1d69c053e8344218ea806f418a373baf0d0",
+        "role": "derived Calorine C_src run summary"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/iaea_graphite_handbook_constant_volume_source_package.json",
+        "sha256": "568853f10f4ef1fc75b4ebed5851240ac8a94f05a5d72cf10af1a2d94bb62e09",
+        "role": "independent equilibrium c_v comparator"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_CALORINE_C_SRC_EQUILIBRIUM_CROSSCHECK",
+    "open_blockers": [
+      "calorine_route_material_regime_mapping_to_ding_missing",
+      "calorine_route_source_grade_uncertainty_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "equilibrium and unit cross-check only; no Ding C_src, alpha, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This result supports only a scoped consistency check for the Calorine candidate. It is not Ding C_src, not an accepted same-regime reproduction, not a Phi calibration, and not external validation of UET."
+  },
+  "source": {
+    "run_id": "t13_calorine_dim442_m884",
+    "temperature_K": 300.0,
+    "C_src_J_m^-3_K^-1": 1666798.596935212,
+    "primitive_volume_A3": 34.40911529816803,
+    "primitive_atoms": 4,
+    "carbon_standard_atomic_weight_kg_per_mol": 0.012011,
+    "avogadro_per_mol": 6.02214076e+23,
+    "iaea_source_id": "iaea_graphite_engineering_handbook_table_4_11",
+    "iaea_cv_mass_J_per_kg_K": 717.63968,
+    "iaea_uncertainty_status": "NOT_A_STANDARD_UNCERTAINTY_FOR_CV"
+  },
+  "observations": {
+    "derived_density_kg_per_m3": 2318.5408358217155,
+    "implied_cv_mass_J_per_kg_K": 718.8998231918054,
+    "relative_difference_to_iaea_cv": 0.0017559552891575824,
+    "relative_difference_percent": 0.17559552891575825,
+    "interpretation": "magnitude consistency is recorded; the IAEA manufactured-graphite comparator has no standard uncertainty and is not a Ding equivalence proof"
+  },
+  "checks": {
+    "run_summary_present": true,
+    "iaea_source_package_present": true,
+    "temperature_rows_match": true,
+    "c_src_unit_is_volumetric_si": true,
+    "iaea_cv_unit_is_mass_si": true,
+    "primitive_volume_positive": true,
+    "derived_density_positive": true,
+    "equilibrium_crosscheck_computed": true,
+    "iaea_standard_uncertainty_not_promoted": true,
+    "target_curve_used": false,
+    "fit_performed": false,
+    "alpha_phi_k_fit_performed": false,
+    "holdout_accessed": false
+  },
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "controlling_blocker": "calorine_route_material_regime_mapping_to_ding_and_source_grade_uncertainty_missing",
+  "next_action": "Use this cross-check as supporting evidence only; obtain an authorized Ding numeric package or complete a same-regime PBTE reproduction with source-grade uncertainty before changing C_src acceptance.",
+  "claim_promotion": false
+}

@@ -1,0 +1,157 @@
+{
+  "schema_version": "t13-graphite-elastic-bulk-modulus-source-audit-v1",
+  "artifact": "t13_graphite_elastic_bulk_modulus_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_GRAPHITE_ELASTIC_BULK_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_GRAPHITE_ELASTIC_BULK_MODULUS_SOURCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the Bosak et al. primary PDF is archived with a reproducible local hash",
+      "the room-temperature single-crystal graphite elastic tensor and reported B row are source-locked",
+      "the normal hexagonal compliance inversion and hydrostatic bulk formula reproduce the reported B within rounding",
+      "the dynamic/elastic versus isothermal K_T boundary is explicit"
+    ],
+    "equation_or_mapping": {
+      "compliance": "S=C_normal^-1",
+      "hydrostatic_bulk_modulus": "B_elastic=1/(2*S11+2*S12+4*S13+S33)",
+      "not_used": "K_T is not assigned from B_elastic; same-state Cp/Cv and measurement-mode identification are required"
+    },
+    "units": {
+      "temperature": "K",
+      "stiffness": "GPa",
+      "compliance": "Pa^-1",
+      "bulk_modulus": "Pa = J m^-3"
+    },
+    "derivation_class": "source transcription plus unit-aware tensor inversion; no UET derivation",
+    "observable": "room-temperature single-crystal graphite elastic bulk-modulus comparator",
+    "data_role": "INTERNAL_SOURCE_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
+        "sha256": "c24c6bbb4aace7de2f2eaffd234336065a2f4e8f829d7c0cb9c1af3ae4f5f24c"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bosak_2007_graphite_elasticity.pdf",
+        "sha256": "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_GRAPHITE_ELASTIC_BULK_COMPARATOR",
+    "open_blockers": [
+      "dynamic_or_elastic_bulk_modulus_is_not_an_isothermal_K_T_record",
+      "same_state_Cp_Cv_and_thermal_conversion_not_source_locked",
+      "single_crystal_kish_graphite_to_Ding_TTG_material_regime_mapping_not_closed",
+      "base_Phi_to_thermal_observable_map_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "source-locked graphite elastic bulk comparator only; no K_T, c_v, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This is a source-traceable elastic bulk-modulus comparator. It is not an isothermal K_T calibration, not a Ding/HOPG material match, not UET transport, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "bosak_krisch_2007_graphite_ixs_elasticity",
+    "title": "Elasticity of single-crystalline graphite: Inelastic x-ray scattering study",
+    "authors": [
+      "Alexey Bosak",
+      "Michael Krisch",
+      "Marcel Mohr",
+      "Janina Maultzsch",
+      "Christian Thomsen"
+    ],
+    "publisher": "American Physical Society",
+    "journal": "Physical Review B 75, 153408 (2007)",
+    "doi": "10.1103/PhysRevB.75.153408",
+    "url": "https://doi.org/10.1103/PhysRevB.75.153408",
+    "archive_url": "https://harvest.aps.org/v2/journals/articles/10.1103/PhysRevB.75.153408/fulltext",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/bosak_2007_graphite_elasticity.pdf",
+    "sha256": "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d",
+    "source_locators": [
+      "PDF p. 1: abstract and IXS elastic-modulus method",
+      "PDF pp. 1-2: kish graphite sample and acoustic-phonon sound-velocity method",
+      "PDF p. 3 / Table II: present experimental C11, C12, C13, C33, C44, C66, and B rows"
+    ],
+    "material": "kish graphite single-crystalline domains",
+    "temperature_scope": "room temperature; the source abstract and Table II do not provide a resolved temperature series",
+    "method": "inelastic x-ray scattering; acoustic-phonon initial slopes; Christoffel equation",
+    "source_limitations": [
+      "C13 is described by the source as poorly defined because of graphite anisotropy",
+      "the reported B is an elastic/dynamic comparator from IXS-derived constants, not a declared thermal isothermal K_T measurement",
+      "the sample is not demonstrated to be the Ding TTG sample or the NIST AXM-5Q1 reference"
+    ],
+    "local_hash_observed": "5db6247c3dbf48dcbed70d749da96ca61816fe6fed480f32d80a947ead649d7d",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/bosak_2007_graphite_elastic_bulk_source_package.json",
+    "package_sha256": "c24c6bbb4aace7de2f2eaffd234336065a2f4e8f829d7c0cb9c1af3ae4f5f24c"
+  },
+  "elastic_tensor": {
+    "temperature_K": 300.0,
+    "symmetry": "hexagonal graphite; five independent stiffness constants",
+    "values_GPa": {
+      "C11": 1109.0,
+      "C12": 139.0,
+      "C13": 0.0,
+      "C33": 38.7,
+      "C44": 5.0,
+      "C66": 485.0
+    },
+    "reported_uncertainty_GPa": {
+      "C11": 16.0,
+      "C12": 36.0,
+      "C13": 3.0,
+      "C33": 0.7,
+      "C44": 0.3,
+      "C66": 10.0
+    },
+    "uncertainty_interpretation": "Table II parenthesized uncertainties; covariance is not supplied and no independent-component propagation is used as the source B uncertainty"
+  },
+  "reported_bulk_modulus": {
+    "quantity": "B_elastic",
+    "value_GPa": 36.4,
+    "uncertainty_GPa": 1.1,
+    "source_locator": "PDF p. 3 / Table II / Present expt."
+  },
+  "reconstruction": {
+    "compliance_Pa^-1": {
+      "S11_Pa^-1": 9.161049431667988e-13,
+      "S12_Pa^-1": -1.1482289188474757e-13,
+      "S13_Pa^-1": -0.0,
+      "S33_Pa^-1": 2.583979328165375e-11
+    },
+    "reconstructed_B_elastic_GPa": 36.44001810774106,
+    "reported_B_elastic_GPa": 36.4,
+    "reported_B_uncertainty_GPa": 1.1,
+    "relative_difference": 0.001099398564314895,
+    "agreement_interpretation": "central-value agreement within source rounding; reported B uncertainty is retained rather than independently re-propagated"
+  },
+  "isothermal_boundary": {
+    "dynamic_elastic_value_is_K_T": false,
+    "required_thermal_relation": "K_T = K_S * C_v/C_p when the elastic measurement is identified as adiabatic K_S and the same-state Cp/Cv are available",
+    "same_state_Cp_Cv_available": false,
+    "K_T_emitted": false,
+    "material_regime_mapping_to_Ding": false
+  },
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "package_source_identity_present": true,
+    "material_and_temperature_declared": true,
+    "all_tensor_values_finite": true,
+    "reported_uncertainty_present": true,
+    "normal_block_positive": true,
+    "compliance_formula_explicit": true,
+    "reconstruction_finite": true,
+    "reconstruction_matches_reported_B": true,
+    "reported_bulk_uncertainty_present": true,
+    "dynamic_elastic_not_relabelled_as_K_T": true,
+    "K_T_not_emitted": true,
+    "same_state_Cp_Cv_not_claimed": true,
+    "Ding_material_mapping_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "isothermal_K_T_material_regime_and_dynamic_to_thermal_conversion_missing",
+  "next_controller": "Source-lock a same-state isothermal K_T or a permitted thermal conversion with Cp/Cv and map it to the Ding TTG material; do not use the elastic B row as alpha_Phi_K.",
+  "claim_boundary": "This closes only a source-traceable graphite elastic bulk comparator. It does not close K_T, c_v, C_src, e0, base Phi, alpha_Phi_K, transport, SK/KMS, entropy, or Full Topic 13."
+}

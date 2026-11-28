@@ -1,0 +1,127 @@
+{
+  "schema_version": "t13-mp48-phi-e-dimensional-comparator-v1",
+  "artifact": "t13_mp48_phi_e_dimensional_comparator_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_PHI_E_DIMENSIONAL_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_MP48_PHI_E_DIMENSIONAL_ANCHOR_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "a named standard-physics Phi_E coordinate is dimensionally anchored to MP48 harmonic thermal energy at a declared reference temperature",
+      "the same DOS and shared volume produce a numeric conditional alpha_Phi_E_K = e0/c_v without target fitting",
+      "the scale is separated from base UET Phi and no alpha_Phi_K is emitted"
+    ],
+    "equation_or_mapping": {
+      "thermal_energy": "u_th(T) = N_A integral[g(nu) h nu/(exp(h nu/(k_B T))-1) dnu]",
+      "reference_scale": "e0(T0) := u_th(T0)",
+      "named_coordinate": "Phi_E = Delta_u_ph / e0(T0)",
+      "temperature_map": "Delta_Tq = (e0(T0)/c_v(T0)) Phi_E",
+      "conditional_coefficient": "alpha_Phi_E_K = e0(T0)/c_v(T0)"
+    },
+    "units": {
+      "thermal_energy_density": "J m^-3",
+      "e0": "J m^-3",
+      "c_v": "J m^-3 K^-1",
+      "Phi_E": "dimensionless",
+      "alpha_Phi_E_K": "K per normalized Phi_E"
+    },
+    "derivation_class": "standard harmonic phonon statistical-mechanics energy/heat-capacity map with source-defined reference scale; no UET base-Phi derivation",
+    "observable": "MP48 harmonic graphite thermal energy and conditional temperature response",
+    "data_role": "EXTERNAL_INPUT_STANDARD_HARMONIC_COMPARATOR_NOT_BASE_PHI_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_mp48_phi_e_dimensional_comparator_audit.json"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_total_dos.dat.gz",
+        "sha256": "f8c0fe9013c36dc4861bfbfb27bdc64daf9739456d9523f5ace1b6d668fafeab"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+        "sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_PHI_E_DIMENSIONAL_COMPARATOR",
+    "open_blockers": [
+      "base_Phi_to_Phi_E_mapping_missing",
+      "independent_alpha_Phi_K_missing",
+      "Ding_PBTE_C_src_and_material_matching_missing",
+      "finite_temperature_interacting_transport_SK_KMS_entropy_and_dissipative_balance_missing"
+    ],
+    "dependency_unlocked": "named Phi_E comparator and standard dimensional map only; base Phi, alpha_Phi_K, Full Topic 13, Core, Gravity, and transport remain blocked",
+    "claim_boundary": "This is a source-traceable standard harmonic Phi_E comparator at a declared MP48 reference scale. It is not a base-Phi calibration, not alpha_Phi_K, not Ding PBTE validation, and not a UET temperature prediction."
+  },
+  "source": {
+    "source_id": "materials_project_phonon_database_v1_1_mp48",
+    "dos_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_total_dos.dat.gz",
+    "dos_sha256": "f8c0fe9013c36dc4861bfbfb27bdc64daf9739456d9523f5ace1b6d668fafeab",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/mp48_independent_graphite_cv_source_package.json",
+    "package_sha256": "86f5d5015b5bd0172bc2bfae64271955c56470650bdb6b8459bb1280e5dbc3cf",
+    "source_volume_A3": 37.09595476532483,
+    "molar_volume_m3_per_cell": 2.233970612233789e-05,
+    "reference_temperature_K": 300.0,
+    "zero_point_energy_included": false,
+    "temperature_rows": [
+      {
+        "temperature_K": 200.0,
+        "thermal_phonon_energy_J_per_mol_cell": 1656.5669364827945,
+        "thermal_phonon_energy_density_J_per_m3": 74153479.34350678,
+        "harmonic_cv_J_per_mol_cell_K": 20.656718693236943,
+        "harmonic_cv_volumetric_J_per_m3_K": 924663.8509976595,
+        "alpha_Phi_E_K": 80.19506684888721,
+        "phi_e_definition": "Phi_E = Delta_u_ph / e0(T_reference)"
+      },
+      {
+        "temperature_K": 250.0,
+        "thermal_phonon_energy_J_per_mol_cell": 2872.9126596789065,
+        "thermal_phonon_energy_density_J_per_m3": 128601184.09553416,
+        "harmonic_cv_J_per_mol_cell_K": 27.986836179149265,
+        "harmonic_cv_volumetric_J_per_m3_K": 1252784.4379816933,
+        "alpha_Phi_E_K": 102.65228414133077,
+        "phi_e_definition": "Phi_E = Delta_u_ph / e0(T_reference)"
+      },
+      {
+        "temperature_K": 300.0,
+        "thermal_phonon_energy_J_per_mol_cell": 4452.06794569206,
+        "thermal_phonon_energy_density_J_per_m3": 199289458.92624587,
+        "harmonic_cv_J_per_mol_cell_K": 35.13164265125593,
+        "harmonic_cv_volumetric_J_per_m3_K": 1572609.8838931075,
+        "alpha_Phi_E_K": 126.72529975005031,
+        "phi_e_definition": "Phi_E = Delta_u_ph / e0(T_reference)"
+      }
+    ]
+  },
+  "uncertainty_contract": {
+    "source_statistical_uncertainty": "NOT_REPORTED_BY_DEPOSIT",
+    "shared_volume_ratio_sensitivity": "cancels in alpha_Phi_E_K when e0 and c_v use the same source volume",
+    "harmonic_model_discrepancy_envelope_relative": 0.09474891795,
+    "temperature_volume_status": "OPEN",
+    "interpretation": "the displayed alpha_Phi_E_K is a conditional standard-physics comparator, not a statistical UET calibration uncertainty"
+  },
+  "checks": {
+    "dos_file_present": true,
+    "source_package_present": true,
+    "dos_row_count_is_201": true,
+    "negative_frequency_weight_is_zero": true,
+    "frequency_grid_is_uniform": true,
+    "source_volume_is_positive": true,
+    "reference_temperature_row_present": true,
+    "energy_and_capacity_are_finite": true,
+    "reference_alpha_is_volume_invariant": true,
+    "base_phi_to_phi_e_mapping_remains_open": true,
+    "numeric_alpha_Phi_K_not_emitted": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "alpha_Phi_K_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "numeric_alpha_Phi_E_K_emitted": true,
+  "reference_alpha_Phi_E_K": 126.72529975005031,
+  "controlling_blocker": "base_Phi_to_Phi_E_mapping_and_independent_alpha_Phi_K_missing",
+  "next_controller": "derive or source-lock the base-Phi-to-Phi_E amplitude map; do not relabel this conditional coefficient as alpha_Phi_K",
+  "claim_boundary": "Closes only a named Phi_E standard-physics dimensional comparator. Base Phi remains an effective response variable with no SI normalization, and Full Topic 13 remains blocked."
+}

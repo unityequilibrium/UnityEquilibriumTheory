@@ -1,0 +1,159 @@
+{
+  "schema_version": "t13-uet-o2-normal-response-curvature-v1",
+  "artifact": "t13_uet_o2_normal_response_curvature_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_ACTION_DERIVED_NORMAL_THERMAL_RESPONSE_CURVATURE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_NORMAL_RESPONSE_CURVATURE_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "natural-unit thermal response curvature of the normal one-loop branch from the declared m_eff(Phi) action map",
+      "temperature derivative T*d_T(kappa_Phi^T) with analytic and finite-difference verification",
+      "addition of the declared bare response-potential Hessian as a separate action term",
+      "explicit separation from normalized beta_T13, SI alpha_Phi_K, vacuum renormalization, condensate, and physical transport"
+    ],
+    "equation_or_mapping": {
+      "mass_map": "m_eff(Phi)^2=m^2-epsilon_nc*h*(Phi-Phi_*)",
+      "normal_domain": "Z*mu^2 < m_eff(Phi)^2",
+      "thermal_grand_potential": "Omega_T=T integral sum_{s=+,-} log(1-exp(-(E_k+s*mu)/T)) d^3k/(2*pi)^3",
+      "response_curvature": "kappa_Phi^T=partial_Phi^2 Omega_T=(partial_Phi m_eff^2)^2*partial_(m_eff^2) s_M",
+      "scalar_mass_derivative": "partial_(m_eff^2) s_M=-1/4 integral [A_sum/(T*E_k^2)+n_sum/E_k^3] d^3k/(2*pi)^3",
+      "temperature_slope": "beta_action_natural=T*partial_T kappa_Phi^T",
+      "total_curvature": "kappa_Phi=epsilon_nc*U''(Phi)+kappa_Phi^T"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "Phi": "natural response field with mass dimension one in the covariant action",
+      "kappa_Phi": "natural mass dimension two",
+      "partial_T_kappa_Phi": "natural mass dimension one",
+      "beta_action_natural": "natural mass dimension two",
+      "beta_T13": "not identified; its normalized K^-1 contract remains separate",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived thermal one-loop normal response curvature and temperature derivative; no vacuum renormalization or SI identification",
+    "observable": "natural-unit response free-energy curvature and temperature slope",
+    "data_role": "ACTION_DERIVED_NORMAL_THERMAL_RESPONSE_CURVATURE_NOT_SI_BETA",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_normal_response_curvature.py",
+        "sha256": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2"
+      },
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/uet_covariant_response.py",
+        "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_NORMAL_THERMAL_RESPONSE_CURVATURE",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "condensate_and_finite_temperature_normal_two_fluid_completion_not_closed",
+      "beta_T13_normalized_correspondence_and_source_provenance_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "action-derived natural-unit normal response curvature lane only; no normalized beta, physical transport, SI, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This derives a natural-unit thermal response curvature and temperature slope on the normal one-loop branch. It does not identify that slope with beta_T13, provide a renormalized finite-temperature action, close the condensate/normal two-fluid sector, supply physical Kubo coefficients, create an SI Phi map, calibrate alpha_Phi_K, validate TTG data, or close Full Topic 13."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "effective_mass_sq": 0.494,
+    "dm_eff_sq_dphi": -0.03,
+    "bare_response_curvature": 0.11200000000000002,
+    "thermal_response_curvature": -3.532913338265717e-06,
+    "total_response_curvature": 0.11199646708666175,
+    "thermal_response_curvature_temperature_derivative": -2.44892583332324e-05,
+    "beta_action_natural": -8.571240416631339e-06,
+    "momentum_cutoff": 49.199593494255616,
+    "quadrature_order": 256,
+    "thermal_only_loop": true,
+    "vacuum_counterterm_included": false,
+    "physical_beta_t13_identified": false,
+    "physical_si_mapping_included": false
+  },
+  "finite_difference_checks": {
+    "thermal_curvature_finite_difference": -3.5324174141315723e-06,
+    "thermal_curvature_analytic": -3.532913338265717e-06,
+    "thermal_curvature_abs_error": 4.959241341448946e-10,
+    "thermal_curvature_temperature_derivative_finite_difference": -2.4489257945678227e-05,
+    "thermal_curvature_temperature_derivative_analytic": -2.44892583332324e-05,
+    "thermal_curvature_temperature_derivative_abs_error": 3.8755417196842737e-13,
+    "total_curvature_finite_difference": 0.11199646804578578,
+    "total_curvature_analytic": 0.11199646708666175,
+    "total_curvature_abs_error": 9.591240301976e-10
+  },
+  "convergence_records": [
+    {
+      "quadrature_order": 96,
+      "cutoff_factor": 40.0,
+      "thermal_response_curvature": -3.532913338265697e-06,
+      "total_response_curvature": 0.11199646708666175,
+      "thermal_response_curvature_temperature_derivative": -2.448925833323232e-05,
+      "beta_action_natural": -8.571240416631312e-06
+    },
+    {
+      "quadrature_order": 192,
+      "cutoff_factor": 55.0,
+      "thermal_response_curvature": -3.532913338265741e-06,
+      "total_response_curvature": 0.11199646708666175,
+      "thermal_response_curvature_temperature_derivative": -2.4489258333232504e-05,
+      "beta_action_natural": -8.571240416631376e-06
+    },
+    {
+      "quadrature_order": 256,
+      "cutoff_factor": 70.0,
+      "thermal_response_curvature": -3.532913338265717e-06,
+      "total_response_curvature": 0.11199646708666175,
+      "thermal_response_curvature_temperature_derivative": -2.44892583332324e-05,
+      "beta_action_natural": -8.571240416631339e-06
+    }
+  ],
+  "convergence_relative_errors": {
+    "thermal_response_curvature": 6.713134530144711e-15,
+    "total_response_curvature": 0.0,
+    "thermal_response_curvature_temperature_derivative": 4.2889043036882284e-15,
+    "beta_action_natural": 4.3481979115733195e-15
+  },
+  "checks": {
+    "normal_branch_selected": true,
+    "mass_map_is_finite": true,
+    "bare_response_curvature_is_finite": true,
+    "thermal_response_curvature_is_finite": true,
+    "total_response_curvature_is_finite": true,
+    "analytic_thermal_curvature_matches_finite_difference": true,
+    "analytic_temperature_slope_matches_finite_difference": true,
+    "analytic_total_curvature_matches_finite_difference": true,
+    "thermal_only_convergence": true,
+    "temperature_slope_convergence": true,
+    "beta_action_is_not_beta_t13": true,
+    "alpha_is_not_emitted": true,
+    "vacuum_counterterm_is_excluded": true,
+    "condensate_is_excluded": true,
+    "physical_beta_is_not_identified": true,
+    "physical_si_mapping_is_not_included": true,
+    "Phi_is_not_temperature": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_is_not_state": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_normal_response_curvature.py": "043f6456d87a16af9cb7b42d613d2d229eb65efacccded35ad9d8873f7e8aad2",
+    "docs/core/uet_o2_one_loop_normal_branch.py": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+  },
+  "controlling_blocker": "beta_T13_normalized_correspondence_and_source_provenance_missing",
+  "next_controller": "Match the natural-unit response curvature to a declared normalized finite-temperature functional or independent source-backed coefficient without identifying it with beta_T13 by notation; separately close vacuum renormalization, normal/two-fluid transport, SI Phi mapping, and alpha calibration.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

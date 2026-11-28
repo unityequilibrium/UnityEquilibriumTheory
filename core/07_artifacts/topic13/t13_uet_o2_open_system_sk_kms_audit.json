@@ -1,0 +1,204 @@
+{
+  "schema_version": "t13-open-system-sk-kms-v1",
+  "artifact": "t13_uet_o2_open_system_sk_kms_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "local doubled-field SK action with an explicit retarded dissipative kernel",
+      "positive spectral density and lower-half-plane retarded poles for the declared ansatz",
+      "greater/lesser KMS ratio and fluctuation-dissipation noise identity",
+      "formal nonnegative entropy-production witness with an equilibrium zero limit"
+    ],
+    "equation_or_mapping": {
+      "contract_id": "T13-O2-OPEN-SYSTEM-SK-KMS-001",
+      "fourier_convention": "exp(-i omega t)",
+      "sk_action": "S_SK = integral dt [Phi_a (K_R Phi_r) + i Phi_a N Phi_a / 2]",
+      "retarded_kernel": "K_R(omega) = kappa - chi omega^2 - i gamma omega",
+      "local_operator": "K_R <- kappa + chi d_t^2 + gamma d_t",
+      "spectral_density": "rho_R(omega) = -2 Im K_R(omega) = 2 gamma omega",
+      "kms_correlators": "G^>(omega)=rho(1+n_B), G^<(omega)=rho n_B, G^>/G^<=exp(beta_th omega)",
+      "fdt_noise": "N(omega)=G^>(omega)+G^<(omega)=rho coth(beta_th omega/2)",
+      "entropy_production": "sigma_formal = gamma (d_t Phi_r)^2 / T >= 0",
+      "ontology": {
+        "C": "collective system-behaviour coordinate; not mass or charge",
+        "Phi": "effective response variable; contour copies Phi_r and Phi_a are not new physical fields",
+        "R_gen": "derived history trace; no backreaction in this lane",
+        "R_obs": "observer record kept separate from the formal dynamics"
+      },
+      "unit_contract": {
+        "hbar": "1 (formal lane convention)",
+        "k_B": "1 (formal lane convention)",
+        "omega": "formal inverse-time/energy unit",
+        "beta_th": "inverse formal energy unit",
+        "kappa_chi_gamma": "formal action-kernel units",
+        "Phi_r_Phi_a": "normalized effective-response copies",
+        "sigma_formal": "formal entropy-production witness; not an SI observable"
+      },
+      "coefficient_policy": "kappa, chi, and gamma are verifier parameters only; physical Kubo records require microscopic or source-backed matching",
+      "scope": {
+        "closed": "local formal open-system KMS/FDT and entropy-positivity identities",
+        "open": "interacting microscopic SK matching, physical Kubo provenance, finite-temperature transport, SI Phi anchor, alpha_Phi_K, and TTG material mapping"
+      }
+    },
+    "units": {
+      "hbar": "1 (formal lane convention)",
+      "k_B": "1 (formal lane convention)",
+      "omega": "formal inverse-time/energy unit",
+      "beta_th": "inverse formal energy unit",
+      "kappa_chi_gamma": "formal action-kernel units",
+      "Phi_r_Phi_a": "normalized effective-response copies",
+      "sigma_formal": "formal entropy-production witness; not an SI observable"
+    },
+    "derivation_class": "formal local open-system ansatz plus algebraic KMS/FDT and positivity verification; not microscopic derivation",
+    "observable": "formal dissipative response, noise, and entropy-production witness",
+    "data_role": "INTERNAL_FORMAL_SYNTHETIC_CONTROL_NO_SOURCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_open_system_sk_kms.py",
+        "sha256": "92b2beb2d531d2c907953b42e4a381f1442dc035ab0cdebd7edf8a5ed0a9b063",
+        "summary": {
+          "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE"
+        }
+      },
+      {
+        "path": "docs/scripts/audit/audit_topic13_open_system_sk_kms.py",
+        "sha256": "ad703a6cc1fbcd0fa3ef7fdfd45a865808f02ab2d51f55d182d5ae26d4898487",
+        "summary": {
+          "status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
+          "record_count": 5
+        }
+      }
+    ],
+    "verification_status": "PASS_FORMAL_OPEN_SYSTEM_SK_KMS_ENTROPY_LANE",
+    "open_blockers": [
+      "microscopic_interacting_SK_match_missing",
+      "physical_Kubo_coefficient_provenance_missing",
+      "base_Phi_SI_anchor_and_alpha_Phi_K_missing",
+      "TTG_material_state_mapping_missing"
+    ],
+    "dependency_unlocked": "formal open-system SK/KMS/entropy lane only; physical transport, full Topic 13, Core, Gravity, and Galaxy remain blocked",
+    "claim_boundary": "This closes only a declared formal open-system KMS/FDT and entropy-positivity lane. It is not a microscopic interacting match, physical Kubo coefficient, SI Phi calibration, TTG prediction, external validation, or global UET closure."
+  },
+  "checks": {
+    "sk_action_declared": true,
+    "local_retarded_kernel_declared": true,
+    "retarded_poles_in_lower_half_plane": true,
+    "spectral_density_nonnegative": true,
+    "damping_sign_nonnegative": true,
+    "kms_ratio_residual": true,
+    "fdt_noise_residual": true,
+    "noise_kernel_nonnegative": true,
+    "entropy_production_nonnegative": true,
+    "equilibrium_entropy_production_zero": true,
+    "formal_parameters_not_physical_kubo": true,
+    "phi_remains_effective_response": true,
+    "c_remains_collective": true,
+    "r_gen_remains_derived": true,
+    "no_source_rows_consumed": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true
+  },
+  "parameters": {
+    "beta_th": 4.0,
+    "kappa": 1.2,
+    "chi": 0.8,
+    "gamma": 0.3,
+    "temperature_formal": 0.25
+  },
+  "records": [
+    {
+      "omega": 0.15,
+      "retarded_real": 1.182,
+      "retarded_imag": -0.045,
+      "rho": 0.09,
+      "greater": 0.19947322936447837,
+      "lesser": 0.10947322936447838,
+      "kms_ratio": 1.8221188003905087,
+      "kms_target": 1.8221188003905089,
+      "noise": 0.3089464587289567,
+      "fdt_residual": -5.551115123125783e-17,
+      "spectral_positivity": true
+    },
+    {
+      "omega": 0.4,
+      "retarded_real": 1.0719999999999998,
+      "retarded_imag": -0.12,
+      "rho": 0.24,
+      "greater": 0.3007128842452448,
+      "lesser": 0.060712884245244784,
+      "kms_ratio": 4.953032424395116,
+      "kms_target": 4.953032424395115,
+      "noise": 0.3614257684904896,
+      "fdt_residual": 0.0,
+      "spectral_positivity": true
+    },
+    {
+      "omega": 0.9,
+      "retarded_real": 0.5519999999999998,
+      "retarded_imag": -0.27,
+      "rho": 0.54,
+      "greater": 0.55516929163592,
+      "lesser": 0.015169291635919896,
+      "kms_ratio": 36.59823444367799,
+      "kms_target": 36.59823444367799,
+      "noise": 0.5703385832718398,
+      "fdt_residual": 0.0,
+      "spectral_positivity": true
+    },
+    {
+      "omega": 1.7,
+      "retarded_real": -1.1119999999999999,
+      "retarded_imag": -0.51,
+      "rho": 1.02,
+      "greater": 1.0211373173666198,
+      "lesser": 0.0011373173666198529,
+      "kms_ratio": 897.8472916504176,
+      "kms_target": 897.8472916504176,
+      "noise": 1.0222746347332397,
+      "fdt_residual": 0.0,
+      "spectral_positivity": true
+    },
+    {
+      "omega": 2.6,
+      "retarded_real": -4.208000000000001,
+      "retarded_imag": -0.78,
+      "rho": 1.56,
+      "greater": 1.5600474761183092,
+      "lesser": 4.7476118309273407e-05,
+      "kms_ratio": 32859.62567444333,
+      "kms_target": 32859.62567444333,
+      "noise": 1.5600949522366188,
+      "fdt_residual": 2.220446049250313e-16,
+      "spectral_positivity": true
+    }
+  ],
+  "retarded_poles": [
+    {
+      "real": 1.2103072956898178,
+      "imag": -0.18750000000000006
+    },
+    {
+      "real": -1.2103072956898178,
+      "imag": -0.1875
+    }
+  ],
+  "entropy_production_values": [
+    0.0,
+    0.108,
+    0.5879999999999999,
+    1.4520000000000002
+  ],
+  "physical_kubo_coefficient_emitted": false,
+  "si_mapping_emitted": false,
+  "source_rows_consumed": false,
+  "target_data_used": false,
+  "parameter_fitting_performed": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "microscopic_interacting_SK_match_and_physical_Kubo_provenance_missing",
+  "next_controller": "Obtain a state-matched microscopic or source-locked retarded correlator with units and uncertainty; do not promote formal gamma or noise to physical transport or alpha calibration.",
+  "claim_boundary": "This closes only a declared formal open-system KMS/FDT and entropy-positivity lane. It is not a microscopic interacting match, physical Kubo coefficient, SI Phi calibration, TTG prediction, external validation, or global UET closure."
+}

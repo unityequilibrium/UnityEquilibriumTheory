@@ -1,0 +1,245 @@
+{
+  "schema_version": "t13-uet-o2-finite-temperature-renormalized-hartree-v1",
+  "artifact": "t13_uet_o2_finite_temperature_renormalized_hartree_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_RENORMALIZED_HARTREE_NORMAL_LANE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "vacuum Taylor-subtracted and thermal tadpoles enter one renormalized Hartree gap equation",
+      "the stationary Hartree functional, pressure, charge, entropy, and energy identities are evaluated on the same dressed normal state",
+      "gap residual, functional stationarity, normal-domain, positivity, finite-difference, and convergence contracts pass",
+      "the declared interacting normal branch is closed as a natural-unit scheme lane without promoting it to a physical finite-temperature theory"
+    ],
+    "equation_or_mapping": {
+      "vacuum_subtraction": "V_vac^R(x)=integral[E(x)-E(x_*)-(x-x_*)E'(x_*)-1/2*(x-x_*)^2 E''(x_*)] d^3k/(2*pi)^3",
+      "total_tadpole": "I_R(M^2;T,mu)=partial_M2[V_vac^R(M^2)+Omega_1^T(M^2;T,mu)]=I_vac^R+I_T",
+      "renormalized_gap": "M^2=m_eff(Phi)^2+(N+2)*lambda*I_R(M^2;T,mu)",
+      "hartree_functional": "Omega_H^R=Omega_1^R+(m_eff^2-M^2)I_R+(N+2)*lambda*I_R^2/2",
+      "stationary_pressure": "p_H^R=p_1^T-V_vac^R+(N+2)*lambda*I_R^2/2",
+      "thermodynamic_derivatives": "n=partial_mu p_H^R=n_1^T; s=partial_T p_H^R=s_1^T; epsilon=-p+T*s+mu*n"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "mass_squared_and_tadpole": "natural energy squared",
+      "pressure_energy_density": "natural energy density",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived mass-squared Taylor subtraction combined with stationary O(2) 2PI/Hartree normal functional; not microscopic matching",
+    "observable": "natural-unit renormalized Hartree normal-branch thermodynamic state",
+    "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_renormalized_hartree.py",
+        "sha256": "833517333209bd9b2e6f0deb42f0a792454769ee35400626deb18369396ce725"
+      },
+      {
+        "path": "docs/core/uet_o2_renormalized_normal_branch.py",
+        "sha256": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_self_energy.py",
+        "sha256": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py",
+        "sha256": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME",
+    "open_blockers": [
+      "physical_finite_temperature_renormalization_scheme_missing",
+      "condensate_and_finite_temperature_normal_two_fluid_eos_completion_missing",
+      "physical_kubo_coefficients_and_microscopic_sk_kms_matching_missing",
+      "entropy_current_dissipative_balance_and_heat_flux_mapping_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "renormalized interacting normal Hartree lane only; no condensed/two-fluid, physical Kubo, SI, alpha, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes one declared natural-unit renormalized Hartree normal-branch functional and its stationary thermodynamic identities. It does not select the physical finite-temperature renormalization scheme, close the condensed/two-fluid EOS, provide physical Kubo or microscopic SK/KMS coefficients, close entropy/heat-flux transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME",
+    "equations": {
+      "vacuum_subtraction": "V_vac^R(x)=integral[E(x)-E(x_*)-(x-x_*)E'(x_*)-1/2*(x-x_*)^2 E''(x_*)] d^3k/(2*pi)^3",
+      "total_tadpole": "I_R(M^2;T,mu)=partial_M2[V_vac^R(M^2)+Omega_1^T(M^2;T,mu)]=I_vac^R+I_T",
+      "renormalized_gap": "M^2=m_eff(Phi)^2+(N+2)*lambda*I_R(M^2;T,mu)",
+      "hartree_functional": "Omega_H^R=Omega_1^R+(m_eff^2-M^2)I_R+(N+2)*lambda*I_R^2/2",
+      "stationary_pressure": "p_H^R=p_1^T-V_vac^R+(N+2)*lambda*I_R^2/2",
+      "thermodynamic_derivatives": "n=partial_mu p_H^R=n_1^T; s=partial_T p_H^R=s_1^T; epsilon=-p+T*s+mu*n"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "mass_squared_and_tadpole": "natural energy squared",
+      "pressure_energy_density": "natural energy density",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "action-derived mass-squared Taylor subtraction combined with stationary O(2) 2PI/Hartree normal functional; not microscopic matching",
+    "approximation": {
+      "vacuum_scheme": "mass-squared Taylor subtraction through second order at Phi_*",
+      "interacting_self_energy": "Hartree tadpole with vacuum plus thermal contribution",
+      "condensate_branch": "NOT_INCLUDED",
+      "normal_two_fluid_transport": "NOT_INCLUDED",
+      "physical_kubo": "NOT_INCLUDED",
+      "sk_kms_microscopic_match": "NOT_INCLUDED"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective action response variable; not temperature",
+      "R_gen": "derived history trace only; not a state or feedback",
+      "R_obs": "separate observer record; not part of the action state"
+    },
+    "data_role": "ACTION_DERIVED_RENORMALIZED_HARTREE_NORMAL_SCHEME_NOT_PHYSICAL",
+    "claim_boundary": "This closes one declared natural-unit renormalized Hartree normal-branch functional and its stationary thermodynamic identities. It does not select the physical finite-temperature renormalization scheme, close the condensed/two-fluid EOS, provide physical Kubo or microscopic SK/KMS coefficients, close entropy/heat-flux transport, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "reference": {
+    "dressed_mass_sq": 0.5008399546603903,
+    "vacuum_grand_potential": 4.8332094143531255e-12,
+    "thermal_grand_potential": -0.0018282020735639636,
+    "total_tadpole": 0.00213748583254407,
+    "thermal_self_energy": 0.006839954664141024,
+    "double_bubble_pressure": 7.310153094922585e-06,
+    "pressure": 0.0018355122218256768,
+    "charge_density": 0.0028625916723437096,
+    "entropy_density": 0.02537532029316284,
+    "energy_density": 0.0076183682152500595,
+    "charge_susceptibility": 0.016261675856652544,
+    "heat_capacity_at_mu": 0.09212403286222769,
+    "gap_residual": -3.750688995496354e-12,
+    "functional_stationarity_residual": 1.439807342311346e-14,
+    "momentum_cutoff": 70.0,
+    "quadrature_order": 256,
+    "iterations": 34
+  },
+  "reference_parameters": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "quadrature_order": 256,
+    "cutoff_factor": 70.0
+  },
+  "finite_difference_checks": {
+    "charge_from_pressure": 0.002862576945380753,
+    "charge_state": 0.0028625916723437096,
+    "charge_abs_error": 1.4726962956415623e-08,
+    "entropy_from_pressure": 0.025375307506567957,
+    "entropy_state": 0.02537532029316284,
+    "entropy_abs_error": 1.2786594883601454e-08
+  },
+  "convergence_records": [
+    {
+      "dressed_mass_sq": 0.5008399546603903,
+      "vacuum_grand_potential": 1.4711486077463443e-12,
+      "thermal_grand_potential": -0.0018282020735640085,
+      "total_tadpole": 0.0021374858311348378,
+      "thermal_self_energy": 0.006839954659631481,
+      "double_bubble_pressure": 7.310153085283502e-06,
+      "pressure": 0.0018355122251781436,
+      "charge_density": 0.002862591672343689,
+      "entropy_density": 0.025375320293162956,
+      "energy_density": 0.007618368211897628,
+      "charge_susceptibility": 0.016261675856652412,
+      "heat_capacity_at_mu": 0.09212403286222776,
+      "gap_residual": 7.588539172043163e-13,
+      "functional_stationarity_residual": -2.9130764998359886e-15,
+      "momentum_cutoff": 40.0,
+      "quadrature_order": 96,
+      "iterations": 34,
+      "cutoff_factor": 40.0
+    },
+    {
+      "dressed_mass_sq": 0.5008399546603903,
+      "vacuum_grand_potential": 2.683917213561239e-12,
+      "thermal_grand_potential": -0.0018282020735642605,
+      "total_tadpole": 0.002137485832120566,
+      "thermal_self_energy": 0.006839954662785812,
+      "double_bubble_pressure": 7.310153092025839e-06,
+      "pressure": 0.0018355122239723692,
+      "charge_density": 0.002862591672343724,
+      "entropy_density": 0.025375320293163733,
+      "energy_density": 0.007618368213103682,
+      "charge_susceptibility": 0.01626167585665262,
+      "heat_capacity_at_mu": 0.09212403286222759,
+      "gap_residual": -2.395477045891159e-12,
+      "functional_stationarity_residual": 9.195714039868351e-15,
+      "momentum_cutoff": 55.0,
+      "quadrature_order": 192,
+      "iterations": 34,
+      "cutoff_factor": 55.0
+    },
+    {
+      "dressed_mass_sq": 0.5008399546603903,
+      "vacuum_grand_potential": 4.8332094143531255e-12,
+      "thermal_grand_potential": -0.0018282020735639636,
+      "total_tadpole": 0.00213748583254407,
+      "thermal_self_energy": 0.006839954664141024,
+      "double_bubble_pressure": 7.310153094922585e-06,
+      "pressure": 0.0018355122218256768,
+      "charge_density": 0.0028625916723437096,
+      "entropy_density": 0.02537532029316284,
+      "energy_density": 0.0076183682152500595,
+      "charge_susceptibility": 0.016261675856652544,
+      "heat_capacity_at_mu": 0.09212403286222769,
+      "gap_residual": -3.750688995496354e-12,
+      "functional_stationarity_residual": 1.439807342311346e-14,
+      "momentum_cutoff": 70.0,
+      "quadrature_order": 256,
+      "iterations": 34,
+      "cutoff_factor": 70.0
+    }
+  ],
+  "convergence_relative_errors": {
+    "dressed_mass_sq": 0.0,
+    "total_tadpole": 1.9813168985426864e-10,
+    "pressure": 1.1695331164671075e-09,
+    "charge_density": 4.999479602723545e-15,
+    "entropy_density": 3.513838865286463e-14
+  },
+  "checks": {
+    "reference_values_are_finite": true,
+    "normal_branch_is_strict": true,
+    "gap_residual_is_closed": true,
+    "functional_stationarity_is_closed": true,
+    "total_tadpole_is_positive": true,
+    "thermal_self_energy_is_positive": true,
+    "charge_susceptibility_is_nonnegative": true,
+    "heat_capacity_is_nonnegative": true,
+    "energy_identity_is_closed": true,
+    "charge_derivative_matches_pressure": true,
+    "entropy_derivative_matches_pressure": true,
+    "dressed_mass_converges": true,
+    "tadpole_converges": true,
+    "pressure_converges": true,
+    "charge_converges": true,
+    "entropy_converges": true,
+    "vacuum_scheme_is_included": true,
+    "hartree_interaction_is_included": true,
+    "condensed_branch_is_excluded": true,
+    "physical_kubo_is_excluded": true,
+    "si_mapping_is_excluded": true,
+    "natural_units_are_declared": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_is_separate": true,
+    "no_holdout_or_fit": true
+  },
+  "failed_checks": [],
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_renormalized_hartree.py": "833517333209bd9b2e6f0deb42f0a792454769ee35400626deb18369396ce725",
+    "docs/core/uet_o2_renormalized_normal_branch.py": "cf536a7e04fe75f284c5c5078f5719276b2ca0459e84bbbb1dd027290c92537c",
+    "docs/core/uet_o2_finite_temperature_self_energy.py": "120c020942b67763de0a71c9659a2feea711a9eb991c13422ce3831f85477d7b",
+    "docs/core/uet_o2_finite_temperature_hartree_thermodynamics.py": "476a91e839f0f32c8d7519fc5333e11aed3c59b4226db95284875cf8a248f471"
+  },
+  "controlling_blocker": "condensate_and_finite_temperature_normal_two_fluid_eos_completion_missing",
+  "next_controller": "Extend the renormalized functional to a self-consistent condensed branch and state-matched retarded Kubo/SK-KMS interface; retain the present normal scheme as formal natural-unit evidence only.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

@@ -1,0 +1,175 @@
+{
+  "schema_version": "matter-space-conserved-flux-telegraph-verification-v1",
+  "artifact": "matter_space_conserved_flux_telegraph_verification",
+  "generated_at": "2026-09-14",
+  "status": "PASS",
+  "operator_mode": "matter_space_conserved_flux_telegraph_v1",
+  "branch_id": "T13-CAUSAL-FLUX-TELEGRAPH-001",
+  "equations": {
+    "conservation": "C_t + partial_x J_C = 0",
+    "flux_relaxation": "tau_C * J_C_t + J_C = -M_C * partial_x(mu_C)",
+    "chemical_potential": "mu_C = a_C*C + b_C*C^3 - coupling_g*C*Phi",
+    "energy": "E_C = integral[U(C,Phi) + tau_C*J_C^2/(2*M_C)] dx",
+    "dissipation": "dE_C/dt = -integral[J_C^2/M_C] dx for closed boundaries"
+  },
+  "units": {
+    "lane": "normalized",
+    "C": "normalized collective-coordinate density lane",
+    "J_C": "normalized conserved flux lane",
+    "Phi": "normalized effective response variable",
+    "kappa_C": "0 in this named branch; the original kappa_C>0 class remains blocked"
+  },
+  "derivation_class": "named local conserved flux-telegraph branch; normalized internal verification",
+  "config": {
+    "a_C": 0.8,
+    "b_C": 1.0,
+    "mobility_C": 0.04,
+    "tau_C": 0.7,
+    "coupling_g": 0.15,
+    "kappa_C": 0.0,
+    "characteristic_speed": 0.2138089935299395,
+    "boundary_condition": "zero_flux"
+  },
+  "domain_of_dependence": {
+    "initial_condition": "single-cell compact pulse",
+    "grid": {
+      "n": 161,
+      "dx": 0.001,
+      "center_index": 80,
+      "target_distance_cells": 40
+    },
+    "time_step": {
+      "dt": 0.0018708286933869708,
+      "cfl": 0.4,
+      "steps_before_target": 39,
+      "arrival_step_checked": 40
+    },
+    "metrics": {
+      "prearrival_max_outside_discrete_cone": 0.0,
+      "prearrival_leakage_fraction": 0.0,
+      "arrival_target_abs": 1.4032711954504658e-33,
+      "support_excess_cells": 0,
+      "max_mass_drift": 2.710505431213761e-20,
+      "max_energy_relative_residual": 9.81315699483249e-07
+    },
+    "checks": {
+      "finite_cone_support": true,
+      "prearrival_threshold": true,
+      "arrival_target_nonzero": true,
+      "mass_conservation": true,
+      "energy_ledger": true,
+      "no_clipping": true,
+      "no_cone_padding": true,
+      "no_parameter_fitting": true
+    }
+  },
+  "convergence": {
+    "initial_condition": "compact triangular pulse with fixed physical width 0.004",
+    "physical_time_target": 0.01,
+    "temporal": {
+      "coarse": {
+        "dt": 0.0018708286933869708,
+        "steps": 5.0,
+        "physical_time": 0.009354143466934854,
+        "max_mass_drift": 0.0,
+        "max_energy_relative_residual": 2.855590860212537e-07
+      },
+      "refined": {
+        "dt": 0.0009354143466934854,
+        "steps": 11.0,
+        "physical_time": 0.01028955781362834,
+        "max_mass_drift": 5.421010862427522e-20,
+        "max_energy_relative_residual": 7.924819655632729e-08
+      },
+      "relative_l2_difference": 0.04631584796745402
+    },
+    "spatial": {
+      "coarse": {
+        "dt": 0.0018708286933869708,
+        "steps": 5.0,
+        "physical_time": 0.009354143466934854,
+        "max_mass_drift": 0.0,
+        "max_energy_relative_residual": 2.855590860212537e-07
+      },
+      "refined": {
+        "dt": 0.0004677071733467427,
+        "steps": 21.0,
+        "physical_time": 0.009821850640281597,
+        "max_mass_drift": 5.421010862427522e-20,
+        "max_energy_relative_residual": 2.01569772181669e-08
+      },
+      "relative_l2_difference": 0.0789654583013321
+    },
+    "checks": {
+      "temporal_finite": true,
+      "spatial_finite": true,
+      "temporal_reasonable": true,
+      "spatial_reasonable": true
+    }
+  },
+  "verification": {
+    "checks": {
+      "finite_cone_support": true,
+      "prearrival_threshold": true,
+      "arrival_target_nonzero": true,
+      "mass_conservation": true,
+      "energy_ledger": true,
+      "no_clipping": true,
+      "no_cone_padding": true,
+      "no_parameter_fitting": true,
+      "temporal_finite": true,
+      "spatial_finite": true,
+      "temporal_reasonable": true,
+      "spatial_reasonable": true
+    },
+    "full_default_operator_replaced": false,
+    "trace_backreaction": false,
+    "xie_2026_accessed": false
+  },
+  "evidence_inputs": {
+    "implementation": "docs/core/uet_matter_space_flux_telegraph.py",
+    "implementation_sha256": "19cf32dac3e2fd3b1b16e2998542aa17d92c7701b874025ae373e0a3c7eeeda9",
+    "baseline_no_go": "docs/core/artifacts/conserved_c_finite_cone_no_go_assessment.json"
+  },
+  "claim_boundary": "This artifact verifies a named normalized conserved flux branch only. It does not pass the original kappa_C>0 conserved-gradient equation, does not close the coupled Phi branch, and does not establish SI or external thermal validity.",
+  "next_controller": "integrate the named C flux branch with the causal Phi lane and rerun the full-candidate leakage/energy gate",
+  "major_result": {
+    "major_result_id": "T13_CAUSAL_FLUX_TELEGRAPH_BRANCH",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "conserved C flux-telegraph equations with local chemical potential",
+      "finite-volume compact discrete domain of dependence",
+      "mass conservation and normalized energy/dissipation diagnostic"
+    ],
+    "equation_or_mapping": {
+      "conservation": "C_t + partial_x J_C = 0",
+      "flux_relaxation": "tau_C * J_C_t + J_C = -M_C * partial_x(mu_C)",
+      "chemical_potential": "mu_C = a_C*C + b_C*C^3 - coupling_g*C*Phi",
+      "energy": "E_C = integral[U(C,Phi) + tau_C*J_C^2/(2*M_C)] dx",
+      "dissipation": "dE_C/dt = -integral[J_C^2/M_C] dx for closed boundaries"
+    },
+    "units": {
+      "lane": "normalized",
+      "C": "normalized collective-coordinate density lane",
+      "J_C": "normalized conserved flux lane",
+      "Phi": "normalized effective response variable",
+      "kappa_C": "0 in this named branch; the original kappa_C>0 class remains blocked"
+    },
+    "derivation_class": "named local conserved flux-telegraph branch; normalized internal verification",
+    "observable": "normalized C response and conserved flux diagnostic",
+    "data_role": "internal numerical branch verification; not external thermal data",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/matter_space_conserved_flux_telegraph_verification.json"
+      }
+    ],
+    "verification_status": "PASS",
+    "open_blockers": [
+      "full coupled Phi integration",
+      "full-candidate leakage rerun"
+    ],
+    "dependency_unlocked": "none; Topic 13 full bridge remains open",
+    "claim_boundary": "CLOSED_FOR_LANE only: this named normalized C flux branch does not replace the original kappa_C>0 baseline, close Phi transport, or establish SI or external thermal validity."
+  }
+}

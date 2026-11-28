@@ -1,0 +1,250 @@
+{
+  "schema_version": "t13-action-elastic-scattering-v1",
+  "major_result_id": "T13_NORMAL_TREE_ELASTIC_CONTACT_PLUS_PHI_EXCHANGE_V1",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "equation_registry_ids": [
+    "uet.o2.thermal.normal_tree_elastic_scattering"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_ADDENDUM_NOT_CENTRAL_ACCEPTANCE",
+  "verification_status": "PASS_SCOPED_TREE_ELASTIC_DIAGNOSTIC",
+  "what_is_closed": [
+    "Action-normalized charge-resolved elastic contact/Phi-exchange amplitude on a nonresonant normal background.",
+    "Full-solid-angle identical-final-state counting and finite-grid tagged elastic loss."
+  ],
+  "equation_or_mapping": {
+    "canonical": "chi_c=sqrt(Z)*chi; phi_c=sqrt(epsilon*K)*deltaPhi; lambda_c=lambda/Z^2; G=sqrt(epsilon)*h/(Z*sqrt(K)); M_Phi^2=U''/K",
+    "amplitude": "M_abcd=2*lambda_c*(d_ab*d_cd+d_ac*d_bd+d_ad*d_bc)+G^2*[d_ab*d_cd/(s-M_Phi^2)+d_ac*d_bd/(t-M_Phi^2)+d_ad*d_bc/(u-M_Phi^2)] up to common minus sign",
+    "cross_section": "d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final); S_final=2 for equal final charges, otherwise 1",
+    "tagged_loss": "Gamma_q(k)=sum_r integral d^3p/(2*pi)^3 n_r v_Moller integral dOmega (d_sigma/dOmega)(1+n_3)(1+n_4)"
+  },
+  "ontology": {
+    "C": "not identified with charge or mass",
+    "Phi": "effective response; internal propagator is a lane calculation, not a particle claim",
+    "R_gen": "derived history trace, no state/backreaction",
+    "R_obs": "excluded"
+  },
+  "units": {
+    "m_T_mu_G": "natural energy",
+    "lambda": "dimensionless",
+    "sigma": "energy^-2",
+    "Gamma_loss": "energy"
+  },
+  "derivation_class": "TREE_ACTION_ELASTIC_QUASIPARTICLE_APPROXIMATION",
+  "observable": "tagged elastic loss rate; not heat conductivity",
+  "data_role": "SYNTHETIC_DERIVED_DIAGNOSTIC",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2
+  },
+  "checks": {
+    "quartic_matches_production_potential": true,
+    "cubic_matches_production_interaction": true,
+    "contact_like_factor_eight": true,
+    "contact_unlike_factor_sixteen": true,
+    "positive_elastic_loss": true,
+    "detailed_balance": true,
+    "last_refinement_below_declared_2e_minus3": true
+  },
+  "contact_cross_section_ratios_to_legacy": {
+    "like": 8.000000000000002,
+    "unlike": 16.000000000000004
+  },
+  "production_cubic": 0.2,
+  "resolution_sequence": [
+    {
+      "rates_by_tag_and_target": [
+        [
+          1.4429501108629263e-08,
+          1.8387289126893259e-07
+        ],
+        [
+          3.675822497794429e-08,
+          7.348259419634639e-08
+        ]
+      ],
+      "rates": [
+        1.9830239237756186e-07,
+        1.1024081917429068e-07
+      ],
+      "max_detailed_balance_relative_error": 1.0222493447652696e-14,
+      "role": "TAGGED_ELASTIC_LOSS_NOT_FULL_DAMPING_OR_TRANSPORT",
+      "grid": {
+        "radial": 24,
+        "incoming": 16,
+        "outgoing": 12,
+        "azimuth": 12,
+        "cutoff": 12.0
+      }
+    },
+    {
+      "rates_by_tag_and_target": [
+        [
+          1.4429419017822099e-08,
+          1.8387122177499518e-07
+        ],
+        [
+          3.67578919827137e-08,
+          7.348216836243107e-08
+        ]
+      ],
+      "rates": [
+        1.9830064079281727e-07,
+        1.1024006034514477e-07
+      ],
+      "max_detailed_balance_relative_error": 1.9108904671646583e-14,
+      "role": "TAGGED_ELASTIC_LOSS_NOT_FULL_DAMPING_OR_TRANSPORT",
+      "grid": {
+        "radial": 40,
+        "incoming": 24,
+        "outgoing": 16,
+        "azimuth": 16,
+        "cutoff": 16.0
+      }
+    },
+    {
+      "rates_by_tag_and_target": [
+        [
+          1.4429404216754366e-08,
+          1.838709285145297e-07
+        ],
+        [
+          3.675783361977889e-08,
+          7.348209237445102e-08
+        ]
+      ],
+      "rates": [
+        1.9830033273128408e-07,
+        1.1023992599422992e-07
+      ],
+      "max_detailed_balance_relative_error": 1.1683732866295308e-14,
+      "role": "TAGGED_ELASTIC_LOSS_NOT_FULL_DAMPING_OR_TRANSPORT",
+      "grid": {
+        "radial": 64,
+        "incoming": 32,
+        "outgoing": 24,
+        "azimuth": 24,
+        "cutoff": 20.0
+      }
+    }
+  ],
+  "adjacent_relative_changes": [
+    8.832897695265629e-06,
+    1.553507502305429e-06
+  ],
+  "contact_only_comparison": {
+    "rates_by_tag_and_target": [
+      [
+        2.0891507869554357e-08,
+        2.1104095528728707e-07
+      ],
+      [
+        4.2173320165176897e-08,
+        1.0650659943339821e-07
+      ]
+    ],
+    "rates": [
+      2.319324631568414e-07,
+      1.486799195985751e-07
+    ],
+    "max_detailed_balance_relative_error": 1.9108904671646583e-14,
+    "role": "TAGGED_ELASTIC_LOSS_NOT_FULL_DAMPING_OR_TRANSPORT",
+    "grid": {
+      "radial": 40,
+      "incoming": 24,
+      "outgoing": 16,
+      "azimuth": 16,
+      "cutoff": 16.0
+    }
+  },
+  "exchange_to_contact_rate_ratio_same_grid": [
+    0.8549930358766507,
+    0.7414589720171013
+  ],
+  "uncertainty_boundary": "Adjacent grid differences are numerical diagnostics, not a certified error bound or material uncertainty.",
+  "source_hashes": {
+    "docs/core/uet_covariant_matter.py": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53",
+    "docs/core/uet_covariant_response.py": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2",
+    "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b",
+    "docs/core/test/test_topic13_action_normalized_elastic_scattering.py": "37d3353dd8286b1b01558ea2690a9aad96be130c8a2077683b38446aaeff9bd5"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/uet_covariant_matter.py",
+      "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+    },
+    {
+      "path": "docs/core/uet_covariant_response.py",
+      "sha256": "7fb4b7228afb8ede0ac4f1664d634346ef46cc7678c94ed7b55d73645590c0c2"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py",
+      "sha256": "c09fbdd4d921c2c9ea1ba578c27935887900545725c978015104e9d4594a258b"
+    },
+    {
+      "path": "docs/core/test/test_topic13_action_normalized_elastic_scattering.py",
+      "sha256": "37d3353dd8286b1b01558ea2690a9aad96be130c8a2077683b38446aaeff9bd5"
+    }
+  ],
+  "literature_context": [
+    {
+      "url": "https://www.damtp.cam.ac.uk/user/tong/qft/qfthtml/S3.html",
+      "section": "3.5 and 3.6.3",
+      "role": "primary lecture conventions for scalar exchange and invariant flux; no numeric input"
+    }
+  ],
+  "open_blockers": [
+    "full_linearized_collision_operator_and_current_vertex",
+    "response_external_inelastic_channels",
+    "finite_temperature_background_and_self_energy",
+    "resonant_width_and_loop_matching",
+    "full_SK_KMS_entropy_transport_and_material_SI_mapping"
+  ],
+  "controlling_blocker": "full_species_response_collision_operator_not_just_tagged_elastic_loss",
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "parameter_fitting_performed": false,
+  "xie_2026_accessed": false,
+  "claim_boundary": "New named tree elastic diagnostic only. No replacement of old comparator, no full transport, no physical Phi-particle claim, no Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Action-normalized charge-resolved elastic contact/Phi-exchange amplitude on a nonresonant normal background.",
+      "Full-solid-angle identical-final-state counting and finite-grid tagged elastic loss."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "full_linearized_collision_operator_and_current_vertex",
+      "response_external_inelastic_channels",
+      "finite_temperature_background_and_self_energy",
+      "resonant_width_and_loop_matching",
+      "full_SK_KMS_entropy_transport_and_material_SI_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [],
+    "STATUS": "PASS_SCOPED_TREE_ELASTIC_DIAGNOSTIC",
+    "WHAT_CHANGED": "Charge-resolved contact plus nonresonant Phi exchange and explicit final-state counting.",
+    "EQUATION_OR_MAPPING": {
+      "canonical": "chi_c=sqrt(Z)*chi; phi_c=sqrt(epsilon*K)*deltaPhi; lambda_c=lambda/Z^2; G=sqrt(epsilon)*h/(Z*sqrt(K)); M_Phi^2=U''/K",
+      "amplitude": "M_abcd=2*lambda_c*(d_ab*d_cd+d_ac*d_bd+d_ad*d_bc)+G^2*[d_ab*d_cd/(s-M_Phi^2)+d_ac*d_bd/(t-M_Phi^2)+d_ad*d_bc/(u-M_Phi^2)] up to common minus sign",
+      "cross_section": "d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final); S_final=2 for equal final charges, otherwise 1",
+      "tagged_loss": "Gamma_q(k)=sum_r integral d^3p/(2*pi)^3 n_r v_Moller integral dOmega (d_sigma/dOmega)(1+n_3)(1+n_4)"
+    },
+    "VERIFICATION": {
+      "quartic_matches_production_potential": true,
+      "cubic_matches_production_interaction": true,
+      "contact_like_factor_eight": true,
+      "contact_unlike_factor_sixteen": true,
+      "positive_elastic_loss": true,
+      "detailed_balance": true,
+      "last_refinement_below_declared_2e_minus3": true
+    },
+    "CONTROLLING_BLOCKER": "full_species_response_collision_operator_not_just_tagged_elastic_loss",
+    "NEXT_ACTION": "Assemble gain/loss linearization with matter and response channels, then current/entropy matching.",
+    "CLAIM_BOUNDARY": "New named tree elastic diagnostic only. No replacement of old comparator, no full transport, no physical Phi-particle claim, no Full Topic 13 closure."
+  }
+}

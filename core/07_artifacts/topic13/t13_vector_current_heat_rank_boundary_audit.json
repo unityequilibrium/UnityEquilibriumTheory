@@ -1,0 +1,1093 @@
+{
+  "schema_version": "t13-vector-current-heat-rank-boundary-v1",
+  "major_result_id": "T13_VECTOR_CURRENT_GALERKIN_AND_HEAT_RANK_BOUNDARY",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "CLOSED_FOR_LANE",
+  "closure_disposition": "VECTOR_LANE_CLOSED_AND_INDEPENDENT_HEAT_CHANNEL_CLOSED_AS_NO_GO",
+  "verification_status": "PASS_VECTOR_CURRENT_HEAT_RANK_BOUNDARY",
+  "what_is_closed": [
+    "An invariant isotropic vector Galerkin collision block now preserves the momentum null mode event by event and has a full-rank dissipative complement.",
+    "Charge-current and grand-heat sources are explicitly projected to the Landau frame without altering the collision operator.",
+    "For the elastic equal-mass two-charge lane, the projected identity J_Q_perp=-mu*J_charge_perp is verified and the two sources have rank one; at mu=0 the projected heat source vanishes.",
+    "An independent heat-current transport channel is therefore structurally absent in this lane and cannot be created by rerunning the same elastic kernel."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.invariant_vector_current_landau_heat_rank_boundary"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "vector_features": "F_qk^i=(p^i/m)*y(E)^k",
+    "vector_quadratic_form": "Q_ab^(l=1)=(beta/12)*sum_events W_without_beta DeltaF_a dot DeltaF_b",
+    "vector_operator": "L_vector=G_vector^(-1/2) Q_vector G_vector^(-1/2)",
+    "charge_source": "J_charge^i=q*p^i/E",
+    "grand_heat_source": "J_Q^i=(E-mu*q)*p^i/E=P^i-mu*J_charge^i",
+    "landau_rank_boundary": "P_perp J_Q=-mu*P_perp J_charge"
+  },
+  "ontology": {
+    "C": "unchanged",
+    "Phi": "effective response variable; internal exchange only",
+    "R_gen": "excluded",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "collision_operator": 1,
+    "charge_source_function": 0,
+    "grand_heat_source_function": 1,
+    "charge_response_form": 1,
+    "heat_response_form": 3
+  },
+  "derivation_class": "invariant_vector_galerkin_with_landau_source_rank_no_go",
+  "observable": "Vector charge/heat source rank and collision response form, not conductivity",
+  "data_role": "DERIVED_SYNTHETIC_STRUCTURAL_CANDIDATE",
+  "reference_state": {
+    "temperature": 0.25,
+    "chemical_potential": 0.1,
+    "effective_mass": 1.0,
+    "momentum_cutoff": 12.0,
+    "radial_order": 16,
+    "incoming_angular_order": 6,
+    "outgoing_angular_order": 6,
+    "outgoing_azimuth_order": 8,
+    "feature_order": 4,
+    "basis_dimension": 8,
+    "collision_event_count": 294912,
+    "raw_gram_matrix": [
+      [
+        0.00025439862835426985,
+        1.91488399368084e-05,
+        1.953939815052099e-06,
+        2.498636614754751e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.91488399368084e-05,
+        1.9539398150520995e-06,
+        2.4986366147547504e-07,
+        3.8275332702790857e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        1.953939815052099e-06,
+        2.4986366147547504e-07,
+        3.8275332702790843e-08,
+        6.81273569602537e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.498636614754751e-07,
+        3.8275332702790857e-08,
+        6.81273569602537e-09,
+        1.3791094649279828e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0005681476322965623,
+        4.2681999303232204e-05,
+        4.351586390893674e-06,
+        5.562622241867801e-07
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.2681999303232204e-05,
+        4.351586390893675e-06,
+        5.562622241867801e-07,
+        8.519635510128131e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.351586390893674e-06,
+        5.562622241867801e-07,
+        8.51963551012813e-08,
+        1.51631081374515e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.562622241867801e-07,
+        8.519635510128131e-08,
+        1.51631081374515e-08,
+        3.069367795857817e-09
+      ]
+    ],
+    "raw_collision_quadratic_form": [
+      [
+        1.6604688090001944e-11,
+        1.1493117520913938e-12,
+        1.085797992685948e-13,
+        1.292471109188378e-14,
+        -1.660468809000194e-11,
+        -1.1479915017193594e-12,
+        -1.0838162733125644e-13,
+        -1.2895422136805348e-14
+      ],
+      [
+        1.1493117520913938e-12,
+        1.1968692672412754e-13,
+        1.5077145500262748e-14,
+        2.2431075398804366e-15,
+        -1.1493117520913938e-12,
+        -9.745754227799885e-14,
+        -1.0921087020567043e-14,
+        -1.5059413386711661e-15
+      ],
+      [
+        1.085797992685948e-13,
+        1.5077145500262748e-14,
+        2.3467585277818578e-15,
+        4.135733279117624e-16,
+        -1.085797992685948e-13,
+        -1.0928847972461833e-14,
+        -1.4205355796019422e-15,
+        -2.228391595043206e-16
+      ],
+      [
+        1.292471109188378e-14,
+        2.2431075398804366e-15,
+        4.135733279117624e-16,
+        8.383891240149486e-17,
+        -1.2924711091883778e-14,
+        -1.5077615987007224e-15,
+        -2.229538757860744e-16,
+        -3.91732724187905e-17
+      ],
+      [
+        -1.660468809000194e-11,
+        -1.1493117520913938e-12,
+        -1.085797992685948e-13,
+        -1.2924711091883778e-14,
+        1.660468809000194e-11,
+        1.1479915017193594e-12,
+        1.0838162733125644e-13,
+        1.2895422136805346e-14
+      ],
+      [
+        -1.1479915017193594e-12,
+        -9.745754227799885e-14,
+        -1.0928847972461833e-14,
+        -1.5077615987007224e-15,
+        1.1479915017193594e-12,
+        1.339939375095474e-13,
+        1.7782789256568493e-14,
+        2.726915737446574e-15
+      ],
+      [
+        -1.0838162733125644e-13,
+        -1.0921087020567043e-14,
+        -1.4205355796019422e-15,
+        -2.229538757860744e-16,
+        1.0838162733125644e-13,
+        1.7782789256568493e-14,
+        2.9563715662251638e-15,
+        5.399436558465187e-16
+      ],
+      [
+        -1.2895422136805348e-14,
+        -1.5059413386711661e-15,
+        -2.228391595043206e-16,
+        -3.91732724187905e-17,
+        1.2895422136805346e-14,
+        2.726915737446574e-15,
+        5.399436558465187e-16,
+        1.1361875639025177e-16
+      ]
+    ],
+    "raw_collision_loss_quadratic_form": [
+      [
+        3.400604579462699e-11,
+        2.4361304946741034e-12,
+        2.354168829891312e-13,
+        2.847659227123043e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.4361304946741034e-12,
+        2.354168829891312e-13,
+        2.8476592271230426e-14,
+        4.1291363108400956e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.354168829891312e-13,
+        2.8476592271230426e-14,
+        4.1291363108400956e-15,
+        6.968390682989457e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.847659227123043e-14,
+        4.1291363108400956e-15,
+        6.968390682989457e-16,
+        1.3399324092582192e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        5.503587227652101e-11,
+        3.967880883156065e-12,
+        3.853992041760742e-13,
+        4.68162385718116e-14
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.967880883156065e-12,
+        3.853992041760742e-13,
+        4.68162385718116e-14,
+        6.812512901491836e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.853992041760742e-13,
+        4.68162385718116e-14,
+        6.8125129014918356e-15,
+        1.1531452944398919e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.68162385718116e-14,
+        6.812512901491836e-15,
+        1.1531452944398919e-15,
+        2.2230863918076376e-16
+      ]
+    ],
+    "collision_operator": [
+      [
+        6.663922131750176e-08,
+        -1.0126357399741647e-08,
+        6.848220000226436e-10,
+        1.0466507127945275e-10,
+        -4.44297911321488e-08,
+        4.5072891174560534e-09,
+        -1.2405137849143282e-10,
+        -1.0041563853094746e-10
+      ],
+      [
+        -1.0126357399741687e-08,
+        8.332027804505909e-08,
+        -1.412238502142307e-08,
+        -2.0656866898044542e-10,
+        4.57742891598064e-09,
+        -2.453749287104555e-08,
+        1.8351884598037058e-09,
+        4.2668131064499435e-10
+      ],
+      [
+        6.848220000226465e-10,
+        -1.4122385021422867e-08,
+        8.651743194391124e-08,
+        -1.2584219574373335e-08,
+        -1.989067315767068e-10,
+        1.870112531404296e-09,
+        -1.635726040740616e-08,
+        1.136500181870499e-09
+      ],
+      [
+        1.0466507127938057e-10,
+        -2.0656866898073948e-10,
+        -1.2584219574373964e-08,
+        7.028653517572567e-08,
+        -6.913279610001577e-11,
+        3.996139229341963e-10,
+        1.1392147939722564e-09,
+        -1.0496920391048575e-08
+      ],
+      [
+        -4.44297911321488e-08,
+        4.577428915980646e-09,
+        -1.9890673157672888e-10,
+        -6.913279610007648e-11,
+        2.989833487777722e-08,
+        -5.429185099029818e-09,
+        3.388230676023385e-10,
+        7.657692490527708e-11
+      ],
+      [
+        4.507289117456066e-09,
+        -2.4537492871045552e-08,
+        1.870112531404283e-09,
+        3.9961392293434145e-10,
+        -5.429185099029832e-09,
+        5.078870433532274e-08,
+        -9.164020295677028e-09,
+        -1.6262273591554365e-10
+      ],
+      [
+        -1.2405137849145774e-10,
+        1.835188459803592e-09,
+        -1.6357260407405777e-08,
+        1.1392147939717626e-09,
+        3.388230676024011e-10,
+        -9.16402029567706e-09,
+        5.663671514378036e-08,
+        -8.36563082996864e-09
+      ],
+      [
+        -1.0041563853091387e-10,
+        4.266813106452175e-10,
+        1.1365001818700456e-09,
+        -1.049692039104826e-08,
+        7.657692490521214e-11,
+        -1.6262273591559121e-10,
+        -8.365630829969209e-09,
+        4.7793305618028065e-08
+      ]
+    ],
+    "collision_operator_eigenvalues": [
+      -2.9778502051908996e-23,
+      3.171636116334928e-08,
+      4.120583497450139e-08,
+      5.7831591922877326e-08,
+      6.590283418855363e-08,
+      8.103880280354695e-08,
+      9.770481472380542e-08,
+      1.1648028668047189e-07
+    ],
+    "relative_eigenvalue_tolerance": 1.1648028668047189e-18,
+    "null_mode_count": 1,
+    "positive_mode_count": 7,
+    "operator_trace": 4.918805264571062e-07,
+    "positive_mode_rate": 7.026864663672942e-08,
+    "gram_identity_residual": 7.405262664800251e-14,
+    "operator_symmetry_residual": 1.8170760479918516e-21,
+    "positive_semidefinite_min_eigenvalue": -2.9778502051908996e-23,
+    "momentum_null_residual": 2.22382419841569e-16,
+    "maximum_event_charge_residual": 0.0,
+    "maximum_event_energy_residual": 6.084022174945858e-14,
+    "maximum_event_momentum_residual": 5.855245079491137e-14,
+    "maximum_detailed_balance_residual": 2.593602295773485e-13,
+    "normalized_momentum_null_vector": [
+      0.5546799124710032,
+      0.03995634152763693,
+      0.003911935697779684,
+      0.00048083065492365764,
+      0.8289342432997643,
+      0.05959588497260594,
+      0.0058299781418132135,
+      0.0007163575294753092
+    ],
+    "normalized_charge_current_source": [
+      -0.009431420491769643,
+      0.00158389454920426,
+      -0.00038508805335423554,
+      7.875195092905962e-05,
+      0.014108320187251795,
+      -0.0023732186044027235,
+      0.0005765378041340825,
+      -0.00011778181064627663
+    ],
+    "normalized_grand_heat_current_source": [
+      0.016851399271881465,
+      0.000987561109375704,
+      0.00015070338444280254,
+      5.915060452846288e-06,
+      0.022363057870986552,
+      0.0019465358525883924,
+      0.00010955038508371137,
+      3.232336322483986e-05
+    ],
+    "landau_projected_charge_current_source": [
+      -0.012974222689896188,
+      0.0013286889587176799,
+      -0.00041007402107620173,
+      7.568083213984403e-05,
+      0.008813825122193364,
+      -0.002753864139842557,
+      0.0005393010863235645,
+      -0.0001223572657385003
+    ],
+    "landau_projected_grand_heat_current_source": [
+      0.0012974222689896102,
+      -0.00013286889587177538,
+      4.100740210769727e-05,
+      -7.568083214013954e-06,
+      -0.0008813825122193366,
+      0.0002753864139842692,
+      -5.393010863232045e-05,
+      1.223572657387342e-05
+    ],
+    "charge_source_momentum_overlap": 0.006387111049945852,
+    "heat_source_momentum_overlap": 0.028041356200554615,
+    "projected_heat_charge_rank_residual": 5.921631395242726e-14,
+    "projected_source_rank": 1,
+    "charge_response_form": 2632.1872473090434,
+    "heat_response_form": 26.321872473090384,
+    "dissipative_subspace_full_rank": true,
+    "posterior_collision_projection_used": false,
+    "landau_source_projection_used": true,
+    "scalar_vector_tensor_completion": false,
+    "dressed_ladder_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "xie_2026_accessed": false,
+    "parameter_fitting_performed": false
+  },
+  "zero_mu_state": {
+    "temperature": 0.25,
+    "chemical_potential": 0.0,
+    "effective_mass": 1.0,
+    "momentum_cutoff": 12.0,
+    "radial_order": 12,
+    "incoming_angular_order": 4,
+    "outgoing_angular_order": 4,
+    "outgoing_azimuth_order": 4,
+    "feature_order": 4,
+    "basis_dimension": 8,
+    "collision_event_count": 36864,
+    "raw_gram_matrix": [
+      [
+        0.00038032627110063045,
+        2.8709400137747357e-05,
+        2.9044219414004886e-06,
+        3.7153335767337965e-07,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.8709400137747357e-05,
+        2.904421941400488e-06,
+        3.715333576733796e-07,
+        5.724246936753474e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.9044219414004886e-06,
+        3.715333576733796e-07,
+        5.724246936753474e-08,
+        1.0197837596771164e-08,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.7153335767337965e-07,
+        5.724246936753474e-08,
+        1.0197837596771164e-08,
+        2.057341711860452e-09,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.00038032627110063045,
+        2.8709400137747357e-05,
+        2.9044219414004886e-06,
+        3.7153335767337965e-07
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.8709400137747357e-05,
+        2.904421941400488e-06,
+        3.715333576733796e-07,
+        5.724246936753474e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.9044219414004886e-06,
+        3.715333576733796e-07,
+        5.724246936753474e-08,
+        1.0197837596771164e-08
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.7153335767337965e-07,
+        5.724246936753474e-08,
+        1.0197837596771164e-08,
+        2.057341711860452e-09
+      ]
+    ],
+    "raw_collision_quadratic_form": [
+      [
+        1.6472532156673068e-11,
+        1.1513857113140546e-12,
+        1.0778860103590304e-13,
+        1.2684774258020402e-14,
+        -1.647253215667307e-11,
+        -1.1513857113140546e-12,
+        -1.0778860103590302e-13,
+        -1.2684774258020404e-14
+      ],
+      [
+        1.1513857113140546e-12,
+        1.2315148727658519e-13,
+        1.5544756769918895e-14,
+        2.300155800697183e-15,
+        -1.1513857113140546e-12,
+        -9.746624528261279e-14,
+        -1.0875126616523268e-14,
+        -1.4978586899981147e-15
+      ],
+      [
+        1.0778860103590304e-13,
+        1.5544756769918895e-14,
+        2.4327255780579274e-15,
+        4.2409383639455433e-16,
+        -1.0778860103590302e-13,
+        -1.0875126616523271e-14,
+        -1.4183431529592227e-15,
+        -2.2253449080885963e-16
+      ],
+      [
+        1.2684774258020402e-14,
+        2.300155800697183e-15,
+        4.2409383639455433e-16,
+        8.454183430925509e-17,
+        -1.2684774258020402e-14,
+        -1.4978586899981147e-15,
+        -2.2253449080885963e-16,
+        -3.899403335706696e-17
+      ],
+      [
+        -1.647253215667307e-11,
+        -1.1513857113140546e-12,
+        -1.0778860103590302e-13,
+        -1.2684774258020402e-14,
+        1.647253215667307e-11,
+        1.1513857113140546e-12,
+        1.0778860103590304e-13,
+        1.2684774258020404e-14
+      ],
+      [
+        -1.1513857113140546e-12,
+        -9.746624528261279e-14,
+        -1.0875126616523271e-14,
+        -1.4978586899981147e-15,
+        1.1513857113140546e-12,
+        1.2315148727658516e-13,
+        1.5544756769918895e-14,
+        2.300155800697183e-15
+      ],
+      [
+        -1.0778860103590302e-13,
+        -1.0875126616523268e-14,
+        -1.4183431529592227e-15,
+        -2.2253449080885963e-16,
+        1.0778860103590304e-13,
+        1.5544756769918895e-14,
+        2.432725578057927e-15,
+        4.240938363945543e-16
+      ],
+      [
+        -1.2684774258020404e-14,
+        -1.4978586899981147e-15,
+        -2.2253449080885963e-16,
+        -3.899403335706696e-17,
+        1.2684774258020404e-14,
+        2.300155800697183e-15,
+        4.240938363945543e-16,
+        8.45418343092551e-17
+      ]
+    ],
+    "raw_collision_loss_quadratic_form": [
+      [
+        4.039305205915106e-11,
+        2.9201742784121815e-12,
+        2.8034248887385947e-13,
+        3.366764116919895e-14,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.9201742784121815e-12,
+        2.803424888738595e-13,
+        3.366764116919895e-14,
+        4.851880034957637e-15,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        2.8034248887385947e-13,
+        3.366764116919895e-14,
+        4.851880034957637e-15,
+        8.089846232180643e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        3.366764116919895e-14,
+        4.851880034957637e-15,
+        8.089846232180643e-16,
+        1.5257667145852317e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        4.039305205915106e-11,
+        2.920174278412181e-12,
+        2.8034248887385947e-13,
+        3.366764116919895e-14
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.920174278412181e-12,
+        2.8034248887385947e-13,
+        3.366764116919895e-14,
+        4.851880034957637e-15
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.8034248887385947e-13,
+        3.366764116919895e-14,
+        4.851880034957637e-15,
+        8.089846232180641e-16
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        3.366764116919895e-14,
+        4.851880034957637e-15,
+        8.089846232180641e-16,
+        1.5257667145852317e-16
+      ]
+    ],
+    "collision_operator": [
+      [
+        4.421249625502158e-08,
+        -6.974126041793754e-09,
+        1.1772377399579017e-09,
+        -8.489411803567345e-10,
+        -4.4016003085332554e-08,
+        4.181134405919412e-09,
+        -3.941109429273426e-10,
+        8.087821353454301e-10
+      ],
+      [
+        -6.974126041793751e-09,
+        6.419238891389944e-08,
+        -1.7607692425610778e-08,
+        8.267035723934389e-10,
+        4.181134405919392e-09,
+        -2.4047655837297224e-08,
+        1.8314301979558214e-09,
+        1.7443412131410827e-10
+      ],
+      [
+        1.1772377399579259e-09,
+        -1.760769242561079e-08,
+        6.870595391873177e-08,
+        -1.0292960912200948e-08,
+        -3.941109429273614e-10,
+        1.8314301979557447e-09,
+        -1.6575588031822727e-08,
+        1.6673292944309354e-09
+      ],
+      [
+        -8.48941180356814e-10,
+        8.267035723932672e-10,
+        -1.0292960912201158e-08,
+        4.362439099667335e-08,
+        8.087821353454066e-10,
+        1.7443412131423928e-10,
+        1.6673292944305078e-09,
+        -1.0826024432576523e-08
+      ],
+      [
+        -4.4016003085332554e-08,
+        4.181134405919412e-09,
+        -3.941109429273426e-10,
+        8.087821353454301e-10,
+        4.4212496255021594e-08,
+        -6.974126041793781e-09,
+        1.1772377399579282e-09,
+        -8.489411803567345e-10
+      ],
+      [
+        4.181134405919393e-09,
+        -2.4047655837297227e-08,
+        1.8314301979557784e-09,
+        1.7443412131414798e-10,
+        -6.974126041793756e-09,
+        6.419238891389936e-08,
+        -1.7607692425610513e-08,
+        8.267035723931477e-10
+      ],
+      [
+        -3.9411094292736494e-10,
+        1.8314301979558734e-09,
+        -1.6575588031822773e-08,
+        1.6673292944307435e-09,
+        1.1772377399579313e-09,
+        -1.760769242561059e-08,
+        6.870595391873113e-08,
+        -1.0292960912200498e-08
+      ],
+      [
+        8.087821353454042e-10,
+        1.7443412131412182e-10,
+        1.6673292944305409e-09,
+        -1.082602443257633e-08,
+        -8.489411803568152e-10,
+        8.267035723931088e-10,
+        -1.0292960912200931e-08,
+        4.362439099667362e-08
+      ]
+    ],
+    "collision_operator_eigenvalues": [
+      -2.6779160260889714e-23,
+      2.6099204113710768e-08,
+      3.422669469260087e-08,
+      4.905515054449892e-08,
+      6.494405989098544e-08,
+      6.888427619147782e-08,
+      8.677728756080497e-08,
+      1.1148378717457319e-07
+    ],
+    "relative_eigenvalue_tolerance": 1.1148378717457317e-18,
+    "null_mode_count": 1,
+    "positive_mode_count": 7,
+    "operator_trace": 4.414704601686518e-07,
+    "positive_mode_rate": 6.306720859552171e-08,
+    "gram_identity_residual": 1.7416436554139847e-14,
+    "operator_symmetry_residual": 1.0479130089444693e-21,
+    "positive_semidefinite_min_eigenvalue": -2.6779160260889714e-23,
+    "momentum_null_residual": 2.0973551294077734e-16,
+    "maximum_event_charge_residual": 0.0,
+    "maximum_event_energy_residual": 3.197442310920451e-14,
+    "maximum_event_momentum_residual": 3.007372653722664e-14,
+    "maximum_detailed_balance_residual": 1.2064525219256283e-13,
+    "normalized_momentum_null_vector": [
+      0.7052482773564005,
+      0.0509914183848984,
+      0.004937197354456861,
+      0.00060549088256554,
+      0.7052482773564005,
+      0.0509914183848984,
+      0.004937197354456861,
+      0.00060549088256554
+    ],
+    "normalized_charge_current_source": [
+      -0.011463826731538986,
+      0.00183084654596603,
+      -0.0005397807348501297,
+      0.00017443766476021166,
+      0.011463826731538986,
+      -0.00183084654596603,
+      0.0005397807348501297,
+      -0.00017443766476021166
+    ],
+    "normalized_grand_heat_current_source": [
+      0.019450698165534405,
+      0.0014063397527958844,
+      0.00013616755773610337,
+      1.6699396194051752e-05,
+      0.019450698165534405,
+      0.0014063397527958844,
+      0.00013616755773610337,
+      1.6699396194051752e-05
+    ],
+    "landau_projected_charge_current_source": [
+      -0.011463826731538986,
+      0.0018308465459660299,
+      -0.0005397807348501297,
+      0.00017443766476021166,
+      0.011463826731538986,
+      -0.00183084654596603,
+      0.0005397807348501297,
+      -0.00017443766476021166
+    ],
+    "landau_projected_grand_heat_current_source": [
+      4.821677149602226e-18,
+      -2.3848749366764796e-17,
+      -3.528783577047672e-19,
+      -2.5984619206249377e-17,
+      4.821677149602226e-18,
+      -2.3956322551066093e-17,
+      -3.837731399933165e-19,
+      -2.5986970821761934e-17
+    ],
+    "charge_source_momentum_overlap": 1.310068801826784e-18,
+    "heat_source_momentum_overlap": 0.027579930061573048,
+    "projected_heat_charge_rank_residual": 1.0,
+    "projected_source_rank": 1,
+    "charge_response_form": 2984.215491124414,
+    "heat_response_form": 8.035713680795242e-26,
+    "dissipative_subspace_full_rank": true,
+    "posterior_collision_projection_used": false,
+    "landau_source_projection_used": true,
+    "scalar_vector_tensor_completion": false,
+    "dressed_ladder_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "xie_2026_accessed": false,
+    "parameter_fitting_performed": false
+  },
+  "whole_action_scale_witnesses": [
+    {
+      "scale": 1.5,
+      "operator_trace_ratio": 1.5000000000017177,
+      "positive_mode_rate_ratio": 1.5000000000017182,
+      "charge_response_form_ratio": 1.4999999999999816,
+      "heat_response_form_ratio": 3.3749999999997726,
+      "operator_trace_energy_exponent": 1.0000000000028242,
+      "positive_mode_rate_energy_exponent": 1.000000000002825,
+      "charge_response_form_energy_exponent": 0.9999999999999697,
+      "heat_response_form_energy_exponent": 2.999999999999834
+    },
+    {
+      "scale": 2.0,
+      "operator_trace_ratio": 2.0,
+      "positive_mode_rate_ratio": 2.0,
+      "charge_response_form_ratio": 2.0,
+      "heat_response_form_ratio": 8.0,
+      "operator_trace_energy_exponent": 1.0,
+      "positive_mode_rate_energy_exponent": 1.0,
+      "charge_response_form_energy_exponent": 1.0,
+      "heat_response_form_energy_exponent": 3.0
+    },
+    {
+      "scale": 3.0,
+      "operator_trace_ratio": 3.0000000000034355,
+      "positive_mode_rate_ratio": 3.0000000000034364,
+      "charge_response_form_ratio": 2.999999999999963,
+      "heat_response_form_ratio": 26.99999999999818,
+      "operator_trace_energy_exponent": 1.0000000000010423,
+      "positive_mode_rate_energy_exponent": 1.0000000000010425,
+      "charge_response_form_energy_exponent": 0.9999999999999887,
+      "heat_response_form_energy_exponent": 2.9999999999999383
+    }
+  ],
+  "convergence": {
+    "radial_rows": [
+      {
+        "radial_order": 12,
+        "operator_trace": 4.781010501231852e-07,
+        "positive_mode_rate": 6.830015001759789e-08,
+        "charge_response_form": 2614.247563376914
+      },
+      {
+        "radial_order": 16,
+        "operator_trace": 4.7303710823086386e-07,
+        "positive_mode_rate": 6.757672974726626e-08,
+        "charge_response_form": 2634.9402279138603
+      },
+      {
+        "radial_order": 24,
+        "operator_trace": 4.758191033681539e-07,
+        "positive_mode_rate": 6.797415762402197e-08,
+        "charge_response_form": 2634.238711229004
+      }
+    ],
+    "angular_rows": [
+      {
+        "angular_order": 4,
+        "azimuth_order": 8,
+        "operator_trace": 4.944676159156583e-07,
+        "positive_mode_rate": 7.063823084509405e-08,
+        "charge_response_form": 2611.345231115026
+      },
+      {
+        "angular_order": 6,
+        "azimuth_order": 12,
+        "operator_trace": 4.951929330003287e-07,
+        "positive_mode_rate": 7.074184757147555e-08,
+        "charge_response_form": 2610.9159583702885
+      },
+      {
+        "angular_order": 8,
+        "azimuth_order": 16,
+        "operator_trace": 4.951934495406769e-07,
+        "positive_mode_rate": 7.074192136295385e-08,
+        "charge_response_form": 2610.8829606310887
+      }
+    ],
+    "radial_last_relative_differences": {
+      "operator_trace": 0.0058467495684752305,
+      "positive_mode_rate": 0.005846749568475037,
+      "charge_response_form": 0.00026623628021035643
+    },
+    "angular_last_relative_differences": {
+      "operator_trace": 1.043108200850645e-06,
+      "positive_mode_rate": 1.0431082005031978e-06,
+      "charge_response_form": 1.2638376617988457e-05
+    }
+  },
+  "charge_conjugation_witness": {
+    "operator_relative_residual": 1.5328475423726055e-14,
+    "odd_charge_source_relative_residual": 2.7520017771781325e-17
+  },
+  "thresholds": {
+    "radial_last_refinement_relative": 0.01,
+    "angular_last_refinement_relative": 0.001,
+    "source_rank_relative": 1e-10
+  },
+  "checks": {
+    "symbolic_vector_operator_dimension_E1": true,
+    "whole_action_scaling": true,
+    "radial_quadrature_converged": true,
+    "angular_quadrature_converged": true,
+    "eventwise_five_invariants": true,
+    "vector_momentum_null_mode": true,
+    "vector_dissipative_subspace_full_rank": true,
+    "operator_symmetric_positive_semidefinite": true,
+    "detailed_balance": true,
+    "landau_heat_charge_rank_one": true,
+    "zero_mu_projected_heat_vanishes": true,
+    "charge_conjugation": true,
+    "no_posterior_collision_projection": true,
+    "no_clipping_fit_or_absolute_mode_cutoff": true
+  },
+  "open_blockers": [
+    "additional_normal_component_or_response_channel_for_independent_heat_transport",
+    "same_width_dressed_RA_ladder",
+    "tensor_shear_channel",
+    "number_changing_and_response_cuts",
+    "physical_Kubo_and_SI_frame_normalization"
+  ],
+  "controlling_blocker": "additional_heat_carrier_channel_and_dressed_RA_ladder_missing",
+  "source_hashes": {
+    "docs/core/uet_o2_invariant_vector_current_galerkin.py": "8fa2dbbab44e5d497f4d82e7c22a6aff4cdf9fbfe41a39f8a64e4cb58c3a2ab6",
+    "docs/core/test/test_topic13_invariant_vector_current_galerkin.py": "14d83e224d0ffc2681901b87c1471fc90002c91f9ae3226b086a3a0aa57d93ef",
+    "docs/scripts/audit/audit_topic13_vector_current_heat_rank_boundary.py": "8625e42cb81d03c1bfc789d05a4108a790fba91f5ba911150c551cb344769ddb",
+    "docs/core/uet_o2_invariant_galerkin_collision_operator.py": "278b168e5c3b444ac4df4b96b5a7d00410cd9485c511ab2a17aa4f11c6f6d94e",
+    "docs/core/uet_o2_same_kernel_tagged_width.py": "30f4d4d78a2bc4f0403f504d72dac684e98251915b890a1c99af5bae2f5be92e"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_same_kernel_tagged_spectral_width_audit.json",
+      "sha256": "aa2cee30973fee3f0f109140db77ac6620cde4ff0fec53596442c7c337961293"
+    }
+  ],
+  "dependency_unlocked": [
+    "charge_current_dressed_RA_ladder",
+    "multicomponent_heat_channel_design"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Finite vector charge-current lane and structural Landau-frame heat-rank no-go only; not a heat conductivity, complete normal component, dressed ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "CLOSED_FOR_LANE/CLOSED_AS_NO_GO_FOR_INDEPENDENT_HEAT_CHANNEL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "An invariant isotropic vector Galerkin collision block now preserves the momentum null mode event by event and has a full-rank dissipative complement.",
+      "Charge-current and grand-heat sources are explicitly projected to the Landau frame without altering the collision operator.",
+      "For the elastic equal-mass two-charge lane, the projected identity J_Q_perp=-mu*J_charge_perp is verified and the two sources have rank one; at mu=0 the projected heat source vanishes.",
+      "An independent heat-current transport channel is therefore structurally absent in this lane and cannot be created by rerunning the same elastic kernel."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "additional_normal_component_or_response_channel_for_independent_heat_transport",
+      "same_width_dressed_RA_ladder",
+      "tensor_shear_channel",
+      "number_changing_and_response_cuts",
+      "physical_Kubo_and_SI_frame_normalization"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "charge_current_dressed_RA_ladder",
+      "multicomponent_heat_channel_design"
+    ],
+    "STATUS": "PASS_VECTOR_CURRENT_HEAT_RANK_BOUNDARY",
+    "WHAT_CHANGED": "Added the invariant vector collision block and Landau-frame charge/heat source-rank audit.",
+    "EQUATION_OR_MAPPING": {
+      "vector_features": "F_qk^i=(p^i/m)*y(E)^k",
+      "vector_quadratic_form": "Q_ab^(l=1)=(beta/12)*sum_events W_without_beta DeltaF_a dot DeltaF_b",
+      "vector_operator": "L_vector=G_vector^(-1/2) Q_vector G_vector^(-1/2)",
+      "charge_source": "J_charge^i=q*p^i/E",
+      "grand_heat_source": "J_Q^i=(E-mu*q)*p^i/E=P^i-mu*J_charge^i",
+      "landau_rank_boundary": "P_perp J_Q=-mu*P_perp J_charge"
+    },
+    "VERIFICATION": {
+      "symbolic_vector_operator_dimension_E1": true,
+      "whole_action_scaling": true,
+      "radial_quadrature_converged": true,
+      "angular_quadrature_converged": true,
+      "eventwise_five_invariants": true,
+      "vector_momentum_null_mode": true,
+      "vector_dissipative_subspace_full_rank": true,
+      "operator_symmetric_positive_semidefinite": true,
+      "detailed_balance": true,
+      "landau_heat_charge_rank_one": true,
+      "zero_mu_projected_heat_vanishes": true,
+      "charge_conjugation": true,
+      "no_posterior_collision_projection": true,
+      "no_clipping_fit_or_absolute_mode_cutoff": true
+    },
+    "CONTROLLING_BLOCKER": "additional_heat_carrier_channel_and_dressed_RA_ladder_missing",
+    "NEXT_ACTION": "Use the charge-current vector lane in the same-width dressed RA ladder, and add a genuinely independent normal/response carrier before reopening heat conductivity.",
+    "CLAIM_BOUNDARY": "Finite vector charge-current lane and structural Landau-frame heat-rank no-go only; not a heat conductivity, complete normal component, dressed ladder, Kubo/SI coefficient, external validation, or Full Topic 13 closure."
+  }
+}

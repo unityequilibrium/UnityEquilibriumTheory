@@ -1,0 +1,107 @@
+{
+  "schema_version": "t13-beta-action-normalized-correspondence-no-go-v1",
+  "artifact": "t13_beta_action_normalized_correspondence_no_go",
+  "generated_at": "2026-08-12",
+  "status": "PASS_SCOPED_NO_GO_ACTION_BETA_T13_CORRESPONDENCE",
+  "major_result": {
+    "major_result_id": "T13_BETA_ACTION_NORMALIZED_CORRESPONDENCE_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the action-derived normal response slope and the named normalized beta_T13 have different declared units and derivation origins",
+      "field, free-energy, and temperature scale inputs are required before a correspondence function can be evaluated",
+      "two distinct positive scale completions preserve the current normalized beta contract while leaving the physical correspondence value unidentified",
+      "the result does not infer alpha_Phi_K, beta_T13, e0, or a Kelvin observable"
+    ],
+    "equation_or_mapping": {
+      "action_lane": "beta_action_natural=T*partial_T(partial_Phi^2 Omega_T)",
+      "topic13_lane": "beta_T13=T0*(da_Phi/dT)|T0",
+      "required_map": "beta_T13 = F(field_normalization, free_energy_scale, temperature_unit, action_beta_natural)",
+      "scale_family": "Phi'=s_Phi*Phi; e0'=s_e*e0; T'=s_T*T leaves normalized lane unchanged until F is declared"
+    },
+    "units": {
+      "beta_action_natural": "natural mass dimension two",
+      "beta_T13": "dimensionless local stiffness-temperature slope",
+      "alpha_Phi_K": "K per normalized Phi; independent calibration or derivation required",
+      "missing_scales": "field normalization, free-energy density scale, and natural-to-Kelvin map"
+    },
+    "derivation_class": "scoped dimensional/normalization identifiability no-go using explicit scale witnesses",
+    "observable": "correspondence boundary between action response curvature and normalized thermal functional; no physical coefficient emitted",
+    "data_role": "INTERNAL_STRUCTURAL_AUDIT_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_normal_response_curvature_audit.json",
+        "sha256": "fcb54571d2721ab0da824c9eb7aceb751f59572b2b07081572df01dde78f7d8c"
+      },
+      {
+        "path": "docs/core/artifacts/t13_thermal_response_beta_contract_audit.json",
+        "sha256": "9383fe0c7ea3a5d85399d86df94b199f03435d3714bae1fc052f75f88e55c412"
+      },
+      {
+        "path": "docs/core/artifacts/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "4a79b2eb082e4a4f98de0c2b2c441b2144e05fe3a8232caccfd5ba414842b020"
+      },
+      {
+        "path": "docs/core/uet_o2_beta_correspondence.py",
+        "sha256": "c14a81e8b1ef8f9a953592ec1ff667ca5e1f2f91e75986f70a45e12efc85db84"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_ACTION_BETA_T13_CORRESPONDENCE",
+    "open_blockers": [
+      "declared_field_normalization_and_free_energy_scale_missing",
+      "natural_to_kelvin_temperature_map_missing",
+      "beta_T13_source_backed_coefficient_provenance_missing",
+      "independent_alpha_Phi_K_missing",
+      "renormalized_finite_temperature_action_and_transport_KMS_entropy_completion_missing"
+    ],
+    "dependency_unlocked": "beta correspondence no-go only; no beta value, SI map, physical transport, Full Topic 13, Core, Gravity, or external-validation dependency is unlocked",
+    "claim_boundary": "The current action-derived normal curvature and the named normalized beta contract cannot be identified numerically without a declared scale map. This is a scoped no-go, not a proof that a future finite-temperature action or independent calibration cannot provide the map."
+  },
+  "input_records": {
+    "action_beta_natural": -8.571240416631339e-06,
+    "normalized_beta_t13_witness": 0.18,
+    "action_beta_units": "natural mass dimension two",
+    "normalized_beta_units": "dimensionless local stiffness-temperature slope"
+  },
+  "scale_witnesses": [
+    {
+      "field_scale": 1.0,
+      "energy_scale": 1.0,
+      "temperature_scale": 1.0,
+      "normalized_beta_t13": 0.18,
+      "action_beta_natural": -8.571240416631339e-06,
+      "inferred_beta_t13_from_bridge": null,
+      "inferred_alpha_phi_k": null
+    },
+    {
+      "field_scale": 10.0,
+      "energy_scale": 100.0,
+      "temperature_scale": 2.0,
+      "normalized_beta_t13": 0.18,
+      "action_beta_natural": -8.571240416631339e-06,
+      "inferred_beta_t13_from_bridge": null,
+      "inferred_alpha_phi_k": null
+    }
+  ],
+  "checks": {
+    "curvature_lane_passes": true,
+    "curvature_is_natural_unit": true,
+    "action_beta_has_mass_dimension_two": true,
+    "beta_t13_is_dimensionless": true,
+    "beta_contract_is_candidate_not_derived": true,
+    "phi_anchor_no_go_is_passing": true,
+    "witness_scales_are_distinct": true,
+    "same_named_beta_contract_under_witnesses": true,
+    "action_beta_is_not_relabelled": true,
+    "alpha_is_not_inferred": true,
+    "no_target_or_holdout": true
+  },
+  "controlling_blocker": "declared_field_normalization_free_energy_scale_and_natural_to_kelvin_beta_correspondence_missing",
+  "next_controller": "Declare the missing field/free-energy/temperature normalization from a finite-temperature action or obtain an independent source-backed coefficient; then test the correspondence without using target fitting or Xie 2026.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

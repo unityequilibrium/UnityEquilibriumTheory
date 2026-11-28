@@ -1,0 +1,150 @@
+{
+  "schema_version": "t13-uet-o2-one-loop-uv-boundary-v1",
+  "artifact": "t13_uet_o2_one_loop_uv_boundary_audit",
+  "generated_at": "2026-08-12",
+  "status": "PASS_THERMAL_UV_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ONE_LOOP_THERMAL_UV_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the thermal-only Bose-log and occupation tails are bounded analytically on the declared normal branch",
+      "the declared cutoff baseline is sufficient for the thermal-only outputs under the separate tail threshold",
+      "the vacuum/zero-point term is explicitly classified as omitted and not silently treated as renormalized",
+      "the unweighted vacuum mode integrals have recorded quartic and quadratic cutoff lower bounds"
+    ],
+    "equation_or_mapping": {
+      "thermal_tail_inequality": "-log(1-exp(-x)) <= exp(-x)/(1-exp(-x)), n_B(x) <= exp(-x)/(1-exp(-x))",
+      "normal_branch_domain": "E_k >= p and x_min=(p-|mu|)/T > 0 for p >= cutoff",
+      "thermal_pressure_tail": "R_p <= 2*T/(2*pi^2) * integral_cutoff^infinity p^2 exp(-(p-|mu|)/T)/(1-exp(-x_cutoff)) dp",
+      "vacuum_zero_point_boundary": "I_0(Lambda)=integral_0^Lambda p^2*E_p dp/(2*pi^2) >= Lambda^4/(8*pi^2)",
+      "vacuum_response_boundary": "I_1(Lambda)=integral_m^Lambda p^2/E_p dp/(2*pi^2) >= (Lambda^2-m^2)/(4*sqrt(2)*pi^2)"
+    },
+    "units": {
+      "all_integrals": "natural units",
+      "cutoff_and_mass": "natural momentum/energy",
+      "tail_bounds": "same natural units as the corresponding thermal observable",
+      "vacuum_bounds": "unweighted natural-unit mode-integral diagnostics"
+    },
+    "derivation_class": "analytic thermal-tail bound plus structural UV divergence boundary; not a counterterm derivation",
+    "observable": "thermal-only one-loop normal-branch outputs and their omitted-vacuum boundary",
+    "data_role": "ACTION_DERIVED_SCOPE_BOUNDARY_NOT_RENORMALIZED_PHYSICAL_INPUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_normal_branch.py",
+        "sha256": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5"
+      },
+      {
+        "path": "docs/core/standard_o2_finite_temperature_comparator.py",
+        "sha256": "7278240bb5eea189f6c919933b434c0855d79ccf7ea1532501bb177cad5d1052"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json",
+        "sha256": "dc1143ef4b7837eb93e47d3a0136bf790b1b6ca589756a54bd2aea679c536801"
+      },
+      {
+        "path": "docs/core/artifacts/t13_uet_o2_one_loop_convergence_audit.json",
+        "sha256": "8dfde35b0913937ac248a16cd40d1a1aee1598fba5a89509c12dc1c866dbe7d1"
+      }
+    ],
+    "verification_status": "PASS_THERMAL_UV_BOUNDARY",
+    "open_blockers": [
+      "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+      "interacting_finite_temperature_self_energy_not_derived",
+      "condensate_goldstone_and_normal_two_fluid_completion_not_derived",
+      "physical_Kubo_coefficient_record_missing",
+      "SI_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "thermal-only UV scope boundary and explicit renormalization blocker; no physical transport, SI, Full Topic 13, Core, or Gravity unlock",
+    "claim_boundary": "This closes the scope and tail-control boundary of the declared thermal-only normal branch. It does not provide vacuum counterterms, a renormalized one-loop action, interacting finite-temperature dynamics, physical transport, SI Phi calibration, external validation, or global UET closure."
+  },
+  "reference": {
+    "temperature": 0.35,
+    "chemical_potential": 0.2,
+    "space_response": 0.2,
+    "effective_mass_sq": 0.494,
+    "effective_mass": 0.7028513356322231,
+    "dm_eff_sq_dphi": -0.03,
+    "momentum_cutoff": 49.199593494255616,
+    "quadrature_order": 256,
+    "cutoff_factor": 70.0
+  },
+  "thermal_tail": {
+    "lower_momentum": 49.199593494255616,
+    "bose_argument_lower_bound": 139.99883855501605,
+    "relative_threshold": 1e-10,
+    "absolute_bounds": {
+      "pressure": 4.821866101577455e-60,
+      "charge_density": 1.37767602902213e-59,
+      "entropy_density": 1.9998905773877625e-57,
+      "energy_density": 6.92384483926095e-58,
+      "charge_susceptibility": 3.9362172257775145e-59,
+      "thermal_scalar_density": 1.3901297632691753e-61,
+      "pressure_phi_derivative": 4.170389289807526e-63
+    },
+    "relative_to_reference": {
+      "pressure": 2.616437206045907e-57,
+      "charge_density": 4.770327373638776e-57,
+      "entropy_density": 7.836429566273833e-56,
+      "energy_density": 9.030897714966152e-56,
+      "charge_susceptibility": 2.398233274792082e-57,
+      "thermal_scalar_density": 6.423682219739985e-59,
+      "pressure_phi_derivative": 6.423682219739985e-59
+    }
+  },
+  "vacuum_boundary": {
+    "zero_point_term_included": false,
+    "renormalized_action_claimed": false,
+    "zero_point_expression": "Omega_vac(Lambda) is proportional to integral_0^Lambda p^2*sqrt(p^2+m_eff^2) dp/(2*pi^2)",
+    "response_expression": "dOmega_vac/dPhi is proportional to (dm_eff^2/dPhi) * integral_0^Lambda p^2/E_p dp/(2*pi^2)",
+    "lower_bounds": {
+      "7.0285133563222315": {
+        "unweighted_zero_point_integral_lower_bound": 30.90752046417693,
+        "unweighted_mass_response_integral_lower_bound": 0.875966321327234,
+        "zero_point_scaled_by_cutoff_four": 0.012665147955292222,
+        "response_scaled_by_cutoff_two": 0.017732111767757772
+      },
+      "14.057026712644463": {
+        "unweighted_zero_point_integral_lower_bound": 494.5203274268309,
+        "unweighted_mass_response_integral_lower_bound": 3.530409719288549,
+        "zero_point_scaled_by_cutoff_four": 0.012665147955292222,
+        "response_scaled_by_cutoff_two": 0.017866445947816542
+      },
+      "28.114053425288926": {
+        "unweighted_zero_point_integral_lower_bound": 7912.325238829294,
+        "unweighted_mass_response_integral_lower_bound": 14.148183311133808,
+        "zero_point_scaled_by_cutoff_four": 0.012665147955292222,
+        "response_scaled_by_cutoff_two": 0.017900029492831235
+      }
+    },
+    "interpretation": "The lower bounds establish the UV divergence boundary of the omitted vacuum term; they are not a renormalized prediction."
+  },
+  "checks": {
+    "normal_branch_condition_passes": true,
+    "thermal_only_convergence_audit_passes": true,
+    "thermal_tail_bound_is_finite": true,
+    "thermal_tail_is_below_declared_threshold": true,
+    "bose_log_exponential_bound_domain_is_positive": true,
+    "vacuum_counterterm_is_explicitly_excluded": true,
+    "zero_point_term_is_not_implemented_as_renormalized": true,
+    "zero_point_lower_bound_grows_with_cutoff": true,
+    "mass_response_lower_bound_grows_with_cutoff": true,
+    "holdout_is_not_consumed": true,
+    "phi_is_not_relabelled_as_temperature": true
+  },
+  "source_hashes": {
+    "docs/core/uet_o2_one_loop_normal_branch.py": "381f652bff2a344b6f23aa4b179ec0f18e5d106608e9580c9068bdd99b1c17a5",
+    "docs/core/standard_o2_finite_temperature_comparator.py": "7278240bb5eea189f6c919933b434c0855d79ccf7ea1532501bb177cad5d1052",
+    "docs/core/artifacts/t13_uet_o2_one_loop_normal_branch_audit.json": "dc1143ef4b7837eb93e47d3a0136bf790b1b6ca589756a54bd2aea679c536801",
+    "docs/core/artifacts/t13_uet_o2_one_loop_convergence_audit.json": "8dfde35b0913937ac248a16cd40d1a1aee1598fba5a89509c12dc1c866dbe7d1"
+  },
+  "controlling_blocker": "vacuum_counterterm_and_renormalized_one_loop_response_not_closed",
+  "next_controller": "Derive a source-backed vacuum renormalization contract from the declared action, or retain the thermal-only lane and proceed only with separately proven finite-temperature sectors.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}

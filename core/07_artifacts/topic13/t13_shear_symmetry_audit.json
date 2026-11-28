@@ -1,0 +1,68 @@
+{
+  "major_result_id": "T13_SCALAR_SHEAR_SELECTION_RULE",
+  "topic": "0.13",
+  "closure_level": "CLOSED_FOR_LANE",
+  "verification_status": "CONDITIONAL_ALGEBRA_ONLY",
+  "assumptions": [
+    "Phi transforms as A1g in this proposed material map",
+    "Unbroken material point-group symmetry; Gamma E2g doublet",
+    "Local linear force and symmetric quadratic potential truncation",
+    "No directional external source in scalar-only case"
+  ],
+  "what_is_closed": [
+    "Scalar-only linear coherent-shear forcing excluded under assumptions",
+    "Scalar quadratic coupling and directional pump channel remain allowed"
+  ],
+  "equation_or_mapping": "l=0; H=h*I; Phi*(s_1^2+s_2^2) is invariant",
+  "units": {
+    "representation": "1",
+    "s": "m"
+  },
+  "derivation_class": "conditional_group_algebra",
+  "observable": "coherent mean versus invariant quadratic mode channel",
+  "data_role": "NO_DATA_CALIBRATION",
+  "linear_rank": 2,
+  "invariant_linear_dimension": 0,
+  "quadratic_rank": 2,
+  "invariant_quadratic_dimension": 1,
+  "linear_singular_values": [
+    4.898979485566357,
+    4.898979485566356
+  ],
+  "quadratic_singular_values": [
+    4.8989794855663575,
+    4.898979485566356,
+    4.149435347468601e-16
+  ],
+  "group_average_residual": 1.4340380734741606e-16,
+  "equal_intensity_opposite_pump_doublets": [
+    [
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0
+    ]
+  ],
+  "original_mass_source_rejected": false,
+  "physical_Phi_identification": false,
+  "open_blockers": [
+    "material representation match",
+    "independent eta and normalization",
+    "pump tensor and bath/occupation dynamics"
+  ],
+  "dependency_unlocked": [
+    "choice of coherent versus thermal research observable only"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_hashes": {
+    "docs/core/uet_shear_symmetry.py": "b5426f6b4f3cc9e3df83318a8f36d2c0d1534bfc2b98bc62cdd4268011be1deb",
+    "docs/core/test/test_topic13_shear_symmetry.py": "a12cc6f29c2610c1160b0abed0f59d4e5975695e9c62f5badb5021a7b0404db6",
+    "docs/core/T13_MATTER_STRAIN_SUSCEPTIBILITY_MATCH.md": "c34bf2d2c5603c63b3577272e4fa180b8547c715e02d8d31bcfcb59fa0d55d45",
+    "docs/core/artifacts/uet_equation_correspondence_registry_topic13_shear_symmetry_addendum.json": "324674082b5db49f82bf21326885847bf4aa2fad23fe6818d01fc6c902d73a8b",
+    "docs/scripts/audit/audit_topic13_shear_symmetry.py": "071d7ff07c57d54598172378228fd95f46b7a34409a0cf469826b744ff1c3829"
+  },
+  "claim_boundary": "Not a universal no-go, E2g source identification, thermalization proof or alpha calibration."
+}

@@ -1,0 +1,153 @@
+{
+  "major_result_id": "T13_CONSTRAINED_PRECISION_RESPONSE",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "status": "PRECISION_STUDY_MEASURED_NOT_PHYSICAL_CLOSURE",
+  "completed": true,
+  "what_is_closed": "Constrained response evaluated at two locked precisions",
+  "equation_or_mapping": "H=diag(w*gamma)+J.T R J; C=w*F; H psi+C lambda=w*g, C.T psi=0",
+  "units": "natural response; x-directed force",
+  "derivation_class": "Constrained quadratic minimization equivalent to exact projected solve",
+  "observable": "K_xx only, not isotropic kappa or material conductivity",
+  "data_role": "INTERNAL_NO_FIT",
+  "precision_plan": [
+    120,
+    180
+  ],
+  "direction_rules": [
+    "axis6",
+    "axis_cube14"
+  ],
+  "rows": [
+    {
+      "rule": "axis6",
+      "tail": {
+        "largest_vertex_diagonal": 1.678272370577464e+58,
+        "basis_index": 42,
+        "momentum_over_temperature": 213.20728789746738,
+        "weight": 1.0096414064895488e-91,
+        "diagonal_fraction": 0.5995618194864667
+      },
+      "dps": 120,
+      "response": "254.82471925625518524755693567516596794923466926469",
+      "dissipation": "254.82471925625518524755693567516596794923466926469",
+      "balance_relative": "4.29713150384e-116",
+      "constraint_max": "2.04897005919e-115",
+      "equation_max": "2.04897005919e-115",
+      "status": "EVALUATED"
+    },
+    {
+      "rule": "axis6",
+      "tail": {
+        "largest_vertex_diagonal": 1.678272370577464e+58,
+        "basis_index": 42,
+        "momentum_over_temperature": 213.20728789746738,
+        "weight": 1.0096414064895488e-91,
+        "diagonal_fraction": 0.5995618194864667
+      },
+      "dps": 180,
+      "response": "254.82471925625518524755693567516596794923466926469",
+      "dissipation": "254.82471925625518524755693567516596794923466926469",
+      "balance_relative": "6.12468514082e-176",
+      "constraint_max": "3.29666012433e-176",
+      "equation_max": "3.29666012433e-176",
+      "status": "EVALUATED"
+    },
+    {
+      "rule": "axis_cube14",
+      "tail": {
+        "largest_vertex_diagonal": 3.12300894446841e+23,
+        "basis_index": 199,
+        "momentum_over_temperature": 195.41109476027998,
+        "weight": 9.572968827565467e-83,
+        "diagonal_fraction": 0.9999999904887992
+      },
+      "dps": 120,
+      "response": "254.82471925625526431453292956722031775155989787371",
+      "dissipation": "254.82471925625526431453292956722031775155989787371",
+      "balance_relative": "6.81801844715e-119",
+      "constraint_max": "6.8410247003e-116",
+      "equation_max": "6.8410247003e-116",
+      "status": "EVALUATED"
+    },
+    {
+      "rule": "axis_cube14",
+      "tail": {
+        "largest_vertex_diagonal": 3.12300894446841e+23,
+        "basis_index": 199,
+        "momentum_over_temperature": 195.41109476027998,
+        "weight": 9.572968827565467e-83,
+        "diagonal_fraction": 0.9999999904887992
+      },
+      "dps": 180,
+      "response": "254.82471925625526431453292956722031775155989787371",
+      "dissipation": "254.82471925625526431453292956722031775155989787371",
+      "balance_relative": "1.60502494846e-177",
+      "constraint_max": "1.32417853389e-175",
+      "equation_max": "1.32417853389e-175",
+      "status": "EVALUATED"
+    }
+  ],
+  "input_precision": "Binary64 inputs treated as fixed; higher precision solves do not upgrade input accuracy",
+  "controls": {
+    "state": [
+      0.22,
+      0.35,
+      0.15
+    ],
+    "radial": 8,
+    "collision": 24,
+    "angular": 24,
+    "cutoff": 48,
+    "channels": 64,
+    "transition": 24,
+    "interpolation": 40
+  },
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "open_blockers": [
+    "interpolation_consistency",
+    "full_tensor_convergence",
+    "material_mapping"
+  ],
+  "claim_boundary": "Fixed-grid x-response only. No rcond change, clipping, fitting or production-default change.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/scripts/audit/audit_topic13_constrained_precision.py",
+      "sha256": "7a837e4163b84c1d6d5055ebcc880b1c1fb951b68b3cf22ca98c3cd9624f3e2e"
+    },
+    {
+      "path": "docs/core/test/test_topic13_constrained_precision.py",
+      "sha256": "9206ac6a124e9a81d176ac421953ed28ca576e0dea3cc511a80f670d5e0b3388"
+    },
+    {
+      "path": "docs/core/uet_o2_continuum_collision_operator.py",
+      "sha256": "1c58e860e4237f2f2b4a43fb5ba3d4d82967db791cb9cbff46df2a9c6bd296b2"
+    },
+    {
+      "path": "docs/core/uet_o2_energy_momentum_conserving_bethe_salpeter.py",
+      "sha256": "98b43f2bde1bf335ed7296f51b253e707699e4052b0903d216ab5381eac5b835"
+    },
+    {
+      "path": "docs/core/uet_o2_action_derived_transition_kernel.py",
+      "sha256": "2f818500b353e8cf81caddf892bcf2db43a4341fe831b6f67e62423e3c2feb8f"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_quasiparticle_eos.py",
+      "sha256": "ba814f3aa02b5e31112a6595dac7727b7025b08e08f0631f50567f270cebbb7f"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_observable_bridge.py",
+      "sha256": "a1be58b8230240775654e7c0d6265870010f546238e96e59e36045e6a893e5d2"
+    },
+    {
+      "path": "docs/core/uet_o2_action_thermal_stiffness_beta.py",
+      "sha256": "c1c3278a79df611ddae2f67ff811022722ab0c56f68bf91cc5480f34db9a95e6"
+    },
+    {
+      "path": "docs/core/artifacts/t13_transition_pullback_pilot.json",
+      "sha256": "c04667d3489575709e32a5bb22c91aec50d4b278cf79cb0834008c2e536eb31e"
+    }
+  ],
+  "verification_status": "ALL_FIXED_CASES_ATTEMPTED"
+}

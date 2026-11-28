@@ -1,0 +1,202 @@
+{
+  "schema_version": "t13-uet-o2-one-loop-retarded-self-energy-no-go-v1",
+  "artifact": "t13_uet_o2_one_loop_retarded_self_energy_no_go_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the local quartic one-loop retarded correction is a real, external-frequency-independent tadpole",
+      "its dissipative spectral density is identically zero at one loop",
+      "a two-loop sunset or source-locked microscopic open-system branch is required for nonzero dissipation"
+    ],
+    "equation_or_mapping": {
+      "one_loop_retarded_self_energy": "Sigma_R^(1)(omega,k)=3*lambda*[I_vac^R(m_eff)+I_thermal(T,mu_eff)]",
+      "tadpole_thermal_piece": "I_thermal=integral[(n_B(E-mu_eff)+n_B(E+mu_eff))/(4*E)] d^3k/(2*pi)^3",
+      "one_loop_dissipative_part": "Im Sigma_R^(1)(omega,k)=0 for the local quartic tadpole",
+      "one_loop_spectral_density": "rho_Sigma^(1)(omega,k)=-2*Im Sigma_R^(1)=0",
+      "required_completion": "physical dissipation requires a two-loop sunset or a separately matched microscopic open-system kernel"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "temperature_mass_frequency": "natural energy/inverse time",
+      "thermal_tadpole": "natural mass squared",
+      "self_energy": "natural mass squared",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived one-loop local quartic tadpole with real thermal contribution; structural no-go for one-loop dissipation",
+    "observable": "one-loop real self-energy boundary and zero dissipative spectral part",
+    "data_role": "ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO_NOT_TRANSPORT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_one_loop_retarded_self_energy_no_go.py",
+        "sha256": "a0e04de5efe2c23d93ef91a56766c38cc359c4787b5f51f2c7f97fa839a5f84e"
+      },
+      {
+        "path": "docs/core/uet_covariant_matter.py",
+        "sha256": "8a57d95e898a8ac962bbd749670ad0695b597281937da36496d2ec7e074f9c53"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_density_charged_vertex.py",
+        "sha256": "188edb08ef56bf0a3908d1cab843632faf0580525fee527112cf41e6fcf4777f"
+      }
+    ],
+    "verification_status": "PASS_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+    "open_blockers": [
+      "two_loop_sunset_or_microscopic_retarded_self_energy_missing",
+      "physical_Kubo_coefficient_missing",
+      "entropy_current_heat_flux_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "one-loop dissipation no-go only; it does not unlock physical transport, SI, alpha, Core, Gravity, or external validation",
+    "claim_boundary": "This closes only the structural one-loop no-go: a local quartic tadpole is real and frequency independent, so it cannot supply physical dissipation. It does not close the two-loop/microscopic retarded self-energy, transport, entropy-current balance, SI Phi map, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+    "equations": {
+      "one_loop_retarded_self_energy": "Sigma_R^(1)(omega,k)=3*lambda*[I_vac^R(m_eff)+I_thermal(T,mu_eff)]",
+      "tadpole_thermal_piece": "I_thermal=integral[(n_B(E-mu_eff)+n_B(E+mu_eff))/(4*E)] d^3k/(2*pi)^3",
+      "one_loop_dissipative_part": "Im Sigma_R^(1)(omega,k)=0 for the local quartic tadpole",
+      "one_loop_spectral_density": "rho_Sigma^(1)(omega,k)=-2*Im Sigma_R^(1)=0",
+      "required_completion": "physical dissipation requires a two-loop sunset or a separately matched microscopic open-system kernel"
+    },
+    "unit_contract": {
+      "unit_lane": "natural",
+      "temperature_mass_frequency": "natural energy/inverse time",
+      "thermal_tadpole": "natural mass squared",
+      "self_energy": "natural mass squared",
+      "Phi": "effective response variable; not temperature",
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "derivation_class": "action-derived one-loop local quartic tadpole with real thermal contribution; structural no-go for one-loop dissipation",
+    "observable": "one-loop real self-energy boundary and zero dissipative spectral part",
+    "data_role": "ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO_NOT_TRANSPORT",
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace; no backreaction",
+      "R_obs": "separate observer record"
+    },
+    "closed_as_no_go": "the local one-loop tadpole cannot provide a nonzero retarded dissipative spectral density",
+    "required_next_branch": "two-loop sunset self-energy or source-locked microscopic open-system matching",
+    "excluded": {
+      "physical_retarded_self_energy": true,
+      "physical_kubo_coefficient": true,
+      "entropy_current_heat_flux_dissipative_balance": true,
+      "SI_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true
+    },
+    "claim_boundary": "This closes only the structural one-loop no-go: a local quartic tadpole is real and frequency independent, so it cannot supply physical dissipation. It does not close the two-loop/microscopic retarded self-energy, transport, entropy-current balance, SI Phi map, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "state": {
+    "temperature": 0.22,
+    "chemical_potential": 0.25,
+    "effective_chemical_potential": 0.25,
+    "space_response": 0.15,
+    "effective_mass": 0.7039176088151227,
+    "quartic_coupling": 0.8,
+    "cutoff": 33.78804522312589,
+    "thermal_tadpole": 0.00022235021208668495,
+    "retarded_frequency_grid": [
+      0.05,
+      0.1,
+      0.2,
+      0.4,
+      0.8
+    ],
+    "self_energy_real": [
+      0.000533640509008044,
+      0.000533640509008044,
+      0.000533640509008044,
+      0.000533640509008044,
+      0.000533640509008044
+    ],
+    "self_energy_imaginary": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "self_energy_spectral_density": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "imaginary_part_maximum": 0.0,
+    "spectral_density_maximum": 0.0,
+    "external_frequency_independence_residual": 0.0,
+    "tadpole_finite": true,
+    "one_loop_retarded_self_energy_completed": true,
+    "dissipative_self_energy_completed": false,
+    "two_loop_sunset_or_microscopic_source_required": true,
+    "physical_kubo_coefficient_emitted": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO_NOT_TRANSPORT"
+  },
+  "checks": {
+    "one_loop_self_energy_is_completed": true,
+    "thermal_tadpole_is_finite": true,
+    "self_energy_is_real": true,
+    "one_loop_spectral_density_vanishes": true,
+    "external_frequency_independence_is_explicit": true,
+    "two_loop_or_microscopic_completion_is_required": true,
+    "physical_dissipative_completion_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "numeric_alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_or_holdout": true,
+    "Phi_ontology_preserved": true,
+    "C_ontology_preserved": true,
+    "R_gen_ontology_preserved": true,
+    "R_obs_separate": true,
+    "no_go_boundary_is_explicit": true
+  },
+  "failed_checks": [],
+  "one_loop_retarded_self_energy_completed": true,
+  "dissipative_self_energy_completed": false,
+  "two_loop_sunset_or_microscopic_source_required": true,
+  "physical_transport_coefficients_emitted": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "parameter_fitting_performed": false,
+  "target_data_used": false,
+  "xie_2026_accessed": false,
+  "controlling_blocker": "two_loop_sunset_or_microscopic_retarded_self_energy_missing",
+  "next_controller": "derive the two-loop sunset self-energy or obtain a state-matched microscopic retarded correlator; do not promote the zero one-loop spectral part to a transport prediction",
+  "claim_promotion": false,
+  "major_result_id": "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+  "closure_level": "CLOSED_AS_NO_GO",
+  "data_role": "ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO_NOT_TRANSPORT",
+  "audit": {
+    "path": "docs/core/artifacts/t13_uet_o2_one_loop_retarded_self_energy_no_go_audit.json",
+    "summary": {
+      "status": "PASS_ACTION_DERIVED_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+      "major_result_id": "T13_UET_O2_ONE_LOOP_RETARDED_SELF_ENERGY_NO_GO",
+      "closure_level": "CLOSED_AS_NO_GO"
+    }
+  },
+  "open_blockers": [
+    "two_loop_sunset_or_microscopic_retarded_self_energy_missing",
+    "physical_Kubo_coefficient_missing",
+    "entropy_current_heat_flux_and_dissipative_balance_missing",
+    "dimensional_Phi_to_thermal_observable_map_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+  ],
+  "claim_boundary": "This closes only the structural one-loop no-go: a local quartic tadpole is real and frequency independent, so it cannot supply physical dissipation. It does not close the two-loop/microscopic retarded self-energy, transport, entropy-current balance, SI Phi map, alpha_Phi_K, TTG validation, or Full Topic 13."
+}

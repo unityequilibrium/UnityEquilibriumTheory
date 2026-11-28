@@ -1,0 +1,611 @@
+{
+  "schema_version": "t13-retarded-ra-mixed-current-vertex-v1",
+  "major_result_id": "T13_RETARDED_RA_MIXED_CURRENT_VERTEX",
+  "topic": "0.13_Thermodynamic_Bridge",
+  "closure_level": "PARTIAL",
+  "verification_status": "PASS_SCOPED_RETARDED_RA_MIXED_VERTEX",
+  "what_is_closed": [
+    "Thermal residue weights are fixed before analytic continuation and reduce exactly to the Matsubara mixed triangle.",
+    "The declared latest-time current RA continuation of the proper bare+mixed+vacuum vertex satisfies the continued Ward identity at finite transfer.",
+    "The strict proper 1PI zero-transfer scan is finite rather than inverse-eta divergent; transport pinch resummation belongs to the subsequent current-current correlator."
+  ],
+  "equation_registry_ids": [
+    "uet.o2.thermal.retarded_ra_mixed_current_vertex"
+  ],
+  "registration_status": "CANDIDATE_DIAGNOSTIC_NOT_CENTRAL_ACCEPTANCE",
+  "equation_or_mapping": {
+    "RA_prescription": "Im z_current=+2 eta; Im z_in=Im z_out=-eta; energy sum conserved",
+    "mixed_triangle": "G^2 sum_residues D_response(K)D_q(P-K)D_q(P+Q-K)gamma_q with thermal weights frozen before continuation",
+    "Ward": "Q_mu Gamma_RA^mu=q*[D_RA^-1(P+Q)-D_RA^-1(P)]",
+    "transport_boundary": "proper Gamma_RA remains finite; pinch pair arises only after RA external propagators in the current-current/ladder equation"
+  },
+  "ontology": {
+    "C": "collective coordinate, not charge",
+    "Phi": "effective response, not a particle identity",
+    "R_gen": "excluded derived trace",
+    "R_obs": "excluded"
+  },
+  "unit_lane": "natural_units",
+  "units": {
+    "energy": 1,
+    "momentum": 1,
+    "eta": 1,
+    "Gamma": 1
+  },
+  "derivation_class": "analytic_continuation_with_numerical_quadrature",
+  "observable": "Proper RA charged three-point vertex diagnostic, not a Kubo coefficient",
+  "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+  "config": {
+    "z": 1.0,
+    "mass_squared": 1.0,
+    "quartic": 0.1,
+    "epsilon": 1.0,
+    "response_kinetic": 1.0,
+    "response_mass_squared": 0.5,
+    "response_coupling": 0.2,
+    "response_quartic": 1.0
+  },
+  "samples": [
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.04,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.04,
+        1.244030650891055
+      ],
+      "Q0": [
+        -0.08,
+        0.15
+      ],
+      "bare": [
+        [
+          -0.0,
+          -2.23806130178211
+        ],
+        [
+          -0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          2.8089223097783668e-06,
+          -6.658977523288318e-06
+        ],
+        [
+          -2.2056648384277843e-06,
+          -1.7290044048242672e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          7.292902121083818e-07,
+          -5.630812141999838e-05
+        ],
+        [
+          -1.993611306544321e-05,
+          -1.2656727923186416e-07
+        ]
+      ],
+      "total": [
+        [
+          3.5382125218867485e-06,
+          -2.2381242688810534
+        ],
+        [
+          -0.8000221417779039,
+          -1.8555716840561315e-06
+        ]
+      ],
+      "Ward_lhs": [
+        0.17571392891957546,
+        0.17905010112802575
+      ],
+      "Ward_target": [
+        0.1757139289195753,
+        0.17905010112802575
+      ],
+      "Ward_relative_error": 6.638312677331942e-16,
+      "transverse_coefficient": [
+        5.520600647029095,
+        -8.164320729144832
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.02,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.02,
+        1.244030650891055
+      ],
+      "Q0": [
+        -0.04,
+        0.15
+      ],
+      "bare": [
+        [
+          -0.0,
+          -2.23806130178211
+        ],
+        [
+          -0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          3.702169728412189e-06,
+          -5.077802211766361e-06
+        ],
+        [
+          -1.3876293515613138e-06,
+          -2.2685628982588914e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          3.656220936428633e-07,
+          -5.647513346790028e-05
+        ],
+        [
+          -2.001847424279536e-05,
+          -6.35934078386504e-08
+        ]
+      ],
+      "total": [
+        [
+          4.0677918220550525e-06,
+          -2.2381228547177896
+        ],
+        [
+          -0.8000214061035944,
+          -2.3321563060975418e-06
+        ]
+      ],
+      "Ward_lhs": [
+        0.1757139842752767,
+        0.08952505792622367
+      ],
+      "Ward_target": [
+        0.17571398427527654,
+        0.08952505792622367
+      ],
+      "Ward_relative_error": 8.444651550532201e-16,
+      "transverse_coefficient": [
+        6.5255202194238455,
+        -13.053152391685066
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": -1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.01,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.01,
+        1.244030650891055
+      ],
+      "Q0": [
+        -0.02,
+        0.15
+      ],
+      "bare": [
+        [
+          -0.0,
+          -2.23806130178211
+        ],
+        [
+          -0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          4.108863570918305e-06,
+          -3.462282580496551e-06
+        ],
+        [
+          -5.016991737510921e-07,
+          -2.66568933606044e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          1.829335737766311e-07,
+          -5.6516964394925164e-05
+        ],
+        [
+          -2.0039107904950934e-05,
+          -3.1835588594491466e-08
+        ]
+      ],
+      "total": [
+        [
+          4.291797144694936e-06,
+          -2.238121281029086
+        ],
+        [
+          -0.8000205408070787,
+          -2.6975249246549316e-06
+        ]
+      ],
+      "Ward_lhs": [
+        0.17571399815700423,
+        0.044762529885168496
+      ],
+      "Ward_target": [
+        0.17571399815700403,
+        0.04476252988516848
+      ],
+      "Ward_relative_error": 1.074220510005579e-15,
+      "transverse_coefficient": [
+        4.711787386386304,
+        -16.723491883627702
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.04,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.04,
+        0.8440306508910551
+      ],
+      "Q0": [
+        -0.08,
+        0.15
+      ],
+      "bare": [
+        [
+          0.0,
+          2.23806130178211
+        ],
+        [
+          0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          -6.9987520125699894e-06,
+          2.3190473228225843e-06
+        ],
+        [
+          6.658264383365476e-07,
+          4.10532082861048e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          -7.292902121083818e-07,
+          5.630812141999838e-05
+        ],
+        [
+          1.993611306544321e-05,
+          1.2656727923186416e-07
+        ]
+      ],
+      "total": [
+        [
+          -7.728042224678372e-06,
+          2.238119928950853
+        ],
+        [
+          0.8000206019395038,
+          4.231888107842344e-06
+        ]
+      ],
+      "Ward_lhs": [
+        -0.17571325071134916,
+        -0.17904990714478036
+      ],
+      "Ward_target": [
+        -0.1757132507113495,
+        -0.1790499071447804
+      ],
+      "Ward_relative_error": 1.3322677571339627e-15,
+      "transverse_coefficient": [
+        -5.52060389555677,
+        8.164298768072431
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.02,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.02,
+        0.8440306508910551
+      ],
+      "Q0": [
+        -0.04,
+        0.15
+      ],
+      "bare": [
+        [
+          0.0,
+          2.23806130178211
+        ],
+        [
+          0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          -9.007221287878587e-06,
+          -1.7445339997876908e-06
+        ],
+        [
+          -1.3894045129706594e-06,
+          5.368569902579296e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          -3.656220936428633e-07,
+          5.647513346790028e-05
+        ],
+        [
+          2.001847424279536e-05,
+          6.35934078386504e-08
+        ]
+      ],
+      "total": [
+        [
+          -9.372843381521451e-06,
+          2.238116032381578
+        ],
+        [
+          0.8000186290697299,
+          5.432163310417947e-06
+        ]
+      ],
+      "Ward_lhs": [
+        -0.17571330412955546,
+        -0.08952496078910827
+      ],
+      "Ward_target": [
+        -0.17571330412955577,
+        -0.08952496078910828
+      ],
+      "Ward_relative_error": 1.5497897672741615e-15,
+      "transverse_coefficient": [
+        -6.5255273310925865,
+        13.053104786873162
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    },
+    {
+      "T": 0.25,
+      "mu": 0.2,
+      "q": 1,
+      "pz": 0.3,
+      "Qz": 0.2,
+      "omega": 0.15,
+      "eta": 0.01,
+      "Omega_in": 1.044030650891055,
+      "P0": [
+        0.01,
+        0.8440306508910551
+      ],
+      "Q0": [
+        -0.02,
+        0.15
+      ],
+      "bare": [
+        [
+          0.0,
+          2.23806130178211
+        ],
+        [
+          0.8,
+          0.0
+        ]
+      ],
+      "mixed_thermal": [
+        [
+          -9.736100485950523e-06,
+          -5.804790736311773e-06
+        ],
+        [
+          -3.6081727979958464e-06,
+          6.2023435987452415e-06
+        ]
+      ],
+      "vacuum": [
+        [
+          -1.829335737766311e-07,
+          5.6516964394925164e-05
+        ],
+        [
+          2.0039107904950934e-05,
+          3.1835588594491466e-08
+        ]
+      ],
+      "total": [
+        [
+          -9.919034059727155e-06,
+          2.2381120139557686
+        ],
+        [
+          0.800016430935107,
+          6.234179187339733e-06
+        ]
+      ],
+      "Ward_lhs": [
+        -0.17571331752566266,
+        -0.044762481298386864
+      ],
+      "Ward_target": [
+        -0.175713317525663,
+        -0.04476248129838687
+      ],
+      "Ward_relative_error": 1.8372463981972117e-15,
+      "transverse_coefficient": [
+        -4.711801762304296,
+        16.72342191400254
+      ],
+      "prescription": "current latest-time: Im z_current=+2 eta; incoming/outgoing charged legs=-eta",
+      "boundary": "Proper bare+mixed+vacuum RA vertex; response-relaxed bath and collision ladder excluded."
+    }
+  ],
+  "matsubara_reduction_residuals": [
+    0.0,
+    0.0
+  ],
+  "finite_transfer_eta_relative_changes": [
+    2.0274582004526096e-06,
+    1.9698753279012837e-06
+  ],
+  "zero_transfer_proper_1pi_probe": [
+    {
+      "eta": 0.08,
+      "norm": 0.04373433417689564,
+      "eta_times_norm": 0.003498746734151651
+    },
+    {
+      "eta": 0.04,
+      "norm": 0.044146740874986955,
+      "eta_times_norm": 0.0017658696349994781
+    },
+    {
+      "eta": 0.02,
+      "norm": 0.044250907177172116,
+      "eta_times_norm": 0.0008850181435434423
+    },
+    {
+      "eta": 0.01,
+      "norm": 0.044277015990045174,
+      "eta_times_norm": 0.00044277015990045176
+    },
+    {
+      "eta": 0.005,
+      "norm": 0.04428354740661878,
+      "eta_times_norm": 0.0002214177370330939
+    }
+  ],
+  "failed_hypothesis": "The first probe expected inverse-eta growth in the proper triangle; the computed norm converged, locating the pinch requirement in the current-current RA pair instead.",
+  "checks": {
+    "frozen_weights_reduce_to_Matsubara": true,
+    "continued_Ward_identity": true,
+    "finite_transfer_eta_convergence": true,
+    "finite_nonzero_transverse_component": true,
+    "proper_1PI_zero_transfer_no_inverse_eta_growth": true,
+    "proper_1PI_zero_transfer_eta_convergence": true
+  },
+  "open_blockers": [
+    "response_relaxed_bath_RA_continuation",
+    "same_action_on_shell_residue_LSZ_match",
+    "current_current_RA_pinch_pair_with_finite_width",
+    "microscopic_retarded_four_point_ladder_kernel",
+    "continuum_heat_current_and_SI_mapping"
+  ],
+  "controlling_blocker": "same_action_current_current_RA_pinch_and_four_point_ladder_kernel_missing",
+  "source_hashes": {
+    "docs/scripts/audit/audit_topic13_retarded_ra_mixed_current_vertex.py": "d1367f005b65550f60e3ad6baf71e563091e0de5a299c1eeb98b23bbe51e3b9c",
+    "docs/core/test/test_topic13_retarded_ra_mixed_current_vertex.py": "99c6ebcfdf77f7af2688d6f1d5bb6971b9a5e8327e3322d9b375b7266fb154f4",
+    "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py": "261ac5a2762e3a73125a266316c68f09186aad696d257dae0b23917ec10b1b8c",
+    "docs/scripts/audit/audit_topic13_microscopic_current_ladder_matching_boundary.py": "3707562036fd7063e1eeb0e7631735b660a46a20734e62334e4b1448544f9d8c"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
+      "sha256": "7fdf5d1ab04d88657750d567d0cd52a9b770d395210c30180944f547b3772c63"
+    },
+    {
+      "path": "docs/core/artifacts/t13_microscopic_current_ladder_matching_boundary_audit.json",
+      "sha256": "35c6b34b5427546cde2dbdf84370734a07c973a551209b505ffce58e14f6c79b"
+    }
+  ],
+  "literature_context": [
+    {
+      "url": "https://doi.org/10.1103/PhysRevD.49.4107",
+      "role": "Primary all-orders imaginary-to-retarded N-point continuation context; no numeric input"
+    },
+    {
+      "url": "https://doi.org/10.1103/PhysRevD.52.3591",
+      "role": "Primary scalar transport ladder/pinch and kinetic-equation equivalence context; no numeric input"
+    }
+  ],
+  "dependency_unlocked": [
+    "proper_mixed_RA_vertex_handoff_to_current_current_kernel"
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "xie_2026_accessed": false,
+  "parameter_fitting_performed": false,
+  "claim_boundary": "Proper bare+mixed+vacuum RA one-loop vertex in a declared finite-transfer branch only; response-relaxed bath, dressed RA pair, microscopic ladder, Kubo/heat transport, SI, external validation and Full Topic 13 remain open.",
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": [
+      "Thermal residue weights are fixed before analytic continuation and reduce exactly to the Matsubara mixed triangle.",
+      "The declared latest-time current RA continuation of the proper bare+mixed+vacuum vertex satisfies the continued Ward identity at finite transfer.",
+      "The strict proper 1PI zero-transfer scan is finite rather than inverse-eta divergent; transport pinch resummation belongs to the subsequent current-current correlator."
+    ],
+    "WHAT_REMAINS_OPEN": [
+      "response_relaxed_bath_RA_continuation",
+      "same_action_on_shell_residue_LSZ_match",
+      "current_current_RA_pinch_pair_with_finite_width",
+      "microscopic_retarded_four_point_ladder_kernel",
+      "continuum_heat_current_and_SI_mapping"
+    ],
+    "DEPENDENCY_UNLOCKED": [
+      "proper_mixed_RA_vertex_handoff_to_current_current_kernel"
+    ],
+    "STATUS": "PASS_SCOPED_RETARDED_RA_MIXED_VERTEX",
+    "WHAT_CHANGED": "Added a declared latest-time RA continuation with frozen thermal weights and relocated the failed 1/eta hypothesis from the proper vertex to the current-current RA pair.",
+    "EQUATION_OR_MAPPING": {
+      "RA_prescription": "Im z_current=+2 eta; Im z_in=Im z_out=-eta; energy sum conserved",
+      "mixed_triangle": "G^2 sum_residues D_response(K)D_q(P-K)D_q(P+Q-K)gamma_q with thermal weights frozen before continuation",
+      "Ward": "Q_mu Gamma_RA^mu=q*[D_RA^-1(P+Q)-D_RA^-1(P)]",
+      "transport_boundary": "proper Gamma_RA remains finite; pinch pair arises only after RA external propagators in the current-current/ladder equation"
+    },
+    "VERIFICATION": {
+      "frozen_weights_reduce_to_Matsubara": true,
+      "continued_Ward_identity": true,
+      "finite_transfer_eta_convergence": true,
+      "finite_nonzero_transverse_component": true,
+      "proper_1PI_zero_transfer_no_inverse_eta_growth": true,
+      "proper_1PI_zero_transfer_eta_convergence": true
+    },
+    "CONTROLLING_BLOCKER": "same_action_current_current_RA_pinch_and_four_point_ladder_kernel_missing",
+    "NEXT_ACTION": "Construct the same-action dressed RA propagator pair and microscopic four-point rung, then test the ladder/kinetic equivalence with an explicit width ledger.",
+    "CLAIM_BOUNDARY": "Proper bare+mixed+vacuum RA one-loop vertex in a declared finite-transfer branch only; response-relaxed bath, dressed RA pair, microscopic ladder, Kubo/heat transport, SI, external validation and Full Topic 13 remain open."
+  }
+}

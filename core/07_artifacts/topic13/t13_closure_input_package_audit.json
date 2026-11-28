@@ -1,0 +1,489 @@
+{
+  "schema_version": "t13-closure-input-package-audit-v1",
+  "artifact": "t13_closure_input_package_audit",
+  "generated_at": "2026-09-18",
+  "status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+  "major_result": {
+    "major_result_id": "T13_CLOSURE_INPUT_PACKAGE_AUDIT",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "PARTIAL",
+    "what_is_closed": [
+      "The three non-derivable input packages are checked against current artifacts.",
+      "The fail-closed record contract is linked before any package can be accepted.",
+      "Numeric candidates are separated from accepted Core-ready evidence.",
+      "The field-level candidate compatibility diagnostic is linked without accepting any route.",
+      "Holdout and anti-fitting boundaries are rechecked.",
+      "Existing graphite heat-capacity and correction sources are reconciled by quantity, uncertainty, and material-state eligibility.",
+      "Formal, natural-unit, and external-comparator transport evidence is reconciled without physical UET promotion.",
+      "Base-Phi/SI candidate, Phi_E comparator, and natural-unit action evidence are reconciled without alpha promotion.",
+      "C_src routes are reconciled by payload, numeric status, material match, uncertainty, and acceptance without Ding promotion."
+    ],
+    "what_remains_open": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "equation_or_mapping": {
+      "TTG": "C_src(T)=sum_mu c_mu(T); Delta_Tq=Delta_u_ph/C_src(T)",
+      "UET": "y_TTG^UET=Delta_Phi(t)/Delta_Phi(0); Delta_Tq=alpha_Phi_K*Delta_Phi",
+      "transport": "KuboCoefficientRecord -> physical coefficient only after matched provenance"
+    },
+    "units": {
+      "C_src": "J m^-3 K^-1",
+      "Delta_Tq": "K",
+      "alpha_Phi_K": "K per normalized Phi",
+      "transport": "source-specific; no physical value emitted"
+    },
+    "derivation_class": "provenance and acceptance audit; no new physical derivation",
+    "observable": "closure-input acceptance state",
+    "data_role": "INTERNAL_AUDIT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json",
+        "sha256": "8553b2d7ec2353332ac53530c6843c0c354542f3198f4d0397734e5c25ba0429",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+        "sha256": "faef9dbf350e4454530c30ab004d201aa8d3b9d9ae78b3ad8bc2573fa7f17bfe",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+        "sha256": "c856857ced77aed07c24e062b1517ca313663e1ed58155e5c1dd78f0cb1895d1",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
+        "sha256": "45555fab3f034ff7cbbfc0e2e53c7aba3d87e49d315365341281545e1dd11bf0",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+        "sha256": "db8d64f7956979740ebcb3c872ca20d46d50e3399c1e9d5d61c9effb17dd0ff9",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json",
+        "sha256": "b9a517c3c55178a1f9988fc207768a8ff36912e4ab07e9fca9aa193f5a7fc24d",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
+        "sha256": "ffb14131c2fb5eca54b12cd5c182bed657951f436c396ac0403aede7ca01dd27",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+        "sha256": "87e3532d59fec8cecb0b16c7090a5a5ade9bc30656450b8106dc0f7b7a0656c9",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+        "sha256": "1c47f402f0f1a5473c6f9af47177389e9c4ceceb0e1cfbc8a0f336700bddd15d",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+        "sha256": "778cf38d3e1f92042e7fc13ab650da3bb9fb4212b05c469767245f09f6199b63",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+        "sha256": "e39e85d454bcb8d73fa1138cbac13acdecb456ec677d9b9f01673d17e7585515",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+        "sha256": "d8be3fc1d7fe8593c8a894ea9cd92431746d3acc4d2a0532baec0bd2a98efed6",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+        "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_ttg_source_boundary_audit.json",
+        "sha256": "4a6fc0618d15f520e8f7f99b9f6b85c4c766e0e683375f23eece791926049d68",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
+        "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+        "sha256": "3c61777993e49b4b4487ca30c59498cb8f8d28654baf8b6d98adbd58d58a72d0",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json",
+        "sha256": "91cd2010a1d4a4355896a08804985b224d345b6125aacc32eec904b67ded433e",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+        "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+        "sha256": "0606829e2ebc3e5cc7131e3c56b327a586a1976169eedbc9525afa3b3d5dbc9f",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+        "sha256": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+        "sha256": "f78d68b4db2a95eb1d8f77dc9f79671296159b15363f353f36821b0e43f719fd",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json",
+        "sha256": "9caa1217b0d69e9a151e2dea8e55b15de46c7d45646992512057276b5180faf3",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json",
+        "sha256": "9db8e6d95499ab155311a93634ea9c401dde89e5f13b9f2c6646d94c3aea5324",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json",
+        "sha256": "91e324e23aeb4c40bdbf6530f9a3619cf322c84c648608b0a2ce111c034892b5",
+        "role": "input-package acceptance evidence"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+        "sha256": "707fe3757d3cff312fc6b00e9b090f7e962cfbfe42ac094db8393b9640dcaed1",
+        "role": "input-package acceptance evidence"
+      }
+    ],
+    "record_contract_artifact": {
+      "path": "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json",
+      "status": "PASS_T13_CLOSURE_RECORD_CONTRACT_OPEN"
+    },
+    "verification_status": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+    "controlling_blocker": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "claim_boundary": "This audit narrows input readiness only. It does not close Full Topic 13, derive alpha_Phi_K, or promote candidate C_src/Kubo values."
+  },
+  "packages": [
+    {
+      "package_id": "T13_INPUT_DING_TTG_SOURCE",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "numeric_candidate_rows_present": true,
+        "mesh_convergence_pass": true,
+        "material_state_match_to_ding": false,
+        "source_grade_uncertainty_present": false,
+        "author_payload_received": false,
+        "public_route_is_bounded": true,
+        "author_request_executed": false,
+        "material_equivalence_audit": "PASS_SCOPED_DING_MATERIAL_REGIME_BOUNDARY_NO_GO",
+        "thermodynamic_pair_status": "PASS_SCOPED_SOURCE_LOCKED_LOWITZER_ALPHA_V_K_T_PAIR",
+        "same_grade_alpha_V_and_K_T_correction_pair": true,
+        "huberman_2019_public_route_status": "PASS_SCOPED_HUBERMAN_2019_SOURCE_BOUNDARY_NO_CORE_PAYLOAD",
+        "huberman_2019_numeric_payload_present": false,
+        "public_phonon_route_screening_status": "PASS_SCOPED_PUBLIC_PHONON_ROUTE_SCREENING_NO_CORE_PAYLOAD",
+        "public_phonon_core_payload_present": false,
+        "candidate_compatibility_status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
+        "candidate_core_accepted_route_count": 0,
+        "cv_source_reconciliation_status": "PASS_SCOPED_CV_SOURCE_RECONCILIATION_OPEN",
+        "direct_or_derived_cv_count": 2,
+        "source_grade_cv_uncertainty_count": 0,
+        "eligible_cv_input_count": 0,
+        "csrc_reconciliation_status": "PASS_SCOPED_CSRC_RECONCILIATION_OPEN",
+        "csrc_route_count": 10,
+        "numeric_csrc_candidate_count": 3,
+        "source_grade_uncertainty_count": 0,
+        "ding_material_state_match_count": 0,
+        "ding_author_payload_count": 0,
+        "accepted_independent_reproduction_count": 0,
+        "eligible_csrc_input_count": 0
+      },
+      "missing_acceptance_fields": [
+        "authorized_numeric_C_src_payload",
+        "accepted_independent_reproduction",
+        "Ding_material_state_match",
+        "source_grade_uncertainty"
+      ],
+      "unlocks_subresults": [
+        "accepted_numeric_csrc",
+        "material_and_uncertainty_closure",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_BASE_PHI_SI_ALPHA_BETA",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "eligible_paired_alpha_records": 0,
+        "candidate_search_status": "PASS_SCOPED_NO_ELIGIBLE_PAIRED_ALPHA_RECORD",
+        "normalized_scale_no_go": "PASS_SCOPED_NO_GO_NORMALIZED_PHI_ENERGY_ANCHOR",
+        "dimensional_bridge_status": "PASS_CONDITIONAL_FORMULA_OPEN_INPUTS",
+        "covariant_action_route_status": "PASS_NATURAL_UNIT_ROUTE_IDENTIFIED_SI_MAPPING_BLOCKED",
+        "numeric_alpha_emitted": false,
+        "holdout_accessed": false,
+        "candidate_compatibility_status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
+        "candidate_core_accepted_route_count": 0,
+        "base_phi_reconciliation_status": "PASS_SCOPED_BASE_PHI_RECONCILIATION_OPEN",
+        "paired_alpha_search_candidate_count": 74,
+        "eligible_paired_alpha_record_count": 0,
+        "named_phi_e_comparator_count": 1,
+        "independent_base_phi_si_record_count": 0,
+        "eligible_base_phi_input_count": 0
+      },
+      "missing_acceptance_fields": [
+        "eligible_paired_alpha_record",
+        "numeric_alpha_emitted",
+        "dimensional_bridge_open_inputs_closed",
+        "dimensionful_action_SI_map"
+      ],
+      "unlocks_subresults": [
+        "base_phi_si_anchor",
+        "independent_alpha_record",
+        "normalized_beta_si_map",
+        "physical_source_backed_eos",
+        "physical_heat_flux_entropy_map"
+      ]
+    },
+    {
+      "package_id": "T13_INPUT_PHYSICAL_TRANSPORT_MATCH",
+      "status": "BLOCKED",
+      "accepted_for_core": false,
+      "current_evidence": {
+        "physical_coefficient_evidence": "BLOCKED_NOT_PROVIDED",
+        "finite_temperature_two_fluid_completion": "BLOCKED",
+        "natural_kubo_lane_status": "PASS_KUBO_MATCHED_DECLARED_CONDENSED_RELATIVE_FLOW_CHANNEL",
+        "natural_kubo_is_SI": false,
+        "formal_sk_entropy_status": "PASS_NAMED_SK_KMS_ENTROPY_INTERFACE_CONTRACT",
+        "candidate_compatibility_status": "PASS_SCOPED_T13_CANDIDATE_COMPATIBILITY_AUDIT_OPEN",
+        "candidate_core_accepted_route_count": 0,
+        "physical_transport_reconciliation_status": "PASS_SCOPED_PHYSICAL_TRANSPORT_RECONCILIATION_OPEN",
+        "formal_lane_count": 3,
+        "natural_unit_uet_lane_count": 3,
+        "external_physical_comparator_count": 1,
+        "physical_uet_coefficient_count": 0,
+        "eligible_physical_transport_input_count": 0
+      },
+      "missing_acceptance_fields": [
+        "physical_coefficient_record",
+        "finite_temperature_transport_completion",
+        "physical_anchor_supplied",
+        "physical_heat_flux_entropy_link"
+      ],
+      "unlocks_subresults": [
+        "physical_uet_kubo_record",
+        "physical_sk_transport_match",
+        "physical_entropy_production_mapping",
+        "physical_heat_flux_entropy_map"
+      ]
+    }
+  ],
+  "checks": {
+    "all_evidence_files_present": true,
+    "record_contract_schema_is_valid": true,
+    "canonical_gate_is_still_blocked": true,
+    "all_packages_are_explicitly_blocked_until_inputs_arrive": true,
+    "holdout_is_unread": true,
+    "no_target_fit": true,
+    "no_numeric_alpha_emitted": true,
+    "no_physical_transport_value_emitted": true,
+    "public_phonon_route_is_scoped_without_core_payload": true,
+    "candidate_compatibility_audit_is_scoped_without_core_acceptance": true,
+    "cv_source_reconciliation_is_fail_closed": true,
+    "physical_transport_reconciliation_is_fail_closed": true,
+    "base_phi_reconciliation_is_fail_closed": true,
+    "csrc_reconciliation_is_fail_closed": true,
+    "gate_blocker_set_is_nonempty": true
+  },
+  "open_blockers": [
+    "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+    "alpha_Phi_K_independent_calibration_missing",
+    "normalized_beta_and_SI_scale_correspondence_missing",
+    "physical_Kubo_coefficient_record_missing",
+    "dimensional_phi_to_thermal_observable_map_missing",
+    "material_regime_mapping_to_TTG_not_closed",
+    "c_v_source_uncertainty_not_closed"
+  ],
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_fit_performed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_closure_record_contract_audit.json",
+      "sha256": "8553b2d7ec2353332ac53530c6843c0c354542f3198f4d0397734e5c25ba0429",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_independent_csrc_acceptance_contract.json",
+      "sha256": "faef9dbf350e4454530c30ab004d201aa8d3b9d9ae78b3ad8bc2573fa7f17bfe",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_calorine_zenodo_nep_bte_reproduction_audit.json",
+      "sha256": "c856857ced77aed07c24e062b1517ca313663e1ed58155e5c1dd78f0cb1895d1",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_author_request_audit.json",
+      "sha256": "45555fab3f034ff7cbbfc0e2e53c7aba3d87e49d315365341281545e1dd11bf0",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_ding_pbte_numeric_input_availability_audit.json",
+      "sha256": "db8d64f7956979740ebcb3c872ca20d46d50e3399c1e9d5d61c9effb17dd0ff9",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_ding_material_regime_boundary_audit.json",
+      "sha256": "b9a517c3c55178a1f9988fc207768a8ff36912e4ab07e9fca9aa193f5a7fc24d",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_alpha_phi_k_calibration_candidate_audit.json",
+      "sha256": "ffb14131c2fb5eca54b12cd5c182bed657951f436c396ac0403aede7ca01dd27",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_dimensional_bridge_contract_audit.json",
+      "sha256": "87e3532d59fec8cecb0b16c7090a5a5ade9bc30656450b8106dc0f7b7a0656c9",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_phi_energy_anchor_identifiability_no_go.json",
+      "sha256": "1c47f402f0f1a5473c6f9af47177389e9c4ceceb0e1cfbc8a0f336700bddd15d",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_covariant_action_si_anchor_route_audit.json",
+      "sha256": "778cf38d3e1f92042e7fc13ab650da3bb9fb4212b05c469767245f09f6199b63",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_physical_kubo_coefficient_provenance_audit.json",
+      "sha256": "e39e85d454bcb8d73fa1138cbac13acdecb456ec677d9b9f01673d17e7585515",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_lowitzer_graphite_pvt_full_source_pair_audit.json",
+      "sha256": "d8be3fc1d7fe8593c8a894ea9cd92431746d3acc4d2a0532baec0bd2a98efed6",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_graphite_alpha_v_kt_matched_source_boundary_audit.json",
+      "sha256": "324571d831743cb182d8aaae162d94f6498dde545d7963c379de003ba46a4eab",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_huberman_2019_ttg_source_boundary_audit.json",
+      "sha256": "4a6fc0618d15f520e8f7f99b9f6b85c4c766e0e683375f23eece791926049d68",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_public_phonon_route_screening_audit.json",
+      "sha256": "ec5ed446dbc6469414dced797e574c0db002e392dffa3bcf3d3dbffef3e57e3a",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_public_phonon_route_screening_package.json",
+      "sha256": "3c61777993e49b4b4487ca30c59498cb8f8d28654baf8b6d98adbd58d58a72d0",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_candidate_core_compatibility_audit.json",
+      "sha256": "91cd2010a1d4a4355896a08804985b224d345b6125aacc32eec904b67ded433e",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/verification/covariant_superfluid_transport_verification.json",
+      "sha256": "0703f321daf8b6257a32772b97fd9e6181dd2ce9d907d1cb6d8ec216cff8eaf8",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_uet_o2_condensed_relative_flow_kubo_admission_audit.json",
+      "sha256": "0606829e2ebc3e5cc7131e3c56b327a586a1976169eedbc9525afa3b3d5dbc9f",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_sk_kms_entropy_contract_audit.json",
+      "sha256": "1c08344c75a36a00be43f582364208b9250ba6c813e5cfce7f2e6504f437bc24",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+      "sha256": "f78d68b4db2a95eb1d8f77dc9f79671296159b15363f353f36821b0e43f719fd",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json",
+      "sha256": "9caa1217b0d69e9a151e2dea8e55b15de46c7d45646992512057276b5180faf3",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json",
+      "sha256": "9db8e6d95499ab155311a93634ea9c401dde89e5f13b9f2c6646d94c3aea5324",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json",
+      "sha256": "91e324e23aeb4c40bdbf6530f9a3619cf322c84c648608b0a2ce111c034892b5",
+      "role": "input-package acceptance evidence"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Result/artifacts/topic13_full_thermodynamic_bridge_core_ready_gate.json",
+      "sha256": "707fe3757d3cff312fc6b00e9b090f7e962cfbfe42ac094db8393b9640dcaed1",
+      "role": "input-package acceptance evidence"
+    }
+  ],
+  "report": {
+    "MAJOR_RESULT_CLOSURE": "PARTIAL",
+    "WHAT_IS_ACTUALLY_CLOSED": "The three package acceptance boundaries and the linked candidate compatibility diagnostic are machine-audited; no package is accepted for Core.",
+    "WHAT_REMAINS_OPEN": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "normalized_beta_and_SI_scale_correspondence_missing",
+      "physical_Kubo_coefficient_record_missing",
+      "dimensional_phi_to_thermal_observable_map_missing",
+      "material_regime_mapping_to_TTG_not_closed",
+      "c_v_source_uncertainty_not_closed"
+    ],
+    "DEPENDENCY_UNLOCKED": "None.",
+    "STATUS": "PASS_SCOPED_T13_CLOSURE_INPUT_AUDIT_OPEN",
+    "WHAT_CHANGED": "Reconciled the three grouped input packages with c_v, physical transport, base-Phi, and C_src evidence projections without promoting any candidate.",
+    "EQUATION_OR_MAPPING": "No equations or numeric values were changed or emitted.",
+    "VERIFICATION": "All evidence hashes, reconciliation fail-closed checks, holdout, fit, candidate-compatibility, and canonical-gate checks passed; candidate metadata remains fail-closed where incomplete.",
+    "CONTROLLING_BLOCKER": "dimensional_phi_energy_anchor_or_independent_alpha_calibration_missing",
+    "NEXT_ACTION": "Acquire an authorized Ding-compatible source, independent base-Phi/SI calibration, and physical Kubo/SK/KMS record; rerun only after an input hash changes.",
+    "CLAIM_BOUNDARY": "Input-readiness audit only; not Full Topic 13 closure or external validation."
+  },
+  "wave_controller": {
+    "wave_type": "topic13_input_package_reconciliation_projection",
+    "controlling_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "independent_paired_base_Phi_amplitude_and_SI_observable_record_missing",
+      "physical_Kubo_coefficient_record_missing"
+    ],
+    "composition": [
+      "docs/core/07_artifacts/topic13/t13_cv_source_reconciliation_audit.json",
+      "docs/core/07_artifacts/topic13/t13_physical_transport_reconciliation_audit.json",
+      "docs/core/07_artifacts/topic13/t13_base_phi_si_reconciliation_audit.json",
+      "docs/core/07_artifacts/topic13/t13_csrc_reconciliation_audit.json"
+    ],
+    "claim_impact": "no_change"
+  }
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": "t13-figshare-dft-force-data-boundary-v1",
+  "artifact": "t13_figshare_dft_force_data_boundary_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
+  "major_result": {
+    "major_result_id": "T13_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the public Figshare archive identity, license, byte hashes, and configuration inventory are locked",
+      "the graphite subset is identified as 742 extended-XYZ AIMD/static configuration records with filename temperature labels",
+      "the payload schema is confirmed to contain positions, forces, and total-energy labels only",
+      "the route is classified as a possible input to potential or force-constant derivation, not as a deposited PBTE C_src package"
+    ],
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not a DFT energy or heat capacity",
+      "Phi": "effective response variable; no Phi values are present in this archive",
+      "R_gen": "derived history trace; not present as an independent payload",
+      "R_obs": "observer record kept separate; no observer record is consumed"
+    },
+    "equation_or_mapping": {
+      "source_labels": "E_DFT(R), F_DFT(R) = -nabla_R E_DFT(R)",
+      "missing_pbte_mapping": "C_src(T) = [sum_q w_q sum_mu c_qmu(T)]/[sum_q w_q V_primitive] is not directly computable from this archive",
+      "thermal_measurement_contract": "Delta_Tq = Delta_u_ph/C_src(T); not instantiated by this route",
+      "uet_bridge_contract": "Delta_Tq = alpha_Phi_K * Delta_Phi; no alpha or base-Phi scale is present"
+    },
+    "units": {
+      "archive_energy_header": "not declared in the extended-XYZ header",
+      "archive_force_header": "not declared in the extended-XYZ header",
+      "archive_coordinate_header": "not declared in the extended-XYZ header",
+      "temperature_labels": "filename labels only; not a calibrated thermal-observable table",
+      "unit_status": "OPEN_UNIT_PROVENANCE_FOR_PBTE_USE"
+    },
+    "derivation_class": "EXTERNAL_SOURCE_PROVENANCE_BOUNDARY_NO_UET_DERIVATION",
+    "observable": "DFT configuration total-energy and atomic-force labels for carbon allotropes",
+    "data_role": "EXTERNAL_SOURCE_INPUT_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/figshare_12649811_carbon_energies_forces.zip",
+        "sha256": "f37b15525145c94a474f356cf4dd51b9b9761489b57799f783cc789e57191ee9",
+        "role": "public Figshare archive bytes"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_FIGSHARE_DFT_FORCE_DATA_BOUNDARY",
+    "open_blockers": [
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing",
+      "source_units_not_explicitly_declared_for_pbte_conversion",
+      "force_constants_and_third_order_scattering_payload_missing",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "public DFT force-data route classification only; no C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This result closes only the provenance and capability boundary of a public DFT energy/force archive. It is not a PBTE C_src value, not a Ding-regime reproduction, not an independent alpha_Phi_K calibration, not a Phi-to-temperature map, and not Full Topic 13 closure."
+  },
+  "source": {
+    "title": "A dataset of DFT energies and forces for carbon allotropes of monolayer graphene, bilayer graphene, graphite, and diamond",
+    "authors": [
+      "Mingjian Wen",
+      "Ellad B. Tadmor"
+    ],
+    "figshare_locator": "https://figshare.com/articles/dataset/A_dataset_of_DFT_energies_and_forces_for_carbon_allotropes_of_monolayer_graphene_bilayer_graphene_graphite_and_diamond/12649811",
+    "figshare_api_locator": "https://api.figshare.com/v2/articles/12649811",
+    "file_locator": "https://ndownloader.figshare.com/files/23841326",
+    "doi": "https://doi.org/10.6084/m9.figshare.12649811.v1",
+    "primary_article_locator": "https://doi.org/10.1038/s41524-020-00390-8",
+    "license": "CC BY 4.0",
+    "source_method": "VASP DFT with PBE and MBD as described by the primary article",
+    "archive_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/figshare_12649811_carbon_energies_forces.zip",
+    "archive_sha256": "f37b15525145c94a474f356cf4dd51b9b9761489b57799f783cc789e57191ee9",
+    "archive_md5": "4e3cf1355205d1c0d0065f244f798e1c",
+    "archive_size_bytes": 12866110
+  },
+  "inventory": {
+    "archive_sha256": "f37b15525145c94a474f356cf4dd51b9b9761489b57799f783cc789e57191ee9",
+    "archive_md5": "4e3cf1355205d1c0d0065f244f798e1c",
+    "archive_size_bytes": 12866110,
+    "member_count": 4794,
+    "xyz_configuration_count": 4788,
+    "configuration_count_by_allotrope": {
+      "bilayer": 837,
+      "diamond": 843,
+      "graphite": 742,
+      "monolayer": 2366
+    },
+    "graphite_configuration_count": 742,
+    "graphite_temperature_labels": {
+      "1500": 246,
+      "300": 247,
+      "900": 249
+    },
+    "graphite_atom_count_labels": {
+      "72": 742
+    },
+    "graphite_property_headers": {
+      "species:S:1:pos:R:3:force:R:3": 742
+    },
+    "graphite_sample_rows": [
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp1500_step0.xyz",
+        "member_crc32": "fa6a7b6c",
+        "member_size_bytes": 9206,
+        "member_sha256": "e20a43d6934569544e366c8ebd102f3e34cbcaaea93fe4d375bded657a61a0c8",
+        "atom_count": 72,
+        "comment_line_sha256": "063a29641030937cf2eae1718d1654bdbff16e06c18b7fbc55bb20a2506e9a82"
+      },
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp300_step210.xyz",
+        "member_crc32": "d8315dfd",
+        "member_size_bytes": 9207,
+        "member_sha256": "2eab822ae670615a729eb658bb8803f7cf7f3397ba8f1245590fbdb4d505e5af",
+        "atom_count": 72,
+        "comment_line_sha256": "ab601aeb717eafdb201d7597d5447df49b9b23a7a0ea5161f0ac2bd43e8348f7"
+      },
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp900_step99.xyz",
+        "member_crc32": "dfe9a847",
+        "member_size_bytes": 9207,
+        "member_sha256": "7adc1b53302fbe33ed3ce04daab1ca338c087b3de26ed6b5cfa00b5f08708cd7",
+        "atom_count": 72,
+        "comment_line_sha256": "4bb43867dbda0e492edb679e82996189efc193e13c8e44c61ef58570416db6f9"
+      }
+    ],
+    "graphite_parse_failures": [],
+    "payload_capabilities": {
+      "has_velocity_or_momentum_payload": false,
+      "has_time_grid_or_trajectory_time_payload": false,
+      "has_stress_payload": false,
+      "has_per_row_uncertainty_payload": false,
+      "has_second_order_force_constants": false,
+      "has_third_order_force_constants": false,
+      "has_mode_heat_capacity": false,
+      "has_scattering_rates": false
+    }
+  },
+  "row_identity_contract": {
+    "identity_key": "archive_sha256 + zip member_path + member_crc32 + member_size_bytes",
+    "sample_rows": [
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp1500_step0.xyz",
+        "member_crc32": "fa6a7b6c",
+        "member_size_bytes": 9206,
+        "member_sha256": "e20a43d6934569544e366c8ebd102f3e34cbcaaea93fe4d375bded657a61a0c8",
+        "atom_count": 72,
+        "comment_line_sha256": "063a29641030937cf2eae1718d1654bdbff16e06c18b7fbc55bb20a2506e9a82"
+      },
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp300_step210.xyz",
+        "member_crc32": "d8315dfd",
+        "member_size_bytes": 9207,
+        "member_sha256": "2eab822ae670615a729eb658bb8803f7cf7f3397ba8f1245590fbdb4d505e5af",
+        "atom_count": 72,
+        "comment_line_sha256": "ab601aeb717eafdb201d7597d5447df49b9b23a7a0ea5161f0ac2bd43e8348f7"
+      },
+      {
+        "member_path": "carbon_energies_forces/graphite/graphite_3x3x2_temp900_step99.xyz",
+        "member_crc32": "dfe9a847",
+        "member_size_bytes": 9207,
+        "member_sha256": "7adc1b53302fbe33ed3ce04daab1ca338c087b3de26ed6b5cfa00b5f08708cd7",
+        "atom_count": 72,
+        "comment_line_sha256": "4bb43867dbda0e492edb679e82996189efc193e13c8e44c61ef58570416db6f9"
+      }
+    ],
+    "all_member_paths_unique": true,
+    "preprocessing": "read-only archive inspection; no filtering, fitting, unit conversion, or target-curve access"
+  },
+  "unit_and_uncertainty_boundary": {
+    "energy_unit": "not declared in the archive header; no SI conversion admitted",
+    "force_unit": "not declared in the archive header; no SI conversion admitted",
+    "temperature_unit": "filename labels are treated as metadata labels only",
+    "source_uncertainty": "no per-configuration uncertainty payload",
+    "derived_uncertainty": "none computed; no PBTE or thermodynamic estimator run"
+  },
+  "payload_capabilities": {
+    "has_velocity_or_momentum_payload": false,
+    "has_time_grid_or_trajectory_time_payload": false,
+    "has_stress_payload": false,
+    "has_per_row_uncertainty_payload": false,
+    "has_second_order_force_constants": false,
+    "has_third_order_force_constants": false,
+    "has_mode_heat_capacity": false,
+    "has_scattering_rates": false
+  },
+  "checks": {
+    "archive_exists": true,
+    "archive_has_xyz_members": true,
+    "expected_total_configuration_count": true,
+    "graphite_configuration_count_recorded": true,
+    "graphite_filename_temperature_parse": true,
+    "graphite_extended_xyz_schema_present": true,
+    "no_direct_pbte_payload_fields": true,
+    "no_holdout_access": true,
+    "claim_promotion": false
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/t13_figshare_dft_force_data_source_package.json",
+      "sha256": "965533f73ecaa4849aa411d3babfeee4b53a7f4febcd12808e5b5369580b1101",
+      "role": "machine-readable Figshare source package"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/figshare_12649811_carbon_energies_forces.zip",
+      "sha256": "f37b15525145c94a474f356cf4dd51b9b9761489b57799f783cc789e57191ee9",
+      "role": "public archive bytes"
+    }
+  ],
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "xie_2026_source_data_consumed": false,
+    "calibration_path_may_read_holdout": false
+  },
+  "controlling_blocker": "figshare_force_data_is_not_a_pbte_C_src_or_base_phi_calibration_payload",
+  "next_action": "Use the locked archive only as a provenance/input boundary; seek an authorized same-regime PBTE package or derive force constants and scattering with a separately declared, unit-complete protocol before revisiting C_src acceptance.",
+  "claim_promotion": false
+}

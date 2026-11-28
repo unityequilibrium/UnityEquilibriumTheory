@@ -1,0 +1,124 @@
+{
+  "schema_version": "t13-natural-graphite-nelson-riley-alpha-v-source-audit-v1",
+  "artifact": "t13_natural_graphite_nelson_riley_alpha_v_source_audit",
+  "generated_at": "2026-08-13",
+  "status": "PASS_SCOPED_NATURAL_GRAPHITE_ALPHA_V_COMPARATOR",
+  "major_result": {
+    "major_result_id": "T13_NATURAL_GRAPHITE_NELSON_RILEY_ALPHA_V_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "the official OSTI/Argonne ANL-5524 report is archived with a reproducible local hash",
+      "Table XIX alpha_a interval and alpha_c relation are source-locked with a page/table locator",
+      "the alpha_V relation is deterministic at the declared approximate room-temperature comparison point",
+      "the source's lack of row-level uncertainty and same-specimen identity is retained"
+    ],
+    "equation_or_mapping": {
+      "alpha_a": "-1.5e-6 K^-1 for 0-150 deg C",
+      "alpha_c": "27.00e-6 + 3.05e-9*T_C K^-1",
+      "anisotropic_volumetric_expansion": "alpha_V = 2*alpha_a + alpha_c"
+    },
+    "units": {
+      "temperature": "deg C source relation; comparison point also reported in K",
+      "alpha_a": "K^-1",
+      "alpha_c": "K^-1",
+      "alpha_V": "K^-1"
+    },
+    "derivation_class": "official table transcription plus anisotropic thermodynamic geometry conversion; no UET derivation",
+    "observable": "natural/crystalline graphite alpha_V comparator",
+    "data_role": "EXTERNAL_INPUT_STANDARD_THERMODYNAMIC_COMPARATOR_NOT_DING_TTG_GRADE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/argonne_anl_5524_nelson_riley_alpha_v_source_package.json",
+        "sha256": "1acbb63f2bfa0f3b3bba707ca924cc0196ad9032b814c48d9087d4ff45c420d2"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/argonne_anl_5524_graphite_thermal_expansion_table.pdf",
+        "sha256": "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NATURAL_GRAPHITE_ALPHA_V_COMPARATOR",
+    "open_blockers": [
+      "source table has no row-level statistical uncertainty",
+      "crystalline graphite and Hanfland natural graphite powder are not a same-specimen matched-state pair",
+      "Ding TTG material regime mapping is not closed",
+      "base_Phi_to_thermal_observable_map_and_independent_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "official natural/crystalline graphite alpha_V comparator lane only; no same-specimen K_T, Ding C_src, alpha_Phi_K, transport, Core, Gravity, or Galaxy unlock",
+    "claim_boundary": "This is a source-traceable natural/crystalline graphite family comparator based on official Table XIX. It is not a same-specimen alpha_V measurement, not a matched Hanfland state, not a Ding TTG material match, and not an alpha_Phi_K calibration."
+  },
+  "source": {
+    "source_id": "argonne_anl_5524_graphite_thermal_expansion_table",
+    "title": "Argonne National Laboratory ANL-5524: Properties of Graphite",
+    "publisher": "Argonne National Laboratory / OSTI",
+    "report": "ANL-5524",
+    "url": "https://www.osti.gov/servlets/purl/4360150",
+    "record_url": "https://www.osti.gov/biblio/4360150",
+    "local_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/argonne_anl_5524_graphite_thermal_expansion_table.pdf",
+    "sha256": "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561",
+    "source_locators": [
+      "PDF p. 32 / printed section 14: thermal expansion discussion",
+      "PDF p. 32 / Table XIX: crystalline graphite according to Nelson and Riley",
+      "PDF p. 32 / Table XIX: alpha_a interval and alpha_c temperature relation"
+    ],
+    "material": "crystalline graphite table attributed to Nelson and Riley; exact specimen identity is not carried as a same-specimen link to Hanfland or Ding",
+    "measurement_method": "reported X-ray diffraction coefficients attributed to Nelson and Riley",
+    "preprocessing": "byte-preserving PDF archive; table transcription; Celsius-to-Kelvin comparison metadata; no figure digitization, interpolation, fitting, target-curve access, or holdout access",
+    "uncertainty_boundary": "Table XIX reports coefficient values and a relation but no row-level statistical uncertainty; no uncertainty is invented or propagated",
+    "local_hash_observed": "7e334a4c380c130773f6c34a6238f25a9c28e15c3a9c0e1f9aa3769647e98561",
+    "package_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/argonne_anl_5524_nelson_riley_alpha_v_source_package.json",
+    "package_sha256": "1acbb63f2bfa0f3b3bba707ca924cc0196ad9032b814c48d9087d4ff45c420d2"
+  },
+  "source_row": {
+    "row_id": "nelson_riley_crystalline_graphite_27c_comparator",
+    "row_identity": "Table XIX crystalline graphite according to Nelson and Riley",
+    "temperature_C": 27.0,
+    "temperature_K": 300.15,
+    "temperature_scope": "approximate room-temperature evaluation inside the source alpha_a 0-150 deg C interval",
+    "alpha_a_per_K": -1.5e-06,
+    "alpha_a_uncertainty_per_K": null,
+    "alpha_a_source_scope_C": [
+      0.0,
+      150.0
+    ],
+    "alpha_c_per_K": 2.708235e-05,
+    "alpha_c_uncertainty_per_K": null,
+    "alpha_c_formula": "27.00e-6 + 3.05e-9*T_C",
+    "row_level_uncertainty_available": false
+  },
+  "derived_comparator": {
+    "alpha_V_per_K": 2.408235e-05,
+    "alpha_V_uncertainty_per_K": null,
+    "alpha_V_uncertainty_status": "NOT_AVAILABLE_IN_SOURCE",
+    "same_specimen_alpha_V": false,
+    "same_state_K_T": false,
+    "K_T_emitted": false,
+    "alpha_Phi_K_emitted": false,
+    "alpha_c_reconstructed_per_K": 2.708235e-05,
+    "alpha_V_reconstructed_per_K": 2.408235e-05
+  },
+  "checks": {
+    "source_pdf_present": true,
+    "source_pdf_hash_matches": true,
+    "package_source_identity_present": true,
+    "table_locator_declared": true,
+    "temperature_inside_alpha_a_scope": true,
+    "alpha_c_formula_explicit": true,
+    "alpha_c_reconstruction_matches_package": true,
+    "anisotropic_alpha_volume_relation_explicit": true,
+    "alpha_v_reconstruction_matches_package": true,
+    "row_uncertainty_absence_is_explicit": true,
+    "same_specimen_not_claimed": true,
+    "K_T_not_emitted": true,
+    "Ding_material_mapping_not_claimed": true,
+    "holdout_not_accessed": true,
+    "target_fit_not_performed": true,
+    "alpha_Phi_K_fit_not_performed": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "same_specimen_alpha_V_K_T_uncertainty_and_Ding_material_regime_mapping_missing",
+  "next_controller": "Obtain a same-state, same-specimen alpha_V/K_T pair with uncertainty or a permitted direct volumetric heat-capacity route; keep the official family comparator separate from Ding C_src and base-Phi calibration.",
+  "claim_boundary": "This closes only an official natural/crystalline graphite family-level alpha_V comparator. It does not close same-grade K_T, Ding C_src, e0, base Phi, alpha_Phi_K, transport, SK/KMS, entropy, or Full Topic 13."
+}

@@ -1,0 +1,69 @@
+{
+  "schema_version": "1.0",
+  "artifact": "trace_ontology_contract",
+  "status": "CANDIDATE_MODEL",
+  "scope": [
+    "docs/core",
+    "0.13_Thermodynamic_Bridge",
+    "0.26_Cosmic_Dynamic_Frame",
+    "0.1_Galaxy_Rotation_Problem"
+  ],
+  "ontology": {
+    "C": {
+      "meaning": "material or structural state being evolved",
+      "examples": ["density", "order_parameter", "matter_state"],
+      "independent_state": true
+    },
+    "sigma_C": {
+      "meaning": "non-negative diagnostic source from change in C",
+      "formula": "sigma_C = |partial_t C|^2 / M0",
+      "independent_state": false
+    },
+    "I_trace": {
+      "meaning": "retarded functional of source_history",
+      "formula": "I_trace(x,t) = integral G_ret(x-x',t-t') sigma_C(x',t') dx' dt'",
+      "independent_state": false,
+      "new_substance": false
+    },
+    "history_buffer": {
+      "meaning": "computational cache of prior sigma_C samples",
+      "ontology": "not a physical field"
+    },
+    "infrared_or_heat_map": {
+      "meaning": "observable proxy in selected thermodynamic systems",
+      "universal_identity_with_I_trace": false
+    }
+  },
+  "units_contract": {
+    "normalized_lane": {
+      "C": "dimensionless model state",
+      "sigma_C": "normalized source proxy",
+      "I_trace": "normalized trace proxy",
+      "status": "implemented_for_internal_checks"
+    },
+    "SI_lane": {
+      "status": "OPEN",
+      "requirements": [
+        "topic-specific C convention",
+        "M0 and source units",
+        "D_trace, tau_trace, lambda_trace units",
+        "energy/entropy ledger closure"
+      ]
+    }
+  },
+  "claim_boundary": {
+    "allowed": [
+      "candidate mathematical model",
+      "open constitutive ansatz",
+      "simulation-only benchmark",
+      "internal diagnostic"
+    ],
+    "blocked": [
+      "information as new matter",
+      "universal infrared identity",
+      "energy disappeared",
+      "dark-matter replacement",
+      "external validation from synthetic data"
+    ]
+  }
+}

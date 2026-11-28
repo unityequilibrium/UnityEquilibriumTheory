@@ -1,0 +1,64 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [
+    {
+      "equation_id": "uet.o2.thermal.normal_tree_elastic_scattering",
+      "version": "T13_NORMAL_TREE_ELASTIC_CONTACT_PLUS_PHI_EXCHANGE_V1",
+      "classification": "named_tree_elastic_diagnostic",
+      "relation_or_code_path": {
+        "canonical": "chi_c=sqrt(Z)*chi; phi_c=sqrt(epsilon*K)*deltaPhi; lambda_c=lambda/Z^2; G=sqrt(epsilon)*h/(Z*sqrt(K)); M_Phi^2=U''/K",
+        "amplitude": "M_abcd=2*lambda_c*(d_ab*d_cd+d_ac*d_bd+d_ad*d_bc)+G^2*[d_ab*d_cd/(s-M_Phi^2)+d_ac*d_bd/(t-M_Phi^2)+d_ad*d_bc/(u-M_Phi^2)] up to common minus sign",
+        "cross_section": "d_sigma/d_Omega=|M|^2/(64*pi^2*s*S_final); S_final=2 for equal final charges, otherwise 1",
+        "tagged_loss": "Gamma_q(k)=sum_r integral d^3p/(2*pi)^3 n_r v_Moller integral dOmega (d_sigma/dOmega)(1+n_3)(1+n_4)"
+      },
+      "ontology": {
+        "C": "not identified with charge or mass",
+        "Phi": "effective response; internal propagator is a lane calculation, not a particle claim",
+        "R_gen": "derived history trace, no state/backreaction",
+        "R_obs": "excluded"
+      },
+      "units": {
+        "m_T_mu_G": "natural energy",
+        "lambda": "dimensionless",
+        "sigma": "energy^-2",
+        "Gamma_loss": "energy"
+      },
+      "unit_lane": "natural_flat_3p1",
+      "derivation_class": "TREE_ACTION_ELASTIC_QUASIPARTICLE_APPROXIMATION",
+      "standard_physics_counterpart": "Canonical charged scalar contact and neutral-response exchange; Lorentz-invariant two-body phase space",
+      "observable": "tagged elastic loss rate; not heat conductivity",
+      "observable_mapping": {
+        "status": "NATURAL_DIAGNOSTIC_ONLY",
+        "SI": "OPEN"
+      },
+      "data_role": "SYNTHETIC_DERIVED_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_TREE_ELASTIC_DIAGNOSTIC",
+      "assumptions": [
+        "tree normal background chi=0, Phi=Phi_equilibrium",
+        "positive epsilon and response kinetic",
+        "response mass below pair threshold for unregularized thermal integral",
+        "elastic matter sector only; no finite-T self-consistency or inelastic closure"
+      ],
+      "controlling_blocker": "full_species_response_collision_operator_not_just_tagged_elastic_loss",
+      "claim_boundary": "New named tree elastic diagnostic only. No replacement of old comparator, no full transport, no physical Phi-particle claim, no Full Topic 13 closure.",
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_action_normalized_elastic_scattering.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_action_normalized_elastic_scattering.py"
+      ],
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_action_normalized_elastic_scattering_audit.json",
+          "sha256": "711d64978d58d264e26094c66e22db1285c21b31863530161ef608f3900a8d81"
+        }
+      ],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

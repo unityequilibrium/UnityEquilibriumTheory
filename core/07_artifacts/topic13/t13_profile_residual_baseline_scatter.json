@@ -1,0 +1,427 @@
+{
+  "major_result_id": "T13_PROFILE_RESIDUAL_BASELINE_SCATTER",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Frozen profile residual compared with actual baseline frame scatter at every outer patch",
+  "equation_or_mapping": "||mean(I)-model|| versus sqrt(sum_t ||I_t-mean(I)||^2/(N-1)); no standard-error scaling",
+  "units": "normalized intensity norms and dimensionless ratios",
+  "derivation_class": "descriptive baseline residual comparison",
+  "observable": "profile discrepancy and baseline frame variation",
+  "data_role": "EXTERNAL_BASELINE_DIAGNOSTIC",
+  "rows": [
+    {
+      "member": "PROCESSED/PROC_400nm",
+      "baseline_OFF_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.09737439937047808,
+          "relative_observed_frame_scatter": 0.001573162754347594,
+          "residual_to_frame_scatter": 61.897218899553835,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.11294627223762461,
+          "relative_observed_frame_scatter": 0.001643281480471257,
+          "residual_to_frame_scatter": 68.73215184365986,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.09412846048956824,
+          "relative_observed_frame_scatter": 0.0016648692861283682,
+          "residual_to_frame_scatter": 56.53804852659799,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.1197686815756692,
+          "relative_observed_frame_scatter": 0.0017420489236283153,
+          "residual_to_frame_scatter": 68.75161767915029,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.09178583544369187,
+          "relative_observed_frame_scatter": 0.0015668383230950133,
+          "residual_to_frame_scatter": 58.580284953960735,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.1073289356115052,
+          "relative_observed_frame_scatter": 0.0016201716912342848,
+          "residual_to_frame_scatter": 66.2454085528056,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.09420943489495374,
+          "relative_observed_frame_scatter": 0.0015076467141876152,
+          "residual_to_frame_scatter": 62.487739341320314,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.11757835803912779,
+          "relative_observed_frame_scatter": 0.0015891454682138058,
+          "residual_to_frame_scatter": 73.98841729151799,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.0898151044819804,
+          "relative_observed_frame_scatter": 0.0015581586649185083,
+          "residual_to_frame_scatter": 57.641822045560254,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.10353829623301072,
+          "relative_observed_frame_scatter": 0.0016147215614780673,
+          "residual_to_frame_scatter": 64.12145518031907,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.0742658227418482,
+          "relative_observed_frame_scatter": 0.0015716309771239378,
+          "residual_to_frame_scatter": 47.253982533325726,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.10148383716329536,
+          "relative_observed_frame_scatter": 0.0016502893699572145,
+          "residual_to_frame_scatter": 61.494571201126035,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        }
+      ]
+    },
+    {
+      "member": "PROCESSED/PROC_800nm",
+      "baseline_OFF_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "probes": [
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.0630129537464219,
+          "relative_observed_frame_scatter": 0.0021291881471847745,
+          "residual_to_frame_scatter": 29.59482647399573,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            0,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.0706470645919125,
+          "relative_observed_frame_scatter": 0.002191062837009573,
+          "residual_to_frame_scatter": 32.243285495332344,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.09751376250646511,
+          "relative_observed_frame_scatter": 0.0022567521006438733,
+          "residual_to_frame_scatter": 43.20978032041866,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            -2,
+            2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.11790365158265627,
+          "relative_observed_frame_scatter": 0.0023551226814914807,
+          "residual_to_frame_scatter": 50.06263686781226,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.06546229576787234,
+          "relative_observed_frame_scatter": 0.00206770601995747,
+          "residual_to_frame_scatter": 31.659382492497077,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            -2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.07368003308182726,
+          "relative_observed_frame_scatter": 0.0021391387388180454,
+          "residual_to_frame_scatter": 34.443784194445584,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.05975408789647147,
+          "relative_observed_frame_scatter": 0.002119416561034195,
+          "residual_to_frame_scatter": 28.193649608604428,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            0,
+            2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.07202131920111537,
+          "relative_observed_frame_scatter": 0.0022096155254146743,
+          "residual_to_frame_scatter": 32.59450269639071,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.06228184047646704,
+          "relative_observed_frame_scatter": 0.002050844258294032,
+          "residual_to_frame_scatter": 30.36887868232148,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            -2,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.06864916184327492,
+          "relative_observed_frame_scatter": 0.0021270284116628275,
+          "residual_to_frame_scatter": 32.27468023786654,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "radius": 4,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.03689839730405381,
+          "relative_observed_frame_scatter": 0.0020532233944313342,
+          "residual_to_frame_scatter": 17.970960882351175,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        },
+        {
+          "G": [
+            2,
+            0,
+            0
+          ],
+          "radius": 8,
+          "baseline_frame_count": 6,
+          "relative_mean_profile_residual": 0.04279964493742772,
+          "relative_observed_frame_scatter": 0.002134525374713817,
+          "residual_to_frame_scatter": 20.051129606817636,
+          "zero_observed_scatter": false,
+          "interpretation": "Sample frame scatter includes drift and processing; no independence assumption or division by sqrt(N)"
+        }
+      ]
+    }
+  ],
+  "verification_status": "FROZEN_RESIDUAL_AND_SCATTER_MEASURED",
+  "controlling_blocker": "profile_background_adequacy_and_detector_error_model",
+  "open_blockers": [
+    "frame_dependence_and_drift",
+    "model_bias_vs_processing",
+    "physical_coordinate_uncertainty",
+    "UET_mapping"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Not a chi-square test, p-value, independent noise-floor estimate or physical calibration. No refit, pixel fill, holdout or image transformation.",
+  "array_export_hashes": {
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76ec79f27836037aeac1b68854bfbf791bbff2e6256bc1f51080454d525a9a27.npy": "bca59224d8588d760b0f4f9c7af5a90c67d3aabd73d204c997e8131e4977cd27",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/119dfcf6733f29adb2fa1ea4c49c743a0df0840b6e57b9b91f38cfc4afc3859a.npy": "b1b0a5f83da8d2bd6a68528710a424cc313608d51b9867f2e53bbd5fa2e6392f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/7942e252bc61adaffb92e580b34d2a03ee9b864c525b1eccb3e5e4a3205ac76c.npy": "bcbb75e4a3693c3cf3f519137fa3557b788edec6e8d854548cd575ed8ccfe8f8",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5fb8eb5e5caa006c3efbe91d52f6ec6f6a749953546d6f0887f67536f18beb1c.npy": "6dfee3710d7cefd319297aeed365bf9276eeb941557db3f57d10f5fd6526f85e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/76a1dfe0e2c8c3825c582912bae05a42b7cbdfcad5bfd46a2dab73b016f74f1c.npy": "4222ddb5dbab042c6669645cfd43a059c76e26e40b5337d227800dcb65326a55",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/8b4a00429a20b8f7b8dfa719eb016174e1b7934fa27681cab5621fcca510c552.npy": "fa9545b55dc27d5cb7edc4df3ec0049fb65438684ce977c737b3c49312038f9e",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/37047d4bfdd099026ffb09841b6b32eb6ce6d1abca0331d9a704f6bdbd1e14e5.npy": "ce02ba0b009019f65f05f298bc283399275642b6365d274f048e9015f728719f",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/5af174c20afa7986a02c0e71725cebab8360f53e90f42ddcfda791d5ec1b6074.npy": "50bfe54293a26037094cc087c749efe4d8cbddb8d931b67f579eb586c0cda2d2",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/a59f326f2380d2e8eeacd98519c18a61fadf5b95ee45e29fd33bab8416649b14.npy": "1887fc03ef92323890ddba2e7e56a03ee5da0ba85168c36cc152c8664d193fed",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/016f35314b7dd85931d9bb9aedfa93d0ca0577e6bb1008808bc7f1aac10c2d19.npy": "d5916420058d39efaafa26825257b69bfe50cd97a9f9608ab97e9d86c658f87a",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/da849c15e140b6804f2071130e8935b9abb51d8456a46f3c1969a28471e4f477.npy": "e18a743a130352978f1c6c8935edfee74258d9ed06a97ed70c24791a06bc4ae5",
+    "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/ued_numeric_arrays/d53788431bca67423acb165356454cf8e38551e1a74564b9289190b8ba167bd4.npy": "cd8853f5748a084d4c1af666a835a7570d2d8d60842c7bb5c278b4c0a76d10bd"
+  },
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/artifacts/t13_outer_bragg_profiles.json",
+      "sha256": "4cd01ab87b48ff2a11a8b1df06d34a3df4f497bfaa1c8df9d04a1cdb9cb2c470"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ued_numeric_inventory_audit.json",
+      "sha256": "b5ec9fbb53c2be6c8b6628dc9561605cd1df271d94511b9be55e1d42e67baddc"
+    },
+    {
+      "path": "docs/core/artifacts/t13_ued_mask_support_audit.json",
+      "sha256": "a83e252fb0cfe08624da122051658bd7fea5d1a5a37170365b925c803e73b7a0"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_profile_residual_baseline_scatter.py",
+      "sha256": "aad97257e876a51ef69e30b2ce012830297b65668678b053052c28de80cdaed0"
+    },
+    {
+      "path": "docs/core/test/test_topic13_profile_residual_baseline_scatter.py",
+      "sha256": "830225f1fce24b1b928714ef33a4c549a78b17c4d8298a0eaeecb54b9c52f51c"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_ued_rotated_position.py",
+      "sha256": "798303861dfc868a1708580b83535ff5acae4c7fcb344db086c0c894100db8ec"
+    }
+  ]
+}

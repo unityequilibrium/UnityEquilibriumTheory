@@ -1,0 +1,478 @@
+{
+  "schema_version": "t13-uet-o2-finite-t-all-onshell-cut-response-v1",
+  "artifact": "t13_uet_o2_finite_temperature_all_onshell_cut_response_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+  "major_result_id": "T13_UET_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+  "closure_level": "CLOSED_FOR_LANE",
+  "state": {
+    "temperature": 0.35,
+    "mass_squared": 0.5,
+    "quartic_coupling": 0.8,
+    "invariant_grid": [
+      4.75,
+      5.0,
+      5.5
+    ],
+    "response_grid": {
+      "temperature": 0.35,
+      "mass_squared": 0.5,
+      "quartic_coupling": 0.8,
+      "species_count": 2,
+      "reference_euclidean_s": 0.5,
+      "invariant_grid": [
+        4.75,
+        5.0,
+        5.5
+      ],
+      "three_body_threshold_s": 4.5,
+      "points": [
+        {
+          "invariant_s": 4.75,
+          "external_energy": 2.179449471770337,
+          "greater_measure": 1.4548892521449768e-05,
+          "lesser_measure": 2.8739476445750827e-08,
+          "spectral_measure": 1.4520153045004018e-05,
+          "retarded_spectral_density": 4.561640613518409e-05,
+          "principal_value_real_part": 0.00018852522304727232,
+          "retarded_imaginary_part": -4.561640613518408e-05,
+          "kms_log_ratio_residual": 8.881784197001252e-16,
+          "fdt_residual": 0.003942955405912313,
+          "pv_inner_convergence_residual": 0.0004183177470783957,
+          "pv_outer_convergence_residual": 0.00028892386785935357,
+          "retarded_i0_consistency_residual": 6.776263578034403e-21,
+          "one_to_three_completed": true,
+          "two_to_two_completed": true,
+          "response_pair_consistent": true
+        },
+        {
+          "invariant_s": 5.0,
+          "external_energy": 2.23606797749979,
+          "greater_measure": 1.80044141236472e-05,
+          "lesser_measure": 3.025333982760964e-08,
+          "spectral_measure": 1.7974160783819592e-05,
+          "retarded_spectral_density": 5.646749147288939e-05,
+          "principal_value_real_part": 0.00022612810773143732,
+          "retarded_imaginary_part": -5.6467491472889383e-05,
+          "kms_log_ratio_residual": 8.881784197001252e-16,
+          "fdt_residual": 0.003355020533523042,
+          "pv_inner_convergence_residual": 0.000413482055117046,
+          "pv_outer_convergence_residual": 0.00028622770182661273,
+          "retarded_i0_consistency_residual": 6.776263578034403e-21,
+          "one_to_three_completed": true,
+          "two_to_two_completed": true,
+          "response_pair_consistent": true
+        },
+        {
+          "invariant_s": 5.5,
+          "external_energy": 2.345207879911715,
+          "greater_measure": 3.0084560320159013e-05,
+          "lesser_measure": 3.700945536329265e-08,
+          "spectral_measure": 3.004755086479572e-05,
+          "retarded_spectral_density": 9.439716505520786e-05,
+          "principal_value_real_part": 0.0003025209862163946,
+          "retarded_imaginary_part": -9.439716505520786e-05,
+          "kms_log_ratio_residual": 0.0,
+          "fdt_residual": 0.002457339085519275,
+          "pv_inner_convergence_residual": 0.0004057808094370731,
+          "pv_outer_convergence_residual": 0.00028197681492037134,
+          "retarded_i0_consistency_residual": 0.0,
+          "one_to_three_completed": true,
+          "two_to_two_completed": true,
+          "response_pair_consistent": true
+        }
+      ],
+      "max_kms_log_ratio_residual": 8.881784197001252e-16,
+      "max_fdt_residual": 0.003942955405912313,
+      "max_pv_inner_convergence_residual": 0.0004183177470783957,
+      "max_pv_outer_convergence_residual": 0.00028892386785935357,
+      "max_retarded_i0_consistency_residual": 6.776263578034403e-21,
+      "matched_state_witness": true,
+      "positive_spectral_grid_witness": true,
+      "lower_half_plane_grid_witness": true,
+      "declared_retarded_response_grid_completed": true,
+      "declared_1pi_pole_subtracted_response_completed": true,
+      "full_finite_temperature_1pi_self_energy_completed": false,
+      "all_finite_temperature_sunset_channels_completed": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "covariant_entropy_current_completed": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_T_DECLARED_RETARDED_1PI_RESPONSE_GRID_NO_HOLDOUT"
+    },
+    "signed_cut_taxonomy": {
+      "external_energy": 2.345207879911715,
+      "mass": 0.7071067811865476,
+      "mass_squared": 0.5,
+      "assignments": [
+        {
+          "signs": [
+            -1,
+            -1,
+            -1
+          ],
+          "sign_label": "---",
+          "process_class": "all_negative_forbidden_for_positive_P0",
+          "kinematically_allowed": false,
+          "energy_relation": "P0=-(E1+E2+E3)",
+          "kinematic_reason": "the right-hand side is strictly negative",
+          "lower_bound_energy": 0.0
+        },
+        {
+          "signs": [
+            -1,
+            -1,
+            1
+          ],
+          "sign_label": "--+",
+          "process_class": "3<->1_forbidden_for_positive_P0",
+          "kinematically_allowed": false,
+          "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+          "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+          "lower_bound_energy": 3.7594214422848102
+        },
+        {
+          "signs": [
+            -1,
+            1,
+            -1
+          ],
+          "sign_label": "-+-",
+          "process_class": "3<->1_forbidden_for_positive_P0",
+          "kinematically_allowed": false,
+          "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+          "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+          "lower_bound_energy": 3.7594214422848102
+        },
+        {
+          "signs": [
+            -1,
+            1,
+            1
+          ],
+          "sign_label": "-++",
+          "process_class": "2<->2",
+          "kinematically_allowed": true,
+          "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+          "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+          "lower_bound_energy": 0.0
+        },
+        {
+          "signs": [
+            1,
+            -1,
+            -1
+          ],
+          "sign_label": "+--",
+          "process_class": "3<->1_forbidden_for_positive_P0",
+          "kinematically_allowed": false,
+          "energy_relation": "P+k_minus,1+k_minus,2=k_plus",
+          "kinematic_reason": "a sum of P and two future-timelike mass-m momenta has mass at least sqrt(s)+2m>m",
+          "lower_bound_energy": 3.7594214422848102
+        },
+        {
+          "signs": [
+            1,
+            -1,
+            1
+          ],
+          "sign_label": "+-+",
+          "process_class": "2<->2",
+          "kinematically_allowed": true,
+          "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+          "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+          "lower_bound_energy": 0.0
+        },
+        {
+          "signs": [
+            1,
+            1,
+            -1
+          ],
+          "sign_label": "++-",
+          "process_class": "2<->2",
+          "kinematically_allowed": true,
+          "energy_relation": "P+k_minus=k_plus,1+k_plus,2",
+          "kinematic_reason": "the bath momentum is unbounded and can open the two-body final-state threshold",
+          "lower_bound_energy": 0.0
+        },
+        {
+          "signs": [
+            1,
+            1,
+            1
+          ],
+          "sign_label": "+++",
+          "process_class": "1<->3",
+          "kinematically_allowed": true,
+          "energy_relation": "P=k1+k2+k3",
+          "kinematic_reason": "three-body threshold sqrt(s)>=3m",
+          "lower_bound_energy": 2.121320343559643
+        }
+      ],
+      "allowed_signs": [
+        [
+          -1,
+          1,
+          1
+        ],
+        [
+          1,
+          -1,
+          1
+        ],
+        [
+          1,
+          1,
+          -1
+        ],
+        [
+          1,
+          1,
+          1
+        ]
+      ],
+      "allowed_assignment_count": 4,
+      "one_to_three_allowed_assignment_count": 1,
+      "two_to_two_allowed_assignment_count": 3,
+      "current_labeled_scattering_signs": [
+        1,
+        1,
+        -1
+      ],
+      "current_labeled_scattering_assignment_count": 1,
+      "missing_scattering_permutation_count": 2,
+      "forbidden_one_plus_two_minus_count": 3,
+      "all_sign_assignments_enumerated": true,
+      "one_to_three_threshold_checked": true,
+      "two_to_two_permutations_enumerated": true,
+      "equal_mass_permutation_identity_declared": true,
+      "signed_cut_kinematic_taxonomy_completed": true,
+      "action_level_cut_multiplicity_completed": false,
+      "full_finite_temperature_1pi_self_energy_completed": false,
+      "all_finite_temperature_sunset_channels_completed": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "covariant_entropy_current_completed": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_T_SIGNED_CUT_KINEMATIC_TAXONOMY_NO_HOLDOUT"
+    },
+    "cut_multiplicity": {
+      "mass_squared": 0.5,
+      "quartic_coupling": 0.8,
+      "species_count": 2,
+      "one_to_three_sign_pattern_count": 1,
+      "two_to_two_sign_pattern_count": 3,
+      "sunset_symmetry_factor": 0.16666666666666666,
+      "one_to_three_graph_weight": 0.16666666666666666,
+      "two_to_two_graph_weight": 0.5,
+      "current_labeled_scattering_factor": 0.5,
+      "current_factor_matches_two_to_two_graph_weight": true,
+      "two_to_two_to_one_to_three_graph_weight_ratio": 3.0,
+      "action_sunset_tensor_prefactor": 5.120000000000001,
+      "one_to_three_tensor_weight": 0.8533333333333335,
+      "two_to_two_tensor_weight": 2.5600000000000005,
+      "physical_final_state_weight_formula_present": true,
+      "physical_final_state_weight_values": [
+        0.5,
+        1.0,
+        1.0,
+        0.5
+      ],
+      "physical_final_state_has_species_dependent_weights": true,
+      "action_level_signed_cut_multiplicity_completed": true,
+      "current_graph_weight_semantics_completed": true,
+      "physical_scattering_normalization_match_completed": false,
+      "full_finite_temperature_1pi_self_energy_completed": false,
+      "unique_physical_renormalization_scheme_match_completed": false,
+      "physical_kubo_coefficient_emitted": false,
+      "covariant_entropy_current_completed": false,
+      "numeric_alpha_Phi_K_emitted": false,
+      "parameter_fitting_performed": false,
+      "target_data_used": false,
+      "xie_2026_accessed": false,
+      "data_role": "ACTION_DERIVED_FINITE_T_CUT_MULTIPLICITY_NO_HOLDOUT"
+    },
+    "all_positive_energy_signed_cuts_completed": true,
+    "all_positive_energy_on_shell_spectral_response_completed": true,
+    "on_shell_retarded_grid_completed": true,
+    "full_finite_temperature_1pi_self_energy_completed": false,
+    "unique_physical_renormalization_scheme_match_completed": false,
+    "physical_kubo_coefficient_emitted": false,
+    "covariant_entropy_current_completed": false,
+    "numeric_alpha_Phi_K_emitted": false,
+    "parameter_fitting_performed": false,
+    "target_data_used": false,
+    "xie_2026_accessed": false,
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT"
+  },
+  "contract": {
+    "status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+    "equations": {
+      "signed_cut_partition": "rho_T^all_onshell=rho_T^(+++)+rho_T^(-++)+rho_T^(+-+)+rho_T^(++-)",
+      "equal_mass_representative_mapping": "rho_T^(2<->2,all)=w_22*rho_T^(++-), w_22=3*(1/6)=1/2",
+      "declared_retarded_response": "Sigma_R,T^all_onshell(s+i0)=Re Sigma_R,T^all_onshell,sub(s)-i*pi*rho_T^all_onshell(s)",
+      "kms": "log(rho_>^all_onshell/rho_<^all_onshell)=sqrt(s)/T",
+      "fdt": "N_T^all_onshell=rho_T^all_onshell*coth(sqrt(s)/(2*T))"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature or metric",
+      "R_gen": "derived physical/history trace; no independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "unit_contract": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; declared channel grid only"
+    },
+    "derivation_class": "action-derived equal-mass signed-cut taxonomy, graph multiplicity, and state-matched retarded spectral response grid",
+    "observable": "all positive-energy on-shell spectral density, retarded sign, multi-invariant KMS/FDT residuals, i0 consistency, and PV convergence",
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT",
+    "included": {
+      "all_positive_energy_equal_mass_signed_cuts": true,
+      "graph_weighted_two_to_two_representative": true,
+      "state_matched_retarded_response_grid": true,
+      "grid_level_kms_fdt": true,
+      "retarded_i0_and_pv_convergence": true
+    },
+    "excluded": {
+      "complete_off_shell_finite_temperature_1pi_self_energy": true,
+      "unique_physical_renormalization": true,
+      "physical_scattering_normalization_identity": true,
+      "physical_kubo_coefficient": true,
+      "covariant_entropy_current_heat_flux_balance": true,
+      "dimensional_Phi_to_thermal_observable_map": true,
+      "alpha_Phi_K": true,
+      "TTG_validation": true,
+      "Xie_2026_holdout": true
+    },
+    "claim_boundary": "This closes only the all-positive-energy equal-mass on-shell thermal cut spectral response on the declared invariant grid, with the action graph multiplicity admitted. It does not close the complete off-shell finite-temperature 1PI self-energy, physical renormalization, physical scattering/Kubo normalization, entropy-current balance, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13."
+  },
+  "checks": {
+    "all_positive_energy_signed_cuts_completed": true,
+    "all_positive_energy_spectral_response_completed": true,
+    "on_shell_retarded_grid_completed": true,
+    "one_to_three_pattern_count_is_one": true,
+    "two_to_two_pattern_count_is_three": true,
+    "two_to_two_graph_weight_is_one_half": true,
+    "representative_factor_matches_graph_weight": true,
+    "grid_has_multiple_invariants": true,
+    "matched_state_grid": true,
+    "positive_spectral_grid": true,
+    "lower_half_plane_grid": true,
+    "kms_within_threshold": true,
+    "fdt_within_threshold": true,
+    "pv_inner_within_threshold": true,
+    "pv_outer_within_threshold": true,
+    "retarded_i0_consistency": true,
+    "finite_state": true,
+    "full_finite_temperature_1pi_remains_open": true,
+    "physical_renormalization_remains_open": true,
+    "physical_kubo_not_emitted": true,
+    "alpha_not_emitted": true,
+    "no_parameter_fitting": true,
+    "no_target_data": true,
+    "xie_2026_not_accessed": true,
+    "contract_includes_all_positive_energy_cuts": true,
+    "contract_excludes_complete_offshell_1pi": true,
+    "contract_excludes_holdout": true
+  },
+  "failed_checks": [],
+  "full_core_unlock": false,
+  "claim_promotion": false,
+  "evidence_artifacts": [
+    {
+      "path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py",
+      "sha256": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+      "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+      "sha256": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+      "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+    },
+    {
+      "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+      "sha256": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+    }
+  ],
+  "derivation_class": "action-derived equal-mass signed-cut taxonomy, graph multiplicity, and state-matched retarded spectral response grid",
+  "observable": "all positive-energy on-shell spectral density, retarded sign, multi-invariant KMS/FDT residuals, i0 consistency, and PV convergence",
+  "data_role": "ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT",
+  "controlling_blocker": "complete_off_shell_finite_temperature_1pi_and_physical_renormalization_missing",
+  "next_action": "Evaluate the complete off-shell retarded/advanced/Keldysh 1PI object and select an independent physical renormalization anchor; retain this all-onshell spectral response as a non-SI lane.",
+  "claim_boundary": "This closes only the all-positive-energy equal-mass on-shell thermal cut spectral response on the declared invariant grid, with the action graph multiplicity admitted. It does not close the complete off-shell finite-temperature 1PI self-energy, physical renormalization, physical scattering/Kubo normalization, entropy-current balance, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+    "topic": "Topic 13 Thermodynamic Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "all positive-energy equal-mass 1<->3 and 2<->2 on-shell signed-cut partition",
+      "graph-weighted representative for all three 2<->2 permutations",
+      "state-matched multi-invariant retarded spectral response grid",
+      "grid-level spectral positivity, lower-half-plane sign, KMS/FDT, retarded i0, and PV convergence"
+    ],
+    "equation_or_mapping": {
+      "signed_cut_partition": "rho_T^all_onshell=rho_T^(+++)+rho_T^(-++)+rho_T^(+-+)+rho_T^(++-)",
+      "equal_mass_representative_mapping": "rho_T^(2<->2,all)=w_22*rho_T^(++-), w_22=3*(1/6)=1/2",
+      "declared_retarded_response": "Sigma_R,T^all_onshell(s+i0)=Re Sigma_R,T^all_onshell,sub(s)-i*pi*rho_T^all_onshell(s)",
+      "kms": "log(rho_>^all_onshell/rho_<^all_onshell)=sqrt(s)/T",
+      "fdt": "N_T^all_onshell=rho_T^all_onshell*coth(sqrt(s)/(2*T))"
+    },
+    "units": {
+      "unit_lane": "natural vacuum 3+1",
+      "temperature_and_external_energy": "energy",
+      "invariant_s_and_spectral_measure": "energy squared",
+      "retarded_self_energy": "energy squared; declared channel grid only"
+    },
+    "derivation_class": "action-derived equal-mass signed-cut taxonomy, graph multiplicity, and state-matched retarded spectral response grid",
+    "observable": "all positive-energy on-shell spectral density, retarded sign, multi-invariant KMS/FDT residuals, i0 consistency, and PV convergence",
+    "data_role": "ACTION_DERIVED_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_NO_HOLDOUT",
+    "verification_status": "PASS_ACTION_DERIVED_O2_FINITE_T_ALL_ONSHELL_CUT_SPECTRAL_RESPONSE_LANE",
+    "open_blockers": [
+      "complete_off_shell_finite_temperature_1pi_self_energy_missing",
+      "unique_physical_renormalization_scheme_match_missing",
+      "physical_scattering_normalization_identity_not_admitted",
+      "physical_Kubo_coefficient_missing",
+      "covariant_entropy_current_heat_flux_and_dissipative_balance_missing"
+    ],
+    "dependency_unlocked": "all positive-energy on-shell cut spectral response lane only; no complete off-shell 1PI, physical renormalization, Kubo, entropy, SI, alpha, Core, Gravity, Galaxy, or external-validation unlock",
+    "claim_boundary": "This closes only the all-positive-energy equal-mass on-shell thermal cut spectral response on the declared invariant grid, with the action graph multiplicity admitted. It does not close the complete off-shell finite-temperature 1PI self-energy, physical renormalization, physical scattering/Kubo normalization, entropy-current balance, SI mapping, alpha_Phi_K, TTG validation, or Full Topic 13.",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_all_onshell_cut_response.py",
+        "sha256": "acbcce6babc00aa65fce3db26cc22ea8f49376533bd78f4d4c0c02c0aad6d37f"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_declared_retarded_1pi_grid.py",
+        "sha256": "f635e131e00c295cb90bf51607a8c41b392fef4af610682d9c4d3bc99e504885"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_cut_multiplicity.py",
+        "sha256": "e2f0f8b2efefddfc5c634ef879a238a86111404f7ac797c404a0894597d3cceb"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_signed_cut_coverage.py",
+        "sha256": "1e68712e89ceb0d2040bd6f31d040dcda26bad1b5b737e3ed4fd029eaabf828d"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_sunset_scattering_sk_kms.py",
+        "sha256": "9ee0ab0c2b2e0a95783576bf57affcf996326fd4d697585c87dd6512cea597c0"
+      }
+    ]
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "schema_version": "t13-zenodo-ig210-alpha-l-source-audit-v1",
+  "artifact": "t13_zenodo_ig210_alpha_l_source_audit",
+  "generated_at": "2026-08-20",
+  "status": "PASS_SCOPED_IG210_ALPHA_L_SOURCE",
+  "claim_promotion": false,
+  "full_core_unlock": false,
+  "major_result": {
+    "major_result_id": "T13_ZENODO_HITRACE_IG210_ALPHA_L_COMPARATOR",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_FOR_LANE",
+    "what_is_closed": [
+      "source-locked Table 1 mean linear expansion alpha_l rows for isotropic graphite IG210",
+      "row identity, temperature units, replicate columns, and source model columns",
+      "source-reported expanded uncertainty boundary of 10 percent at coverage factor k=2",
+      "conditional isotropic geometry relation alpha_V = 3 alpha_l without relabelling it as a source row"
+    ],
+    "equation_or_mapping": {
+      "source_quantity": "alpha_l^mean(T; T0=23 C) = mean Delta_L/L over (T-T0)",
+      "unit_conversion": "alpha_l[K^-1] = alpha_l[10^-6 K^-1] * 10^-6",
+      "conditional_volume_mapping": "alpha_V = 3 * alpha_l for an isotropic geometry comparator",
+      "cp_cv_contract_not_closed": "c_p^V - c_v^V = T * alpha_V^2 * K_T"
+    },
+    "units": {
+      "temperature": "K and C",
+      "alpha_l_source": "10^-6 K^-1",
+      "alpha_l_normalized": "K^-1",
+      "alpha_V_conditional": "K^-1",
+      "uncertainty": "relative expanded bound, k=2"
+    },
+    "derivation_class": "source transcription plus conditional isotropic geometry conversion; no UET derivation",
+    "observable": "IG210 high-temperature mean thermal expansion comparator",
+    "data_role": "EXTERNAL_SOURCE_COMPARATOR_NOT_CALIBRATION",
+    "evidence_artifacts": [
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/zenodo_5799133_ig210_alpha_l_source_package.json",
+        "sha256": "0a3144954606496cedb3119334178e0bbffa3899417743a6cf79449ede5d6d79"
+      },
+      {
+        "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_5799133_hitrace_thermal_diffusivity.xlsx",
+        "sha256": "fcd9517fab77025737de2d0da5d92b8b9b90ebd40b9f99c3330c21853c2d79d3"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_IG210_ALPHA_L_SOURCE",
+    "open_blockers": [
+      "same_state_isothermal_K_T_not_present",
+      "density_and_Cp_or_Cv_not_present",
+      "IG210_to_Ding_TTG_material_regime_mapping_not_closed",
+      "independent_alpha_Phi_K_calibration_missing"
+    ],
+    "dependency_unlocked": "IG210 alpha_l source comparator and conditional alpha_V geometry lane only; no Cp-to-Cv, Ding C_src, alpha_Phi_K, transport, Core, or Gravity unlock",
+    "claim_boundary": "This lane is a source comparator. It is not a source-reported volumetric alpha_V, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+  },
+  "source": {
+    "doi": "10.5281/zenodo.5799133",
+    "official_url": "https://zenodo.org/records/5799133",
+    "local_raw_path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/zenodo_5799133_hitrace_thermal_diffusivity.xlsx",
+    "size_bytes": 33113,
+    "md5": "a0a8a2a6e9a9bc607a29c7d17471f89f",
+    "sha256": "fcd9517fab77025737de2d0da5d92b8b9b90ebd40b9f99c3330c21853c2d79d3"
+  },
+  "row_summary": {
+    "count": 15,
+    "temperature_min_C": 50.0,
+    "temperature_max_C": 2000.0,
+    "quantity": "mean_linear_thermal_expansion_coefficient_alpha_l",
+    "alpha_v_is_conditional": true
+  },
+  "checks": {
+    "raw_workbook_present": true,
+    "raw_workbook_size_matches": true,
+    "raw_workbook_md5_matches": true,
+    "raw_workbook_sha256_matches": true,
+    "source_identity_and_locator_present": true,
+    "material_and_temperature_scope_declared": true,
+    "all_numeric_rows_have_identity_and_units": true,
+    "row_ids_are_unique": true,
+    "source_temperature_grid_matches_table": true,
+    "source_mean_and_model_are_kept_separate": true,
+    "reported_expanded_uncertainty_boundary_present": true,
+    "isotropic_alpha_v_conversion_is_explicit": true,
+    "missing_cp_cv_kt_and_density_are_explicit": true,
+    "ding_material_match_is_not_claimed": true,
+    "no_fit_or_tuning": true,
+    "holdout_not_consumed": true,
+    "alpha_phi_k_not_emitted": true
+  },
+  "holdout_accessed": false,
+  "target_fit_performed": false,
+  "numeric_alpha_Phi_K_emitted": false,
+  "controlling_blocker": "same_state_alpha_V_K_T_and_Ding_material_regime_mapping_missing",
+  "next_controller": "source-lock a permitted same-specimen/state-matched alpha_V and isothermal K_T pair, or document a material-state map with uncertainty before using this comparator in Cp-to-Cv correction",
+  "claim_boundary": "This lane is a source comparator. It is not a source-reported volumetric alpha_V, not a same-state K_T pair, not Ding C_src, not alpha_Phi_K calibration, and not Full Topic 13 closure."
+}

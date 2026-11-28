@@ -1,0 +1,100 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "collective lane coordinate, not universal charge",
+        "Phi": "effective response; response propagator is lane-specific, not a particle claim",
+        "R_gen": "derived trace excluded from loops",
+        "R_obs": "excluded"
+      },
+      "unit_lane": "natural_units",
+      "units": {
+        "P0": 1,
+        "Q0": 1,
+        "momentum": 1,
+        "mu": 1,
+        "G": 1,
+        "Gamma": 1,
+        "self_energy": 2
+      },
+      "derivation_class": "numerical_approximation",
+      "derivation_origin": "Functional current insertion into the same canonical charged/response action and one-loop self-energy.",
+      "constant_origin": "synthetic action parameters; no fit or calibration",
+      "observable": "Internal Euclidean charged three-point vertex, not physical Kubo or heat current",
+      "data_role": "DERIVED_SYNTHETIC_DIAGNOSTIC",
+      "verification_status": "PASS_SCOPED_CHARGED_ONE_LOOP_VERTEX",
+      "controlling_blocker": "real_time_transverse_vertex_and_collision_ladder_matching",
+      "claim_boundary": "Explicit generic Euclidean one-loop current vertex only; not static limit, retarded transverse vertex, physical current correlator, Kubo/heat transport, SI or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.charged_one_loop_current_vertex",
+      "version": "1",
+      "classification": "numerical_implementation",
+      "relation_or_code_path": {
+        "propagator": "D_q,E^-1(R)=(R0+i*q*mu)^2+r^2+m^2",
+        "mixed_triangle": "deltaGamma_mix=G^2 T sum_l integral D_response(K)D_q(P-K)D_q(P+Q-K) gamma_q(P-K+Q,P-K)",
+        "bath_triangle": "deltaGamma_bath=[-4*lambda_chi+G^2 D_response(Q)] T sum_l integral D_+(K)gamma_+(K+Q,K)D_+(K+Q)",
+        "bare_vertex": "gamma_q=[q*(2*(P0+i*q*mu)+Q0), q*(2*p+Q)]",
+        "Ward": "Q_mu Gamma_q^mu=q*[D_q,full^-1(P+Q)-D_q,full^-1(P)]"
+      },
+      "standard_physics_counterpart": "Finite-temperature scalar Ward-Takahashi three-point vertex",
+      "variables": {
+        "Gamma": "charged current vertex",
+        "P,Q": "Euclidean momenta",
+        "q": "O(2) charge sign, not core C"
+      },
+      "mathematical_role": "One-loop current insertion",
+      "observable_mapping": "Internal Euclidean charged three-point vertex, not physical Kubo or heat current",
+      "parameter_dimensions": {
+        "P0": 1,
+        "Q0": 1,
+        "momentum": 1,
+        "mu": 1,
+        "G": 1,
+        "Gamma": 1,
+        "self_energy": 2
+      },
+      "source_or_origin": "Functional current insertion into the same canonical charged/response action and one-loop self-energy.",
+      "assumptions": {
+        "order": "strict one loop in normal zero-field propagators",
+        "transfer": "generic nonzero bosonic Matsubara Q; collinear external spatial momenta with full internal angle",
+        "bath_role": "response-relaxed thermodynamic background insertion, separately labelled from proper mixed triangle",
+        "vacuum": "mixed triangle and fixed charged kinetic counterterm; thermal bath insertion is vacuum-free by conserved-current shift"
+      },
+      "symmetry_and_conservation": "O(2) Ward identity at generic Euclidean transfer",
+      "limiting_cases": [
+        "G=0",
+        "lambda=0",
+        "mu charge conjugation",
+        "continuum thermal shift"
+      ],
+      "implementation_paths": [
+        "docs/scripts/audit/audit_topic13_charged_one_loop_current_vertex.py"
+      ],
+      "verifier_paths": [
+        "docs/core/test/test_topic13_charged_one_loop_current_vertex.py"
+      ],
+      "evidence_class": "INTERNAL_SYNTHETIC_DIAGNOSTIC",
+      "proof_status": "CHECKED_GENERIC_EUCLIDEAN_ONE_LOOP_ONLY",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_charged_one_loop_current_vertex_audit.json",
+          "sha256": "7fdf5d1ab04d88657750d567d0cd52a9b770d395210c30180944f547b3772c63"
+        }
+      ],
+      "downstream_dependencies": [],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false,
+      "failure_mode": [
+        "static_confluent_vertex_limit",
+        "real_time_finite_k_transverse_continuation",
+        "collision_ladder_and_heat_current_vertex_matching",
+        "complete_counterterm_four_point_and_material_SI_mapping"
+      ],
+      "next_hardening_step": "Take the controlled static/confluent and real-time transverse limits, then match the collision ladder and heat-current vertex."
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

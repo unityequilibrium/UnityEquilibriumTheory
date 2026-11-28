@@ -1,0 +1,392 @@
+{
+  "major_result_id": "T13_VARIANCE_SHIFT_SENSITIVITY",
+  "topic": "0.13",
+  "closure_level": "PARTIAL",
+  "what_is_closed": "Fixed grid-shift sensitivity measurement at300K, not convergence",
+  "equation_or_mapping": "Equal-weight BZ quadrature of the existing source-model local covariance trace",
+  "units": "trace m^2; RMS angstrom",
+  "derivation_class": "harmonic source-model quadrature diagnostic",
+  "observable": "local relative-layer mass-centroid covariance",
+  "data_role": "SOURCE_MODEL_NOT_EXPERIMENT",
+  "temperature_K": 300,
+  "rows": [
+    {
+      "mesh": 8,
+      "shift": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.3064237360566752e-29,
+        1.855678042035781e-28,
+        1.816491129410597e-23,
+        2.801497413717419e-23,
+        9.75247253207737e-24
+      ],
+      "total_trace_m2": 5.59325565953991e-23,
+      "rms_angstrom": 0.07478807163939921
+    },
+    {
+      "mesh": 8,
+      "shift": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.7835295015151025e-29,
+        2.1068430654748737e-28,
+        2.0446806011990877e-23,
+        2.647733354591878e-23,
+        9.242369224150186e-24
+      ],
+      "total_trace_m2": 5.616673730166141e-23,
+      "rms_angstrom": 0.074944470977959
+    },
+    {
+      "mesh": 8,
+      "shift": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.7835295015151022e-29,
+        2.106843065474874e-28,
+        2.0446806011990862e-23,
+        2.6477333545918765e-23,
+        9.242369224150185e-24
+      ],
+      "total_trace_m2": 5.616673730166138e-23,
+      "rms_angstrom": 0.07494447097795899
+    },
+    {
+      "mesh": 8,
+      "shift": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.358500256618833e-29,
+        1.8503788060663607e-28,
+        1.8164911306740695e-23,
+        2.801497413717419e-23,
+        9.75247253207739e-24
+      ],
+      "total_trace_m2": 5.593255659887546e-23,
+      "rms_angstrom": 0.07478807164172335
+    },
+    {
+      "mesh": 8,
+      "shift": [
+        0.25,
+        0.25,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        0.0,
+        1.5006000435246306e-29,
+        2.135783082067906e-28,
+        2.044680601384053e-23,
+        2.6477333545918783e-23,
+        9.242369224150186e-24
+      ],
+      "total_trace_m2": 5.616673736821814e-23,
+      "rms_angstrom": 0.07494447102236305
+    },
+    {
+      "mesh": 12,
+      "shift": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        5.9360293850277016e-31,
+        2.3922617428015773e-29,
+        9.631104743173792e-24,
+        1.3391723188793935e-23,
+        2.802091387295913e-23,
+        9.503852249546202e-24
+      ],
+      "total_trace_m2": 6.054761857069343e-23,
+      "rms_angstrom": 0.07781235028624532
+    },
+    {
+      "mesh": 12,
+      "shift": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        1.1118039276800327e-31,
+        2.6857859799629406e-29,
+        6.184173587560239e-24,
+        1.7539155682130833e-23,
+        2.763683910546523e-23,
+        9.46908304792875e-24
+      ],
+      "total_trace_m2": 6.082927839212524e-23,
+      "rms_angstrom": 0.07799312687161943
+    },
+    {
+      "mesh": 12,
+      "shift": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        1.1118039277138945e-31,
+        2.6857859799706214e-29,
+        6.184173587560336e-24,
+        1.7539155682130895e-23,
+        2.763683910546521e-23,
+        9.46908304792874e-24
+      ],
+      "total_trace_m2": 6.082927839212537e-23,
+      "rms_angstrom": 0.07799312687161951
+    },
+    {
+      "mesh": 12,
+      "shift": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        7.547276653617603e-32,
+        2.2597861179285946e-29,
+        9.631106659344055e-24,
+        1.3391723113532807e-23,
+        2.802091387295917e-23,
+        9.503852249546203e-24
+      ],
+      "total_trace_m2": 6.054761856871619e-23,
+      "rms_angstrom": 0.07781235028497481
+    },
+    {
+      "mesh": 12,
+      "shift": [
+        0.25,
+        0.25,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        7.669484142944692e-31,
+        2.6363712177475665e-29,
+        6.184173502267416e-24,
+        1.7539155635997844e-23,
+        2.7636915877329115e-23,
+        9.46900627580965e-24
+      ],
+      "total_trace_m2": 6.082927842206461e-23,
+      "rms_angstrom": 0.07799312689081302
+    },
+    {
+      "mesh": 16,
+      "shift": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        2.8897739003637043e-31,
+        2.9724155810152366e-29,
+        9.053063849259523e-24,
+        1.817486403367915e-23,
+        2.704010516618493e-23,
+        9.254331797780752e-24
+      ],
+      "total_trace_m2": 6.352239486003755e-23,
+      "rms_angstrom": 0.0797009377987722
+    },
+    {
+      "mesh": 16,
+      "shift": [
+        0.25,
+        0.25,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        6.212563292932034e-31,
+        3.156434453318736e-29,
+        1.374211730774801e-23,
+        1.2920806872973497e-23,
+        2.764845079507683e-23,
+        9.469640008414317e-24
+      ],
+      "total_trace_m2": 6.378104716981352e-23,
+      "rms_angstrom": 0.07986303723864598
+    },
+    {
+      "mesh": 16,
+      "shift": [
+        0.75,
+        0.75,
+        0.75
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        6.212563292932034e-31,
+        3.156434453318735e-29,
+        1.3742117307748018e-23,
+        1.292080687297349e-23,
+        2.764845079507686e-23,
+        9.469640008414336e-24
+      ],
+      "total_trace_m2": 6.378104716981357e-23,
+      "rms_angstrom": 0.07986303723864599
+    },
+    {
+      "mesh": 16,
+      "shift": [
+        0.5,
+        0.5,
+        0.25
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        3.5242365070362773e-31,
+        2.99571158609271e-29,
+        9.053063551128709e-24,
+        1.817486403351559e-23,
+        2.7040105165965007e-23,
+        9.254331797780726e-24
+      ],
+      "total_trace_m2": 6.352239485792954e-23,
+      "rms_angstrom": 0.07970093779744976
+    },
+    {
+      "mesh": 16,
+      "shift": [
+        0.25,
+        0.25,
+        0.5
+      ],
+      "unstable_points": [],
+      "status": "COMPUTED_NOT_CONVERGED",
+      "trace_bins_m2": [
+        5.433658311971253e-31,
+        3.2594315790155415e-29,
+        1.3742116359132567e-23,
+        1.2920806886564397e-23,
+        2.764845079146023e-23,
+        9.469640008414319e-24
+      ],
+      "total_trace_m2": 6.378104718325314e-23,
+      "rms_angstrom": 0.07986303724706012
+    }
+  ],
+  "mesh_summaries": [
+    {
+      "mesh": 8,
+      "range_over_midpoint_trace": 0.0041780954105750685,
+      "inversion_pair_relative_difference": 4.440892098500626e-16,
+      "min_rms_angstrom": 0.07478807163939921,
+      "max_rms_angstrom": 0.07494447102236305
+    },
+    {
+      "mesh": 12,
+      "range_over_midpoint_trace": 0.004641078497332536,
+      "inversion_pair_relative_difference": 2.1094237467877974e-15,
+      "min_rms_angstrom": 0.07781235028497481,
+      "max_rms_angstrom": 0.07799312689081302
+    },
+    {
+      "mesh": 16,
+      "range_over_midpoint_trace": 0.00406355588154351,
+      "inversion_pair_relative_difference": 7.771561172376096e-16,
+      "min_rms_angstrom": 0.07970093779744976,
+      "max_rms_angstrom": 0.07986303724706012
+    }
+  ],
+  "phonopy_version": "4.4.0",
+  "frequency_edges_cm_inverse": [
+    0,
+    10,
+    30,
+    100,
+    300,
+    1000,
+    "infinity"
+  ],
+  "verification_status": "SHIFT_SEQUENCE_RECORDED",
+  "controlling_blocker": "quadrature_convergence_and_material_observable_mapping",
+  "open_blockers": [
+    "no_continuum_error_bound",
+    "phase_and_mode_mapping",
+    "anharmonicity"
+  ],
+  "dependency_unlocked": [],
+  "full_core_unlock": false,
+  "global_claim_promotion": false,
+  "claim_boundary": "Shift range is not a statistical uncertainty. No clipping, fitting, threshold changes or UET identification.",
+  "evidence_artifacts": [
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_FORCE_CONSTANTS.gz",
+      "sha256": "a410f36fd34e8603aec0dde48c1f8cb47fbf0a237ca911437f744fb7cbf02763"
+    },
+    {
+      "path": "docs/topics/0.13_Thermodynamic_Bridge/Data/03_Research/raw/mp48_phonopy.yaml.gz",
+      "sha256": "00be787d0fbe986304ffdfa51a917b9aa0038deb6d31a563979afe42a7a2b5f8"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_variance_mesh_shift.py",
+      "sha256": "712c34b59e5cfa151934ebb8ac9dff252eb7397f4016c74a7f75e84a0daf7e5c"
+    },
+    {
+      "path": "docs/core/test/test_topic13_variance_mesh_shift.py",
+      "sha256": "62a52b73cecffcf5979f7044d699b41015eaab809c6dbab0f72c9418758b02ca"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_thermal_variance_spectrum.py",
+      "sha256": "f1fcf39311af80bfea8b3d71a1b0fd2ca866a2c8637f1d78a442720619d89821"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_interlayer_thermal_variance.py",
+      "sha256": "190d1e27620b7379ff253db6e73ce4cde7c1b25c1f547398897fc68a91d42720"
+    },
+    {
+      "path": "docs/scripts/audit/audit_topic13_mp48_force_constant_harmonic_reconstruction.py",
+      "sha256": "66bfddff927a9d98ef045e3e56daf1c97ceca2c23aac99df7ff6bad1118b3604"
+    },
+    {
+      "path": "docs/core/uet_interlayer_mode_residue.py",
+      "sha256": "f7c40cffe59575c7337433099b3c6e4f2ec9ef392182fa2e82361ec315d21ff5"
+    }
+  ]
+}

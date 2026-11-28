@@ -1,0 +1,294 @@
+{
+  "schema_version": "t13-uet-o2-finite-temperature-stationarity-scheme-dependence-v1",
+  "artifact": "t13_uet_o2_finite_temperature_stationarity_scheme_dependence_audit",
+  "generated_at": "2026-08-14",
+  "status": "PASS_SCOPED_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+  "major_result": {
+    "major_result_id": "T13_UET_O2_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "shared value, first-derivative, and second-derivative reference anchors do not select a unique finite-temperature completion",
+      "declared Taylor-subtracted scheme A has no stationary witness on the tested stable-domain grid",
+      "declared finite-counterterm scheme B obeys the same anchors and has an interior stationary witness with positive mode squares",
+      "finite-temperature condensed-stationarity phase-selection question is closed as a scoped structural non-identifiability boundary"
+    ],
+    "equation_or_mapping": {
+      "x_definition": "x=A^2",
+      "stable_domain": "x>=q/lambda, q=Z*mu^2-m_eff(Phi)^2>0",
+      "taylor_subtracted_vacuum": "V_vac^R(x)=integral[S(x)-S(x_*)-(x-x_*)S'(x_*)-1/2*(x-x_*)^2*S''(x_*)] d^3k/(2*pi)^3",
+      "finite_local_counterterm": "Delta V_a(x)=a*(x-x_*)^3/Lambda_*^2",
+      "shared_reference_conditions": "Delta V_a(x_*)=partial_x Delta V_a(x_*)=partial_x^2 Delta V_a(x_*)=0",
+      "stationarity": "partial_x[Omega_tree+Omega_G+V_vac^R+Delta V_a]=0",
+      "witness": "scheme_A(a=0) and scheme_B(a=-0.05) share anchors but have different stationary-point behavior"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_reference_x": "natural amplitude squared",
+      "Lambda_star_sq": "natural amplitude squared",
+      "Omega": "natural thermodynamic density",
+      "Phi": "fixed action response input; no SI map",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "internal two-scheme finite-counterterm identifiability witness with analytic mode derivatives and numerical convergence",
+    "observable": "natural-unit finite-temperature stationarity scheme-dependence witness",
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_o2_finite_temperature_stationarity_scheme.py",
+        "sha256": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f"
+      },
+      {
+        "path": "docs/core/uet_o2_finite_temperature_scheme_identifiability.py",
+        "sha256": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+    "open_blockers": [
+      "physical_finite_temperature_renormalization_scheme_missing",
+      "condensed_branch_and_renormalized_finite_temperature_phase_transition_missing",
+      "condensate_and_normal_two_fluid_eos_completion_missing",
+      "retarded_physical_Kubo_match_missing",
+      "microscopic_SK_KMS_matching_missing",
+      "full_heat_flux_entropy_production_and_dissipative_balance_missing",
+      "dimensional_Phi_to_thermal_observable_map_missing",
+      "alpha_Phi_K_independent_calibration_missing",
+      "ding_pbte_C_src_numeric_or_accepted_independent_reproduction_missing"
+    ],
+    "dependency_unlocked": "scoped finite-temperature scheme-identifiability no-go only; no physical phase-transition, two-fluid, transport, Core, Gravity, SI, alpha, or external-validation unlock",
+    "claim_boundary": "This closes only the structural non-identifiability of a finite-temperature condensed stationarity outcome under two admissible finite local completions sharing the current reference anchors. It does not select a physical renormalization scheme, establish a physical phase transition, close two-fluid transport, provide SK/KMS/Kubo coefficients, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "contract": {
+    "status": "SCOPED_RENORMALIZED_CONDENSATE_STATIONARITY_SCHEME_DEPENDENCE",
+    "equations": {
+      "x_definition": "x=A^2",
+      "stable_domain": "x>=q/lambda, q=Z*mu^2-m_eff(Phi)^2>0",
+      "taylor_subtracted_vacuum": "V_vac^R(x)=integral[S(x)-S(x_*)-(x-x_*)S'(x_*)-1/2*(x-x_*)^2*S''(x_*)] d^3k/(2*pi)^3",
+      "finite_local_counterterm": "Delta V_a(x)=a*(x-x_*)^3/Lambda_*^2",
+      "shared_reference_conditions": "Delta V_a(x_*)=partial_x Delta V_a(x_*)=partial_x^2 Delta V_a(x_*)=0",
+      "stationarity": "partial_x[Omega_tree+Omega_G+V_vac^R+Delta V_a]=0",
+      "witness": "scheme_A(a=0) and scheme_B(a=-0.05) share anchors but have different stationary-point behavior"
+    },
+    "units": {
+      "unit_lane": "natural",
+      "x_and_reference_x": "natural amplitude squared",
+      "Lambda_star_sq": "natural amplitude squared",
+      "Omega": "natural thermodynamic density",
+      "Phi": "fixed action response input; no SI map",
+      "alpha_Phi_K": "not emitted; SI map remains open"
+    },
+    "derivation_class": "internal two-scheme finite-counterterm identifiability witness with analytic mode derivatives and numerical convergence",
+    "scope": {
+      "scheme_A": "declared Taylor-subtracted Gaussian completion with a=0",
+      "scheme_B": "same reference anchors plus declared finite local coefficient a=-0.05",
+      "vacuum_counterterm": "declared finite subtraction only; not source or microscopic matching",
+      "condensed_branch": "stationarity witness only; not a complete interacting branch",
+      "physical_kubo": "NOT_INCLUDED",
+      "sk_kms": "NOT_MATCHED_MICROSCOPICALLY"
+    },
+    "ontology": {
+      "C": "collective system-behaviour coordinate; not mass or charge",
+      "Phi": "effective response variable; not temperature",
+      "R_gen": "derived history trace only; not an independent state",
+      "R_obs": "separate observer record; not physical dynamics"
+    },
+    "data_role": "INTERNAL_STRUCTURAL_NO_GO_NO_SOURCE_ROWS_OR_HOLDOUT",
+    "claim_boundary": "This closes only the structural non-identifiability of a finite-temperature condensed stationarity outcome under two admissible finite local completions sharing the current reference anchors. It does not select a physical renormalization scheme, establish a physical phase transition, close two-fluid transport, provide SK/KMS/Kubo coefficients, map Phi to SI temperature, calibrate alpha_Phi_K, validate TTG, or close Full Topic 13."
+  },
+  "reference": {
+    "quadrature_order": 256,
+    "momentum_cutoff": 176.24840424809526,
+    "scheme_a_boundary_derivative": 0.011741494171722888,
+    "scheme_a_reference_derivative": 0.7672267350012217,
+    "scheme_b_boundary_derivative": -0.13207100582827716,
+    "scheme_b_reference_derivative": 0.7672267350012217,
+    "scheme_b_stationary_x": 2.169974254196495,
+    "scheme_b_stationary_residual": -5.118322432551281e-12,
+    "scheme_b_min_low_omega_sq": 0.0518577599066905,
+    "scheme_b_min_high_omega_sq": 9.9381035857585,
+    "scheme_a_grid_min_derivative": 0.011741494171722888,
+    "scheme_a_grid_max_derivative": 0.7672267350012217,
+    "scheme_b_grid_min_derivative": -0.13207100582827716,
+    "scheme_b_grid_max_derivative": 0.7672267350012217
+  },
+  "reference_parameters": {
+    "temperature": 0.25,
+    "chemical_potential": 1.3,
+    "space_response": 0.2,
+    "scheme_b_coefficient": -0.05,
+    "effective_mass_sq": 0.494,
+    "condensate_control": 1.534,
+    "x_boundary": 1.9175,
+    "reference_x": 3.835,
+    "reference_scale_sq": 3.835
+  },
+  "reference_anchors": {
+    "scheme_a": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scheme_b": [
+      -0.0,
+      -0.0,
+      -0.0
+    ]
+  },
+  "quadrature_records": [
+    {
+      "quadrature_order": 96,
+      "momentum_cutoff": 176.24840424809526,
+      "scheme_a_boundary_derivative": 0.011741494156273532,
+      "scheme_a_reference_derivative": 0.7672267350034327,
+      "scheme_b_boundary_derivative": -0.1320710058437265,
+      "scheme_b_reference_derivative": 0.7672267350034327,
+      "scheme_b_stationary_x": 2.1699742328783764,
+      "scheme_b_stationary_residual": -4.14737688636535e-12,
+      "scheme_b_min_low_omega_sq": 0.052089789463135354,
+      "scheme_b_min_high_omega_sq": 9.939338880658608,
+      "scheme_a_grid_min_derivative": 0.011741494156273532,
+      "scheme_a_grid_max_derivative": 0.7672267350034327,
+      "scheme_b_grid_min_derivative": -0.1320710058437265,
+      "scheme_b_grid_max_derivative": 0.7672267350034327
+    },
+    {
+      "quadrature_order": 192,
+      "momentum_cutoff": 176.24840424809526,
+      "scheme_a_boundary_derivative": 0.011741494171731297,
+      "scheme_a_reference_derivative": 0.7672267350012183,
+      "scheme_b_boundary_derivative": -0.13207100582826875,
+      "scheme_b_reference_derivative": 0.7672267350012183,
+      "scheme_b_stationary_x": 2.169974254196495,
+      "scheme_b_stationary_residual": -5.0751347568933625e-12,
+      "scheme_b_min_low_omega_sq": 0.05186796917133751,
+      "scheme_b_min_high_omega_sq": 9.938157946472206,
+      "scheme_a_grid_min_derivative": 0.011741494171731297,
+      "scheme_a_grid_max_derivative": 0.7672267350012183,
+      "scheme_b_grid_min_derivative": -0.13207100582826875,
+      "scheme_b_grid_max_derivative": 0.7672267350012183
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "scheme_a_boundary_derivative": 0.011741494171722888,
+      "scheme_a_reference_derivative": 0.7672267350012217,
+      "scheme_b_boundary_derivative": -0.13207100582827716,
+      "scheme_b_reference_derivative": 0.7672267350012217,
+      "scheme_b_stationary_x": 2.169974254196495,
+      "scheme_b_stationary_residual": -5.118322432551281e-12,
+      "scheme_b_min_low_omega_sq": 0.0518577599066905,
+      "scheme_b_min_high_omega_sq": 9.9381035857585,
+      "scheme_a_grid_min_derivative": 0.011741494171722888,
+      "scheme_a_grid_max_derivative": 0.7672267350012217,
+      "scheme_b_grid_min_derivative": -0.13207100582827716,
+      "scheme_b_grid_max_derivative": 0.7672267350012217
+    }
+  ],
+  "quadrature_convergence_relative_errors": {
+    "scheme_a_boundary_derivative": 7.162580237691784e-13,
+    "scheme_b_stationary_x": 0.0,
+    "scheme_b_stationary_residual": 0.008437857565059895,
+    "scheme_b_min_low_omega_sq": 0.00019687052941314215,
+    "scheme_b_min_high_omega_sq": 5.46992826522339e-06
+  },
+  "cutoff_records": [
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 97.9157801378307,
+      "scheme_a_boundary_derivative": 0.011736276133816845,
+      "scheme_a_reference_derivative": 0.7672267350012181,
+      "scheme_b_boundary_derivative": -0.1320762238661832,
+      "scheme_b_reference_derivative": 0.7672267350012181,
+      "scheme_b_stationary_x": 2.169981828239653,
+      "scheme_b_stationary_residual": -3.243807999986359e-12,
+      "scheme_b_min_low_omega_sq": 0.05185619613775394,
+      "scheme_b_min_high_omega_sq": 9.938104605446139,
+      "scheme_a_grid_min_derivative": 0.011736276133816845,
+      "scheme_a_grid_max_derivative": 0.7672267350012181,
+      "scheme_b_grid_min_derivative": -0.1320762238661832,
+      "scheme_b_grid_max_derivative": 0.7672267350012181,
+      "cutoff_factor": 50.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 137.082092192963,
+      "scheme_a_boundary_derivative": 0.011739972278803384,
+      "scheme_a_reference_derivative": 0.7672267350012153,
+      "scheme_b_boundary_derivative": -0.13207252772119665,
+      "scheme_b_reference_derivative": 0.7672267350012153,
+      "scheme_b_stationary_x": 2.1699764633005545,
+      "scheme_b_stationary_residual": 6.847647449070848e-12,
+      "scheme_b_min_low_omega_sq": 0.051856386341672334,
+      "scheme_b_min_high_omega_sq": 9.938098997964978,
+      "scheme_a_grid_min_derivative": 0.011739972278803384,
+      "scheme_a_grid_max_derivative": 0.7672267350012153,
+      "scheme_b_grid_min_derivative": -0.13207252772119665,
+      "scheme_b_grid_max_derivative": 0.7672267350012153,
+      "cutoff_factor": 70.0
+    },
+    {
+      "quadrature_order": 256,
+      "momentum_cutoff": 176.24840424809526,
+      "scheme_a_boundary_derivative": 0.011741494171722888,
+      "scheme_a_reference_derivative": 0.7672267350012217,
+      "scheme_b_boundary_derivative": -0.13207100582827716,
+      "scheme_b_reference_derivative": 0.7672267350012217,
+      "scheme_b_stationary_x": 2.169974254196495,
+      "scheme_b_stationary_residual": -5.118322432551281e-12,
+      "scheme_b_min_low_omega_sq": 0.0518577599066905,
+      "scheme_b_min_high_omega_sq": 9.9381035857585,
+      "scheme_a_grid_min_derivative": 0.011741494171722888,
+      "scheme_a_grid_max_derivative": 0.7672267350012217,
+      "scheme_b_grid_min_derivative": -0.13207100582827716,
+      "scheme_b_grid_max_derivative": 0.7672267350012217,
+      "cutoff_factor": 90.0
+    }
+  ],
+  "cutoff_relative_errors": {
+    "scheme_a_boundary_derivative": 0.00012961663117529504,
+    "scheme_b_stationary_x": 1.018032382369693e-06,
+    "scheme_b_min_low_omega_sq": 2.6487164517608604e-05,
+    "scheme_b_min_high_omega_sq": 4.616367178600268e-07
+  },
+  "checks": {
+    "all_reference_values_finite": true,
+    "stable_domain_is_declared": true,
+    "scheme_a_has_no_stationary_witness_on_grid": true,
+    "scheme_a_reference_derivative_is_positive": true,
+    "scheme_b_brackets_stationary_witness": true,
+    "scheme_b_stationary_point_is_interior": true,
+    "scheme_b_stationarity_residual_is_closed": true,
+    "scheme_b_modes_are_stable": true,
+    "shared_reference_anchors_are_zero": true,
+    "quadrature_stationarity_converges": true,
+    "quadrature_mode_floor_remains_positive": true,
+    "cutoff_sweep_is_bounded": true,
+    "finite_counterterm_is_declared_not_fitted": true,
+    "condensed_branch_is_not_claimed_complete": true,
+    "physical_kubo_is_not_emitted": true,
+    "external_calibration_is_not_emitted": true,
+    "natural_units_are_declared": true,
+    "Phi_ontology_is_preserved": true,
+    "C_ontology_is_preserved": true,
+    "R_gen_ontology_is_preserved": true,
+    "R_obs_is_separate": true,
+    "no_holdout_or_fit": true
+  },
+  "failed_checks": [],
+  "source_hashes": {
+    "docs/core/uet_o2_finite_temperature_stationarity_scheme.py": "cc7d69c74fbb1725ca5710b7a8b50d50e6739f977d92a044646fefb7fefa879f",
+    "docs/core/uet_o2_finite_temperature_scheme_identifiability.py": "26d7a8f2dc54ce8f16771ffac86c5414f71963db2ea5cdd1d026716833598358"
+  },
+  "controlling_blocker": "physical_finite_temperature_renormalization_scheme_missing",
+  "next_controller": "Select a physical finite-temperature renormalization prescription by independent microscopic matching or source-backed input; until then retain this result as a scoped no-go and do not call the stationary witness a phase transition.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  },
+  "parameter_policy": {
+    "scheme_b_coefficient": "declared internal witness, not fitted to target data",
+    "grid": "fixed declared stable-domain witness grid"
+  }
+}

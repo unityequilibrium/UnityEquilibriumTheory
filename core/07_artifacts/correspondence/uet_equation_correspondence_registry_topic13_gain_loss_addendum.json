@@ -1,0 +1,70 @@
+{
+  "schema_version": "uet-equation-registry-addendum-v1",
+  "extends": "docs/core/artifacts/uet_equation_correspondence_registry.json",
+  "status": "CANDIDATE_DIAGNOSTIC_NOT_MERGED",
+  "equation_entries": [
+    {
+      "ontology": {
+        "C": "not quasiparticle count or charge",
+        "Phi": "effective response, neutral excitation is a lane assumption not substance",
+        "R_gen": "not a state",
+        "R_obs": "excluded"
+      },
+      "units": {
+        "collision_form": "energy^4",
+        "susceptibility": "energy^3",
+        "relaxation_rate": "energy",
+        "charge_response": "energy^2"
+      },
+      "unit_lane": "natural_units",
+      "variable_meanings": {
+        "q": "charge label -1,0,+1, not C",
+        "psi": "dimensionless Bose population affinity",
+        "L": "linearized collision quadratic form, not a Lagrangian",
+        "S_perp": "momentum-projected charge-current source",
+        "dPi_1234": "product d^3p_i/((2*pi)^3*2*E_i) times (2*pi)^4 delta^4(p1+p2-p3-p4)"
+      },
+      "parameter_dimensions": {
+        "T": 1,
+        "mu": 1,
+        "momentum": 1,
+        "mass_squared": 2,
+        "response_mass_squared": 2,
+        "response_coupling": 1,
+        "z": 0,
+        "epsilon": 0,
+        "response_kinetic": 0,
+        "quartic": 0,
+        "response_quartic": 0
+      },
+      "constant_origin": "Declared synthetic action coefficients and state, not calibrated or fitted; phase-space factors from invariant measure.",
+      "derivation_class": "tree_level_derivation",
+      "approximation": "TREE_QUASIPARTICLE_2TO2_TRUNCATION_AND_FINITE_GALERKIN_BASIS",
+      "observable": "finite-basis projected charge response, not physical thermal conductivity",
+      "data_role": "SYNTHETIC_DERIVED_DIAGNOSTIC",
+      "verification_status": "PASS_STRUCTURAL_GAIN_LOSS_REFINEMENT_OPEN",
+      "controlling_blocker": "basis_completeness_and_physical_collision_current_matching",
+      "claim_boundary": "Finite-grid 2-to-2 mixture diagnostic only; not full transport, SI calibration or Full Topic 13 closure.",
+      "equation_id": "uet.o2.thermal.normal_coupled_gain_loss",
+      "relation_or_code_path": {
+        "gain_loss": "F=f1*f2*(1+f3)*(1+f4); R=f3*f4*(1+f1)*(1+f2)",
+        "linearization": "delta f=f*(1+f)*psi; delta(F-R)=F_eq*(psi1+psi2-psi3-psi4)",
+        "quadratic_form": "L_ab=sum_reactions integral dPi_1234 |M|^2 F_eq Delta psi_a Delta psi_b/(S_in*S_out*S_reverse)",
+        "counting": "S_reverse=2 for same incoming/outgoing species multiset, else 1; each conversion orientation listed once",
+        "entropy": "(F-R)*log(F/R)>=0 for each reversible positive Bose event",
+        "response": "R_Q=S_perp^T L_active^-1 S_perp after metric momentum projection"
+      },
+      "standard_physics_counterpart": "Reversible Bose Boltzmann reaction form in a canonical three-mode scalar model",
+      "evidence_artifacts": [
+        {
+          "path": "docs/core/artifacts/t13_coupled_gain_loss_operator_audit.json",
+          "sha256": "b3a9ebf6b2ac7a155c3a2b8bd12dd60fa71684924e40220d04cbcfa60becfaab"
+        }
+      ],
+      "dependency_role": "diagnostic_only",
+      "physical_dependency_unlock": false
+    }
+  ],
+  "full_core_unlock": false,
+  "claim_promotion": false
+}

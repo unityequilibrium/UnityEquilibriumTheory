@@ -1,0 +1,134 @@
+{
+  "schema_version": "t13-transport-coefficient-identifiability-no-go-v1",
+  "artifact": "t13_transport_coefficient_identifiability_no_go",
+  "generated_at": "2026-08-12",
+  "status": "PASS_SCOPED_NO_GO_CONSERVATIVE_ACTION_KUBO_IDENTIFIABILITY",
+  "major_result": {
+    "major_result_id": "T13_TRANSPORT_COEFFICIENT_IDENTIFIABILITY_NO_GO",
+    "topic": "0.13_Thermodynamic_Bridge",
+    "closure_level": "CLOSED_AS_NO_GO",
+    "what_is_closed": [
+      "the current conservative single-copy action fixes the ideal O(2) pressure/current/stress sector but not a unique dissipative Onsager/Kubo sector",
+      "two distinct positive-semidefinite dissipative witnesses satisfy the formal entropy positivity contract while producing different transport responses",
+      "the admission boundary requiring a state-matched retarded correlator, units, locator, source identity, and hash is explicit",
+      "the no-go is scoped to the current action and does not reject a future open-system or SK microscopic extension"
+    ],
+    "equation_or_mapping": {
+      "ideal_action_sector": "S_cons[Phi,chi] -> P(X,Phi), N_ideal^mu, T_ideal^munu",
+      "dissipative_extension": "J_diss^A = -L^(AB) X_B; tau_A > 0",
+      "entropy_production": "nabla_mu J_S^mu = X_A L^(AB) X_B >= 0 for L=L^T >= 0",
+      "Kubo_admission": "L^(AB) <- matched retarded correlator with state, units, locator, source hash"
+    },
+    "units": {
+      "unit_lane": "natural for the ideal action; dissipative coefficient units remain source-declared",
+      "ideal_sector": "natural action-derived quantities",
+      "dissipative_coefficients": "not assigned by the conservative action",
+      "physical_SI_map": "open"
+    },
+    "derivation_class": "structural identifiability no-go from the conservative action contract plus two internal PSD witnesses; no physical coefficient inference",
+    "observable": "difference between admissible dissipative response completions, not an external transport observable",
+    "data_role": "SCOPED_STRUCTURAL_NO_GO_NOT_PHYSICAL_TRANSPORT_EVIDENCE",
+    "evidence_artifacts": [
+      {
+        "path": "docs/core/uet_transport_coefficient_identifiability.py",
+        "sha256": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212"
+      },
+      {
+        "path": "docs/core/uet_covariant_superfluid_transport.py",
+        "sha256": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f"
+      },
+      {
+        "path": "docs/core/thermal_sk_kms_entropy_contract.py",
+        "sha256": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b"
+      }
+    ],
+    "verification_status": "PASS_SCOPED_NO_GO_CONSERVATIVE_ACTION_KUBO_IDENTIFIABILITY",
+    "open_blockers": [
+      "physical_Kubo_coefficient_record_missing",
+      "finite_temperature_normal_component_not_derived",
+      "microscopic_SK_KMS_matching_not_closed",
+      "SI_transport_unit_map_missing",
+      "curved_3p1_transport_solver_missing",
+      "base_Phi_SI_anchor_and_alpha_Phi_K_missing"
+    ],
+    "dependency_unlocked": "closes only the structural Kubo identifiability boundary; no physical transport, Full Topic 13, Core, Gravity, or external-validation unlock",
+    "claim_boundary": "This closes only the identifiability boundary for deriving a unique physical dissipative/Kubo sector from the current conservative action. It does not reject future open-system UET extensions, supply a physical coefficient, close finite-temperature normal transport, or close Full Topic 13."
+  },
+  "witnesses": [
+    {
+      "name": "witness_A",
+      "onsager_matrix": [
+        [
+          1.0,
+          0.2
+        ],
+        [
+          0.2,
+          1.0
+        ]
+      ],
+      "eigenvalues": [
+        0.8,
+        1.2
+      ],
+      "relaxation_time": 1.0,
+      "positive_semidefinite": true,
+      "positive_relaxation_time": true,
+      "coefficient_origin": "underdetermined_extension_of_conservative_action"
+    },
+    {
+      "name": "witness_B",
+      "onsager_matrix": [
+        [
+          2.0,
+          -0.3
+        ],
+        [
+          -0.3,
+          0.5
+        ]
+      ],
+      "eigenvalues": [
+        0.44222527892982444,
+        2.0577747210701753
+      ],
+      "relaxation_time": 0.5,
+      "positive_semidefinite": true,
+      "positive_relaxation_time": true,
+      "coefficient_origin": "underdetermined_extension_of_conservative_action"
+    }
+  ],
+  "checks": {
+    "two_distinct_witnesses_are_present": true,
+    "witness_matrices_are_distinct": true,
+    "witness_A_is_positive_semidefinite": true,
+    "witness_B_is_positive_semidefinite": true,
+    "witness_A_has_positive_relaxation": true,
+    "witness_B_has_positive_relaxation": true,
+    "witnesses_have_distinct_relaxation": true,
+    "same_ideal_action_is_declared": true,
+    "physical_values_are_not_emitted": true,
+    "transport_requires_external_or_microscopic_match": true,
+    "normal_component_is_open": true,
+    "sk_contract_is_formal": true,
+    "kubo_admission_requires_provenance": true,
+    "entropy_positivity_is_not_identification": true,
+    "C_ontology_is_preserved": true,
+    "Phi_ontology_is_preserved": true,
+    "R_gen_has_no_feedback": true,
+    "no_holdout_or_fit": true
+  },
+  "source_hashes": {
+    "docs/core/uet_transport_coefficient_identifiability.py": "16865cd7de7f78eaf72afa5d3dfc900b2c0c33a775ea35a3f7185183804fb212",
+    "docs/core/uet_covariant_superfluid_transport.py": "32489fd92d0bd390c81e761970dbcb7e3f5e13e7cbcbf69939cb9e09c154d25f",
+    "docs/core/thermal_sk_kms_entropy_contract.py": "ea63f10f1f0f18c22f9055196b60d727182d2582f9188e3079c0c1de1f334d1b"
+  },
+  "controlling_blocker": "physical_Kubo_coefficient_record_missing",
+  "next_controller": "Acquire or microscopically derive one state-matched Kubo coefficient record and an open-system/SK collision-noise kernel; then rerun finite-temperature normal transport and SI observables without using synthetic witnesses as physical values.",
+  "claim_promotion": false,
+  "holdout_policy": {
+    "xie_2026_accessed": false,
+    "target_curve_used": false,
+    "alpha_fit_used": false
+  }
+}
