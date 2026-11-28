@@ -1,0 +1,140 @@
+{
+  "schema_version": "uet-calculation-contract-v1",
+  "contract_id": "game_physics_energy_budget_formal",
+  "profile": "FORMAL",
+  "review": {
+    "status": "INCOMPLETE",
+    "reviewer": "tool:new_formal_contract",
+    "rationale": "Formal coverage generated from Standard v2 records; evidence level is set in docs/standard, not here."
+  },
+  "question": "Does the burn-law reach bound let debris sleep early without changing the result?",
+  "output": {
+    "quantity": "stop distance v^2/(2 mu g); freed bodies; work counts",
+    "unit": "SI",
+    "domain": "declared formal domain of the code",
+    "accuracy": "exact or as asserted by the listed physics tests",
+    "claim_intent": "FORMAL_RESULT"
+  },
+  "model": {
+    "formula_ids": [
+      "GAME-ENERGY-BUDGET"
+    ],
+    "assumptions": "as declared in the code and Theory Card",
+    "approximation": "none beyond the code",
+    "initial_boundary": "algebraic",
+    "drive_environment": "not relevant to a formal derivation",
+    "parameters": "symbolic or test-sampled"
+  },
+  "data_policy": {
+    "uses_observations": false,
+    "calibration_ids": [],
+    "comparison_ids": [],
+    "independent_validation": false,
+    "holdout_policy": "none"
+  },
+  "observation": {
+    "source_state": "not applicable to this formal derivation",
+    "generated_trace": "not applicable to this formal derivation",
+    "carrier": "not applicable to this formal derivation",
+    "observer_state": "not applicable to this formal derivation",
+    "readout": "not applicable to this formal derivation",
+    "backaction": "not applicable to this formal derivation",
+    "frame": "not applicable to this formal derivation",
+    "time_convention": "not applicable to this formal derivation",
+    "product_level": "not applicable to this formal derivation",
+    "corrections": []
+  },
+  "components": [
+    {
+      "id": "system_state",
+      "group": "system_state",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/game_physics/energy_budget.py"
+      ]
+    },
+    {
+      "id": "drive_environment",
+      "group": "drive_environment",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "propagation",
+      "group": "propagation",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "frame_time",
+      "group": "frame_time",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "detector",
+      "group": "detector",
+      "disposition": "NOT_APPLICABLE",
+      "reason": "Formal derivation; no physical measurement chain.",
+      "evidence": []
+    },
+    {
+      "id": "processing",
+      "group": "processing",
+      "disposition": "MODELED",
+      "reason": "Declared formal expressions in the code under contract.",
+      "evidence": [
+        "core/03_lanes/game_physics/energy_budget.py"
+      ]
+    },
+    {
+      "id": "numerics",
+      "group": "numerics",
+      "disposition": "MODELED",
+      "reason": "Checked by the listed physics tests (docs/STANDARD.md section 6).",
+      "evidence": [
+        "core/05_tests/physics/test_game_physics.py"
+      ]
+    }
+  ],
+  "error_budget": {
+    "unit": "SI",
+    "numerical": "test tolerances",
+    "approximation": "none declared",
+    "measurement": "not applicable",
+    "systematic": "not applicable",
+    "omissions": "none declared",
+    "dependence": "not applicable",
+    "acceptance": "formal coverage only",
+    "omission_limit": null
+  },
+  "identities": [
+    {
+      "path": "core/03_lanes/game_physics/energy_budget.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "fb781e03b30991df0f46241e0978bfe3bf58a000d75634f1212a7880dd036002",
+      "availability": "REQUIRED"
+    },
+    {
+      "path": "core/05_tests/physics/test_game_physics.py",
+      "kind": "working_file",
+      "role": "code",
+      "sha256": "a5612bba350fb991a8b58007d61ed9c07e73ba67592662d77ce9e96e9c337f83",
+      "availability": "REQUIRED"
+    }
+  ],
+  "entrypoints": [
+    "core/03_lanes/game_physics/energy_budget.py"
+  ],
+  "evidence": [
+    "core/03_lanes/game_physics/energy_budget.py",
+    "core/05_tests/physics/test_game_physics.py"
+  ],
+  "claim_boundary": "Formal coverage only; no physical acceptance or status change.",
+  "next_action": "Refresh identities with this tool when the code or tests change."
+}

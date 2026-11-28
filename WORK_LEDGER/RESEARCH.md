@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 799. Counts describe records, not accomplishments.
+Indexed entries: 800. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-28 | [Game-physics lane (debris coarse graining, energy-budget sleeping; no claim)](2026/2026-11-28.md#game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim) (L43) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2: Bartus 2026 SI data-shape check (no claim)](2026/2026-11-28.md#q2-bartus-2026-si-data-shape-check-no-claim) (L23) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2 flow-scan search (no claim)](2026/2026-11-28.md#q2-flow-scan-search-no-claim) (L13) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Q2 screen: chemical replicators (Liu et al. 2022), no claim](2026/2026-11-28.md#q2-screen-chemical-replicators-liu-et-al-2022-no-claim) (L3) | research-core | explicit_stream_and_area |
