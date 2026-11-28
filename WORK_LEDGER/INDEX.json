@@ -4,12 +4,12 @@
   "generator_sha256": "b32005e4bdbf59da6681ae630fa1d9d4415c361f7523be18c8b52a86dc8c93e9",
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
-    "sources": 90,
-    "entries": 1034,
+    "sources": 91,
+    "entries": 1037,
     "by_stream": {
       "book-history": 94,
       "operations": 143,
-      "research": 796,
+      "research": 799,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -467,6 +467,11 @@
       "path": "2026/2026-11-27.md",
       "sha256": "4c8936d6a689ce0fa8b342e775f191155316d42d31590f2dee98159b85d13e6e",
       "entries": 22
+    },
+    {
+      "path": "2026/2026-11-28.md",
+      "sha256": "fc9fa3864e2781cfd5248d8ff3ee8d4c7b733c8d734ac056f24da77b93229473",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -21119,6 +21124,66 @@
       "basis": "explicit_stream_and_area",
       "flags": [],
       "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#q2-screen-chemical-replicators-liu-et-al-2022-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "q2-screen-chemical-replicators-liu-et-al-2022-no-claim",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Q2 screen: chemical replicators (Liu et al. 2022), no claim",
+      "entry_sha256": "71d7d69e11c5761380a54740ca0011adc7189e0a75ebb9e66d57dbaa0229288c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#q2-flow-scan-search-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "q2-flow-scan-search-no-claim",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Q2 flow-scan search (no claim)",
+      "entry_sha256": "b69f32b85cd188e78de06d66edec09554aac208364e0d7d401b19ebec1c189c6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#q2-bartus-2026-si-data-shape-check-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "q2-bartus-2026-si-data-shape-check-no-claim",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Q2: Bartus 2026 SI data-shape check (no claim)",
+      "entry_sha256": "05a5fce91dd5e06f8f322591f5c287a6f1f142b1c9031060101cf1e01d1fe701",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
       "legacy_root_path": false
     },
     {
