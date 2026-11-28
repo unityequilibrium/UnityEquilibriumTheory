@@ -6,10 +6,13 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 783. Counts describe records, not accomplishments.
+Indexed entries: 786. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-28 | [Q2: Bartus 2026 SI data-shape check (no claim)](2026/2026-11-28.md#q2-bartus-2026-si-data-shape-check-no-claim) (L23) | research-core | explicit_stream_and_area |
+| 2026-11-28 | [Q2 flow-scan search (no claim)](2026/2026-11-28.md#q2-flow-scan-search-no-claim) (L13) | research-core | explicit_stream_and_area |
+| 2026-11-28 | [Q2 screen: chemical replicators (Liu et al. 2022), no claim](2026/2026-11-28.md#q2-screen-chemical-replicators-liu-et-al-2022-no-claim) (L3) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Q1 He-Ne check: both rules pick the 3.39 um line (no claim)](2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim) (L172) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Q1 data search: no dataset separates R* from MaxEP (no claim)](2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim) (L162) | research-core | explicit_stream_and_area |
 | 2026-11-27 | [Q1 screen: when do R* and MaxEP pick different winners (no claim)](2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim) (L152) | research-core | explicit_stream_and_area |
