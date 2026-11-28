@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 90,
-    "entries": 1037,
+    "entries": 1038,
     "by_stream": {
       "book-history": 94,
-      "operations": 146,
+      "operations": 147,
       "research": 796,
       "review": 1
     },
@@ -465,8 +465,8 @@
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "5347c4d1f26e7ac57801574935b4e1d96f348633583321435b4d6d015e98516d",
-      "entries": 25
+      "sha256": "5799e3e36cca7c6c3916cd907841558adf23ce3821a312d048fe14719cf36762",
+      "entries": 26
     },
     {
       "path": "2026-08-14.md",
@@ -21166,9 +21166,29 @@
       "source": "2026/2026-11-27.md",
       "anchor": "cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed",
       "start_line": 243,
-      "end_line": 252,
+      "end_line": 253,
       "title": "Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed",
-      "entry_sha256": "7c379e49b844e222204251923c9154cceb360551242656c0c8e6167dc603df38",
+      "entry_sha256": "6cf9cec6642fe7fa2c503f39feea7023f6ee66b3fe96b5ffe995ffa80755cb4f",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-phase-6-old-public-documents-and-media-removed-logos-kept",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-phase-6-old-public-documents-and-media-removed-logos-kept",
+      "start_line": 254,
+      "end_line": 262,
+      "title": "Cleanup phase 6: old public documents and media removed (logos kept)",
+      "entry_sha256": "052eddae2e47c15ff189e4cfe5724e2117facf1333897c642c0e57af5ca791bf",
       "stream": "operations",
       "areas": [
         "repo-ops"
