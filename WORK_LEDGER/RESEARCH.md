@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 802. Counts describe records, not accomplishments.
+Indexed entries: 803. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-28 | [Game-physics lane (debris coarse graining, energy-budget sleeping; no claim)](2026/2026-11-28.md#game-physics-lane-debris-coarse-graining-energy-budget-sleeping-no-claim) (L73) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Card v2 approved as a parallel card](2026/2026-11-28.md#card-v2-approved-as-a-parallel-card) (L63) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Card v2 author decisions recorded](2026/2026-11-28.md#card-v2-author-decisions-recorded) (L53) | research-core | explicit_stream_and_area |
 | 2026-11-28 | [Open-item inventory and Card v2 physics (V2-W4, V2-EF, V2-UM; no claim)](2026/2026-11-28.md#open-item-inventory-and-card-v2-physics-v2-w4-v2-ef-v2-um-no-claim) (L43) | research-core | explicit_stream_and_area |

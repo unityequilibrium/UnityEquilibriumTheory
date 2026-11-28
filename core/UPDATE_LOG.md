@@ -2,6 +2,12 @@
 
 Format: docs/STANDARD.md section 9. Earlier Core history stays in `08_history/update_logs/`.
 
+## 2026-11-28 — Can UET physics make game physics cheaper? (game-physics lane)
+ทำ: field map ฟิสิกส์ในเกม, lane ใหม่ core/03_lanes/game_physics (debris_bath.py, energy_budget.py, physics test 48 ข้อ), benchmark ด้วย run_benchmarks.py
+ผล: แทนเศษวัตถุ 2,000 ชิ้นด้วยแรงลากจากทฤษฎีจลน์ + บัญชีพลังงานและโมเมนตัม ผิด 2–3% งานลด 2,000 เท่าต่อขั้น ไม่ต้อง calibrate; sleep ด้วยงบพลังงาน งานรวม −15% ฉากหลับเร็วขึ้นราว 30% ความคลาดเคลื่อนไม่เพิ่ม
+ระดับ: ไม่มี claim; เทคนิคมีในวงการแล้ว (Langevin coarse-graining, energy sleep) UET ให้กรอบบัญชีที่ทำให้ไม่ต้องจูน
+ถัดไป: เศษวัตถุที่ชนกันเอง, 3 มิติ, วัดเวลาในโค้ด engine จริง
+
 ## 2026-11-28 — Card v2 approved as a parallel card
 ทำ: ผู้เขียนอนุมัติ Card v2 ในแชต ("Approve parallel card"); เพิ่ม approval ใน theory_card_v2_draft.json และ §12 ของการ์ด
 ผล: v2 เป็นการ์ดคู่ขนาน (APPROVED); v1 ยังเป็นการ์ดหลัก; ระดับของสมการและ claim ไม่เปลี่ยน
