@@ -1,0 +1,47 @@
+{
+  "schema": "uet-test-card-v2",
+  "test_id": "T035",
+  "status": "APPROVED",
+  "claim_id": "C_L3_SURVIVAL_BURN",
+  "theory_card": {
+    "card_id": "UET_PARENT",
+    "version": 1
+  },
+  "hypothesis": "Wave D20 (C_L3_SURVIVAL_BURN, L0): a closed living store lowers its burn as it shrinks, dR/dt = -P0 (R/R0)^beta, with beta calibrated on one fast (Benedict 1915, subject L.) at 1.95 (1.5-2.6 with the window). Expectation tested: an independent and far longer fast follows the same law with beta in that range; constant leak (beta = 1, D14) and constant burn (beta = 0) are excluded.",
+  "observable": {
+    "quantity": "beta_obs, the exponent from a least-squares fit of the D20 closed form (R0, P0, beta free) to body weight against time",
+    "unit": "dimensionless",
+    "domain": "one obese man during a supervised 382-day fast with non-caloric supplements, Stewart and Fleming (1973) Postgrad Med J 49, 203 (PMC2495396)"
+  },
+  "test_kind": "CONSTRAINT",
+  "data_sources": [
+    {
+      "data_id": "STEWART1973_FAST_WEIGHT",
+      "role": "COMPARISON",
+      "exposure": "SEEN_SUMMARY"
+    }
+  ],
+  "prediction_method": {
+    "script": "core/03_lanes/persistence/t035_long_fast_beta.py",
+    "description": "Weight points read after approval off the paper's body-weight figure (or a table, if the paper has one), as published; points from day 6 on; least-squares fit of the closed form R(t) = [R0^(1-beta) + (beta - 1) P0 R0^(-beta) t]^(1/(1-beta)). The fit was checked on synthetic fasts (beta 0, 1, 2 recovered within 0.03). The script refuses to run unless this card is APPROVED and the data sha256 matches."
+  },
+  "free_parameters": [
+    "R0",
+    "P0"
+  ],
+  "fixed_parameters": [
+    "beta range 1.5-2.6 from the Benedict calibration (R_D20_SURVIVAL_BURN), fixed before this fast is read",
+    "FAILED bounds beta < 1.2 or beta > 3.3 (AI choices; 1.2 keeps D14's beta = 1 inside FAILED)",
+    "points from day 6 on",
+    "fewer than 6 points gives INCONCLUSIVE"
+  ],
+  "pass_criterion": "PASS if 1.5 <= beta_obs <= 2.6: the second fast slows its burn like the first.",
+  "fail_criterion": "FAILED if beta_obs < 1.2 (no survival process beyond a constant leak) or beta_obs > 3.3. INCONCLUSIVE otherwise or with fewer than 6 points.",
+  "drafted_by": "claude",
+  "note": "Disclosure: the drafter has not seen this paper's figure or text beyond its abstract metadata; from general knowledge it recalls only that the man went from about 207 kg to about 82 kg over 382 days, not the shape of the curve. The paper is a scanned 1973 article; the drafter believes its Figure 1 is the weight chart but has not looked; if no weight series exists the outcome is INCONCLUSIVE. beta was calibrated on a lean man over 31 days and is applied to an obese man over 382 days: a real out-of-sample test, and a hard one, since body composition differs. Supplements (vitamins, potassium, sodium, early yeast) were non-caloric. The power-law burn is an AI choice for the author's survival process. Nearest theory: metabolic adaptation in starvation (Keys 1950; Hall 2008). Not UET-distinct. Approved by the author in chat on 2026-11-25 as drafted (\"Approve and run\"); this approval is committed before the paper's figure or text is read.",
+  "approval": {
+    "approved_by": "santxkoz",
+    "date": "2026-11-25",
+    "role": "AUTHOR"
+  }
+}

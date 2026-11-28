@@ -1,0 +1,40 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D21_FUEL_ORDER",
+  "claim_id": "C_L3_FUEL_ORDER",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "closed_form_vs_ode",
+      "value": "< 1e-8 relative, 20/20 random systems",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "backward_dp_convergence",
+      "value": "survival error 4.1% (11x11 grid), 1.2% (21x21), 0.025% (41x41); maximising choice = largest allowed fat use on > 90% of states",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "selection",
+      "value": "no fixed-fraction rule outlives the most-fat rule; rules that die holding fat die strictly sooner; rules that use all fat in time tie",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "illustration",
+      "value": "lean man (e 1400 kcal/day, q0 0.17, F0 9 kg, P0 10 kg, Pc 5 kg; AI-chosen round values): phase III below 1.1 kg fat, survival 76 days",
+      "uncertainty": null,
+      "unit": "mixed"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_fuel_order.py",
+    "commit": "b0e255d37"
+  },
+  "artifacts": [],
+  "date": "2026-11-26",
+  "note": "Synthesis check after the fasting literature map: layer-3 persistence (maximise time above the protein threshold) is the survival objective of Clark-Mangel state-dependent models; with Hall's lipolysis ceiling (Eq. 11) it gives the mainstream fuel order and a phase-III fat threshold without a new term. Finding: in this objective the order of fuel use matters only through fat left unburned at death (energy conservation); sparing protein early pays off in survival time only if protein loss costs function before death, which this model omits and Noren and Mangel (2004) include. Not UET-distinct."
+}

@@ -65,6 +65,40 @@ commit: fdf434a72 (code) + this commit (records)
 ถัดไป: ถ้าจะคืน portal และมวลต้องเพิ่มพจน์แบบ Higgs-dilaton เป็น Theory Card v2 ซึ่งผู้เขียนต้องตัดสิน
 commit: 8e089c344 (code) + this commit (records)
 
+## 2026-11-26 — Layer 3 as survival optimisation: the fuel order of a fast (D21)
+ทำ: `uet_fuel_order.py` (การคัดเลือกจากการอยู่รอดของชั้น 3 = การหาทางรอดนานที่สุดแบบ Clark-Mangel; ใช้เพดานการปล่อยไขมัน k F^(2/3) จาก Hall 2010 และส่วนโปรตีนขั้นต่ำ q0) + physics tests 34 ข้อ + FORMAL contract
+ผล: เผาไขมันให้มากที่สุดเท่าที่ทำได้ไม่มีกฎไหนชนะ; ระยะที่ 3 เริ่มเมื่อไขมันต่ำกว่า F* = [(1-q0) e/(rho_F k)]^(3/2); การคำนวณย้อนกลับ (DP) บรรจบสู่ผลเดียวกัน; ข้อค้นพบ: ลำดับการเผาสำคัญแค่เรื่องไขมันที่เหลือตอนตาย (พลังงานอนุรักษ์) การถนอมโปรตีนช่วงแรกจะคุ้มก็ต่อเมื่อการเสียโปรตีนมีต้นทุนต่อการทำงานก่อนตาย
+ระดับ: C_L3_FUEL_ORDER → L1_CONSISTENT (ตรวจการสังเคราะห์กับ Clark-Mangel/Noren-Mangel ไม่ใช่ผลเฉพาะของ UET)
+ถัดไป: Test Card กับสัตว์ที่วัดไขมันตอนเริ่มระยะที่ 3 (ต้องหาข้อมูลเปิดและตรวจรูปข้อมูลก่อน)
+commit: b0e255d37 (code) + this commit (records)
+
+## 2026-11-25 — Does L.'s survival-burn exponent hold for other fasts? (T036, D20)
+ทำ: Test Card T036 (beta ของ D20 กับการอดอาหารอีก 10 ครั้งในตาราง 2 ของ Benedict: Succi 7 ครั้ง, Jacques, Beauté, Schenk) ผู้เขียนอนุมัติ 5763313c7 ก่อนคัดลอก; รันครั้งเดียว
+ผล: beta ร่วม = 4.3 (ช่วง 95% 3.5-5.2) สูงกว่าช่วงที่ปรับเทียบจาก L. (1.5-2.6) และเกินเส้นตก 3.3 → FAILED; ร่างกายอื่นชะลอการเผาผลาญแรงกว่า L. อีก
+ระดับ: C_L3_SURVIVAL_BURN → FAILED (beta ค่าเดียวใช้ข้ามร่างกายไม่ได้); ทิศทาง beta > 1 ยังเห็นในข้อมูล แต่ไม่ได้ทดสอบ ต้องเป็นสมมติฐานใหม่ถ้าจะอ้าง
+ถัดไป: ผู้เขียนตัดสินว่าจะตั้งสมมติฐานใหม่ "beta > 1 โดยไม่กำหนดค่า" หรือหยุดเส้นนี้
+commit: 5763313c7 (approval) + data commit + this commit (result)
+
+## 2026-11-25 — Does the survival-burn exponent carry to a 382-day fast? (T035, D20)
+ทำ: Test Card T035 (beta ของ D20 กับการอดอาหาร 382 วัน, Stewart & Fleming 1973) ผู้เขียนอนุมัติ 6471b5280 ก่อนอ่าน; รันครั้งเดียว
+ผล: INCONCLUSIVE: บทความมีแค่น้ำหนักวันแรก 206.8 กก. กับวันสุดท้าย 81.6 กก. ไม่มีเส้นน้ำหนักตามเวลา (รูปที่ 1 เป็นภาพถ่าย ไม่ใช่กราฟ)
+ระดับ: C_L3_SURVIVAL_BURN คง L0 (ยังไม่มีการทดสอบอิสระ)
+ถัดไป: หาการอดอาหารยาวที่มีน้ำหนักรายวันหรือรายสัปดาห์ (เช่น Thomson 1966, Runcie 1970 ถ้าเปิดได้)
+commit: 6471b5280 (approval) + data commit + this commit (result)
+
+## 2026-11-25 — A survival process as a burn that follows the store (D20)
+ทำ: `uet_survival_burn.py` (dR/dt = -P0 (R/R0)^beta: สูตรปิด อัตราต่อหน่วย เวลาถึงเกณฑ์ ตัวประมาณ beta จากสองช่วง) + physics tests 38 ข้อ + FORMAL contract
+ผล: beta = 1 คือ D14 (ตกใน T030), beta > 1 คือระบบลดการเผาผลาญเมื่อของสำรองลด อัตราต่อหน่วยจึงลดลง; ปรับเทียบจาก Benedict 1915 ได้ beta = 1.95 (1.5-2.6 ตามช่วง) ซึ่งเป็นการปรับเทียบ ไม่ใช่การทดสอบ
+ระดับ: C_L3_SURVIVAL_BURN → L0_SPECULATIVE (สมมติฐานใหม่หลัง FAILED; คณิตศาสตร์ผ่านระดับ L1)
+ถัดไป: Test Card กับการอดอาหารอีกรายที่ไม่เคยใช้ (Stewart & Fleming 1973, 382 วัน) ว่า beta อยู่ในช่วงเดียวกันไหม
+commit: 0afa07125 (code) + this commit (records)
+
+## 2026-11-25 — Does protein loss rise as fat runs out in a fast? (T034, D15)
+ทำ: Test Card T034 (D15 กับการสลายโปรตีนระหว่างอดอาหาร 10 วัน, Laurens et al. 2021) ผู้เขียนอนุมัติ b3f07785a ก่อนอ่านกราฟ; รันครั้งเดียว
+ผล: INCONCLUSIVE ตามกฎ: กราฟมีวันอดอาหารแค่ 3 วัน (การ์ดต้องการ 6); ข้อสังเกตที่ไม่ใช้ตัดสิน: โปรตีนสลาย 41.7 → 31.3 g/วัน (วัน 1 → 9) ลดลง ตรงข้ามกับที่ D15 (ไขมัน = บ่อ) ทาย
+ระดับ: C_L3_AFTER_CLOSING คง L1 (ยังไม่มีการทดสอบที่ตัดสินได้)
+ถัดไป: ข้อมูลอดอาหารที่วัดโปรตีนรายวันครบ หรือข้ามไปทดสอบข้ออื่น
+commit: b3f07785a (approval) + data commit + this commit (result)
 ## 2026-11-26 — How fast does structure grow in the parent action? (C3)
 ทำ: G ที่สสารรู้สึกในขีด quasi-static (Boisseau et al. 2000) + สมการการเติบโตเชิงเส้นบนฉากหลัง C2 (uet_frw_growth.py, ทดสอบ physics 7 ข้อ)
 ผล: จุดดีสุด T041 โตช้ากว่า ΛCDM -0.44% (fD ที่ z = 0.5 -1.07%); จุดอื่นที่ผ่านขอบเขต -1.5% ถึง -4.3%; ส่วนใหญ่มาจากฉากหลัง ไม่ใช่การคัปปลิง

@@ -1,0 +1,35 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T036_BENEDICT_OTHER_FASTS_BETA",
+ "claim_id": "C_L3_SURVIVAL_BURN",
+ "test_card_id": "T036",
+ "level": "FAILED",
+ "outcome": "FAIL",
+ "numbers": [
+  {
+   "name": "shared_beta",
+   "value": "4.34",
+   "uncertainty": "0.42 (95 percent interval 3.52-5.15)",
+   "unit": "dimensionless"
+  },
+  {
+   "name": "criteria",
+   "value": "PASS 1.5-2.6; FAILED below 1.2 or above 3.3, interval narrower than 2 (it is 1.63)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  },
+  {
+   "name": "fit",
+   "value": "10 fasts, 196 points from day 6 on, rms 0.27 kg",
+   "uncertainty": null,
+   "unit": "kg"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t036_benedict_other_fasts_beta.py",
+  "commit": "d34e3e0a9"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "note": "FAILED by the preregistered rule on the high side (Test Card T036, approved 5763313c7 before transcription): the ten other fasts of Benedict's Table 2 share beta = 4.3 (3.5-5.2), above the range 1.5-2.6 calibrated on subject L. and above the fail line 3.3. The claim that one beta carries from body to body is removed. Not tested and not to be read into this outcome after the fact: the direction beta > 1 (burn slowing faster than the store) holds in these fasts too, and constant leak (beta = 1) lies far outside; any new claim on that must be a new L0 hypothesis with its own card. Data SEEN_FULL in part before drafting; weighings less controlled than L.'s; Succi's seven fasts are one body."
+}

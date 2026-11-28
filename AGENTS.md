@@ -52,6 +52,7 @@ Its old status vocabularies and workflow ladders are replaced.
 8. **Wave format** (§9): each wave is one question, at least one new number or derivation, a log entry of 6 lines or fewer, and one commit.
    Governance work should stay at roughly 20% of effort or less. New gates or audit scripts need author approval.
 9. **Author intent versus AI proposals:** say clearly which examples or materials the AI chose. They are not requirements of the theory.
+10. **Research design** (§16, approved 2026-11-27, trial on the next 3 cards): map the field's established models first, write a one-page question brief before every Test Card (who chose the mapping, the field's rival model, a discrimination forecast, data shape, what each outcome would mean), and state the cause of each FAIL or INCONCLUSIVE in the Result note. No new status or gate.
 
 ## 4. Claim wording
 

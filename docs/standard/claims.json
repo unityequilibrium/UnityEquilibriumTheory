@@ -689,9 +689,10 @@
       "statement": "In the full layer-3 model with one structure type (dn/dt = (a R - 1/tau) n, dR/dt = S - delta R - a F R n), the stock M = R + F n loses dM/dt = -(delta R + F n/tau). While supplied, few structures grow by compounding at a S/delta - 1/tau and pull the pool down to R* = 1/(a tau), not to zero. After the supply stops, the specific loss rate starts between delta and 1/tau and ends at min(delta, 1/tau), so the loss slows in the end; it falls monotonically when delta > 1/tau and first rises when delta < 1/tau. A constant rate (D14) needs a one-part store.",
       "level": "L1_CONSISTENT",
       "evidence": [
-        "R_D15_LAYER3_AFTER_CLOSING"
+        "R_D15_LAYER3_AFTER_CLOSING",
+        "R_T034_FASTING_PROTEIN_LOSS"
       ],
-      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct."
+      "note": "Answers why T030 failed D14 within layer 3 itself, but was derived after T030 was seen: not tested by it. The author's 'behaviour uses resources to the end' (2026-11-24) appears as structures using the pool down to their threshold R*; the reading is an AI interpretation. Nearest theory: consumer-resource models, two-compartment depletion. Not UET-distinct. T034 (2026-11-25) INCONCLUSIVE: the only open fasting data plot protein loss on three days (card needs six); the trend (41.7 -> 31.3 g/24h, falling) runs against the fat = pool, lean = structures mapping."
     },
     {
       "claim_id": "C_L3_FREE_FALL_FREEDOM",
@@ -730,6 +731,26 @@
         "R_D19_PRICE_OF_RESISTING"
       ],
       "note": "AI reading of the author's 'resisting = trying to stand still in a moving universe' (AUTHOR_PROPOSITION 4, 2026-11-24). Standing still relative to a nearby mass is resisting; at rest relative to the cosmic matter (CMB frame) is free fall. Nearest theory: Tsiolkovsky, maximal aging, gravitational time dilation. Not UET-distinct."
+    },
+    {
+      "claim_id": "C_L3_SURVIVAL_BURN",
+      "statement": "AI hypothesis (L0, after T030 FAILED): a closed living store lowers its burn as it shrinks, P = P0 (R/R0)^beta with beta > 1, so its specific loss rate falls as (R/R0)^(beta-1) and it reaches any threshold R* later than at constant leak but still in finite time. One fast (Benedict 1915, subject L.) calibrates beta = 1.95 (1.5-2.6 with the window); the hypothesis is that the same beta range describes another long fast.",
+      "level": "FAILED",
+      "evidence": [
+        "R_D20_SURVIVAL_BURN",
+        "R_T035_LONG_FAST_BETA",
+        "R_T036_BENEDICT_OTHER_FASTS_BETA"
+      ],
+      "note": "The author's 'what we see must have a survival process, not guaranteed' (AUTHOR_PROPOSITION 4, 2026-11-23) put in one number; the power-law form is an AI choice. Not yet confronted: the Benedict value is calibration. Nearest theory: metabolic adaptation in starvation (Keys 1950; Hall 2008). Not UET-distinct. T035 (2026-11-25) INCONCLUSIVE: the 382-day fast report gives only start and end weights. FAILED in T036 (2026-11-25): ten other fasts of Benedict's Table 2 share beta = 4.3 (3.5-5.2), above the calibrated 1.5-2.6; one beta does not carry from body to body."
+    },
+    {
+      "claim_id": "C_L3_FUEL_ORDER",
+      "statement": "Layer-3 persistence selection, read as maximising the time a body keeps protein above a lethal threshold P_c, gives the mainstream fuel order of a fast: with an obligate protein share q0 and Hall's fat-release ceiling k F^(2/3), burning the most fat allowed is never beaten, phase III starts below F* = [(1 - q0) e/(rho_F k)]^(3/2), and survival has a closed form. By energy conservation all rules that use up their fat before death tie; only rules that die holding fat lose.",
+      "level": "L1_CONSISTENT",
+      "evidence": [
+        "R_D21_FUEL_ORDER"
+      ],
+      "note": "Synthesis check, not a new result: matches Clark-Mangel dynamic state-variable optimisation (Noren and Mangel 2004) and uses Hall's (2010) lipolysis scaling. The model has no cost of protein loss before death, so it cannot by itself explain early protein sparing; that needs a function cost as in Noren and Mangel. Testable on fasting animals with measured fat at phase-III onset (Test Card needed). Not UET-distinct."
     },
     {
       "claim_id": "C_L3_OBSERVED_SELECTION",

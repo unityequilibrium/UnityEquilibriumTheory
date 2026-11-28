@@ -1,0 +1,35 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T034_FASTING_PROTEIN_LOSS",
+ "claim_id": "C_L3_AFTER_CLOSING",
+ "test_card_id": "T034",
+ "level": "L1_CONSISTENT",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "fasting_day_points",
+   "value": "3 (F01, F04, F9); the card needs at least 6",
+   "uncertainty": null,
+   "unit": "count"
+  },
+  {
+   "name": "protein_oxidation_read_off",
+   "value": "day 1 41.7, day 4 32.6, day 9 31.3 (baseline 56.0)",
+   "uncertainty": "1.3",
+   "unit": "g/24h"
+  },
+  {
+   "name": "day9_over_day1",
+   "value": "0.75 (not deciding; it would lie in the FAILED zone q <= 0.80)",
+   "uncertainty": null,
+   "unit": "dimensionless"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t034_fasting_protein_loss.py",
+  "commit": "6f2a2a951"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "note": "INCONCLUSIVE under Test Card T034 (approved b3f07785a before the figure was read): the paper plots protein oxidation on only three fasting days, and the card requires six. As a non-deciding observation, protein loss fell from 41.7 to 31.3 g/24h between days 1 and 9, the direction opposite to D15's mapping (fat = pool, lean = structures), as expected from protein sparing. Claim level unchanged (L1); D15 still has no clean test. Values read off a figure, reading error about 1.3 g/24h."
+}

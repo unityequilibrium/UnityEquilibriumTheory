@@ -398,6 +398,42 @@
       "note": "Transcribed after approval of T033 from the LaTeX source CA.tex, all 13 rows, as published."
     },
     {
+      "data_id": "LAURENS2021_FASTING_NITROGEN",
+      "description": "Protein oxidation (g/24h, group means) on fasting days 1, 4 and 9 of a 10-day water fast in healthy men, with nitrogen = protein/6.25",
+      "source": "C. Laurens et al., J. Cachexia Sarcopenia Muscle 12, 1690 (2021), body-composition figure panel B",
+      "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8718030/",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/laurens2021_nitrogen.csv",
+      "sha256": "28ea46a8f2d11701449358e4f635246da08103d4af0e20707b2cb63ba7a91f1d",
+      "license": "Numbers read off a CC BY-NC-ND 4.0 figure (facts, citation given; the figure itself is not stored)",
+      "visibility": "PUBLIC",
+      "note": "Read off the figure after approval of T034; reading error about 1.3 g/24h (one pixel). Only three fasting-day bars exist."
+    },
+    {
+      "data_id": "STEWART1973_FAST_WEIGHT",
+      "description": "Body weight at the start and end of a 382-day supervised fast (the paper gives no series)",
+      "source": "W. K. Stewart and L. W. Fleming, Postgrad. Med. J. 49, 203 (1973), Methods and Results text",
+      "doi_or_url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC2495396/",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/stewart1973_weight.csv",
+      "sha256": "f252f0e9d5e11ed16783ac9122385f7367720212e86cee74ee1622bebb645869",
+      "license": "Numbers from the published text (facts, citation given)",
+      "visibility": "PUBLIC",
+      "note": "Read after approval of T035. Figure 1 is a photograph, not a weight chart; the text gives only the start and end weights in pounds, converted to kg."
+    },
+    {
+      "data_id": "BENEDICT1915_OTHER_FASTS",
+      "description": "Daily body weight (kg) of ten fasts tabulated by Benedict: Succi (Paris 1886, Milan 1886, Florence 1888, London 1890, Naples 1892, Rome 1893, Zurich 1896), Jacques 1888, Beaute 1907, Schenk 1906",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 2, pp. 72-73",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-25",
+      "path": "docs/data/external/biology/fasting/benedict1915_other_fasts.csv",
+      "sha256": "1144ac065318bbb944ba8661aa51a814e926bb1d272744477855a356591745df",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scans after approval of T036; p. 73 columns match the printed daily losses to 0.005 kg; Succi columns read from p. 72 with losses checked by eye."
+    },
+    {
       "data_id": "DESI_DR2_BAO_MEAN",
       "description": "DESI DR2 Gaussian BAO means: D_M/r_d, D_H/r_d and D_V/r_d at 7 effective redshifts (13 values), all tracers combined",
       "source": "DESI Collaboration, DR2 BAO results (arXiv:2503.14738), likelihood files as distributed in the Cobaya bao_data repository",
@@ -444,6 +480,18 @@
       "license": "public scientific data release; the repository declares no license file",
       "visibility": "PUBLIC",
       "note": "Downloaded with the author's permission (2026-11-25, chat) for Test Card T040 (drafted as T033) while the card is a DRAFT. Only the file structure (headers, column names, counts) was read before approval; no values."
+    },
+    {
+      "data_id": "BENEDICT1915_L_HEAT_TABLE64",
+      "description": "Daily heat production of subject L. (31-day fast) split into carbohydrate, fat and protein, urine energy and total energy loss (kcal)",
+      "source": "F. G. Benedict, A Study of Prolonged Fasting, Carnegie Institution of Washington Publication 203 (1915), Table 64, p. 414",
+      "doi_or_url": "https://archive.org/details/studyofprolonged00beneuoft",
+      "retrieved": "2026-11-26",
+      "path": "docs/data/external/biology/fasting/benedict1915_L_heat_table64.csv",
+      "sha256": "8407cb8d7dcabea1d3f33c16d31cd3de2e333c33e26fc44536b72b24ca71b267",
+      "license": "Public domain (published 1915)",
+      "visibility": "PUBLIC",
+      "note": "Transcribed by hand from the page scan; all 31 rows satisfy A+B+C = D and D+E = F."
     },
     {
       "data_id": "CHEN2019_DISTANCE_PRIORS_TEX",

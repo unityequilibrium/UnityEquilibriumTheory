@@ -1,0 +1,29 @@
+{
+ "schema": "uet-result-v2",
+ "result_id": "R_T035_LONG_FAST_BETA",
+ "claim_id": "C_L3_SURVIVAL_BURN",
+ "test_card_id": "T035",
+ "level": "L1_CONSISTENT",
+ "outcome": "INCONCLUSIVE",
+ "numbers": [
+  {
+   "name": "weight_points",
+   "value": "2 (day 0: 206.8 kg; day 382: 81.6 kg); the card needs at least 6",
+   "uncertainty": null,
+   "unit": "count"
+  },
+  {
+   "name": "mean_loss_rate",
+   "value": "0.33 kg/day over 382 days (paper: 0.72 lb/day); not deciding",
+   "uncertainty": null,
+   "unit": "kg/day"
+  }
+ ],
+ "producer": {
+  "script": "core/03_lanes/persistence/t035_long_fast_beta.py",
+  "commit": "1a9622d28"
+ },
+ "artifacts": [],
+ "date": "2026-11-25",
+ "note": "INCONCLUSIVE under Test Card T035 (approved 6471b5280 before the paper was read): the paper publishes no weight series, only the start and end weights; its Figure 1 is a photograph. The drafter's belief that Figure 1 was a weight chart was wrong; the card had foreseen this case. The script's import path was fixed after approval (method unchanged); the first attempt stopped on the import before any result. Claim stays L0; the survival-burn exponent still lacks an independent test."
+}
