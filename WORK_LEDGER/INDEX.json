@@ -5,10 +5,10 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1041,
+    "entries": 1042,
     "by_stream": {
       "book-history": 94,
-      "operations": 147,
+      "operations": 148,
       "research": 799,
       "review": 1
     },
@@ -470,8 +470,8 @@
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "fc9fa3864e2781cfd5248d8ff3ee8d4c7b733c8d734ac056f24da77b93229473",
-      "entries": 3
+      "sha256": "74f87271c0250fa5e3bd6ab44ef438f1914399c5e5e05b2ff2b6dc935e5f2d2b",
+      "entries": 4
     },
     {
       "path": "2026-08-14.md",
@@ -21251,15 +21251,35 @@
       "source": "2026/2026-11-28.md",
       "anchor": "q2-bartus-2026-si-data-shape-check-no-claim",
       "start_line": 23,
-      "end_line": 31,
+      "end_line": 32,
       "title": "Q2: Bartus 2026 SI data-shape check (no claim)",
-      "entry_sha256": "05a5fce91dd5e06f8f322591f5c287a6f1f142b1c9031060101cf1e01d1fe701",
+      "entry_sha256": "d956ebea35fca2a79cfd0b2dd17e38f62f7e1d2002058c857791a31f49e25563",
       "stream": "research",
       "areas": [
         "research-core"
       ],
       "related_streams": [
         "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check",
+      "source": "2026/2026-11-28.md",
+      "anchor": "cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Cleanup PR #98: keep docs/scripts/debug for the public-boundary check",
+      "entry_sha256": "f69096f52693d2af8518ea0ab863ed806e0f8976ebe28f42099b3836b63ff615",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
       ],
       "basis": "explicit_stream_and_area",
       "flags": [],

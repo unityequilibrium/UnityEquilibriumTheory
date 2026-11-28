@@ -6,10 +6,11 @@
 
 These are source-linked historical records, not proof of completed research, successful publication, or current scientific readiness.
 
-Indexed entries: 147. Counts describe records, not accomplishments.
+Indexed entries: 148. Counts describe records, not accomplishments.
 
 | Date | Record | Area | Notes |
 | --- | --- | --- | --- |
+| 2026-11-28 | [Cleanup PR #98: keep docs/scripts/debug for the public-boundary check](2026/2026-11-28.md#cleanup-pr-98-keep-docsscriptsdebug-for-the-public-boundary-check) (L33) | repo-ops | explicit_stream_and_area |
 | 2026-11-27 | [Cleanup phase 6: old public documents and media removed (logos kept)](2026/2026-11-27.md#cleanup-phase-6-old-public-documents-and-media-removed-logos-kept) (L254) | repo-ops | explicit_stream_and_area |
 | 2026-11-27 | [Cleanup phase 5: unused audit scripts, governance and pre-v2 meta removed](2026/2026-11-27.md#cleanup-phase-5-unused-audit-scripts-governance-and-pre-v2-meta-removed) (L243) | repo-ops | explicit_stream_and_area |
 | 2026-11-27 | [Cleanup phase 4: old core-research topics removed](2026/2026-11-27.md#cleanup-phase-4-old-core-research-topics-removed) (L73) | repo-ops | explicit_stream_and_area |
