@@ -106,3 +106,43 @@
 - Finding: r spans more than 75 orders of magnitude: E. coli genome copy 7e-6 to 6e-5 (5.7e9 to 5e10 ATP per division), memory 7e-10 to 1e-8 (0.3 to 3.97 pJ/bit), CMB ~3e-82; r also depends on the reader.
 - Consequence: trace feedback cannot take w = r E/(kT ln 2) with a universal r; w must come from each system's mechanism.
 - Open (L0): selected recorders (genomes, memory) have far higher r than incidental records; "selection for persistence raises r" is a testable hypothesis.
+
+## 2026-11-27 — Stress test 12: parameter scaling returns in the parent action
+- Question: does the parent action escape the legacy problem that kappa had to change with scale? Note: `Doc/STRESS_12_PARAMETER_SCALING_RETURNS.md`.
+- Finding: no running is needed, but the action fixes no value: 5 dimensionful parameters leave 4 unpredicted ratios to the Planck mass, lane choice plays the role of the per-domain kappa table, and data push the couplings toward zero.
+- New numbers: the dark-energy lane needs m_psi = 4.3e-33 eV = 1.8e-60 reduced Planck masses; at the T041 best point Lambda_eff is 97.8% of dark energy and xi_c psi0^2 = 7.2e-5.
+- Literature: scale symmetry broken spontaneously (Higgs-dilaton, arXiv:1107.2163, ties n_s to w0) is the closest mechanism; also asymptotic safety, cosmological natural selection, trackers. The author decides which to pursue.
+
+## 2026-11-27 — Wave S1: option A of STRESS_12 (scale symmetry)
+- The author chose option A. Core wave S1 (`core/03_lanes/scalar_tensor/uet_scale_symmetry.py`, claim C_S1_SCALE_INVARIANT_RESTRICTION at L1).
+- Finding: scale symmetry alone fixes the dimensionful parameters (7 become 3 plus one scale) but forbids the portal, all masses and the thawing dark energy, and moves the vacuum-energy hierarchy into lambda/xi^2 = 2.9e-120.
+- Next: restoring exchange and masses needs Higgs-dilaton terms (quartic portal, xi_chi |chi|^2 R); that is a Theory Card v2 decision for the author.
+
+## 2026-11-27 — Wave D1: option D of STRESS_12 (attractors)
+- Core wave D1 (`core/03_lanes/scalar_tensor/uet_attractor.py`, claim C_D1_ATTRACTOR_INITIAL_CONDITIONS at L1).
+- Finding: the card's potential has no tracker (1 + w0 = 0.256 psi_i^2); the S1 restriction broken by the mass term gives the cosmon exponential, which removes psi_i but not the vacuum-energy tuning, and Cassini makes it look like Lambda.
+
+## 2026-11-27 — Wave C1: option C of STRESS_12 (persistence selection)
+- Core wave C1 (`core/03_lanes/scalar_tensor/uet_selection_of_scale.py`, claim C_C1_PERSISTENCE_SELECTS_STATES_NOT_COUPLINGS at L1).
+- Finding: inside one universe selection picks states, not couplings; the S1 scale is a flat direction (neutral); with the mass breaking G drifts at <= 2.3e-5 H. Fixing couplings this way needs them as fields (action change) or many universes.
+
+## 2026-11-27 — Wave B1: option B of STRESS_12 (RG fixed point)
+- Core wave B1 (`core/03_lanes/scalar_tensor/uet_rg_closure.py`, claim C_B1_RG_FIXES_ONLY_DIMENSIONLESS at L1).
+- Finding: a fixed point can fix only dimensionless couplings, so it cannot touch the 1.8e-60 hierarchy; S1 and a fixed point are complementary. The card is not closed under one-loop renormalization: a xi_chi |chi|^2 R term is generated.
+
+## 2026-11-27 — Wave A2: Higgs-dilaton sandbox, and summary of the four options
+- Core wave A2 (`core/03_lanes/scalar_tensor/uet_higgs_dilaton_sandbox.py`, claim C_A2_HIGGS_DILATON_EXTENSION at L1, sandbox).
+- Summary of STRESS_12 options: S1/A2 scale symmetry turns every mass ratio into a coupling ratio but moves the hierarchy into small couplings; D1 attractors remove psi_i only; C1 selection inside one universe picks states, not couplings; B1 a fixed point fixes only dimensionless couplings and the card is not RG-closed. No option explains the 1.8e-60 ratio.
+
+## 2026-11-27 — Stress test 13: where combining forces relations
+- Question: where does putting the sectors and layers of UET together force a relation the pieces do not have? Note: `Doc/STRESS_13_WHERE_COMBINING_FORCES_RELATIONS.md`.
+- Finding: 11 junctions; every forced relation is either a relation between free parameters, too small to measure under lab bounds, or equal to standard physics. The layer 1 -> 2 -> 3 derivation is the real synthesis content and could be tested only in a lab system where the couplings are measured.
+- New number (wave J1): one psi in both lanes changes 1 + w0 by 5.1e-5 of itself at the MICROSCOPE bound.
+
+## 2026-11-27 — Wave O8: a lab lane for STRESS_13 junctions 7-8
+- Core wave O8 (`core/03_lanes/optomechanics/uet_optomechanics_lane.py`, claim C_O8_OPTOMECHANICS_LANE at L1).
+- Finding: cavity optomechanics has the portal form x |a|^2 with a measurable g0; backaction is layer-2 friction (red) and layer-3 capture (blue); the red-side cooling rate fixes the blue-side threshold with no free parameter. Not UET-distinct, but it tests the chain where the coupling is known.
+
+## 2026-11-27 — T042 drafted (optomechanics lane, red-blue antisymmetry)
+- Two figures downloaded with permission and registered (not opened): Arcizet 2006 Fig. 4, Benevides 2017 Fig. 3.
+- Draft card T042 on C_O8_OPTOMECHANICS_LANE: PASS if |R| <= 0.15 in both figures, FAIL if |R| > 0.35 in either. Proposal: `Doc/PROPOSAL_T042_BACKACTION_ANTISYMMETRY_2026-11-27.md`.

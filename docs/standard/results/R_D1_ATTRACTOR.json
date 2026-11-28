@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D1_ATTRACTOR",
+  "claim_id": "C_D1_ATTRACTOR_INITIAL_CONDITIONS",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "thawing_one_plus_w0_over_psi_i2",
+      "value": "0.2556 (xi_c = 0, m/H0 = 2, Omega_m = 0.30, C2 code)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "thawing_exponent_in_psi_i",
+      "value": "2.0000 (psi_i = 0.01 to 0.08)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "einstein_frame_slope_vs_lambda_E",
+      "value": "rel < 1e-8 at 20 random points (numerical sigma(psi) from the general frame change)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "attractor_independent_of_initial_conditions",
+      "value": "|dw| < 1e-6 from 3 initial conditions for lambda = 0.3, 0.8, 1.2",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "scaling_solution_omega",
+      "value": "3/lambda^2 within 1e-6 for lambda = 2.5",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "lambda_E_max_at_cassini",
+      "value": "4.80e-03",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "one_plus_w_attractor_max_at_cassini",
+      "value": "7.67e-06",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_attractor.py",
+    "commit": "fdf434a72"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave D1 (topic 0.23 STRESS_12, option D; the author asked to research every option, 2026-11-27). The card's polynomial potential has no tracker: the field is frozen early, so 1 + w0 = C psi_i^2 and w(a) data fix only C psi_i^2 (psi_i degenerate with m). An exponential (the cosmon of Wetterich 1988) appears when the S1 restriction is broken only by the card's mass term (AI choice): its attractor removes psi_i, but with matter on the Jordan metric Cassini makes it indistinguishable from Lambda and its height still needs m^2/(xi^2 psi0^2) ~ 7e-121. Nearest theory: thawing and exponential quintessence. Not UET-distinct."
+}

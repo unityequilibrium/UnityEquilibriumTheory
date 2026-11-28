@@ -1,0 +1,58 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_O8_OPTOMECHANICS_LANE",
+  "claim_id": "C_O8_OPTOMECHANICS_LANE",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "exact_linear_vs_backaction_formula",
+      "value": "optical damping within 1% at 4 detunings (g/kappa ~ 0.01)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "nonlinear_time_domain_vs_exact_linear",
+      "value": "rel < 1e-3 on the red and the blue side",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "red_blue_antisymmetry",
+      "value": "Gamma_opt(-Delta) = -Gamma_opt(+Delta), rel < 1e-12 at 20 random points",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "threshold_separates_decay_from_growth",
+      "value": "decay at 0.8 n*, growth at 1.2 n* (blue detuning)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_red_rate",
+      "value": "1.185812e-03 exact vs 1.185356e-03 formula (dimensionless example)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_blue_rate",
+      "value": "8.143674e-04 exact vs 8.146769e-04 formula",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "example_threshold_photons",
+      "value": "126.953 from layer 3 = 126.953 from red-side cooling",
+      "uncertainty": null,
+      "unit": "count"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_optomechanics_lane.py",
+    "commit": "dcf8cb419"
+  },
+  "artifacts": [],
+  "date": "2026-11-27",
+  "note": "Wave O8 (topic 0.23 STRESS_13 item 2.3; the author asked to search for a lab system). Cavity optomechanics has the portal form x |a|^2 with a measurable coupling g0. Its dynamical backaction is the layer-2 friction (red detuning) and the layer-3 capture (blue detuning) of the same coupling, and the parametric-instability threshold is the layer-3 R* = 1/(a tau). The single coupling forces Gamma_opt(-Delta) = -Gamma_opt(+Delta), so the red-side cooling rate predicts the blue-side threshold with no free parameter. Lane choice (x = psi, a = chi) is an AI choice; standard optomechanics gives the same relations (Aspelmeyer, Kippenberg & Marquardt 2014; Khurgin et al. 2012), so this is not UET-distinct. No data opened; a Test Card needs a device with both the cooling rate and the threshold measured (data shape not yet checked)."
+}

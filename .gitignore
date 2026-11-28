@@ -423,3 +423,6 @@ docs/topics/**/Result/_Logs/
 
 # arXiv:1808.05724 source (non-exclusive arXiv licence, no redistribution): kept local, sha256 registered.
 /docs/data/external/cosmology/cmb_priors/chen2019/private/
+
+# arXiv:quant-ph/0607205 figure (non-exclusive arXiv licence): kept local, sha256 registered.
+/docs/data/external/optomechanics/arcizet2006/private/
