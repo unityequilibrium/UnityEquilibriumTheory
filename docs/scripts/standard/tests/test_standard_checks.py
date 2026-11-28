@@ -9,6 +9,7 @@ from __future__ import annotations
 import copy
 import hashlib
 import json
+import os
 import shutil
 import subprocess
 import sys
@@ -150,9 +151,31 @@ def test_fail_outcome_must_be_failed_level(repo: Path) -> None:
 
 # --- preregistration (git history) -------------------------------------------------
 
+# Variables that make git act on a repository other than the one at `-C`. If a caller exports them (a git hook, or
+# an agent that points GIT_DIR at a shared .git with GIT_WORK_TREE elsewhere), `git -C tmp init` and `git config`
+# below would write core.worktree, user.name and commits into that repository instead of the temporary one. This
+# happened on 2026-11-24 (commits "approve card" by t <t@example.invalid> in the owner's checkout).
+_GIT_REDIRECT_VARS = ("GIT_DIR", "GIT_WORK_TREE", "GIT_INDEX_FILE", "GIT_OBJECT_DIRECTORY",
+                      "GIT_ALTERNATE_OBJECT_DIRECTORIES", "GIT_COMMON_DIR", "GIT_NAMESPACE", "GIT_CEILING_DIRECTORIES",
+                      "GIT_CONFIG", "GIT_CONFIG_PARAMETERS", "GIT_CONFIG_COUNT")
+
+
+def _isolated_env() -> dict:
+    return {k: v for k, v in os.environ.items()
+            if k not in _GIT_REDIRECT_VARS and not k.startswith("GIT_CONFIG_KEY_") and not k.startswith("GIT_CONFIG_VALUE_")}
+
+
+@pytest.fixture(autouse=True)
+def _no_git_redirection(monkeypatch) -> None:
+    """The checkers under test also call git; keep them on the temporary repository."""
+
+    for k in list(os.environ):
+        if k in _GIT_REDIRECT_VARS or k.startswith("GIT_CONFIG_KEY_") or k.startswith("GIT_CONFIG_VALUE_"):
+            monkeypatch.delenv(k, raising=False)
+
 
 def git(root: Path, *args: str) -> None:
-    subprocess.run(["git", "-C", str(root), *args], check=True, capture_output=True)
+    subprocess.run(["git", "-C", str(root), *args], check=True, capture_output=True, env=_isolated_env())
 
 
 def init_git(root: Path) -> None:
@@ -238,3 +261,23 @@ def test_missing_producer_script_is_rejected(repo: Path) -> None:
     full_set(repo)
     (repo / "p.py").unlink()
     assert any("p.py missing" in e for e in schema_errors(repo))
+
+
+def test_git_helper_cannot_write_into_a_redirected_repository(tmp_path: Path, monkeypatch) -> None:
+    """Regression (2026-11-24): with GIT_DIR / GIT_WORK_TREE exported, the helper must still act on its own repo."""
+
+    victim = tmp_path / "victim"
+    victim.mkdir()
+    subprocess.run(["git", "-C", str(victim), "init", "-q"], check=True, capture_output=True, env=_isolated_env())
+    before = (victim / ".git" / "config").read_bytes()
+    monkeypatch.setenv("GIT_DIR", str(victim / ".git"))
+    monkeypatch.setenv("GIT_WORK_TREE", str(tmp_path / "elsewhere"))
+    root = tmp_path / "own"
+    root.mkdir()
+    (root / "f.txt").write_text("x", encoding="utf-8")
+    init_git(root)
+    commit_all(root, "approve card")
+    assert (victim / ".git" / "config").read_bytes() == before
+    log = subprocess.run(["git", "-C", str(root), "log", "--format=%an %s"], capture_output=True, text=True,
+                         env=_isolated_env(), check=True).stdout.strip()
+    assert log == "t approve card"
