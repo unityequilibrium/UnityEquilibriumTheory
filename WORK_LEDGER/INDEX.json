@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1022,
+    "entries": 1023,
     "by_stream": {
       "book-history": 94,
       "operations": 142,
-      "research": 785,
+      "research": 786,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -470,8 +470,8 @@
     },
     {
       "path": "2026/2026-11-28.md",
-      "sha256": "2622adb154ebeb8e27981e2dffcf4473c1ef8f258ecaa9e27144790846e81f20",
-      "entries": 2
+      "sha256": "fc9fa3864e2781cfd5248d8ff3ee8d4c7b733c8d734ac056f24da77b93229473",
+      "entries": 3
     },
     {
       "path": "2026-08-14.md",
@@ -20871,9 +20871,29 @@
       "source": "2026/2026-11-28.md",
       "anchor": "q2-flow-scan-search-no-claim",
       "start_line": 13,
-      "end_line": 21,
+      "end_line": 22,
       "title": "Q2 flow-scan search (no claim)",
-      "entry_sha256": "aba296fc1741ed2a7b3cb0866085ceeb252395a9152d08dab63081cac3b6e5a2",
+      "entry_sha256": "b69f32b85cd188e78de06d66edec09554aac208364e0d7d401b19ebec1c189c6",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-28",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-28.md#q2-bartus-2026-si-data-shape-check-no-claim",
+      "source": "2026/2026-11-28.md",
+      "anchor": "q2-bartus-2026-si-data-shape-check-no-claim",
+      "start_line": 23,
+      "end_line": 31,
+      "title": "Q2: Bartus 2026 SI data-shape check (no claim)",
+      "entry_sha256": "05a5fce91dd5e06f8f322591f5c287a6f1f142b1c9031060101cf1e01d1fe701",
       "stream": "research",
       "areas": [
         "research-core"
