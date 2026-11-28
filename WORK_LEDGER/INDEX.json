@@ -5,11 +5,11 @@
   "scope": "daily ledger metadata only; not scientific validation or verified publication status",
   "summary": {
     "sources": 91,
-    "entries": 1024,
+    "entries": 1038,
     "by_stream": {
       "book-history": 94,
-      "operations": 143,
-      "research": 786,
+      "operations": 144,
+      "research": 799,
       "review": 1
     },
     "exact_duplicates": 0,
@@ -455,18 +455,18 @@
     },
     {
       "path": "2026/2026-11-25.md",
-      "sha256": "44bf9b2a4a553a7f612971816bdd36adcc557e54491865aaf3ecf677e898a0df",
-      "entries": 11
+      "sha256": "8b87e9d3b51fa90a6f9f3a9480707fdd5aefc78eb342719d5491c5e3ddebed1a",
+      "entries": 16
     },
     {
       "path": "2026/2026-11-26.md",
-      "sha256": "b036b5daf702323c5e08dbea8a92d1318e2aaa19d16c0c9f8f47720d46a32317",
-      "entries": 5
+      "sha256": "1a317791a55b0f4de5d776750cdbd88ad6d0a7af36bc653ea288fd760b82b38e",
+      "entries": 9
     },
     {
       "path": "2026/2026-11-27.md",
-      "sha256": "1bebe515cc808f4f2bf38fd068953c3dd3025b784ecbec03e741d3cc98894105",
-      "entries": 18
+      "sha256": "862149defa351056b088bc06e7d306e1a8c8fd5c6c283bbf8a35f1c1e706e249",
+      "entries": 23
     },
     {
       "path": "2026/2026-11-28.md",
@@ -20267,13 +20267,113 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-25.md#test-card-t034-fasting-protein-loss-against-d15",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t034-fasting-protein-loss-against-d15",
+      "start_line": 43,
+      "end_line": 51,
+      "title": "Test Card T034: fasting protein loss against D15",
+      "entry_sha256": "301551b8c8a3d70e9738111c23c4e17dc0ebc5d924493c3cff27add00f5a5edd",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-25.md#topic-018-legacy-overclaims-labelled",
       "source": "2026/2026-11-25.md",
       "anchor": "topic-018-legacy-overclaims-labelled",
-      "start_line": 45,
-      "end_line": 54,
+      "start_line": 54,
+      "end_line": 63,
       "title": "Topic 0.18: legacy overclaims labelled",
       "entry_sha256": "f611ecd824cae599948617b4382c7a55ae52db5c2b2903a8b326ec1a9dbf9dad",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#wave-d20-a-survival-process-as-a-burn-that-follows-the-store",
+      "source": "2026/2026-11-25.md",
+      "anchor": "wave-d20-a-survival-process-as-a-burn-that-follows-the-store",
+      "start_line": 64,
+      "end_line": 73,
+      "title": "Wave D20: a survival process as a burn that follows the store",
+      "entry_sha256": "3cc66af1c9bf9f1edbe814a26333292784985b41b76375b633afaf70b7474820",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t035-survival-burn-exponent-on-a-382-day-fast",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t035-survival-burn-exponent-on-a-382-day-fast",
+      "start_line": 74,
+      "end_line": 83,
+      "title": "Test Card T035: survival-burn exponent on a 382-day fast",
+      "entry_sha256": "7160c4b31bf05fcb4343a6c3aa6edf6fa638e77ec52f268c112b2ee34c025c79",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#test-card-t036-survival-burn-exponent-on-benedicts-other-fasts",
+      "source": "2026/2026-11-25.md",
+      "anchor": "test-card-t036-survival-burn-exponent-on-benedicts-other-fasts",
+      "start_line": 84,
+      "end_line": 93,
+      "title": "Test Card T036: survival-burn exponent on Benedict's other fasts",
+      "entry_sha256": "a045492b7232aa8b4b43dd0de163a50a0f28982f02307e41f15be29793ca3a4f",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-25",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-25.md#literature-map-fasting-physiology-against-d14-d15-and-d20",
+      "source": "2026/2026-11-25.md",
+      "anchor": "literature-map-fasting-physiology-against-d14-d15-and-d20",
+      "start_line": 94,
+      "end_line": 102,
+      "title": "Literature map: fasting physiology against D14, D15 and D20",
+      "entry_sha256": "4bddf2b7e1ae27324bfd2dde636f556706c5874f783187b8f02e2e004c839833",
       "stream": "research",
       "areas": [
         "research-core"
@@ -20290,8 +20390,8 @@
       "id": "2026/2026-11-25.md#test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t033-proposal-parent-action-wa-against-bao-and-supernovae",
-      "start_line": 55,
-      "end_line": 64,
+      "start_line": 103,
+      "end_line": 112,
       "title": "Test Card T033 proposal: parent-action w(a) against BAO and supernovae",
       "entry_sha256": "258586958e2206cfe0aa5daaa8490438935d8521aa679ca6bb294869e0200f45",
       "stream": "research",
@@ -20310,8 +20410,8 @@
       "id": "2026/2026-11-25.md#test-card-t033-data-intake-and-draft-card",
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t033-data-intake-and-draft-card",
-      "start_line": 65,
-      "end_line": 74,
+      "start_line": 113,
+      "end_line": 122,
       "title": "Test Card T033: data intake and draft card",
       "entry_sha256": "66023a1d81750ceb49013930aeb332646509b8e00ed814da3bbe92f25cfe0a09",
       "stream": "research",
@@ -20330,8 +20430,8 @@
       "id": "2026/2026-11-25.md#test-card-t033-wa-renumbered-t040",
       "source": "2026/2026-11-25.md",
       "anchor": "test-card-t033-wa-renumbered-t040",
-      "start_line": 75,
-      "end_line": 84,
+      "start_line": 123,
+      "end_line": 132,
       "title": "Test Card T033 (w(a)) renumbered T040",
       "entry_sha256": "30c53a986ea61c55f8d1bf5d149a48c2c05d8de62ff3065cacde1260046de5fa",
       "stream": "research",
@@ -20350,8 +20450,8 @@
       "id": "2026/2026-11-25.md#t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
       "source": "2026/2026-11-25.md",
       "anchor": "t040-run-and-result-wa-vs-desi-dr2-bao--pantheon",
-      "start_line": 85,
-      "end_line": 94,
+      "start_line": 133,
+      "end_line": 142,
       "title": "T040 run and result (w(a) vs DESI DR2 BAO + Pantheon+)",
       "entry_sha256": "06a24f26252940f52e8f0bbbddda221516a035b0e92efdbe12da7099c9fa1beb",
       "stream": "research",
@@ -20370,8 +20470,8 @@
       "id": "2026/2026-11-25.md#c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
       "source": "2026/2026-11-25.md",
       "anchor": "c_c1_frw_dark_energy-raised-to-l2-author-approval-of-t040",
-      "start_line": 95,
-      "end_line": 104,
+      "start_line": 143,
+      "end_line": 152,
       "title": "C_C1_FRW_DARK_ENERGY raised to L2 (author approval of T040)",
       "entry_sha256": "cdc8258b290d663c8ba6d56c0ebfdafc391ea6071e5e3deeda9fccdbd784efa0",
       "stream": "research",
@@ -20390,8 +20490,8 @@
       "id": "2026/2026-11-25.md#research-ci-job-timeout-raised-to-40-minutes",
       "source": "2026/2026-11-25.md",
       "anchor": "research-ci-job-timeout-raised-to-40-minutes",
-      "start_line": 105,
-      "end_line": 113,
+      "start_line": 153,
+      "end_line": 161,
       "title": "Research CI job timeout raised to 40 minutes",
       "entry_sha256": "3ffd662ff419d222b6264fcce71a8d75799aa37924201f1063151776bb041f2d",
       "stream": "operations",
@@ -20407,11 +20507,91 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-26.md#benchmark-chow-hall-reduced-model-on-the-benedict-fasts",
+      "source": "2026/2026-11-26.md",
+      "anchor": "benchmark-chow-hall-reduced-model-on-the-benedict-fasts",
+      "start_line": 3,
+      "end_line": 12,
+      "title": "Benchmark: Chow-Hall reduced model on the Benedict fasts",
+      "entry_sha256": "717a02201fd602ca05412dc01e9a3b47402a0dac8f8bfd0c60576388ceea0c1c",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#benchmark-benedicts-energy-accounting-for-subject-l",
+      "source": "2026/2026-11-26.md",
+      "anchor": "benchmark-benedicts-energy-accounting-for-subject-l",
+      "start_line": 13,
+      "end_line": 22,
+      "title": "Benchmark: Benedict's energy accounting for subject L.",
+      "entry_sha256": "d97c43beaaa6e1085bf4a3fd372cbf05772c5855ef9b7f7893de7f10e75066b4",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#literature-check-fuel-order-and-phase-iii-in-fasting",
+      "source": "2026/2026-11-26.md",
+      "anchor": "literature-check-fuel-order-and-phase-iii-in-fasting",
+      "start_line": 23,
+      "end_line": 32,
+      "title": "Literature check: fuel order and phase III in fasting",
+      "entry_sha256": "1d680f724c79e470bc1b3cf551e6e7183a344280c897284ae2ac221d7272d372",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-26.md#wave-d21-layer-3-as-survival-optimisation-fuel-order-in-a-fast",
+      "source": "2026/2026-11-26.md",
+      "anchor": "wave-d21-layer-3-as-survival-optimisation-fuel-order-in-a-fast",
+      "start_line": 33,
+      "end_line": 41,
+      "title": "Wave D21: layer 3 as survival optimisation (fuel order in a fast)",
+      "entry_sha256": "1da25cc5ee1ab9cbcc51ced5ee2b6f409b8170f183e65161dba9cbeee44b51f5",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-26",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-26.md#wave-c2-frw-background-with-radiation-and-the-cmb-angle",
       "source": "2026/2026-11-26.md",
       "anchor": "wave-c2-frw-background-with-radiation-and-the-cmb-angle",
-      "start_line": 3,
-      "end_line": 12,
+      "start_line": 42,
+      "end_line": 51,
       "title": "Wave C2: FRW background with radiation and the CMB angle",
       "entry_sha256": "90c956c170916a9fb0c88a18835970a2884a06590d6d39f86147fab5d7f2ba5e",
       "stream": "research",
@@ -20430,8 +20610,8 @@
       "id": "2026/2026-11-26.md#test-card-t041-drafted-cmb-distance-priors--bao--sn",
       "source": "2026/2026-11-26.md",
       "anchor": "test-card-t041-drafted-cmb-distance-priors--bao--sn",
-      "start_line": 13,
-      "end_line": 22,
+      "start_line": 52,
+      "end_line": 61,
       "title": "Test Card T041 drafted (CMB distance priors + BAO + SN)",
       "entry_sha256": "250bc4a4ba07efd4728d652aa6d6300bed0853accde1b342ac0d2632f2ea6275",
       "stream": "research",
@@ -20450,8 +20630,8 @@
       "id": "2026/2026-11-26.md#t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
       "source": "2026/2026-11-26.md",
       "anchor": "t041-run-and-result-wa-vs-cmb-distance-priors--desi-dr2-bao--pantheon",
-      "start_line": 23,
-      "end_line": 32,
+      "start_line": 62,
+      "end_line": 71,
       "title": "T041 run and result (w(a) vs CMB distance priors + DESI DR2 BAO + Pantheon+)",
       "entry_sha256": "980ff575a0182963d9bd7322437dc394064a833e78da7b165db012df3a0577a0",
       "stream": "research",
@@ -20470,8 +20650,8 @@
       "id": "2026/2026-11-26.md#c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
       "source": "2026/2026-11-26.md",
       "anchor": "c_c2_frw_cmb_angle-raised-to-l2-author-approval-of-t041",
-      "start_line": 33,
-      "end_line": 42,
+      "start_line": 72,
+      "end_line": 81,
       "title": "C_C2_FRW_CMB_ANGLE raised to L2 (author approval of T041)",
       "entry_sha256": "dd471e35f20794bb8a983d7130654eb3b1926fe006411dad4bc083572b3a6468",
       "stream": "research",
@@ -20490,8 +20670,8 @@
       "id": "2026/2026-11-26.md#wave-c3-linear-growth-of-structure-in-the-parent-action",
       "source": "2026/2026-11-26.md",
       "anchor": "wave-c3-linear-growth-of-structure-in-the-parent-action",
-      "start_line": 43,
-      "end_line": 51,
+      "start_line": 82,
+      "end_line": 90,
       "title": "Wave C3: linear growth of structure in the parent action",
       "entry_sha256": "dc4308a4a4c3cd1e7352a7b7d09c4b819601910999e208eb7c37ec6db23be97d",
       "stream": "research",
@@ -20547,11 +20727,111 @@
       "legacy_root_path": false
     },
     {
+      "id": "2026/2026-11-27.md#post-mortem-of-the-fasting-and-power-plant-cards-question-design",
+      "source": "2026/2026-11-27.md",
+      "anchor": "post-mortem-of-the-fasting-and-power-plant-cards-question-design",
+      "start_line": 22,
+      "end_line": 31,
+      "title": "Post-mortem of the fasting and power-plant cards (question design)",
+      "entry_sha256": "0210e8f78bab0cc9ebd71238cc6cf762ff5648fd75d8665af06c9aa4f9952152",
+      "stream": "research",
+      "areas": [
+        "research-core"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#proposal-research-design-standard-question-quality-before-a-test-card",
+      "source": "2026/2026-11-27.md",
+      "anchor": "proposal-research-design-standard-question-quality-before-a-test-card",
+      "start_line": 32,
+      "end_line": 41,
+      "title": "Proposal: research-design standard (question quality before a Test Card)",
+      "entry_sha256": "07f6a056b2fd8cfd04b839bdfc2fdbe2aae5015db360741ff0da78d74da49dec",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#standardmd-section-16-research-design-in-force-after-author-approval",
+      "source": "2026/2026-11-27.md",
+      "anchor": "standardmd-section-16-research-design-in-force-after-author-approval",
+      "start_line": 42,
+      "end_line": 51,
+      "title": "STANDARD.md section 16 (research design) in force after author approval",
+      "entry_sha256": "d803b017279f5b1101c9b28bbc203c3c4f8d2862d647d92bd596d28d560cc163",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#content-value-audit-how-much-of-the-repository-is-ai-slop",
+      "source": "2026/2026-11-27.md",
+      "anchor": "content-value-audit-how-much-of-the-repository-is-ai-slop",
+      "start_line": 52,
+      "end_line": 61,
+      "title": "Content-value audit (how much of the repository is AI slop)",
+      "entry_sha256": "14435de89c82f84957c5327c3fc65d48e6b93f3c5539a4b81148bbb1224faf49",
+      "stream": "research",
+      "areas": [
+        "research-standards"
+      ],
+      "related_streams": [
+        "research"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
+      "id": "2026/2026-11-27.md#cleanup-plan-draft-after-the-content-value-audit",
+      "source": "2026/2026-11-27.md",
+      "anchor": "cleanup-plan-draft-after-the-content-value-audit",
+      "start_line": 62,
+      "end_line": 71,
+      "title": "Cleanup plan (draft) after the content-value audit",
+      "entry_sha256": "33a20fb33e8e8e356829547aecde4e5030590fa99e2878b649aeab2c7f1e029a",
+      "stream": "operations",
+      "areas": [
+        "repo-ops"
+      ],
+      "related_streams": [
+        "operations"
+      ],
+      "basis": "explicit_stream_and_area",
+      "flags": [],
+      "date": "2026-11-27",
+      "legacy_root_path": false
+    },
+    {
       "id": "2026/2026-11-27.md#stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-12-parameter-scaling-returns-in-the-parent-action-topic-023",
-      "start_line": 22,
-      "end_line": 31,
+      "start_line": 72,
+      "end_line": 81,
       "title": "Stress test 12: parameter scaling returns in the parent action (topic 0.23)",
       "entry_sha256": "8542bec615cb89af13d81b2f5e3e179a1ea81840bacd72cf37761477782100ac",
       "stream": "research",
@@ -20570,8 +20850,8 @@
       "id": "2026/2026-11-27.md#wave-s1-scale-invariant-restriction-of-the-parent-action",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-s1-scale-invariant-restriction-of-the-parent-action",
-      "start_line": 32,
-      "end_line": 41,
+      "start_line": 82,
+      "end_line": 91,
       "title": "Wave S1: scale-invariant restriction of the parent action",
       "entry_sha256": "78cf7a46e6af51d5b2e494c394a6a3c8205689a2ed5f04e0a62d1b75f71dc200",
       "stream": "research",
@@ -20590,8 +20870,8 @@
       "id": "2026/2026-11-27.md#wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-d1-attractors-and-the-initial-field-value-stress_12-option-d",
-      "start_line": 42,
-      "end_line": 51,
+      "start_line": 92,
+      "end_line": 101,
       "title": "Wave D1: attractors and the initial field value (STRESS_12 option D)",
       "entry_sha256": "c5d472d1fdf8c83d21cacb6358c86612f0b48c4b12080149bf5f3741913c2996",
       "stream": "research",
@@ -20610,8 +20890,8 @@
       "id": "2026/2026-11-27.md#wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-c1-persistence-selection-inside-one-universe-stress_12-option-c",
-      "start_line": 52,
-      "end_line": 61,
+      "start_line": 102,
+      "end_line": 111,
       "title": "Wave C1: persistence selection inside one universe (STRESS_12 option C)",
       "entry_sha256": "606648b0832c119778b8b2d10a202a55a235be934b744b055b5d93e90309f410",
       "stream": "research",
@@ -20630,8 +20910,8 @@
       "id": "2026/2026-11-27.md#wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-b1-rg-fixed-point-and-closure-of-the-parent-action-stress_12-option-b",
-      "start_line": 62,
-      "end_line": 71,
+      "start_line": 112,
+      "end_line": 121,
       "title": "Wave B1: RG fixed point and closure of the parent action (STRESS_12 option B)",
       "entry_sha256": "db8af5bb40c811547cc7b990a31b625d9f12d8af5aecc891c1316c62c4d7453b",
       "stream": "research",
@@ -20650,8 +20930,8 @@
       "id": "2026/2026-11-27.md#wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-a2-higgs-dilaton-extension-as-a-sandbox-stress_12-option-a-extended",
-      "start_line": 72,
-      "end_line": 81,
+      "start_line": 122,
+      "end_line": 131,
       "title": "Wave A2: Higgs-dilaton extension as a sandbox (STRESS_12 option A, extended)",
       "entry_sha256": "03f28919d4639f4b8781a14766340cb42c2567e2ec1cdbb7ce8b3704721b6cda",
       "stream": "research",
@@ -20670,8 +20950,8 @@
       "id": "2026/2026-11-27.md#theory-card-v2-drafted-higgs-dilaton-form-not-approved",
       "source": "2026/2026-11-27.md",
       "anchor": "theory-card-v2-drafted-higgs-dilaton-form-not-approved",
-      "start_line": 82,
-      "end_line": 91,
+      "start_line": 132,
+      "end_line": 141,
       "title": "Theory Card v2 drafted (Higgs-dilaton form, not approved)",
       "entry_sha256": "c665b0cd22b2f3d1707e5bee4db4bb9fc650b9601cf669eff5b934381aace572",
       "stream": "research",
@@ -20690,8 +20970,8 @@
       "id": "2026/2026-11-27.md#stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
       "source": "2026/2026-11-27.md",
       "anchor": "stress-test-13-and-wave-j1-where-combining-sectors-forces-new-relations",
-      "start_line": 92,
-      "end_line": 101,
+      "start_line": 142,
+      "end_line": 151,
       "title": "Stress test 13 and wave J1: where combining sectors forces new relations",
       "entry_sha256": "1fa471c5daeb805b33f2bc1e6e9d8a08ff28093088b0d8bdd47abd54b80af0a6",
       "stream": "research",
@@ -20710,8 +20990,8 @@
       "id": "2026/2026-11-27.md#wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
       "source": "2026/2026-11-27.md",
       "anchor": "wave-o8-cavity-optomechanics-as-a-lab-lane-for-the-layer-1---2---3-chain",
-      "start_line": 102,
-      "end_line": 111,
+      "start_line": 152,
+      "end_line": 161,
       "title": "Wave O8: cavity optomechanics as a lab lane for the layer 1 -> 2 -> 3 chain",
       "entry_sha256": "277e6f328743487d2aa1834038baceac91208f1ee826eb075e41dfb1f146b30d",
       "stream": "research",
@@ -20730,8 +21010,8 @@
       "id": "2026/2026-11-27.md#data-shape-check-for-the-optomechanics-lane-masked",
       "source": "2026/2026-11-27.md",
       "anchor": "data-shape-check-for-the-optomechanics-lane-masked",
-      "start_line": 112,
-      "end_line": 121,
+      "start_line": 162,
+      "end_line": 171,
       "title": "Data-shape check for the optomechanics lane (masked)",
       "entry_sha256": "fbe559764b4b6b94f2162761893a812851faaeb40b389c9df3ee3198a4b51698",
       "stream": "research",
@@ -20750,8 +21030,8 @@
       "id": "2026/2026-11-27.md#t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
       "source": "2026/2026-11-27.md",
       "anchor": "t042-data-intake-and-draft-red-blue-antisymmetry-of-backaction",
-      "start_line": 122,
-      "end_line": 131,
+      "start_line": 172,
+      "end_line": 181,
       "title": "T042 data intake and draft (red-blue antisymmetry of backaction)",
       "entry_sha256": "1bed1fe311b39b7e512837c4d65f47ce99be34a53e8a7b9a1e4c704f8014c929",
       "stream": "research",
@@ -20770,8 +21050,8 @@
       "id": "2026/2026-11-27.md#t042-run-and-result-backaction-antisymmetry-from-two-figures",
       "source": "2026/2026-11-27.md",
       "anchor": "t042-run-and-result-backaction-antisymmetry-from-two-figures",
-      "start_line": 132,
-      "end_line": 141,
+      "start_line": 182,
+      "end_line": 191,
       "title": "T042 run and result (backaction antisymmetry from two figures)",
       "entry_sha256": "da520be987b2cd88923398096609dd51e7a729debb79c43a839ddc61ba5579fc",
       "stream": "research",
@@ -20790,8 +21070,8 @@
       "id": "2026/2026-11-27.md#field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "field-map-for-layers-2-3-standard-section-16-step-0-no-claim",
-      "start_line": 142,
-      "end_line": 151,
+      "start_line": 192,
+      "end_line": 201,
       "title": "Field map for layers 2-3 (STANDARD section 16 step 0), no claim",
       "entry_sha256": "23ba4a04dc41042621fdb7c395d865604a19a8598ead0fabe7e89d515ad049b3",
       "stream": "research",
@@ -20810,8 +21090,8 @@
       "id": "2026/2026-11-27.md#q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-screen-when-do-r-and-maxep-pick-different-winners-no-claim",
-      "start_line": 152,
-      "end_line": 161,
+      "start_line": 202,
+      "end_line": 211,
       "title": "Q1 screen: when do R* and MaxEP pick different winners (no claim)",
       "entry_sha256": "392c4eb016f29de0285b5ebebd82b717144e1e67b24b04ab9a844ea5d9781332",
       "stream": "research",
@@ -20830,8 +21110,8 @@
       "id": "2026/2026-11-27.md#q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-data-search-no-dataset-separates-r-from-maxep-no-claim",
-      "start_line": 162,
-      "end_line": 171,
+      "start_line": 212,
+      "end_line": 221,
       "title": "Q1 data search: no dataset separates R* from MaxEP (no claim)",
       "entry_sha256": "90738ef185e6d771ddb6e99aead64310b1cbfaa862e997ff8120a7125109bfef",
       "stream": "research",
@@ -20850,8 +21130,8 @@
       "id": "2026/2026-11-27.md#q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
       "source": "2026/2026-11-27.md",
       "anchor": "q1-he-ne-check-both-rules-pick-the-339-um-line-no-claim",
-      "start_line": 172,
-      "end_line": 180,
+      "start_line": 222,
+      "end_line": 230,
       "title": "Q1 He-Ne check: both rules pick the 3.39 um line (no claim)",
       "entry_sha256": "2e10ebc883d506d92fe06b6a644894e467331243c19a762d3cfc7768ccc51c9b",
       "stream": "research",

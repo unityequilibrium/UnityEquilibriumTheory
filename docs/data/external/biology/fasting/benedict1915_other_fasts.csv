@@ -1,0 +1,254 @@
+# Benedict FG (1915) A Study of Prolonged Fasting, Carnegie Inst. Wash. Pub. 203, Table 2, pp. 72-73: weight in kg on each day of fast, as printed
+# day 0 = 'Initial wt.' where printed; days with no printed weight are omitted; subject L. (pp. 73) is in benedict1915_L_body_weight.csv and not repeated here
+# transcribed after approval of T036 from the archive.org page scans; p. 73 weights checked against the printed daily losses
+fast,day,mass_kg
+Succi Paris 1886,1,63.00
+Succi Paris 1886,2,59.40
+Succi Paris 1886,3,59.00
+Succi Paris 1886,4,58.00
+Succi Paris 1886,5,57.40
+Succi Paris 1886,6,57.10
+Succi Paris 1886,7,57.00
+Succi Paris 1886,8,56.90
+Succi Paris 1886,9,56.00
+Succi Paris 1886,10,55.70
+Succi Paris 1886,11,55.30
+Succi Paris 1886,12,54.00
+Succi Paris 1886,13,53.20
+Succi Paris 1886,15,53.00
+Succi Paris 1886,16,52.70
+Succi Paris 1886,17,52.50
+Succi Paris 1886,18,52.20
+Succi Paris 1886,19,51.90
+Succi Paris 1886,20,51.60
+Succi Paris 1886,21,51.20
+Succi Paris 1886,23,50.75
+Succi Paris 1886,24,50.20
+Succi Paris 1886,25,50.10
+Succi Paris 1886,26,50.00
+Succi Paris 1886,27,49.65
+Succi Paris 1886,28,49.50
+Succi Paris 1886,29,49.25
+Succi Paris 1886,30,48.75
+Succi Milan 1886,1,61.30
+Succi Milan 1886,2,59.75
+Succi Milan 1886,3,58.95
+Succi Milan 1886,4,58.20
+Succi Milan 1886,5,57.70
+Succi Milan 1886,6,56.85
+Succi Milan 1886,7,56.30
+Succi Milan 1886,8,56.10
+Succi Milan 1886,9,55.60
+Succi Milan 1886,10,55.40
+Succi Milan 1886,11,54.40
+Succi Milan 1886,12,54.30
+Succi Milan 1886,13,54.00
+Succi Milan 1886,14,53.60
+Succi Milan 1886,15,53.10
+Succi Milan 1886,16,52.85
+Succi Milan 1886,17,52.60
+Succi Milan 1886,18,52.10
+Succi Milan 1886,19,51.35
+Succi Milan 1886,20,51.15
+Succi Milan 1886,21,50.90
+Succi Milan 1886,22,50.90
+Succi Milan 1886,23,50.60
+Succi Milan 1886,24,50.15
+Succi Milan 1886,25,49.70
+Succi Milan 1886,26,49.40
+Succi Milan 1886,27,49.00
+Succi Milan 1886,28,48.70
+Succi Milan 1886,29,48.50
+Succi Milan 1886,30,48.20
+Succi Florence 1888,0,63.30
+Succi Florence 1888,1,62.40
+Succi Florence 1888,2,61.00
+Succi Florence 1888,3,59.80
+Succi Florence 1888,4,59.90
+Succi Florence 1888,5,59.30
+Succi Florence 1888,6,58.65
+Succi Florence 1888,7,58.15
+Succi Florence 1888,8,57.65
+Succi Florence 1888,9,57.25
+Succi Florence 1888,10,56.70
+Succi Florence 1888,11,56.25
+Succi Florence 1888,12,55.60
+Succi Florence 1888,13,55.25
+Succi Florence 1888,14,54.85
+Succi Florence 1888,15,54.60
+Succi Florence 1888,16,54.30
+Succi Florence 1888,17,54.10
+Succi Florence 1888,18,53.65
+Succi Florence 1888,19,53.20
+Succi Florence 1888,20,52.80
+Succi Florence 1888,21,52.60
+Succi Florence 1888,22,52.25
+Succi Florence 1888,23,51.85
+Succi Florence 1888,24,51.45
+Succi Florence 1888,25,51.50
+Succi Florence 1888,26,51.30
+Succi Florence 1888,27,51.25
+Succi Florence 1888,28,51.05
+Succi Florence 1888,29,50.45
+Succi London 1890,1,55.80
+Succi London 1890,2,54.90
+Succi London 1890,3,53.90
+Succi London 1890,4,52.80
+Succi London 1890,5,52.10
+Succi London 1890,6,51.50
+Succi London 1890,7,51.00
+Succi London 1890,8,50.40
+Succi London 1890,9,50.10
+Succi London 1890,10,49.80
+Succi London 1890,11,49.70
+Succi London 1890,12,49.30
+Succi London 1890,13,48.90
+Succi London 1890,14,48.70
+Succi London 1890,15,48.30
+Succi London 1890,16,48.10
+Succi London 1890,17,47.55
+Succi London 1890,18,47.25
+Succi London 1890,19,47.10
+Succi London 1890,20,46.80
+Succi London 1890,21,46.50
+Succi London 1890,22,46.30
+Succi London 1890,23,45.90
+Succi London 1890,24,45.60
+Succi London 1890,25,45.40
+Succi London 1890,26,45.20
+Succi London 1890,27,44.90
+Succi London 1890,28,44.60
+Succi London 1890,29,44.30
+Succi London 1890,30,44.20
+Succi London 1890,31,44.10
+Succi London 1890,32,43.80
+Succi London 1890,33,43.70
+Succi London 1890,34,43.50
+Succi London 1890,35,43.20
+Succi London 1890,36,43.00
+Succi London 1890,37,42.75
+Succi London 1890,38,42.60
+Succi London 1890,39,42.30
+Succi London 1890,40,41.70
+Succi Naples 1892,1,63.60
+Succi Naples 1892,2,61.80
+Succi Naples 1892,3,60.60
+Succi Naples 1892,4,59.80
+Succi Naples 1892,5,59.10
+Succi Naples 1892,6,58.20
+Succi Naples 1892,7,57.50
+Succi Naples 1892,8,57.10
+Succi Naples 1892,9,56.90
+Succi Naples 1892,10,57.20
+Succi Naples 1892,11,56.50
+Succi Naples 1892,12,55.90
+Succi Naples 1892,13,55.50
+Succi Naples 1892,14,55.40
+Succi Naples 1892,15,55.30
+Succi Naples 1892,16,55.25
+Succi Naples 1892,17,54.60
+Succi Naples 1892,18,54.00
+Succi Naples 1892,19,53.50
+Succi Naples 1892,20,53.00
+Succi Naples 1892,21,52.40
+Succi Rome 1893,0,65.10
+Succi Rome 1893,1,64.70
+Succi Rome 1893,2,64.00
+Succi Rome 1893,3,63.30
+Succi Rome 1893,4,62.80
+Succi Rome 1893,5,61.20
+Succi Rome 1893,6,60.90
+Succi Rome 1893,7,60.70
+Succi Rome 1893,8,59.30
+Succi Rome 1893,9,59.10
+Succi Rome 1893,10,59.00
+Succi Rome 1893,11,59.00
+Succi Rome 1893,12,58.90
+Succi Rome 1893,13,58.55
+Succi Rome 1893,14,58.20
+Succi Rome 1893,15,58.00
+Succi Rome 1893,16,57.80
+Succi Rome 1893,17,57.60
+Succi Rome 1893,18,57.50
+Succi Rome 1893,19,57.05
+Succi Rome 1893,20,56.50
+Succi Zurich 1896,0,71.70
+Succi Zurich 1896,3,68.50
+Succi Zurich 1896,4,68.00
+Succi Zurich 1896,5,67.55
+Succi Zurich 1896,6,67.25
+Succi Zurich 1896,7,66.55
+Succi Zurich 1896,9,65.70
+Succi Zurich 1896,10,65.40
+Succi Zurich 1896,11,65.00
+Succi Zurich 1896,12,64.55
+Succi Zurich 1896,13,64.05
+Succi Zurich 1896,15,63.50
+Succi Zurich 1896,16,63.00
+Succi Zurich 1896,17,62.75
+Succi Zurich 1896,18,62.50
+Succi Zurich 1896,19,62.20
+Succi Zurich 1896,20,61.90
+Jacques 1888,0,62.01
+Jacques 1888,1,60.68
+Jacques 1888,2,59.74
+Jacques 1888,3,59.23
+Jacques 1888,4,59.24
+Jacques 1888,5,58.98
+Jacques 1888,6,58.35
+Jacques 1888,7,58.55
+Jacques 1888,8,56.68
+Jacques 1888,9,56.23
+Jacques 1888,10,56.23
+Jacques 1888,11,55.80
+Jacques 1888,12,55.60
+Jacques 1888,13,54.67
+Jacques 1888,14,54.67
+Jacques 1888,15,55.04
+Jacques 1888,16,54.98
+Jacques 1888,17,55.06
+Jacques 1888,18,54.81
+Jacques 1888,19,53.93
+Jacques 1888,20,53.93
+Jacques 1888,21,53.82
+Jacques 1888,22,53.36
+Jacques 1888,23,53.00
+Jacques 1888,24,52.74
+Jacques 1888,25,52.46
+Jacques 1888,26,52.40
+Jacques 1888,27,51.89
+Jacques 1888,28,52.23
+Jacques 1888,29,51.86
+Jacques 1888,30,51.69
+Beaute 1907,0,65.61
+Beaute 1907,1,64.57
+Beaute 1907,2,63.72
+Beaute 1907,3,62.77
+Beaute 1907,4,61.96
+Beaute 1907,5,61.41
+Beaute 1907,6,60.83
+Beaute 1907,7,60.23
+Beaute 1907,8,60.04
+Beaute 1907,9,59.80
+Beaute 1907,10,59.11
+Beaute 1907,11,58.64
+Beaute 1907,12,58.64
+Beaute 1907,13,58.37
+Beaute 1907,14,57.78
+Schenk 1906,0,56.30
+Schenk 1906,1,54.40
+Schenk 1906,2,53.60
+Schenk 1906,3,53.20
+Schenk 1906,4,52.50
+Schenk 1906,5,51.90
+Schenk 1906,6,51.20
+Schenk 1906,7,50.90
+Schenk 1906,8,50.60
+Schenk 1906,9,50.50
+Schenk 1906,10,50.20
+Schenk 1906,11,49.90
+Schenk 1906,12,49.50
+Schenk 1906,13,49.10
+Schenk 1906,14,48.80
+Schenk 1906,15,48.40
+Schenk 1906,16,48.20

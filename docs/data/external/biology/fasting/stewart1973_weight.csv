@@ -1,0 +1,6 @@
+# Stewart and Fleming (1973) Postgrad Med J 49, 203 (PMC2495396): the paper reports body weight only at the start and the end of the 382-day fast
+# "weighed on admission 456 lb (207 kg)"; "the patient's weight decreased from 456 to 180 lb"; no weight series, figure or table exists in the paper
+# mass_kg = lb x 0.45359237
+day,mass_kg
+0,206.84
+382,81.65

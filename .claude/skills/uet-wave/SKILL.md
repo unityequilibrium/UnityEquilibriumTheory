@@ -11,7 +11,7 @@ External data is not part of a wave: that is `uet-test-card`.
 ## Before you start
 1. `git status`. Leave changes you did not make alone. Branch `claude/research/<task>` from the branch the work builds on.
 2. Read `core/AUTHOR_PROPOSITION.md` if the question touches what UET means. Check `docs/standard/claims.json` for claims that already cover it.
-3. Write the question down in one sentence. Name the nearest known theory before deriving (UET is a synthesis theory: reusing known physics is expected, not a weakness).
+3. Write the question down in one sentence. Name the nearest known theory before deriving (UET is a synthesis theory: reusing known physics is expected, not a weakness). Short form of STANDARD §16: in the module docstring name the field's established model with a source (not just a label), say whether the field already answers the question (then the wave shows that UET reproduces it), and say who chose any mapping from UET variables to a real system (author or AI).
 
 ## Do the work
 1. **Code**: one module under `core/03_lanes/<lane>/` (or the topic's `Code/`). Its docstring states the question, the derivation steps marked `[AI derivation]`, the nearest known theory, what the action does NOT fix, and "Not UET-distinct" when true.

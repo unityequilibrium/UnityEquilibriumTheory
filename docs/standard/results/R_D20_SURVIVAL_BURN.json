@@ -1,0 +1,46 @@
+{
+  "schema": "uet-result-v2",
+  "result_id": "R_D20_SURVIVAL_BURN",
+  "claim_id": "C_L3_SURVIVAL_BURN",
+  "level": "L1_CONSISTENT",
+  "outcome": "PASS",
+  "numbers": [
+    {
+      "name": "closed_form_vs_ode",
+      "value": "< 1e-9 relative, 20/20 random (beta in 0-4)",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "beta_to_one_limit",
+      "value": "exponential of D14 recovered with order 1 in (beta - 1); beta = 0 is the straight line",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "time_to_threshold_second_route",
+      "value": "ODE event time equals closed form to < 1e-9, 10/10",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "estimator_order",
+      "value": "two-window beta error falls with order 2 in the window's fractional mass change",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    },
+    {
+      "name": "calibration_benedict1915",
+      "value": "beta = 1.95 from L., days 6-31 (T030 window); 1.48-2.63 when the window starts on days 4-8. Calibration, not a test.",
+      "uncertainty": null,
+      "unit": "dimensionless"
+    }
+  ],
+  "producer": {
+    "script": "core/05_tests/physics/test_survival_burn.py",
+    "commit": "0afa07125"
+  },
+  "artifacts": [],
+  "date": "2026-11-25",
+  "note": "Mathematics of the hypothesis checked (L1 as mathematics). The mapping to bodies is a new L0 hypothesis made after T030 failed, so the Benedict value of beta is a calibration; the test is a different fast under its own Test Card. Nearest theory: metabolic adaptation in starvation, allometric burn. Not UET-distinct."
+}
